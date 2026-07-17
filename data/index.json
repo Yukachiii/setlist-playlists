@@ -1,6 +1,7 @@
 {
   "schemaVersion": "0.3",
   "events": [
-    "sample-event.json"
+    "sample-event.json",
+    "hasunosora-6th-live-dream-bloom-garden-party.json"
   ]
 }
