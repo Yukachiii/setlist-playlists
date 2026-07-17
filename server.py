@@ -493,6 +493,23 @@ def publish_event_to_github(
             ["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"],
             project_directory,
         )
+        if upstream_result.returncode == 0:
+            fetch_result = git_process(["fetch", "origin"], project_directory, timeout=180)
+            if fetch_result.returncode != 0:
+                raise PublishErrorResponse(
+                    "GitHubの最新状態を取得できませんでした。ローカルのcommitは保持されています: "
+                    f"{safe_git_message(fetch_result)}"
+                )
+
+            rebase_result = git_process(["rebase", "@{u}"], project_directory, timeout=180)
+            if rebase_result.returncode != 0:
+                git_process(["rebase", "--abort"], project_directory)
+                raise PublishErrorResponse(
+                    "GitHub側の変更と自動統合できませんでした。ローカルのcommitは保持されています。"
+                    "Codexの変更画面で競合を確認してください: "
+                    f"{safe_git_message(rebase_result)}"
+                )
+
         push_arguments = ["push"] if upstream_result.returncode == 0 else [
             "push",
             "--set-upstream",

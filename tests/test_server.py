@@ -181,6 +181,68 @@ class ServerImportTests(unittest.TestCase):
             local_head = git("rev-parse", "HEAD").stdout.strip()
             self.assertEqual(remote_head, local_head)
 
+    def test_publish_rebases_non_conflicting_remote_changes_before_push(self):
+        first_event = {
+            "schemaVersion": "0.3",
+            "id": "github-publish-first",
+            "title": "GitHub公開テスト1",
+            "series": [],
+            "sources": [],
+            "performances": [],
+        }
+        second_event = {
+            **first_event,
+            "id": "github-publish-second",
+            "title": "GitHub公開テスト2",
+        }
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            project = root / "project"
+            remote = root / "remote.git"
+            collaborator = root / "collaborator"
+            project.mkdir()
+
+            def git(*arguments, cwd=project):
+                return subprocess.run(
+                    ["git", *arguments],
+                    cwd=cwd,
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                )
+
+            git("init")
+            git("checkout", "-b", "main")
+            git("config", "user.name", "Setlist Test")
+            git("config", "user.email", "setlist@example.test")
+            git("init", "--bare", str(remote), cwd=root)
+            git("remote", "add", "origin", str(remote))
+            publish_event_to_github(first_event, project)
+
+            git("clone", "--branch", "main", str(remote), str(collaborator), cwd=root)
+            git("config", "user.name", "Remote Test", cwd=collaborator)
+            git("config", "user.email", "remote@example.test", cwd=collaborator)
+            (collaborator / "remote-note.txt").write_text("remote change\n", encoding="utf-8")
+            git("add", "remote-note.txt", cwd=collaborator)
+            git("commit", "-m", "Remote change", cwd=collaborator)
+            git("push", cwd=collaborator)
+
+            result = publish_event_to_github(second_event, project)
+            self.assertTrue(result["committed"])
+            self.assertTrue(result["pushed"])
+            self.assertTrue((project / "remote-note.txt").exists())
+            self.assertTrue((project / "data" / "github-publish-second.json").exists())
+
+            remote_head = git(
+                "--git-dir",
+                str(remote),
+                "rev-parse",
+                "refs/heads/main",
+                cwd=root,
+            ).stdout.strip()
+            local_head = git("rev-parse", "HEAD").stdout.strip()
+            self.assertEqual(remote_head, local_head)
+
 
 if __name__ == "__main__":
     unittest.main()
