@@ -4688,7 +4688,7 @@
             "displayTitle": "ペレニアル"
           },
           "artistHint": "",
-          "spotifyMatchPolicy": "exact",
+          "spotifyMatchPolicy": "unavailable",
           "spotify": {
             "status": "unmatched",
             "trackId": null,
