@@ -71,6 +71,7 @@ test("Spotify候補にアルバムジャケットを表示する", () => {
   assert.match(app, /track\.album\?\.images/);
   assert.match(app, /className = "spotify-candidate-artwork"/);
   assert.match(app, /image\.loading = "lazy"/);
+  assert.match(app, /artworkUrl: spotifyTrackArtwork\(track\)/);
 });
 
 test("登録時に未登録曲を1曲ずつ設定または未配信にできる", () => {

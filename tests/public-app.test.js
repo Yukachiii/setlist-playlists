@@ -3,6 +3,38 @@ const assert = require("node:assert/strict");
 
 const app = require("../js/public-app.js");
 
+test("Spotify Track IDをURIから取得できる", () => {
+  const trackId = "abcdefghijklmnopqrstuv";
+  assert.equal(app.spotifyTrackId({ spotify: { uri: `spotify:track:${trackId}` } }), trackId);
+  assert.equal(app.spotifyTrackId({ spotify: { uri: "spotify:track:short" } }), "");
+});
+
+test("保存済みジャケットURLはHTTPSだけを使用する", () => {
+  assert.equal(
+    app.spotifyArtworkUrl({ spotify: { artworkUrl: "https://example.com/cover.jpg" } }),
+    "https://example.com/cover.jpg"
+  );
+  assert.equal(
+    app.spotifyArtworkUrl({ spotify: { artworkUrl: "http://example.com/cover.jpg" } }),
+    ""
+  );
+});
+
+test("Spotify oEmbedからジャケットURLを取得する", async () => {
+  const originalFetch = global.fetch;
+  const trackId = "abcdefghijklmnopqrstuv";
+  global.fetch = async () => ({
+    ok: true,
+    json: async () => ({ thumbnail_url: "https://example.com/oembed.jpg" })
+  });
+
+  try {
+    assert.equal(await app.fetchSpotifyArtwork(trackId), "https://example.com/oembed.jpg");
+  } finally {
+    global.fetch = originalFetch;
+  }
+});
+
 test("Spotify Track URIは22文字のtrack URIだけを有効にする", () => {
   assert.equal(app.validSpotifyUri({ spotify: { uri: "spotify:track:1234567890123456789012" } }), true);
   assert.equal(app.validSpotifyUri({ spotify: { uri: "spotify:track:a" } }), false);

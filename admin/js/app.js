@@ -121,11 +121,19 @@
 
   function mappingTrack(mapping) {
     if (!mapping?.trackId && !mapping?.uri) return null;
+    const artworkUrl = String(mapping.artworkUrl || "").trim();
+    const albumName = String(mapping.albumName || "").trim();
     return {
       id: mapping.trackId || null,
       uri: mapping.uri || null,
       name: mapping.matchedTitle || mapping.title || "",
-      artists: mapping.matchedArtist ? [{ name: mapping.matchedArtist }] : []
+      artists: mapping.matchedArtist ? [{ name: mapping.matchedArtist }] : [],
+      album: artworkUrl || albumName
+        ? {
+            name: albumName,
+            images: artworkUrl ? [{ url: artworkUrl }] : []
+          }
+        : null
     };
   }
 
@@ -142,6 +150,8 @@
       uri: track.uri || null,
       matchedTitle: track.name || String(title || "").trim(),
       matchedArtist: spotifyTrackArtist(track),
+      artworkUrl: spotifyTrackArtwork(track),
+      albumName: track.album?.name || "",
       confirmedAt: new Date().toISOString()
     };
     localStorage.setItem(CONFIRMED_SPOTIFY_KEY, JSON.stringify(mappings));
@@ -836,6 +846,8 @@
       .map((artist) => artist.name)
       .filter(Boolean)
       .join(", ");
+    row.dataset.spotifyArtworkUrl = spotifyTrackArtwork(track);
+    row.dataset.spotifyAlbumName = track?.album?.name || "";
     row._spotifyResults = results;
     const badge = row.querySelector(".spotify-match-badge");
     badge.className = `spotify-match-badge ${status}`;
@@ -949,6 +961,10 @@
       .join(", ");
   }
 
+  function spotifyTrackArtwork(track) {
+    return (track?.album?.images || []).find((image) => image?.url)?.url || "";
+  }
+
   function renderSpotifyCandidateResults(results) {
     elements.spotifyCandidateList.replaceChildren();
     elements.spotifyCandidateSummary.textContent = results.length
@@ -956,7 +972,7 @@
         ? `${results.length}件の検索結果があります。使用する曲を選ぶと次へ進みます。`
         : `${results.length}件の検索結果から使用する曲を選んでください。`
       : state.spotifyReviewActive
-        ? "検索結果がありません。再検索するか、この曲をスキップしてください。"
+        ? "検索結果がありません。再検索するか、この曲を未配信として登録してください。"
         : "検索結果がありません。検索語を変更して再検索してください。";
 
     if (!results.length) {
@@ -1222,7 +1238,9 @@
         trackId: track.id || null,
         uri: track.uri || null,
         matchedTitle: track.name || null,
-        matchedArtist: artist || null
+        matchedArtist: artist || null,
+        artworkUrl: spotifyTrackArtwork(track) || null,
+        albumName: track.album?.name || null
       };
       closeSpotifyCandidateDialog();
       renderSetlistRows();
@@ -1291,7 +1309,15 @@
             name: row.dataset.spotifyMatchedTitle || null,
             artists: row.dataset.spotifyMatchedArtist
               ? [{ name: row.dataset.spotifyMatchedArtist }]
-              : []
+              : [],
+            album: row.dataset.spotifyArtworkUrl || row.dataset.spotifyAlbumName
+              ? {
+                  name: row.dataset.spotifyAlbumName || "",
+                  images: row.dataset.spotifyArtworkUrl
+                    ? [{ url: row.dataset.spotifyArtworkUrl }]
+                    : []
+                }
+              : null
           }
         : null;
       setSpotifyRowStatus(row, currentStatus, currentLabel, currentTrack, results);
@@ -1602,7 +1628,15 @@
               name: row.dataset.spotifyMatchedTitle || title,
               artists: row.dataset.spotifyMatchedArtist
                 ? [{ name: row.dataset.spotifyMatchedArtist }]
-                : []
+                : [],
+              album: row.dataset.spotifyArtworkUrl || row.dataset.spotifyAlbumName
+                ? {
+                    name: row.dataset.spotifyAlbumName || "",
+                    images: row.dataset.spotifyArtworkUrl
+                      ? [{ url: row.dataset.spotifyArtworkUrl }]
+                      : []
+                  }
+                : null
             }
           : null,
         spotifyResults: deepClone(row._spotifyResults || []),
@@ -1631,7 +1665,9 @@
           trackId: spotifyMatched ? item.spotifyTrack.id : null,
           uri: spotifyMatched ? item.spotifyTrack.uri : null,
           matchedTitle: spotifyMatched ? item.spotifyTrack.name : null,
-          matchedArtist: spotifyMatched ? spotifyTrackArtist(item.spotifyTrack) : null
+          matchedArtist: spotifyMatched ? spotifyTrackArtist(item.spotifyTrack) : null,
+          artworkUrl: spotifyMatched ? spotifyTrackArtwork(item.spotifyTrack) : null,
+          albumName: spotifyMatched ? item.spotifyTrack.album?.name || null : null
         }
       };
     });
@@ -2066,7 +2102,9 @@
             trackId: track.id || null,
             uri: track.uri || null,
             matchedTitle: track.name || null,
-            matchedArtist: artist || null
+            matchedArtist: artist || null,
+            artworkUrl: spotifyTrackArtwork(track) || null,
+            albumName: track.album?.name || null
           };
           row.querySelector(".song-artist").value = artist;
           row.dataset.spotifyDirty = "false";

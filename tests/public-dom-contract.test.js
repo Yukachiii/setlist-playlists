@@ -12,6 +12,13 @@ const pagesWorkflow = fs.readFileSync(
   "utf8"
 );
 
+test("Spotify登録済み曲のジャケットを訪問ページへ表示する", () => {
+  assert.match(app, /setlist-artwork/);
+  assert.match(app, /open\.spotify\.com\/oembed/);
+  assert.match(app, /thumbnail_url/);
+  assert.match(app, /hydrateSetlistArtwork\(pendingArtworkLoads\)/);
+});
+
 test("公開ページのIDは重複せず、JavaScriptが参照する要素が存在する", () => {
   const ids = [...html.matchAll(/id="([^"]+)"/g)].map((match) => match[1]);
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);

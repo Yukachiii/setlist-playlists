@@ -29,6 +29,7 @@
     spotifyReady: false,
     creatingPlaylist: false
   };
+  const spotifyArtworkRequests = new Map();
 
   const $ = (selector) => document.querySelector(selector);
 
@@ -72,6 +73,82 @@
   function spotifyAvailabilityLabel(item) {
     if (isSpotifyUnavailable(item)) return "未配信";
     return validSpotifyUri(item) ? "Spotify" : "未登録";
+  }
+
+  function spotifyTrackId(item) {
+    const trackId = text(item?.spotify?.trackId).trim();
+    if (/^[A-Za-z0-9]{22}$/.test(trackId)) return trackId;
+    const uriMatch = text(item?.spotify?.uri).match(/^spotify:track:([A-Za-z0-9]{22})$/);
+    return uriMatch?.[1] || "";
+  }
+
+  function spotifyArtworkUrl(item) {
+    const artworkUrl = text(item?.spotify?.artworkUrl).trim();
+    return /^https:\/\//.test(artworkUrl) ? artworkUrl : "";
+  }
+
+  async function fetchSpotifyArtwork(trackId) {
+    if (!/^[A-Za-z0-9]{22}$/.test(text(trackId))) return "";
+    if (spotifyArtworkRequests.has(trackId)) return spotifyArtworkRequests.get(trackId);
+
+    const request = fetch(
+      `https://open.spotify.com/oembed?url=${encodeURIComponent(`https://open.spotify.com/track/${trackId}`)}`
+    )
+      .then(async (response) => {
+        if (!response.ok) return "";
+        const body = await response.json().catch(() => ({}));
+        const thumbnailUrl = text(body.thumbnail_url).trim();
+        return /^https:\/\//.test(thumbnailUrl) ? thumbnailUrl : "";
+      })
+      .catch(() => "");
+    spotifyArtworkRequests.set(trackId, request);
+    return request;
+  }
+
+  function applySetlistArtwork(container, imageUrl, title) {
+    if (!container?.isConnected || !imageUrl) return;
+    const image = document.createElement("img");
+    image.src = imageUrl;
+    image.alt = `${title || "楽曲"}のジャケット`;
+    image.loading = "lazy";
+    image.decoding = "async";
+    container.replaceChildren(image);
+    container.classList.remove("loading", "placeholder");
+    container.removeAttribute("aria-hidden");
+  }
+
+  function createSetlistArtwork(item, title, pendingLoads) {
+    const artwork = createElement("span", "setlist-artwork placeholder", "♪");
+    artwork.setAttribute("aria-hidden", "true");
+    if (!validSpotifyUri(item)) return artwork;
+
+    const savedArtwork = spotifyArtworkUrl(item);
+    if (savedArtwork) {
+      pendingLoads.push({ artwork, imageUrl: savedArtwork, title });
+      return artwork;
+    }
+
+    const trackId = spotifyTrackId(item);
+    if (!trackId) return artwork;
+    artwork.classList.add("loading");
+    artwork.dataset.spotifyTrackId = trackId;
+    pendingLoads.push({ artwork, trackId, title });
+    return artwork;
+  }
+
+  async function hydrateSetlistArtwork(pendingLoads) {
+    const queue = [...pendingLoads];
+    const workers = Array.from({ length: Math.min(4, queue.length) }, async () => {
+      while (queue.length) {
+        const task = queue.shift();
+        if (!task?.artwork?.isConnected) continue;
+        const imageUrl = task.imageUrl || await fetchSpotifyArtwork(task.trackId);
+        if (task.trackId && task.artwork.dataset.spotifyTrackId !== task.trackId) continue;
+        task.artwork.classList.remove("loading");
+        applySetlistArtwork(task.artwork, imageUrl, task.title);
+      }
+    });
+    await Promise.all(workers);
   }
 
   function formatDate(value) {
@@ -338,22 +415,26 @@
     $("#track-count").textContent = `${setlist.length}曲`;
 
     const list = $("#setlist-body");
+    const pendingArtworkLoads = [];
     list.replaceChildren(...setlist.map((item, index) => {
       const row = createElement("li", "setlist-item");
       const marker = createElement("span", "setlist-marker", item?.marker || `M${String(index + 1).padStart(2, "0")}`);
       const titleWrap = createElement("div", "setlist-title");
       const recording = item?.recording || {};
-      titleWrap.append(createElement("strong", "", recording.displayTitle || recording.baseTitle || item?.title || "曲名未登録"));
+      const title = recording.displayTitle || recording.baseTitle || item?.title || "曲名未登録";
+      titleWrap.append(createElement("strong", "", title));
       if (item?.artistHint) titleWrap.append(createElement("span", "", item.artistHint));
+      const artwork = createSetlistArtwork(item, title, pendingArtworkLoads);
       const available = validSpotifyUri(item);
       const match = createElement(
         "span",
         `spotify-match${available ? "" : " unavailable"}`,
         spotifyAvailabilityLabel(item)
       );
-      row.append(marker, titleWrap, match);
+      row.append(marker, artwork, titleWrap, match);
       return row;
     }));
+    hydrateSetlistArtwork(pendingArtworkLoads);
     renderPlaylistPanel(performance);
   }
 
@@ -503,6 +584,9 @@
     isSpotifyUnavailable,
     validSpotifyUri,
     spotifyAvailabilityLabel,
+    spotifyTrackId,
+    spotifyArtworkUrl,
+    fetchSpotifyArtwork,
     normalizeLoadedEvents
   };
 });

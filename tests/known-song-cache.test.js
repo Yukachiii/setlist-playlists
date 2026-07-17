@@ -3,7 +3,14 @@ const assert = require("node:assert/strict");
 
 const cache = require("../admin/js/known-song-cache.js");
 
-function song({ title, version = null, artist = "", trackId = null }) {
+function song({
+  title,
+  version = null,
+  artist = "",
+  trackId = null,
+  artworkUrl = null,
+  albumName = null
+}) {
   return {
     recording: { baseTitle: title, versionLabel: version, displayTitle: title },
     artistHint: artist,
@@ -12,7 +19,9 @@ function song({ title, version = null, artist = "", trackId = null }) {
       trackId,
       uri: trackId ? `spotify:track:${trackId}` : null,
       matchedTitle: trackId ? title : null,
-      matchedArtist: trackId ? artist : null
+      matchedArtist: trackId ? artist : null,
+      artworkUrl,
+      albumName
     }
   };
 }
@@ -20,6 +29,22 @@ function song({ title, version = null, artist = "", trackId = null }) {
 function eventsWith(...songs) {
   return [{ performances: [{ setlist: songs }] }];
 }
+
+test("登録済み曲のアルバム名とジャケットURLを再利用する", () => {
+  const index = cache.buildKnownSongIndex(eventsWith(
+    song({
+      title: "AWOKE",
+      artist: "DOLLCHESTRA",
+      trackId: "track-a",
+      artworkUrl: "https://example.com/awoke.jpg",
+      albumName: "Dream Believers"
+    })
+  ));
+  const known = cache.findKnownSong(index, "AWOKE", "");
+
+  assert.equal(known.track.album.name, "Dream Believers");
+  assert.equal(known.track.album.images[0].url, "https://example.com/awoke.jpg");
+});
 
 test("登録済みの同名・同バージョン曲からSpotify情報を再利用する", () => {
   const index = cache.buildKnownSongIndex(eventsWith(

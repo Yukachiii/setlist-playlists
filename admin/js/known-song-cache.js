@@ -34,7 +34,9 @@
       id: spotify.trackId || existing.id || null,
       uri: spotify.uri || existing.uri || null,
       name: spotify.matchedTitle || existing.name || item.recording?.displayTitle || item.recording?.baseTitle || "",
-      artist: artist || existing.artist || ""
+      artist: artist || existing.artist || "",
+      artworkUrl: spotify.artworkUrl || existing.artworkUrl || "",
+      albumName: spotify.albumName || existing.albumName || ""
     });
   }
 
@@ -84,7 +86,13 @@
           id: cachedTrack.id,
           uri: cachedTrack.uri,
           name: cachedTrack.name,
-          artists: trackArtist ? [{ name: trackArtist }] : []
+          artists: trackArtist ? [{ name: trackArtist }] : [],
+          album: cachedTrack.artworkUrl || cachedTrack.albumName
+            ? {
+                name: cachedTrack.albumName,
+                images: cachedTrack.artworkUrl ? [{ url: cachedTrack.artworkUrl }] : []
+              }
+            : null
         }
       : null;
 
