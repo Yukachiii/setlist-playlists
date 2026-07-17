@@ -6,6 +6,7 @@ const path = require("node:path");
 const root = path.resolve(__dirname, "..");
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "js", "public-app.js"), "utf8");
+const css = fs.readFileSync(path.join(root, "css", "public.css"), "utf8");
 const spotify = fs.readFileSync(path.join(root, "js", "public-spotify-client.js"), "utf8");
 const pagesWorkflow = fs.readFileSync(
   path.join(root, ".github", "workflows", "pages.yml"),
@@ -17,6 +18,21 @@ test("Spotify登録済み曲のジャケットを訪問ページへ表示する"
   assert.match(app, /open\.spotify\.com\/oembed/);
   assert.match(app, /thumbnail_url/);
   assert.match(app, /hydrateSetlistArtwork\(pendingArtworkLoads\)/);
+});
+
+test("スマホでは公演切り替えをプルダウン表示にする", () => {
+  assert.match(html, /id="performance-select"/);
+  assert.match(app, /select\.replaceChildren\(\)/);
+  assert.match(app, /\$\("#performance-select"\)\.addEventListener\("change"/);
+  assert.match(css, /\.performance-tabs\s*\{[^}]*position:\s*sticky/);
+  assert.match(css, /@media \(max-width: 640px\)[\s\S]*?\.performance-tabs\s*\{\s*display:\s*none/);
+});
+
+test("Spotify楽曲情報の自動検出に関する注意書きを表示する", () => {
+  assert.match(html, /Spotify楽曲情報は自動検出を含むため、誤っている場合があります。/);
+  assert.match(html, /href="https:\/\/x\.com\/Cocona_Kona"/);
+  assert.match(html, /不具合報告：@Cocona_Kona/);
+  assert.match(html, /©︎ゆいゆい/);
 });
 
 test("公開ページのIDは重複せず、JavaScriptが参照する要素が存在する", () => {

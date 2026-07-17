@@ -394,9 +394,12 @@
 
   function renderPerformanceTabs(performances) {
     const tabs = $("#performance-tabs");
+    const select = $("#performance-select");
     tabs.replaceChildren();
+    select.replaceChildren();
     performances.forEach((performance, index) => {
-      const tab = createElement("button", "performance-tab", performanceLabel(performance, index));
+      const label = performanceLabel(performance, index);
+      const tab = createElement("button", "performance-tab", label);
       tab.type = "button";
       tab.role = "tab";
       tab.setAttribute("aria-selected", String(index === state.performanceIndex));
@@ -405,6 +408,12 @@
         renderDetail();
       });
       tabs.append(tab);
+
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = label;
+      option.selected = index === state.performanceIndex;
+      select.append(option);
     });
   }
 
@@ -558,6 +567,13 @@
     });
     $("#create-playlist-button").addEventListener("click", () => {
       createPlaylist().catch((error) => showToast(error.message, "error"));
+    });
+    $("#performance-select").addEventListener("change", (event) => {
+      const index = Number.parseInt(event.target.value, 10);
+      const performances = eventPerformances(state.selectedEvent);
+      if (!Number.isInteger(index) || !performances[index] || index === state.performanceIndex) return;
+      state.performanceIndex = index;
+      renderDetail();
     });
     window.addEventListener("hashchange", renderRoute);
   }

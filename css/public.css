@@ -244,9 +244,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .source-link:hover { color: white; }
 .detail-note { min-width: 116px; align-self: center; display: flex; flex-direction: column; align-items: center; color: #8e9ab5; font: 700 9px "DM Sans", sans-serif; letter-spacing: 1.8px; }
 .detail-note strong { margin: 5px 0; color: var(--coral); font-size: 42px; line-height: 1; }
-.performance-tabs { margin: 28px 0 20px; display: flex; flex-wrap: wrap; gap: 9px; }
+.performance-tabs { position: sticky; z-index: 20; top: 70px; margin: 16px -8px 8px; padding: 12px 8px; display: flex; flex-wrap: wrap; gap: 9px; background: rgba(242, 240, 234, 0.94); backdrop-filter: blur(12px); }
 .performance-tab { min-height: 42px; padding: 0 18px; color: #536076; background: white; border: 1px solid #d7d8dc; border-radius: 10px; font-size: 12px; font-weight: 700; cursor: pointer; }
 .performance-tab[aria-selected="true"] { color: white; background: var(--blue); border-color: var(--blue); box-shadow: 0 8px 18px rgba(78, 99, 230, 0.2); }
+.performance-select-wrap { margin: 20px 0; display: none; }
+.performance-select-wrap > span { color: #7c8494; font: 800 9px "DM Sans", sans-serif; letter-spacing: 1.4px; }
+.performance-select { width: 100%; min-height: 52px; padding: 0 46px 0 16px; appearance: none; color: #48546b; background: white; border: 1px solid #d7d8dc; border-radius: 12px; font: 700 13px "Noto Sans JP", sans-serif; box-shadow: 0 7px 18px rgba(17, 26, 46, 0.06); cursor: pointer; }
 .detail-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; align-items: start; gap: 24px; }
 .setlist-card { overflow: hidden; background: white; border: 1px solid #dedfe3; border-radius: var(--radius); }
 .performance-meta { min-height: 88px; padding: 20px 26px; display: grid; grid-template-columns: 0.85fr 1.5fr 0.55fr; gap: 20px; background: #f9f9f7; border-bottom: 1px solid #e6e6e2; }
@@ -322,6 +325,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .detail-shell { padding-top: 24px; }
   .detail-hero { min-height: 0; padding: 30px 24px; }
   .detail-note { display: none; }
+  .performance-tabs { display: none; }
+  .performance-select-wrap { position: relative; display: grid; gap: 7px; }
+  .performance-select-wrap::after { content: "⌄"; position: absolute; right: 17px; bottom: 14px; color: #63708a; font-size: 20px; line-height: 1; pointer-events: none; }
   .performance-meta { grid-template-columns: 1fr 1fr; }
   .performance-meta div:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
   .setlist-item { padding: 13px 17px; grid-template-columns: 36px 42px 1fr; gap: 10px; }

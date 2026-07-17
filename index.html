@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/public.css?v=0.3" />
+    <link rel="stylesheet" href="./css/public.css?v=0.4" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -108,6 +108,10 @@
           </div>
 
           <div id="performance-tabs" class="performance-tabs" role="tablist" aria-label="公演を選択"></div>
+          <label class="performance-select-wrap" for="performance-select">
+            <span>公演を選択</span>
+            <select id="performance-select" class="performance-select"></select>
+          </label>
 
           <div class="detail-layout">
             <article class="setlist-card">
@@ -144,8 +148,13 @@
         <a class="brand footer-brand" href="#/"><span class="brand-mark" aria-hidden="true"><span>♪</span></span><span class="brand-copy"><strong>Setlist</strong><small>PLAYLISTS</small></span></a>
         <p>Love Live! fan-made setlist archive.</p>
       </div>
-      <div class="footer-links"><a href="#events">公演一覧</a></div>
+      <div class="footer-links">
+        <a href="#events">公演一覧</a>
+        <a href="https://x.com/Cocona_Kona" target="_blank" rel="noopener noreferrer">不具合報告：@Cocona_Kona ↗</a>
+      </div>
+      <small class="footer-disclaimer">Spotify楽曲情報は自動検出を含むため、誤っている場合があります。</small>
       <small>当サイトはファン有志による非公式サイトです。</small>
+      <small>©︎ゆいゆい</small>
     </footer>
 
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -153,6 +162,6 @@
     <script src="./admin/js/spotify-client.js?v=0.14"></script>
     <script src="./js/admin-spotify-callback.js?v=0.1"></script>
     <script src="./js/public-spotify-client.js?v=0.2"></script>
-    <script src="./js/public-app.js?v=0.4"></script>
+    <script src="./js/public-app.js?v=0.5"></script>
   </body>
 </html>
