@@ -7,7 +7,6 @@
   const STORAGE_KEY = "setlist_admin_database_v03";
   const SELECTED_KEY = "setlist_admin_selected_event_v03";
   const CONFIRMED_SPOTIFY_KEY = "setlist_confirmed_spotify_mappings_v01";
-  const SAMPLE_URL = "../data/sample-event.json";
 
   const state = {
     database: { schemaVersion: "0.3", events: [] },
@@ -84,7 +83,7 @@
     spotifyManualQuery: $("#spotify-manual-query"),
     spotifyManualSearchButton: $("#spotify-manual-search-button"),
     spotifyReviewProgress: $("#spotify-review-progress"),
-    spotifySkipButton: $("#skip-spotify-candidate-button"),
+    spotifyUnavailableButton: $("#mark-unavailable-spotify-candidate-button"),
     spotifyCancelCandidateButton: $("#cancel-spotify-candidate-button"),
     spotifyResearchAllButton: $("#spotify-research-all-button"),
     editorSpotifySummary: $("#editor-spotify-summary"),
@@ -355,14 +354,6 @@
       } catch (error) {
         console.error("Saved data is invalid", error);
       }
-    }
-
-    if (!state.database.events.length) {
-      const response = await fetch(SAMPLE_URL);
-      if (!response.ok) throw new Error(`サンプルJSONの取得に失敗しました: ${response.status}`);
-      const sample = normalizeEvent(await response.json());
-      state.database.events = [sample];
-      persist();
     }
 
     const preferred = localStorage.getItem(SELECTED_KEY);
@@ -807,11 +798,19 @@
       row.append(spotifyCell);
       elements.pageImportSetlistRows.append(row);
 
-      const savedStatus = item.spotifyUiStatus || "idle";
+      const savedStatus = item.spotifyUiStatus === "skipped"
+        ? "unavailable"
+        : item.spotifyUiStatus || "idle";
       setSpotifyRowStatus(
         row,
         savedStatus,
-        item.spotifyStatusLabel || (savedStatus === "idle" ? "未検索" : "要確認"),
+        item.spotifyStatusLabel || (
+          savedStatus === "idle"
+            ? "未検索"
+            : savedStatus === "unavailable"
+              ? "未配信"
+              : "要確認"
+        ),
         item.spotifyTrack || null,
         item.spotifyResults || []
       );
@@ -1033,7 +1032,7 @@
   function resetSpotifyReviewUi() {
     elements.spotifyReviewProgress.classList.add("hidden");
     elements.spotifyReviewProgress.textContent = "";
-    elements.spotifySkipButton.classList.add("hidden");
+    elements.spotifyUnavailableButton.classList.add("hidden");
     elements.spotifyCancelCandidateButton.textContent = "キャンセル";
     elements.spotifyManualSearchButton.disabled = false;
     elements.spotifyManualSearchButton.textContent = "Spotifyを再検索";
@@ -1059,7 +1058,11 @@
       const performance = state.importDraft.performances[performanceIndex];
       for (let songIndex = 0; songIndex < performance.setlist.length; songIndex += 1) {
         const item = performance.setlist[songIndex];
-        if (item.spotifyUiStatus === "matched" || item.spotifyUiStatus === "skipped") continue;
+        if (
+          item.spotifyUiStatus === "matched" ||
+          item.spotifyUiStatus === "unavailable" ||
+          item.spotifyUiStatus === "skipped"
+        ) continue;
         const key = window.KnownSongCache.songKey(item.title, item.version);
         if (!item.title || seen.has(key)) continue;
         seen.add(key);
@@ -1076,7 +1079,7 @@
     elements.savePageImportButton.disabled = true;
     elements.spotifyCandidateDialogTitle.textContent = "未登録曲を設定";
     elements.spotifyReviewProgress.classList.remove("hidden");
-    elements.spotifySkipButton.classList.remove("hidden");
+    elements.spotifyUnavailableButton.classList.remove("hidden");
     elements.spotifyCancelCandidateButton.textContent = "確認を中止";
     advanceSpotifyReview();
   }
@@ -1087,7 +1090,12 @@
     while (state.spotifyReviewPosition < state.spotifyReviewQueue.length) {
       const current = state.spotifyReviewQueue[state.spotifyReviewPosition];
       const item = state.importDraft?.performances?.[current.performanceIndex]?.setlist?.[current.songIndex];
-      if (!item || item.spotifyUiStatus === "matched" || item.spotifyUiStatus === "skipped") {
+      if (
+        !item ||
+        item.spotifyUiStatus === "matched" ||
+        item.spotifyUiStatus === "unavailable" ||
+        item.spotifyUiStatus === "skipped"
+      ) {
         state.spotifyReviewPosition += 1;
         continue;
       }
@@ -1116,7 +1124,7 @@
       renderSpotifyCandidateResults(results);
       if (!window.SpotifyClient.isConnected() && !results.length) {
         elements.spotifyCandidateSummary.textContent =
-          "Spotify未接続のため検索できません。この曲をスキップするか、確認を中止してSpotifyへ接続してください。";
+          "Spotify未接続のため検索できません。この曲を未配信として登録するか、確認を中止してSpotifyへ接続してください。";
         elements.spotifyManualSearchButton.disabled = true;
       } else {
         elements.spotifyManualSearchButton.disabled = false;
@@ -1128,22 +1136,23 @@
     finishSpotifyReview();
   }
 
-  function skipCurrentSpotifyReviewSong() {
+  function markCurrentSpotifyReviewSongUnavailable() {
     if (!state.spotifyReviewActive) return;
     const current = state.spotifyReviewQueue[state.spotifyReviewPosition];
     if (!current) return;
     if (state.spotifyManualRow) {
-      setSpotifyRowStatus(state.spotifyManualRow, "skipped", "スキップ");
-      state.spotifyManualRow.dataset.spotifySource = "skipped";
+      setSpotifyRowStatus(state.spotifyManualRow, "unavailable", "未配信");
+      state.spotifyManualRow.dataset.spotifySource = "unavailable";
       syncActiveImportPerformance();
     }
     for (const performance of state.importDraft?.performances || []) {
       for (const item of performance.setlist) {
         if (window.KnownSongCache.songKey(item.title, item.version) !== current.key) continue;
         if (item.spotifyUiStatus === "matched") continue;
-        item.spotifyUiStatus = "skipped";
-        item.spotifyStatusLabel = "スキップ";
-        item.spotifySource = "skipped";
+        item.spotifyUiStatus = "unavailable";
+        item.spotifyStatusLabel = "未配信";
+        item.spotifySource = "unavailable";
+        item.spotifyMatchPolicy = "unavailable";
         item.spotifyTrack = null;
       }
     }
@@ -1173,7 +1182,7 @@
     elements.savePageImportButton.disabled = false;
     if (elements.spotifyCandidateDialog.open) elements.spotifyCandidateDialog.close();
     elements.spotifyMatchSummary.textContent =
-      "未登録曲の確認を中止しました。設定済み・スキップ済みの内容は保持されています。";
+      "未登録曲の確認を中止しました。Spotify設定済み・未配信設定済みの内容は保持されています。";
   }
 
   function updateManualSelectionSummary() {
@@ -1187,9 +1196,11 @@
       item.spotifyUiStatus === "manual" ||
       item.spotifyUiStatus === "unmatched"
     ).length;
-    const skipped = items.filter((item) => item.spotifyUiStatus === "skipped").length;
+    const unavailable = items.filter(
+      (item) => item.spotifyUiStatus === "unavailable" || item.spotifyUiStatus === "skipped"
+    ).length;
     elements.spotifyMatchSummary.textContent =
-      `Spotify選択済み ${matched}/${items.length}曲 / 要確認 ${needsReview}曲 / スキップ ${skipped}曲`;
+      `Spotify選択済み ${matched}/${items.length}曲 / 要確認 ${needsReview}曲 / 未配信 ${unavailable}曲`;
   }
 
   function applyManualSpotifyTrack(track) {
@@ -1205,6 +1216,7 @@
       const item = state.draftSetlist[index];
       if (!item) return;
       item.artistHint = artist;
+      item.spotifyMatchPolicy = "exact";
       item.spotify = {
         status: "matched",
         trackId: track.id || null,
@@ -1601,14 +1613,19 @@
 
   function schemaSetlistFromDraft(setlist) {
     return (setlist || []).map((item, index) => {
-      const spotifyMatched = item.spotifyUiStatus === "matched" && item.spotifyTrack;
+      const spotifyUnavailable =
+        item.spotifyUiStatus === "unavailable" ||
+        item.spotifyUiStatus === "skipped" ||
+        item.spotifyMatchPolicy === "unavailable";
+      const spotifyMatched =
+        !spotifyUnavailable && item.spotifyUiStatus === "matched" && item.spotifyTrack;
       return {
         order: index + 1,
         marker: item.marker,
         type: "song",
         recording: recordingFromFields(item.title, item.version),
         artistHint: item.artistHint,
-        spotifyMatchPolicy: matchPolicyForVersion(item.version),
+        spotifyMatchPolicy: spotifyUnavailable ? "unavailable" : matchPolicyForVersion(item.version),
         spotify: {
           status: spotifyMatched ? "matched" : "unmatched",
           trackId: spotifyMatched ? item.spotifyTrack.id : null,
@@ -1869,12 +1886,20 @@
       fragment.querySelector(".song-title").value = item.recording?.baseTitle || "";
       fragment.querySelector(".song-version").value = item.recording?.versionLabel || "";
       fragment.querySelector(".song-artist").value = item.artistHint || "";
-      fragment.querySelector(".song-policy").value = item.spotifyMatchPolicy || "exact";
-      const spotifyMatched = item.spotify?.status === "matched" && item.spotify?.trackId;
+      const policySelect = fragment.querySelector(".song-policy");
+      policySelect.value = item.spotifyMatchPolicy || "exact";
+      const spotifyUnavailable =
+        item.spotifyMatchPolicy === "unavailable" ||
+        item.spotify?.status === "unavailable" ||
+        item.spotify?.status === "skipped";
+      const spotifyMatched =
+        !spotifyUnavailable && item.spotify?.status === "matched" && item.spotify?.trackId;
       const spotifyBadge = fragment.querySelector(".editor-spotify-badge");
       spotifyBadge.className =
-        `editor-spotify-badge spotify-match-badge ${spotifyMatched ? "matched" : "idle"}`;
-      spotifyBadge.textContent = spotifyMatched ? "登録済み" : "未登録";
+        `editor-spotify-badge spotify-match-badge ${
+          spotifyMatched ? "matched" : spotifyUnavailable ? "unavailable" : "idle"
+        }`;
+      spotifyBadge.textContent = spotifyMatched ? "登録済み" : spotifyUnavailable ? "未配信" : "未登録";
       spotifyBadge.title = spotifyMatched
         ? [item.spotify.matchedTitle, item.spotify.matchedArtist].filter(Boolean).join(" / ")
         : "";
@@ -1891,6 +1916,17 @@
           row.dataset.spotifySearched = "false";
           row._spotifyResults = [];
         });
+      });
+      policySelect.addEventListener("change", () => {
+        row.dataset.spotifyDirty = "true";
+        const unavailable = policySelect.value === "unavailable";
+        spotifyBadge.className =
+          `editor-spotify-badge spotify-match-badge ${unavailable ? "unavailable" : "idle"}`;
+        spotifyBadge.textContent = unavailable ? "未配信" : "要再検索";
+        spotifyBadge.title = "";
+        researchButton.textContent = "Spotify検索";
+        row.dataset.spotifySearched = "false";
+        row._spotifyResults = [];
       });
 
       fragment.querySelector(".move-up").disabled = index === 0;
@@ -1910,6 +1946,8 @@
       const title = row.querySelector(".song-title").value.trim();
       const version = row.querySelector(".song-version").value.trim();
       const previous = state.draftSetlist[index] || blankSong(index);
+      const spotifyMatchPolicy = row.querySelector(".song-policy").value;
+      const spotifyUnavailable = spotifyMatchPolicy === "unavailable";
       return {
         ...previous,
         order: index + 1,
@@ -1917,8 +1955,8 @@
         type: "song",
         recording: recordingFromFields(title, version),
         artistHint: row.querySelector(".song-artist").value.trim(),
-        spotifyMatchPolicy: row.querySelector(".song-policy").value,
-        spotify: row.dataset.spotifyDirty === "true"
+        spotifyMatchPolicy,
+        spotify: spotifyUnavailable || row.dataset.spotifyDirty === "true"
           ? {
               status: "unmatched",
               trackId: null,
@@ -1969,7 +2007,7 @@
 
     const originalLabel = "Spotifyで全曲再検索";
     const cache = new Map();
-    const counts = { matched: 0, fallback: 0, review: 0, unmatched: 0, skipped: 0 };
+    const counts = { matched: 0, fallback: 0, review: 0, unmatched: 0, unavailable: 0 };
     elements.spotifyResearchAllButton.disabled = true;
 
     try {
@@ -1998,11 +2036,11 @@
         }
 
         if (matchPolicy === "unavailable") {
-          badge.className = "editor-spotify-badge spotify-match-badge idle";
-          badge.textContent = "対象外";
+          badge.className = "editor-spotify-badge spotify-match-badge unavailable";
+          badge.textContent = "未配信";
           researchButton.textContent = "Spotify検索";
           row.dataset.spotifySearched = "false";
-          counts.skipped += 1;
+          counts.unavailable += 1;
           researchButton.disabled = false;
           continue;
         }
@@ -2065,7 +2103,7 @@
       }
 
       elements.editorSpotifySummary.textContent =
-        `一括再検索: 一致 ${counts.matched}曲 / 原曲で補完 ${counts.fallback}曲 / 要確認 ${counts.review}曲 / 見つからず ${counts.unmatched}曲 / 対象外 ${counts.skipped}曲。` +
+        `一括再検索: 一致 ${counts.matched}曲 / 原曲で補完 ${counts.fallback}曲 / 要確認 ${counts.review}曲 / 見つからず ${counts.unmatched}曲 / 未配信 ${counts.unavailable}曲。` +
         " 要確認・見つからずの曲は現在の登録を保持しています。最後に「公演を保存」を押してください。";
     } catch (error) {
       elements.editorSpotifySummary.textContent = `Spotify一括再検索を中断しました: ${error.message}`;
@@ -2453,7 +2491,7 @@
   elements.spotifyEnrichButton.addEventListener("click", enrichArtistsFromSpotify);
   $("#close-spotify-candidate-button").addEventListener("click", closeSpotifyCandidateDialog);
   $("#cancel-spotify-candidate-button").addEventListener("click", closeSpotifyCandidateDialog);
-  elements.spotifySkipButton.addEventListener("click", skipCurrentSpotifyReviewSong);
+  elements.spotifyUnavailableButton.addEventListener("click", markCurrentSpotifyReviewSongUnavailable);
   elements.spotifyManualSearchButton.addEventListener("click", searchSpotifyManually);
   elements.spotifyManualQuery.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;

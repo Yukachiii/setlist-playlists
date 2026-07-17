@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Setlist Playlists Admin</title>
-  <link rel="stylesheet" href="./css/style.css?v=0.15">
+  <link rel="stylesheet" href="./css/style.css?v=0.16">
 </head>
 <body>
   <header class="topbar">
@@ -303,7 +303,7 @@
 
       <div class="dialog-footer">
         <button id="cancel-spotify-candidate-button" class="button ghost" type="button">キャンセル</button>
-        <button id="skip-spotify-candidate-button" class="button secondary hidden" type="button">この曲をスキップ</button>
+        <button id="mark-unavailable-spotify-candidate-button" class="button secondary hidden" type="button">この曲を未配信として登録</button>
       </div>
     </div>
   </dialog>
@@ -454,7 +454,7 @@
         <select class="song-policy table-input">
           <option value="exact">同名音源を使用</option>
           <option value="original_fallback">なければ原曲</option>
-          <option value="unavailable">プレイリスト対象外</option>
+          <option value="unavailable">未配信</option>
         </select>
       </td>
       <td>
@@ -476,6 +476,6 @@
   <script src="./js/page-text-parser.js?v=0.19"></script>
   <script src="./js/known-song-cache.js?v=0.19"></script>
   <script src="./js/spotify-client.js?v=0.19"></script>
-  <script src="./js/app.js?v=0.20"></script>
+  <script src="./js/app.js?v=0.22"></script>
 </body>
 </html>

@@ -423,7 +423,8 @@ dialog::backdrop { background: rgba(13, 20, 35, .66); backdrop-filter: blur(3px)
 .spotify-match-badge.ambiguous { color: #765600; background: #fff0bd; }
 .spotify-match-badge.manual { color: #765600; background: #fff0bd; }
 .spotify-match-badge.unmatched { color: #7c3130; background: #fbe4e2; }
-.spotify-match-badge.skipped { color: #5e687c; background: #e5e8ee; }
+.spotify-match-badge.skipped,
+.spotify-match-badge.unavailable { color: #5e687c; background: #e5e8ee; }
 .spotify-match-badge.searching { color: #314585; background: #e1e7ff; }
 .spotify-candidates-button {
   padding: 0;

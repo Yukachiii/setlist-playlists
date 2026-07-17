@@ -58,8 +58,20 @@
     );
   }
 
+  function isSpotifyUnavailable(item) {
+    return item?.spotifyMatchPolicy === "unavailable" ||
+      item?.spotify?.status === "unavailable" ||
+      item?.spotify?.status === "skipped";
+  }
+
   function validSpotifyUri(item) {
-    return /^spotify:track:[A-Za-z0-9]{22}$/.test(text(item?.spotify?.uri));
+    return !isSpotifyUnavailable(item) &&
+      /^spotify:track:[A-Za-z0-9]{22}$/.test(text(item?.spotify?.uri));
+  }
+
+  function spotifyAvailabilityLabel(item) {
+    if (isSpotifyUnavailable(item)) return "未配信";
+    return validSpotifyUri(item) ? "Spotify" : "未登録";
   }
 
   function formatDate(value) {
@@ -334,7 +346,11 @@
       titleWrap.append(createElement("strong", "", recording.displayTitle || recording.baseTitle || item?.title || "曲名未登録"));
       if (item?.artistHint) titleWrap.append(createElement("span", "", item.artistHint));
       const available = validSpotifyUri(item);
-      const match = createElement("span", `spotify-match${available ? "" : " unavailable"}`, available ? "Spotify" : "未登録");
+      const match = createElement(
+        "span",
+        `spotify-match${available ? "" : " unavailable"}`,
+        spotifyAvailabilityLabel(item)
+      );
       row.append(marker, titleWrap, match);
       return row;
     }));
@@ -344,14 +360,23 @@
   function renderPlaylistPanel(performance) {
     const setlist = songs(performance);
     const available = setlist.filter(validSpotifyUri);
-    const missing = setlist.length - available.length;
+    const unavailable = setlist.filter(isSpotifyUnavailable);
+    const unregistered = setlist.length - available.length - unavailable.length;
     $("#playlist-available-count").textContent = `${available.length} / ${setlist.length}曲`;
 
     const note = $("#playlist-note");
     if (!available.length) {
-      note.textContent = "この公演にはSpotifyへ追加できる曲がまだ登録されていません。";
-    } else if (missing) {
-      note.textContent = `${available.length}曲を曲順どおり追加します。未登録の${missing}曲は除外されます。`;
+      if (unavailable.length && !unregistered) {
+        note.textContent = "この公演の曲はSpotifyで未配信です。";
+      } else {
+        note.textContent = "この公演にはSpotifyへ追加できる曲がまだ登録されていません。";
+      }
+    } else if (unavailable.length || unregistered) {
+      const excluded = [
+        unavailable.length ? `未配信の${unavailable.length}曲` : "",
+        unregistered ? `未登録の${unregistered}曲` : ""
+      ].filter(Boolean).join("と");
+      note.textContent = `${available.length}曲を曲順どおり追加します。${excluded}は除外されます。`;
     } else {
       note.textContent = `全${available.length}曲をセットリストの曲順どおり追加します。`;
     }
@@ -475,7 +500,9 @@
     formatDate,
     eventDateRange,
     normalizeSearch,
+    isSpotifyUnavailable,
     validSpotifyUri,
+    spotifyAvailabilityLabel,
     normalizeLoadedEvents
   };
 });

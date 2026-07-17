@@ -73,14 +73,15 @@ test("Spotify候補にアルバムジャケットを表示する", () => {
   assert.match(app, /image\.loading = "lazy"/);
 });
 
-test("登録時に未登録曲を1曲ずつ設定またはスキップできる", () => {
+test("登録時に未登録曲を1曲ずつ設定または未配信にできる", () => {
   assert.match(html, /id="spotify-review-progress"/);
-  assert.match(html, /id="skip-spotify-candidate-button"[^>]*>この曲をスキップ</);
+  assert.match(html, /id="mark-unavailable-spotify-candidate-button"[^>]*>この曲を未配信として登録</);
   assert.match(app, /function collectUnresolvedSpotifySongs\(\)/);
   assert.match(app, /function startSpotifyReview\(queue\)/);
-  assert.match(app, /function skipCurrentSpotifyReviewSong\(\)/);
+  assert.match(app, /function markCurrentSpotifyReviewSongUnavailable\(\)/);
   assert.match(app, /function advanceSpotifyReview\(\)/);
   assert.match(app, /function finishSpotifyReview\(\)/);
+  assert.match(app, /spotifyMatchPolicy: spotifyUnavailable \? "unavailable"/);
   assert.match(app, /savePageImportWithOptions\([\s\S]*?\{ skipSpotifyReview: true \}\)/);
 });
 
