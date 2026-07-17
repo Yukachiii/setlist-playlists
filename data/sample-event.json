@@ -1,0 +1,266 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-3rd-live-dollchestra-osaka-night",
+  "title": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 3rd Live Tour TRI TRI UNITY!!!",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "x",
+      "name": "LL-Fans",
+      "account": "LLFans_jp",
+      "url": "https://x.com/LLFans_jp/status/1860650734938968247",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "dollchestra-osaka-night",
+      "label": "TRY TRI UNITY!!! with DOLLCHESTRA 夜公演",
+      "day": null,
+      "session": "night",
+      "date": "2024-11-24",
+      "venue": {
+        "name": "オリックス劇場",
+        "city": "大阪",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sparkly Spot",
+            "versionLabel": "104期NEW Ver.",
+            "versionCode": "104ki-new",
+            "recordingId": "sparkly-spot__104ki-new",
+            "displayTitle": "Sparkly Spot（104期NEW Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "matched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "AWOKE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "awoke__original",
+            "displayTitle": "AWOKE"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "matched",
+            "trackId": "a",
+            "uri": "spotify:track:a"
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スケイプゴート",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "scapegoat__original",
+            "displayTitle": "スケイプゴート"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Take It Over",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "take-it-over__original",
+            "displayTitle": "Take It Over"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "レディバグ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "ladybug__original",
+            "displayTitle": "レディバグ"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Mirage Voyage",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "mirage-voyage__104ki",
+            "displayTitle": "Mirage Voyage（104期 Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Proof",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "proof__original",
+            "displayTitle": "Proof"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Tragic Drops",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "tragic-drops__104ki",
+            "displayTitle": "Tragic Drops（104期 Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 9,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "AWOKE",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "awoke__104ki",
+            "displayTitle": "AWOKE（104期 Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 10,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KNOT",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "knot__104ki",
+            "displayTitle": "KNOT（104期 Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 11,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "バアドケージ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "birdcage__original",
+            "displayTitle": "バアドケージ"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        },
+        {
+          "order": 12,
+          "marker": "EN04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "365 Days",
+            "versionLabel": "DOLLCHESTRA Ver.",
+            "versionCode": "dollchestra",
+            "recordingId": "365-days__dollchestra",
+            "displayTitle": "365 Days（DOLLCHESTRA Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null
+          },
+          "spotifyMatchPolicy": "exact"
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

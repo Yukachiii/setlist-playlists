@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "0.3",
+  "events": [
+    "sample-event.json"
+  ]
+}

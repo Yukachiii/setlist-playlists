@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Setlist Playlists Admin</title>
+  <link rel="stylesheet" href="./css/style.css?v=0.15">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">LOCAL ADMIN / SCHEMA 0.3</p>
+      <h1>Setlist Playlists Admin</h1>
+    </div>
+    <div class="top-actions">
+      <span id="save-state" class="save-state">読み込み中</span>
+      <span id="spotify-account" class="spotify-state">Spotify未接続</span>
+      <button id="spotify-connect-button" class="button spotify-button" type="button">Spotifyに接続</button>
+      <button id="page-import-button" class="button" type="button">LL-Fansから追加</button>
+      <span id="github-publish-state" class="github-state">GitHub確認中</span>
+      <button id="publish-github-button" class="button github-button" type="button" disabled>GitHubへ公開</button>
+      <button id="export-event-button" class="button secondary" type="button">選択中をJSON出力</button>
+      <button id="import-button" class="button secondary" type="button">JSON読込</button>
+      <input id="import-file" type="file" accept=".json,application/json" hidden>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-heading">
+        <div>
+          <p class="eyebrow">EVENTS</p>
+          <h2>イベント</h2>
+        </div>
+        <button id="new-event-button" class="icon-button" type="button" title="イベントを追加">＋</button>
+      </div>
+      <div id="event-list" class="event-list"></div>
+      <div class="sidebar-footer">
+        <button id="export-all-button" class="button ghost full" type="button">全データをバックアップ</button>
+        <button id="reset-button" class="button danger-ghost full" type="button">ローカルデータを初期化</button>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <section id="empty-state" class="empty-state hidden">
+        <div class="empty-icon">🎤</div>
+        <h2>イベントを選択してください</h2>
+        <p>左の一覧から選ぶか、新しいイベントを追加します。</p>
+      </section>
+
+      <div id="editor" class="editor hidden">
+        <section class="panel event-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">EVENT DETAILS</p>
+              <h2>イベント情報</h2>
+            </div>
+            <div class="row-actions">
+              <button id="duplicate-event-button" class="button ghost" type="button">複製</button>
+              <button id="delete-event-button" class="button danger-ghost" type="button">削除</button>
+              <button id="save-event-button" class="button" type="button">保存</button>
+            </div>
+          </div>
+
+          <div class="form-grid two">
+            <label>
+              イベントID
+              <input id="event-id" autocomplete="off" placeholder="hasunosora-3rd-live">
+              <span class="field-help">URLやファイル名に使う半角英数字のID</span>
+            </label>
+            <label>
+              シリーズ
+              <input id="event-series" autocomplete="off" placeholder="hasunosora">
+              <span class="field-help">複数ならカンマ区切り</span>
+            </label>
+          </div>
+
+          <label>
+            正式公演名
+            <input id="event-title" autocomplete="off" placeholder="ラブライブ！…">
+          </label>
+
+          <div class="form-grid three">
+            <label>
+              情報源名
+              <input id="source-name" autocomplete="off" placeholder="LL-Fans">
+            </label>
+            <label class="span-two">
+              情報源URL
+              <input id="source-url" type="url" autocomplete="off" placeholder="https://…">
+            </label>
+          </div>
+
+          <div id="event-errors" class="validation-box hidden"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">PERFORMANCES</p>
+              <h2>公演一覧</h2>
+              <p id="performance-summary" class="muted"></p>
+            </div>
+            <button id="add-performance-button" class="button" type="button">＋ 公演を追加</button>
+          </div>
+          <div id="performance-list" class="performance-list"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <dialog id="page-import-dialog" class="page-import-dialog">
+    <form id="page-import-form" class="dialog-shell">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">LL-FANS IMPORT</p>
+          <h2>LL-Fansから公演を追加</h2>
+        </div>
+        <button id="close-page-import-button" class="icon-button ghost-icon" type="button" aria-label="閉じる">×</button>
+      </div>
+
+      <div class="dialog-body">
+        <section class="dialog-section">
+          <h3>1. URLまたはページ本文を入力</h3>
+          <div class="url-import-box">
+            <label>
+              LL-FansイベントURL
+              <input id="page-import-url" type="url" autocomplete="off" placeholder="https://ll-fans.jp/data/event/288">
+            </label>
+            <button id="parse-page-import-url-button" class="button" type="button">全公演を取得</button>
+          </div>
+          <p class="muted">イベントURLを使うと、会場・Dayが分かれた複数公演をまとめて取得できます。</p>
+          <div class="import-divider"><span>または、表示中の1公演だけ本文から追加</span></div>
+          <label>
+            ページ本文
+            <textarea id="page-import-text" rows="12" placeholder="TOP&#10;データベース&#10;イベント・TV出演&#10;イベント名…&#10;セットリスト&#10;M01&#10;曲名…"></textarea>
+          </label>
+          <div class="import-parse-actions">
+            <p class="muted">MC・幕間・告知・「初」など、現行JSONにない情報は保存しません。</p>
+            <button id="parse-page-import-button" class="button secondary" type="button">本文を解析</button>
+          </div>
+        </section>
+
+        <div id="page-import-preview" class="hidden">
+          <section class="dialog-section">
+            <div class="section-title-row">
+              <div>
+                <h3>2. 抽出結果を確認</h3>
+                <p id="page-import-summary" class="muted"></p>
+              </div>
+              <label class="import-destination-label">
+                登録先
+                <select id="page-import-destination"></select>
+              </label>
+            </div>
+            <p id="page-import-destination-help" class="import-note"></p>
+
+            <fieldset id="page-import-event-fields" class="import-fieldset">
+              <div class="form-grid two">
+                <label>
+                  イベントID
+                  <input id="page-import-event-id" autocomplete="off">
+                </label>
+                <label>
+                  シリーズ
+                  <input id="page-import-series" autocomplete="off">
+                </label>
+              </div>
+              <label>
+                正式公演名
+                <input id="page-import-event-title" autocomplete="off">
+              </label>
+              <div class="form-grid two">
+                <label>
+                  情報源名
+                  <input id="page-import-source-name" autocomplete="off">
+                </label>
+                <label>
+                  情報源URL
+                  <input id="page-import-source-url" type="url" autocomplete="off">
+                </label>
+              </div>
+            </fieldset>
+
+            <div id="page-import-performance-switcher" class="import-performance-switcher hidden">
+              <label>
+                確認する公演
+                <select id="page-import-performance-selector"></select>
+              </label>
+              <p id="page-import-performance-counter" class="muted"></p>
+            </div>
+
+            <div class="form-grid two import-performance-fields">
+              <label>
+                公演ID
+                <input id="page-import-performance-id" autocomplete="off">
+              </label>
+              <label>
+                表示名
+                <input id="page-import-performance-label" autocomplete="off">
+              </label>
+            </div>
+            <div class="form-grid four">
+              <label>
+                Day
+                <input id="page-import-performance-day" type="number" min="1" step="1">
+              </label>
+              <label>
+                昼夜区分
+                <select id="page-import-performance-session">
+                  <option value="">指定なし</option>
+                  <option value="daytime">昼公演</option>
+                  <option value="evening">夕公演</option>
+                  <option value="night">夜公演</option>
+                </select>
+              </label>
+              <label>
+                開催日
+                <input id="page-import-performance-date" type="date">
+              </label>
+              <label>
+                国
+                <input id="page-import-venue-country" maxlength="2" value="JP">
+              </label>
+            </div>
+            <div class="form-grid two">
+              <label>
+                会場
+                <input id="page-import-venue-name" autocomplete="off">
+              </label>
+              <label>
+                都市・地域
+                <input id="page-import-venue-city" autocomplete="off">
+              </label>
+            </div>
+          </section>
+
+          <section class="dialog-section">
+            <div class="section-title-row">
+              <div>
+                <h3>抽出したセットリスト</h3>
+                <p id="spotify-match-summary" class="muted">登録前に番号・曲名・バージョンを修正できます。</p>
+              </div>
+              <button id="spotify-enrich-button" class="button spotify-button" type="button" disabled>
+                Spotifyでアーティスト補完
+              </button>
+            </div>
+            <div class="table-wrap import-setlist-wrap">
+              <table class="setlist-table import-setlist-table">
+                <thead>
+                  <tr>
+                    <th class="col-order">順</th>
+                    <th class="col-marker">番号</th>
+                    <th>曲名</th>
+                    <th>バージョン</th>
+                    <th>アーティスト候補</th>
+                    <th class="col-spotify">Spotify</th>
+                  </tr>
+                </thead>
+                <tbody id="page-import-setlist-rows"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <div id="page-import-warnings" class="notice-box hidden"></div>
+        <div id="page-import-errors" class="validation-box hidden"></div>
+      </div>
+
+      <div class="dialog-footer">
+        <button id="cancel-page-import-button" class="button ghost" type="button">キャンセル</button>
+        <button id="save-page-import-button" class="button" type="submit" disabled>JSON化して登録</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="spotify-candidate-dialog" class="spotify-candidate-dialog">
+    <div class="dialog-shell">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">SPOTIFY TRACK SELECTION</p>
+          <h2 id="spotify-candidate-dialog-title">Spotify曲を手動で選択</h2>
+        </div>
+        <button id="close-spotify-candidate-button" class="icon-button ghost-icon" type="button" aria-label="閉じる">×</button>
+      </div>
+
+      <div class="dialog-body">
+        <section class="dialog-section">
+          <p id="spotify-review-progress" class="spotify-review-progress hidden"></p>
+          <p id="spotify-candidate-song" class="spotify-candidate-song"></p>
+          <div class="spotify-manual-search">
+            <label>
+              検索語
+              <input id="spotify-manual-query" autocomplete="off" placeholder="曲名 アーティスト名">
+            </label>
+            <button id="spotify-manual-search-button" class="button spotify-button" type="button">Spotifyを再検索</button>
+          </div>
+          <p id="spotify-candidate-summary" class="muted"></p>
+        </section>
+
+        <div id="spotify-candidate-list" class="spotify-candidate-list"></div>
+      </div>
+
+      <div class="dialog-footer">
+        <button id="cancel-spotify-candidate-button" class="button ghost" type="button">キャンセル</button>
+        <button id="skip-spotify-candidate-button" class="button secondary hidden" type="button">この曲をスキップ</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="performance-dialog">
+    <form id="performance-form" class="dialog-shell">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">PERFORMANCE EDITOR</p>
+          <h2 id="performance-dialog-title">公演を追加</h2>
+        </div>
+        <button id="close-performance-button" class="icon-button ghost-icon" type="button">×</button>
+      </div>
+
+      <div class="dialog-body">
+        <section class="dialog-section">
+          <h3>公演情報</h3>
+          <div class="form-grid two">
+            <label>
+              公演ID
+              <div class="input-action">
+                <input id="performance-id" autocomplete="off" placeholder="dollchestra-osaka-night">
+                <button id="generate-performance-id" class="button ghost compact" type="button">自動</button>
+              </div>
+            </label>
+            <label>
+              表示名
+              <input id="performance-label" autocomplete="off" placeholder="大阪公演 夜公演">
+            </label>
+          </div>
+
+          <div class="form-grid four">
+            <label>
+              Day
+              <input id="performance-day" type="number" min="1" step="1" placeholder="2">
+            </label>
+            <label>
+              昼夜区分
+              <select id="performance-session">
+                <option value="">指定なし</option>
+                <option value="daytime">昼公演</option>
+                <option value="evening">夕公演</option>
+                <option value="night">夜公演</option>
+              </select>
+            </label>
+            <label>
+              開催日
+              <input id="performance-date" type="date">
+            </label>
+            <label>
+              国
+              <input id="venue-country" autocomplete="off" maxlength="2" value="JP" placeholder="JP">
+            </label>
+          </div>
+
+          <div class="form-grid two">
+            <label>
+              会場
+              <input id="venue-name" autocomplete="off" placeholder="オリックス劇場">
+            </label>
+            <label>
+              都市・地域
+              <input id="venue-city" autocomplete="off" placeholder="大阪">
+            </label>
+          </div>
+        </section>
+
+        <section class="dialog-section">
+          <div class="section-title-row">
+            <div>
+              <h3>セトリ</h3>
+              <p class="muted">M01やEN01付きのリストを貼ると一括追加できます。</p>
+            </div>
+            <div class="section-actions">
+              <button id="spotify-research-all-button" class="button spotify-button" type="button">Spotifyで全曲再検索</button>
+              <button id="add-song-button" class="button ghost" type="button">＋ 1曲追加</button>
+            </div>
+          </div>
+          <p id="editor-spotify-summary" class="muted editor-spotify-summary">登録済みの曲も含めて、曲名だけでSpotifyを一括再検索できます。</p>
+
+          <div class="paste-box">
+            <label>
+              セトリ一括貼り付け
+              <textarea id="setlist-paste" rows="7" placeholder="M01. Sparkly Spot（104期NEW Ver.）&#10;M02. AWOKE&#10;EN01. KNOT（104期 Ver.）"></textarea>
+            </label>
+            <div class="paste-actions">
+              <button id="parse-setlist-button" class="button secondary" type="button">貼り付け内容を取り込む</button>
+              <label class="inline-check">
+                <input id="replace-setlist" type="checkbox">
+                現在の曲を置き換える
+              </label>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="setlist-table">
+              <thead>
+                <tr>
+                  <th class="col-order">順</th>
+                  <th class="col-marker">番号</th>
+                  <th>曲名</th>
+                  <th>バージョン</th>
+                  <th>アーティスト候補</th>
+                  <th>音源方針</th>
+                  <th class="col-spotify">Spotify</th>
+                  <th class="col-actions"></th>
+                </tr>
+              </thead>
+              <tbody id="setlist-rows"></tbody>
+            </table>
+          </div>
+          <p id="setlist-empty" class="table-empty hidden">曲がまだありません。</p>
+        </section>
+
+        <div id="performance-errors" class="validation-box hidden"></div>
+      </div>
+
+      <div class="dialog-footer">
+        <button id="cancel-performance-button" class="button ghost" type="button">キャンセル</button>
+        <button id="save-performance-button" class="button" type="submit">公演を保存</button>
+      </div>
+    </form>
+  </dialog>
+
+  <template id="performance-card-template">
+    <article class="performance-card">
+      <div class="performance-main">
+        <div class="performance-label"></div>
+        <div class="performance-meta"></div>
+        <div class="performance-tracks"></div>
+      </div>
+      <div class="row-actions">
+        <button class="duplicate-performance button ghost compact" type="button">複製</button>
+        <button class="edit-performance button secondary compact" type="button">編集</button>
+        <button class="delete-performance button danger-ghost compact" type="button">削除</button>
+      </div>
+    </article>
+  </template>
+
+  <template id="song-row-template">
+    <tr>
+      <td class="song-order"></td>
+      <td><input class="song-marker table-input" autocomplete="off" placeholder="M01"></td>
+      <td><input class="song-title table-input" autocomplete="off" placeholder="曲名"></td>
+      <td><input class="song-version table-input" autocomplete="off" placeholder="104期 Ver."></td>
+      <td><input class="song-artist table-input" autocomplete="off" placeholder="DOLLCHESTRA"></td>
+      <td>
+        <select class="song-policy table-input">
+          <option value="exact">同名音源を使用</option>
+          <option value="original_fallback">なければ原曲</option>
+          <option value="unavailable">プレイリスト対象外</option>
+        </select>
+      </td>
+      <td>
+        <div class="spotify-row-status">
+          <span class="editor-spotify-badge spotify-match-badge idle">未登録</span>
+          <button class="research-song spotify-candidates-button" type="button">Spotify検索</button>
+        </div>
+      </td>
+      <td>
+        <div class="song-actions">
+          <button class="move-up mini-button" type="button" title="上へ">↑</button>
+          <button class="move-down mini-button" type="button" title="下へ">↓</button>
+          <button class="remove-song mini-button danger" type="button" title="削除">×</button>
+        </div>
+      </td>
+    </tr>
+  </template>
+
+  <script src="./js/page-text-parser.js?v=0.19"></script>
+  <script src="./js/known-song-cache.js?v=0.19"></script>
+  <script src="./js/spotify-client.js?v=0.19"></script>
+  <script src="./js/app.js?v=0.20"></script>
+</body>
+</html>
