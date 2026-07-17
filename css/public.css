@@ -271,7 +271,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .spotify-match::before { content: ""; width: 7px; height: 7px; background: var(--green); border-radius: 50%; }
 .spotify-match.unavailable { color: #a0a5ae; }
 .spotify-match.unavailable::before { background: #c5c8ce; }
-.playlist-panel { position: sticky; top: 100px; padding: 30px; overflow: hidden; color: white; background: var(--navy); border-radius: var(--radius); box-shadow: 0 20px 45px rgba(17, 26, 46, 0.18); }
+.playlist-panel { position: sticky; top: calc(82px + var(--performance-tabs-height, 0px)); padding: 30px; overflow: hidden; color: white; background: var(--navy); border-radius: var(--radius); box-shadow: 0 20px 45px rgba(17, 26, 46, 0.18); transition: top 160ms ease; }
 .playlist-panel-mark { position: absolute; top: -30px; right: -20px; color: rgba(255, 255, 255, 0.05); font-size: 150px; font-weight: 800; transform: rotate(-12deg); }
 .playlist-panel h2 { position: relative; margin: 0 0 26px; font-size: 23px; line-height: 1.55; }
 .availability { margin-bottom: 18px; padding: 16px 0; display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(255, 255, 255, 0.12); border-bottom: 1px solid rgba(255, 255, 255, 0.12); }

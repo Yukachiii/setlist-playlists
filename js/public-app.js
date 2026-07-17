@@ -415,6 +415,17 @@
       option.selected = index === state.performanceIndex;
       select.append(option);
     });
+    syncPerformanceTabsHeight();
+  }
+
+  function syncPerformanceTabsHeight() {
+    window.requestAnimationFrame(() => {
+      const tabs = $("#performance-tabs");
+      const shouldOffsetPlaylist = window.matchMedia("(min-width: 961px)").matches &&
+        window.getComputedStyle(tabs).display !== "none";
+      const height = shouldOffsetPlaylist ? Math.ceil(tabs.getBoundingClientRect().height) : 0;
+      document.documentElement.style.setProperty("--performance-tabs-height", `${height}px`);
+    });
   }
 
   function renderPerformance(performance) {
@@ -575,6 +586,7 @@
       state.performanceIndex = index;
       renderDetail();
     });
+    window.addEventListener("resize", syncPerformanceTabsHeight);
     window.addEventListener("hashchange", renderRoute);
   }
 

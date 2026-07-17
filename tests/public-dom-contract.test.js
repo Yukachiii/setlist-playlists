@@ -28,6 +28,13 @@ test("スマホでは公演切り替えをプルダウン表示にする", () =>
   assert.match(css, /@media \(max-width: 640px\)[\s\S]*?\.performance-tabs\s*\{\s*display:\s*none/);
 });
 
+test("PCの固定タブとプレイリスト作成欄が重ならない", () => {
+  assert.match(app, /function syncPerformanceTabsHeight\(\)/);
+  assert.match(app, /--performance-tabs-height/);
+  assert.match(app, /window\.addEventListener\("resize", syncPerformanceTabsHeight\)/);
+  assert.match(css, /top:\s*calc\(82px \+ var\(--performance-tabs-height, 0px\)\)/);
+});
+
 test("Spotify楽曲情報の自動検出に関する注意書きを表示する", () => {
   assert.match(html, /Spotify楽曲情報は自動検出を含むため、誤っている場合があります。/);
   assert.match(html, /href="https:\/\/x\.com\/Cocona_Kona"/);
