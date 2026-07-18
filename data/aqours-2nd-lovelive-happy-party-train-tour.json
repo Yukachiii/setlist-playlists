@@ -1,0 +1,2938 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-2nd-lovelive-happy-party-train-tour",
+  "title": "ラブライブ！サンシャイン!! Aqours 2nd LoveLive! HAPPY PARTY TRAIN TOUR",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/uranohoshi/sp_2ndlive.php",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-2nd-lovelive-happy-party-train-tour-nagoya-day-1",
+      "label": "名古屋公演 Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2017-08-05",
+      "venue": {
+        "name": "クロコくんホール（旧：日本ガイシホール）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pops heartで踊るんだもん！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pops-heart__original",
+            "displayTitle": "Pops heartで踊るんだもん！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1KpwqYIDtCyfXA78jR0KId",
+            "uri": "spotify:track:1KpwqYIDtCyfXA78jR0KId",
+            "matchedTitle": "Pops heartで踊るんだもん！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "空も心も晴れるから",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-vune6l__original",
+            "displayTitle": "空も心も晴れるから"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4dfYOVX61QBQe6k4cs7gtK",
+            "uri": "spotify:track:4dfYOVX61QBQe6k4cs7gtK",
+            "matchedTitle": "空も心も晴れるから",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Waku-Waku-Week!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "waku-waku-week__original",
+            "displayTitle": "Waku-Waku-Week!"
+          },
+          "artistHint": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "581P3L6pPivj45fCwcRzVt",
+            "uri": "spotify:track:581P3L6pPivj45fCwcRzVt",
+            "matchedTitle": "Waku-Waku-Week!",
+            "matchedArtist": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "G線上のシンデレラ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "g__original",
+            "displayTitle": "G線上のシンデレラ"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5iK3RImiMU2Qs4xPE8mXt5",
+            "uri": "spotify:track:5iK3RImiMU2Qs4xPE8mXt5",
+            "matchedTitle": "G線上のシンデレラ",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Warrior",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-warrior__original",
+            "displayTitle": "Daydream Warrior"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hjoFJtQBfrtbvih5PBOrX",
+            "uri": "spotify:track:6hjoFJtQBfrtbvih5PBOrX",
+            "matchedTitle": "Daydream Warrior",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-4vd8hj__original",
+            "displayTitle": "スリリング・ワンウェイ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "近未来ハッピーエンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1w0uptd__original",
+            "displayTitle": "近未来ハッピーエンド"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4jh3bzVyvZUQ3IjSzYwnN1",
+            "uri": "spotify:track:4jh3bzVyvZUQ3IjSzYwnN1",
+            "matchedTitle": "近未来ハッピーエンド",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "海岸通りで待ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bqvjys__original",
+            "displayTitle": "海岸通りで待ってるよ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4nUNspP8lDRKp1txgKxOS0",
+            "uri": "spotify:track:4nUNspP8lDRKp1txgKxOS0",
+            "matchedTitle": "海岸通りで待ってるよ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GALAXY HidE and SeeK",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "galaxy-hide-and-seek__original",
+            "displayTitle": "GALAXY HidE and SeeK"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0nPaqGTjGQ5sqy5rmIzi7m",
+            "uri": "spotify:track:0nPaqGTjGQ5sqy5rmIzi7m",
+            "matchedTitle": "GALAXY HidE and SeeK",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "INNOCENT BIRD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "innocent-bird__original",
+            "displayTitle": "INNOCENT BIRD"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6YjgfCMX6uCQzatrNSKU96",
+            "uri": "spotify:track:6YjgfCMX6uCQzatrNSKU96",
+            "matchedTitle": "INNOCENT BIRD",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コワレヤスキ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-iyrub1__original",
+            "displayTitle": "コワレヤスキ"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4zTE78pRVHUpqNX00D8Z8C",
+            "uri": "spotify:track:4zTE78pRVHUpqNX00D8Z8C",
+            "matchedTitle": "コワレヤスキ",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c9364a8e8a3a866891332b9",
+            "albumName": "コワレヤスキ"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shadow gate to love",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shadow-gate-to-love__original",
+            "displayTitle": "Shadow gate to love"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2cvOedwacaOvCDpkm6PdBj",
+            "uri": "spotify:track:2cvOedwacaOvCDpkm6PdBj",
+            "matchedTitle": "Shadow gate to love",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サンシャインぴっかぴか音頭",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7s2v1__original",
+            "displayTitle": "サンシャインぴっかぴか音頭"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1WMuIYCzSdfHCPL3dIuMp4",
+            "uri": "spotify:track:1WMuIYCzSdfHCPL3dIuMp4",
+            "matchedTitle": "サンシャインぴっかぴか音頭",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-673ilp__original",
+            "displayTitle": "太陽を追いかけろ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2nd-lovelive-happy-party-train-tour-nagoya-day-2",
+      "label": "名古屋公演 Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2017-08-06",
+      "venue": {
+        "name": "クロコくんホール（旧：日本ガイシホール）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "届かない星だとしても",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1dd342i__original",
+            "displayTitle": "届かない星だとしても"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1MdblXroXOmQ5MgCHG05SO",
+            "uri": "spotify:track:1MdblXroXOmQ5MgCHG05SO",
+            "matchedTitle": "届かない星だとしても",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "空も心も晴れるから",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-vune6l__original",
+            "displayTitle": "空も心も晴れるから"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4dfYOVX61QBQe6k4cs7gtK",
+            "uri": "spotify:track:4dfYOVX61QBQe6k4cs7gtK",
+            "matchedTitle": "空も心も晴れるから",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Waku-Waku-Week!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "waku-waku-week__original",
+            "displayTitle": "Waku-Waku-Week!"
+          },
+          "artistHint": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "581P3L6pPivj45fCwcRzVt",
+            "uri": "spotify:track:581P3L6pPivj45fCwcRzVt",
+            "matchedTitle": "Waku-Waku-Week!",
+            "matchedArtist": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "G線上のシンデレラ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "g__original",
+            "displayTitle": "G線上のシンデレラ"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5iK3RImiMU2Qs4xPE8mXt5",
+            "uri": "spotify:track:5iK3RImiMU2Qs4xPE8mXt5",
+            "matchedTitle": "G線上のシンデレラ",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Warrior",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-warrior__original",
+            "displayTitle": "Daydream Warrior"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hjoFJtQBfrtbvih5PBOrX",
+            "uri": "spotify:track:6hjoFJtQBfrtbvih5PBOrX",
+            "matchedTitle": "Daydream Warrior",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-4vd8hj__original",
+            "displayTitle": "スリリング・ワンウェイ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "P.S.の向こう側",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "p-s__original",
+            "displayTitle": "P.S.の向こう側"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7ayhFVETwVEgwzwFvCfG9B",
+            "uri": "spotify:track:7ayhFVETwVEgwzwFvCfG9B",
+            "matchedTitle": "P.S.の向こう側",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "海岸通りで待ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bqvjys__original",
+            "displayTitle": "海岸通りで待ってるよ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4nUNspP8lDRKp1txgKxOS0",
+            "uri": "spotify:track:4nUNspP8lDRKp1txgKxOS0",
+            "matchedTitle": "海岸通りで待ってるよ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LONELY TUNING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "lonely-tuning__original",
+            "displayTitle": "LONELY TUNING"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4rt3mhcI5Kz3E7AtwS4ycq",
+            "uri": "spotify:track:4rt3mhcI5Kz3E7AtwS4ycq",
+            "matchedTitle": "LONELY TUNING",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "INNOCENT BIRD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "innocent-bird__original",
+            "displayTitle": "INNOCENT BIRD"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6YjgfCMX6uCQzatrNSKU96",
+            "uri": "spotify:track:6YjgfCMX6uCQzatrNSKU96",
+            "matchedTitle": "INNOCENT BIRD",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Guilty Eyes Fever",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "guilty-eyes-fever__original",
+            "displayTitle": "Guilty Eyes Fever"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4oRXclxW5k5ROr5rHhqfA9",
+            "uri": "spotify:track:4oRXclxW5k5ROr5rHhqfA9",
+            "matchedTitle": "Guilty Eyes Fever",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shadow gate to love",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shadow-gate-to-love__original",
+            "displayTitle": "Shadow gate to love"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2cvOedwacaOvCDpkm6PdBj",
+            "uri": "spotify:track:2cvOedwacaOvCDpkm6PdBj",
+            "matchedTitle": "Shadow gate to love",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サンシャインぴっかぴか音頭",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7s2v1__original",
+            "displayTitle": "サンシャインぴっかぴか音頭"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1WMuIYCzSdfHCPL3dIuMp4",
+            "uri": "spotify:track:1WMuIYCzSdfHCPL3dIuMp4",
+            "matchedTitle": "サンシャインぴっかぴか音頭",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-673ilp__original",
+            "displayTitle": "太陽を追いかけろ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2nd-lovelive-happy-party-train-tour-kobe-day-1",
+      "label": "神戸公演 Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2017-08-19",
+      "venue": {
+        "name": "神戸ワールド記念ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aqours☆HEROES",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aqours-heroes__original",
+            "displayTitle": "Aqours☆HEROES"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0SIOuEW4uzMrrXgmMWKDzX",
+            "uri": "spotify:track:0SIOuEW4uzMrrXgmMWKDzX",
+            "matchedTitle": "Aqours☆HEROES",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "空も心も晴れるから",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-vune6l__original",
+            "displayTitle": "空も心も晴れるから"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4dfYOVX61QBQe6k4cs7gtK",
+            "uri": "spotify:track:4dfYOVX61QBQe6k4cs7gtK",
+            "matchedTitle": "空も心も晴れるから",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Waku-Waku-Week!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "waku-waku-week__original",
+            "displayTitle": "Waku-Waku-Week!"
+          },
+          "artistHint": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "581P3L6pPivj45fCwcRzVt",
+            "uri": "spotify:track:581P3L6pPivj45fCwcRzVt",
+            "matchedTitle": "Waku-Waku-Week!",
+            "matchedArtist": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "G線上のシンデレラ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "g__original",
+            "displayTitle": "G線上のシンデレラ"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5iK3RImiMU2Qs4xPE8mXt5",
+            "uri": "spotify:track:5iK3RImiMU2Qs4xPE8mXt5",
+            "matchedTitle": "G線上のシンデレラ",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Warrior",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-warrior__original",
+            "displayTitle": "Daydream Warrior"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hjoFJtQBfrtbvih5PBOrX",
+            "uri": "spotify:track:6hjoFJtQBfrtbvih5PBOrX",
+            "matchedTitle": "Daydream Warrior",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-4vd8hj__original",
+            "displayTitle": "スリリング・ワンウェイ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "P.S.の向こう側",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "p-s__original",
+            "displayTitle": "P.S.の向こう側"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7ayhFVETwVEgwzwFvCfG9B",
+            "uri": "spotify:track:7ayhFVETwVEgwzwFvCfG9B",
+            "matchedTitle": "P.S.の向こう側",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "海岸通りで待ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bqvjys__original",
+            "displayTitle": "海岸通りで待ってるよ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4nUNspP8lDRKp1txgKxOS0",
+            "uri": "spotify:track:4nUNspP8lDRKp1txgKxOS0",
+            "matchedTitle": "海岸通りで待ってるよ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LONELY TUNING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "lonely-tuning__original",
+            "displayTitle": "LONELY TUNING"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4rt3mhcI5Kz3E7AtwS4ycq",
+            "uri": "spotify:track:4rt3mhcI5Kz3E7AtwS4ycq",
+            "matchedTitle": "LONELY TUNING",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "INNOCENT BIRD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "innocent-bird__original",
+            "displayTitle": "INNOCENT BIRD"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6YjgfCMX6uCQzatrNSKU96",
+            "uri": "spotify:track:6YjgfCMX6uCQzatrNSKU96",
+            "matchedTitle": "INNOCENT BIRD",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Guilty Eyes Fever",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "guilty-eyes-fever__original",
+            "displayTitle": "Guilty Eyes Fever"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4oRXclxW5k5ROr5rHhqfA9",
+            "uri": "spotify:track:4oRXclxW5k5ROr5rHhqfA9",
+            "matchedTitle": "Guilty Eyes Fever",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shadow gate to love",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shadow-gate-to-love__original",
+            "displayTitle": "Shadow gate to love"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2cvOedwacaOvCDpkm6PdBj",
+            "uri": "spotify:track:2cvOedwacaOvCDpkm6PdBj",
+            "matchedTitle": "Shadow gate to love",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サンシャインぴっかぴか音頭",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7s2v1__original",
+            "displayTitle": "サンシャインぴっかぴか音頭"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1WMuIYCzSdfHCPL3dIuMp4",
+            "uri": "spotify:track:1WMuIYCzSdfHCPL3dIuMp4",
+            "matchedTitle": "サンシャインぴっかぴか音頭",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-673ilp__original",
+            "displayTitle": "太陽を追いかけろ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2nd-lovelive-happy-party-train-tour-kobe-day-2",
+      "label": "神戸公演 Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2017-08-20",
+      "venue": {
+        "name": "神戸ワールド記念ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハミングフレンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-178rxqd__original",
+            "displayTitle": "ハミングフレンド"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53Y2srPImkFPXPhk1U25yy",
+            "uri": "spotify:track:53Y2srPImkFPXPhk1U25yy",
+            "matchedTitle": "ハミングフレンド",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "空も心も晴れるから",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-vune6l__original",
+            "displayTitle": "空も心も晴れるから"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4dfYOVX61QBQe6k4cs7gtK",
+            "uri": "spotify:track:4dfYOVX61QBQe6k4cs7gtK",
+            "matchedTitle": "空も心も晴れるから",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Waku-Waku-Week!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "waku-waku-week__original",
+            "displayTitle": "Waku-Waku-Week!"
+          },
+          "artistHint": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "581P3L6pPivj45fCwcRzVt",
+            "uri": "spotify:track:581P3L6pPivj45fCwcRzVt",
+            "matchedTitle": "Waku-Waku-Week!",
+            "matchedArtist": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "G線上のシンデレラ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "g__original",
+            "displayTitle": "G線上のシンデレラ"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5iK3RImiMU2Qs4xPE8mXt5",
+            "uri": "spotify:track:5iK3RImiMU2Qs4xPE8mXt5",
+            "matchedTitle": "G線上のシンデレラ",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Warrior",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-warrior__original",
+            "displayTitle": "Daydream Warrior"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hjoFJtQBfrtbvih5PBOrX",
+            "uri": "spotify:track:6hjoFJtQBfrtbvih5PBOrX",
+            "matchedTitle": "Daydream Warrior",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-4vd8hj__original",
+            "displayTitle": "スリリング・ワンウェイ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "近未来ハッピーエンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1w0uptd__original",
+            "displayTitle": "近未来ハッピーエンド"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4jh3bzVyvZUQ3IjSzYwnN1",
+            "uri": "spotify:track:4jh3bzVyvZUQ3IjSzYwnN1",
+            "matchedTitle": "近未来ハッピーエンド",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "海岸通りで待ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bqvjys__original",
+            "displayTitle": "海岸通りで待ってるよ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4nUNspP8lDRKp1txgKxOS0",
+            "uri": "spotify:track:4nUNspP8lDRKp1txgKxOS0",
+            "matchedTitle": "海岸通りで待ってるよ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GALAXY HidE and SeeK",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "galaxy-hide-and-seek__original",
+            "displayTitle": "GALAXY HidE and SeeK"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0nPaqGTjGQ5sqy5rmIzi7m",
+            "uri": "spotify:track:0nPaqGTjGQ5sqy5rmIzi7m",
+            "matchedTitle": "GALAXY HidE and SeeK",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "INNOCENT BIRD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "innocent-bird__original",
+            "displayTitle": "INNOCENT BIRD"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6YjgfCMX6uCQzatrNSKU96",
+            "uri": "spotify:track:6YjgfCMX6uCQzatrNSKU96",
+            "matchedTitle": "INNOCENT BIRD",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コワレヤスキ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-iyrub1__original",
+            "displayTitle": "コワレヤスキ"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4zTE78pRVHUpqNX00D8Z8C",
+            "uri": "spotify:track:4zTE78pRVHUpqNX00D8Z8C",
+            "matchedTitle": "コワレヤスキ",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c9364a8e8a3a866891332b9",
+            "albumName": "コワレヤスキ"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shadow gate to love",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shadow-gate-to-love__original",
+            "displayTitle": "Shadow gate to love"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2cvOedwacaOvCDpkm6PdBj",
+            "uri": "spotify:track:2cvOedwacaOvCDpkm6PdBj",
+            "matchedTitle": "Shadow gate to love",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サンシャインぴっかぴか音頭",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7s2v1__original",
+            "displayTitle": "サンシャインぴっかぴか音頭"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1WMuIYCzSdfHCPL3dIuMp4",
+            "uri": "spotify:track:1WMuIYCzSdfHCPL3dIuMp4",
+            "matchedTitle": "サンシャインぴっかぴか音頭",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-673ilp__original",
+            "displayTitle": "太陽を追いかけろ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2nd-lovelive-happy-party-train-tour-saitama-day-1",
+      "label": "埼玉公演 Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2017-09-29",
+      "venue": {
+        "name": "ベルーナドーム（旧：メットライフドーム）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "届かない星だとしても",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1dd342i__original",
+            "displayTitle": "届かない星だとしても"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1MdblXroXOmQ5MgCHG05SO",
+            "uri": "spotify:track:1MdblXroXOmQ5MgCHG05SO",
+            "matchedTitle": "届かない星だとしても",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夏への扉 Never end ver.",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "never-end-ver__original",
+            "displayTitle": "夏への扉 Never end ver."
+          },
+          "artistHint": "桜内梨子 (CV.逢田梨香子), 国木田花丸 (CV.高槻かなこ), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3HViLmRqWXcmOOp9cIvyTd",
+            "uri": "spotify:track:3HViLmRqWXcmOOp9cIvyTd",
+            "matchedTitle": "夏への扉 Never end ver.",
+            "matchedArtist": "桜内梨子 (CV.逢田梨香子), 国木田花丸 (CV.高槻かなこ), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "真夏は誰のモノ？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1j826yj__original",
+            "displayTitle": "真夏は誰のモノ？"
+          },
+          "artistHint": "黒澤ダイヤ (CV.小宮有紗), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2eNzyKzV55iXtPU0Rx2r0R",
+            "uri": "spotify:track:2eNzyKzV55iXtPU0Rx2r0R",
+            "matchedTitle": "真夏は誰のモノ？",
+            "matchedArtist": "黒澤ダイヤ (CV.小宮有紗), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "地元愛♡満タン☆サマーライフ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1p7qorj__original",
+            "displayTitle": "地元愛♡満タン☆サマーライフ"
+          },
+          "artistHint": "渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0pSUT6giyYxDhbxuq0KvPA",
+            "uri": "spotify:track:0pSUT6giyYxDhbxuq0KvPA",
+            "matchedTitle": "地元愛♡満タン☆サマーライフ",
+            "matchedArtist": "渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夏の終わりの雨音が",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1tp0qci__original",
+            "displayTitle": "夏の終わりの雨音が"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 松浦果南 (CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2nKIiC5lsZD8PHS7dVmsZI",
+            "uri": "spotify:track:2nKIiC5lsZD8PHS7dVmsZI",
+            "matchedTitle": "夏の終わりの雨音が",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 松浦果南 (CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未熟DREAMER",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dreamer__original",
+            "displayTitle": "未熟DREAMER"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hem8VNEcdYanHQ1fgSCNl",
+            "uri": "spotify:track:0hem8VNEcdYanHQ1fgSCNl",
+            "matchedTitle": "未熟DREAMER",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Warrior",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-warrior__original",
+            "displayTitle": "Daydream Warrior"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hjoFJtQBfrtbvih5PBOrX",
+            "uri": "spotify:track:6hjoFJtQBfrtbvih5PBOrX",
+            "matchedTitle": "Daydream Warrior",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-4vd8hj__original",
+            "displayTitle": "スリリング・ワンウェイ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "P.S.の向こう側",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "p-s__original",
+            "displayTitle": "P.S.の向こう側"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7ayhFVETwVEgwzwFvCfG9B",
+            "uri": "spotify:track:7ayhFVETwVEgwzwFvCfG9B",
+            "matchedTitle": "P.S.の向こう側",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LONELY TUNING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "lonely-tuning__original",
+            "displayTitle": "LONELY TUNING"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4rt3mhcI5Kz3E7AtwS4ycq",
+            "uri": "spotify:track:4rt3mhcI5Kz3E7AtwS4ycq",
+            "matchedTitle": "LONELY TUNING",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Guilty Eyes Fever",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "guilty-eyes-fever__original",
+            "displayTitle": "Guilty Eyes Fever"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4oRXclxW5k5ROr5rHhqfA9",
+            "uri": "spotify:track:4oRXclxW5k5ROr5rHhqfA9",
+            "matchedTitle": "Guilty Eyes Fever",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRAI TICKET",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "mirai-ticket__original",
+            "displayTitle": "MIRAI TICKET"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7LZJv6aligWIb5emT1xENL",
+            "uri": "spotify:track:7LZJv6aligWIb5emT1xENL",
+            "matchedTitle": "MIRAI TICKET",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731d931cf9f4d549a71629ed2c",
+            "albumName": "想いよひとつになれ／MIRAI TICKET"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サンシャインぴっかぴか音頭",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7s2v1__original",
+            "displayTitle": "サンシャインぴっかぴか音頭"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1WMuIYCzSdfHCPL3dIuMp4",
+            "uri": "spotify:track:1WMuIYCzSdfHCPL3dIuMp4",
+            "matchedTitle": "サンシャインぴっかぴか音頭",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-673ilp__original",
+            "displayTitle": "太陽を追いかけろ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "M21",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6xdb0g__original",
+            "displayTitle": "ユメ語るよりユメ歌おう"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2nd-lovelive-happy-party-train-tour-saitama-day-2",
+      "label": "埼玉公演 Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2017-09-30",
+      "venue": {
+        "name": "ベルーナドーム（旧：メットライフドーム）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pops heartで踊るんだもん！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pops-heart__original",
+            "displayTitle": "Pops heartで踊るんだもん！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1KpwqYIDtCyfXA78jR0KId",
+            "uri": "spotify:track:1KpwqYIDtCyfXA78jR0KId",
+            "matchedTitle": "Pops heartで踊るんだもん！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夏への扉 Never end ver.",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "never-end-ver__original",
+            "displayTitle": "夏への扉 Never end ver."
+          },
+          "artistHint": "桜内梨子 (CV.逢田梨香子), 国木田花丸 (CV.高槻かなこ), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3HViLmRqWXcmOOp9cIvyTd",
+            "uri": "spotify:track:3HViLmRqWXcmOOp9cIvyTd",
+            "matchedTitle": "夏への扉 Never end ver.",
+            "matchedArtist": "桜内梨子 (CV.逢田梨香子), 国木田花丸 (CV.高槻かなこ), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "真夏は誰のモノ？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1j826yj__original",
+            "displayTitle": "真夏は誰のモノ？"
+          },
+          "artistHint": "黒澤ダイヤ (CV.小宮有紗), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2eNzyKzV55iXtPU0Rx2r0R",
+            "uri": "spotify:track:2eNzyKzV55iXtPU0Rx2r0R",
+            "matchedTitle": "真夏は誰のモノ？",
+            "matchedArtist": "黒澤ダイヤ (CV.小宮有紗), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "地元愛♡満タン☆サマーライフ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1p7qorj__original",
+            "displayTitle": "地元愛♡満タン☆サマーライフ"
+          },
+          "artistHint": "渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0pSUT6giyYxDhbxuq0KvPA",
+            "uri": "spotify:track:0pSUT6giyYxDhbxuq0KvPA",
+            "matchedTitle": "地元愛♡満タン☆サマーライフ",
+            "matchedArtist": "渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夏の終わりの雨音が",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1tp0qci__original",
+            "displayTitle": "夏の終わりの雨音が"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 松浦果南 (CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2nKIiC5lsZD8PHS7dVmsZI",
+            "uri": "spotify:track:2nKIiC5lsZD8PHS7dVmsZI",
+            "matchedTitle": "夏の終わりの雨音が",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 松浦果南 (CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未熟DREAMER",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dreamer__original",
+            "displayTitle": "未熟DREAMER"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hem8VNEcdYanHQ1fgSCNl",
+            "uri": "spotify:track:0hem8VNEcdYanHQ1fgSCNl",
+            "matchedTitle": "未熟DREAMER",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Warrior",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-warrior__original",
+            "displayTitle": "Daydream Warrior"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hjoFJtQBfrtbvih5PBOrX",
+            "uri": "spotify:track:6hjoFJtQBfrtbvih5PBOrX",
+            "matchedTitle": "Daydream Warrior",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-4vd8hj__original",
+            "displayTitle": "スリリング・ワンウェイ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "近未来ハッピーエンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1w0uptd__original",
+            "displayTitle": "近未来ハッピーエンド"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4jh3bzVyvZUQ3IjSzYwnN1",
+            "uri": "spotify:track:4jh3bzVyvZUQ3IjSzYwnN1",
+            "matchedTitle": "近未来ハッピーエンド",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GALAXY HidE and SeeK",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "galaxy-hide-and-seek__original",
+            "displayTitle": "GALAXY HidE and SeeK"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0nPaqGTjGQ5sqy5rmIzi7m",
+            "uri": "spotify:track:0nPaqGTjGQ5sqy5rmIzi7m",
+            "matchedTitle": "GALAXY HidE and SeeK",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コワレヤスキ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-iyrub1__original",
+            "displayTitle": "コワレヤスキ"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4zTE78pRVHUpqNX00D8Z8C",
+            "uri": "spotify:track:4zTE78pRVHUpqNX00D8Z8C",
+            "matchedTitle": "コワレヤスキ",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c9364a8e8a3a866891332b9",
+            "albumName": "コワレヤスキ"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRAI TICKET",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "mirai-ticket__original",
+            "displayTitle": "MIRAI TICKET"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7LZJv6aligWIb5emT1xENL",
+            "uri": "spotify:track:7LZJv6aligWIb5emT1xENL",
+            "matchedTitle": "MIRAI TICKET",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731d931cf9f4d549a71629ed2c",
+            "albumName": "想いよひとつになれ／MIRAI TICKET"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サンシャインぴっかぴか音頭",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7s2v1__original",
+            "displayTitle": "サンシャインぴっかぴか音頭"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1WMuIYCzSdfHCPL3dIuMp4",
+            "uri": "spotify:track:1WMuIYCzSdfHCPL3dIuMp4",
+            "matchedTitle": "サンシャインぴっかぴか音頭",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-673ilp__original",
+            "displayTitle": "太陽を追いかけろ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "M21",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Landing action Yeah!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "landing-action-yeah__original",
+            "displayTitle": "Landing action Yeah!!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4b01pqHPIyNnv5ElCQmJA8",
+            "uri": "spotify:track:4b01pqHPIyNnv5ElCQmJA8",
+            "matchedTitle": "Landing action Yeah!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
