@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-2011-s-2-s-bibi-and",
+  "title": "2011年度ラブライ部員とμ'sの課外活動 第2回 μ'sユニット BiBiシングル発売記念 トーク＆ノベルティお渡し会",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/otonokizaka/news.php?id=3836",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/206",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-2011-s-2-s-bibi-and-akihabara-6f-performance-501",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2011-06-25",
+      "venue": {
+        "name": "AKIHABARAゲーマーズ本店 6Fイベントスペース",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ダイヤモンドプリンセスの憂鬱",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-l3nbza__ver",
+            "displayTitle": "ダイヤモンドプリンセスの憂鬱（ショート Ver.）"
+          },
+          "artistHint": "BiBi, μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2HBI9yOABVhSrHQvmhKxi6",
+            "uri": "spotify:track:2HBI9yOABVhSrHQvmhKxi6",
+            "matchedTitle": "ダイヤモンドプリンセスの憂鬱",
+            "matchedArtist": "BiBi, μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27393f53bfc324c08053ce2caa5",
+            "albumName": "μ's Complete BEST BOX Chapter.08"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

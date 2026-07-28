@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-r",
+  "title": "Rの法則",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/163",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-r-venue-243-performance-410",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2015-02-16",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Snow halation",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "snow-halation__original",
+            "displayTitle": "Snow halation"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4K65wBvHQPmnD6bTdN6BHt",
+            "uri": "spotify:track:4K65wBvHQPmnD6bTdN6BHt",
+            "matchedTitle": "Snow halation",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+            "albumName": "Snow halation"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "START:DASH!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "start-dash__original",
+            "displayTitle": "START:DASH!!"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ZNHpcARAieeBxUS8v6YqO",
+            "uri": "spotify:track:5ZNHpcARAieeBxUS8v6YqO",
+            "matchedTitle": "START:DASH!!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "それは僕たちの奇跡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ibnm0y__original",
+            "displayTitle": "それは僕たちの奇跡"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5U4HYCX60hWkMIGwWciH8L",
+            "uri": "spotify:track:5U4HYCX60hWkMIGwWciH8L",
+            "matchedTitle": "それは僕たちの奇跡",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273efcd5eff7d3b3f1bdc816406",
+            "albumName": "それは僕たちの奇跡"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-tv-10-lovelive-orchestra-concert-2",
+  "title": "TVアニメ放送10周年記念 LoveLive! Orchestra Concert",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/otonokizaka/event/10thanniversary/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/195",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-tv-10-lovelive-orchestra-concert-yokohama-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2024-03-30",
+      "venue": {
+        "name": "パシフィコ横浜 国立大ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-dlkwzg__original",
+            "displayTitle": "僕らは今のなかで"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "きっと青春が聞こえる",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b6q33o__original",
+            "displayTitle": "きっと青春が聞こえる"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0orPUXcxQ4xT90IxNqC6fe",
+            "uri": "spotify:track:0orPUXcxQ4xT90IxNqC6fe",
+            "matchedTitle": "きっと青春が聞こえる",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d02be078f581934644bf16e5",
+            "albumName": "きっと青春が聞こえる"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "それは僕たちの奇跡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ibnm0y__original",
+            "displayTitle": "それは僕たちの奇跡"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5U4HYCX60hWkMIGwWciH8L",
+            "uri": "spotify:track:5U4HYCX60hWkMIGwWciH8L",
+            "matchedTitle": "それは僕たちの奇跡",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273efcd5eff7d3b3f1bdc816406",
+            "albumName": "それは僕たちの奇跡"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "どんなときもずっと",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-slm7ld__original",
+            "displayTitle": "どんなときもずっと"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2CtmLaNFyWogiWa067jYVk",
+            "uri": "spotify:track:2CtmLaNFyWogiWa067jYVk",
+            "matchedTitle": "どんなときもずっと",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b199e2ff265f530fa834939e",
+            "albumName": "どんなときもずっと"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Snow halation",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "snow-halation__original",
+            "displayTitle": "Snow halation"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4K65wBvHQPmnD6bTdN6BHt",
+            "uri": "spotify:track:4K65wBvHQPmnD6bTdN6BHt",
+            "matchedTitle": "Snow halation",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+            "albumName": "Snow halation"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "muse-tv-10-lovelive-orchestra-concert-yokohama-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2024-03-31",
+      "venue": {
+        "name": "パシフィコ横浜 国立大ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-dlkwzg__original",
+            "displayTitle": "僕らは今のなかで"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "きっと青春が聞こえる",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b6q33o__original",
+            "displayTitle": "きっと青春が聞こえる"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0orPUXcxQ4xT90IxNqC6fe",
+            "uri": "spotify:track:0orPUXcxQ4xT90IxNqC6fe",
+            "matchedTitle": "きっと青春が聞こえる",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d02be078f581934644bf16e5",
+            "albumName": "きっと青春が聞こえる"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "それは僕たちの奇跡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ibnm0y__original",
+            "displayTitle": "それは僕たちの奇跡"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5U4HYCX60hWkMIGwWciH8L",
+            "uri": "spotify:track:5U4HYCX60hWkMIGwWciH8L",
+            "matchedTitle": "それは僕たちの奇跡",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273efcd5eff7d3b3f1bdc816406",
+            "albumName": "それは僕たちの奇跡"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "どんなときもずっと",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-slm7ld__original",
+            "displayTitle": "どんなときもずっと"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2CtmLaNFyWogiWa067jYVk",
+            "uri": "spotify:track:2CtmLaNFyWogiWa067jYVk",
+            "matchedTitle": "どんなときもずっと",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b199e2ff265f530fa834939e",
+            "albumName": "どんなときもずっと"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Snow halation",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "snow-halation__original",
+            "displayTitle": "Snow halation"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4K65wBvHQPmnD6bTdN6BHt",
+            "uri": "spotify:track:4K65wBvHQPmnD6bTdN6BHt",
+            "matchedTitle": "Snow halation",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+            "albumName": "Snow halation"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

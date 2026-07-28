@@ -1,0 +1,1323 @@
+{
+  "schemaVersion": "0.3",
+  "id": "yohane-the-story-of-the-sound-of-heart",
+  "title": "幻日のヨハネ -The Story of the Sound of Heart-",
+  "series": [
+    "yohane"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://yohane.net/event/detail/?page=yohane_sound_of_heart",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/169",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "yohane-the-story-of-the-sound-of-heart-tokyo-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2023-12-15",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "幻日ミステリウム",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-grexcf__original",
+            "displayTitle": "幻日ミステリウム"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3foaVrwbNHvwXmKD0lMHWv",
+            "uri": "spotify:track:3foaVrwbNHvwXmKD0lMHWv",
+            "matchedTitle": "幻日ミステリウム",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e4b07526a844677accf8a3bf",
+            "albumName": "幻日ミステリウム"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GAME ON！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "game-on__original",
+            "displayTitle": "GAME ON！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2bpyiKw0Y7orYDXm673LLi",
+            "uri": "spotify:track:2bpyiKw0Y7orYDXm673LLi",
+            "matchedTitle": "GAME ON！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "テ・キ・ナ ミュージック",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-llx8re__original",
+            "displayTitle": "テ・キ・ナ ミュージック"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Far far away",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "far-far-away__original",
+            "displayTitle": "Far far away"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TAfzafbuzTRzQFXR0vx9u",
+            "uri": "spotify:track:2TAfzafbuzTRzQFXR0vx9u",
+            "matchedTitle": "Far far away",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273bb2f8faf4c2375e73f946cfb",
+            "albumName": "Far far away"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Tick-Tack, Tick-Tack",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tick-tack-tick-tack__original",
+            "displayTitle": "Tick-Tack, Tick-Tack"
+          },
+          "artistHint": "narumina",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "213FZtekRCIdMaGxxRvW0P",
+            "uri": "spotify:track:213FZtekRCIdMaGxxRvW0P",
+            "matchedTitle": "Tick Tack Tick Tack",
+            "matchedArtist": "narumina",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738fa7e6bfd535a53ef86c9150",
+            "albumName": "Tick Tack Tick Tack"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Be as one!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "be-as-one__original",
+            "displayTitle": "Be as one!!!"
+          },
+          "artistHint": "ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "25Qlri9PHOvdDqJfWdOERh",
+            "uri": "spotify:track:25Qlri9PHOvdDqJfWdOERh",
+            "matchedTitle": "Be as one!!!",
+            "matchedArtist": "ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fb94102f21f9b6d865b2bd4a",
+            "albumName": "Be as one!!!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "R・E・P",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "r-e-p__original",
+            "displayTitle": "R・E・P"
+          },
+          "artistHint": "ハナマル(CV.高槻かなこ), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "145VSCM3RwEhFowFtroUtU",
+            "uri": "spotify:track:145VSCM3RwEhFowFtroUtU",
+            "matchedTitle": "R・E・P",
+            "matchedArtist": "ハナマル(CV.高槻かなこ), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737562e07e6b536fe30fe136b7",
+            "albumName": "R・E・P"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hey, dear my friends",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hey-dear-my-friends__original",
+            "displayTitle": "Hey, dear my friends"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2unSzkyoRMyZbqMoWyRlJN",
+            "uri": "spotify:track:2unSzkyoRMyZbqMoWyRlJN",
+            "matchedTitle": "Hey, dear my friends",
+            "matchedArtist": "ヨハネ(CV.小林愛香), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27327dcb6f5814bd44b99f123cc",
+            "albumName": "Hey, dear my friends"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Best wishes",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "best-wishes__original",
+            "displayTitle": "Best wishes"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Special Holidays",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "special-holidays__original",
+            "displayTitle": "Special Holidays"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GIRLS!!",
+            "versionLabel": "9人 Ver.",
+            "versionCode": "9-ver",
+            "recordingId": "girls__9-ver",
+            "displayTitle": "GIRLS!!（9人 Ver.）"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3Fue9YpWtKJAysJvmE4v0Z",
+            "uri": "spotify:track:3Fue9YpWtKJAysJvmE4v0Z",
+            "matchedTitle": "GIRLS!!",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b09b4d2e15cf05d8db130b20",
+            "albumName": "GIRLS!!"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wonder sea breeze",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wonder-sea-breeze__original",
+            "displayTitle": "Wonder sea breeze"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4r0inLUULVsotJA5j3B94g",
+            "uri": "spotify:track:4r0inLUULVsotJA5j3B94g",
+            "matchedTitle": "Wonder sea breeze",
+            "matchedArtist": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732f19ce8fc2c376eb5014872b",
+            "albumName": "Wonder sea breeze"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ヌマヅやっさよいさ唄",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-oh4c2z__original",
+            "displayTitle": "ヌマヅやっさよいさ唄"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "好奇心ジャーニー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-fk9kvy__original",
+            "displayTitle": "好奇心ジャーニー"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Forever U & I",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "forever-u-and-i__original",
+            "displayTitle": "Forever U & I"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3Rsybl8Q0pAdr76kyPS21W",
+            "uri": "spotify:track:3Rsybl8Q0pAdr76kyPS21W",
+            "matchedTitle": "Forever U & I",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec4c4f8a02e5a6a10e297253",
+            "albumName": "Forever U & I"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "La la 勇気のうた",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "la-la__original",
+            "displayTitle": "La la 勇気のうた"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BLU4lCLiTzOS2nOVTtxmz",
+            "uri": "spotify:track:6BLU4lCLiTzOS2nOVTtxmz",
+            "matchedTitle": "La la 勇気のうた",
+            "matchedArtist": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734a6ddab7ca0bf072cd574bc4",
+            "albumName": "La la 勇気のうた"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BLOOM OF COLORS",
+            "versionLabel": "9人 Ver.",
+            "versionCode": "9-ver",
+            "recordingId": "bloom-of-colors__9-ver",
+            "displayTitle": "BLOOM OF COLORS（9人 Ver.）"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 18,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "キミノタメボクノタメ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-3b1bwi__original",
+            "displayTitle": "キミノタメボクノタメ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3kJ6yhASTA8XOmk8petjdv",
+            "uri": "spotify:track:3kJ6yhASTA8XOmk8petjdv",
+            "matchedTitle": "キミノタメボクノタメ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "yohane-the-story-of-the-sound-of-heart-tokyo-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2023-12-16",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "幻日ミステリウム",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-grexcf__original",
+            "displayTitle": "幻日ミステリウム"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3foaVrwbNHvwXmKD0lMHWv",
+            "uri": "spotify:track:3foaVrwbNHvwXmKD0lMHWv",
+            "matchedTitle": "幻日ミステリウム",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e4b07526a844677accf8a3bf",
+            "albumName": "幻日ミステリウム"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GAME ON！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "game-on__original",
+            "displayTitle": "GAME ON！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2bpyiKw0Y7orYDXm673LLi",
+            "uri": "spotify:track:2bpyiKw0Y7orYDXm673LLi",
+            "matchedTitle": "GAME ON！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "テ・キ・ナ ミュージック",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-llx8re__original",
+            "displayTitle": "テ・キ・ナ ミュージック"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Far far away",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "far-far-away__original",
+            "displayTitle": "Far far away"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TAfzafbuzTRzQFXR0vx9u",
+            "uri": "spotify:track:2TAfzafbuzTRzQFXR0vx9u",
+            "matchedTitle": "Far far away",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273bb2f8faf4c2375e73f946cfb",
+            "albumName": "Far far away"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Tick-Tack, Tick-Tack",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tick-tack-tick-tack__original",
+            "displayTitle": "Tick-Tack, Tick-Tack"
+          },
+          "artistHint": "narumina",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "213FZtekRCIdMaGxxRvW0P",
+            "uri": "spotify:track:213FZtekRCIdMaGxxRvW0P",
+            "matchedTitle": "Tick Tack Tick Tack",
+            "matchedArtist": "narumina",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738fa7e6bfd535a53ef86c9150",
+            "albumName": "Tick Tack Tick Tack"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Be as one!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "be-as-one__original",
+            "displayTitle": "Be as one!!!"
+          },
+          "artistHint": "ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "25Qlri9PHOvdDqJfWdOERh",
+            "uri": "spotify:track:25Qlri9PHOvdDqJfWdOERh",
+            "matchedTitle": "Be as one!!!",
+            "matchedArtist": "ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fb94102f21f9b6d865b2bd4a",
+            "albumName": "Be as one!!!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "R・E・P",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "r-e-p__original",
+            "displayTitle": "R・E・P"
+          },
+          "artistHint": "ハナマル(CV.高槻かなこ), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "145VSCM3RwEhFowFtroUtU",
+            "uri": "spotify:track:145VSCM3RwEhFowFtroUtU",
+            "matchedTitle": "R・E・P",
+            "matchedArtist": "ハナマル(CV.高槻かなこ), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737562e07e6b536fe30fe136b7",
+            "albumName": "R・E・P"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hey, dear my friends",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hey-dear-my-friends__original",
+            "displayTitle": "Hey, dear my friends"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2unSzkyoRMyZbqMoWyRlJN",
+            "uri": "spotify:track:2unSzkyoRMyZbqMoWyRlJN",
+            "matchedTitle": "Hey, dear my friends",
+            "matchedArtist": "ヨハネ(CV.小林愛香), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27327dcb6f5814bd44b99f123cc",
+            "albumName": "Hey, dear my friends"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Best wishes",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "best-wishes__original",
+            "displayTitle": "Best wishes"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Special Holidays",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "special-holidays__original",
+            "displayTitle": "Special Holidays"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GIRLS!!",
+            "versionLabel": "9人 Ver.",
+            "versionCode": "9-ver",
+            "recordingId": "girls__9-ver",
+            "displayTitle": "GIRLS!!（9人 Ver.）"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3Fue9YpWtKJAysJvmE4v0Z",
+            "uri": "spotify:track:3Fue9YpWtKJAysJvmE4v0Z",
+            "matchedTitle": "GIRLS!!",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b09b4d2e15cf05d8db130b20",
+            "albumName": "GIRLS!!"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wonder sea breeze",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wonder-sea-breeze__original",
+            "displayTitle": "Wonder sea breeze"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4r0inLUULVsotJA5j3B94g",
+            "uri": "spotify:track:4r0inLUULVsotJA5j3B94g",
+            "matchedTitle": "Wonder sea breeze",
+            "matchedArtist": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732f19ce8fc2c376eb5014872b",
+            "albumName": "Wonder sea breeze"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ヌマヅやっさよいさ唄",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-oh4c2z__original",
+            "displayTitle": "ヌマヅやっさよいさ唄"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "好奇心ジャーニー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-fk9kvy__original",
+            "displayTitle": "好奇心ジャーニー"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Forever U & I",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "forever-u-and-i__original",
+            "displayTitle": "Forever U & I"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3Rsybl8Q0pAdr76kyPS21W",
+            "uri": "spotify:track:3Rsybl8Q0pAdr76kyPS21W",
+            "matchedTitle": "Forever U & I",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec4c4f8a02e5a6a10e297253",
+            "albumName": "Forever U & I"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "La la 勇気のうた",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "la-la__original",
+            "displayTitle": "La la 勇気のうた"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BLU4lCLiTzOS2nOVTtxmz",
+            "uri": "spotify:track:6BLU4lCLiTzOS2nOVTtxmz",
+            "matchedTitle": "La la 勇気のうた",
+            "matchedArtist": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734a6ddab7ca0bf072cd574bc4",
+            "albumName": "La la 勇気のうた"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BLOOM OF COLORS",
+            "versionLabel": "9人 Ver.",
+            "versionCode": "9-ver",
+            "recordingId": "bloom-of-colors__9-ver",
+            "displayTitle": "BLOOM OF COLORS（9人 Ver.）"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 18,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "キミノタメボクノタメ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-3b1bwi__original",
+            "displayTitle": "キミノタメボクノタメ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3kJ6yhASTA8XOmk8petjdv",
+            "uri": "spotify:track:3kJ6yhASTA8XOmk8petjdv",
+            "matchedTitle": "キミノタメボクノタメ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "yohane-the-story-of-the-sound-of-heart-tokyo-day-3",
+      "label": "Day.3",
+      "day": 3,
+      "session": null,
+      "date": "2023-12-17",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "幻日ミステリウム",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-grexcf__original",
+            "displayTitle": "幻日ミステリウム"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3foaVrwbNHvwXmKD0lMHWv",
+            "uri": "spotify:track:3foaVrwbNHvwXmKD0lMHWv",
+            "matchedTitle": "幻日ミステリウム",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e4b07526a844677accf8a3bf",
+            "albumName": "幻日ミステリウム"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GAME ON！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "game-on__original",
+            "displayTitle": "GAME ON！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2bpyiKw0Y7orYDXm673LLi",
+            "uri": "spotify:track:2bpyiKw0Y7orYDXm673LLi",
+            "matchedTitle": "GAME ON！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "テ・キ・ナ ミュージック",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-llx8re__original",
+            "displayTitle": "テ・キ・ナ ミュージック"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Far far away",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "far-far-away__original",
+            "displayTitle": "Far far away"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TAfzafbuzTRzQFXR0vx9u",
+            "uri": "spotify:track:2TAfzafbuzTRzQFXR0vx9u",
+            "matchedTitle": "Far far away",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273bb2f8faf4c2375e73f946cfb",
+            "albumName": "Far far away"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Tick-Tack, Tick-Tack",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tick-tack-tick-tack__original",
+            "displayTitle": "Tick-Tack, Tick-Tack"
+          },
+          "artistHint": "narumina",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "213FZtekRCIdMaGxxRvW0P",
+            "uri": "spotify:track:213FZtekRCIdMaGxxRvW0P",
+            "matchedTitle": "Tick Tack Tick Tack",
+            "matchedArtist": "narumina",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738fa7e6bfd535a53ef86c9150",
+            "albumName": "Tick Tack Tick Tack"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Be as one!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "be-as-one__original",
+            "displayTitle": "Be as one!!!"
+          },
+          "artistHint": "ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "25Qlri9PHOvdDqJfWdOERh",
+            "uri": "spotify:track:25Qlri9PHOvdDqJfWdOERh",
+            "matchedTitle": "Be as one!!!",
+            "matchedArtist": "ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fb94102f21f9b6d865b2bd4a",
+            "albumName": "Be as one!!!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "R・E・P",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "r-e-p__original",
+            "displayTitle": "R・E・P"
+          },
+          "artistHint": "ハナマル(CV.高槻かなこ), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "145VSCM3RwEhFowFtroUtU",
+            "uri": "spotify:track:145VSCM3RwEhFowFtroUtU",
+            "matchedTitle": "R・E・P",
+            "matchedArtist": "ハナマル(CV.高槻かなこ), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737562e07e6b536fe30fe136b7",
+            "albumName": "R・E・P"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hey, dear my friends",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hey-dear-my-friends__original",
+            "displayTitle": "Hey, dear my friends"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2unSzkyoRMyZbqMoWyRlJN",
+            "uri": "spotify:track:2unSzkyoRMyZbqMoWyRlJN",
+            "matchedTitle": "Hey, dear my friends",
+            "matchedArtist": "ヨハネ(CV.小林愛香), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27327dcb6f5814bd44b99f123cc",
+            "albumName": "Hey, dear my friends"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Best wishes",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "best-wishes__original",
+            "displayTitle": "Best wishes"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Special Holidays",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "special-holidays__original",
+            "displayTitle": "Special Holidays"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GIRLS!!",
+            "versionLabel": "9人 Ver.",
+            "versionCode": "9-ver",
+            "recordingId": "girls__9-ver",
+            "displayTitle": "GIRLS!!（9人 Ver.）"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3Fue9YpWtKJAysJvmE4v0Z",
+            "uri": "spotify:track:3Fue9YpWtKJAysJvmE4v0Z",
+            "matchedTitle": "GIRLS!!",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b09b4d2e15cf05d8db130b20",
+            "albumName": "GIRLS!!"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wonder sea breeze",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wonder-sea-breeze__original",
+            "displayTitle": "Wonder sea breeze"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4r0inLUULVsotJA5j3B94g",
+            "uri": "spotify:track:4r0inLUULVsotJA5j3B94g",
+            "matchedTitle": "Wonder sea breeze",
+            "matchedArtist": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732f19ce8fc2c376eb5014872b",
+            "albumName": "Wonder sea breeze"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ヌマヅやっさよいさ唄",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-oh4c2z__original",
+            "displayTitle": "ヌマヅやっさよいさ唄"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "好奇心ジャーニー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-fk9kvy__original",
+            "displayTitle": "好奇心ジャーニー"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Forever U & I",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "forever-u-and-i__original",
+            "displayTitle": "Forever U & I"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3Rsybl8Q0pAdr76kyPS21W",
+            "uri": "spotify:track:3Rsybl8Q0pAdr76kyPS21W",
+            "matchedTitle": "Forever U & I",
+            "matchedArtist": "ヨハネ(CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec4c4f8a02e5a6a10e297253",
+            "albumName": "Forever U & I"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "La la 勇気のうた",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "la-la__original",
+            "displayTitle": "La la 勇気のうた"
+          },
+          "artistHint": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BLU4lCLiTzOS2nOVTtxmz",
+            "uri": "spotify:track:6BLU4lCLiTzOS2nOVTtxmz",
+            "matchedTitle": "La la 勇気のうた",
+            "matchedArtist": "ヨハネ(CV.小林愛香), ハナマル(CV.高槻かなこ), ダイヤ(CV.小宮有紗), ルビィ(CV.降幡 愛), チカ(CV.伊波杏樹), ヨウ(CV.斉藤朱夏), カナン(CV.諏訪ななか), リコ(CV.逢田梨香子), マリ(CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734a6ddab7ca0bf072cd574bc4",
+            "albumName": "La la 勇気のうた"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BLOOM OF COLORS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "bloom-of-colors__original",
+            "displayTitle": "BLOOM OF COLORS"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 18,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "キミノタメボクノタメ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-3b1bwi__original",
+            "displayTitle": "キミノタメボクノタメ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3kJ6yhASTA8XOmk8petjdv",
+            "uri": "spotify:track:3kJ6yhASTA8XOmk8petjdv",
+            "matchedTitle": "キミノタメボクノタメ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

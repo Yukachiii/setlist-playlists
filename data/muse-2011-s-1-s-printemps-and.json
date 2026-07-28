@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-2011-s-1-s-printemps-and",
+  "title": "2011年度ラブライ部員とμ'sの課外活動 第1回 μ'sユニット Printempsシングル発売記念 トーク＆ノベルティお渡し会",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/otonokizaka/news.php?id=3794",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/205",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-2011-s-1-s-printemps-and-akihabara-6f-performance-500",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2011-05-29",
+      "venue": {
+        "name": "AKIHABARAゲーマーズ本店 6Fイベントスペース",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love marginal",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "love-marginal__ver",
+            "displayTitle": "Love marginal（ショート Ver.）"
+          },
+          "artistHint": "Printemps, μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3brWVEb4daUpea59UbU03i",
+            "uri": "spotify:track:3brWVEb4daUpea59UbU03i",
+            "matchedTitle": "Love marginal",
+            "matchedArtist": "Printemps, μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738710800dce9d8bfd11c9afca",
+            "albumName": "Love marginal"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

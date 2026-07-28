@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-c3-in-hong-kong-2014-c3-2014",
+  "title": "C3 in Hong Kong 2014 （C3日本動玩博覽2014）",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "http://www.c3hk.com.hk/revamp/2014/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/86",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-c3-in-hong-kong-2014-c3-2014-hkcec-s-1st-live-in-hong-kong",
+      "label": "μ's 1st Live in Hong Kong",
+      "day": null,
+      "session": null,
+      "date": "2014-03-15",
+      "venue": {
+        "name": "香港會議展覽中心 (HKCEC)",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢なき夢は夢じゃない",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-l5n6ew__original",
+            "displayTitle": "夢なき夢は夢じゃない"
+          },
+          "artistHint": "高坂穂乃果(CV.新田恵海), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0IddW7k7Bf43GURSM3OxWx",
+            "uri": "spotify:track:0IddW7k7Bf43GURSM3OxWx",
+            "matchedTitle": "夢なき夢は夢じゃない",
+            "matchedArtist": "高坂穂乃果(CV.新田恵海), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cea05ff8f1311a0df0291cfb",
+            "albumName": "μ's Complete BEST BOX Chapter.03"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ぶる～べりぃ♡とれいん",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-19jjnti__original",
+            "displayTitle": "ぶる～べりぃ♡とれいん"
+          },
+          "artistHint": "南ことり(CV.内田 彩), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vQHxOQp6SXTt9wpKF8N0I",
+            "uri": "spotify:track:6vQHxOQp6SXTt9wpKF8N0I",
+            "matchedTitle": "ぶる〜べりぃ♡とれいん",
+            "matchedArtist": "南ことり(CV.内田 彩), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738a7e5e475b8a5323ad4d98e1",
+            "albumName": "告白日和、です！"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "私たちは未来の花",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1q9eb61__original",
+            "displayTitle": "私たちは未来の花"
+          },
+          "artistHint": "園田海未(CV.三森すずこ), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "72zLinIOYztZwIDes9jZBa",
+            "uri": "spotify:track:72zLinIOYztZwIDes9jZBa",
+            "matchedTitle": "私たちは未来の花",
+            "matchedArtist": "園田海未(CV.三森すずこ), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ee5efb2163db725f50611712",
+            "albumName": "ラブライブ！ Solo Live! from μ's 園田海未 海色少女に魅せられて"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daring!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daring__original",
+            "displayTitle": "Daring!!"
+          },
+          "artistHint": "西木野真姫(CV.Pile), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1lNTAkiP2dl3Odql9hMARj",
+            "uri": "spotify:track:1lNTAkiP2dl3Odql9hMARj",
+            "matchedTitle": "Daring!!",
+            "matchedArtist": "西木野真姫(CV.Pile), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27332bd0c34b3ed1deb8e90da47",
+            "albumName": "soldier game"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "純愛レンズ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-zdpqqd__original",
+            "displayTitle": "純愛レンズ"
+          },
+          "artistHint": "東條 希(CV.楠田亜衣奈), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1A4cPjb4DFWs9dLgPfTUbp",
+            "uri": "spotify:track:1A4cPjb4DFWs9dLgPfTUbp",
+            "matchedTitle": "純愛レンズ",
+            "matchedArtist": "東條 希(CV.楠田亜衣奈), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734c8c2238ab2fbace916a1ca2",
+            "albumName": "乙女式れんあい塾"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "なわとび",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-nyl2ln__original",
+            "displayTitle": "なわとび"
+          },
+          "artistHint": "小泉花陽(CV.久保ユリカ), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GAVLSODkiykqy6P7bK5Pp",
+            "uri": "spotify:track:2GAVLSODkiykqy6P7bK5Pp",
+            "matchedTitle": "なわとび",
+            "matchedArtist": "小泉花陽(CV.久保ユリカ), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cea05ff8f1311a0df0291cfb",
+            "albumName": "μ's Complete BEST BOX Chapter.03"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "にこぷり♡女子道",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-jvqvtv__original",
+            "displayTitle": "にこぷり♡女子道"
+          },
+          "artistHint": "矢澤にこ(CV.徳井青空), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2EKzmbXhJLDMRmUki5LLZJ",
+            "uri": "spotify:track:2EKzmbXhJLDMRmUki5LLZJ",
+            "matchedTitle": "にこぷり♡女子道",
+            "matchedArtist": "矢澤にこ(CV.徳井青空), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cea05ff8f1311a0df0291cfb",
+            "albumName": "μ's Complete BEST BOX Chapter.03"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

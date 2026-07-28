@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-66-nhk",
+  "title": "第66回NHK紅白歌合戦",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.nhk.or.jp/kouhaku/history/history.html?count=66",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/105",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-66-nhk-nhk-performance-225",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2015-12-31",
+      "venue": {
+        "name": "NHKホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "それは僕たちの奇跡",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-ibnm0y__ver",
+            "displayTitle": "それは僕たちの奇跡（ショートVer.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5U4HYCX60hWkMIGwWciH8L",
+            "uri": "spotify:track:5U4HYCX60hWkMIGwWciH8L",
+            "matchedTitle": "それは僕たちの奇跡",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273efcd5eff7d3b3f1bdc816406",
+            "albumName": "それは僕たちの奇跡"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
