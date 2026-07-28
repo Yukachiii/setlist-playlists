@@ -162,6 +162,42 @@ EN1: Last Song（104期 Ver.）
   );
 });
 
+test("会場が空欄またはハイフンなら「-」として保持する", () => {
+  const hyphenVenue = parseLlFansPage(`
+イベント・TV出演
+配信ライブ
+ライブ・ファンミ
+蓮ノ空女学院スクールアイドルクラブ
+日程
+2026年8月1日
+会場
+-
+有観客
+日程
+2026年8月1日
+セットリスト
+M01
+Dream Believers
+`);
+  assert.equal(hyphenVenue.performance.venue.name, "-");
+
+  const missingVenue = parseLlFansPage(`
+イベント・TV出演
+バーチャルライブ
+ライブ・ファンミ
+蓮ノ空女学院スクールアイドルクラブ
+日程
+2026年8月2日
+有観客
+日程
+2026年8月2日
+セットリスト
+M01
+Dream Believers
+`);
+  assert.equal(missingVenue.performance.venue.name, "-");
+});
+
 test("シリーズ名と公演名からローマ字IDを生成する", () => {
   const hasunosora = parseLlFansPage(`
 イベント・TV出演

@@ -19,7 +19,7 @@
       <button id="spotify-connect-button" class="button spotify-button" type="button">Spotifyに接続</button>
       <button id="page-import-button" class="button" type="button">LL-Fansから追加</button>
       <span id="github-publish-state" class="github-state">GitHub確認中</span>
-      <button id="publish-github-button" class="button github-button" type="button" disabled>GitHubへ公開</button>
+      <button id="publish-github-button" class="button github-button" type="button" disabled>全公演をGitHubへ公開</button>
       <button id="export-event-button" class="button secondary" type="button">選択中をJSON出力</button>
       <button id="import-button" class="button secondary" type="button">JSON読込</button>
       <input id="import-file" type="file" accept=".json,application/json" hidden>
@@ -275,6 +275,7 @@
               <label>
                 会場
                 <input id="page-import-venue-name" autocomplete="off">
+                <span class="field-help">配信・バーチャル公演など、空欄の場合は「-」で保存します。</span>
               </label>
               <label>
                 都市・地域
@@ -411,6 +412,7 @@
             <label>
               会場
               <input id="venue-name" autocomplete="off" placeholder="オリックス劇場">
+              <span class="field-help">任意。空欄の場合は「-」で保存します。</span>
             </label>
             <label>
               都市・地域
@@ -521,9 +523,9 @@
     </tr>
   </template>
 
-  <script src="./js/page-text-parser.js?v=0.19"></script>
+  <script src="./js/page-text-parser.js?v=0.20"></script>
   <script src="./js/known-song-cache.js?v=0.20"></script>
   <script src="./js/spotify-client.js?v=0.19"></script>
-  <script src="./js/app.js?v=0.24"></script>
+  <script src="./js/app.js?v=0.25"></script>
 </body>
 </html>

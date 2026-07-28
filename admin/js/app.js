@@ -299,7 +299,7 @@
       session: null,
       date: "",
       venue: {
-        name: "",
+        name: "-",
         city: "",
         countryCode: "JP"
       },
@@ -329,7 +329,7 @@
         session: performance.session || null,
         date: performance.date || "",
         venue: {
-          name: performance.venue?.name || "",
+          name: performance.venue?.name || "-",
           city: performance.venue?.city || "",
           countryCode: performance.venue?.countryCode || "JP"
         },
@@ -401,7 +401,7 @@
   function setDirty() {
     state.dirty = true;
     if (state.githubPublishStatus) {
-      state.githubPublishStatus.publishedEventId = "";
+      state.githubPublishStatus.publishedDatabaseSignature = "";
       state.githubPublishStatus.publishedRevision = "";
     }
     setSaveState("dirty");
@@ -423,6 +423,16 @@
 
   function selectedEvent() {
     return state.database.events.find((event) => event.id === state.selectedEventId) || null;
+  }
+
+  function databasePublishSignature() {
+    const serialized = JSON.stringify(state.database);
+    let hash = 2166136261;
+    for (let index = 0; index < serialized.length; index += 1) {
+      hash ^= serialized.charCodeAt(index);
+      hash = Math.imul(hash, 16777619);
+    }
+    return `${state.database.events.length}:${(hash >>> 0).toString(16)}`;
   }
 
   function render() {
@@ -617,7 +627,7 @@
         session: performance.session ?? null,
         date: performance.date || "",
         venue: {
-          name: performance.venue?.name || "",
+          name: performance.venue?.name || "-",
           city: performance.venue?.city || "",
           countryCode: performance.venue?.countryCode || "JP"
         },
@@ -678,7 +688,7 @@
     performance.session = elements.pageImportPerformanceSession.value || null;
     performance.date = elements.pageImportPerformanceDate.value;
     performance.venue = {
-      name: elements.pageImportVenueName.value.trim(),
+      name: elements.pageImportVenueName.value.trim() || "-",
       city: elements.pageImportVenueCity.value.trim(),
       countryCode: elements.pageImportVenueCountry.value.trim().toUpperCase() || "JP"
     };
@@ -2047,7 +2057,7 @@
       session: performance.session || null,
       date: performance.date,
       venue: {
-        name: performance.venue.name,
+        name: performance.venue.name || "-",
         city: performance.venue.city,
         countryCode: performance.venue.countryCode || "JP"
       },
@@ -2176,7 +2186,7 @@
       session: elements.performanceSession.value || null,
       date: elements.performanceDate.value,
       venue: {
-        name: elements.venueName.value.trim(),
+        name: elements.venueName.value.trim() || "-",
         city: elements.venueCity.value.trim(),
         countryCode: elements.venueCountry.value.trim().toUpperCase() || "JP"
       },
@@ -2201,8 +2211,6 @@
     }
     if (!performance.label) errors.push("表示名は必須です。");
     if (!performance.date) errors.push("開催日は必須です。");
-    if (!performance.venue.name) errors.push("会場は必須です。");
-
     const duplicate = ownerEvent?.performances.find(
       (candidate, index) =>
         index !== editingIndex &&
@@ -2608,19 +2616,19 @@
 
   function updateGitHubPublishUi() {
     const status = state.githubPublishStatus;
-    const selected = selectedEvent();
+    const eventCount = state.database.events.length;
     const stateElement = elements.githubPublishState;
     const button = elements.publishGithubButton;
     stateElement.classList.remove("ready", "published");
 
     if (state.githubPublishing) {
-      stateElement.textContent = "GitHubへ公開中";
+      stateElement.textContent = "全公演をGitHubへ公開中";
       button.textContent = "commit・push中…";
       button.disabled = true;
       return;
     }
 
-    button.textContent = "GitHubへ公開";
+    button.textContent = "全公演をGitHubへ公開";
     if (!status) {
       stateElement.textContent = "GitHub確認中";
       button.disabled = true;
@@ -2636,29 +2644,29 @@
       stateElement.textContent = "GitHub未設定";
       stateElement.classList.add("ready");
       button.title = "originリモートを追加すると公開できます。";
-      button.disabled = !selected;
+      button.disabled = eventCount === 0;
       return;
     }
     if (!status.identityConfigured) {
       stateElement.textContent = "Gitユーザー未設定";
       stateElement.classList.add("ready");
       button.title = "Gitのuser.nameとuser.emailを設定してください。";
-      button.disabled = !selected;
+      button.disabled = eventCount === 0;
       return;
     }
     if (
-      status.publishedEventId === selected?.id &&
+      status.publishedDatabaseSignature === databasePublishSignature() &&
       status.publishedRevision &&
-      !state.dirty
+      eventCount > 0
     ) {
-      stateElement.textContent = `公開済み ${status.publishedRevision}`;
+      stateElement.textContent = `全${eventCount}公演を公開済み ${status.publishedRevision}`;
       stateElement.classList.add("published");
     } else {
       stateElement.textContent = `GitHub: ${status.branch || "準備完了"}`;
       stateElement.classList.add("ready");
     }
-    button.title = "公開JSONを保存し、プロジェクトの変更をcommit・pushします。";
-    button.disabled = !selected;
+    button.title = "全公演の公開JSONを保存し、プロジェクトの変更をcommit・pushします。";
+    button.disabled = eventCount === 0;
   }
 
   async function refreshGitHubPublishStatus() {
@@ -2687,13 +2695,21 @@
     updateGitHubPublishUi();
   }
 
-  async function publishSelectedEventToGitHub() {
+  async function publishAllEventsToGitHub() {
     readEventFormIntoState(false);
-    const event = selectedEvent();
-    if (!event) return;
-    const errors = validateEvent(event);
-    if (errors.length) {
-      showValidation(elements.eventErrors, errors);
+    const events = state.database.events;
+    if (!events.length) return;
+    const invalidEvent = events
+      .map((event) => ({ event, errors: validateEvent(event) }))
+      .find((item) => item.errors.length);
+    if (invalidEvent) {
+      state.selectedEventId = invalidEvent.event.id;
+      render();
+      showValidation(elements.eventErrors, invalidEvent.errors);
+      alert(
+        `「${invalidEvent.event.title}」に入力エラーがあります。` +
+        "\n修正してから全体を公開してください。"
+      );
       return;
     }
 
@@ -2712,9 +2728,9 @@
     }
 
     const confirmed = confirm(
-      `「${event.title}」をGitHubへ公開します。\n\n` +
-      "・選択中イベントをdata/へ保存\n" +
-      "・data/index.jsonを更新\n" +
+      `管理画面の全${events.length}公演をGitHubへ公開します。\n\n` +
+      "・全公演をdata/へ保存\n" +
+      "・data/index.jsonへ全公演を追加\n" +
       "・このプロジェクト内の変更をすべてcommit\n" +
       "・GitHubへpush\n\n続けますか？"
     );
@@ -2733,7 +2749,7 @@
         },
         body: JSON.stringify({
           publishToken: status.publishToken,
-          event: deepClone(event)
+          events: deepClone(events)
         })
       });
       const contentType = response.headers.get("Content-Type") || "";
@@ -2745,11 +2761,12 @@
       state.githubPublishStatus = {
         ...status,
         available: true,
-        publishedEventId: event.id,
+        publishedDatabaseSignature: databasePublishSignature(),
         publishedRevision: result.revision || ""
       };
       alert(
-        `${result.filename}をGitHubへpushしました。` +
+        `全${result.eventCount}公演をGitHubへpushしました。` +
+        `\n更新されたJSON: ${result.changedEventCount}件` +
         (result.revision ? `\ncommit: ${result.revision}` : "") +
         "\nGitHub Actionsの完了後に公開ページへ反映されます。"
       );
@@ -2925,7 +2942,7 @@
   $("#add-song-button").addEventListener("click", addSong);
   $("#parse-setlist-button").addEventListener("click", parsePastedSetlist);
   $("#generate-performance-id").addEventListener("click", generatePerformanceId);
-  elements.publishGithubButton.addEventListener("click", publishSelectedEventToGitHub);
+  elements.publishGithubButton.addEventListener("click", publishAllEventsToGitHub);
   $("#export-event-button").addEventListener("click", exportSelectedEvent);
   $("#export-all-button").addEventListener("click", exportAll);
   $("#import-button").addEventListener("click", () => elements.importFile.click());

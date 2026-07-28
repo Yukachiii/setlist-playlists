@@ -93,11 +93,20 @@ test("同じ曲の重複確認と前のSpotify検索結果の混入を防ぐ", (
   assert.match(app, /if \(requestId !== state\.spotifySearchRequestId\) return/);
 });
 
-test("管理画面から公開JSONの保存とGitHub pushを実行できる", () => {
+test("管理画面から全公演の公開JSON保存とGitHub pushを一括実行できる", () => {
   assert.match(html, /id="publish-github-button"/);
   assert.match(html, /id="github-publish-state"/);
   assert.match(app, /fetch\("\/api\/github-publish-status"/);
   assert.match(app, /fetch\("\/api\/github-publish"/);
-  assert.match(app, /function publishSelectedEventToGitHub\(\)/);
+  assert.match(app, /function publishAllEventsToGitHub\(\)/);
+  assert.match(app, /events: deepClone\(events\)/);
+  assert.match(app, /全\$\{events\.length\}公演をGitHubへ公開/);
   assert.match(app, /このプロジェクト内の変更をすべてcommit/);
+});
+
+test("会場は任意入力で、空欄ならハイフンを保存する", () => {
+  assert.doesNotMatch(app, /会場は必須です/);
+  assert.match(app, /name: elements\.venueName\.value\.trim\(\) \|\| "-"/);
+  assert.match(app, /name: elements\.pageImportVenueName\.value\.trim\(\) \|\| "-"/);
+  assert.match(html, /空欄の場合は「-」で保存します/);
 });

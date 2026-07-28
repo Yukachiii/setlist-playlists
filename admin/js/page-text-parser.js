@@ -18,6 +18,11 @@
     return String(value ?? "").normalize("NFKC").trim();
   }
 
+  function normalizeVenueName(value) {
+    const text = normalized(value);
+    return !text || /^[-‐‑‒–—―ー－]+$/.test(text) ? "-" : text;
+  }
+
   function findLabel(lines, label, start = 0) {
     const target = normalized(label);
     return lines.findIndex((line, index) => index >= start && normalized(line) === target);
@@ -151,7 +156,7 @@
     const seriesName = valueAfter(lines, "ライブ・ファンミ");
     const seriesId = seriesIdFromName(seriesName);
     const sourceUrl = valueAfter(lines, "公式ページ");
-    const venueName = valueAfter(lines, "会場");
+    const venueName = normalizeVenueName(valueAfter(lines, "会場"));
 
     const firstScheduleValue = valueAfter(lines, "日程");
     const firstDate = parseJapaneseDate(firstScheduleValue);
@@ -171,7 +176,6 @@
     if (!eventTitle) warnings.push("イベント名を抽出できませんでした。");
     if (seriesName && !seriesId) warnings.push("シリーズ名をローマ字IDへ変換できませんでした。");
     if (!performanceDate) warnings.push("公演日を抽出できませんでした。");
-    if (!venueName) warnings.push("会場を抽出できませんでした。");
     if (!setlist.length) warnings.push("M01やEN01形式の曲を抽出できませんでした。");
 
     return {

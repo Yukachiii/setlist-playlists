@@ -1,3 +1,4 @@
+import json
 import subprocess
 import unittest
 from pathlib import Path
@@ -8,10 +9,13 @@ from server import (
     PublishErrorResponse,
     convert_tour_index,
     convert_tour_payload,
+    normalized_venue_name,
     parse_event_url,
     publish_event_to_github,
+    publish_events_to_github,
     validate_publish_event,
     write_event_to_public_data,
+    write_events_to_public_data,
 )
 
 
@@ -133,6 +137,13 @@ class ServerImportTests(unittest.TestCase):
             "https://ll-fans.jp/data/event/300",
         )
 
+    def test_empty_or_dash_only_venue_is_saved_as_hyphen(self):
+        self.assertEqual(normalized_venue_name(None), "-")
+        self.assertEqual(normalized_venue_name(""), "-")
+        self.assertEqual(normalized_venue_name("―"), "-")
+        self.assertEqual(normalized_venue_name("-"), "-")
+        self.assertEqual(normalized_venue_name("幕張メッセ"), "幕張メッセ")
+
     def test_public_event_is_written_and_added_to_manifest(self):
         event = {
             "schemaVersion": "0.3",
@@ -157,6 +168,41 @@ class ServerImportTests(unittest.TestCase):
             self.assertFalse(repeated["eventChanged"])
             self.assertFalse(repeated["manifestChanged"])
 
+    def test_all_public_events_are_written_in_one_operation(self):
+        events = [
+            {
+                "schemaVersion": "0.3",
+                "id": "first-live",
+                "title": "First Live",
+                "series": [],
+                "sources": [],
+                "performances": [],
+            },
+            {
+                "schemaVersion": "0.3",
+                "id": "second-live",
+                "title": "Second Live",
+                "series": [],
+                "sources": [],
+                "performances": [],
+            },
+        ]
+        with TemporaryDirectory() as directory:
+            project = Path(directory)
+            result = write_events_to_public_data(events, project)
+
+            self.assertEqual(result["eventCount"], 2)
+            self.assertEqual(result["changedEventCount"], 2)
+            self.assertTrue((project / "data" / "first-live.json").exists())
+            self.assertTrue((project / "data" / "second-live.json").exists())
+            manifest = json.loads(
+                (project / "data" / "index.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(
+                manifest["events"],
+                ["first-live.json", "second-live.json"],
+            )
+
     def test_publish_event_id_cannot_escape_data_directory(self):
         with self.assertRaises(PublishErrorResponse):
             validate_publish_event({
@@ -173,6 +219,11 @@ class ServerImportTests(unittest.TestCase):
             "series": [],
             "sources": [],
             "performances": [],
+        }
+        second_event = {
+            **event,
+            "id": "github-publish-test-2",
+            "title": "GitHub公開テスト2",
         }
         with TemporaryDirectory() as directory:
             root = Path(directory)
@@ -196,12 +247,14 @@ class ServerImportTests(unittest.TestCase):
             git("init", "--bare", str(remote), cwd=root)
             git("remote", "add", "origin", str(remote))
 
-            result = publish_event_to_github(event, project)
+            result = publish_events_to_github([event, second_event], project)
             self.assertTrue(result["committed"])
             self.assertTrue(result["pushed"])
+            self.assertEqual(result["eventCount"], 2)
             self.assertEqual(result["branch"], "main")
             self.assertTrue(result["revision"])
             self.assertTrue((project / "data" / "github-publish-test.json").exists())
+            self.assertTrue((project / "data" / "github-publish-test-2.json").exists())
 
             remote_head = git(
                 "--git-dir",

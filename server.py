@@ -26,7 +26,7 @@ PUBLISH_EVENT_ID = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
 PROJECT_DIRECTORY = Path(__file__).resolve().parent
 PUBLISH_TOKEN = secrets.token_urlsafe(32)
 PUBLISH_LOCK = threading.Lock()
-MAX_PUBLISH_BODY = 5 * 1024 * 1024
+MAX_PUBLISH_BODY = 50 * 1024 * 1024
 SERIES_SLUGS = {
     "1": "muse",
     "2": "aqours",
@@ -167,6 +167,13 @@ def location_slug(concert: dict[str, Any]) -> str:
         if label in source:
             return slug
     return ascii_slug(source) or f"venue-{concert.get('id') or 'unknown'}"
+
+
+def normalized_venue_name(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text or re.fullmatch(r"[-‐‑‒–—―ー－]+", text):
+        return "-"
+    return text
 
 
 def performance_day(name: str) -> int | None:
@@ -388,7 +395,7 @@ def convert_tour_payload(
                     "session": None,
                     "date": str(raw_performance.get("date") or ""),
                     "venue": {
-                        "name": str(venue.get("name") or ""),
+                        "name": normalized_venue_name(venue.get("name")),
                         "city": "",
                         "countryCode": "JP",
                     },
@@ -503,6 +510,37 @@ def write_event_to_public_data(
     }
 
 
+def validate_publish_events(value: Any) -> list[dict[str, Any]]:
+    if not isinstance(value, list) or not value:
+        raise PublishErrorResponse("公開するイベントがありません。")
+    normalized = [validate_publish_event(event) for event in value]
+    event_ids = [event["id"] for event in normalized]
+    if len(event_ids) != len(set(event_ids)):
+        raise PublishErrorResponse("同じイベントIDが複数存在します。")
+    return normalized
+
+
+def write_events_to_public_data(
+    events: Any, project_directory: Path = PROJECT_DIRECTORY
+) -> dict[str, Any]:
+    normalized = validate_publish_events(events)
+    results = [
+        write_event_to_public_data(event, project_directory)
+        for event in normalized
+    ]
+    changed_filenames = [
+        result["filename"] for result in results if result["eventChanged"]
+    ]
+    filenames = [result["filename"] for result in results]
+    return {
+        "eventCount": len(results),
+        "changedEventCount": len(changed_filenames),
+        "filenames": filenames,
+        "changedFilenames": changed_filenames,
+        "manifestChanged": any(result["manifestChanged"] for result in results),
+    }
+
+
 def git_process(
     arguments: list[str],
     project_directory: Path = PROJECT_DIRECTORY,
@@ -594,12 +632,13 @@ def require_git_publish_ready(project_directory: Path = PROJECT_DIRECTORY) -> di
     return status
 
 
-def publish_event_to_github(
-    event: Any, project_directory: Path = PROJECT_DIRECTORY
+def publish_events_to_github(
+    events: Any, project_directory: Path = PROJECT_DIRECTORY
 ) -> dict[str, Any]:
+    normalized_events = validate_publish_events(events)
     status = require_git_publish_ready(project_directory)
     with PUBLISH_LOCK:
-        saved = write_event_to_public_data(event, project_directory)
+        saved = write_events_to_public_data(normalized_events, project_directory)
 
         add_result = git_process(["add", "--all"], project_directory)
         if add_result.returncode != 0:
@@ -611,8 +650,12 @@ def publish_event_to_github(
 
         committed = diff_result.returncode == 1
         if committed:
-            title = re.sub(r"\s+", " ", str(event.get("title") or "")).strip()
-            message = f"Publish {title or event.get('id')}"[:120]
+            if len(normalized_events) == 1:
+                event = normalized_events[0]
+                title = re.sub(r"\s+", " ", str(event.get("title") or "")).strip()
+                message = f"Publish {title or event.get('id')}"[:120]
+            else:
+                message = f"Publish all setlist events ({len(normalized_events)})"
             commit_result = git_process(["commit", "-m", message], project_directory)
             if commit_result.returncode != 0:
                 raise PublishErrorResponse(
@@ -662,6 +705,12 @@ def publish_event_to_github(
             "branch": status["branch"],
             "revision": revision,
         }
+
+
+def publish_event_to_github(
+    event: Any, project_directory: Path = PROJECT_DIRECTORY
+) -> dict[str, Any]:
+    return publish_events_to_github([event], project_directory)
 
 
 class AdminHandler(SimpleHTTPRequestHandler):
@@ -738,7 +787,10 @@ class AdminHandler(SimpleHTTPRequestHandler):
             if not hmac.compare_digest(token, PUBLISH_TOKEN):
                 self.send_json({"error": "公開操作の認証に失敗しました。画面を再読み込みしてください。"}, status=403)
                 return
-            result = publish_event_to_github(body.get("event"), PROJECT_DIRECTORY)
+            events = body.get("events")
+            if events is None and body.get("event") is not None:
+                events = [body.get("event")]
+            result = publish_events_to_github(events, PROJECT_DIRECTORY)
             self.send_json(result)
         except (UnicodeDecodeError, json.JSONDecodeError):
             self.send_json({"error": "送信されたJSONを読み込めません。"}, status=400)
