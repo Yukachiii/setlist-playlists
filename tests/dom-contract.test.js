@@ -110,3 +110,11 @@ test("会場は任意入力で、空欄ならハイフンを保存する", () =>
   assert.match(app, /name: elements\.pageImportVenueName\.value\.trim\(\) \|\| "-"/);
   assert.match(html, /空欄の場合は「-」で保存します/);
 });
+
+test("管理画面の公演一覧をシリーズごとのプルダウンで表示する", () => {
+  assert.match(app, /function groupedEventsBySeries\(\)/);
+  assert.match(app, /document\.createElement\("details"\)/);
+  assert.match(app, /className = "event-series-summary"/);
+  assert.match(app, /details\.open = containsSelected \|\| state\.expandedEventSeries\.has\(group\.key\)/);
+  assert.match(app, /SERIES_DISPLAY_NAMES/);
+});

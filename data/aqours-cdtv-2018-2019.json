@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-cdtv-2018-2019",
+  "title": "CDTVスペシャル！年越しプレミアライブ2018→2019",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://twitter.com/TBSCDTV/status/1079266134870740998",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/55",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-cdtv-2018-2019-venue-81-performance-137",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2018-12-31",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MY舞☆TONIGHT",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "my-tonight__original",
+            "displayTitle": "MY舞☆TONIGHT"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ua9Y9QG4QjEMKTocsOTNK",
+            "uri": "spotify:track:1Ua9Y9QG4QjEMKTocsOTNK",
+            "matchedTitle": "MY舞☆TONIGHT",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

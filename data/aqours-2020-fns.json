@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-2020-fns",
+  "title": "2020 FNS歌謡祭",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.fujitv.co.jp/FNS/2020/index.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/44",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-2020-fns-venue-70-1",
+      "label": "第1夜",
+      "day": null,
+      "session": null,
+      "date": "2020-12-02",
+      "venue": {
+        "name": "ユニバーサル・スタジオ・ジャパン",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ジングルベルがとまらない",
+            "versionLabel": "Shortサイズ",
+            "versionCode": "short",
+            "recordingId": "track-17xwjd6__short",
+            "displayTitle": "ジングルベルがとまらない（Shortサイズ）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ok3DaagiStSftvgGG9P4Q",
+            "uri": "spotify:track:3ok3DaagiStSftvgGG9P4Q",
+            "matchedTitle": "ジングルベルがとまらない",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

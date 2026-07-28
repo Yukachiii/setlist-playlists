@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-02",
+  "title": "バズリズム02",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.ntv.co.jp/buzzrhythm/oa/20171222.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/48",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-02-venue-74-performance-130",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2017-12-23",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kvufm__original",
+            "displayTitle": "未来の僕らは知ってるよ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

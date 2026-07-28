@@ -1,0 +1,476 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-event-243",
+  "title": "推し活ピューロランドフェス",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.puroland.jp/event-campaign/2025_oshikatsu_fes/https://www.puroland.jp/collaboration/2025_oshikatsu_fes_0119/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/243",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-event-243-venue-355-performance-612",
+      "label": "第一部",
+      "day": null,
+      "session": null,
+      "date": "2025-01-19",
+      "venue": {
+        "name": "サンリオピューロランド  エンターテイメントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": "曜・善子・ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "aquarium__ver",
+            "displayTitle": "恋になりたいAQUARIUM（曜・善子・ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KU-RU-KU-RU Cruller!",
+            "versionLabel": "曜・善子・ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "ku-ru-ku-ru-cruller__ver",
+            "displayTitle": "KU-RU-KU-RU Cruller!（曜・善子・ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5O2cVcJPeMUNFERDQQudl5",
+            "uri": "spotify:track:5O2cVcJPeMUNFERDQQudl5",
+            "matchedTitle": "KU-RU-KU-RU Cruller!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump up HIGH!!",
+            "versionLabel": "曜・善子・ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "jump-up-high__ver",
+            "displayTitle": "Jump up HIGH!!（曜・善子・ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2PrZgpQvYaB0NlQdnIQg3B",
+            "uri": "spotify:track:2PrZgpQvYaB0NlQdnIQg3B",
+            "matchedTitle": "Jump up HIGH!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "U-CYU",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "u-cyu__original",
+            "displayTitle": "U-CYU"
+          },
+          "artistHint": "わいわいわい",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "01RQcfr9mIff3hogD61unG",
+            "uri": "spotify:track:01RQcfr9mIff3hogD61unG",
+            "matchedTitle": "U-CYU",
+            "matchedArtist": "わいわいわい",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d8262acf9f94cab9c5c3ce00",
+            "albumName": "peace piece pizza"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ファボタージュ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-l98o8l__original",
+            "displayTitle": "ファボタージュ"
+          },
+          "artistHint": "わいわいわい",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0jruXgecaVFH9p97jYQGlj",
+            "uri": "spotify:track:0jruXgecaVFH9p97jYQGlj",
+            "matchedTitle": "ファボタージュ",
+            "matchedArtist": "わいわいわい",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d792bfc6135e8cf912c4cc5b",
+            "albumName": "わーいわいわい わいわいわい！ (わいわいわい)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "わーいわいわい　わいわいわい！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-zuohw8__original",
+            "displayTitle": "わーいわいわい　わいわいわい！"
+          },
+          "artistHint": "わいわいわい",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3B0WxpVS4xxJ1j62GCMw2n",
+            "uri": "spotify:track:3B0WxpVS4xxJ1j62GCMw2n",
+            "matchedTitle": "わーいわいわい わいわいわい！ (わいわいわい)",
+            "matchedArtist": "わいわいわい",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d792bfc6135e8cf912c4cc5b",
+            "albumName": "わーいわいわい わいわいわい！ (わいわいわい)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コットンキャンディえいえいおー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-7urnma__original",
+            "displayTitle": "コットンキャンディえいえいおー！"
+          },
+          "artistHint": "黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0cM4aOMBOmqoeESU0TiYsr",
+            "uri": "spotify:track:0cM4aOMBOmqoeESU0TiYsr",
+            "matchedTitle": "コットンキャンディえいえいおー！",
+            "matchedArtist": "黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731579abb7d9bcbd3b2b2573a1",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Ruby First Solo Concert Album ～RED GEM WINK～"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": "曜・善子・ルビィ Ver.with シナモン・マイメロディ・クロミ",
+            "versionCode": "ver-with",
+            "recordingId": "track-673ilp__ver-with",
+            "displayTitle": "太陽を追いかけろ！（曜・善子・ルビィ Ver.with シナモン・マイメロディ・クロミ）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": "曜・善子・ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-kav3wd__ver",
+            "displayTitle": "勇気はどこに？君の胸に！（曜・善子・ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-event-243-venue-355-performance-613",
+      "label": "第二部",
+      "day": null,
+      "session": null,
+      "date": "2025-01-19",
+      "venue": {
+        "name": "サンリオピューロランド  エンターテイメントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": "曜・善子・ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "aquarium__ver",
+            "displayTitle": "恋になりたいAQUARIUM（曜・善子・ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KU-RU-KU-RU Cruller!",
+            "versionLabel": "曜・善子・ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "ku-ru-ku-ru-cruller__ver",
+            "displayTitle": "KU-RU-KU-RU Cruller!（曜・善子・ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5O2cVcJPeMUNFERDQQudl5",
+            "uri": "spotify:track:5O2cVcJPeMUNFERDQQudl5",
+            "matchedTitle": "KU-RU-KU-RU Cruller!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump up HIGH!!",
+            "versionLabel": "曜・善子・ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "jump-up-high__ver",
+            "displayTitle": "Jump up HIGH!!（曜・善子・ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2PrZgpQvYaB0NlQdnIQg3B",
+            "uri": "spotify:track:2PrZgpQvYaB0NlQdnIQg3B",
+            "matchedTitle": "Jump up HIGH!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "U-CYU",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "u-cyu__original",
+            "displayTitle": "U-CYU"
+          },
+          "artistHint": "わいわいわい",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "01RQcfr9mIff3hogD61unG",
+            "uri": "spotify:track:01RQcfr9mIff3hogD61unG",
+            "matchedTitle": "U-CYU",
+            "matchedArtist": "わいわいわい",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d8262acf9f94cab9c5c3ce00",
+            "albumName": "peace piece pizza"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ファボタージュ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-l98o8l__original",
+            "displayTitle": "ファボタージュ"
+          },
+          "artistHint": "わいわいわい",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0jruXgecaVFH9p97jYQGlj",
+            "uri": "spotify:track:0jruXgecaVFH9p97jYQGlj",
+            "matchedTitle": "ファボタージュ",
+            "matchedArtist": "わいわいわい",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d792bfc6135e8cf912c4cc5b",
+            "albumName": "わーいわいわい わいわいわい！ (わいわいわい)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "わーいわいわい　わいわいわい！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-zuohw8__original",
+            "displayTitle": "わーいわいわい　わいわいわい！"
+          },
+          "artistHint": "わいわいわい",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3B0WxpVS4xxJ1j62GCMw2n",
+            "uri": "spotify:track:3B0WxpVS4xxJ1j62GCMw2n",
+            "matchedTitle": "わーいわいわい わいわいわい！ (わいわいわい)",
+            "matchedArtist": "わいわいわい",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d792bfc6135e8cf912c4cc5b",
+            "albumName": "わーいわいわい わいわいわい！ (わいわいわい)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コットンキャンディえいえいおー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-7urnma__original",
+            "displayTitle": "コットンキャンディえいえいおー！"
+          },
+          "artistHint": "黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0cM4aOMBOmqoeESU0TiYsr",
+            "uri": "spotify:track:0cM4aOMBOmqoeESU0TiYsr",
+            "matchedTitle": "コットンキャンディえいえいおー！",
+            "matchedArtist": "黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731579abb7d9bcbd3b2b2573a1",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Ruby First Solo Concert Album ～RED GEM WINK～"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ホップ・ステップ・ワーイ！",
+            "versionLabel": "曜・善子・ルビィ Ver.with シナモン・マイメロディ・クロミ",
+            "versionCode": "ver-with",
+            "recordingId": "track-1empi6h__ver-with",
+            "displayTitle": "ホップ・ステップ・ワーイ！（曜・善子・ルビィ Ver.with シナモン・マイメロディ・クロミ）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7JUiDZLC4F4r90HUgebEKa",
+            "uri": "spotify:track:7JUiDZLC4F4r90HUgebEKa",
+            "matchedTitle": "ホップ・ステップ・ワーイ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": "曜・善子・ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-kav3wd__ver",
+            "displayTitle": "勇気はどこに？君の胸に！（曜・善子・ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

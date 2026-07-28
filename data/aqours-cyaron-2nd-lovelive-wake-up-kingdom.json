@@ -1,0 +1,982 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-cyaron-2nd-lovelive-wake-up-kingdom",
+  "title": "ラブライブ！サンシャイン!! CYaRon！2nd LoveLive! ～大革命☆Wake Up Kingdom～",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/uranohoshi/sp_unit2021_CYR.php",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/114",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-cyaron-2nd-lovelive-wake-up-kingdom-venue-156-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2021-10-16",
+      "venue": {
+        "name": "幕張メッセ 国際展示場",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ある日…永遠みたいに！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-31vp3h__original",
+            "displayTitle": "ある日…永遠みたいに！"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53OQOkjNZNYKn30Vk5nnej",
+            "uri": "spotify:track:53OQOkjNZNYKn30Vk5nnej",
+            "matchedTitle": "ある日…永遠みたいに！",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Braveheart Coaster",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "braveheart-coaster__original",
+            "displayTitle": "Braveheart Coaster"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0EjQmtuqAGbeudBxAaHhLb",
+            "uri": "spotify:track:0EjQmtuqAGbeudBxAaHhLb",
+            "matchedTitle": "Braveheart Coaster",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "“MY LIST” to you!",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "my-list-to-you__cyaron-ver",
+            "displayTitle": "“MY LIST” to you!（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6MArP7b6pxqCuEPSHZi9ss",
+            "uri": "spotify:track:6MArP7b6pxqCuEPSHZi9ss",
+            "matchedTitle": "“MY LIST” to you!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "aquarium__cyaron-ver",
+            "displayTitle": "恋になりたいAQUARIUM（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "海岸通りで待ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bqvjys__original",
+            "displayTitle": "海岸通りで待ってるよ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4nUNspP8lDRKp1txgKxOS0",
+            "uri": "spotify:track:4nUNspP8lDRKp1txgKxOS0",
+            "matchedTitle": "海岸通りで待ってるよ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夜空はなんでも知ってるの？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-gh7mtm__original",
+            "displayTitle": "夜空はなんでも知ってるの？"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3sgDrN11e5mbLaxNNvIx5S",
+            "uri": "spotify:track:3sgDrN11e5mbLaxNNvIx5S",
+            "matchedTitle": "夜空はなんでも知ってるの？",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コドク・テレポート",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-5cj4vc__original",
+            "displayTitle": "コドク・テレポート"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4WckH5fj1QrYKgHh11rLDr",
+            "uri": "spotify:track:4WckH5fj1QrYKgHh11rLDr",
+            "matchedTitle": "コドク・テレポート",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "track-isd6mr__cyaron-ver",
+            "displayTitle": "少女以上の恋がしたい（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hop? Stop? Nonstop!",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "hop-stop-nonstop__cyaron-ver",
+            "displayTitle": "Hop? Stop? Nonstop!（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4aI91AYZfMFs4cb8him5lI",
+            "uri": "spotify:track:4aI91AYZfMFs4cb8him5lI",
+            "matchedTitle": "Hop? Stop? Nonstop!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "元気全開DAY! DAY! DAY!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "day-day-day__original",
+            "displayTitle": "元気全開DAY! DAY! DAY!"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4JMTPNYt9yXcKFRZpKLosa",
+            "uri": "spotify:track:4JMTPNYt9yXcKFRZpKLosa",
+            "matchedTitle": "元気全開DAY! DAY! DAY!",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dance with Minotaurus",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "dance-with-minotaurus__cyaron-ver",
+            "displayTitle": "Dance with Minotaurus（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2SJof5oXvYslPiA8t4nieU",
+            "uri": "spotify:track:2SJof5oXvYslPiA8t4nieU",
+            "matchedTitle": "Dance with Minotaurus",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サクラバイバイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1e848a4__original",
+            "displayTitle": "サクラバイバイ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ezmLiyMmgCXTZdb1rmXiE",
+            "uri": "spotify:track:4ezmLiyMmgCXTZdb1rmXiE",
+            "matchedTitle": "サクラバイバイ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハミングフレンド",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "track-178rxqd__cyaron-ver",
+            "displayTitle": "ハミングフレンド（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53Y2srPImkFPXPhk1U25yy",
+            "uri": "spotify:track:53Y2srPImkFPXPhk1U25yy",
+            "matchedTitle": "ハミングフレンド",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Whistle of Revolution",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "whistle-of-revolution__original",
+            "displayTitle": "Whistle of Revolution"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3xEUr1YiCzuxSr06sG1OtJ",
+            "uri": "spotify:track:3xEUr1YiCzuxSr06sG1OtJ",
+            "matchedTitle": "Whistle of Revolution",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "track-4vd8hj__cyaron-ver",
+            "displayTitle": "スリリング・ワンウェイ（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "P.S.の向こう側",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "p-s__original",
+            "displayTitle": "P.S.の向こう側"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7ayhFVETwVEgwzwFvCfG9B",
+            "uri": "spotify:track:7ayhFVETwVEgwzwFvCfG9B",
+            "matchedTitle": "P.S.の向こう側",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "track-6xdb0g__cyaron-ver",
+            "displayTitle": "ユメ語るよりユメ歌おう（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ドラゴンライダーズ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bo2v0f__original",
+            "displayTitle": "ドラゴンライダーズ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0KoLl4GxY9STlvBXJfp6Kv",
+            "uri": "spotify:track:0KoLl4GxY9STlvBXJfp6Kv",
+            "matchedTitle": "ドラゴンライダーズ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MY舞☆TONIGHT",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "my-tonight__cyaron-ver",
+            "displayTitle": "MY舞☆TONIGHT（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ua9Y9QG4QjEMKTocsOTNK",
+            "uri": "spotify:track:1Ua9Y9QG4QjEMKTocsOTNK",
+            "matchedTitle": "MY舞☆TONIGHT",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "近未来ハッピーエンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1w0uptd__original",
+            "displayTitle": "近未来ハッピーエンド"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4jh3bzVyvZUQ3IjSzYwnN1",
+            "uri": "spotify:track:4jh3bzVyvZUQ3IjSzYwnN1",
+            "matchedTitle": "近未来ハッピーエンド",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-cyaron-2nd-lovelive-wake-up-kingdom-venue-156-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2021-10-17",
+      "venue": {
+        "name": "幕張メッセ 国際展示場",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ある日…永遠みたいに！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-31vp3h__original",
+            "displayTitle": "ある日…永遠みたいに！"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53OQOkjNZNYKn30Vk5nnej",
+            "uri": "spotify:track:53OQOkjNZNYKn30Vk5nnej",
+            "matchedTitle": "ある日…永遠みたいに！",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Braveheart Coaster",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "braveheart-coaster__original",
+            "displayTitle": "Braveheart Coaster"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0EjQmtuqAGbeudBxAaHhLb",
+            "uri": "spotify:track:0EjQmtuqAGbeudBxAaHhLb",
+            "matchedTitle": "Braveheart Coaster",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "“MY LIST” to you!",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "my-list-to-you__cyaron-ver",
+            "displayTitle": "“MY LIST” to you!（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6MArP7b6pxqCuEPSHZi9ss",
+            "uri": "spotify:track:6MArP7b6pxqCuEPSHZi9ss",
+            "matchedTitle": "“MY LIST” to you!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "aquarium__cyaron-ver",
+            "displayTitle": "恋になりたいAQUARIUM（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "海岸通りで待ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bqvjys__original",
+            "displayTitle": "海岸通りで待ってるよ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4nUNspP8lDRKp1txgKxOS0",
+            "uri": "spotify:track:4nUNspP8lDRKp1txgKxOS0",
+            "matchedTitle": "海岸通りで待ってるよ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夜空はなんでも知ってるの？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-gh7mtm__original",
+            "displayTitle": "夜空はなんでも知ってるの？"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3sgDrN11e5mbLaxNNvIx5S",
+            "uri": "spotify:track:3sgDrN11e5mbLaxNNvIx5S",
+            "matchedTitle": "夜空はなんでも知ってるの？",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "CHANGELESS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "changeless__original",
+            "displayTitle": "CHANGELESS"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i41BlmKkaoh5pqyhzVRJv",
+            "uri": "spotify:track:4i41BlmKkaoh5pqyhzVRJv",
+            "matchedTitle": "CHANGELESS",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "track-isd6mr__cyaron-ver",
+            "displayTitle": "少女以上の恋がしたい（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hop? Stop? Nonstop!",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "hop-stop-nonstop__cyaron-ver",
+            "displayTitle": "Hop? Stop? Nonstop!（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4aI91AYZfMFs4cb8him5lI",
+            "uri": "spotify:track:4aI91AYZfMFs4cb8him5lI",
+            "matchedTitle": "Hop? Stop? Nonstop!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "元気全開DAY! DAY! DAY!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "day-day-day__original",
+            "displayTitle": "元気全開DAY! DAY! DAY!"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4JMTPNYt9yXcKFRZpKLosa",
+            "uri": "spotify:track:4JMTPNYt9yXcKFRZpKLosa",
+            "matchedTitle": "元気全開DAY! DAY! DAY!",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dance with Minotaurus",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "dance-with-minotaurus__cyaron-ver",
+            "displayTitle": "Dance with Minotaurus（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2SJof5oXvYslPiA8t4nieU",
+            "uri": "spotify:track:2SJof5oXvYslPiA8t4nieU",
+            "matchedTitle": "Dance with Minotaurus",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サクラバイバイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1e848a4__original",
+            "displayTitle": "サクラバイバイ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ezmLiyMmgCXTZdb1rmXiE",
+            "uri": "spotify:track:4ezmLiyMmgCXTZdb1rmXiE",
+            "matchedTitle": "サクラバイバイ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハミングフレンド",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "track-178rxqd__cyaron-ver",
+            "displayTitle": "ハミングフレンド（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53Y2srPImkFPXPhk1U25yy",
+            "uri": "spotify:track:53Y2srPImkFPXPhk1U25yy",
+            "matchedTitle": "ハミングフレンド",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Whistle of Revolution",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "whistle-of-revolution__original",
+            "displayTitle": "Whistle of Revolution"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3xEUr1YiCzuxSr06sG1OtJ",
+            "uri": "spotify:track:3xEUr1YiCzuxSr06sG1OtJ",
+            "matchedTitle": "Whistle of Revolution",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "track-4vd8hj__cyaron-ver",
+            "displayTitle": "スリリング・ワンウェイ（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "P.S.の向こう側",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "p-s__original",
+            "displayTitle": "P.S.の向こう側"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7ayhFVETwVEgwzwFvCfG9B",
+            "uri": "spotify:track:7ayhFVETwVEgwzwFvCfG9B",
+            "matchedTitle": "P.S.の向こう側",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "track-kav3wd__cyaron-ver",
+            "displayTitle": "勇気はどこに？君の胸に！（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ドラゴンライダーズ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bo2v0f__original",
+            "displayTitle": "ドラゴンライダーズ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0KoLl4GxY9STlvBXJfp6Kv",
+            "uri": "spotify:track:0KoLl4GxY9STlvBXJfp6Kv",
+            "matchedTitle": "ドラゴンライダーズ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MY舞☆TONIGHT",
+            "versionLabel": "CYaRon！ Ver.",
+            "versionCode": "cyaron-ver",
+            "recordingId": "my-tonight__cyaron-ver",
+            "displayTitle": "MY舞☆TONIGHT（CYaRon！ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ua9Y9QG4QjEMKTocsOTNK",
+            "uri": "spotify:track:1Ua9Y9QG4QjEMKTocsOTNK",
+            "matchedTitle": "MY舞☆TONIGHT",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "近未来ハッピーエンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1w0uptd__original",
+            "displayTitle": "近未来ハッピーエンド"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4jh3bzVyvZUQ3IjSzYwnN1",
+            "uri": "spotify:track:4jh3bzVyvZUQ3IjSzYwnN1",
+            "matchedTitle": "近未来ハッピーエンド",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

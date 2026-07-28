@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-2018",
+  "title": "音楽の日2018",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.tbs.co.jp/ongakunohi/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/51",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-2018-venue-77-performance-133",
+      "label": "第二部",
+      "day": null,
+      "session": null,
+      "date": "2018-07-14",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -7,10 +7,31 @@
   const STORAGE_KEY = "setlist_admin_database_v03";
   const SELECTED_KEY = "setlist_admin_selected_event_v03";
   const CONFIRMED_SPOTIFY_KEY = "setlist_confirmed_spotify_mappings_v01";
+  const SERIES_DISPLAY_NAMES = {
+    muse: "μ's",
+    aqours: "Aqours",
+    nijigasaki: "虹ヶ咲学園スクールアイドル同好会",
+    liella: "Liella!",
+    "school-idol-musical": "スクールアイドルミュージカル",
+    hasunosora: "蓮ノ空女学院スクールアイドルクラブ",
+    yohane: "幻日のヨハネ",
+    ikizulive: "イキヅライブ！"
+  };
+  const SERIES_DISPLAY_ORDER = [
+    "muse",
+    "aqours",
+    "nijigasaki",
+    "liella",
+    "school-idol-musical",
+    "hasunosora",
+    "yohane",
+    "ikizulive"
+  ];
 
   const state = {
     database: { schemaVersion: "0.3", events: [] },
     selectedEventId: null,
+    expandedEventSeries: new Set(),
     editingPerformanceIndex: null,
     draftSetlist: [],
     importDraft: null,
@@ -441,24 +462,87 @@
     updateGitHubPublishUi();
   }
 
+  function eventSeriesKey(event) {
+    return String(event.series?.[0] || "").trim() || "__unknown__";
+  }
+
+  function eventSeriesLabel(key) {
+    if (key === "__unknown__") return "シリーズ未設定";
+    return SERIES_DISPLAY_NAMES[key] || key;
+  }
+
+  function groupedEventsBySeries() {
+    const groups = new Map();
+    for (const event of state.database.events) {
+      const key = eventSeriesKey(event);
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(event);
+    }
+    return [...groups.entries()]
+      .map(([key, events]) => ({ key, label: eventSeriesLabel(key), events }))
+      .sort((left, right) => {
+        const leftOrder = SERIES_DISPLAY_ORDER.indexOf(left.key);
+        const rightOrder = SERIES_DISPLAY_ORDER.indexOf(right.key);
+        const leftRank = leftOrder >= 0 ? leftOrder : Number.MAX_SAFE_INTEGER;
+        const rightRank = rightOrder >= 0 ? rightOrder : Number.MAX_SAFE_INTEGER;
+        if (leftRank !== rightRank) return leftRank - rightRank;
+        if (left.key === "__unknown__") return 1;
+        if (right.key === "__unknown__") return -1;
+        return left.label.localeCompare(right.label, "ja");
+      });
+  }
+
   function renderEventList() {
     elements.eventList.replaceChildren();
-    for (const event of state.database.events) {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = `event-item${event.id === state.selectedEventId ? " active" : ""}`;
-      const count = event.performances.length;
-      button.innerHTML = `
-        <span class="event-item-title">${escapeHtml(event.title)}</span>
-        <span class="event-item-meta">${escapeHtml(event.id)} / ${count}公演</span>
-      `;
-      button.addEventListener("click", () => {
-        readEventFormIntoState(false);
-        state.selectedEventId = event.id;
-        localStorage.setItem(SELECTED_KEY, event.id);
-        render();
+    for (const group of groupedEventsBySeries()) {
+      const details = document.createElement("details");
+      details.className = "event-series-group";
+      details.dataset.series = group.key;
+      const containsSelected = group.events.some(
+        (event) => event.id === state.selectedEventId
+      );
+      details.open = containsSelected || state.expandedEventSeries.has(group.key);
+
+      const summary = document.createElement("summary");
+      summary.className = "event-series-summary";
+      const label = document.createElement("span");
+      label.className = "event-series-label";
+      label.textContent = group.label;
+      const count = document.createElement("span");
+      count.className = "event-series-count";
+      count.textContent = `${group.events.length}イベント`;
+      summary.append(label, count);
+      details.append(summary);
+
+      const eventItems = document.createElement("div");
+      eventItems.className = "event-series-items";
+      for (const event of group.events) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `event-item${event.id === state.selectedEventId ? " active" : ""}`;
+        const performanceCount = event.performances.length;
+        button.innerHTML = `
+          <span class="event-item-title">${escapeHtml(event.title)}</span>
+          <span class="event-item-meta">${escapeHtml(event.id)} / ${performanceCount}公演</span>
+        `;
+        button.addEventListener("click", () => {
+          readEventFormIntoState(false);
+          state.selectedEventId = event.id;
+          state.expandedEventSeries.add(group.key);
+          localStorage.setItem(SELECTED_KEY, event.id);
+          render();
+        });
+        eventItems.append(button);
+      }
+      details.append(eventItems);
+      details.addEventListener("toggle", () => {
+        if (details.open) {
+          state.expandedEventSeries.add(group.key);
+        } else {
+          state.expandedEventSeries.delete(group.key);
+        }
       });
-      elements.eventList.append(button);
+      elements.eventList.append(details);
     }
   }
 

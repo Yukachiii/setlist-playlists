@@ -1,0 +1,966 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-2023",
+  "title": "ラブライブ！サンシャイン!! 沼津地元愛まつり 2023",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/uranohoshi/live/live_detail.php?p=jimoai2023",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/160",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-2023-venue-237-day-1",
+      "label": "Day.1＜昼公演＞",
+      "day": 1,
+      "session": null,
+      "date": "2023-10-07",
+      "venue": {
+        "name": "キラメッセぬまづ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": "ショートVer.・高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver-ver",
+            "recordingId": "jimo-ai-dash__ver-ver",
+            "displayTitle": "JIMO-AI Dash!（ショートVer.・高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wake up, Challenger!!",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "wake-up-challenger__ver",
+            "displayTitle": "Wake up, Challenger!!（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GfFYvhd9zKQ79EZLVakoN",
+            "uri": "spotify:track:2GfFYvhd9zKQ79EZLVakoN",
+            "matchedTitle": "Wake up, Challenger!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢で夜空を照らしたい",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-863ixg__ver",
+            "displayTitle": "夢で夜空を照らしたい（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3xJ1FfUedYEcUrUqwLCCzO",
+            "uri": "spotify:track:3xJ1FfUedYEcUrUqwLCCzO",
+            "matchedTitle": "夢で夜空を照らしたい",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WATER BLUE NEW WORLD",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "water-blue-new-world__ver",
+            "displayTitle": "WATER BLUE NEW WORLD（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "59xCavGEluLVjluGIvLD6K",
+            "uri": "spotify:track:59xCavGEluLVjluGIvLD6K",
+            "matchedTitle": "WATER BLUE NEW WORLD",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未熟DREAMER",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "dreamer__ver",
+            "displayTitle": "未熟DREAMER（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hem8VNEcdYanHQ1fgSCNl",
+            "uri": "spotify:track:0hem8VNEcdYanHQ1fgSCNl",
+            "matchedTitle": "未熟DREAMER",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SORA, FUJI, SUNSHINE!",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sora-fuji-sunshine__ver",
+            "displayTitle": "SORA, FUJI, SUNSHINE!（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LOdMCmVshMmLqk2Z04eS1",
+            "uri": "spotify:track:5LOdMCmVshMmLqk2Z04eS1",
+            "matchedTitle": "SORA, FUJI, SUNSHINE!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2023-venue-237-day-1-2",
+      "label": "Day.1＜夜公演＞",
+      "day": 1,
+      "session": null,
+      "date": "2023-10-07",
+      "venue": {
+        "name": "キラメッセぬまづ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": "ショートVer.・高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver-ver",
+            "recordingId": "jimo-ai-dash__ver-ver",
+            "displayTitle": "JIMO-AI Dash!（ショートVer.・高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Future flight",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "future-flight__ver",
+            "displayTitle": "Future flight（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qTVI8GQJeg1FpSFyvgBvS",
+            "uri": "spotify:track:0qTVI8GQJeg1FpSFyvgBvS",
+            "matchedTitle": "Future flight",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢で夜空を照らしたい",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-863ixg__ver",
+            "displayTitle": "夢で夜空を照らしたい（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3xJ1FfUedYEcUrUqwLCCzO",
+            "uri": "spotify:track:3xJ1FfUedYEcUrUqwLCCzO",
+            "matchedTitle": "夢で夜空を照らしたい",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WATER BLUE NEW WORLD",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "water-blue-new-world__ver",
+            "displayTitle": "WATER BLUE NEW WORLD（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "59xCavGEluLVjluGIvLD6K",
+            "uri": "spotify:track:59xCavGEluLVjluGIvLD6K",
+            "matchedTitle": "WATER BLUE NEW WORLD",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未熟DREAMER",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "dreamer__ver",
+            "displayTitle": "未熟DREAMER（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hem8VNEcdYanHQ1fgSCNl",
+            "uri": "spotify:track:0hem8VNEcdYanHQ1fgSCNl",
+            "matchedTitle": "未熟DREAMER",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SORA, FUJI, SUNSHINE!",
+            "versionLabel": "高海千歌、国木田花丸、小原鞠莉 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sora-fuji-sunshine__ver",
+            "displayTitle": "SORA, FUJI, SUNSHINE!（高海千歌、国木田花丸、小原鞠莉 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LOdMCmVshMmLqk2Z04eS1",
+            "uri": "spotify:track:5LOdMCmVshMmLqk2Z04eS1",
+            "matchedTitle": "SORA, FUJI, SUNSHINE!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2023-venue-237-day-2",
+      "label": "Day.2＜昼公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2023-10-08",
+      "venue": {
+        "name": "キラメッセぬまづ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": "ショートVer.・松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver-ver",
+            "recordingId": "jimo-ai-dash__ver-ver",
+            "displayTitle": "JIMO-AI Dash!（ショートVer.・松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "banzai-digital-trippers__ver",
+            "displayTitle": "BANZAI! digital trippers（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "届かない星だとしても",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1dd342i__ver",
+            "displayTitle": "届かない星だとしても（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1MdblXroXOmQ5MgCHG05SO",
+            "uri": "spotify:track:1MdblXroXOmQ5MgCHG05SO",
+            "matchedTitle": "届かない星だとしても",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "aquarium__ver",
+            "displayTitle": "恋になりたいAQUARIUM（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "happy-party-train__ver",
+            "displayTitle": "HAPPY PARTY TRAIN（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SORA, FUJI, SUNSHINE!",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sora-fuji-sunshine__ver",
+            "displayTitle": "SORA, FUJI, SUNSHINE!（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LOdMCmVshMmLqk2Z04eS1",
+            "uri": "spotify:track:5LOdMCmVshMmLqk2Z04eS1",
+            "matchedTitle": "SORA, FUJI, SUNSHINE!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2023-venue-237-day-2-2",
+      "label": "Day.2＜夜公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2023-10-08",
+      "venue": {
+        "name": "キラメッセぬまづ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": "ショートVer.・松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver-ver",
+            "recordingId": "jimo-ai-dash__ver-ver",
+            "displayTitle": "JIMO-AI Dash!（ショートVer.・松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "banzai-digital-trippers__ver",
+            "displayTitle": "BANZAI! digital trippers（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dance with Minotaurus",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "dance-with-minotaurus__ver",
+            "displayTitle": "Dance with Minotaurus（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2SJof5oXvYslPiA8t4nieU",
+            "uri": "spotify:track:2SJof5oXvYslPiA8t4nieU",
+            "matchedTitle": "Dance with Minotaurus",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "aquarium__ver",
+            "displayTitle": "恋になりたいAQUARIUM（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "happy-party-train__ver",
+            "displayTitle": "HAPPY PARTY TRAIN（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SORA, FUJI, SUNSHINE!",
+            "versionLabel": "松浦果南、黒澤ダイヤ、渡辺 曜 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sora-fuji-sunshine__ver",
+            "displayTitle": "SORA, FUJI, SUNSHINE!（松浦果南、黒澤ダイヤ、渡辺 曜 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LOdMCmVshMmLqk2Z04eS1",
+            "uri": "spotify:track:5LOdMCmVshMmLqk2Z04eS1",
+            "matchedTitle": "SORA, FUJI, SUNSHINE!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2023-venue-237-day-3",
+      "label": "Day.3＜昼公演＞",
+      "day": 3,
+      "session": null,
+      "date": "2023-10-09",
+      "venue": {
+        "name": "キラメッセぬまづ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": "ショートVer.・桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver-ver",
+            "recordingId": "jimo-ai-dash__ver-ver",
+            "displayTitle": "JIMO-AI Dash!（ショートVer.・桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KU-RU-KU-RU Cruller!",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "ku-ru-ku-ru-cruller__ver",
+            "displayTitle": "KU-RU-KU-RU Cruller!（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5O2cVcJPeMUNFERDQQudl5",
+            "uri": "spotify:track:5O2cVcJPeMUNFERDQQudl5",
+            "matchedTitle": "KU-RU-KU-RU Cruller!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "jumping-heart__ver",
+            "displayTitle": "青空Jumping Heart（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-4vd8hj__ver",
+            "displayTitle": "スリリング・ワンウェイ（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUKI for you, DREAM for you!",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "suki-for-you-dream-for-you__ver",
+            "displayTitle": "SUKI for you, DREAM for you!（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0HkaXrjmAI9KYJbZhmdTyI",
+            "uri": "spotify:track:0HkaXrjmAI9KYJbZhmdTyI",
+            "matchedTitle": "SUKI for you, DREAM for you!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SORA, FUJI, SUNSHINE!",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "sora-fuji-sunshine__ver",
+            "displayTitle": "SORA, FUJI, SUNSHINE!（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LOdMCmVshMmLqk2Z04eS1",
+            "uri": "spotify:track:5LOdMCmVshMmLqk2Z04eS1",
+            "matchedTitle": "SORA, FUJI, SUNSHINE!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2023-venue-237-day-3-2",
+      "label": "Day.3＜夜公演＞",
+      "day": 3,
+      "session": null,
+      "date": "2023-10-09",
+      "venue": {
+        "name": "キラメッセぬまづ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": "ショートVer.・桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver-ver",
+            "recordingId": "jimo-ai-dash__ver-ver",
+            "displayTitle": "JIMO-AI Dash!（ショートVer.・桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KU-RU-KU-RU Cruller!",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "ku-ru-ku-ru-cruller__ver",
+            "displayTitle": "KU-RU-KU-RU Cruller!（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5O2cVcJPeMUNFERDQQudl5",
+            "uri": "spotify:track:5O2cVcJPeMUNFERDQQudl5",
+            "matchedTitle": "KU-RU-KU-RU Cruller!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "jumping-heart__ver",
+            "displayTitle": "青空Jumping Heart（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-4vd8hj__ver",
+            "displayTitle": "スリリング・ワンウェイ（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump up HIGH!!",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "jump-up-high__ver",
+            "displayTitle": "Jump up HIGH!!（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2PrZgpQvYaB0NlQdnIQg3B",
+            "uri": "spotify:track:2PrZgpQvYaB0NlQdnIQg3B",
+            "matchedTitle": "Jump up HIGH!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SORA, FUJI, SUNSHINE!",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "sora-fuji-sunshine__ver",
+            "displayTitle": "SORA, FUJI, SUNSHINE!（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LOdMCmVshMmLqk2Z04eS1",
+            "uri": "spotify:track:5LOdMCmVshMmLqk2Z04eS1",
+            "matchedTitle": "SORA, FUJI, SUNSHINE!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

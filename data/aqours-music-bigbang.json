@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-music-bigbang",
+  "title": "異次元フェス開催記念音楽番組　MUSIC BIGBANG！",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://ijigen-fes.jp/utagassen/special.php#special",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/196",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-music-bigbang-venue-281-performance-466",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-12-08",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Strawberry Trapper",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "strawberry-trapper__original",
+            "displayTitle": "Strawberry Trapper"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ApmNv5aFTqOmRAvbyBAqe",
+            "uri": "spotify:track:4ApmNv5aFTqOmRAvbyBAqe",
+            "matchedTitle": "Strawberry Trapper",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "異次元★♥BIGBANG",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "bigbang__original",
+            "displayTitle": "異次元★♥BIGBANG"
+          },
+          "artistHint": "島村卯月 (CV: 大橋彩香), 最上静香 (CV.田所あずさ), 月岡恋鐘 (CV.礒部花凜), 高海千歌 (CV.伊波杏樹), 上原歩夢 (CV.大西亜玖璃), 澁谷かのん (CV.伊達さゆり), 日野下花帆 (CV.楡井希実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3QRii5A35ZfsGGiPrv9k0j",
+            "uri": "spotify:track:3QRii5A35ZfsGGiPrv9k0j",
+            "matchedTitle": "異次元★♥BIGBANG",
+            "matchedArtist": "島村卯月 (CV: 大橋彩香), 最上静香 (CV.田所あずさ), 月岡恋鐘 (CV.礒部花凜), 高海千歌 (CV.伊波杏樹), 上原歩夢 (CV.大西亜玖璃), 澁谷かのん (CV.伊達さゆり), 日野下花帆 (CV.楡井希実)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273277aa9d8256f9d4bc82f13e5",
+            "albumName": "異次元★♥BIGBANG"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

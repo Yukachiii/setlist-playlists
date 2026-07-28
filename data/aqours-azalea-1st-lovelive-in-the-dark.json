@@ -1,0 +1,936 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-azalea-1st-lovelive-in-the-dark",
+  "title": "ラブライブ！サンシャイン!! AZALEA 1st LoveLive! ～In The Dark /*秘密の物語*/～",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/uranohoshi/sp_unit2021_AZ.php",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/109",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-azalea-1st-lovelive-in-the-dark-sendai-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2021-08-14",
+      "venue": {
+        "name": "ゼビオアリーナ仙台",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "We'll get the next dream!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "we-ll-get-the-next-dream__original",
+            "displayTitle": "We'll get the next dream!!!"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4UmbOSnQBPoSIuzgLLtEf2",
+            "uri": "spotify:track:4UmbOSnQBPoSIuzgLLtEf2",
+            "matchedTitle": "We'll get the next dream!!!",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "PHOENIX DANCE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "phoenix-dance__original",
+            "displayTitle": "PHOENIX DANCE"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0p1glXuGHUuUOJlv7eaTgX",
+            "uri": "spotify:track:0p1glXuGHUuUOJlv7eaTgX",
+            "matchedTitle": "PHOENIX DANCE",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "INNOCENT BIRD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "innocent-bird__original",
+            "displayTitle": "INNOCENT BIRD"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6YjgfCMX6uCQzatrNSKU96",
+            "uri": "spotify:track:6YjgfCMX6uCQzatrNSKU96",
+            "matchedTitle": "INNOCENT BIRD",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump up HIGH!!",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "jump-up-high__azalea-ver",
+            "displayTitle": "Jump up HIGH!!（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2PrZgpQvYaB0NlQdnIQg3B",
+            "uri": "spotify:track:2PrZgpQvYaB0NlQdnIQg3B",
+            "matchedTitle": "Jump up HIGH!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "sky-journey__azalea-ver",
+            "displayTitle": "SKY JOURNEY（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "メイズセカイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1uckco0__original",
+            "displayTitle": "メイズセカイ"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3zrijt1FJCKJLpWekzHu04",
+            "uri": "spotify:track:3zrijt1FJCKJLpWekzHu04",
+            "matchedTitle": "メイズセカイ",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Perfect SEKAI",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "perfect-sekai__original",
+            "displayTitle": "Perfect SEKAI"
+          },
+          "artistHint": "黒澤ダイヤ (CV.小宮有紗)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ADgibud69N6rcuUoOAbDi",
+            "uri": "spotify:track:5ADgibud69N6rcuUoOAbDi",
+            "matchedTitle": "Perfect SEKAI",
+            "matchedArtist": "黒澤ダイヤ (CV.小宮有紗)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27330af872910c860a39e0eb40a",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Dia First Solo Concert Album ～WHITE FIRST LOVE～"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "もっとね！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ntsqfc__original",
+            "displayTitle": "もっとね！"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BlWalcsN0EZURFcgaBisH",
+            "uri": "spotify:track:6BlWalcsN0EZURFcgaBisH",
+            "matchedTitle": "もっとね！",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27393d3212b7e9ee6c65f717c51",
+            "albumName": "LoveLive! Sunshine!! Matsuura Kanan First Solo Concert Album ～さかなかなんだか？～"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "“MY LIST” to you!",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "my-list-to-you__azalea-ver",
+            "displayTitle": "“MY LIST” to you!（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6MArP7b6pxqCuEPSHZi9ss",
+            "uri": "spotify:track:6MArP7b6pxqCuEPSHZi9ss",
+            "matchedTitle": "“MY LIST” to you!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Landing action Yeah!!",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "landing-action-yeah__azalea-ver",
+            "displayTitle": "Landing action Yeah!!（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4b01pqHPIyNnv5ElCQmJA8",
+            "uri": "spotify:track:4b01pqHPIyNnv5ElCQmJA8",
+            "matchedTitle": "Landing action Yeah!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GALAXY HidE and SeeK",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "galaxy-hide-and-seek__original",
+            "displayTitle": "GALAXY HidE and SeeK"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0nPaqGTjGQ5sqy5rmIzi7m",
+            "uri": "spotify:track:0nPaqGTjGQ5sqy5rmIzi7m",
+            "matchedTitle": "GALAXY HidE and SeeK",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "メタモルフィズム",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-9hgk58__original",
+            "displayTitle": "メタモルフィズム"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Xn2aGKsD34QgYyzTWvAoz",
+            "uri": "spotify:track:4Xn2aGKsD34QgYyzTWvAoz",
+            "matchedTitle": "メタモルフィズム",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "待ってて愛のうた",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "track-6rp6w7__azalea-ver",
+            "displayTitle": "待ってて愛のうた（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6lEkteeFrvHGcv7BR3wEQS",
+            "uri": "spotify:track:6lEkteeFrvHGcv7BR3wEQS",
+            "matchedTitle": "待ってて愛のうた",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ときめき分類学",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-sg1tjq__original",
+            "displayTitle": "ときめき分類学"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6jcPV2hsKQkzryNMPu59bS",
+            "uri": "spotify:track:6jcPV2hsKQkzryNMPu59bS",
+            "matchedTitle": "ときめき分類学",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "空中恋愛論",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10o1u0o__original",
+            "displayTitle": "空中恋愛論"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Oxq8juDLCMeYIwQq0xdvl",
+            "uri": "spotify:track:4Oxq8juDLCMeYIwQq0xdvl",
+            "matchedTitle": "空中恋愛論",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "卒業ですね",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-zd61ar__original",
+            "displayTitle": "卒業ですね"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6L0TMbwMewGl8eWJUykeLa",
+            "uri": "spotify:track:6L0TMbwMewGl8eWJUykeLa",
+            "matchedTitle": "卒業ですね",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "トリコリコPLEASE!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "please__original",
+            "displayTitle": "トリコリコPLEASE!!"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7dwf6EsZwcWwEVZwv31P4N",
+            "uri": "spotify:track:7dwf6EsZwcWwEVZwv31P4N",
+            "matchedTitle": "トリコリコPLEASE!!",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LONELY TUNING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "lonely-tuning__original",
+            "displayTitle": "LONELY TUNING"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4rt3mhcI5Kz3E7AtwS4ycq",
+            "uri": "spotify:track:4rt3mhcI5Kz3E7AtwS4ycq",
+            "matchedTitle": "LONELY TUNING",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Amazing Travel DNA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "amazing-travel-dna__original",
+            "displayTitle": "Amazing Travel DNA"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1bClVmpqDfjbsvDNFwNvZO",
+            "uri": "spotify:track:1bClVmpqDfjbsvDNFwNvZO",
+            "matchedTitle": "Amazing Travel DNA",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-azalea-1st-lovelive-in-the-dark-sendai-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2021-08-15",
+      "venue": {
+        "name": "ゼビオアリーナ仙台",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "We'll get the next dream!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "we-ll-get-the-next-dream__original",
+            "displayTitle": "We'll get the next dream!!!"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4UmbOSnQBPoSIuzgLLtEf2",
+            "uri": "spotify:track:4UmbOSnQBPoSIuzgLLtEf2",
+            "matchedTitle": "We'll get the next dream!!!",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "PHOENIX DANCE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "phoenix-dance__original",
+            "displayTitle": "PHOENIX DANCE"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0p1glXuGHUuUOJlv7eaTgX",
+            "uri": "spotify:track:0p1glXuGHUuUOJlv7eaTgX",
+            "matchedTitle": "PHOENIX DANCE",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "INNOCENT BIRD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "innocent-bird__original",
+            "displayTitle": "INNOCENT BIRD"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6YjgfCMX6uCQzatrNSKU96",
+            "uri": "spotify:track:6YjgfCMX6uCQzatrNSKU96",
+            "matchedTitle": "INNOCENT BIRD",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump up HIGH!!",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "jump-up-high__azalea-ver",
+            "displayTitle": "Jump up HIGH!!（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2PrZgpQvYaB0NlQdnIQg3B",
+            "uri": "spotify:track:2PrZgpQvYaB0NlQdnIQg3B",
+            "matchedTitle": "Jump up HIGH!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "sky-journey__azalea-ver",
+            "displayTitle": "SKY JOURNEY（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "メイズセカイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1uckco0__original",
+            "displayTitle": "メイズセカイ"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3zrijt1FJCKJLpWekzHu04",
+            "uri": "spotify:track:3zrijt1FJCKJLpWekzHu04",
+            "matchedTitle": "メイズセカイ",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Perfect SEKAI",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "perfect-sekai__original",
+            "displayTitle": "Perfect SEKAI"
+          },
+          "artistHint": "黒澤ダイヤ (CV.小宮有紗)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ADgibud69N6rcuUoOAbDi",
+            "uri": "spotify:track:5ADgibud69N6rcuUoOAbDi",
+            "matchedTitle": "Perfect SEKAI",
+            "matchedArtist": "黒澤ダイヤ (CV.小宮有紗)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27330af872910c860a39e0eb40a",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Dia First Solo Concert Album ～WHITE FIRST LOVE～"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "もっとね！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ntsqfc__original",
+            "displayTitle": "もっとね！"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BlWalcsN0EZURFcgaBisH",
+            "uri": "spotify:track:6BlWalcsN0EZURFcgaBisH",
+            "matchedTitle": "もっとね！",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27393d3212b7e9ee6c65f717c51",
+            "albumName": "LoveLive! Sunshine!! Matsuura Kanan First Solo Concert Album ～さかなかなんだか？～"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "“MY LIST” to you!",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "my-list-to-you__azalea-ver",
+            "displayTitle": "“MY LIST” to you!（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6MArP7b6pxqCuEPSHZi9ss",
+            "uri": "spotify:track:6MArP7b6pxqCuEPSHZi9ss",
+            "matchedTitle": "“MY LIST” to you!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ホップ・ステップ・ワーイ！",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "track-1empi6h__azalea-ver",
+            "displayTitle": "ホップ・ステップ・ワーイ！（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7JUiDZLC4F4r90HUgebEKa",
+            "uri": "spotify:track:7JUiDZLC4F4r90HUgebEKa",
+            "matchedTitle": "ホップ・ステップ・ワーイ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GALAXY HidE and SeeK",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "galaxy-hide-and-seek__original",
+            "displayTitle": "GALAXY HidE and SeeK"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0nPaqGTjGQ5sqy5rmIzi7m",
+            "uri": "spotify:track:0nPaqGTjGQ5sqy5rmIzi7m",
+            "matchedTitle": "GALAXY HidE and SeeK",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "メタモルフィズム",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-9hgk58__original",
+            "displayTitle": "メタモルフィズム"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Xn2aGKsD34QgYyzTWvAoz",
+            "uri": "spotify:track:4Xn2aGKsD34QgYyzTWvAoz",
+            "matchedTitle": "メタモルフィズム",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "待ってて愛のうた",
+            "versionLabel": "AZALEA Ver.",
+            "versionCode": "azalea-ver",
+            "recordingId": "track-6rp6w7__azalea-ver",
+            "displayTitle": "待ってて愛のうた（AZALEA Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6lEkteeFrvHGcv7BR3wEQS",
+            "uri": "spotify:track:6lEkteeFrvHGcv7BR3wEQS",
+            "matchedTitle": "待ってて愛のうた",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ときめき分類学",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-sg1tjq__original",
+            "displayTitle": "ときめき分類学"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6jcPV2hsKQkzryNMPu59bS",
+            "uri": "spotify:track:6jcPV2hsKQkzryNMPu59bS",
+            "matchedTitle": "ときめき分類学",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "空中恋愛論",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10o1u0o__original",
+            "displayTitle": "空中恋愛論"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Oxq8juDLCMeYIwQq0xdvl",
+            "uri": "spotify:track:4Oxq8juDLCMeYIwQq0xdvl",
+            "matchedTitle": "空中恋愛論",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "卒業ですね",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-zd61ar__original",
+            "displayTitle": "卒業ですね"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6L0TMbwMewGl8eWJUykeLa",
+            "uri": "spotify:track:6L0TMbwMewGl8eWJUykeLa",
+            "matchedTitle": "卒業ですね",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "トリコリコPLEASE!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "please__original",
+            "displayTitle": "トリコリコPLEASE!!"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7dwf6EsZwcWwEVZwv31P4N",
+            "uri": "spotify:track:7dwf6EsZwcWwEVZwv31P4N",
+            "matchedTitle": "トリコリコPLEASE!!",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LONELY TUNING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "lonely-tuning__original",
+            "displayTitle": "LONELY TUNING"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4rt3mhcI5Kz3E7AtwS4ycq",
+            "uri": "spotify:track:4rt3mhcI5Kz3E7AtwS4ycq",
+            "matchedTitle": "LONELY TUNING",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Amazing Travel DNA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "amazing-travel-dna__original",
+            "displayTitle": "Amazing Travel DNA"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1bClVmpqDfjbsvDNFwNvZO",
+            "uri": "spotify:track:1bClVmpqDfjbsvDNFwNvZO",
+            "matchedTitle": "Amazing Travel DNA",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

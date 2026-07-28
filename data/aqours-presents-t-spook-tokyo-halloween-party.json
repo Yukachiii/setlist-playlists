@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-presents-t-spook-tokyo-halloween-party",
+  "title": "めざましテレビ PRESENTS T-SPOOK 〜TOKYO HALLOWEEN PARTY〜",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://otn.fujitv.co.jp/b_hp/915200204.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/12",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-presents-t-spook-tokyo-halloween-party-p-performance-19",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2017-10-21",
+      "venue": {
+        "name": "青海P地区 特設ステージ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kvufm__original",
+            "displayTitle": "未来の僕らは知ってるよ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Warrior",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-warrior__original",
+            "displayTitle": "Daydream Warrior"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hjoFJtQBfrtbvih5PBOrX",
+            "uri": "spotify:track:6hjoFJtQBfrtbvih5PBOrX",
+            "matchedTitle": "Daydream Warrior",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "届かない星だとしても",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1dd342i__original",
+            "displayTitle": "届かない星だとしても"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1MdblXroXOmQ5MgCHG05SO",
+            "uri": "spotify:track:1MdblXroXOmQ5MgCHG05SO",
+            "matchedTitle": "届かない星だとしても",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

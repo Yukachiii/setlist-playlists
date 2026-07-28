@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-japan-weekend-madrid-2024",
+  "title": "Japan Weekend Madrid（2024年開催）",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.japanweekend.com/madrid/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/226",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-japan-weekend-madrid-2024-ifema-madrid-performance-553",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2024-09-21",
+      "venue": {
+        "name": "IFEMA MADRID",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "jumping-heart__ver",
+            "displayTitle": "青空Jumping Heart（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aqours Pirates Desire",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "aqours-pirates-desire__ver",
+            "displayTitle": "Aqours Pirates Desire（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4SRKvJBjgVRg1QyAOdc9ZB",
+            "uri": "spotify:track:4SRKvJBjgVRg1QyAOdc9ZB",
+            "matchedTitle": "Aqours Pirates Desire",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-4vd8hj__ver",
+            "displayTitle": "スリリング・ワンウェイ（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "jimo-ai-dash__ver",
+            "displayTitle": "JIMO-AI Dash!（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コットンキャンディえいえいおー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-7urnma__original",
+            "displayTitle": "コットンキャンディえいえいおー！"
+          },
+          "artistHint": "黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0cM4aOMBOmqoeESU0TiYsr",
+            "uri": "spotify:track:0cM4aOMBOmqoeESU0TiYsr",
+            "matchedTitle": "コットンキャンディえいえいおー！",
+            "matchedArtist": "黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731579abb7d9bcbd3b2b2573a1",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Ruby First Solo Concert Album ～RED GEM WINK～"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未熟DREAMER",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "dreamer__ver",
+            "displayTitle": "未熟DREAMER（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hem8VNEcdYanHQ1fgSCNl",
+            "uri": "spotify:track:0hem8VNEcdYanHQ1fgSCNl",
+            "matchedTitle": "未熟DREAMER",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": "桜内梨子、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-kav3wd__ver",
+            "displayTitle": "勇気はどこに？君の胸に！（桜内梨子、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

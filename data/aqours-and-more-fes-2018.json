@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-and-more-fes-2018",
+  "title": "シブヤノオト and more FES.2018",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.nhk.or.jp/s-oto/next/20180908/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/53",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-and-more-fes-2018-venue-79-performance-135",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2018-09-08",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

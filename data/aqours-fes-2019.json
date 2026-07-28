@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-fes-2019",
+  "title": "アニソン！プレミアム！Fes.2019",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.nhk.jp/p/anisonpremium/ts/7YXGMV4X6Y/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/58",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-fes-2019-venue-84-performance-140",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2019-12-22",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未体験HORIZON",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "horizon__original",
+            "displayTitle": "未体験HORIZON"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ngDRsoTH3PdzUVPhF3m2T",
+            "uri": "spotify:track:5ngDRsoTH3PdzUVPhF3m2T",
+            "matchedTitle": "未体験HORIZON",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

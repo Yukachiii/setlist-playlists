@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-animelo-summer-live-2017-the-card",
+  "title": "Animelo Summer Live 2017 -THE CARD-",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://anisama.tv/2017/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/11",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-animelo-summer-live-2017-the-card-gmo-day-1",
+      "label": "DAY 1",
+      "day": 1,
+      "session": null,
+      "date": "2017-08-25",
+      "venue": {
+        "name": "GMOアリーナさいたま（さいたまスーパーアリーナ）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6xdb0g__original",
+            "displayTitle": "ユメ語るよりユメ歌おう"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-cdtv-18-sp",
+  "title": "CDTV'18上半期SPエンタメまとめ総決算",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.tbs.co.jp/program/cdtv_20180628/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/50",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-cdtv-18-sp-tbs-performance-132",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2018-06-28",
+      "venue": {
+        "name": "TBS放送センター",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WATER BLUE NEW WORLD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "water-blue-new-world__original",
+            "displayTitle": "WATER BLUE NEW WORLD"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "59xCavGEluLVjluGIvLD6K",
+            "uri": "spotify:track:59xCavGEluLVjluGIvLD6K",
+            "matchedTitle": "WATER BLUE NEW WORLD",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

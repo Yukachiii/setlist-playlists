@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-next-79-ns",
+  "title": "坂崎幸之助のももいろフォーク村NEXT 第79夜 フNｓ桃黒歌合戦",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.fujitv.co.jp/FOLKMURA/script171227.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/49",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-next-79-ns-venue-75-performance-131",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2017-12-27",
+      "venue": {
+        "name": "フジテレビ本社",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kvufm__original",
+            "displayTitle": "未来の僕らは知ってるよ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HAPPY PARTY TRAIN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-party-train__original",
+            "displayTitle": "HAPPY PARTY TRAIN"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "38W1LotseRWCT1UQSv1jRp",
+            "uri": "spotify:track:38W1LotseRWCT1UQSv1jRp",
+            "matchedTitle": "HAPPY PARTY TRAIN",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6xdb0g__original",
+            "displayTitle": "ユメ語るよりユメ歌おう"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

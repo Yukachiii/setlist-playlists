@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-sanrio-virtual-festival-2025",
+  "title": "Sanrio Virtual Festival 2025",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://v-fes.sanrio.co.jp/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/245",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-sanrio-virtual-festival-2025-venue-357-performance-615",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2025-02-24",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Step! ZERO to ONE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "step-zero-to-one__original",
+            "displayTitle": "Step! ZERO to ONE"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "11GNjmKXbheaXgE4VLqM4E",
+            "uri": "spotify:track:11GNjmKXbheaXgE4VLqM4E",
+            "matchedTitle": "Step! ZERO to ONE",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kvufm__original",
+            "displayTitle": "未来の僕らは知ってるよ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kav3wd__original",
+            "displayTitle": "勇気はどこに？君の胸に！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

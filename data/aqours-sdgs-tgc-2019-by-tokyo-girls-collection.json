@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-sdgs-tgc-2019-by-tokyo-girls-collection",
+  "title": "SDGs推進 TGC しずおか 2019 by TOKYO GIRLS COLLECTION",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "http://tgc.girlswalker.com/shizuoka/2019/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/26",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-sdgs-tgc-2019-by-tokyo-girls-collection-shizuoka-performance-70",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2019-01-12",
+      "venue": {
+        "name": "ツインメッセ静岡 北館大展示場",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋になりたいAQUARIUM",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aquarium__original",
+            "displayTitle": "恋になりたいAQUARIUM"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48DmPo9ib35VIwv29vhLsN",
+            "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN",
+            "matchedTitle": "恋になりたいAQUARIUM",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ca5103594184eccecac072f0",
+            "albumName": "恋になりたいAQUARIUM"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-6xdb0g__ver",
+            "displayTitle": "ユメ語るよりユメ歌おう（ショートVer.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

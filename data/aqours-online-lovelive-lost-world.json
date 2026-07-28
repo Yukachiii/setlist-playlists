@@ -1,0 +1,660 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-online-lovelive-lost-world",
+  "title": "ラブライブ！サンシャイン!! Aqours ONLINE LoveLive! ～LOST WORLD～",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/uranohoshi/sp_onlinelive.php",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/42",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-online-lovelive-lost-world-venue-67-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2020-10-10",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "New Romantic Sailors",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "new-romantic-sailors__original",
+            "displayTitle": "New Romantic Sailors"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "32gSqAQuaZg7sEXPGrlYUN",
+            "uri": "spotify:track:32gSqAQuaZg7sEXPGrlYUN",
+            "matchedTitle": "New Romantic Sailors",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Braveheart Coaster",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "braveheart-coaster__original",
+            "displayTitle": "Braveheart Coaster"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0EjQmtuqAGbeudBxAaHhLb",
+            "uri": "spotify:track:0EjQmtuqAGbeudBxAaHhLb",
+            "matchedTitle": "Braveheart Coaster",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Amazing Travel DNA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "amazing-travel-dna__original",
+            "displayTitle": "Amazing Travel DNA"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1bClVmpqDfjbsvDNFwNvZO",
+            "uri": "spotify:track:1bClVmpqDfjbsvDNFwNvZO",
+            "matchedTitle": "Amazing Travel DNA",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "空中恋愛論",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10o1u0o__original",
+            "displayTitle": "空中恋愛論"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Oxq8juDLCMeYIwQq0xdvl",
+            "uri": "spotify:track:4Oxq8juDLCMeYIwQq0xdvl",
+            "matchedTitle": "空中恋愛論",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "メイズセカイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1uckco0__original",
+            "displayTitle": "メイズセカイ"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3zrijt1FJCKJLpWekzHu04",
+            "uri": "spotify:track:3zrijt1FJCKJLpWekzHu04",
+            "matchedTitle": "メイズセカイ",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シャゼリア☆キッス☆ダダンダーン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kotdho__original",
+            "displayTitle": "シャゼリア☆キッス☆ダダンダーン"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fantastic Departure!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fantastic-departure__original",
+            "displayTitle": "Fantastic Departure!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6r6qwI5aey087svYG1tyeX",
+            "uri": "spotify:track:6r6qwI5aey087svYG1tyeX",
+            "matchedTitle": "Fantastic Departure!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Deep Resonance",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "deep-resonance__original",
+            "displayTitle": "Deep Resonance"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "44iN6VOiifTkDUdW0Kw85b",
+            "uri": "spotify:track:44iN6VOiifTkDUdW0Kw85b",
+            "matchedTitle": "Deep Resonance",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f089b71ebb75c3a4e68ca14c",
+            "albumName": "未体験HORIZON"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aqours Pirates Desire",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aqours-pirates-desire__original",
+            "displayTitle": "Aqours Pirates Desire"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4SRKvJBjgVRg1QyAOdc9ZB",
+            "uri": "spotify:track:4SRKvJBjgVRg1QyAOdc9ZB",
+            "matchedTitle": "Aqours Pirates Desire",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wake up, Challenger!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wake-up-challenger__original",
+            "displayTitle": "Wake up, Challenger!!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GfFYvhd9zKQ79EZLVakoN",
+            "uri": "spotify:track:2GfFYvhd9zKQ79EZLVakoN",
+            "matchedTitle": "Wake up, Challenger!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jimo-ai-dash__original",
+            "displayTitle": "JIMO-AI Dash!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-online-lovelive-lost-world-venue-67-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2020-10-11",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "New Romantic Sailors",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "new-romantic-sailors__original",
+            "displayTitle": "New Romantic Sailors"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "32gSqAQuaZg7sEXPGrlYUN",
+            "uri": "spotify:track:32gSqAQuaZg7sEXPGrlYUN",
+            "matchedTitle": "New Romantic Sailors",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Braveheart Coaster",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "braveheart-coaster__original",
+            "displayTitle": "Braveheart Coaster"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0EjQmtuqAGbeudBxAaHhLb",
+            "uri": "spotify:track:0EjQmtuqAGbeudBxAaHhLb",
+            "matchedTitle": "Braveheart Coaster",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Amazing Travel DNA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "amazing-travel-dna__original",
+            "displayTitle": "Amazing Travel DNA"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1bClVmpqDfjbsvDNFwNvZO",
+            "uri": "spotify:track:1bClVmpqDfjbsvDNFwNvZO",
+            "matchedTitle": "Amazing Travel DNA",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "空中恋愛論",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10o1u0o__original",
+            "displayTitle": "空中恋愛論"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Oxq8juDLCMeYIwQq0xdvl",
+            "uri": "spotify:track:4Oxq8juDLCMeYIwQq0xdvl",
+            "matchedTitle": "空中恋愛論",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "メイズセカイ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1uckco0__original",
+            "displayTitle": "メイズセカイ"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3zrijt1FJCKJLpWekzHu04",
+            "uri": "spotify:track:3zrijt1FJCKJLpWekzHu04",
+            "matchedTitle": "メイズセカイ",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シャゼリア☆キッス☆ダダンダーン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kotdho__original",
+            "displayTitle": "シャゼリア☆キッス☆ダダンダーン"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fantastic Departure!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fantastic-departure__original",
+            "displayTitle": "Fantastic Departure!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6r6qwI5aey087svYG1tyeX",
+            "uri": "spotify:track:6r6qwI5aey087svYG1tyeX",
+            "matchedTitle": "Fantastic Departure!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Deep Resonance",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "deep-resonance__original",
+            "displayTitle": "Deep Resonance"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "44iN6VOiifTkDUdW0Kw85b",
+            "uri": "spotify:track:44iN6VOiifTkDUdW0Kw85b",
+            "matchedTitle": "Deep Resonance",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f089b71ebb75c3a4e68ca14c",
+            "albumName": "未体験HORIZON"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aqours Pirates Desire",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aqours-pirates-desire__original",
+            "displayTitle": "Aqours Pirates Desire"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4SRKvJBjgVRg1QyAOdc9ZB",
+            "uri": "spotify:track:4SRKvJBjgVRg1QyAOdc9ZB",
+            "matchedTitle": "Aqours Pirates Desire",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dance with Minotaurus",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dance-with-minotaurus__original",
+            "displayTitle": "Dance with Minotaurus"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2SJof5oXvYslPiA8t4nieU",
+            "uri": "spotify:track:2SJof5oXvYslPiA8t4nieU",
+            "matchedTitle": "Dance with Minotaurus",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jimo-ai-dash__original",
+            "displayTitle": "JIMO-AI Dash!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kvufm__original",
+            "displayTitle": "未来の僕らは知ってるよ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
