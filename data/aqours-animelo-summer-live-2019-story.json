@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-animelo-summer-live-2019-story",
+  "title": "Animelo Summer Live 2019 -STORY-",
+  "series": [
+    "aqours",
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://anisama.tv/2019/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/33",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-animelo-summer-live-2019-story-gmo-day2",
+      "label": "DAY2",
+      "day": 2,
+      "session": null,
+      "date": "2019-08-31",
+      "venue": {
+        "name": "GMOアリーナさいたま（さいたまスーパーアリーナ）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らの走ってきた道は…",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10gcoq8__original",
+            "displayTitle": "僕らの走ってきた道は…"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3xATvhSPkMADsyeQm1kjfX",
+            "uri": "spotify:track:3xATvhSPkMADsyeQm1kjfX",
+            "matchedTitle": "僕らの走ってきた道は…",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "想いよひとつになれ",
+            "versionLabel": "9人Ver.",
+            "versionCode": "9-ver",
+            "recordingId": "track-e03cvb__9-ver",
+            "displayTitle": "想いよひとつになれ（9人Ver.）"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 小原鞠莉 (CV.鈴木愛奈), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2nC3tEAC3h8y9KG1h5dFjw",
+            "uri": "spotify:track:2nC3tEAC3h8y9KG1h5dFjw",
+            "matchedTitle": "想いよひとつになれ",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 渡辺 曜 (CV.斉藤朱夏), 津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 小原鞠莉 (CV.鈴木愛奈), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731d931cf9f4d549a71629ed2c",
+            "albumName": "想いよひとつになれ／MIRAI TICKET"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kav3wd__original",
+            "displayTitle": "勇気はどこに？君の胸に！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-animelo-summer-live-2019-story-gmo-day3",
+      "label": "DAY3",
+      "day": 3,
+      "session": null,
+      "date": "2019-09-01",
+      "venue": {
+        "name": "GMOアリーナさいたま（さいたまスーパーアリーナ）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tokimeki-runners__original",
+            "displayTitle": "TOKIMEKI Runners"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

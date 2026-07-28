@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-fes-rec-live-bloom-days-extra",
+  "title": "Fes×ReC：LIVE ～Bloom Days Extra～",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/278",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-fes-rec-live-bloom-days-extra-venue-414-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2025-10-04",
+      "venue": {
+        "name": "国立代々木競技場 第一体育館",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "フルーツパンチ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1nju4kw__original",
+            "displayTitle": "フルーツパンチ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "71ZkiWVksVjsB3qpBiNik0",
+            "uri": "spotify:track:71ZkiWVksVjsB3qpBiNik0",
+            "matchedTitle": "フルーツパンチ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽であれ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1u4qmim__original",
+            "displayTitle": "太陽であれ！"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2txtrQUeZeY2Yvk6scvXsN",
+            "uri": "spotify:track:2txtrQUeZeY2Yvk6scvXsN",
+            "matchedTitle": "太陽であれ！",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ニャオシグニャル",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1kc65v__original",
+            "displayTitle": "ニャオシグニャル"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6xsHmsVFPfO2GpzDVfbvHB",
+            "uri": "spotify:track:6xsHmsVFPfO2GpzDVfbvHB",
+            "matchedTitle": "ニャオシグニャル",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "片翼のトリバガ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1mqq1m__original",
+            "displayTitle": "片翼のトリバガ"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6X2forYGAi7zFj6TgJwiAf",
+            "uri": "spotify:track:6X2forYGAi7zFj6TgJwiAf",
+            "matchedTitle": "片翼のトリバガ",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "一生に夢が咲くように",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-mzoltn__original",
+            "displayTitle": "一生に夢が咲くように"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2IdftwxtzPGL4AzWBRhQXY",
+            "uri": "spotify:track:2IdftwxtzPGL4AzWBRhQXY",
+            "matchedTitle": "一生に夢が咲くように",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "hasunosora-fes-rec-live-bloom-days-extra-venue-414-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2025-10-05",
+      "venue": {
+        "name": "国立代々木競技場 第一体育館",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "フルーツパンチ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1nju4kw__original",
+            "displayTitle": "フルーツパンチ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "71ZkiWVksVjsB3qpBiNik0",
+            "uri": "spotify:track:71ZkiWVksVjsB3qpBiNik0",
+            "matchedTitle": "フルーツパンチ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽であれ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1u4qmim__original",
+            "displayTitle": "太陽であれ！"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2txtrQUeZeY2Yvk6scvXsN",
+            "uri": "spotify:track:2txtrQUeZeY2Yvk6scvXsN",
+            "matchedTitle": "太陽であれ！",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ニャオシグニャル",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1kc65v__original",
+            "displayTitle": "ニャオシグニャル"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6xsHmsVFPfO2GpzDVfbvHB",
+            "uri": "spotify:track:6xsHmsVFPfO2GpzDVfbvHB",
+            "matchedTitle": "ニャオシグニャル",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "片翼のトリバガ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1mqq1m__original",
+            "displayTitle": "片翼のトリバガ"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6X2forYGAi7zFj6TgJwiAf",
+            "uri": "spotify:track:6X2forYGAi7zFj6TgJwiAf",
+            "matchedTitle": "片翼のトリバガ",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "一生に夢が咲くように",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-mzoltn__original",
+            "displayTitle": "一生に夢が咲くように"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2IdftwxtzPGL4AzWBRhQXY",
+            "uri": "spotify:track:2IdftwxtzPGL4AzWBRhQXY",
+            "matchedTitle": "一生に夢が咲くように",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

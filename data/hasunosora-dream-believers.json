@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-dream-believers",
+  "title": "デビューミニアルバム発売記念イベント「Dream Believers」",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/news/01_1657.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/156",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-dream-believers-pit-performance-391",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-04-21",
+      "venue": {
+        "name": "豊洲PIT",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "On your mark",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "on-your-mark__original",
+            "displayTitle": "On your mark"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48Zr8LhsxUdsdeifeMr2Ai",
+            "uri": "spotify:track:48Zr8LhsxUdsdeifeMr2Ai",
+            "matchedTitle": "On your mark",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "水彩世界",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-7bk82k__original",
+            "displayTitle": "水彩世界"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4aGtQ24hnb19caIQltg06x",
+            "uri": "spotify:track:4aGtQ24hnb19caIQltg06x",
+            "matchedTitle": "水彩世界",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "AWOKE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "awoke__original",
+            "displayTitle": "AWOKE"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6xjvptRULAGbNy6VXUEct6",
+            "uri": "spotify:track:6xjvptRULAGbNy6VXUEct6",
+            "matchedTitle": "AWOKE",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ド！ド！ド！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-87wrur__original",
+            "displayTitle": "ド！ド！ド！"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6urkKeYf9usiYKY1sLV95K",
+            "uri": "spotify:track:6urkKeYf9usiYKY1sLV95K",
+            "matchedTitle": "ド！ド！ド！",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "永遠のEuphoria",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "euphoria__original",
+            "displayTitle": "永遠のEuphoria"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "03UK4x1ZU2IT5gtKqMu5mp",
+            "uri": "spotify:track:03UK4x1ZU2IT5gtKqMu5mp",
+            "matchedTitle": "永遠のEuphoria",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dream-believers__original",
+            "displayTitle": "Dream Believers"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4lMlC1ZKMRroB2FEoVFVt8",
+            "uri": "spotify:track:4lMlC1ZKMRroB2FEoVFVt8",
+            "matchedTitle": "Dream Believers",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

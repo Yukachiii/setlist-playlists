@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-venue101-2025-05-24",
+  "title": "Venue101（2025年05月24日放送回）",
+  "series": [
+    "aqours",
+    "nijigasaki",
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.nhk.or.jp/music/venue101/https://www.lovelive-anime.jp/news/01_4751.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/261",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-venue101-2025-05-24-venue-377-performance-651",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2025-05-24",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "愛♡スクリ～ム！",
+            "versionLabel": "Short Ver.",
+            "versionCode": "short-ver",
+            "recordingId": "track-19tpy6m__short-ver",
+            "displayTitle": "愛♡スクリ～ム！（Short Ver.）"
+          },
+          "artistHint": "AiScReam",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2BBIUV8wIBbqc7HXObzdgH",
+            "uri": "spotify:track:2BBIUV8wIBbqc7HXObzdgH",
+            "matchedTitle": "愛♡スクリ～ム！",
+            "matchedArtist": "AiScReam",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732590b046b72d6ce5d6703ee7",
+            "albumName": "愛♡スクリ～ム！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

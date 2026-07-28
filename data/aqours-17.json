@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-17",
+  "title": "第17回明石家紅白!",
+  "series": [
+    "aqours",
+    "nijigasaki",
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.web.nhk/tv/an/akashiyakouhaku/pl/series-tep-J9XZYZ5V92",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/295",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-17-venue-438-performance-747",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2025-12-28",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "愛♡スクリ～ム！",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-19tpy6m__ver",
+            "displayTitle": "愛♡スクリ～ム！（ショートVer.）"
+          },
+          "artistHint": "AiScReam",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2BBIUV8wIBbqc7HXObzdgH",
+            "uri": "spotify:track:2BBIUV8wIBbqc7HXObzdgH",
+            "matchedTitle": "愛♡スクリ～ム！",
+            "matchedArtist": "AiScReam",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732590b046b72d6ce5d6703ee7",
+            "albumName": "愛♡スクリ～ム！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

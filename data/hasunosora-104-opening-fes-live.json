@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-104-opening-fes-live",
+  "title": "104期 OPENING！Fes×LIVE",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/212",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-104-opening-fes-live-venue-305-performance-507",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2024-04-29",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "On your mark",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "on-your-mark__104ki",
+            "displayTitle": "On your mark（104期 Ver.）"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48Zr8LhsxUdsdeifeMr2Ai",
+            "uri": "spotify:track:48Zr8LhsxUdsdeifeMr2Ai",
+            "matchedTitle": "On your mark",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイデンティティ",
+            "versionLabel": "104期NEW Ver.",
+            "versionCode": "104ki-new",
+            "recordingId": "track-1iq75uh__104ki-new",
+            "displayTitle": "アイデンティティ（104期NEW Ver.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3il4aafYRIN4igOKZhW3fC",
+            "uri": "spotify:track:3il4aafYRIN4igOKZhW3fC",
+            "matchedTitle": "アイデンティティ (104期NEW Ver.)",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sparkly Spot",
+            "versionLabel": "104期NEW Ver.",
+            "versionCode": "104ki-new",
+            "recordingId": "sparkly-spot__104ki-new",
+            "displayTitle": "Sparkly Spot（104期NEW Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6cS5FleIwYk0nMI3uGZ6FE",
+            "uri": "spotify:track:6cS5FleIwYk0nMI3uGZ6FE",
+            "matchedTitle": "Sparkly Spot",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Reflection in the mirror",
+            "versionLabel": "104期NEW Ver.",
+            "versionCode": "104ki-new",
+            "recordingId": "reflection-in-the-mirror__104ki-new",
+            "displayTitle": "Reflection in the mirror（104期NEW Ver.）"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4TU1nyDrQCBJUSmrKco2QC",
+            "uri": "spotify:track:4TU1nyDrQCBJUSmrKco2QC",
+            "matchedTitle": "Reflection in the mirror (104期NEW Ver.)",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "dream-believers__104ki",
+            "displayTitle": "Dream Believers（104期 Ver.）"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "56SXeLjDlXJYt9IFDCycKF",
+            "uri": "spotify:track:56SXeLjDlXJYt9IFDCycKF",
+            "matchedTitle": "Dream Believers (104期 Ver.)",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-tokyo-idol-festival-2020",
+  "title": "TOKYO IDOL FESTIVAL オンライン2020",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "http://www.idolfes.com/2020/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/72",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-tokyo-idol-festival-2020-hot-stage-4",
+      "label": "HOT STAGE 4日",
+      "day": null,
+      "session": null,
+      "date": "2020-10-04",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来ハーモニー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1u7y6w4__original",
+            "displayTitle": "未来ハーモニー"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Q3DUz1H6B74YJC5G2p2WX",
+            "uri": "spotify:track:5Q3DUz1H6B74YJC5G2p2WX",
+            "matchedTitle": "未来ハーモニー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ドキピポ☆エモーション",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-28ton__original",
+            "displayTitle": "ドキピポ☆エモーション"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3A3n6WN21uAnGleXuysRA8",
+            "uri": "spotify:track:3A3n6WN21uAnGleXuysRA8",
+            "matchedTitle": "ドキピポ☆エモーション",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "あなたの理想のヒロイン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1u57nbr__original",
+            "displayTitle": "あなたの理想のヒロイン"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6plisyJb3ezbbXPbTzyXpK",
+            "uri": "spotify:track:6plisyJb3ezbbXPbTzyXpK",
+            "matchedTitle": "あなたの理想のヒロイン",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Evergreen",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "evergreen__original",
+            "displayTitle": "Evergreen"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7H71Wf7Mi3T2W5kJSCep3D",
+            "uri": "spotify:track:7H71Wf7Mi3T2W5kJSCep3D",
+            "matchedTitle": "Evergreen",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "めっちゃGoing!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "going__original",
+            "displayTitle": "めっちゃGoing!!"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1n0NcaSXipbJF9TB9AM0Bb",
+            "uri": "spotify:track:1n0NcaSXipbJF9TB9AM0Bb",
+            "matchedTitle": "めっちゃGoing!!",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Starlight",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "starlight__original",
+            "displayTitle": "Starlight"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4GZwgfIJauJZXbtNi3lVzt",
+            "uri": "spotify:track:4GZwgfIJauJZXbtNi3lVzt",
+            "matchedTitle": "Starlight",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tokimeki-runners__original",
+            "displayTitle": "TOKIMEKI Runners"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

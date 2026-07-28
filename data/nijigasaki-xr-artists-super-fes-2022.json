@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-xr-artists-super-fes-2022",
+  "title": "xR ARTISTS SUPER FES 2022",
+  "series": [
+    "nijigasaki",
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://xrlive-xrartists.superfes.jp/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/136",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-xr-artists-super-fes-2022-venue-197-day1",
+      "label": "DAY1",
+      "day": 1,
+      "session": null,
+      "date": "2022-07-02",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "THE SECRET NiGHT",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "the-secret-night__original",
+            "displayTitle": "THE SECRET NiGHT"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "66JWJ7mOd9b44FPM515HrX",
+            "uri": "spotify:track:66JWJ7mOd9b44FPM515HrX",
+            "matchedTitle": "THE SECRET NiGHT",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUPER NOVA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "super-nova__original",
+            "displayTitle": "SUPER NOVA"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "272YVGFY6V9h6gaEL3481D",
+            "uri": "spotify:track:272YVGFY6V9h6gaEL3481D",
+            "matchedTitle": "SUPER NOVA",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What a Wonderful Dream!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "what-a-wonderful-dream__original",
+            "displayTitle": "What a Wonderful Dream!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1dpYYxpdNcvatacognbyTc",
+            "uri": "spotify:track:1dpYYxpdNcvatacognbyTc",
+            "matchedTitle": "What a Wonderful Dream!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e52dd7924bbc346288cfbbd7",
+            "albumName": "What a Wonderful Dream!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ノンフィクション!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rjgbfg__original",
+            "displayTitle": "ノンフィクション!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "21IBJ4rC6Io0ruaSuEMRWf",
+            "uri": "spotify:track:21IBJ4rC6Io0ruaSuEMRWf",
+            "matchedTitle": "ノンフィクション!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371077efb169c341bc340af92",
+            "albumName": "ノンフィクション!! / Starlight Prologue【第10話盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-xr-artists-super-fes-2022-venue-197-day2",
+      "label": "DAY2",
+      "day": 2,
+      "session": null,
+      "date": "2022-07-03",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shooting Voice!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shooting-voice__original",
+            "displayTitle": "Shooting Voice!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6bnTQuwiqNNhdPfiIWe69H",
+            "uri": "spotify:track:6bnTQuwiqNNhdPfiIWe69H",
+            "matchedTitle": "Shooting Voice!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739a5f0324330c444ccfc089dd",
+            "albumName": "not ALONE not HITORI / ミラクル STAY TUNE！ / Shooting Voice!!【Liella!盤】"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Starlight Prologue",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "starlight-prologue__original",
+            "displayTitle": "Starlight Prologue"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "00RO3ooBD7xBoFaPLsZHXF",
+            "uri": "spotify:track:00RO3ooBD7xBoFaPLsZHXF",
+            "matchedTitle": "Starlight Prologue",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371077efb169c341bc340af92",
+            "albumName": "ノンフィクション!! / Starlight Prologue【第10話盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

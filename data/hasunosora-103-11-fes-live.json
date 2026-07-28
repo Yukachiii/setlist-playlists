@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-103-11-fes-live",
+  "title": "103期11月度Fes×LIVE",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/190",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-103-11-fes-live-venue-274-performance-454",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-11-29",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "On your mark",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "on-your-mark__original",
+            "displayTitle": "On your mark"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48Zr8LhsxUdsdeifeMr2Ai",
+            "uri": "spotify:track:48Zr8LhsxUdsdeifeMr2Ai",
+            "matchedTitle": "On your mark",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KNOT",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "knot__original",
+            "displayTitle": "KNOT"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6jIOsqdFCsIo0dTxhO5HBd",
+            "uri": "spotify:track:6jIOsqdFCsIo0dTxhO5HBd",
+            "matchedTitle": "KNOT",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ド！ド！ド！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-87wrur__original",
+            "displayTitle": "ド！ド！ド！"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6urkKeYf9usiYKY1sLV95K",
+            "uri": "spotify:track:6urkKeYf9usiYKY1sLV95K",
+            "matchedTitle": "ド！ド！ド！",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Holiday∞Holiday",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "holiday-holiday__original",
+            "displayTitle": "Holiday∞Holiday"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3hKSrFN4Vwsx8rpc6A0UPH",
+            "uri": "spotify:track:3hKSrFN4Vwsx8rpc6A0UPH",
+            "matchedTitle": "Holiday∞Holiday",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ツバサ・ラ・リベルテ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-12iix__original",
+            "displayTitle": "ツバサ・ラ・リベルテ"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "728iKLRGI8qP7RQYDYzgNs",
+            "uri": "spotify:track:728iKLRGI8qP7RQYDYzgNs",
+            "matchedTitle": "ツバサ・ラ・リベルテ",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

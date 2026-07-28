@@ -1,0 +1,524 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-2nd",
+  "title": "バンダイナムコエンターテインメントフェスティバル2nd",
+  "series": [
+    "aqours",
+    "nijigasaki",
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://fes.bn-ent.net/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/127",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-2nd-zozo-day1",
+      "label": "DAY1",
+      "day": 1,
+      "session": null,
+      "date": "2022-05-14",
+      "venue": {
+        "name": "ZOZOマリンスタジアム",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "START!! True dreams",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "start-true-dreams__original",
+            "displayTitle": "START!! True dreams"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2hhexsnHLRpjI0BYQYEGvU",
+            "uri": "spotify:track:2hhexsnHLRpjI0BYQYEGvU",
+            "matchedTitle": "START!! True dreams",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273813907136c80564da67267ba",
+            "albumName": "START!! True dreams"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "だから僕らは鳴らすんだ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ksinqi__original",
+            "displayTitle": "だから僕らは鳴らすんだ！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3yVAtF6qxfNl7MpgrcVpFD",
+            "uri": "spotify:track:3yVAtF6qxfNl7MpgrcVpFD",
+            "matchedTitle": "だから僕らは鳴らすんだ！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273813907136c80564da67267ba",
+            "albumName": "START!! True dreams"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ノンフィクション!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rjgbfg__original",
+            "displayTitle": "ノンフィクション!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "21IBJ4rC6Io0ruaSuEMRWf",
+            "uri": "spotify:track:21IBJ4rC6Io0ruaSuEMRWf",
+            "matchedTitle": "ノンフィクション!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371077efb169c341bc340af92",
+            "albumName": "ノンフィクション!! / Starlight Prologue【第10話盤】"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Day1",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "day1__original",
+            "displayTitle": "Day1"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6kovEwihtXsS3WWW35E3lX",
+            "uri": "spotify:track:6kovEwihtXsS3WWW35E3lX",
+            "matchedTitle": "Day1",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371077efb169c341bc340af92",
+            "albumName": "ノンフィクション!! / Starlight Prologue【第10話盤】"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shooting Voice!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shooting-voice__original",
+            "displayTitle": "Shooting Voice!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6bnTQuwiqNNhdPfiIWe69H",
+            "uri": "spotify:track:6bnTQuwiqNNhdPfiIWe69H",
+            "matchedTitle": "Shooting Voice!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739a5f0324330c444ccfc089dd",
+            "albumName": "not ALONE not HITORI / ミラクル STAY TUNE！ / Shooting Voice!!【Liella!盤】"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What a Wonderful Dream!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "what-a-wonderful-dream__original",
+            "displayTitle": "What a Wonderful Dream!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1dpYYxpdNcvatacognbyTc",
+            "uri": "spotify:track:1dpYYxpdNcvatacognbyTc",
+            "matchedTitle": "What a Wonderful Dream!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e52dd7924bbc346288cfbbd7",
+            "albumName": "What a Wonderful Dream!!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Maze Town",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "maze-town__original",
+            "displayTitle": "Maze Town"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "79OpMgpS3VTtjU9h8IsnFE",
+            "uri": "spotify:track:79OpMgpS3VTtjU9h8IsnFE",
+            "matchedTitle": "Maze Town",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MONSTER GIRLS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "monster-girls__original",
+            "displayTitle": "MONSTER GIRLS"
+          },
+          "artistHint": "R3BIRTH",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6bhGm5TsggCqNPMR6qEicx",
+            "uri": "spotify:track:6bhGm5TsggCqNPMR6qEicx",
+            "matchedTitle": "MONSTER GIRLS",
+            "matchedArtist": "R3BIRTH",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "tokimeki-runners__ver",
+            "displayTitle": "TOKIMEKI Runners（ショートVer.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "love-u-my-friends__ver",
+            "displayTitle": "Love U my friends（ショートVer.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Just Believe!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "just-believe__original",
+            "displayTitle": "Just Believe!!!"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "797AE5T5YMIbez2bEyVWWe",
+            "uri": "spotify:track:797AE5T5YMIbez2bEyVWWe",
+            "matchedTitle": "Just Believe!!! (12人 Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273515166f4c5e37a5aa011e816",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.2"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2nd-zozo-day2",
+      "label": "DAY2",
+      "day": 2,
+      "session": null,
+      "date": "2022-05-15",
+      "venue": {
+        "name": "ZOZOマリンスタジアム",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "THE SECRET NiGHT",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "the-secret-night__original",
+            "displayTitle": "THE SECRET NiGHT"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "66JWJ7mOd9b44FPM515HrX",
+            "uri": "spotify:track:66JWJ7mOd9b44FPM515HrX",
+            "matchedTitle": "THE SECRET NiGHT",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUPER NOVA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "super-nova__original",
+            "displayTitle": "SUPER NOVA"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "272YVGFY6V9h6gaEL3481D",
+            "uri": "spotify:track:272YVGFY6V9h6gaEL3481D",
+            "matchedTitle": "SUPER NOVA",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Swinging！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "swinging__original",
+            "displayTitle": "Swinging！"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6pwaGcsnT9u4OSfUXADSWL",
+            "uri": "spotify:track:6pwaGcsnT9u4OSfUXADSWL",
+            "matchedTitle": "Swinging！",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sing & Smile!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sing-and-smile__original",
+            "displayTitle": "Sing & Smile!!"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6HMRcEA2MVvfcIbXNaTCGx",
+            "uri": "spotify:track:6HMRcEA2MVvfcIbXNaTCGx",
+            "matchedTitle": "Sing & Smile!!",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "中須かすみ、朝香果林、宮下 愛、近江彼方、エマ・ヴェルデ、天王寺璃奈 ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "tokimeki-runners__ver",
+            "displayTitle": "TOKIMEKI Runners（中須かすみ、朝香果林、宮下 愛、近江彼方、エマ・ヴェルデ、天王寺璃奈 ショートVer.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aqours Pirates Desire",
+            "versionLabel": "黒澤ダイヤ、渡辺 曜、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "aqours-pirates-desire__ver",
+            "displayTitle": "Aqours Pirates Desire（黒澤ダイヤ、渡辺 曜、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4SRKvJBjgVRg1QyAOdc9ZB",
+            "uri": "spotify:track:4SRKvJBjgVRg1QyAOdc9ZB",
+            "matchedTitle": "Aqours Pirates Desire",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": "黒澤ダイヤ、渡辺 曜、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-4vd8hj__ver",
+            "displayTitle": "スリリング・ワンウェイ（黒澤ダイヤ、渡辺 曜、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "JIMO-AI Dash!",
+            "versionLabel": "黒澤ダイヤ、渡辺 曜、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "jimo-ai-dash__ver",
+            "displayTitle": "JIMO-AI Dash!（黒澤ダイヤ、渡辺 曜、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7zKo8v3W3HhLVOgn2Ax5Rp",
+            "uri": "spotify:track:7zKo8v3W3HhLVOgn2Ax5Rp",
+            "matchedTitle": "JIMO-AI Dash!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MY舞☆TONIGHT",
+            "versionLabel": "黒澤ダイヤ、渡辺 曜、津島善子、黒澤ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "my-tonight__ver",
+            "displayTitle": "MY舞☆TONIGHT（黒澤ダイヤ、渡辺 曜、津島善子、黒澤ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ua9Y9QG4QjEMKTocsOTNK",
+            "uri": "spotify:track:1Ua9Y9QG4QjEMKTocsOTNK",
+            "matchedTitle": "MY舞☆TONIGHT",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-105-4th-term-fes-live-the-buds-after-snowmelt",
+  "title": "105期 4th Term Fes×LIVE 〜The Buds after Snowmelt〜",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/285",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-105-4th-term-fes-live-the-buds-after-snowmelt-venue-424-performance-726",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2025-12-28",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "乙女詞華集",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1lgcxgk__original",
+            "displayTitle": "乙女詞華集"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1ubvzeEClhjtfXULU1UpTb",
+            "uri": "spotify:track:1ubvzeEClhjtfXULU1UpTb",
+            "matchedTitle": "乙女詞華集",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "バイタルサイン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kmrzcz__original",
+            "displayTitle": "バイタルサイン"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2iCRTqHPJe9Bnq9hYs438M",
+            "uri": "spotify:track:2iCRTqHPJe9Bnq9hYs438M",
+            "matchedTitle": "バイタルサイン",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ガランドFlash",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "flash__original",
+            "displayTitle": "ガランドFlash"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1EGKoUUvsxhcAb0WXjFSNJ",
+            "uri": "spotify:track:1EGKoUUvsxhcAb0WXjFSNJ",
+            "matchedTitle": "ガランドFlash",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シアター生き様",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ochccd__original",
+            "displayTitle": "シアター生き様"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5CfYWKBfDGaU9yRt9EDOSm",
+            "uri": "spotify:track:5CfYWKBfDGaU9yRt9EDOSm",
+            "matchedTitle": "シアター生き様",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "雪舞う空と二秒の永遠",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1be0eyd__original",
+            "displayTitle": "雪舞う空と二秒の永遠"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1AH1SRRVBwlnwUswkZs8sq",
+            "uri": "spotify:track:1AH1SRRVBwlnwUswkZs8sq",
+            "matchedTitle": "雪舞う空と二秒の永遠",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

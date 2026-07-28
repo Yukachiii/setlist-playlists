@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-animelo-summer-live-2024-stargazer",
+  "title": "Animelo Summer Live 2024 -Stargazer-",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://anisama.tv/2024/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/210",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-animelo-summer-live-2024-stargazer-gmo-8-31",
+      "label": "8.31",
+      "day": null,
+      "session": null,
+      "date": "2024-08-31",
+      "venue": {
+        "name": "GMOアリーナさいたま（さいたまスーパーアリーナ）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "みらくりえーしょん",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-1enz9bz__ver",
+            "displayTitle": "みらくりえーしょん（ショートVer.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7nLo00R9CRhadDNcOlg29U",
+            "uri": "spotify:track:7nLo00R9CRhadDNcOlg29U",
+            "matchedTitle": "みらくりえーしょん",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "レディバグ",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-r7iz59__ver",
+            "displayTitle": "レディバグ（ショートVer.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4wsAk2qNrT1VeylWy2apNT",
+            "uri": "spotify:track:4wsAk2qNrT1VeylWy2apNT",
+            "matchedTitle": "レディバグ",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アオクハルカ",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-l18hz5__ver",
+            "displayTitle": "アオクハルカ（ショートVer.）"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "770dT5d7IbrGUpJogzhcTZ",
+            "uri": "spotify:track:770dT5d7IbrGUpJogzhcTZ",
+            "matchedTitle": "アオクハルカ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "dream-believers__104ki",
+            "displayTitle": "Dream Believers（104期 Ver.）"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "56SXeLjDlXJYt9IFDCycKF",
+            "uri": "spotify:track:56SXeLjDlXJYt9IFDCycKF",
+            "matchedTitle": "Dream Believers (104期 Ver.)",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-2020-11-22",
+  "title": "アニソン!プレミアム! （2020年11月22日放送回）",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.nhk.jp/p/anisonpremium/ts/7YXGMV4X6Y/episode/te/EN5M376L2G/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/73",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-2020-11-22-venue-99-performance-159",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2020-11-22",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Land！Dream World！",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "dream-land-dream-world__ver",
+            "displayTitle": "Dream Land！Dream World！（ショートVer.）"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0bDNCMeyN8SP3yLoMnEOLg",
+            "uri": "spotify:track:0bDNCMeyN8SP3yLoMnEOLg",
+            "matchedTitle": "Dream Land！Dream World！",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

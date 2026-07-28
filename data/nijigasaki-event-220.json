@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-event-220",
+  "title": "ちゃやまち推しフェスティバル",
+  "series": [
+    "nijigasaki",
+    "school-idol-musical"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.mbs.jp/oshifes/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/220",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-event-220-venue-315-performance-528",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2024-06-08",
+      "venue": {
+        "name": "梅田芸術劇場 メインホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君と見る夢",
+            "versionLabel": "ショート ルリカ・ユズハVer.",
+            "versionCode": "ver",
+            "recordingId": "track-sk36c2__ver",
+            "displayTitle": "君と見る夢（ショート ルリカ・ユズハVer.）"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "14wJqsVgQYP4rpQXvGHsax",
+            "uri": "spotify:track:14wJqsVgQYP4rpQXvGHsax",
+            "matchedTitle": "君と見る夢",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273be872d2166222a81741bc15e",
+            "albumName": "スクールアイドルミュージカル"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未完成ドリーム！",
+            "versionLabel": "ショート ルリカ・ユズハVer.",
+            "versionCode": "ver",
+            "recordingId": "track-107xvc9__ver",
+            "displayTitle": "未完成ドリーム！（ショート ルリカ・ユズハVer.）"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2IsZWVCP0LGPtDEsRKDouu",
+            "uri": "spotify:track:2IsZWVCP0LGPtDEsRKDouu",
+            "matchedTitle": "未完成ドリーム！",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738ed0aaab0ac4d2252aecaafe",
+            "albumName": "未完成ドリーム！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
