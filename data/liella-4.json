@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-4",
+  "title": "ニュージェネ! #4",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.nhk.jp/p/ts/NWN75Z3ZN8/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/202",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-4-nhk-performance-496",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2024-02-16",
+      "venue": {
+        "name": "NHKホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump Into the New World",
+            "versionLabel": "ショートVer.（1番からCメロ）",
+            "versionCode": "ver-1-c",
+            "recordingId": "jump-into-the-new-world__ver-1-c",
+            "displayTitle": "Jump Into the New World（ショートVer.（1番からCメロ））"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4URE7AVGX1R4yFSJSV49vb",
+            "uri": "spotify:track:4URE7AVGX1R4yFSJSV49vb",
+            "matchedTitle": "Jump Into the New World",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

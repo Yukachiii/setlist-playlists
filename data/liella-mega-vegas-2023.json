@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-mega-vegas-2023",
+  "title": "MEGA VEGAS 2023",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "http://megavegas.jp/https://www.lovelive-anime.jp/news/01_1289.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/152",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-mega-vegas-2023-kobe-day-1",
+      "label": "DAY-1",
+      "day": 1,
+      "session": null,
+      "date": "2023-03-11",
+      "venue": {
+        "name": "神戸ワールド記念ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スター宣言",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10w2k5w__original",
+            "displayTitle": "スター宣言"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "28NYndXD1omYwY6iinJkNC",
+            "uri": "spotify:track:28NYndXD1omYwY6iinJkNC",
+            "matchedTitle": "スター宣言",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ビタミンSUMMER！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "summer__original",
+            "displayTitle": "ビタミンSUMMER！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ZWv75IO2XgpEQdtD2YjwJ",
+            "uri": "spotify:track:3ZWv75IO2XgpEQdtD2YjwJ",
+            "matchedTitle": "ビタミンSUMMER！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Chance Day, Chance Way！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "chance-day-chance-way__original",
+            "displayTitle": "Chance Day, Chance Way！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1QM66r7038zIYxRvvFZUrc",
+            "uri": "spotify:track:1QM66r7038zIYxRvvFZUrc",
+            "matchedTitle": "Chance Day, Chance Way！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "POP TALKING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pop-talking__original",
+            "displayTitle": "POP TALKING"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "66hFTluK1TnQXOoD7fTfeJ",
+            "uri": "spotify:track:66hFTluK1TnQXOoD7fTfeJ",
+            "matchedTitle": "POP TALKING",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "揺らぐわ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ansyp__original",
+            "displayTitle": "揺らぐわ"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Orz6pPLlBx61mMw9Q5vQb",
+            "uri": "spotify:track:6Orz6pPLlBx61mMw9Q5vQb",
+            "matchedTitle": "揺らぐわ",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273663fb1e899ca2d140d172b42",
+            "albumName": "Welcome to 僕らのセカイ / Go!! リスタート【第3話盤】"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "色づいて透明",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1domjgn__original",
+            "displayTitle": "色づいて透明"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3hC9nXzGTVmashzpgJ3NlB",
+            "uri": "spotify:track:3hC9nXzGTVmashzpgJ3NlB",
+            "matchedTitle": "色づいて透明",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ff8fc7c5e09e15085a17ee4e",
+            "albumName": "Welcome to 僕らのセカイ / Go!! リスタート【第1話盤】"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Day1",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "day1__original",
+            "displayTitle": "Day1"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6kovEwihtXsS3WWW35E3lX",
+            "uri": "spotify:track:6kovEwihtXsS3WWW35E3lX",
+            "matchedTitle": "Day1",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371077efb169c341bc340af92",
+            "albumName": "ノンフィクション!! / Starlight Prologue【第10話盤】"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Second Sparkle",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "second-sparkle__original",
+            "displayTitle": "Second Sparkle"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7lxkZ1mg0l8EWy9zKwLlBy",
+            "uri": "spotify:track:7lxkZ1mg0l8EWy9zKwLlBy",
+            "matchedTitle": "Second Sparkle",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TO BE CONTINUED",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "to-be-continued__original",
+            "displayTitle": "TO BE CONTINUED"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2KwBfbpWQNolpT7cI32ndl",
+            "uri": "spotify:track:2KwBfbpWQNolpT7cI32ndl",
+            "matchedTitle": "TO BE CONTINUED",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735c75a7e5334ee77ce029df03",
+            "albumName": "Sing！Shine！Smile！ / 未来の音が聴こえる【第12話盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-tv-3-op-and-ed",
+  "title": "TVアニメ『ラブライブ！スーパースター!!』3期OP＆ED主題歌リリースイベント",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/yuigaoka/live/live_detail.php?p=tv3oped",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/228",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-tv-3-op-and-ed-venue-331-1",
+      "label": "1回目",
+      "day": null,
+      "session": null,
+      "date": "2024-10-28",
+      "venue": {
+        "name": "ソニックシティ 大ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Let's be ONE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "let-s-be-one__original",
+            "displayTitle": "Let's be ONE"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "12WAWtCouLV3YY3fIDs86c",
+            "uri": "spotify:track:12WAWtCouLV3YY3fIDs86c",
+            "matchedTitle": "Let's be ONE",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737acae15f26472fe5df2f1577",
+            "albumName": "Aspire"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Second Sparkle",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "second-sparkle__1-3-ver",
+            "displayTitle": "Second Sparkle（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7lxkZ1mg0l8EWy9zKwLlBy",
+            "uri": "spotify:track:7lxkZ1mg0l8EWy9zKwLlBy",
+            "matchedTitle": "Second Sparkle",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイコトバ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-v2e7zv__original",
+            "displayTitle": "アイコトバ！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5x2CP6plITBIEwMKZ6he8T",
+            "uri": "spotify:track:5x2CP6plITBIEwMKZ6he8T",
+            "matchedTitle": "アイコトバ！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ce588446f8b864de5f11b13d",
+            "albumName": "アイコトバ！"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青春HOPPERS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hoppers__original",
+            "displayTitle": "青春HOPPERS"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7r7rLLgXfOuLeeW6R7CCzF",
+            "uri": "spotify:track:7r7rLLgXfOuLeeW6R7CCzF",
+            "matchedTitle": "青春HOPPERS",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e44fbb367aa69c66bb829d8e",
+            "albumName": "Let's be ONE"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Within a Dream",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "within-a-dream__original",
+            "displayTitle": "Within a Dream"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "32qOR7CpKychCLr8BPCnyt",
+            "uri": "spotify:track:32qOR7CpKychCLr8BPCnyt",
+            "matchedTitle": "Within a Dream",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f0faa95793969065798eaf3d",
+            "albumName": "DAISUKI FULL POWER"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DAISUKI FULL POWER",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daisuki-full-power__original",
+            "displayTitle": "DAISUKI FULL POWER"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TyMixo6q2jstl9WxvPm0d",
+            "uri": "spotify:track:2TyMixo6q2jstl9WxvPm0d",
+            "matchedTitle": "DAISUKI FULL POWER",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f0faa95793969065798eaf3d",
+            "albumName": "DAISUKI FULL POWER"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-tv-3-op-and-ed-venue-331-2",
+      "label": "2回目",
+      "day": null,
+      "session": null,
+      "date": "2024-10-28",
+      "venue": {
+        "name": "ソニックシティ 大ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Let's be ONE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "let-s-be-one__original",
+            "displayTitle": "Let's be ONE"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "12WAWtCouLV3YY3fIDs86c",
+            "uri": "spotify:track:12WAWtCouLV3YY3fIDs86c",
+            "matchedTitle": "Let's be ONE",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737acae15f26472fe5df2f1577",
+            "albumName": "Aspire"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Second Sparkle",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "second-sparkle__1-3-ver",
+            "displayTitle": "Second Sparkle（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7lxkZ1mg0l8EWy9zKwLlBy",
+            "uri": "spotify:track:7lxkZ1mg0l8EWy9zKwLlBy",
+            "matchedTitle": "Second Sparkle",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRACLE NEW STORY",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "miracle-new-story__1-3-ver",
+            "displayTitle": "MIRACLE NEW STORY（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4In0cnVlkbqvRVutcID0jd",
+            "uri": "spotify:track:4In0cnVlkbqvRVutcID0jd",
+            "matchedTitle": "MIRACLE NEW STORY",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27388bad64699037cd78232c446",
+            "albumName": "MIRACLE NEW STORY"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青春HOPPERS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hoppers__original",
+            "displayTitle": "青春HOPPERS"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7r7rLLgXfOuLeeW6R7CCzF",
+            "uri": "spotify:track:7r7rLLgXfOuLeeW6R7CCzF",
+            "matchedTitle": "青春HOPPERS",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e44fbb367aa69c66bb829d8e",
+            "albumName": "Let's be ONE"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Within a Dream",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "within-a-dream__original",
+            "displayTitle": "Within a Dream"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "32qOR7CpKychCLr8BPCnyt",
+            "uri": "spotify:track:32qOR7CpKychCLr8BPCnyt",
+            "matchedTitle": "Within a Dream",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f0faa95793969065798eaf3d",
+            "albumName": "DAISUKI FULL POWER"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DAISUKI FULL POWER",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daisuki-full-power__original",
+            "displayTitle": "DAISUKI FULL POWER"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TyMixo6q2jstl9WxvPm0d",
+            "uri": "spotify:track:2TyMixo6q2jstl9WxvPm0d",
+            "matchedTitle": "DAISUKI FULL POWER",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f0faa95793969065798eaf3d",
+            "albumName": "DAISUKI FULL POWER"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

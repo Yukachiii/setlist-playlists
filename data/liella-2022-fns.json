@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-2022-fns",
+  "title": "2022 FNS歌謡祭",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.fujitv.co.jp/FNS/2022/index.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/151",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-2022-fns-venue-228-2",
+      "label": "第2夜",
+      "day": null,
+      "session": null,
+      "date": "2022-12-14",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ビタミンSUMMER！",
+            "versionLabel": "ショートVer. (1番→間奏ダンス→ラスサビ)",
+            "versionCode": "ver-1",
+            "recordingId": "summer__ver-1",
+            "displayTitle": "ビタミンSUMMER！（ショートVer. (1番→間奏ダンス→ラスサビ)）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ZWv75IO2XgpEQdtD2YjwJ",
+            "uri": "spotify:track:3ZWv75IO2XgpEQdtD2YjwJ",
+            "matchedTitle": "ビタミンSUMMER！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-special-lovelive-connect-the-stars",
+  "title": "ラブライブ！スーパースター!! Liella! Special LoveLive! ～Connect the Stars～",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/yuigaoka/live/live_detail.php?p=splive",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/266",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-special-lovelive-connect-the-stars-venue-385-performance-664",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2025-08-11",
+      "venue": {
+        "name": "有明アリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aspire",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aspire__original",
+            "displayTitle": "Aspire"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6nAcd7KirTRfN1r2BH9h6j",
+            "uri": "spotify:track:6nAcd7KirTRfN1r2BH9h6j",
+            "matchedTitle": "Aspire",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737acae15f26472fe5df2f1577",
+            "albumName": "Aspire"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump Into the New World",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jump-into-the-new-world__original",
+            "displayTitle": "Jump Into the New World"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4URE7AVGX1R4yFSJSV49vb",
+            "uri": "spotify:track:4URE7AVGX1R4yFSJSV49vb",
+            "matchedTitle": "Jump Into the New World",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRACLE NEW STORY",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "miracle-new-story__1-3-ver",
+            "displayTitle": "MIRACLE NEW STORY（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4In0cnVlkbqvRVutcID0jd",
+            "uri": "spotify:track:4In0cnVlkbqvRVutcID0jd",
+            "matchedTitle": "MIRACLE NEW STORY",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27388bad64699037cd78232c446",
+            "albumName": "MIRACLE NEW STORY"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shooting Voice!!",
+            "versionLabel": "2〜3期生 Ver.",
+            "versionCode": "2-3-ver",
+            "recordingId": "shooting-voice__2-3-ver",
+            "displayTitle": "Shooting Voice!!（2〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6bnTQuwiqNNhdPfiIWe69H",
+            "uri": "spotify:track:6bnTQuwiqNNhdPfiIWe69H",
+            "matchedTitle": "Shooting Voice!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739a5f0324330c444ccfc089dd",
+            "albumName": "not ALONE not HITORI / ミラクル STAY TUNE！ / Shooting Voice!!【Liella!盤】"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スター宣言",
+            "versionLabel": "2〜3期生 Ver.",
+            "versionCode": "2-3-ver",
+            "recordingId": "track-10w2k5w__2-3-ver",
+            "displayTitle": "スター宣言（2〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "28NYndXD1omYwY6iinJkNC",
+            "uri": "spotify:track:28NYndXD1omYwY6iinJkNC",
+            "matchedTitle": "スター宣言",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Summer Escape!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "summer-escape__original",
+            "displayTitle": "Summer Escape!!"
+          },
+          "artistHint": "桜小路きな子 (CV.鈴原希実), 米女メイ (CV.薮島朱音), 若菜四季 (CV.大熊和奏), 鬼塚夏美 (CV.絵森 彩)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4lw7DYca7BSkiQlFSe5zgj",
+            "uri": "spotify:track:4lw7DYca7BSkiQlFSe5zgj",
+            "matchedTitle": "Summer Escape!!",
+            "matchedArtist": "桜小路きな子 (CV.鈴原希実), 米女メイ (CV.薮島朱音), 若菜四季 (CV.大熊和奏), 鬼塚夏美 (CV.絵森 彩)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734234ff9b2873f62adc6f757e",
+            "albumName": "リエラのうた3"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "dolce",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dolce__original",
+            "displayTitle": "dolce"
+          },
+          "artistHint": "ウィーン・マルガレーテ (CV.結那)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5jDSeyLwzGSksmNyV9a3fh",
+            "uri": "spotify:track:5jDSeyLwzGSksmNyV9a3fh",
+            "matchedTitle": "dolce (ウィーン・マルガレーテ Ver.)",
+            "matchedArtist": "ウィーン・マルガレーテ (CV.結那)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734234ff9b2873f62adc6f757e",
+            "albumName": "リエラのうた3"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Blooming Dance！Dance！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "blooming-dance-dance__original",
+            "displayTitle": "Blooming Dance！Dance！"
+          },
+          "artistHint": "桜小路きな子 (CV.鈴原希実), 米女メイ (CV.薮島朱音), 若菜四季 (CV.大熊和奏), 鬼塚夏美 (CV.絵森 彩)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1eZ0tMwEQy5RV1amufBvD2",
+            "uri": "spotify:track:1eZ0tMwEQy5RV1amufBvD2",
+            "matchedTitle": "Blooming Dance！Dance！",
+            "matchedArtist": "桜小路きな子 (CV.鈴原希実), 米女メイ (CV.薮島朱音), 若菜四季 (CV.大熊和奏), 鬼塚夏美 (CV.絵森 彩)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cd09964b602398e03f11f9dc",
+            "albumName": "Blooming Dance！Dance！"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What a Wonderful Dream!!",
+            "versionLabel": "2〜3期生 Ver.",
+            "versionCode": "2-3-ver",
+            "recordingId": "what-a-wonderful-dream__2-3-ver",
+            "displayTitle": "What a Wonderful Dream!!（2〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1dpYYxpdNcvatacognbyTc",
+            "uri": "spotify:track:1dpYYxpdNcvatacognbyTc",
+            "matchedTitle": "What a Wonderful Dream!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e52dd7924bbc346288cfbbd7",
+            "albumName": "What a Wonderful Dream!!"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "オルタネイト",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1twjbsi__original",
+            "displayTitle": "オルタネイト"
+          },
+          "artistHint": "CatChu!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7sbgxp1bV0DSYHvVS1Sa9B",
+            "uri": "spotify:track:7sbgxp1bV0DSYHvVS1Sa9B",
+            "matchedTitle": "オルタネイト",
+            "matchedArtist": "CatChu!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全力ライオット",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-wqd46q__original",
+            "displayTitle": "全力ライオット"
+          },
+          "artistHint": "CatChu!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "07D6Za2GjFugWs8Vul1npr",
+            "uri": "spotify:track:07D6Za2GjFugWs8Vul1npr",
+            "matchedTitle": "全力ライオット",
+            "matchedArtist": "CatChu!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730ecceaed41a4934f1bfd6810",
+            "albumName": "ディストーション"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ディストーション",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1sr4yl9__original",
+            "displayTitle": "ディストーション"
+          },
+          "artistHint": "CatChu!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1uKqI8Bm5VGAlQ0bVhXnyC",
+            "uri": "spotify:track:1uKqI8Bm5VGAlQ0bVhXnyC",
+            "matchedTitle": "ディストーション",
+            "matchedArtist": "CatChu!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730ecceaed41a4934f1bfd6810",
+            "albumName": "ディストーション"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ベロア",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ckcgr__original",
+            "displayTitle": "ベロア"
+          },
+          "artistHint": "KALEIDOSCORE",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3nay4HjW2gVNkOUhYw3S0z",
+            "uri": "spotify:track:3nay4HjW2gVNkOUhYw3S0z",
+            "matchedTitle": "ベロア",
+            "matchedArtist": "KALEIDOSCORE",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "不可視なブルー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-167d896__original",
+            "displayTitle": "不可視なブルー"
+          },
+          "artistHint": "KALEIDOSCORE",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1jcxDskPDL6yZdKfA0oHhS",
+            "uri": "spotify:track:1jcxDskPDL6yZdKfA0oHhS",
+            "matchedTitle": "不可視なブルー",
+            "matchedArtist": "KALEIDOSCORE",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ニュートラル",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-a0mhex__original",
+            "displayTitle": "ニュートラル"
+          },
+          "artistHint": "KALEIDOSCORE",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "77mx2Mcq8pyGlB1W5TtGfT",
+            "uri": "spotify:track:77mx2Mcq8pyGlB1W5TtGfT",
+            "matchedTitle": "ニュートラル",
+            "matchedArtist": "KALEIDOSCORE",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e6483d38bbbe41196e40e1dd",
+            "albumName": "ニュートラル"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dancing Raspberry",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dancing-raspberry__original",
+            "displayTitle": "Dancing Raspberry"
+          },
+          "artistHint": "5yncri5e!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3xYqpDqIb0jMFgWNm9WqBY",
+            "uri": "spotify:track:3xYqpDqIb0jMFgWNm9WqBY",
+            "matchedTitle": "Dancing Raspberry",
+            "matchedArtist": "5yncri5e!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "A Little Love",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "a-little-love__original",
+            "displayTitle": "A Little Love"
+          },
+          "artistHint": "5yncri5e!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7wAjfJrjqc7649aXech1T5",
+            "uri": "spotify:track:7wAjfJrjqc7649aXech1T5",
+            "matchedTitle": "A Little Love",
+            "matchedArtist": "5yncri5e!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Thank you Good morning",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "thank-you-good-morning__original",
+            "displayTitle": "Thank you Good morning"
+          },
+          "artistHint": "5yncri5e!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4v32xB13Zhm3OrOlNgjjUz",
+            "uri": "spotify:track:4v32xB13Zhm3OrOlNgjjUz",
+            "matchedTitle": "Thank you Good morning",
+            "matchedArtist": "5yncri5e!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732362dd843bd88a411448ee11",
+            "albumName": "Jellyfish"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HOT PASSION!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hot-passion__original",
+            "displayTitle": "HOT PASSION!!"
+          },
+          "artistHint": "Sunny Passion",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "34wpzWPMjc9yDSztkdqeYm",
+            "uri": "spotify:track:34wpzWPMjc9yDSztkdqeYm",
+            "matchedTitle": "HOT PASSION!!",
+            "matchedArtist": "Sunny Passion",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fc602050979f43e7fdf49f93",
+            "albumName": "HOT PASSION!!"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Till Sunrise",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "till-sunrise__original",
+            "displayTitle": "Till Sunrise"
+          },
+          "artistHint": "Sunny Passion",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5IqjEV8WWyoElOEgz68b6F",
+            "uri": "spotify:track:5IqjEV8WWyoElOEgz68b6F",
+            "matchedTitle": "Till Sunrise",
+            "matchedArtist": "Sunny Passion",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fc602050979f43e7fdf49f93",
+            "albumName": "HOT PASSION!!"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "M21",
+          "type": "song",
+          "recording": {
+            "baseTitle": "キラーキューン☆",
+            "versionLabel": "1〜3期生 ＆ Sunny Passion Ver.",
+            "versionCode": "1-3-and-sunny-passion-ver",
+            "recordingId": "track-uruco8__1-3-and-sunny-passion-ver",
+            "displayTitle": "キラーキューン☆（1〜3期生 ＆ Sunny Passion Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "49x3Mymb6B0WbhYsPNI2A6",
+            "uri": "spotify:track:49x3Mymb6B0WbhYsPNI2A6",
+            "matchedTitle": "キラーキューン☆",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27388bad64699037cd78232c446",
+            "albumName": "MIRACLE NEW STORY"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイコトバ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-v2e7zv__original",
+            "displayTitle": "アイコトバ！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5x2CP6plITBIEwMKZ6he8T",
+            "uri": "spotify:track:5x2CP6plITBIEwMKZ6he8T",
+            "matchedTitle": "アイコトバ！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ce588446f8b864de5f11b13d",
+            "albumName": "アイコトバ！"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シェキラ☆☆☆",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ethoyd__original",
+            "displayTitle": "シェキラ☆☆☆"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7lmoKU5kY1haRL1N1hiqzE",
+            "uri": "spotify:track:7lmoKU5kY1haRL1N1hiqzE",
+            "matchedTitle": "シェキラ☆☆☆",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27317640a57a5489e4be93e1a66",
+            "albumName": "シェキラ☆☆☆"
+          }
+        },
+        {
+          "order": 24,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "追いかける夢の先で",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "track-1y50mi4__1-3-ver",
+            "displayTitle": "追いかける夢の先で（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4cl0X7Mf429KwWKqKYmJuk",
+            "uri": "spotify:track:4cl0X7Mf429KwWKqKYmJuk",
+            "matchedTitle": "追いかける夢の先で",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

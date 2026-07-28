@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-bilibili-world-2023",
+  "title": "BILIBILI WORLD 2023",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://bw.bilibili.com",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/174",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-bilibili-world-2023-1-1-national-exhibition-and-convention-center-performance-432",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-07-23",
+      "venue": {
+        "name": "国家会展中心（上海）1.1号馆 (National Exhibition and Convention Center)",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "追いかける夢の先で",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1y50mi4__original",
+            "displayTitle": "追いかける夢の先で"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4cl0X7Mf429KwWKqKYmJuk",
+            "uri": "spotify:track:4cl0X7Mf429KwWKqKYmJuk",
+            "matchedTitle": "追いかける夢の先で",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

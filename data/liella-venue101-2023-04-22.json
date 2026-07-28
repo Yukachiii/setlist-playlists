@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-venue101-2023-04-22",
+  "title": "Venue101（2023年04月22日放送回）",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.nhk.or.jp/music/venue101/https://www.lovelive-anime.jp/news/01_1971.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/159",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-venue101-2023-04-22-venue-236-performance-396",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-04-22",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Second Sparkle",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "second-sparkle__ver",
+            "displayTitle": "Second Sparkle（ショートVer.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7lxkZ1mg0l8EWy9zKwLlBy",
+            "uri": "spotify:track:7lxkZ1mg0l8EWy9zKwLlBy",
+            "matchedTitle": "Second Sparkle",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

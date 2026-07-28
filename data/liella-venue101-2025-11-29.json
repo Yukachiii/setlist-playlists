@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-venue101-2025-11-29",
+  "title": "Venue101（2025年11月29日放送回）",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.web.nhk/tv/an/venue101/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/291",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-venue101-2025-11-29-venue-431-performance-736",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2025-11-29",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "OPEN THE G☆TE!!!",
+            "versionLabel": "Short Ver.",
+            "versionCode": "short-ver",
+            "recordingId": "open-the-g-te__short-ver",
+            "displayTitle": "OPEN THE G☆TE!!!（Short Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3jnoJmbk2AOzr4ASEZX9Yg",
+            "uri": "spotify:track:3jnoJmbk2AOzr4ASEZX9Yg",
+            "matchedTitle": "OPEN THE G☆TE!!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731364c2af1cf93f31f06feb36",
+            "albumName": "OPEN THE G☆TE!!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

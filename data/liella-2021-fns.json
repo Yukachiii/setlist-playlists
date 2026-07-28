@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-2021-fns",
+  "title": "2021 FNS歌謡祭",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.fujitv.co.jp/FNS/2021/index.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/124",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-2021-fns-venue-178-2",
+      "label": "第2夜",
+      "day": null,
+      "session": null,
+      "date": "2021-12-08",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来予報ハレルヤ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1oo9sle__original",
+            "displayTitle": "未来予報ハレルヤ！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "66644jnT2XgCrBvfgTdnHz",
+            "uri": "spotify:track:66644jnT2XgCrBvfgTdnHz",
+            "matchedTitle": "未来予報ハレルヤ！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273034c67c655f2c4e83d1af6bf",
+            "albumName": "未来予報ハレルヤ！ / Tiny Stars【第1話盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-tv-2-op-and-ed",
+  "title": "TVアニメ『ラブライブ！スーパースター!!』2期OP＆ED主題歌連動リリースイベント",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/yuigaoka/live/sp_2ndoped/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/132",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-tv-2-op-and-ed-line-cube-shibuya-1",
+      "label": "1回目",
+      "day": null,
+      "session": null,
+      "date": "2022-09-21",
+      "venue": {
+        "name": "LINE CUBE SHIBUYA（渋谷公会堂）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WE WILL!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "we-will__original",
+            "displayTitle": "WE WILL!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "303nMUB7ZGut9mf91o8S74",
+            "uri": "spotify:track:303nMUB7ZGut9mf91o8S74",
+            "matchedTitle": "WE WILL!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スター宣言",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10w2k5w__original",
+            "displayTitle": "スター宣言"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "28NYndXD1omYwY6iinJkNC",
+            "uri": "spotify:track:28NYndXD1omYwY6iinJkNC",
+            "matchedTitle": "スター宣言",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "水しぶきのサイン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1q8cg8t__original",
+            "displayTitle": "水しぶきのサイン"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "58RWDskxgEq7tCqKzidG1X",
+            "uri": "spotify:track:58RWDskxgEq7tCqKzidG1X",
+            "matchedTitle": "水しぶきのサイン",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fac7326fefe001f4c2e14d38",
+            "albumName": "追いかける夢の先で"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "追いかける夢の先で",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1y50mi4__original",
+            "displayTitle": "追いかける夢の先で"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4cl0X7Mf429KwWKqKYmJuk",
+            "uri": "spotify:track:4cl0X7Mf429KwWKqKYmJuk",
+            "matchedTitle": "追いかける夢の先で",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "私のSymphony",
+            "versionLabel": "1番 2期生Ver. → 2番以降 9人Ver.",
+            "versionCode": "1-2-ver-2-9-ver",
+            "recordingId": "symphony__1-2-ver-2-9-ver",
+            "displayTitle": "私のSymphony（1番 2期生Ver. → 2番以降 9人Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "24zKLQQwsRPJVomQc5fWBs",
+            "uri": "spotify:track:24zKLQQwsRPJVomQc5fWBs",
+            "matchedTitle": "私のSymphony",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d0fb2c68d7cd8803ea74e66f",
+            "albumName": "始まりは君の空【私を叶える物語盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-tv-2-op-and-ed-line-cube-shibuya-2",
+      "label": "2回目",
+      "day": null,
+      "session": null,
+      "date": "2022-09-21",
+      "venue": {
+        "name": "LINE CUBE SHIBUYA（渋谷公会堂）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WE WILL!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "we-will__original",
+            "displayTitle": "WE WILL!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "303nMUB7ZGut9mf91o8S74",
+            "uri": "spotify:track:303nMUB7ZGut9mf91o8S74",
+            "matchedTitle": "WE WILL!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スター宣言",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10w2k5w__original",
+            "displayTitle": "スター宣言"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "28NYndXD1omYwY6iinJkNC",
+            "uri": "spotify:track:28NYndXD1omYwY6iinJkNC",
+            "matchedTitle": "スター宣言",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "水しぶきのサイン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1q8cg8t__original",
+            "displayTitle": "水しぶきのサイン"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "58RWDskxgEq7tCqKzidG1X",
+            "uri": "spotify:track:58RWDskxgEq7tCqKzidG1X",
+            "matchedTitle": "水しぶきのサイン",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fac7326fefe001f4c2e14d38",
+            "albumName": "追いかける夢の先で"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "追いかける夢の先で",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1y50mi4__original",
+            "displayTitle": "追いかける夢の先で"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4cl0X7Mf429KwWKqKYmJuk",
+            "uri": "spotify:track:4cl0X7Mf429KwWKqKYmJuk",
+            "matchedTitle": "追いかける夢の先で",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "私のSymphony",
+            "versionLabel": "1番 2期生Ver. → 2番以降 9人Ver.",
+            "versionCode": "1-2-ver-2-9-ver",
+            "recordingId": "symphony__1-2-ver-2-9-ver",
+            "displayTitle": "私のSymphony（1番 2期生Ver. → 2番以降 9人Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "24zKLQQwsRPJVomQc5fWBs",
+            "uri": "spotify:track:24zKLQQwsRPJVomQc5fWBs",
+            "matchedTitle": "私のSymphony",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d0fb2c68d7cd8803ea74e66f",
+            "albumName": "始まりは君の空【私を叶える物語盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

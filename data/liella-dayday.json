@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-dayday",
+  "title": "DayDay.",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.ntv.co.jp/dayday/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/311",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-dayday-venue-455-performance-778",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2026-06-17",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋のチュートリアル",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1mvuva7__ver",
+            "displayTitle": "恋のチュートリアル（ショート Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1A1XcyBIGcCNcOhJhnqdtH",
+            "uri": "spotify:track:1A1XcyBIGcCNcOhJhnqdtH",
+            "matchedTitle": "恋のチュートリアル",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d8a7ecc8567ec1d6eb152e6b",
+            "albumName": "恋のチュートリアル"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

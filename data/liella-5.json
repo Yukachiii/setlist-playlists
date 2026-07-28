@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-5",
+  "title": "Liella! デビューシングルリリースイベント「始まりはみんなの空」",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/yuigaoka/live/sp_hms/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/93",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-line-cube-shibuya-performance-183",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2021-05-06",
+      "venue": {
+        "name": "LINE CUBE SHIBUYA（渋谷公会堂）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "始まりは君の空",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-tnarcc__original",
+            "displayTitle": "始まりは君の空"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0MncuXVpGP5tkFFaml5YhK",
+            "uri": "spotify:track:0MncuXVpGP5tkFFaml5YhK",
+            "matchedTitle": "始まりは君の空",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27365497835cd8913f4c7fc8f37",
+            "albumName": "始まりは君の空 【みんなで叶える物語盤】"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dancing Heart La-Pa-Pa-Pa!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dancing-heart-la-pa-pa-pa__original",
+            "displayTitle": "Dancing Heart La-Pa-Pa-Pa!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2rUCJUwN9hDchqN9xkPloN",
+            "uri": "spotify:track:2rUCJUwN9hDchqN9xkPloN",
+            "matchedTitle": "Dancing Heart La-Pa-Pa-Pa!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d0fb2c68d7cd8803ea74e66f",
+            "albumName": "始まりは君の空【私を叶える物語盤】"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dreaming Energy",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dreaming-energy__original",
+            "displayTitle": "Dreaming Energy"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0MMfyuPV46WdFMr6OTbgMe",
+            "uri": "spotify:track:0MMfyuPV46WdFMr6OTbgMe",
+            "matchedTitle": "Dreaming Energy",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27365497835cd8913f4c7fc8f37",
+            "albumName": "始まりは君の空 【みんなで叶える物語盤】"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "私のSymphony",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "symphony__original",
+            "displayTitle": "私のSymphony"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "24zKLQQwsRPJVomQc5fWBs",
+            "uri": "spotify:track:24zKLQQwsRPJVomQc5fWBs",
+            "matchedTitle": "私のSymphony",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d0fb2c68d7cd8803ea74e66f",
+            "albumName": "始まりは君の空【私を叶える物語盤】"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "始まりは君の空",
+            "versionLabel": "～みんなver.～ （ショートサイズのアコースティックアレンジ）",
+            "versionCode": "ver",
+            "recordingId": "track-tnarcc__ver",
+            "displayTitle": "始まりは君の空（～みんなver.～ （ショートサイズのアコースティックアレンジ））"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0MncuXVpGP5tkFFaml5YhK",
+            "uri": "spotify:track:0MncuXVpGP5tkFFaml5YhK",
+            "matchedTitle": "始まりは君の空",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27365497835cd8913f4c7fc8f37",
+            "albumName": "始まりは君の空 【みんなで叶える物語盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
