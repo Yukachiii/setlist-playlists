@@ -38,7 +38,9 @@ test("PCの固定タブとプレイリスト作成欄が重ならない", () => 
 test("Spotify楽曲情報の自動検出に関する注意書きを表示する", () => {
   assert.match(html, /Spotify楽曲情報は自動検出を含むため、誤っている場合があります。/);
   assert.match(html, /href="https:\/\/x\.com\/Cocona_Kona"/);
-  assert.match(html, /不具合報告：@Cocona_Kona/);
+  assert.match(html, /修正依頼：X（@Cocona_Kona）/);
+  assert.match(html, /href="https:\/\/marshmallow-qa\.com\/abwyzu4ah3yhb24\?/);
+  assert.match(html, /修正依頼：マシュマロ/);
   assert.match(html, /©︎ゆいゆい/);
 });
 

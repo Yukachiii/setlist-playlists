@@ -311,7 +311,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-footer { min-height: 190px; padding: 45px max(20px, calc((100% - 1180px) / 2)); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; color: #b5bdcf; background: #0c1324; }
 .footer-brand { color: white; }
 .site-footer p { margin: 12px 0 0; color: #6e7a93; font: 600 10px "DM Sans", sans-serif; letter-spacing: 0.6px; }
-.footer-links { display: flex; gap: 24px; color: #929db3; font-size: 11px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 16px 24px; color: #929db3; font-size: 11px; }
 .site-footer > small { grid-column: 1 / -1; color: #59647a; font-size: 9px; }
 .toast { position: fixed; z-index: 100; right: 22px; bottom: 22px; max-width: min(420px, calc(100% - 44px)); padding: 14px 18px; color: white; background: #202a40; border-radius: 11px; box-shadow: var(--shadow); font-size: 12px; opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity 180ms ease, transform 180ms ease; }
 .toast.visible { opacity: 1; transform: translateY(0); }
