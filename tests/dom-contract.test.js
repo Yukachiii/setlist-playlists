@@ -118,3 +118,12 @@ test("管理画面の公演一覧をシリーズごとのプルダウンで表�
   assert.match(app, /details\.open = containsSelected \|\| state\.expandedEventSeries\.has\(group\.key\)/);
   assert.match(app, /SERIES_DISPLAY_NAMES/);
 });
+
+test("ナンバリング公演は手動フラグだけで絞り込む", () => {
+  assert.match(html, /id="event-numbered-live"/);
+  assert.match(html, /id="numbered-live-filter"/);
+  assert.match(html, /公演名から自動判定せず/);
+  assert.match(app, /event\.isNumberedLive = elements\.eventNumberedLive\.checked/);
+  assert.match(app, /event\.isNumberedLive === true/);
+  assert.match(app, /isNumberedLive: false/);
+});

@@ -1,0 +1,390 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-bushiroad-rock-festival-2023",
+  "title": "BUSHIROAD ROCK FESTIVAL 2023",
+  "series": [
+    "nijigasaki",
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://live.bushiroad-music.com/brfes2023/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/155",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-bushiroad-rock-festival-2023-venue-232-performance-390",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-05-27",
+      "venue": {
+        "name": "富士急ハイランド コニファーフォレスト",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WE WILL!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "we-will__original",
+            "displayTitle": "WE WILL!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "303nMUB7ZGut9mf91o8S74",
+            "uri": "spotify:track:303nMUB7ZGut9mf91o8S74",
+            "matchedTitle": "WE WILL!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "繚乱！ビクトリーロード",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-15tl9zr__original",
+            "displayTitle": "繚乱！ビクトリーロード"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3XOV9u7TYqfmDWYRqoMfoc",
+            "uri": "spotify:track:3XOV9u7TYqfmDWYRqoMfoc",
+            "matchedTitle": "繚乱！ビクトリーロード",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734adf959d65bd7a60c8ee7c22",
+            "albumName": "夢が僕らの太陽さ"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tokimeki-runners__original",
+            "displayTitle": "TOKIMEKI Runners"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "CHASE!",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "chase__ver",
+            "displayTitle": "CHASE!（ショートVer.）"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0G9AVuZ44K6QKsFOX4wgJ9",
+            "uri": "spotify:track:0G9AVuZ44K6QKsFOX4wgJ9",
+            "matchedTitle": "CHASE!",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ドキピポ☆エモーション",
+            "versionLabel": "ショートVer. (他2人が途中からバックダンサーとして参加)",
+            "versionCode": "ver-2",
+            "recordingId": "track-28ton__ver-2",
+            "displayTitle": "ドキピポ☆エモーション（ショートVer. (他2人が途中からバックダンサーとして参加)）"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3A3n6WN21uAnGleXuysRA8",
+            "uri": "spotify:track:3A3n6WN21uAnGleXuysRA8",
+            "matchedTitle": "ドキピポ☆エモーション",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Just Believe!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "just-believe__original",
+            "displayTitle": "Just Believe!!!"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "797AE5T5YMIbez2bEyVWWe",
+            "uri": "spotify:track:797AE5T5YMIbez2bEyVWWe",
+            "matchedTitle": "Just Believe!!! (12人 Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273515166f4c5e37a5aa011e816",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.2"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ダイアモンド",
+            "versionLabel": "ショートVer. (他2人が途中からバックダンサーとして参加)",
+            "versionCode": "ver-2",
+            "recordingId": "track-yhybfx__ver-2",
+            "displayTitle": "ダイアモンド（ショートVer. (他2人が途中からバックダンサーとして参加)）"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3YDOomlZMrbEEdJs5eZKuu",
+            "uri": "spotify:track:3YDOomlZMrbEEdJs5eZKuu",
+            "matchedTitle": "ダイアモンド",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "colorful-dreams-colorful-smiles__original",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "NEO SKY, NEO MAP!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "neo-sky-neo-map__original",
+            "displayTitle": "NEO SKY, NEO MAP!"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67RkkdJqrW8JbO5ugU3sTJ",
+            "uri": "spotify:track:67RkkdJqrW8JbO5ugU3sTJ",
+            "matchedTitle": "NEO SKY, NEO MAP!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ビタミンSUMMER！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "summer__original",
+            "displayTitle": "ビタミンSUMMER！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ZWv75IO2XgpEQdtD2YjwJ",
+            "uri": "spotify:track:3ZWv75IO2XgpEQdtD2YjwJ",
+            "matchedTitle": "ビタミンSUMMER！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRACLE NEW STORY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "miracle-new-story__original",
+            "displayTitle": "MIRACLE NEW STORY"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4In0cnVlkbqvRVutcID0jd",
+            "uri": "spotify:track:4In0cnVlkbqvRVutcID0jd",
+            "matchedTitle": "MIRACLE NEW STORY",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27388bad64699037cd78232c446",
+            "albumName": "MIRACLE NEW STORY"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "揺らぐわ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ansyp__original",
+            "displayTitle": "揺らぐわ"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Orz6pPLlBx61mMw9Q5vQb",
+            "uri": "spotify:track:6Orz6pPLlBx61mMw9Q5vQb",
+            "matchedTitle": "揺らぐわ",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273663fb1e899ca2d140d172b42",
+            "albumName": "Welcome to 僕らのセカイ / Go!! リスタート【第3話盤】"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Day1",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "day1__original",
+            "displayTitle": "Day1"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6kovEwihtXsS3WWW35E3lX",
+            "uri": "spotify:track:6kovEwihtXsS3WWW35E3lX",
+            "matchedTitle": "Day1",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371077efb169c341bc340af92",
+            "albumName": "ノンフィクション!! / Starlight Prologue【第10話盤】"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Second Sparkle",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "second-sparkle__original",
+            "displayTitle": "Second Sparkle"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7lxkZ1mg0l8EWy9zKwLlBy",
+            "uri": "spotify:track:7lxkZ1mg0l8EWy9zKwLlBy",
+            "matchedTitle": "Second Sparkle",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736d917934e3c291c5be1a94fa",
+            "albumName": "Second Sparkle"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TO BE CONTINUED",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "to-be-continued__original",
+            "displayTitle": "TO BE CONTINUED"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2KwBfbpWQNolpT7cI32ndl",
+            "uri": "spotify:track:2KwBfbpWQNolpT7cI32ndl",
+            "matchedTitle": "TO BE CONTINUED",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735c75a7e5334ee77ce029df03",
+            "albumName": "Sing！Shine！Smile！ / 未来の音が聴こえる【第12話盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

@@ -1,0 +1,1075 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-flower-music-live-boooooom-boooooom-bee",
+  "title": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 FLOWER MUSIC LIVE『Boooooom Boooooom Bee!!』",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/nijigasaki/live/live_detail.php?p=flower_live",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/262",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-flower-music-live-boooooom-boooooom-bee-tokyo-day-1",
+      "label": "DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2026-01-17",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Boooooom Boooooom Bee!!",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "boooooom-boooooom-bee__ver",
+            "displayTitle": "Boooooom Boooooom Bee!!（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "747pG728dmc7Jj5khpV4Gf",
+            "uri": "spotify:track:747pG728dmc7Jj5khpV4Gf",
+            "matchedTitle": "Boooooom Boooooom Bee!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "New Year's March！",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "new-year-s-march__ver",
+            "displayTitle": "New Year's March！（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4tntAyjJG0VioM5B2jkKkj",
+            "uri": "spotify:track:4tntAyjJG0VioM5B2jkKkj",
+            "matchedTitle": "New Year's March！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27317c2bc31183bfbab8e4034b2",
+            "albumName": "New Year's March！"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "わちゅごなどぅー",
+            "versionLabel": "侑、歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-bhhem0__ver",
+            "displayTitle": "わちゅごなどぅー（侑、歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hAnxsOLd0TsGJ8JzQetGy",
+            "uri": "spotify:track:0hAnxsOLd0TsGJ8JzQetGy",
+            "matchedTitle": "わちゅごなどぅー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27320a80ce7233bf161df0aa36c",
+            "albumName": "わちゅごなどぅー"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ふわふわり",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1j2h8e5__original",
+            "displayTitle": "ふわふわり"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優), エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6wwhaEiFbi6fT2WRQDdhqS",
+            "uri": "spotify:track:6wwhaEiFbi6fT2WRQDdhqS",
+            "matchedTitle": "ふわふわり",
+            "matchedArtist": "中須かすみ (CV.相良茉優), エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sweet Eyes",
+            "versionLabel": "かすみ、エマ Ver.",
+            "versionCode": "ver",
+            "recordingId": "sweet-eyes__ver",
+            "displayTitle": "Sweet Eyes（かすみ、エマ Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LuQ7iiPSb1zGvEgWD7A4E",
+            "uri": "spotify:track:4LuQ7iiPSb1zGvEgWD7A4E",
+            "matchedTitle": "Sweet Eyes",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "VIVA！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "viva__original",
+            "displayTitle": "VIVA！"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美), 三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5xgmc9AkuqSiuW37iOobOD",
+            "uri": "spotify:track:5xgmc9AkuqSiuW37iOobOD",
+            "matchedTitle": "VIVA！",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美), 三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "versionLabel": "璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sugar-sugar-yummy-yummy-parfait__ver",
+            "displayTitle": "Sugar Sugar Yummy Yummy Parfait（璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i6JDM1SAA6nwM6gyln6I7",
+            "uri": "spotify:track:4i6JDM1SAA6nwM6gyln6I7",
+            "matchedTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730d507a8c37ee8339cbdced57",
+            "albumName": "KAGAYAKI Don't forget!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DIZZY LILY VALLEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dizzy-lily-valley__original",
+            "displayTitle": "DIZZY LILY VALLEY"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃), 朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6dhRh5vqrT5fegQNidLj7R",
+            "uri": "spotify:track:6dhRh5vqrT5fegQNidLj7R",
+            "matchedTitle": "DIZZY LILY VALLEY",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃), 朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "トワイライト",
+            "versionLabel": "歩夢、果林 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-11rjehf__ver",
+            "displayTitle": "トワイライト（歩夢、果林 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ddh7Te3y1frd3KW0ztfgg",
+            "uri": "spotify:track:3ddh7Te3y1frd3KW0ztfgg",
+            "matchedTitle": "トワイライト",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "にじいろ☆ルミエール",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1up5ys0__original",
+            "displayTitle": "にじいろ☆ルミエール"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4W9FNBn0QT20rPAwwtLeEk",
+            "uri": "spotify:track:4W9FNBn0QT20rPAwwtLeEk",
+            "matchedTitle": "にじいろ☆ルミエール",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c61a7d2c8a270471520bd06c",
+            "albumName": "にじいろ☆ルミエール"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUMMER WARNING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "summer-warning__original",
+            "displayTitle": "SUMMER WARNING"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3jUUcX2z4iUFVF4cdA6pwq",
+            "uri": "spotify:track:3jUUcX2z4iUFVF4cdA6pwq",
+            "matchedTitle": "SUMMER WARNING",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c7425c3e88e3fa3c1c2ec0d0",
+            "albumName": "SUMMER WARNING"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Starry Night Serenade",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "starry-night-serenade__original",
+            "displayTitle": "Starry Night Serenade"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4rmPYFZD8dGzoMzaLzXZG4",
+            "uri": "spotify:track:4rmPYFZD8dGzoMzaLzXZG4",
+            "matchedTitle": "Starry Night Serenade",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ba1709355c4fd760dde74369",
+            "albumName": "Starry Night Serenade"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dress Code",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dress-code__original",
+            "displayTitle": "Dress Code"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2bZVNqFA7pB60IRsd2MuaZ",
+            "uri": "spotify:track:2bZVNqFA7pB60IRsd2MuaZ",
+            "matchedTitle": "Dress Code",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273bc595aac2ee68b687638d4bb",
+            "albumName": "Dress Code"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "酸欠",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-16w9811__original",
+            "displayTitle": "酸欠"
+          },
+          "artistHint": "三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5mFiX5j6gy2Rb7kl6WKUYX",
+            "uri": "spotify:track:5mFiX5j6gy2Rb7kl6WKUYX",
+            "matchedTitle": "酸欠",
+            "matchedArtist": "三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731d2e3b70f212071359c07d00",
+            "albumName": "酸欠"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "The Sweetest Time♡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "the-sweetest-time__original",
+            "displayTitle": "The Sweetest Time♡"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7hqds9T8CHG2qvOPU5C2vg",
+            "uri": "spotify:track:7hqds9T8CHG2qvOPU5C2vg",
+            "matchedTitle": "The Sweetest Time♡",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738887d526ca7d8917a6622aad",
+            "albumName": "The Sweetest Time♡"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "tokimeki-runners__ver",
+            "displayTitle": "TOKIMEKI Runners（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "love-u-my-friends__ver",
+            "displayTitle": "Love U my friends（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 18,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "約束になれ僕らの歌",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1ixomij__ver",
+            "displayTitle": "約束になれ僕らの歌（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4OVuacA06ePn7Y8UCnzWV3",
+            "uri": "spotify:track:4OVuacA06ePn7Y8UCnzWV3",
+            "matchedTitle": "約束になれ僕らの歌",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738b4c31ecff0b107d9c7973bc",
+            "albumName": "約束になれ僕らの歌"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全速ドリーマー",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-j05sn__ver",
+            "displayTitle": "全速ドリーマー（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "36aaUNInVWqjUSCYGMqYnX",
+            "uri": "spotify:track:36aaUNInVWqjUSCYGMqYnX",
+            "matchedTitle": "全速ドリーマー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 21,
+          "marker": "EN04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Boooooom Boooooom Bee!!",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "boooooom-boooooom-bee__ver",
+            "displayTitle": "Boooooom Boooooom Bee!!（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "747pG728dmc7Jj5khpV4Gf",
+            "uri": "spotify:track:747pG728dmc7Jj5khpV4Gf",
+            "matchedTitle": "Boooooom Boooooom Bee!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "EN05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SINGING, DREAMING, NOW!",
+            "versionLabel": "歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "singing-dreaming-now__ver",
+            "displayTitle": "SINGING, DREAMING, NOW!（歩夢、かすみ、果林、エマ、璃奈、栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05MH7Q4YCsTWtuF9labf5T",
+            "uri": "spotify:track:05MH7Q4YCsTWtuF9labf5T",
+            "matchedTitle": "SINGING, DREAMING, NOW!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e8bd4881e24524d0ee8d554",
+            "albumName": "SINGING, DREAMING, NOW!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-flower-music-live-boooooom-boooooom-bee-tokyo-day-2",
+      "label": "DAY.2",
+      "day": 2,
+      "session": null,
+      "date": "2026-01-18",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Boooooom Boooooom Bee!!",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "boooooom-boooooom-bee__ver",
+            "displayTitle": "Boooooom Boooooom Bee!!（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "747pG728dmc7Jj5khpV4Gf",
+            "uri": "spotify:track:747pG728dmc7Jj5khpV4Gf",
+            "matchedTitle": "Boooooom Boooooom Bee!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "New Year's March！",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "new-year-s-march__ver",
+            "displayTitle": "New Year's March！（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4tntAyjJG0VioM5B2jkKkj",
+            "uri": "spotify:track:4tntAyjJG0VioM5B2jkKkj",
+            "matchedTitle": "New Year's March！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27317c2bc31183bfbab8e4034b2",
+            "albumName": "New Year's March！"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "わちゅごなどぅー",
+            "versionLabel": "侑、しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-bhhem0__ver",
+            "displayTitle": "わちゅごなどぅー（侑、しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hAnxsOLd0TsGJ8JzQetGy",
+            "uri": "spotify:track:0hAnxsOLd0TsGJ8JzQetGy",
+            "matchedTitle": "わちゅごなどぅー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27320a80ce7233bf161df0aa36c",
+            "albumName": "わちゅごなどぅー"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ワンダーメイツ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ye5zdq__original",
+            "displayTitle": "ワンダーメイツ"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里), 近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3BlPMhVbtEDfXBufC0Xrbv",
+            "uri": "spotify:track:3BlPMhVbtEDfXBufC0Xrbv",
+            "matchedTitle": "ワンダーメイツ",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里), 近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sweet Eyes",
+            "versionLabel": "しずく、彼方 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sweet-eyes__ver",
+            "displayTitle": "Sweet Eyes（しずく、彼方 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LuQ7iiPSb1zGvEgWD7A4E",
+            "uri": "spotify:track:4LuQ7iiPSb1zGvEgWD7A4E",
+            "matchedTitle": "Sweet Eyes",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SAVOTINA!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "savotina__original",
+            "displayTitle": "SAVOTINA!!"
+          },
+          "artistHint": "優木せつ菜 (CV.林 鼓子), ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5iO6DhDPVbzywwNHcijUWF",
+            "uri": "spotify:track:5iO6DhDPVbzywwNHcijUWF",
+            "matchedTitle": "SAVOTINA!!",
+            "matchedArtist": "優木せつ菜 (CV.林 鼓子), ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "versionLabel": "せつ菜、ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "sugar-sugar-yummy-yummy-parfait__ver",
+            "displayTitle": "Sugar Sugar Yummy Yummy Parfait（せつ菜、ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i6JDM1SAA6nwM6gyln6I7",
+            "uri": "spotify:track:4i6JDM1SAA6nwM6gyln6I7",
+            "matchedTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730d507a8c37ee8339cbdced57",
+            "albumName": "KAGAYAKI Don't forget!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SOL de ROSA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sol-de-rosa__original",
+            "displayTitle": "SOL de ROSA"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実), 鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1IfYaoHnzwscnNAP2IThSG",
+            "uri": "spotify:track:1IfYaoHnzwscnNAP2IThSG",
+            "matchedTitle": "SOL de ROSA",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実), 鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "トワイライト",
+            "versionLabel": "愛、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-11rjehf__ver",
+            "displayTitle": "トワイライト（愛、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ddh7Te3y1frd3KW0ztfgg",
+            "uri": "spotify:track:3ddh7Te3y1frd3KW0ztfgg",
+            "matchedTitle": "トワイライト",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "White Delight",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "white-delight__original",
+            "displayTitle": "White Delight"
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7t3DycrzuQrG9MP89dzthC",
+            "uri": "spotify:track:7t3DycrzuQrG9MP89dzthC",
+            "matchedTitle": "White Delight",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735f09a5ac4f58a621c2350929",
+            "albumName": "White Delight"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ピチチャプティントンタントン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1g9un47__original",
+            "displayTitle": "ピチチャプティントンタントン"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0J4jDvT1HezZkFENeHPeAN",
+            "uri": "spotify:track:0J4jDvT1HezZkFENeHPeAN",
+            "matchedTitle": "ピチチャプティントンタントン",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec19487fa52f1616a2a58899",
+            "albumName": "ピチチャプティントンタントン"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Ride the wave!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "ride-the-wave__original",
+            "displayTitle": "Ride the wave!"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7o46Yx7NH9uK4zMb8cOEMG",
+            "uri": "spotify:track:7o46Yx7NH9uK4zMb8cOEMG",
+            "matchedTitle": "Ride the wave!",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ee607d4028d1d38d1b15e187",
+            "albumName": "Ride the wave!"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What a Beautiful Day!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "what-a-beautiful-day__original",
+            "displayTitle": "What a Beautiful Day!"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7vSIwFuwYYdXG9nXZesIse",
+            "uri": "spotify:track:7vSIwFuwYYdXG9nXZesIse",
+            "matchedTitle": "What a Beautiful Day!",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc1dae703ca9d0634bc96c35",
+            "albumName": "What a Beautiful Day!"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Bravo!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "bravo__original",
+            "displayTitle": "Bravo!"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0JTp5qJnSm2WiyKVCrixSg",
+            "uri": "spotify:track:0JTp5qJnSm2WiyKVCrixSg",
+            "matchedTitle": "Bravo!",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f041fd253b0b15a39414596a",
+            "albumName": "Bravo!"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "YES! to Tomorrow",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "yes-to-tomorrow__original",
+            "displayTitle": "YES! to Tomorrow"
+          },
+          "artistHint": "優木せつ菜 (CV.林 鼓子)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "52Kg6UXPZV7icROmpGPAEZ",
+            "uri": "spotify:track:52Kg6UXPZV7icROmpGPAEZ",
+            "matchedTitle": "YES! to Tomorrow",
+            "matchedArtist": "優木せつ菜 (CV.林 鼓子)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737c96da0da8b36f4354b0f801",
+            "albumName": "YES! to Tomorrow"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "tokimeki-runners__ver",
+            "displayTitle": "TOKIMEKI Runners（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "love-u-my-friends__ver",
+            "displayTitle": "Love U my friends（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 18,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "約束になれ僕らの歌",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1ixomij__ver",
+            "displayTitle": "約束になれ僕らの歌（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4OVuacA06ePn7Y8UCnzWV3",
+            "uri": "spotify:track:4OVuacA06ePn7Y8UCnzWV3",
+            "matchedTitle": "約束になれ僕らの歌",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738b4c31ecff0b107d9c7973bc",
+            "albumName": "約束になれ僕らの歌"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全速ドリーマー",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-j05sn__ver",
+            "displayTitle": "全速ドリーマー（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "36aaUNInVWqjUSCYGMqYnX",
+            "uri": "spotify:track:36aaUNInVWqjUSCYGMqYnX",
+            "matchedTitle": "全速ドリーマー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 21,
+          "marker": "EN04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Boooooom Boooooom Bee!!",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "boooooom-boooooom-bee__ver",
+            "displayTitle": "Boooooom Boooooom Bee!!（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "747pG728dmc7Jj5khpV4Gf",
+            "uri": "spotify:track:747pG728dmc7Jj5khpV4Gf",
+            "matchedTitle": "Boooooom Boooooom Bee!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27303118662fc277ace6268a855",
+            "albumName": "NIJIGAKU FLOWER MUSIC"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "EN05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SINGING, DREAMING, NOW!",
+            "versionLabel": "しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "singing-dreaming-now__ver",
+            "displayTitle": "SINGING, DREAMING, NOW!（しずく、愛、彼方、せつ菜、ミア、嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05MH7Q4YCsTWtuF9labf5T",
+            "uri": "spotify:track:05MH7Q4YCsTWtuF9labf5T",
+            "matchedTitle": "SINGING, DREAMING, NOW!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e8bd4881e24524d0ee8d554",
+            "albumName": "SINGING, DREAMING, NOW!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

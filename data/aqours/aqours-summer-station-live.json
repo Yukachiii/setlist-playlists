@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-summer-station-live",
+  "title": "コカ･コーラ SUMMER STATION 音楽LIVE",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.tv-asahi.co.jp/summerstation/area/live/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/20",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-summer-station-live-venue-31-performance-52",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2018-07-27",
+      "venue": {
+        "name": "六本木ヒルズアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君の瞳を巡る冒険",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1e2qjlh__original",
+            "displayTitle": "君の瞳を巡る冒険"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5tqKotcCd6VkFl8g4UZ0SM",
+            "uri": "spotify:track:5tqKotcCd6VkFl8g4UZ0SM",
+            "matchedTitle": "君の瞳を巡る冒険",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRAI TICKET",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "mirai-ticket__original",
+            "displayTitle": "MIRAI TICKET"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7LZJv6aligWIb5emT1xENL",
+            "uri": "spotify:track:7LZJv6aligWIb5emT1xENL",
+            "matchedTitle": "MIRAI TICKET",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731d931cf9f4d549a71629ed2c",
+            "albumName": "想いよひとつになれ／MIRAI TICKET"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-673ilp__original",
+            "displayTitle": "太陽を追いかけろ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kav3wd__original",
+            "displayTitle": "勇気はどこに？君の胸に！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サンシャインぴっかぴか音頭",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7s2v1__original",
+            "displayTitle": "サンシャインぴっかぴか音頭"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1WMuIYCzSdfHCPL3dIuMp4",
+            "uri": "spotify:track:1WMuIYCzSdfHCPL3dIuMp4",
+            "matchedTitle": "サンシャインぴっかぴか音頭",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

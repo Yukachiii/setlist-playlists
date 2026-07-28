@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-live",
+  "title": "オダイバ！！超次元音楽祭〜真夏の冒険王LIVE〜",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.fujitv.co.jp/bohkenoh2023/stage/stagedaily.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/175",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-live-summer-splash-performance-433",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-08-14",
+      "venue": {
+        "name": "冒険ランド SUMMER SPLASH スタジアム",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tokimeki-runners__original",
+            "displayTitle": "TOKIMEKI Runners"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

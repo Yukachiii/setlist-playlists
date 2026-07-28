@@ -24,6 +24,7 @@
     events: [],
     query: "",
     series: "all",
+    numberedOnly: false,
     selectedEvent: null,
     performanceIndex: 0,
     spotifyReady: false,
@@ -47,6 +48,10 @@
 
   function eventSeries(event) {
     return Array.isArray(event?.series) ? event.series.filter(Boolean) : [];
+  }
+
+  function isNumberedLive(event) {
+    return event?.isNumberedLive === true;
   }
 
   function eventPerformances(event) {
@@ -280,6 +285,7 @@
     const query = normalizeSearch(state.query);
     return state.events.filter((event) => {
       if (state.series !== "all" && !eventSeries(event).includes(state.series)) return false;
+      if (state.numberedOnly && !isNumberedLive(event)) return false;
       if (!query) return true;
       const searchable = normalizeSearch([
         event.title,
@@ -573,6 +579,10 @@
       state.query = event.target.value;
       renderCatalog();
     });
+    $("#numbered-live-only").addEventListener("change", (event) => {
+      state.numberedOnly = event.target.checked;
+      renderCatalog();
+    });
     $("#spotify-connect-button").addEventListener("click", () => {
       toggleSpotifyConnection().catch((error) => showToast(error.message, "error"));
     });
@@ -609,6 +619,7 @@
     formatDate,
     eventDateRange,
     normalizeSearch,
+    isNumberedLive,
     isSpotifyUnavailable,
     validSpotifyUri,
     spotifyAvailabilityLabel,

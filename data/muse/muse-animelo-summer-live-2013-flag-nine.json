@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-animelo-summer-live-2013-flag-nine",
+  "title": "Animelo Summer Live 2013 -FLAG NINE-",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://anisama.tv/2013/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/83",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-animelo-summer-live-2013-flag-nine-gmo-8-23",
+      "label": "8.23",
+      "day": null,
+      "session": null,
+      "date": "2013-08-23",
+      "venue": {
+        "name": "GMOアリーナさいたま（さいたまスーパーアリーナ）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-dlkwzg__original",
+            "displayTitle": "僕らは今のなかで"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "START:DASH!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "start-dash__original",
+            "displayTitle": "START:DASH!!"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ZNHpcARAieeBxUS8v6YqO",
+            "uri": "spotify:track:5ZNHpcARAieeBxUS8v6YqO",
+            "matchedTitle": "START:DASH!!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

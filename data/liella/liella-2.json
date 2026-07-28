@@ -1,0 +1,445 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-2",
+  "title": "Liella!のちゅーとりえら!! 2期",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.ntv.co.jp/liella2/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/306",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-2-venue-449-1",
+      "label": "第1回",
+      "day": null,
+      "session": null,
+      "date": "2026-04-02",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "OPEN THE G☆TE!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "open-the-g-te__original",
+            "displayTitle": "OPEN THE G☆TE!!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3jnoJmbk2AOzr4ASEZX9Yg",
+            "uri": "spotify:track:3jnoJmbk2AOzr4ASEZX9Yg",
+            "matchedTitle": "OPEN THE G☆TE!!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731364c2af1cf93f31f06feb36",
+            "albumName": "OPEN THE G☆TE!!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-2",
+      "label": "第2回",
+      "day": null,
+      "session": null,
+      "date": "2026-04-09",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRACLE NEW STORY",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "miracle-new-story__1-3-ver",
+            "displayTitle": "MIRACLE NEW STORY（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4In0cnVlkbqvRVutcID0jd",
+            "uri": "spotify:track:4In0cnVlkbqvRVutcID0jd",
+            "matchedTitle": "MIRACLE NEW STORY",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27388bad64699037cd78232c446",
+            "albumName": "MIRACLE NEW STORY"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-3",
+      "label": "第3回",
+      "day": null,
+      "session": null,
+      "date": "2026-04-16",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "オレンジのままで",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-vcqlvf__original",
+            "displayTitle": "オレンジのままで"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6dadcX0AZur4CcsU2TPqJC",
+            "uri": "spotify:track:6dadcX0AZur4CcsU2TPqJC",
+            "matchedTitle": "オレンジのままで",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e93930e471082c234f1cf8a",
+            "albumName": "オレンジのままで"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-4",
+      "label": "第4回",
+      "day": null,
+      "session": null,
+      "date": "2026-04-23",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aspire",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aspire__original",
+            "displayTitle": "Aspire"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6nAcd7KirTRfN1r2BH9h6j",
+            "uri": "spotify:track:6nAcd7KirTRfN1r2BH9h6j",
+            "matchedTitle": "Aspire",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737acae15f26472fe5df2f1577",
+            "albumName": "Aspire"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-5",
+      "label": "第5回",
+      "day": null,
+      "session": null,
+      "date": "2026-04-30",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "High！モチベーション",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "high__original",
+            "displayTitle": "High！モチベーション"
+          },
+          "artistHint": "桜小路きな子 (CV.鈴原希実), 米女メイ (CV.薮島朱音), 若菜四季 (CV.大熊和奏), 鬼塚夏美 (CV.絵森 彩), ウィーン・マルガレーテ (CV.結那), 鬼塚冬毬 (CV.坂倉 花)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7jliOVjUH0Il0Xd1LDGbJy",
+            "uri": "spotify:track:7jliOVjUH0Il0Xd1LDGbJy",
+            "matchedTitle": "High！モチベーション",
+            "matchedArtist": "桜小路きな子 (CV.鈴原希実), 米女メイ (CV.薮島朱音), 若菜四季 (CV.大熊和奏), 鬼塚夏美 (CV.絵森 彩), ウィーン・マルガレーテ (CV.結那), 鬼塚冬毬 (CV.坂倉 花)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731364c2af1cf93f31f06feb36",
+            "albumName": "OPEN THE G☆TE!!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-6",
+      "label": "第6回",
+      "day": null,
+      "session": null,
+      "date": "2026-05-07",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "始まりは君の空",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-tnarcc__original",
+            "displayTitle": "始まりは君の空"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0MncuXVpGP5tkFFaml5YhK",
+            "uri": "spotify:track:0MncuXVpGP5tkFFaml5YhK",
+            "matchedTitle": "始まりは君の空",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27365497835cd8913f4c7fc8f37",
+            "albumName": "始まりは君の空 【みんなで叶える物語盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-7",
+      "label": "第7回",
+      "day": null,
+      "session": null,
+      "date": "2026-05-14",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump Into the New World",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jump-into-the-new-world__original",
+            "displayTitle": "Jump Into the New World"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4URE7AVGX1R4yFSJSV49vb",
+            "uri": "spotify:track:4URE7AVGX1R4yFSJSV49vb",
+            "matchedTitle": "Jump Into the New World",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-8",
+      "label": "第8回",
+      "day": null,
+      "session": null,
+      "date": "2026-05-21",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dazzling Game",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dazzling-game__original",
+            "displayTitle": "Dazzling Game"
+          },
+          "artistHint": "Liella!, 澁谷かのん (CV.伊達さゆり), ウィーン・マルガレーテ (CV.結那), 鬼塚冬毬 (CV.坂倉 花)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GET8aWQZSR5wZQj7zT1l5",
+            "uri": "spotify:track:2GET8aWQZSR5wZQj7zT1l5",
+            "matchedTitle": "Dazzling Game",
+            "matchedArtist": "Liella!, 澁谷かのん (CV.伊達さゆり), ウィーン・マルガレーテ (CV.結那), 鬼塚冬毬 (CV.坂倉 花)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273633e8b12c048232189374271",
+            "albumName": "絶対的LOVER / Dazzling Game【第8話盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-9",
+      "label": "第9回",
+      "day": null,
+      "session": null,
+      "date": "2026-05-28",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スーパースター!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-18eq37t__original",
+            "displayTitle": "スーパースター!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5advyz09kWU8YaumAT5QV8",
+            "uri": "spotify:track:5advyz09kWU8YaumAT5QV8",
+            "matchedTitle": "スーパースター!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c3d2f588f9e9942cb7d7a720",
+            "albumName": "スーパースター!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "liella-2-venue-449-10",
+      "label": "第10回",
+      "day": null,
+      "session": null,
+      "date": "2026-06-04",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DAISUKI FULL POWER",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daisuki-full-power__original",
+            "displayTitle": "DAISUKI FULL POWER"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TyMixo6q2jstl9WxvPm0d",
+            "uri": "spotify:track:2TyMixo6q2jstl9WxvPm0d",
+            "matchedTitle": "DAISUKI FULL POWER",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f0faa95793969065798eaf3d",
+            "albumName": "DAISUKI FULL POWER"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

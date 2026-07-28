@@ -213,6 +213,32 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .series-filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .filter-chip { min-height: 38px; padding: 0 16px; color: #5e6678; background: transparent; border: 1px solid #cfd2d8; border-radius: 999px; font-size: 12px; font-weight: 700; cursor: pointer; }
 .filter-chip:hover, .filter-chip.active { color: white; background: var(--navy); border-color: var(--navy); }
+.numbered-live-filter {
+  min-height: 38px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4f586b;
+  background: white;
+  border: 1px solid #cfd2d8;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.numbered-live-filter input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: var(--navy);
+}
+.numbered-live-filter:has(input:checked) {
+  color: white;
+  background: var(--navy);
+  border-color: var(--navy);
+}
 .results-head { min-height: 52px; display: flex; align-items: flex-end; }
 .results-head p { margin: 0; color: #667085; font-size: 12px; font-weight: 600; }
 .event-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }

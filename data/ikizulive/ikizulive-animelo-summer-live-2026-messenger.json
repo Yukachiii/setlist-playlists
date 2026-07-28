@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "0.3",
+  "id": "ikizulive-animelo-summer-live-2026-messenger",
+  "title": "Animelo Summer Live 2026 -Messenger-",
+  "series": [
+    "ikizulive"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://anisama.tv/2026/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/310",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "ikizulive-animelo-summer-live-2026-messenger-venue-454-7-10",
+      "label": "7.10",
+      "day": null,
+      "session": null,
+      "date": "2026-07-10",
+      "venue": {
+        "name": "幕張メッセ 国際展示場",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What is my LIFE?",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "what-is-my-life__original",
+            "displayTitle": "What is my LIFE?"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4uWUgAX6o7ssWVyiGmp4Ij",
+            "uri": "spotify:track:4uWUgAX6o7ssWVyiGmp4Ij",
+            "matchedTitle": "What is my LIFE?",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27337b6558ea368df05b02153e7",
+            "albumName": "What is my LIFE?"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dou-Da? DOING!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dou-da-doing__original",
+            "displayTitle": "Dou-Da? DOING!"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1N4CeCZaDj8EH1fh1DPrDt",
+            "uri": "spotify:track:1N4CeCZaDj8EH1fh1DPrDt",
+            "matchedTitle": "Dou-Da? DOING!",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d2a8fbcf42a3afc2851f1488",
+            "albumName": "Dou-Da? DOING!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "REGAIN AGAIN LLLLOVE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "regain-again-llllove__original",
+            "displayTitle": "REGAIN AGAIN LLLLOVE"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6j2jaU62yunZHqVMKcehQt",
+            "uri": "spotify:track:6j2jaU62yunZHqVMKcehQt",
+            "matchedTitle": "REGAIN AGAIN LLLLOVE",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273532f0e086d2a08dc8ec180a7",
+            "albumName": "REGAIN AGAIN LLLLOVE"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

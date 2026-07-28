@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/public.css?v=0.5" />
+    <link rel="stylesheet" href="./css/public.css?v=0.6" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -81,6 +81,10 @@
               <input id="event-search" type="search" placeholder="公演名・会場名で検索" autocomplete="off" />
             </label>
             <div id="series-filters" class="series-filters" aria-label="シリーズで絞り込み"></div>
+            <label class="numbered-live-filter">
+              <input id="numbered-live-only" type="checkbox" />
+              <span>ナンバリング公演のみ</span>
+            </label>
           </div>
 
           <div class="results-head">
@@ -162,6 +166,6 @@
     <script src="./admin/js/spotify-client.js?v=0.14"></script>
     <script src="./js/admin-spotify-callback.js?v=0.1"></script>
     <script src="./js/public-spotify-client.js?v=0.2"></script>
-    <script src="./js/public-app.js?v=0.6"></script>
+    <script src="./js/public-app.js?v=0.7"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
 
 - 公開ページ: `/`
 - 管理画面: `/admin/`
-- 公演JSON: `/data/`
+- 公演JSON: `/data/{シリーズID}/`
 
 ## 起動
 
@@ -33,7 +33,7 @@ python server.py
 
 ## 公開ページ
 
-`data/index.json` に列挙した公演JSONを読み込み、次の機能を提供します。
+公演JSONは `data/hasunosora/`、`data/nijigasaki/` のように、イベントの先頭シリーズIDごとのフォルダへ保存します。シリーズ未設定のイベントは `data/other/` に保存します。`data/index.json` に列挙した相対パスを読み込み、次の機能を提供します。
 
 - 公演名・会場名の検索
 - シリーズによる絞り込み
@@ -51,8 +51,8 @@ python server.py
 {
   "schemaVersion": "0.3",
   "events": [
-    "hasunosora-1st-live-tour-run-can-fun.json",
-    "hasunosora-2nd-live-tour-blooming-with.json"
+    "hasunosora/hasunosora-1st-live-tour-run-can-fun.json",
+    "hasunosora/hasunosora-2nd-live-tour-blooming-with.json"
   ]
 }
 ```
@@ -78,6 +78,8 @@ python server.py
 Spotify接続済みなら解析後に曲検索とアーティスト補完を自動実行します。MC、幕間、告知、「初」、開場・開演時刻など、schema 0.3に存在しない項目は保存しません。
 
 会場は任意入力です。配信・バーチャル公演などで会場がない場合や、LL-Fansの会場表示がハイフンの場合は「-」として保存します。
+
+ナンバリング公演は公演名から自動判定しません。管理画面のイベント情報で「ナンバリング公演」に手動でチェックを付けると、管理画面と公開サイトの「ナンバリング公演のみ」絞り込み対象になります。このフラグは公開JSONにも保存されます。
 
 登録ボタンを押した時点でSpotify未登録の曲だけを、ジャケット付き候補画面で1曲ずつ確認できます。候補を選ぶか「未配信」として登録すると自動で次の曲へ進み、同じ「曲名＋バージョン」が複数公演にある場合は1回の確認結果をまとめて反映します。「確認を中止」しても、それまでのSpotify設定・未配信設定は保持されます。公開ページでは、未配信に設定した曲を「未配信」、Spotify情報をまだ設定していない曲を「未登録」と区別して表示します。
 

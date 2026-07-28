@@ -1,0 +1,707 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-live-and-fan-meeting-try-try-unity",
+  "title": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ Live & Fan Meeting TRY TRY UNITY!!!",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=TTY",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/232",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-live-and-fan-meeting-try-try-unity-venue-335-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2024-12-21",
+      "venue": {
+        "name": "両国国技館",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アオクハルカ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-l18hz5__original",
+            "displayTitle": "アオクハルカ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "770dT5d7IbrGUpJogzhcTZ",
+            "uri": "spotify:track:770dT5d7IbrGUpJogzhcTZ",
+            "matchedTitle": "アオクハルカ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "月夜見海月",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1610ua1__original",
+            "displayTitle": "月夜見海月"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "29vY6gIKRje259YNZ7FyDb",
+            "uri": "spotify:track:29vY6gIKRje259YNZ7FyDb",
+            "matchedTitle": "月夜見海月",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Holiday∞Holiday",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "holiday-holiday__104ki",
+            "displayTitle": "Holiday∞Holiday（104期 Ver.）"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3hKSrFN4Vwsx8rpc6A0UPH",
+            "uri": "spotify:track:3hKSrFN4Vwsx8rpc6A0UPH",
+            "matchedTitle": "Holiday∞Holiday",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "みらくりえーしょん",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1enz9bz__original",
+            "displayTitle": "みらくりえーしょん"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7nLo00R9CRhadDNcOlg29U",
+            "uri": "spotify:track:7nLo00R9CRhadDNcOlg29U",
+            "matchedTitle": "みらくりえーしょん",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ファンファーレ！！！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ufiwyb__original",
+            "displayTitle": "ファンファーレ！！！"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "09IoeMbEmvqMV2HkFrv4aX",
+            "uri": "spotify:track:09IoeMbEmvqMV2HkFrv4aX",
+            "matchedTitle": "ファンファーレ！！！",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "以心☆電信",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "track-sqmrx5__104ki",
+            "displayTitle": "以心☆電信（104期 Ver.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Rhb8uh8v5tbn6ScXbhWNp",
+            "uri": "spotify:track:6Rhb8uh8v5tbn6ScXbhWNp",
+            "matchedTitle": "以心☆電信",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "レディバグ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7iz59__original",
+            "displayTitle": "レディバグ"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4wsAk2qNrT1VeylWy2apNT",
+            "uri": "spotify:track:4wsAk2qNrT1VeylWy2apNT",
+            "matchedTitle": "レディバグ",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Proof",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "proof__original",
+            "displayTitle": "Proof"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7dNndlA0UPWsjBH2q2oD9k",
+            "uri": "spotify:track:7dNndlA0UPWsjBH2q2oD9k",
+            "matchedTitle": "Proof",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KNOT",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "knot__104ki",
+            "displayTitle": "KNOT（104期 Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6jIOsqdFCsIo0dTxhO5HBd",
+            "uri": "spotify:track:6jIOsqdFCsIo0dTxhO5HBd",
+            "matchedTitle": "KNOT",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハッピー至上主義！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b2odbx__original",
+            "displayTitle": "ハッピー至上主義！"
+          },
+          "artistHint": "かほめぐ♡じぇらーと",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1sAZfB4irnhGYbbyS31WaI",
+            "uri": "spotify:track:1sAZfB4irnhGYbbyS31WaI",
+            "matchedTitle": "ハッピー至上主義！",
+            "matchedArtist": "かほめぐ♡じぇらーと",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pleasure Feather",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pleasure-feather__original",
+            "displayTitle": "Pleasure Feather"
+          },
+          "artistHint": "蓮ノ休日",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2mZtFVG3H8mTE4Zk9KvxE2",
+            "uri": "spotify:track:2mZtFVG3H8mTE4Zk9KvxE2",
+            "matchedTitle": "Pleasure Feather",
+            "matchedArtist": "蓮ノ休日",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorfulness",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "colorfulness__original",
+            "displayTitle": "Colorfulness"
+          },
+          "artistHint": "るりのとゆかいなつづりたち",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2ettUfgYP0RqdXUAwilbxi",
+            "uri": "spotify:track:2ettUfgYP0RqdXUAwilbxi",
+            "matchedTitle": "Colorfulness",
+            "matchedArtist": "るりのとゆかいなつづりたち",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恥は人生のかきすて",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1y9p1r7__original",
+            "displayTitle": "恥は人生のかきすて"
+          },
+          "artistHint": "百生吟子 (CV.櫻井陽菜), 徒町小鈴 (CV.葉山風花), 安養寺姫芽 (CV.来栖りん)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7D3uKdAWAD4lzBEm85cQVS",
+            "uri": "spotify:track:7D3uKdAWAD4lzBEm85cQVS",
+            "matchedTitle": "恥は人生のかきすて",
+            "matchedArtist": "百生吟子 (CV.櫻井陽菜), 徒町小鈴 (CV.葉山風花), 安養寺姫芽 (CV.来栖りん)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "365 Days",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "365-days__original",
+            "displayTitle": "365 Days"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3yDz0feKcQxww6bmStgOSU",
+            "uri": "spotify:track:3yDz0feKcQxww6bmStgOSU",
+            "matchedTitle": "365 Days",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "hasunosora-live-and-fan-meeting-try-try-unity-venue-335-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2024-12-22",
+      "venue": {
+        "name": "両国国技館",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アオクハルカ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-l18hz5__original",
+            "displayTitle": "アオクハルカ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "770dT5d7IbrGUpJogzhcTZ",
+            "uri": "spotify:track:770dT5d7IbrGUpJogzhcTZ",
+            "matchedTitle": "アオクハルカ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "月夜見海月",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1610ua1__original",
+            "displayTitle": "月夜見海月"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "29vY6gIKRje259YNZ7FyDb",
+            "uri": "spotify:track:29vY6gIKRje259YNZ7FyDb",
+            "matchedTitle": "月夜見海月",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Mix shake!!",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "mix-shake__104ki",
+            "displayTitle": "Mix shake!!（104期 Ver.）"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "54LP7tYJRcYZ06l7AWkIWE",
+            "uri": "spotify:track:54LP7tYJRcYZ06l7AWkIWE",
+            "matchedTitle": "Mix shake!! (104期Ver.)",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "みらくりえーしょん",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1enz9bz__original",
+            "displayTitle": "みらくりえーしょん"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7nLo00R9CRhadDNcOlg29U",
+            "uri": "spotify:track:7nLo00R9CRhadDNcOlg29U",
+            "matchedTitle": "みらくりえーしょん",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ファンファーレ！！！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ufiwyb__original",
+            "displayTitle": "ファンファーレ！！！"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "09IoeMbEmvqMV2HkFrv4aX",
+            "uri": "spotify:track:09IoeMbEmvqMV2HkFrv4aX",
+            "matchedTitle": "ファンファーレ！！！",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "天才なのかもしれない",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "track-jjuw5j__104ki",
+            "displayTitle": "天才なのかもしれない（104期 Ver.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0NnCMhyYycFMEUxT0jLjWK",
+            "uri": "spotify:track:0NnCMhyYycFMEUxT0jLjWK",
+            "matchedTitle": "天才なのかもしれない (104期Ver.)",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "レディバグ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7iz59__original",
+            "displayTitle": "レディバグ"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4wsAk2qNrT1VeylWy2apNT",
+            "uri": "spotify:track:4wsAk2qNrT1VeylWy2apNT",
+            "matchedTitle": "レディバグ",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Proof",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "proof__original",
+            "displayTitle": "Proof"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7dNndlA0UPWsjBH2q2oD9k",
+            "uri": "spotify:track:7dNndlA0UPWsjBH2q2oD9k",
+            "matchedTitle": "Proof",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青春の輪郭",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "track-zoyxt3__104ki",
+            "displayTitle": "青春の輪郭（104期 Ver.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3KihnaceDERbwf7s21m1x0",
+            "uri": "spotify:track:3KihnaceDERbwf7s21m1x0",
+            "matchedTitle": "青春の輪郭 (104期Ver.)",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハッピー至上主義！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b2odbx__original",
+            "displayTitle": "ハッピー至上主義！"
+          },
+          "artistHint": "かほめぐ♡じぇらーと",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1sAZfB4irnhGYbbyS31WaI",
+            "uri": "spotify:track:1sAZfB4irnhGYbbyS31WaI",
+            "matchedTitle": "ハッピー至上主義！",
+            "matchedArtist": "かほめぐ♡じぇらーと",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pleasure Feather",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pleasure-feather__original",
+            "displayTitle": "Pleasure Feather"
+          },
+          "artistHint": "蓮ノ休日",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2mZtFVG3H8mTE4Zk9KvxE2",
+            "uri": "spotify:track:2mZtFVG3H8mTE4Zk9KvxE2",
+            "matchedTitle": "Pleasure Feather",
+            "matchedArtist": "蓮ノ休日",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorfulness",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "colorfulness__original",
+            "displayTitle": "Colorfulness"
+          },
+          "artistHint": "るりのとゆかいなつづりたち",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2ettUfgYP0RqdXUAwilbxi",
+            "uri": "spotify:track:2ettUfgYP0RqdXUAwilbxi",
+            "matchedTitle": "Colorfulness",
+            "matchedArtist": "るりのとゆかいなつづりたち",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恥は人生のかきすて",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1y9p1r7__original",
+            "displayTitle": "恥は人生のかきすて"
+          },
+          "artistHint": "百生吟子 (CV.櫻井陽菜), 徒町小鈴 (CV.葉山風花), 安養寺姫芽 (CV.来栖りん)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7D3uKdAWAD4lzBEm85cQVS",
+            "uri": "spotify:track:7D3uKdAWAD4lzBEm85cQVS",
+            "matchedTitle": "恥は人生のかきすて",
+            "matchedArtist": "百生吟子 (CV.櫻井陽菜), 徒町小鈴 (CV.葉山風花), 安養寺姫芽 (CV.来栖りん)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "365 Days",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "365-days__original",
+            "displayTitle": "365 Days"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3yDz0feKcQxww6bmStgOSU",
+            "uri": "spotify:track:3yDz0feKcQxww6bmStgOSU",
+            "matchedTitle": "365 Days",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

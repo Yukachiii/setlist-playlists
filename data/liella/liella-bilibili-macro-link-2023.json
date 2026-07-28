@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-bilibili-macro-link-2023",
+  "title": "BILIBILI MACRO LINK 2023",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/news/01_2201.htmlhttps://bml.bilibili.com/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/168",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-bilibili-macro-link-2023-mercedes-benz-arena-performance-418",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-07-22",
+      "venue": {
+        "name": "上海梅赛德斯-奔驰文化中心 (Mercedes-Benz Arena)",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Tiny Stars",
+            "versionLabel": "TV size",
+            "versionCode": "tv-size",
+            "recordingId": "tiny-stars__tv-size",
+            "displayTitle": "Tiny Stars（TV size）"
+          },
+          "artistHint": "澁谷かのん (CV.伊達さゆり), 唐 可可 (CV.Liyuu)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vIZpReR0AY9kMxop3ejAO",
+            "uri": "spotify:track:5vIZpReR0AY9kMxop3ejAO",
+            "matchedTitle": "Tiny Stars",
+            "matchedArtist": "澁谷かのん (CV.伊達さゆり), 唐 可可 (CV.Liyuu)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273034c67c655f2c4e83d1af6bf",
+            "albumName": "未来予報ハレルヤ！ / Tiny Stars【第1話盤】"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WE WILL!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "we-will__original",
+            "displayTitle": "WE WILL!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "303nMUB7ZGut9mf91o8S74",
+            "uri": "spotify:track:303nMUB7ZGut9mf91o8S74",
+            "matchedTitle": "WE WILL!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ビタミンSUMMER！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "summer__original",
+            "displayTitle": "ビタミンSUMMER！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ZWv75IO2XgpEQdtD2YjwJ",
+            "uri": "spotify:track:3ZWv75IO2XgpEQdtD2YjwJ",
+            "matchedTitle": "ビタミンSUMMER！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Chance Day, Chance Way！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "chance-day-chance-way__original",
+            "displayTitle": "Chance Day, Chance Way！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1QM66r7038zIYxRvvFZUrc",
+            "uri": "spotify:track:1QM66r7038zIYxRvvFZUrc",
+            "matchedTitle": "Chance Day, Chance Way！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sing！Shine！Smile！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sing-shine-smile__original",
+            "displayTitle": "Sing！Shine！Smile！"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7xjqGozgmekoLrdDym36Zm",
+            "uri": "spotify:track:7xjqGozgmekoLrdDym36Zm",
+            "matchedTitle": "Sing！Shine！Smile！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730ac3e4dc5a453a7a696b323a",
+            "albumName": "Sing！Shine！Smile！ / 未来の音が聴こえる【第10話盤】"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

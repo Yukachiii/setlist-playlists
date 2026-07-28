@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "0.3",
+  "id": "school-idol-musical-event-230",
+  "title": "「椿滝桜女学院高等学校スクールアイドル部 後夜祭アルバム！」発売記念フリーイベント",
+  "series": [
+    "school-idol-musical"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/news/01_3746.htmlhttps://www.lantis.jp/news.php?id=1723798815",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/230",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "school-idol-musical-event-230-venue-333-performance-559",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2024-08-29",
+      "venue": {
+        "name": "池袋・サンシャインシティ 噴水広場",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未完成ドリーム！",
+            "versionLabel": "ルリカ、ユズハ、ヒカル、ミスズ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-107xvc9__ver",
+            "displayTitle": "未完成ドリーム！（ルリカ、ユズハ、ヒカル、ミスズ Ver.）"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2IsZWVCP0LGPtDEsRKDouu",
+            "uri": "spotify:track:2IsZWVCP0LGPtDEsRKDouu",
+            "matchedTitle": "未完成ドリーム！",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738ed0aaab0ac4d2252aecaafe",
+            "albumName": "未完成ドリーム！"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "主役になれない主役",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-10bi75m__original",
+            "displayTitle": "主役になれない主役"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3gGI1nlStwDRixbC35vwLg",
+            "uri": "spotify:track:3gGI1nlStwDRixbC35vwLg",
+            "matchedTitle": "主役になれない主役",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273106bdfe97c88ed18f65e1111",
+            "albumName": "椿滝桜女学院高等学校スクールアイドル部 後夜祭アルバム！"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "今すぐはじめよ！",
+            "versionLabel": "ルリカ、ヒカル Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-91y4i1__ver",
+            "displayTitle": "今すぐはじめよ！（ルリカ、ヒカル Ver.）"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0PMGWTHay21eTrAaOugROe",
+            "uri": "spotify:track:0PMGWTHay21eTrAaOugROe",
+            "matchedTitle": "今すぐはじめよ！",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273106bdfe97c88ed18f65e1111",
+            "albumName": "椿滝桜女学院高等学校スクールアイドル部 後夜祭アルバム！"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢はドコカラ",
+            "versionLabel": "ルリカ、ユズハ、ヒカル、ミスズ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1900mom__ver",
+            "displayTitle": "夢はドコカラ（ルリカ、ユズハ、ヒカル、ミスズ Ver.）"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6WO2yH01MJhapgAPUbCOKx",
+            "uri": "spotify:track:6WO2yH01MJhapgAPUbCOKx",
+            "matchedTitle": "夢はドコカラ",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273106bdfe97c88ed18f65e1111",
+            "albumName": "椿滝桜女学院高等学校スクールアイドル部 後夜祭アルバム！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

@@ -1,0 +1,364 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-2024-2",
+  "title": "オダイバ!!超次元音楽祭 フユフェス2024",
+  "series": [
+    "aqours",
+    "liella",
+    "yohane"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.choujigen-ongakusai.jp/2024/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/186",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-2024-mm-day1",
+      "label": "DAY1",
+      "day": 1,
+      "session": null,
+      "date": "2024-02-24",
+      "venue": {
+        "name": "ぴあアリーナMM",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": "梨子・果南・ダイヤ・曜・善子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "jumping-heart__ver",
+            "displayTitle": "青空Jumping Heart（梨子・果南・ダイヤ・曜・善子 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "スリリング・ワンウェイ",
+            "versionLabel": "梨子・果南・ダイヤ・曜・善子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-4vd8hj__ver",
+            "displayTitle": "スリリング・ワンウェイ（梨子・果南・ダイヤ・曜・善子 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DmTL42O3KKLXLnnUkoCBb",
+            "uri": "spotify:track:5DmTL42O3KKLXLnnUkoCBb",
+            "matchedTitle": "スリリング・ワンウェイ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aqours Pirates Desire",
+            "versionLabel": "梨子・果南・ダイヤ・曜・善子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "aqours-pirates-desire__ver",
+            "displayTitle": "Aqours Pirates Desire（梨子・果南・ダイヤ・曜・善子 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4SRKvJBjgVRg1QyAOdc9ZB",
+            "uri": "spotify:track:4SRKvJBjgVRg1QyAOdc9ZB",
+            "matchedTitle": "Aqours Pirates Desire",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "幻日ミステリウム",
+            "versionLabel": "梨子・果南・ダイヤ・曜・善子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-grexcf__ver",
+            "displayTitle": "幻日ミステリウム（梨子・果南・ダイヤ・曜・善子 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3foaVrwbNHvwXmKD0lMHWv",
+            "uri": "spotify:track:3foaVrwbNHvwXmKD0lMHWv",
+            "matchedTitle": "幻日ミステリウム",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e4b07526a844677accf8a3bf",
+            "albumName": "幻日ミステリウム"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GAME ON！",
+            "versionLabel": "梨子・果南・ダイヤ・曜・善子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "game-on__ver",
+            "displayTitle": "GAME ON！（梨子・果南・ダイヤ・曜・善子 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2bpyiKw0Y7orYDXm673LLi",
+            "uri": "spotify:track:2bpyiKw0Y7orYDXm673LLi",
+            "matchedTitle": "GAME ON！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "キミノタメボクノタメ",
+            "versionLabel": "梨子・果南・ダイヤ・曜・善子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-3b1bwi__ver",
+            "displayTitle": "キミノタメボクノタメ（梨子・果南・ダイヤ・曜・善子 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3kJ6yhASTA8XOmk8petjdv",
+            "uri": "spotify:track:3kJ6yhASTA8XOmk8petjdv",
+            "matchedTitle": "キミノタメボクノタメ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SORA, FUJI, SUNSHINE!",
+            "versionLabel": "梨子・果南・ダイヤ・曜・善子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sora-fuji-sunshine__ver",
+            "displayTitle": "SORA, FUJI, SUNSHINE!（梨子・果南・ダイヤ・曜・善子 Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LOdMCmVshMmLqk2Z04eS1",
+            "uri": "spotify:track:5LOdMCmVshMmLqk2Z04eS1",
+            "matchedTitle": "SORA, FUJI, SUNSHINE!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-2024-mm-day2",
+      "label": "DAY2",
+      "day": 2,
+      "session": null,
+      "date": "2024-02-25",
+      "venue": {
+        "name": "ぴあアリーナMM",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Starlight Prologue",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "starlight-prologue__1-3-ver",
+            "displayTitle": "Starlight Prologue（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "00RO3ooBD7xBoFaPLsZHXF",
+            "uri": "spotify:track:00RO3ooBD7xBoFaPLsZHXF",
+            "matchedTitle": "Starlight Prologue",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371077efb169c341bc340af92",
+            "albumName": "ノンフィクション!! / Starlight Prologue【第10話盤】"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRACLE NEW STORY",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "miracle-new-story__1-3-ver",
+            "displayTitle": "MIRACLE NEW STORY（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4In0cnVlkbqvRVutcID0jd",
+            "uri": "spotify:track:4In0cnVlkbqvRVutcID0jd",
+            "matchedTitle": "MIRACLE NEW STORY",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27388bad64699037cd78232c446",
+            "albumName": "MIRACLE NEW STORY"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ノンフィクション!!",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "track-1rjgbfg__1-3-ver",
+            "displayTitle": "ノンフィクション!!（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "21IBJ4rC6Io0ruaSuEMRWf",
+            "uri": "spotify:track:21IBJ4rC6Io0ruaSuEMRWf",
+            "matchedTitle": "ノンフィクション!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371077efb169c341bc340af92",
+            "albumName": "ノンフィクション!! / Starlight Prologue【第10話盤】"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "FANTASTiC",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fantastic__original",
+            "displayTitle": "FANTASTiC"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1SPxFa5hwBkGa4BOLF2TFp",
+            "uri": "spotify:track:1SPxFa5hwBkGa4BOLF2TFp",
+            "matchedTitle": "FANTASTiC",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27317640a57a5489e4be93e1a66",
+            "albumName": "シェキラ☆☆☆"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "キラーキューン☆",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "track-uruco8__1-3-ver",
+            "displayTitle": "キラーキューン☆（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "49x3Mymb6B0WbhYsPNI2A6",
+            "uri": "spotify:track:49x3Mymb6B0WbhYsPNI2A6",
+            "matchedTitle": "キラーキューン☆",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27388bad64699037cd78232c446",
+            "albumName": "MIRACLE NEW STORY"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シェキラ☆☆☆",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ethoyd__original",
+            "displayTitle": "シェキラ☆☆☆"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7lmoKU5kY1haRL1N1hiqzE",
+            "uri": "spotify:track:7lmoKU5kY1haRL1N1hiqzE",
+            "matchedTitle": "シェキラ☆☆☆",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27317640a57a5489e4be93e1a66",
+            "albumName": "シェキラ☆☆☆"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

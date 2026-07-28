@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.3",
+  "id": "liella-sp",
+  "title": "オダイバ！！超次元音楽祭～有観客ライブ復活SP",
+  "series": [
+    "liella"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.fujitv.co.jp/choujigenhttps://otn.fujitv.co.jp/choujigenmusic2022-fall/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/143",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "liella-sp-venue-213-performance-355",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2022-10-03",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WE WILL!!",
+            "versionLabel": "ショートサイズ",
+            "versionCode": "custom-aq3858",
+            "recordingId": "we-will__custom-aq3858",
+            "displayTitle": "WE WILL!!（ショートサイズ）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "303nMUB7ZGut9mf91o8S74",
+            "uri": "spotify:track:303nMUB7ZGut9mf91o8S74",
+            "matchedTitle": "WE WILL!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27364a3cc479757db5cc05565ce",
+            "albumName": "WE WILL!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

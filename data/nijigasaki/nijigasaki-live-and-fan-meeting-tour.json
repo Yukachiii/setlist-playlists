@@ -1,0 +1,4093 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-live-and-fan-meeting-tour",
+  "title": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 LIVE＆FAN MEETING TOUR ニジガク校外学習～歌おう♪踊ろう♪語ろう♪～",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://lovelive-anime.jp/nijigasaki/live/live_detail.php?p=fanmeeting2025",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/236",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-osaka-day-1",
+      "label": "大阪公演 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2025-04-05",
+      "venue": {
+        "name": "オリックス劇場",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "チェリーボム",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ye8xbn__original",
+            "displayTitle": "チェリーボム"
+          },
+          "artistHint": "優木せつ菜 (CV.林 鼓子)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Ut3eQN8VLwQXjRejHmNk3",
+            "uri": "spotify:track:6Ut3eQN8VLwQXjRejHmNk3",
+            "matchedTitle": "チェリーボム",
+            "matchedArtist": "優木せつ菜 (CV.林 鼓子)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "I’m Still...",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "i-m-still__original",
+            "displayTitle": "I’m Still..."
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3AVxQbbiRTubKVEOJIWKn3",
+            "uri": "spotify:track:3AVxQbbiRTubKVEOJIWKn3",
+            "matchedTitle": "I'm Still...",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "楽しいの天才",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-j4wvzx__original",
+            "displayTitle": "楽しいの天才"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LRPFtsgOMWKa3CxuragaZ",
+            "uri": "spotify:track:4LRPFtsgOMWKa3CxuragaZ",
+            "matchedTitle": "楽しいの天才",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Stellar Stream",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "stellar-stream__original",
+            "displayTitle": "Stellar Stream"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4wZcKcvGmPDbSazHXFw6ex",
+            "uri": "spotify:track:4wZcKcvGmPDbSazHXFw6ex",
+            "matchedTitle": "Stellar Stream",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ミラクル STAY TUNE！",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "stay-tune__ver",
+            "displayTitle": "ミラクル STAY TUNE！（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6v3RD1S73Zp0xYbnDRbqDR",
+            "uri": "spotify:track:6v3RD1S73Zp0xYbnDRbqDR",
+            "matchedTitle": "ミラクル STAY TUNE！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "L！L！L！ (Love the Life We Live)",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "l-l-l-love-the-life-we-live__ver",
+            "displayTitle": "L！L！L！ (Love the Life We Live)（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4KYGJ7PMQ8M2GMPowJNlKi",
+            "uri": "spotify:track:4KYGJ7PMQ8M2GMPowJNlKi",
+            "matchedTitle": "L！L！L！ (Love the Life We Live)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "sugar-sugar-yummy-yummy-parfait__ver",
+            "displayTitle": "Sugar Sugar Yummy Yummy Parfait（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i6JDM1SAA6nwM6gyln6I7",
+            "uri": "spotify:track:4i6JDM1SAA6nwM6gyln6I7",
+            "matchedTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730d507a8c37ee8339cbdced57",
+            "albumName": "KAGAYAKI Don't forget!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢が僕らの太陽さ",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-nkqh2n__ver",
+            "displayTitle": "夢が僕らの太陽さ（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i56EK3bIvwnrdpumuanEC",
+            "uri": "spotify:track:4i56EK3bIvwnrdpumuanEC",
+            "matchedTitle": "夢が僕らの太陽さ",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734adf959d65bd7a60c8ee7c22",
+            "albumName": "夢が僕らの太陽さ"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-osaka-day-2",
+      "label": "大阪公演 DAY.2 ＜昼公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-04-06",
+      "venue": {
+        "name": "オリックス劇場",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "L！L！L！ (Love the Life We Live)",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "l-l-l-love-the-life-we-live__ver",
+            "displayTitle": "L！L！L！ (Love the Life We Live)（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4KYGJ7PMQ8M2GMPowJNlKi",
+            "uri": "spotify:track:4KYGJ7PMQ8M2GMPowJNlKi",
+            "matchedTitle": "L！L！L！ (Love the Life We Live)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "チェリーボム",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ye8xbn__original",
+            "displayTitle": "チェリーボム"
+          },
+          "artistHint": "優木せつ菜 (CV.林 鼓子)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Ut3eQN8VLwQXjRejHmNk3",
+            "uri": "spotify:track:6Ut3eQN8VLwQXjRejHmNk3",
+            "matchedTitle": "チェリーボム",
+            "matchedArtist": "優木せつ菜 (CV.林 鼓子)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "I’m Still...",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "i-m-still__original",
+            "displayTitle": "I’m Still..."
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3AVxQbbiRTubKVEOJIWKn3",
+            "uri": "spotify:track:3AVxQbbiRTubKVEOJIWKn3",
+            "matchedTitle": "I'm Still...",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "楽しいの天才",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-j4wvzx__original",
+            "displayTitle": "楽しいの天才"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LRPFtsgOMWKa3CxuragaZ",
+            "uri": "spotify:track:4LRPFtsgOMWKa3CxuragaZ",
+            "matchedTitle": "楽しいの天才",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Stellar Stream",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "stellar-stream__original",
+            "displayTitle": "Stellar Stream"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4wZcKcvGmPDbSazHXFw6ex",
+            "uri": "spotify:track:4wZcKcvGmPDbSazHXFw6ex",
+            "matchedTitle": "Stellar Stream",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ミラクル STAY TUNE！",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "stay-tune__ver",
+            "displayTitle": "ミラクル STAY TUNE！（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6v3RD1S73Zp0xYbnDRbqDR",
+            "uri": "spotify:track:6v3RD1S73Zp0xYbnDRbqDR",
+            "matchedTitle": "ミラクル STAY TUNE！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "sugar-sugar-yummy-yummy-parfait__ver",
+            "displayTitle": "Sugar Sugar Yummy Yummy Parfait（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i6JDM1SAA6nwM6gyln6I7",
+            "uri": "spotify:track:4i6JDM1SAA6nwM6gyln6I7",
+            "matchedTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730d507a8c37ee8339cbdced57",
+            "albumName": "KAGAYAKI Don't forget!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢が僕らの太陽さ",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-nkqh2n__ver",
+            "displayTitle": "夢が僕らの太陽さ（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i56EK3bIvwnrdpumuanEC",
+            "uri": "spotify:track:4i56EK3bIvwnrdpumuanEC",
+            "matchedTitle": "夢が僕らの太陽さ",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734adf959d65bd7a60c8ee7c22",
+            "albumName": "夢が僕らの太陽さ"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-osaka-day-2-2",
+      "label": "大阪公演 DAY.2 ＜夜公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-04-06",
+      "venue": {
+        "name": "オリックス劇場",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "開花宣言",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-8iwa1e__original",
+            "displayTitle": "開花宣言"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67pyNjYqamvYNbUuvpqsoO",
+            "uri": "spotify:track:67pyNjYqamvYNbUuvpqsoO",
+            "matchedTitle": "開花宣言",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Diabolic mulier",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "diabolic-mulier__original",
+            "displayTitle": "Diabolic mulier"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "20FZ2lALJyY4S5KclLrAUK",
+            "uri": "spotify:track:20FZ2lALJyY4S5KclLrAUK",
+            "matchedTitle": "Diabolic mulier",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Toy Doll",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "toy-doll__original",
+            "displayTitle": "Toy Doll"
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "27cSTtZv5GQQHpKDjr3pnV",
+            "uri": "spotify:track:27cSTtZv5GQQHpKDjr3pnV",
+            "matchedTitle": "Toy Doll",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ヤダ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-qgw76g__original",
+            "displayTitle": "ヤダ！"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5mYyoeWr689XwKWgObRYV0",
+            "uri": "spotify:track:5mYyoeWr689XwKWgObRYV0",
+            "matchedTitle": "ヤダ！",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ミラクル STAY TUNE！",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "stay-tune__ver",
+            "displayTitle": "ミラクル STAY TUNE！（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6v3RD1S73Zp0xYbnDRbqDR",
+            "uri": "spotify:track:6v3RD1S73Zp0xYbnDRbqDR",
+            "matchedTitle": "ミラクル STAY TUNE！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "L！L！L！ (Love the Life We Live)",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "l-l-l-love-the-life-we-live__ver",
+            "displayTitle": "L！L！L！ (Love the Life We Live)（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4KYGJ7PMQ8M2GMPowJNlKi",
+            "uri": "spotify:track:4KYGJ7PMQ8M2GMPowJNlKi",
+            "matchedTitle": "L！L！L！ (Love the Life We Live)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "sugar-sugar-yummy-yummy-parfait__ver",
+            "displayTitle": "Sugar Sugar Yummy Yummy Parfait（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i6JDM1SAA6nwM6gyln6I7",
+            "uri": "spotify:track:4i6JDM1SAA6nwM6gyln6I7",
+            "matchedTitle": "Sugar Sugar Yummy Yummy Parfait",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730d507a8c37ee8339cbdced57",
+            "albumName": "KAGAYAKI Don't forget!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢が僕らの太陽さ",
+            "versionLabel": "歩夢・愛・せつ菜・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-nkqh2n__ver",
+            "displayTitle": "夢が僕らの太陽さ（歩夢・愛・せつ菜・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4i56EK3bIvwnrdpumuanEC",
+            "uri": "spotify:track:4i56EK3bIvwnrdpumuanEC",
+            "matchedTitle": "夢が僕らの太陽さ",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734adf959d65bd7a60c8ee7c22",
+            "albumName": "夢が僕らの太陽さ"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-chiba-day-1",
+      "label": "千葉公演 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2025-04-12",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "私はマグネット",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1emej05__original",
+            "displayTitle": "私はマグネット"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2CK1Sh64CFRXwmFNmPTuKp",
+            "uri": "spotify:track:2CK1Sh64CFRXwmFNmPTuKp",
+            "matchedTitle": "私はマグネット",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fire Bird",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fire-bird__original",
+            "displayTitle": "Fire Bird"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ea2Y0mfeiOyKcI16RQya4",
+            "uri": "spotify:track:1Ea2Y0mfeiOyKcI16RQya4",
+            "matchedTitle": "Fire Bird",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋するSunflower",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sunflower__original",
+            "displayTitle": "恋するSunflower"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6EZh8cPpNHziHLXLYDkTop",
+            "uri": "spotify:track:6EZh8cPpNHziHLXLYDkTop",
+            "matchedTitle": "恋するSunflower",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "PHOENIX",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "phoenix__original",
+            "displayTitle": "PHOENIX"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4oJXZkrYgrwruRh51IuN4p",
+            "uri": "spotify:track:4oJXZkrYgrwruRh51IuN4p",
+            "matchedTitle": "PHOENIX",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "colorful-dreams-colorful-smiles__ver",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "love-u-my-friends__ver",
+            "displayTitle": "Love U my friends（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sweet Eyes",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sweet-eyes__ver",
+            "displayTitle": "Sweet Eyes（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LuQ7iiPSb1zGvEgWD7A4E",
+            "uri": "spotify:track:4LuQ7iiPSb1zGvEgWD7A4E",
+            "matchedTitle": "Sweet Eyes",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hurray Hurray",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "hurray-hurray__ver",
+            "displayTitle": "Hurray Hurray（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ktTjWMRpzn66ARrAQnTzu",
+            "uri": "spotify:track:5ktTjWMRpzn66ARrAQnTzu",
+            "matchedTitle": "Hurray Hurray",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-chiba-day-2",
+      "label": "千葉公演 DAY.2 ＜昼公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-04-13",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "love-u-my-friends__ver",
+            "displayTitle": "Love U my friends（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "私はマグネット",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1emej05__original",
+            "displayTitle": "私はマグネット"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2CK1Sh64CFRXwmFNmPTuKp",
+            "uri": "spotify:track:2CK1Sh64CFRXwmFNmPTuKp",
+            "matchedTitle": "私はマグネット",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fire Bird",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fire-bird__original",
+            "displayTitle": "Fire Bird"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ea2Y0mfeiOyKcI16RQya4",
+            "uri": "spotify:track:1Ea2Y0mfeiOyKcI16RQya4",
+            "matchedTitle": "Fire Bird",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋するSunflower",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sunflower__original",
+            "displayTitle": "恋するSunflower"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6EZh8cPpNHziHLXLYDkTop",
+            "uri": "spotify:track:6EZh8cPpNHziHLXLYDkTop",
+            "matchedTitle": "恋するSunflower",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "PHOENIX",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "phoenix__original",
+            "displayTitle": "PHOENIX"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4oJXZkrYgrwruRh51IuN4p",
+            "uri": "spotify:track:4oJXZkrYgrwruRh51IuN4p",
+            "matchedTitle": "PHOENIX",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "colorful-dreams-colorful-smiles__ver",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sweet Eyes",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sweet-eyes__ver",
+            "displayTitle": "Sweet Eyes（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LuQ7iiPSb1zGvEgWD7A4E",
+            "uri": "spotify:track:4LuQ7iiPSb1zGvEgWD7A4E",
+            "matchedTitle": "Sweet Eyes",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hurray Hurray",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "hurray-hurray__ver",
+            "displayTitle": "Hurray Hurray（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ktTjWMRpzn66ARrAQnTzu",
+            "uri": "spotify:track:5ktTjWMRpzn66ARrAQnTzu",
+            "matchedTitle": "Hurray Hurray",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-chiba-day-2-2",
+      "label": "千葉公演 DAY.2 ＜夜公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-04-13",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夜明珠（イエミンジュ）",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rf6rpx__original",
+            "displayTitle": "夜明珠（イエミンジュ）"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5B24hLFhi4F8KxhZyYLj2v",
+            "uri": "spotify:track:5B24hLFhi4F8KxhZyYLj2v",
+            "matchedTitle": "夜明珠",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wish",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wish__original",
+            "displayTitle": "Wish"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DCtVkAz85SHKZKTsHwrIP",
+            "uri": "spotify:track:5DCtVkAz85SHKZKTsHwrIP",
+            "matchedTitle": "Wish",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "テレテレパシー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1y47huf__original",
+            "displayTitle": "テレテレパシー"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6T6v4V426bXgKECGIGnYY8",
+            "uri": "spotify:track:6T6v4V426bXgKECGIGnYY8",
+            "matchedTitle": "テレテレパシー",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Cara Tesoro",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "cara-tesoro__original",
+            "displayTitle": "Cara Tesoro"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0Qgi48UqdmsFcKCH3a8NKG",
+            "uri": "spotify:track:0Qgi48UqdmsFcKCH3a8NKG",
+            "matchedTitle": "Cara Tesoro",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "colorful-dreams-colorful-smiles__ver",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "love-u-my-friends__ver",
+            "displayTitle": "Love U my friends（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sweet Eyes",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sweet-eyes__ver",
+            "displayTitle": "Sweet Eyes（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LuQ7iiPSb1zGvEgWD7A4E",
+            "uri": "spotify:track:4LuQ7iiPSb1zGvEgWD7A4E",
+            "matchedTitle": "Sweet Eyes",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hurray Hurray",
+            "versionLabel": "果林・エマ・璃奈・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "hurray-hurray__ver",
+            "displayTitle": "Hurray Hurray（果林・エマ・璃奈・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ktTjWMRpzn66ARrAQnTzu",
+            "uri": "spotify:track:5ktTjWMRpzn66ARrAQnTzu",
+            "matchedTitle": "Hurray Hurray",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-fukuoka-day-1",
+      "label": "福岡公演 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2025-05-10",
+      "venue": {
+        "name": "福岡市民ホール 大ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コンセントレイト！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1dhk98g__original",
+            "displayTitle": "コンセントレイト！"
+          },
+          "artistHint": "三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0xaZuZ28VQLHgaOMxMn6MG",
+            "uri": "spotify:track:0xaZuZ28VQLHgaOMxMn6MG",
+            "matchedTitle": "コンセントレイト！",
+            "matchedArtist": "三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TO BE YOURSELF",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "to-be-yourself__original",
+            "displayTitle": "TO BE YOURSELF"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0IWoxY81k3huGpDXly05Yj",
+            "uri": "spotify:track:0IWoxY81k3huGpDXly05Yj",
+            "matchedTitle": "TO BE YOURSELF",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "My Own Fairy-Tale",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "my-own-fairy-tale__original",
+            "displayTitle": "My Own Fairy-Tale"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ssu1ZVe4E10bIviBsNAMs",
+            "uri": "spotify:track:4ssu1ZVe4E10bIviBsNAMs",
+            "matchedTitle": "My Own Fairy-Tale",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "小悪魔LOVE♡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love__original",
+            "displayTitle": "小悪魔LOVE♡"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1dkFzcQjaw7YkPT83raO3j",
+            "uri": "spotify:track:1dkFzcQjaw7YkPT83raO3j",
+            "matchedTitle": "小悪魔LOVE♡",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "colorful-dreams-colorful-smiles__ver",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KAGAYAKI Don't forget!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "kagayaki-don-t-forget__ver",
+            "displayTitle": "KAGAYAKI Don't forget!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0KPoGUhsNaFDlqie3YShXN",
+            "uri": "spotify:track:0KPoGUhsNaFDlqie3YShXN",
+            "matchedTitle": "KAGAYAKI Don't forget!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730d507a8c37ee8339cbdced57",
+            "albumName": "KAGAYAKI Don't forget!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SINGING, DREAMING, NOW!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "singing-dreaming-now__ver",
+            "displayTitle": "SINGING, DREAMING, NOW!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05MH7Q4YCsTWtuF9labf5T",
+            "uri": "spotify:track:05MH7Q4YCsTWtuF9labf5T",
+            "matchedTitle": "SINGING, DREAMING, NOW!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e8bd4881e24524d0ee8d554",
+            "albumName": "SINGING, DREAMING, NOW!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-fukuoka-day-2",
+      "label": "福岡公演 DAY.2 ＜昼公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-05-11",
+      "venue": {
+        "name": "福岡市民ホール 大ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "colorful-dreams-colorful-smiles__ver",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コンセントレイト！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1dhk98g__original",
+            "displayTitle": "コンセントレイト！"
+          },
+          "artistHint": "三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0xaZuZ28VQLHgaOMxMn6MG",
+            "uri": "spotify:track:0xaZuZ28VQLHgaOMxMn6MG",
+            "matchedTitle": "コンセントレイト！",
+            "matchedArtist": "三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TO BE YOURSELF",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "to-be-yourself__original",
+            "displayTitle": "TO BE YOURSELF"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0IWoxY81k3huGpDXly05Yj",
+            "uri": "spotify:track:0IWoxY81k3huGpDXly05Yj",
+            "matchedTitle": "TO BE YOURSELF",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "My Own Fairy-Tale",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "my-own-fairy-tale__original",
+            "displayTitle": "My Own Fairy-Tale"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ssu1ZVe4E10bIviBsNAMs",
+            "uri": "spotify:track:4ssu1ZVe4E10bIviBsNAMs",
+            "matchedTitle": "My Own Fairy-Tale",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "小悪魔LOVE♡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love__original",
+            "displayTitle": "小悪魔LOVE♡"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1dkFzcQjaw7YkPT83raO3j",
+            "uri": "spotify:track:1dkFzcQjaw7YkPT83raO3j",
+            "matchedTitle": "小悪魔LOVE♡",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KAGAYAKI Don't forget!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "kagayaki-don-t-forget__ver",
+            "displayTitle": "KAGAYAKI Don't forget!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0KPoGUhsNaFDlqie3YShXN",
+            "uri": "spotify:track:0KPoGUhsNaFDlqie3YShXN",
+            "matchedTitle": "KAGAYAKI Don't forget!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730d507a8c37ee8339cbdced57",
+            "albumName": "KAGAYAKI Don't forget!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SINGING, DREAMING, NOW!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "singing-dreaming-now__ver",
+            "displayTitle": "SINGING, DREAMING, NOW!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05MH7Q4YCsTWtuF9labf5T",
+            "uri": "spotify:track:05MH7Q4YCsTWtuF9labf5T",
+            "matchedTitle": "SINGING, DREAMING, NOW!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e8bd4881e24524d0ee8d554",
+            "albumName": "SINGING, DREAMING, NOW!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-fukuoka-day-2-2",
+      "label": "福岡公演 DAY.2 ＜夜公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-05-11",
+      "venue": {
+        "name": "福岡市民ホール 大ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "☆ワンダーランド☆",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1441ozs__original",
+            "displayTitle": "☆ワンダーランド☆"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2qq87xD5qOMW6uQwzdVmrX",
+            "uri": "spotify:track:2qq87xD5qOMW6uQwzdVmrX",
+            "matchedTitle": "☆ワンダーランド☆",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "翠いカナリア",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-i439cw__original",
+            "displayTitle": "翠いカナリア"
+          },
+          "artistHint": "三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6ZBVYtAQQf4VjDm7lLiUag",
+            "uri": "spotify:track:6ZBVYtAQQf4VjDm7lLiUag",
+            "matchedTitle": "翠いカナリア",
+            "matchedArtist": "三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "オードリー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ly2is0__original",
+            "displayTitle": "オードリー"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7fEt9DY72GTVK4Dtr7sHiW",
+            "uri": "spotify:track:7fEt9DY72GTVK4Dtr7sHiW",
+            "matchedTitle": "オードリー",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Mermaid",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-mermaid__original",
+            "displayTitle": "Daydream Mermaid"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2HEIUm9pIViliot1yfkJi3",
+            "uri": "spotify:track:2HEIUm9pIViliot1yfkJi3",
+            "matchedTitle": "Daydream Mermaid",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "colorful-dreams-colorful-smiles__ver",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KAGAYAKI Don't forget!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "kagayaki-don-t-forget__ver",
+            "displayTitle": "KAGAYAKI Don't forget!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0KPoGUhsNaFDlqie3YShXN",
+            "uri": "spotify:track:0KPoGUhsNaFDlqie3YShXN",
+            "matchedTitle": "KAGAYAKI Don't forget!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730d507a8c37ee8339cbdced57",
+            "albumName": "KAGAYAKI Don't forget!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SINGING, DREAMING, NOW!",
+            "versionLabel": "かすみ・しずく・彼方・栞子 Ver.",
+            "versionCode": "ver",
+            "recordingId": "singing-dreaming-now__ver",
+            "displayTitle": "SINGING, DREAMING, NOW!（かすみ・しずく・彼方・栞子 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05MH7Q4YCsTWtuF9labf5T",
+            "uri": "spotify:track:05MH7Q4YCsTWtuF9labf5T",
+            "matchedTitle": "SINGING, DREAMING, NOW!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e8bd4881e24524d0ee8d554",
+            "albumName": "SINGING, DREAMING, NOW!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-miyagi-day-1",
+      "label": "宮城公演 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2025-05-17",
+      "venue": {
+        "name": "仙台サンプラザホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 愛・せつ菜・璃奈・侑 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 愛・せつ菜・璃奈・侑 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Diabolic mulier",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "diabolic-mulier__original",
+            "displayTitle": "Diabolic mulier"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "20FZ2lALJyY4S5KclLrAUK",
+            "uri": "spotify:track:20FZ2lALJyY4S5KclLrAUK",
+            "matchedTitle": "Diabolic mulier",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "テレテレパシー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1y47huf__original",
+            "displayTitle": "テレテレパシー"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6T6v4V426bXgKECGIGnYY8",
+            "uri": "spotify:track:6T6v4V426bXgKECGIGnYY8",
+            "matchedTitle": "テレテレパシー",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ヤダ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-qgw76g__original",
+            "displayTitle": "ヤダ！"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5mYyoeWr689XwKWgObRYV0",
+            "uri": "spotify:track:5mYyoeWr689XwKWgObRYV0",
+            "matchedTitle": "ヤダ！",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹色Passions！",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "passions__ver",
+            "displayTitle": "虹色Passions！（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VL49SjKDLXnan18WnUpw8",
+            "uri": "spotify:track:3VL49SjKDLXnan18WnUpw8",
+            "matchedTitle": "虹色Passions！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "わちゅごなどぅー",
+            "versionLabel": "愛・せつ菜・璃奈・侑 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-bhhem0__ver",
+            "displayTitle": "わちゅごなどぅー（愛・せつ菜・璃奈・侑 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hAnxsOLd0TsGJ8JzQetGy",
+            "uri": "spotify:track:0hAnxsOLd0TsGJ8JzQetGy",
+            "matchedTitle": "わちゅごなどぅー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27320a80ce7233bf161df0aa36c",
+            "albumName": "わちゅごなどぅー"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来ハーモニー",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1u7y6w4__ver",
+            "displayTitle": "未来ハーモニー（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Q3DUz1H6B74YJC5G2p2WX",
+            "uri": "spotify:track:5Q3DUz1H6B74YJC5G2p2WX",
+            "matchedTitle": "未来ハーモニー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fly with You!!",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "fly-with-you__ver",
+            "displayTitle": "Fly with You!!（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3HbYu8ekAukuOo5w71KBUp",
+            "uri": "spotify:track:3HbYu8ekAukuOo5w71KBUp",
+            "matchedTitle": "Fly with You!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-miyagi-day-2",
+      "label": "宮城公演 DAY.2 ＜昼公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-05-18",
+      "venue": {
+        "name": "仙台サンプラザホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 愛・せつ菜・璃奈・侑 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 愛・せつ菜・璃奈・侑 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来ハーモニー",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1u7y6w4__ver",
+            "displayTitle": "未来ハーモニー（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Q3DUz1H6B74YJC5G2p2WX",
+            "uri": "spotify:track:5Q3DUz1H6B74YJC5G2p2WX",
+            "matchedTitle": "未来ハーモニー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "わちゅごなどぅー",
+            "versionLabel": "愛・せつ菜・璃奈・侑 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-bhhem0__ver",
+            "displayTitle": "わちゅごなどぅー（愛・せつ菜・璃奈・侑 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hAnxsOLd0TsGJ8JzQetGy",
+            "uri": "spotify:track:0hAnxsOLd0TsGJ8JzQetGy",
+            "matchedTitle": "わちゅごなどぅー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27320a80ce7233bf161df0aa36c",
+            "albumName": "わちゅごなどぅー"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Diabolic mulier",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "diabolic-mulier__original",
+            "displayTitle": "Diabolic mulier"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "20FZ2lALJyY4S5KclLrAUK",
+            "uri": "spotify:track:20FZ2lALJyY4S5KclLrAUK",
+            "matchedTitle": "Diabolic mulier",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "テレテレパシー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1y47huf__original",
+            "displayTitle": "テレテレパシー"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6T6v4V426bXgKECGIGnYY8",
+            "uri": "spotify:track:6T6v4V426bXgKECGIGnYY8",
+            "matchedTitle": "テレテレパシー",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ヤダ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-qgw76g__original",
+            "displayTitle": "ヤダ！"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5mYyoeWr689XwKWgObRYV0",
+            "uri": "spotify:track:5mYyoeWr689XwKWgObRYV0",
+            "matchedTitle": "ヤダ！",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹色Passions！",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "passions__ver",
+            "displayTitle": "虹色Passions！（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VL49SjKDLXnan18WnUpw8",
+            "uri": "spotify:track:3VL49SjKDLXnan18WnUpw8",
+            "matchedTitle": "虹色Passions！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fly with You!!",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "fly-with-you__ver",
+            "displayTitle": "Fly with You!!（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3HbYu8ekAukuOo5w71KBUp",
+            "uri": "spotify:track:3HbYu8ekAukuOo5w71KBUp",
+            "matchedTitle": "Fly with You!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-miyagi-day-2-2",
+      "label": "宮城公演 DAY.2 ＜夜公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-05-18",
+      "venue": {
+        "name": "仙台サンプラザホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 愛・せつ菜・璃奈・侑 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 愛・せつ菜・璃奈・侑 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "楽しいの天才",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-j4wvzx__original",
+            "displayTitle": "楽しいの天才"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LRPFtsgOMWKa3CxuragaZ",
+            "uri": "spotify:track:4LRPFtsgOMWKa3CxuragaZ",
+            "matchedTitle": "楽しいの天才",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "私はマグネット",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1emej05__original",
+            "displayTitle": "私はマグネット"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2CK1Sh64CFRXwmFNmPTuKp",
+            "uri": "spotify:track:2CK1Sh64CFRXwmFNmPTuKp",
+            "matchedTitle": "私はマグネット",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "チェリーボム",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ye8xbn__original",
+            "displayTitle": "チェリーボム"
+          },
+          "artistHint": "優木せつ菜 (CV.林 鼓子)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Ut3eQN8VLwQXjRejHmNk3",
+            "uri": "spotify:track:6Ut3eQN8VLwQXjRejHmNk3",
+            "matchedTitle": "チェリーボム",
+            "matchedArtist": "優木せつ菜 (CV.林 鼓子)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹色Passions！",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "passions__ver",
+            "displayTitle": "虹色Passions！（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VL49SjKDLXnan18WnUpw8",
+            "uri": "spotify:track:3VL49SjKDLXnan18WnUpw8",
+            "matchedTitle": "虹色Passions！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "わちゅごなどぅー",
+            "versionLabel": "愛・せつ菜・璃奈・侑 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-bhhem0__ver",
+            "displayTitle": "わちゅごなどぅー（愛・せつ菜・璃奈・侑 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0hAnxsOLd0TsGJ8JzQetGy",
+            "uri": "spotify:track:0hAnxsOLd0TsGJ8JzQetGy",
+            "matchedTitle": "わちゅごなどぅー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27320a80ce7233bf161df0aa36c",
+            "albumName": "わちゅごなどぅー"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来ハーモニー",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1u7y6w4__ver",
+            "displayTitle": "未来ハーモニー（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Q3DUz1H6B74YJC5G2p2WX",
+            "uri": "spotify:track:5Q3DUz1H6B74YJC5G2p2WX",
+            "matchedTitle": "未来ハーモニー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fly with You!!",
+            "versionLabel": "愛・せつ菜・璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "fly-with-you__ver",
+            "displayTitle": "Fly with You!!（愛・せつ菜・璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3HbYu8ekAukuOo5w71KBUp",
+            "uri": "spotify:track:3HbYu8ekAukuOo5w71KBUp",
+            "matchedTitle": "Fly with You!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-aichi-day-1",
+      "label": "愛知公演 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2025-08-16",
+      "venue": {
+        "name": "Niterra日本特殊陶業市民会館フォレストホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Mermaid",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-mermaid__original",
+            "displayTitle": "Daydream Mermaid"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2HEIUm9pIViliot1yfkJi3",
+            "uri": "spotify:track:2HEIUm9pIViliot1yfkJi3",
+            "matchedTitle": "Daydream Mermaid",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "開花宣言",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-8iwa1e__original",
+            "displayTitle": "開花宣言"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67pyNjYqamvYNbUuvpqsoO",
+            "uri": "spotify:track:67pyNjYqamvYNbUuvpqsoO",
+            "matchedTitle": "開花宣言",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夜明珠（イエミンジュ）",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rf6rpx__original",
+            "displayTitle": "夜明珠（イエミンジュ）"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5B24hLFhi4F8KxhZyYLj2v",
+            "uri": "spotify:track:5B24hLFhi4F8KxhZyYLj2v",
+            "matchedTitle": "夜明珠",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wish",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wish__original",
+            "displayTitle": "Wish"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DCtVkAz85SHKZKTsHwrIP",
+            "uri": "spotify:track:5DCtVkAz85SHKZKTsHwrIP",
+            "matchedTitle": "Wish",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "tokimeki-runners__ver",
+            "displayTitle": "TOKIMEKI Runners（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "永遠の一瞬",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-mvoovx__ver",
+            "displayTitle": "永遠の一瞬（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7pkKBg2iDgpD2XDK4K72ue",
+            "uri": "spotify:track:7pkKBg2iDgpD2XDK4K72ue",
+            "matchedTitle": "永遠の一瞬",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735f17a1db2d0e8a3ca6cb92d8",
+            "albumName": "永遠の一瞬"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Just Believe!!!",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "just-believe__ver",
+            "displayTitle": "Just Believe!!!（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "797AE5T5YMIbez2bEyVWWe",
+            "uri": "spotify:track:797AE5T5YMIbez2bEyVWWe",
+            "matchedTitle": "Just Believe!!! (12人 Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273515166f4c5e37a5aa011e816",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.2"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-aichi-day-2",
+      "label": "愛知公演 DAY.2 ＜昼公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-08-17",
+      "venue": {
+        "name": "Niterra日本特殊陶業市民会館フォレストホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "永遠の一瞬",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-mvoovx__ver",
+            "displayTitle": "永遠の一瞬（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7pkKBg2iDgpD2XDK4K72ue",
+            "uri": "spotify:track:7pkKBg2iDgpD2XDK4K72ue",
+            "matchedTitle": "永遠の一瞬",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735f17a1db2d0e8a3ca6cb92d8",
+            "albumName": "永遠の一瞬"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daydream Mermaid",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daydream-mermaid__original",
+            "displayTitle": "Daydream Mermaid"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2HEIUm9pIViliot1yfkJi3",
+            "uri": "spotify:track:2HEIUm9pIViliot1yfkJi3",
+            "matchedTitle": "Daydream Mermaid",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "開花宣言",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-8iwa1e__original",
+            "displayTitle": "開花宣言"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67pyNjYqamvYNbUuvpqsoO",
+            "uri": "spotify:track:67pyNjYqamvYNbUuvpqsoO",
+            "matchedTitle": "開花宣言",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夜明珠（イエミンジュ）",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rf6rpx__original",
+            "displayTitle": "夜明珠（イエミンジュ）"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5B24hLFhi4F8KxhZyYLj2v",
+            "uri": "spotify:track:5B24hLFhi4F8KxhZyYLj2v",
+            "matchedTitle": "夜明珠",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wish",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wish__original",
+            "displayTitle": "Wish"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DCtVkAz85SHKZKTsHwrIP",
+            "uri": "spotify:track:5DCtVkAz85SHKZKTsHwrIP",
+            "matchedTitle": "Wish",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "tokimeki-runners__ver",
+            "displayTitle": "TOKIMEKI Runners（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Just Believe!!!",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "just-believe__ver",
+            "displayTitle": "Just Believe!!!（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "797AE5T5YMIbez2bEyVWWe",
+            "uri": "spotify:track:797AE5T5YMIbez2bEyVWWe",
+            "matchedTitle": "Just Believe!!! (12人 Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273515166f4c5e37a5aa011e816",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.2"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-aichi-day-2-2",
+      "label": "愛知公演 DAY.2 ＜夜公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-08-17",
+      "venue": {
+        "name": "Niterra日本特殊陶業市民会館フォレストホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / 歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / 歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "PHOENIX",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "phoenix__original",
+            "displayTitle": "PHOENIX"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4oJXZkrYgrwruRh51IuN4p",
+            "uri": "spotify:track:4oJXZkrYgrwruRh51IuN4p",
+            "matchedTitle": "PHOENIX",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Stellar Stream",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "stellar-stream__original",
+            "displayTitle": "Stellar Stream"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4wZcKcvGmPDbSazHXFw6ex",
+            "uri": "spotify:track:4wZcKcvGmPDbSazHXFw6ex",
+            "matchedTitle": "Stellar Stream",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "My Own Fairy-Tale",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "my-own-fairy-tale__original",
+            "displayTitle": "My Own Fairy-Tale"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ssu1ZVe4E10bIviBsNAMs",
+            "uri": "spotify:track:4ssu1ZVe4E10bIviBsNAMs",
+            "matchedTitle": "My Own Fairy-Tale",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fire Bird",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fire-bird__original",
+            "displayTitle": "Fire Bird"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ea2Y0mfeiOyKcI16RQya4",
+            "uri": "spotify:track:1Ea2Y0mfeiOyKcI16RQya4",
+            "matchedTitle": "Fire Bird",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "tokimeki-runners__ver",
+            "displayTitle": "TOKIMEKI Runners（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "永遠の一瞬",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-mvoovx__ver",
+            "displayTitle": "永遠の一瞬（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7pkKBg2iDgpD2XDK4K72ue",
+            "uri": "spotify:track:7pkKBg2iDgpD2XDK4K72ue",
+            "matchedTitle": "永遠の一瞬",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735f17a1db2d0e8a3ca6cb92d8",
+            "albumName": "永遠の一瞬"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Just Believe!!!",
+            "versionLabel": "歩夢・果林・彼方・嵐珠 Ver.",
+            "versionCode": "ver",
+            "recordingId": "just-believe__ver",
+            "displayTitle": "Just Believe!!!（歩夢・果林・彼方・嵐珠 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "797AE5T5YMIbez2bEyVWWe",
+            "uri": "spotify:track:797AE5T5YMIbez2bEyVWWe",
+            "matchedTitle": "Just Believe!!! (12人 Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273515166f4c5e37a5aa011e816",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.2"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-hokkaido-day-1",
+      "label": "北海道公演 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2025-08-23",
+      "venue": {
+        "name": "カナモトホール（札幌市民ホール）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Toy Doll",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "toy-doll__original",
+            "displayTitle": "Toy Doll"
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "27cSTtZv5GQQHpKDjr3pnV",
+            "uri": "spotify:track:27cSTtZv5GQQHpKDjr3pnV",
+            "matchedTitle": "Toy Doll",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "First Love Again",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "first-love-again__original",
+            "displayTitle": "First Love Again"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6nOL5Ewp1C4TF7ncJkLqBP",
+            "uri": "spotify:track:6nOL5Ewp1C4TF7ncJkLqBP",
+            "matchedTitle": "First Love Again",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Cara Tesoro",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "cara-tesoro__original",
+            "displayTitle": "Cara Tesoro"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0Qgi48UqdmsFcKCH3a8NKG",
+            "uri": "spotify:track:0Qgi48UqdmsFcKCH3a8NKG",
+            "matchedTitle": "Cara Tesoro",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "☆ワンダーランド☆",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1441ozs__original",
+            "displayTitle": "☆ワンダーランド☆"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2qq87xD5qOMW6uQwzdVmrX",
+            "uri": "spotify:track:2qq87xD5qOMW6uQwzdVmrX",
+            "matchedTitle": "☆ワンダーランド☆",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Level Oops! Adventures",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "level-oops-adventures__ver",
+            "displayTitle": "Level Oops! Adventures（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LBYRSfy1YOsjcVjguBkaM",
+            "uri": "spotify:track:5LBYRSfy1YOsjcVjguBkaM",
+            "matchedTitle": "Level Oops! Adventures",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ee63f85c9c541bf2ccb5a693",
+            "albumName": "Future Parade"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "L！L！L！ (Love the Life We Live)",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "l-l-l-love-the-life-we-live__ver",
+            "displayTitle": "L！L！L！ (Love the Life We Live)（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4KYGJ7PMQ8M2GMPowJNlKi",
+            "uri": "spotify:track:4KYGJ7PMQ8M2GMPowJNlKi",
+            "matchedTitle": "L！L！L！ (Love the Life We Live)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "どこにいても君は君",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1e2eyx1__ver",
+            "displayTitle": "どこにいても君は君（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1LRDHZ5jyWwTOm7JX4eOxZ",
+            "uri": "spotify:track:1LRDHZ5jyWwTOm7JX4eOxZ",
+            "matchedTitle": "どこにいても君は君",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-hokkaido-day-2",
+      "label": "北海道公演 DAY.2 ＜昼公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-08-24",
+      "venue": {
+        "name": "カナモトホール（札幌市民ホール）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "どこにいても君は君",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1e2eyx1__ver",
+            "displayTitle": "どこにいても君は君（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1LRDHZ5jyWwTOm7JX4eOxZ",
+            "uri": "spotify:track:1LRDHZ5jyWwTOm7JX4eOxZ",
+            "matchedTitle": "どこにいても君は君",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Toy Doll",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "toy-doll__original",
+            "displayTitle": "Toy Doll"
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "27cSTtZv5GQQHpKDjr3pnV",
+            "uri": "spotify:track:27cSTtZv5GQQHpKDjr3pnV",
+            "matchedTitle": "Toy Doll",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "First Love Again",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "first-love-again__original",
+            "displayTitle": "First Love Again"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6nOL5Ewp1C4TF7ncJkLqBP",
+            "uri": "spotify:track:6nOL5Ewp1C4TF7ncJkLqBP",
+            "matchedTitle": "First Love Again",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Cara Tesoro",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "cara-tesoro__original",
+            "displayTitle": "Cara Tesoro"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0Qgi48UqdmsFcKCH3a8NKG",
+            "uri": "spotify:track:0Qgi48UqdmsFcKCH3a8NKG",
+            "matchedTitle": "Cara Tesoro",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "☆ワンダーランド☆",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1441ozs__original",
+            "displayTitle": "☆ワンダーランド☆"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2qq87xD5qOMW6uQwzdVmrX",
+            "uri": "spotify:track:2qq87xD5qOMW6uQwzdVmrX",
+            "matchedTitle": "☆ワンダーランド☆",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Level Oops! Adventures",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "level-oops-adventures__ver",
+            "displayTitle": "Level Oops! Adventures（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LBYRSfy1YOsjcVjguBkaM",
+            "uri": "spotify:track:5LBYRSfy1YOsjcVjguBkaM",
+            "matchedTitle": "Level Oops! Adventures",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ee63f85c9c541bf2ccb5a693",
+            "albumName": "Future Parade"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "L！L！L！ (Love the Life We Live)",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "l-l-l-love-the-life-we-live__ver",
+            "displayTitle": "L！L！L！ (Love the Life We Live)（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4KYGJ7PMQ8M2GMPowJNlKi",
+            "uri": "spotify:track:4KYGJ7PMQ8M2GMPowJNlKi",
+            "matchedTitle": "L！L！L！ (Love the Life We Live)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-live-and-fan-meeting-tour-hokkaido-day-2-2",
+      "label": "北海道公演 DAY.2 ＜夜公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2025-08-24",
+      "venue": {
+        "name": "カナモトホール（札幌市民ホール）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹ヶ咲学園校歌",
+            "versionLabel": "Rock Ver. / かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "rock-ver-ver",
+            "recordingId": "track-7u1a49__rock-ver-ver",
+            "displayTitle": "虹ヶ咲学園校歌（Rock Ver. / かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5XAfHGZnOCXz7FZypyfMoX",
+            "uri": "spotify:track:5XAfHGZnOCXz7FZypyfMoX",
+            "matchedTitle": "虹ヶ咲学園校歌 (Rock Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ec8a889e4a8ddf80cf379488",
+            "albumName": "虹ヶ咲学園校歌"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TO BE YOURSELF",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "to-be-yourself__original",
+            "displayTitle": "TO BE YOURSELF"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0IWoxY81k3huGpDXly05Yj",
+            "uri": "spotify:track:0IWoxY81k3huGpDXly05Yj",
+            "matchedTitle": "TO BE YOURSELF",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "I’m Still...",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "i-m-still__original",
+            "displayTitle": "I’m Still..."
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3AVxQbbiRTubKVEOJIWKn3",
+            "uri": "spotify:track:3AVxQbbiRTubKVEOJIWKn3",
+            "matchedTitle": "I'm Still...",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋するSunflower",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sunflower__original",
+            "displayTitle": "恋するSunflower"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6EZh8cPpNHziHLXLYDkTop",
+            "uri": "spotify:track:6EZh8cPpNHziHLXLYDkTop",
+            "matchedTitle": "恋するSunflower",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d42031e319933d5c9047bddc",
+            "albumName": "Fly with You!!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ツナガルコネクト",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ugbxbx__original",
+            "displayTitle": "ツナガルコネクト"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0rCOOeLaLLJdYLwtQU2cgN",
+            "uri": "spotify:track:0rCOOeLaLLJdYLwtQU2cgN",
+            "matchedTitle": "ツナガルコネクト",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Level Oops! Adventures",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "level-oops-adventures__ver",
+            "displayTitle": "Level Oops! Adventures（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LBYRSfy1YOsjcVjguBkaM",
+            "uri": "spotify:track:5LBYRSfy1YOsjcVjguBkaM",
+            "matchedTitle": "Level Oops! Adventures",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ee63f85c9c541bf2ccb5a693",
+            "albumName": "Future Parade"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "L！L！L！ (Love the Life We Live)",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "l-l-l-love-the-life-we-live__ver",
+            "displayTitle": "L！L！L！ (Love the Life We Live)（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4KYGJ7PMQ8M2GMPowJNlKi",
+            "uri": "spotify:track:4KYGJ7PMQ8M2GMPowJNlKi",
+            "matchedTitle": "L！L！L！ (Love the Life We Live)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Eternalize Love!!",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "eternalize-love__ver",
+            "displayTitle": "Eternalize Love!!（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0wkOJcvm8djrQ2ooYh8Irj",
+            "uri": "spotify:track:0wkOJcvm8djrQ2ooYh8Irj",
+            "matchedTitle": "Eternalize Love!!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273165dd155b2784d040c4e104f",
+            "albumName": "Eternalize Love!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "どこにいても君は君",
+            "versionLabel": "かすみ・エマ・璃奈・ミア Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1e2eyx1__ver",
+            "displayTitle": "どこにいても君は君（かすみ・エマ・璃奈・ミア Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1LRDHZ5jyWwTOm7JX4eOxZ",
+            "uri": "spotify:track:1LRDHZ5jyWwTOm7JX4eOxZ",
+            "matchedTitle": "どこにいても君は君",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27343d756feb6ccb30e04ab164b",
+            "albumName": "どこにいても君は君"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

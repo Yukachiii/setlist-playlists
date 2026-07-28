@@ -1,0 +1,1573 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-103-105th-fes-rec-live-road-to-bloom",
+  "title": "ラブライブ！蓮ノ空女学院スクールアイドルクラブ 103-105th Fes×ReC：LIVE ～Road to Bloom～",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/hasunosora/live-event/live_detail.php?p=RTB",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/281",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-103-105th-fes-rec-live-road-to-bloom-zepp-haneda-tokyo-day-1-1",
+      "label": "Day.1＜第1回公演＞",
+      "day": 1,
+      "session": null,
+      "date": "2026-01-21",
+      "venue": {
+        "name": "Zepp Haneda (TOKYO)",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイドゥーミー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rcgw47__original",
+            "displayTitle": "アイドゥーミー！"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3JvbeCWTvPUTWmEbRmV6ZX",
+            "uri": "spotify:track:3JvbeCWTvPUTWmEbRmV6ZX",
+            "matchedTitle": "アイドゥーミー！",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ノンフィクションヒーローショー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ou323d__original",
+            "displayTitle": "ノンフィクションヒーローショー"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7K1bQmXmjUCTKC1UQf8LOz",
+            "uri": "spotify:track:7K1bQmXmjUCTKC1UQf8LOz",
+            "matchedTitle": "ノンフィクションヒーローショー",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全方位キュン♡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-v25wuf__original",
+            "displayTitle": "全方位キュン♡"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5VbujGTvm7PVhofgReaFgt",
+            "uri": "spotify:track:5VbujGTvm7PVhofgReaFgt",
+            "matchedTitle": "全方位キュン♡",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WAWO!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wawo__original",
+            "displayTitle": "WAWO!"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5lKjXZ9fGHnEdakKk0YOiq",
+            "uri": "spotify:track:5lKjXZ9fGHnEdakKk0YOiq",
+            "matchedTitle": "WAWO!",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KNOT",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "knot__original",
+            "displayTitle": "KNOT"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6jIOsqdFCsIo0dTxhO5HBd",
+            "uri": "spotify:track:6jIOsqdFCsIo0dTxhO5HBd",
+            "matchedTitle": "KNOT",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "COMPASS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "compass__original",
+            "displayTitle": "COMPASS"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4WE5RA4DqmZXD9AwmbMTQc",
+            "uri": "spotify:track:4WE5RA4DqmZXD9AwmbMTQc",
+            "matchedTitle": "COMPASS",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アンペア",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-11v8fni__original",
+            "displayTitle": "アンペア"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5i850smQfpHr5leqCC9oRn",
+            "uri": "spotify:track:5i850smQfpHr5leqCC9oRn",
+            "matchedTitle": "アンペア",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "千変万華",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1st14w7__original",
+            "displayTitle": "千変万華"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2uAzg5K9lknQ0GI8xIY2v1",
+            "uri": "spotify:track:2uAzg5K9lknQ0GI8xIY2v1",
+            "matchedTitle": "千変万華",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメワズライ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b908vs__original",
+            "displayTitle": "ユメワズライ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1P81x2eE9T3ad6MZ5z638f",
+            "uri": "spotify:track:1P81x2eE9T3ad6MZ5z638f",
+            "matchedTitle": "ユメワズライ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Celebration!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "celebration__original",
+            "displayTitle": "Celebration!"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4gLeQMdhBO0K5odGQJZmYn",
+            "uri": "spotify:track:4gLeQMdhBO0K5odGQJZmYn",
+            "matchedTitle": "Celebration!",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "十六夜セレーネ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1p9nxwt__original",
+            "displayTitle": "十六夜セレーネ"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "397Q58MRaXG0LEnZBjaIxT",
+            "uri": "spotify:track:397Q58MRaXG0LEnZBjaIxT",
+            "matchedTitle": "十六夜セレーネ",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シアター生き様",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ochccd__original",
+            "displayTitle": "シアター生き様"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5CfYWKBfDGaU9yRt9EDOSm",
+            "uri": "spotify:track:5CfYWKBfDGaU9yRt9EDOSm",
+            "matchedTitle": "シアター生き様",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorfulness",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "colorfulness__original",
+            "displayTitle": "Colorfulness"
+          },
+          "artistHint": "るりのとゆかいなつづりたち",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2ettUfgYP0RqdXUAwilbxi",
+            "uri": "spotify:track:2ettUfgYP0RqdXUAwilbxi",
+            "matchedTitle": "Colorfulness",
+            "matchedArtist": "るりのとゆかいなつづりたち",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ちょ、尊いLOVE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love__original",
+            "displayTitle": "ちょ、尊いLOVE"
+          },
+          "artistHint": "Ruri&To",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GCV6dC8NUesEDmDFv4XnS",
+            "uri": "spotify:track:2GCV6dC8NUesEDmDFv4XnS",
+            "matchedTitle": "ちょ、尊いLOVE",
+            "matchedArtist": "Ruri&To",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Echoes Beyond",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "echoes-beyond__original",
+            "displayTitle": "Echoes Beyond"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "57rfwPP4kgknjlCalMR9zn",
+            "uri": "spotify:track:57rfwPP4kgknjlCalMR9zn",
+            "matchedTitle": "Echoes Beyond",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": "103-105th Ver.",
+            "versionCode": "103-105th-ver",
+            "recordingId": "dream-believers__103-105th-ver",
+            "displayTitle": "Dream Believers（103-105th Ver.）"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4lMlC1ZKMRroB2FEoVFVt8",
+            "uri": "spotify:track:4lMlC1ZKMRroB2FEoVFVt8",
+            "matchedTitle": "Dream Believers",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "hasunosora-103-105th-fes-rec-live-road-to-bloom-zepp-haneda-tokyo-day-2-2",
+      "label": "Day.2＜第2回公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2026-01-22",
+      "venue": {
+        "name": "Zepp Haneda (TOKYO)",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイドゥーミー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rcgw47__original",
+            "displayTitle": "アイドゥーミー！"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3JvbeCWTvPUTWmEbRmV6ZX",
+            "uri": "spotify:track:3JvbeCWTvPUTWmEbRmV6ZX",
+            "matchedTitle": "アイドゥーミー！",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "眩耀夜行",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bwistw__original",
+            "displayTitle": "眩耀夜行"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3DXAJeYw1DeTUAbAE9JojM",
+            "uri": "spotify:track:3DXAJeYw1DeTUAbAE9JojM",
+            "matchedTitle": "眩耀夜行",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメワズライ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b908vs__original",
+            "displayTitle": "ユメワズライ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1P81x2eE9T3ad6MZ5z638f",
+            "uri": "spotify:track:1P81x2eE9T3ad6MZ5z638f",
+            "matchedTitle": "ユメワズライ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "可惜夜花火",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-qta5yq__original",
+            "displayTitle": "可惜夜花火"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5JZC27MCZoXt5dhLbWiEVc",
+            "uri": "spotify:track:5JZC27MCZoXt5dhLbWiEVc",
+            "matchedTitle": "可惜夜花火",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Mirage Voyage",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "mirage-voyage__original",
+            "displayTitle": "Mirage Voyage"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0i0mBtVV6hNDrZZgXxoOiC",
+            "uri": "spotify:track:0i0mBtVV6hNDrZZgXxoOiC",
+            "matchedTitle": "Mirage Voyage",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "COMPASS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "compass__original",
+            "displayTitle": "COMPASS"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4WE5RA4DqmZXD9AwmbMTQc",
+            "uri": "spotify:track:4WE5RA4DqmZXD9AwmbMTQc",
+            "matchedTitle": "COMPASS",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ブルウモーメント",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-s5h8x2__original",
+            "displayTitle": "ブルウモーメント"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3m9w557IoQcvehz3MebV98",
+            "uri": "spotify:track:3m9w557IoQcvehz3MebV98",
+            "matchedTitle": "ブルウモーメント",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハクチューアラモード",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1yiq14v__original",
+            "displayTitle": "ハクチューアラモード"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "42Hc73MCWr6osO8zMWWmL7",
+            "uri": "spotify:track:42Hc73MCWr6osO8zMWWmL7",
+            "matchedTitle": "ハクチューアラモード",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全方位キュン♡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-v25wuf__original",
+            "displayTitle": "全方位キュン♡"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5VbujGTvm7PVhofgReaFgt",
+            "uri": "spotify:track:5VbujGTvm7PVhofgReaFgt",
+            "matchedTitle": "全方位キュン♡",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Very! Very! COCO夏っ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "very-very-coco__original",
+            "displayTitle": "Very! Very! COCO夏っ"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "44olBYGpHdpxswXEAQ2QIC",
+            "uri": "spotify:track:44olBYGpHdpxswXEAQ2QIC",
+            "matchedTitle": "Very! Very! COCO夏っ",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "フュージョンクラスト",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1qhvgvg__original",
+            "displayTitle": "フュージョンクラスト"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6wtKeIduqwjfgUXXDo2gs2",
+            "uri": "spotify:track:6wtKeIduqwjfgUXXDo2gs2",
+            "matchedTitle": "フュージョンクラスト",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シアター生き様",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ochccd__original",
+            "displayTitle": "シアター生き様"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5CfYWKBfDGaU9yRt9EDOSm",
+            "uri": "spotify:track:5CfYWKBfDGaU9yRt9EDOSm",
+            "matchedTitle": "シアター生き様",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハッピー至上主義！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b2odbx__original",
+            "displayTitle": "ハッピー至上主義！"
+          },
+          "artistHint": "かほめぐ♡じぇらーと",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1sAZfB4irnhGYbbyS31WaI",
+            "uri": "spotify:track:1sAZfB4irnhGYbbyS31WaI",
+            "matchedTitle": "ハッピー至上主義！",
+            "matchedArtist": "かほめぐ♡じぇらーと",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Nεw Black",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "n-w-black__original",
+            "displayTitle": "Nεw Black"
+          },
+          "artistHint": "PRINCEε>ε>",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6aIFwBYaE2c0QTMp5Mb5Jx",
+            "uri": "spotify:track:6aIFwBYaE2c0QTMp5Mb5Jx",
+            "matchedTitle": "Nεw Black",
+            "matchedArtist": "PRINCEε>ε>",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Echoes Beyond",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "echoes-beyond__original",
+            "displayTitle": "Echoes Beyond"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "57rfwPP4kgknjlCalMR9zn",
+            "uri": "spotify:track:57rfwPP4kgknjlCalMR9zn",
+            "matchedTitle": "Echoes Beyond",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": "103-105th Ver.",
+            "versionCode": "103-105th-ver",
+            "recordingId": "dream-believers__103-105th-ver",
+            "displayTitle": "Dream Believers（103-105th Ver.）"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4lMlC1ZKMRroB2FEoVFVt8",
+            "uri": "spotify:track:4lMlC1ZKMRroB2FEoVFVt8",
+            "matchedTitle": "Dream Believers",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "hasunosora-103-105th-fes-rec-live-road-to-bloom-zepp-haneda-tokyo-day-2-3",
+      "label": "Day.2＜第3回公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2026-01-22",
+      "venue": {
+        "name": "Zepp Haneda (TOKYO)",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイドゥーミー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rcgw47__original",
+            "displayTitle": "アイドゥーミー！"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3JvbeCWTvPUTWmEbRmV6ZX",
+            "uri": "spotify:track:3JvbeCWTvPUTWmEbRmV6ZX",
+            "matchedTitle": "アイドゥーミー！",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Take It Over",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "take-it-over__original",
+            "displayTitle": "Take It Over"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BgvS3Je9UxK8soPuxeAkK",
+            "uri": "spotify:track:1BgvS3Je9UxK8soPuxeAkK",
+            "matchedTitle": "Take It Over",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "COMPASS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "compass__original",
+            "displayTitle": "COMPASS"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4WE5RA4DqmZXD9AwmbMTQc",
+            "uri": "spotify:track:4WE5RA4DqmZXD9AwmbMTQc",
+            "matchedTitle": "COMPASS",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽であれ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1u4qmim__original",
+            "displayTitle": "太陽であれ！"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2txtrQUeZeY2Yvk6scvXsN",
+            "uri": "spotify:track:2txtrQUeZeY2Yvk6scvXsN",
+            "matchedTitle": "太陽であれ！",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Holiday∞Holiday",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "holiday-holiday__original",
+            "displayTitle": "Holiday∞Holiday"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3hKSrFN4Vwsx8rpc6A0UPH",
+            "uri": "spotify:track:3hKSrFN4Vwsx8rpc6A0UPH",
+            "matchedTitle": "Holiday∞Holiday",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメワズライ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b908vs__original",
+            "displayTitle": "ユメワズライ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1P81x2eE9T3ad6MZ5z638f",
+            "uri": "spotify:track:1P81x2eE9T3ad6MZ5z638f",
+            "matchedTitle": "ユメワズライ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "フルーツパンチ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1nju4kw__original",
+            "displayTitle": "フルーツパンチ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "71ZkiWVksVjsB3qpBiNik0",
+            "uri": "spotify:track:71ZkiWVksVjsB3qpBiNik0",
+            "matchedTitle": "フルーツパンチ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ココン東西",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1xuwk04__original",
+            "displayTitle": "ココン東西"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5fIvChfrFtFcQGPCd2tQIn",
+            "uri": "spotify:track:5fIvChfrFtFcQGPCd2tQIn",
+            "matchedTitle": "ココン東西",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全方位キュン♡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-v25wuf__original",
+            "displayTitle": "全方位キュン♡"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5VbujGTvm7PVhofgReaFgt",
+            "uri": "spotify:track:5VbujGTvm7PVhofgReaFgt",
+            "matchedTitle": "全方位キュン♡",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ニャオシグニャル",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1kc65v__original",
+            "displayTitle": "ニャオシグニャル"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6xsHmsVFPfO2GpzDVfbvHB",
+            "uri": "spotify:track:6xsHmsVFPfO2GpzDVfbvHB",
+            "matchedTitle": "ニャオシグニャル",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "片翼のトリバガ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1mqq1m__original",
+            "displayTitle": "片翼のトリバガ"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6X2forYGAi7zFj6TgJwiAf",
+            "uri": "spotify:track:6X2forYGAi7zFj6TgJwiAf",
+            "matchedTitle": "片翼のトリバガ",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シアター生き様",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ochccd__original",
+            "displayTitle": "シアター生き様"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5CfYWKBfDGaU9yRt9EDOSm",
+            "uri": "spotify:track:5CfYWKBfDGaU9yRt9EDOSm",
+            "matchedTitle": "シアター生き様",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pleasure Feather",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pleasure-feather__original",
+            "displayTitle": "Pleasure Feather"
+          },
+          "artistHint": "蓮ノ休日",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2mZtFVG3H8mTE4Zk9KvxE2",
+            "uri": "spotify:track:2mZtFVG3H8mTE4Zk9KvxE2",
+            "matchedTitle": "Pleasure Feather",
+            "matchedArtist": "蓮ノ休日",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ちょ、尊いLOVE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love__original",
+            "displayTitle": "ちょ、尊いLOVE"
+          },
+          "artistHint": "Ruri&To",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GCV6dC8NUesEDmDFv4XnS",
+            "uri": "spotify:track:2GCV6dC8NUesEDmDFv4XnS",
+            "matchedTitle": "ちょ、尊いLOVE",
+            "matchedArtist": "Ruri&To",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Echoes Beyond",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "echoes-beyond__original",
+            "displayTitle": "Echoes Beyond"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "57rfwPP4kgknjlCalMR9zn",
+            "uri": "spotify:track:57rfwPP4kgknjlCalMR9zn",
+            "matchedTitle": "Echoes Beyond",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": "103-105th Ver.",
+            "versionCode": "103-105th-ver",
+            "recordingId": "dream-believers__103-105th-ver",
+            "displayTitle": "Dream Believers（103-105th Ver.）"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4lMlC1ZKMRroB2FEoVFVt8",
+            "uri": "spotify:track:4lMlC1ZKMRroB2FEoVFVt8",
+            "matchedTitle": "Dream Believers",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "hasunosora-103-105th-fes-rec-live-road-to-bloom-zepp-haneda-tokyo-day-2-4",
+      "label": "Day.2＜第4回公演＞",
+      "day": 2,
+      "session": null,
+      "date": "2026-01-22",
+      "venue": {
+        "name": "Zepp Haneda (TOKYO)",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイドゥーミー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rcgw47__original",
+            "displayTitle": "アイドゥーミー！"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3JvbeCWTvPUTWmEbRmV6ZX",
+            "uri": "spotify:track:3JvbeCWTvPUTWmEbRmV6ZX",
+            "matchedTitle": "アイドゥーミー！",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Reflection in the mirror",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "reflection-in-the-mirror__original",
+            "displayTitle": "Reflection in the mirror"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "02rOjK5ttcF8TitIOfhH7O",
+            "uri": "spotify:track:02rOjK5ttcF8TitIOfhH7O",
+            "matchedTitle": "Reflection in the mirror",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sparkly Spot",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sparkly-spot__original",
+            "displayTitle": "Sparkly Spot"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6cS5FleIwYk0nMI3uGZ6FE",
+            "uri": "spotify:track:6cS5FleIwYk0nMI3uGZ6FE",
+            "matchedTitle": "Sparkly Spot",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイデンティティ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1iq75uh__original",
+            "displayTitle": "アイデンティティ"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1svLZ9Jpcqpl48Zb94d4z0",
+            "uri": "spotify:track:1svLZ9Jpcqpl48Zb94d4z0",
+            "matchedTitle": "アイデンティティ",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorfulness",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "colorfulness__original",
+            "displayTitle": "Colorfulness"
+          },
+          "artistHint": "るりのとゆかいなつづりたち",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2ettUfgYP0RqdXUAwilbxi",
+            "uri": "spotify:track:2ettUfgYP0RqdXUAwilbxi",
+            "matchedTitle": "Colorfulness",
+            "matchedArtist": "るりのとゆかいなつづりたち",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメワズライ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b908vs__original",
+            "displayTitle": "ユメワズライ"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1P81x2eE9T3ad6MZ5z638f",
+            "uri": "spotify:track:1P81x2eE9T3ad6MZ5z638f",
+            "matchedTitle": "ユメワズライ",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "COMPASS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "compass__original",
+            "displayTitle": "COMPASS"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4WE5RA4DqmZXD9AwmbMTQc",
+            "uri": "spotify:track:4WE5RA4DqmZXD9AwmbMTQc",
+            "matchedTitle": "COMPASS",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全方位キュン♡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-v25wuf__original",
+            "displayTitle": "全方位キュン♡"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5VbujGTvm7PVhofgReaFgt",
+            "uri": "spotify:track:5VbujGTvm7PVhofgReaFgt",
+            "matchedTitle": "全方位キュン♡",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Celebration!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "celebration__original",
+            "displayTitle": "Celebration!"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4gLeQMdhBO0K5odGQJZmYn",
+            "uri": "spotify:track:4gLeQMdhBO0K5odGQJZmYn",
+            "matchedTitle": "Celebration!",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アンペア",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-11v8fni__original",
+            "displayTitle": "アンペア"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5i850smQfpHr5leqCC9oRn",
+            "uri": "spotify:track:5i850smQfpHr5leqCC9oRn",
+            "matchedTitle": "アンペア",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WAWO!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wawo__original",
+            "displayTitle": "WAWO!"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5lKjXZ9fGHnEdakKk0YOiq",
+            "uri": "spotify:track:5lKjXZ9fGHnEdakKk0YOiq",
+            "matchedTitle": "WAWO!",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Retrofuture",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "retrofuture__original",
+            "displayTitle": "Retrofuture"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "425qPm1V9p6RMEqHrXq4hj",
+            "uri": "spotify:track:425qPm1V9p6RMEqHrXq4hj",
+            "matchedTitle": "Retrofuture",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シアター生き様",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ochccd__original",
+            "displayTitle": "シアター生き様"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5CfYWKBfDGaU9yRt9EDOSm",
+            "uri": "spotify:track:5CfYWKBfDGaU9yRt9EDOSm",
+            "matchedTitle": "シアター生き様",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Nεw Black",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "n-w-black__original",
+            "displayTitle": "Nεw Black"
+          },
+          "artistHint": "PRINCEε>ε>",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6aIFwBYaE2c0QTMp5Mb5Jx",
+            "uri": "spotify:track:6aIFwBYaE2c0QTMp5Mb5Jx",
+            "matchedTitle": "Nεw Black",
+            "matchedArtist": "PRINCEε>ε>",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Echoes Beyond",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "echoes-beyond__original",
+            "displayTitle": "Echoes Beyond"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "57rfwPP4kgknjlCalMR9zn",
+            "uri": "spotify:track:57rfwPP4kgknjlCalMR9zn",
+            "matchedTitle": "Echoes Beyond",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": "103-105th Ver.",
+            "versionCode": "103-105th-ver",
+            "recordingId": "dream-believers__103-105th-ver",
+            "displayTitle": "Dream Believers（103-105th Ver.）"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4lMlC1ZKMRroB2FEoVFVt8",
+            "uri": "spotify:track:4lMlC1ZKMRroB2FEoVFVt8",
+            "matchedTitle": "Dream Believers",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

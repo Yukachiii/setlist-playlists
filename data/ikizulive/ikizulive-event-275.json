@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "0.3",
+  "id": "ikizulive-event-275",
+  "title": "あにぺろフェス",
+  "series": [
+    "ikizulive"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/lovehigh/news/detail.php?p=01_5196https://fmfukuoka.co.jp/lp/aniperofes2025/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/275",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "ikizulive-event-275-jr-jr-9f-performance-703",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2025-10-13",
+      "venue": {
+        "name": "JR九州ホール（JR博多シティ9F）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What is my LIFE?",
+            "versionLabel": "此花輝夜 Solo Ver.",
+            "versionCode": "solo-ver",
+            "recordingId": "what-is-my-life__solo-ver",
+            "displayTitle": "What is my LIFE?（此花輝夜 Solo Ver.）"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4uWUgAX6o7ssWVyiGmp4Ij",
+            "uri": "spotify:track:4uWUgAX6o7ssWVyiGmp4Ij",
+            "matchedTitle": "What is my LIFE?",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27337b6558ea368df05b02153e7",
+            "albumName": "What is my LIFE?"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "キミは夜のポラリス",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ww5hbn__original",
+            "displayTitle": "キミは夜のポラリス"
+          },
+          "artistHint": "いきづらい部！, 此花輝夜(CV.天沢朱音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1V4xMKE8BPcMXRnTujX63r",
+            "uri": "spotify:track:1V4xMKE8BPcMXRnTujX63r",
+            "matchedTitle": "キミは夜のポラリス",
+            "matchedArtist": "いきづらい部！, 此花輝夜(CV.天沢朱音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27350d10e0e0b88c45f325c8330",
+            "albumName": "キミは夜のポラリス"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

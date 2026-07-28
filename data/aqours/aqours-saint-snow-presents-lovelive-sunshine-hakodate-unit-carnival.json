@@ -1,0 +1,661 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-saint-snow-presents-lovelive-sunshine-hakodate-unit-carnival",
+  "title": "Saint Snow PRESENTS LOVELIVE! SUNSHINE!! HAKODATE UNIT CARNIVAL",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/uranohoshi/sp_uc.php",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/17",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-saint-snow-presents-lovelive-sunshine-hakodate-unit-carnival-venue-26-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2018-04-27",
+      "venue": {
+        "name": "函館アリーナ メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DROPOUT!?",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dropout__original",
+            "displayTitle": "DROPOUT!?"
+          },
+          "artistHint": "Saint Snow",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7tI5GDU50puokqzVy3rlsR",
+            "uri": "spotify:track:7tI5GDU50puokqzVy3rlsR",
+            "matchedTitle": "DROPOUT!?",
+            "matchedArtist": "Saint Snow",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27325f02033aa0babecd5b530ed",
+            "albumName": "Awaken the power"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "CRASH MIND",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "crash-mind__original",
+            "displayTitle": "CRASH MIND"
+          },
+          "artistHint": "Saint Snow",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "52niDaOJpulBIxV4XvSG6v",
+            "uri": "spotify:track:52niDaOJpulBIxV4XvSG6v",
+            "matchedTitle": "CRASH MIND",
+            "matchedArtist": "Saint Snow",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27325f02033aa0babecd5b530ed",
+            "albumName": "Awaken the power"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "トリコリコPLEASE!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "please__original",
+            "displayTitle": "トリコリコPLEASE!!"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7dwf6EsZwcWwEVZwv31P4N",
+            "uri": "spotify:track:7dwf6EsZwcWwEVZwv31P4N",
+            "matchedTitle": "トリコリコPLEASE!!",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LONELY TUNING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "lonely-tuning__original",
+            "displayTitle": "LONELY TUNING"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4rt3mhcI5Kz3E7AtwS4ycq",
+            "uri": "spotify:track:4rt3mhcI5Kz3E7AtwS4ycq",
+            "matchedTitle": "LONELY TUNING",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ときめき分類学",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-sg1tjq__original",
+            "displayTitle": "ときめき分類学"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6jcPV2hsKQkzryNMPu59bS",
+            "uri": "spotify:track:6jcPV2hsKQkzryNMPu59bS",
+            "matchedTitle": "ときめき分類学",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "元気全開DAY! DAY! DAY!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "day-day-day__original",
+            "displayTitle": "元気全開DAY! DAY! DAY!"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4JMTPNYt9yXcKFRZpKLosa",
+            "uri": "spotify:track:4JMTPNYt9yXcKFRZpKLosa",
+            "matchedTitle": "元気全開DAY! DAY! DAY!",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "P.S.の向こう側",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "p-s__original",
+            "displayTitle": "P.S.の向こう側"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7ayhFVETwVEgwzwFvCfG9B",
+            "uri": "spotify:track:7ayhFVETwVEgwzwFvCfG9B",
+            "matchedTitle": "P.S.の向こう側",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夜空はなんでも知ってるの？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-gh7mtm__original",
+            "displayTitle": "夜空はなんでも知ってるの？"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3sgDrN11e5mbLaxNNvIx5S",
+            "uri": "spotify:track:3sgDrN11e5mbLaxNNvIx5S",
+            "matchedTitle": "夜空はなんでも知ってるの？",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Strawberry Trapper",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "strawberry-trapper__original",
+            "displayTitle": "Strawberry Trapper"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ApmNv5aFTqOmRAvbyBAqe",
+            "uri": "spotify:track:4ApmNv5aFTqOmRAvbyBAqe",
+            "matchedTitle": "Strawberry Trapper",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Guilty Eyes Fever",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "guilty-eyes-fever__original",
+            "displayTitle": "Guilty Eyes Fever"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4oRXclxW5k5ROr5rHhqfA9",
+            "uri": "spotify:track:4oRXclxW5k5ROr5rHhqfA9",
+            "matchedTitle": "Guilty Eyes Fever",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Guilty Night, Guilty Kiss!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "guilty-night-guilty-kiss__original",
+            "displayTitle": "Guilty Night, Guilty Kiss!"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0k1c9E8unkD2FDnJhKMMT2",
+            "uri": "spotify:track:0k1c9E8unkD2FDnJhKMMT2",
+            "matchedTitle": "Guilty Night, Guilty Kiss!",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SELF CONTROL!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "self-control__original",
+            "displayTitle": "SELF CONTROL!!"
+          },
+          "artistHint": "Saint Snow",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6fCOFR8vIKz2auPgfa1jNq",
+            "uri": "spotify:track:6fCOFR8vIKz2auPgfa1jNq",
+            "matchedTitle": "SELF CONTROL!!【第8話挿入歌】 - フルサイズ",
+            "matchedArtist": "Saint Snow",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ce8d1f75ad881046c0f1381",
+            "albumName": "TVアニメ『ラブライブ！サンシャイン!!』オリジナルサウンドトラック「Sailing to the Sunshine」"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6xdb0g__original",
+            "displayTitle": "ユメ語るよりユメ歌おう"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-saint-snow-presents-lovelive-sunshine-hakodate-unit-carnival-venue-26-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2018-04-28",
+      "venue": {
+        "name": "函館アリーナ メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DROPOUT!?",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dropout__original",
+            "displayTitle": "DROPOUT!?"
+          },
+          "artistHint": "Saint Snow",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7tI5GDU50puokqzVy3rlsR",
+            "uri": "spotify:track:7tI5GDU50puokqzVy3rlsR",
+            "matchedTitle": "DROPOUT!?",
+            "matchedArtist": "Saint Snow",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27325f02033aa0babecd5b530ed",
+            "albumName": "Awaken the power"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "CRASH MIND",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "crash-mind__original",
+            "displayTitle": "CRASH MIND"
+          },
+          "artistHint": "Saint Snow",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "52niDaOJpulBIxV4XvSG6v",
+            "uri": "spotify:track:52niDaOJpulBIxV4XvSG6v",
+            "matchedTitle": "CRASH MIND",
+            "matchedArtist": "Saint Snow",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27325f02033aa0babecd5b530ed",
+            "albumName": "Awaken the power"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "トリコリコPLEASE!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "please__original",
+            "displayTitle": "トリコリコPLEASE!!"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7dwf6EsZwcWwEVZwv31P4N",
+            "uri": "spotify:track:7dwf6EsZwcWwEVZwv31P4N",
+            "matchedTitle": "トリコリコPLEASE!!",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "GALAXY HidE and SeeK",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "galaxy-hide-and-seek__original",
+            "displayTitle": "GALAXY HidE and SeeK"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0nPaqGTjGQ5sqy5rmIzi7m",
+            "uri": "spotify:track:0nPaqGTjGQ5sqy5rmIzi7m",
+            "matchedTitle": "GALAXY HidE and SeeK",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "INNOCENT BIRD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "innocent-bird__original",
+            "displayTitle": "INNOCENT BIRD"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6YjgfCMX6uCQzatrNSKU96",
+            "uri": "spotify:track:6YjgfCMX6uCQzatrNSKU96",
+            "matchedTitle": "INNOCENT BIRD",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "元気全開DAY! DAY! DAY!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "day-day-day__original",
+            "displayTitle": "元気全開DAY! DAY! DAY!"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4JMTPNYt9yXcKFRZpKLosa",
+            "uri": "spotify:track:4JMTPNYt9yXcKFRZpKLosa",
+            "matchedTitle": "元気全開DAY! DAY! DAY!",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "近未来ハッピーエンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1w0uptd__original",
+            "displayTitle": "近未来ハッピーエンド"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4jh3bzVyvZUQ3IjSzYwnN1",
+            "uri": "spotify:track:4jh3bzVyvZUQ3IjSzYwnN1",
+            "matchedTitle": "近未来ハッピーエンド",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "海岸通りで待ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bqvjys__original",
+            "displayTitle": "海岸通りで待ってるよ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4nUNspP8lDRKp1txgKxOS0",
+            "uri": "spotify:track:4nUNspP8lDRKp1txgKxOS0",
+            "matchedTitle": "海岸通りで待ってるよ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Strawberry Trapper",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "strawberry-trapper__original",
+            "displayTitle": "Strawberry Trapper"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ApmNv5aFTqOmRAvbyBAqe",
+            "uri": "spotify:track:4ApmNv5aFTqOmRAvbyBAqe",
+            "matchedTitle": "Strawberry Trapper",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コワレヤスキ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-iyrub1__original",
+            "displayTitle": "コワレヤスキ"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4zTE78pRVHUpqNX00D8Z8C",
+            "uri": "spotify:track:4zTE78pRVHUpqNX00D8Z8C",
+            "matchedTitle": "コワレヤスキ",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c9364a8e8a3a866891332b9",
+            "albumName": "コワレヤスキ"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shadow gate to love",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shadow-gate-to-love__original",
+            "displayTitle": "Shadow gate to love"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2cvOedwacaOvCDpkm6PdBj",
+            "uri": "spotify:track:2cvOedwacaOvCDpkm6PdBj",
+            "matchedTitle": "Shadow gate to love",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SELF CONTROL!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "self-control__original",
+            "displayTitle": "SELF CONTROL!!"
+          },
+          "artistHint": "Saint Snow",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6fCOFR8vIKz2auPgfa1jNq",
+            "uri": "spotify:track:6fCOFR8vIKz2auPgfa1jNq",
+            "matchedTitle": "SELF CONTROL!!【第8話挿入歌】 - フルサイズ",
+            "matchedArtist": "Saint Snow",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ce8d1f75ad881046c0f1381",
+            "albumName": "TVアニメ『ラブライブ！サンシャイン!!』オリジナルサウンドトラック「Sailing to the Sunshine」"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6xdb0g__original",
+            "displayTitle": "ユメ語るよりユメ歌おう"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

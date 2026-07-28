@@ -74,6 +74,14 @@ test("公開トップは説明を重ねず公演一覧へ直接進める", () =>
   assert.ok(html.indexOf('id="events"') > html.indexOf('class="hero"'));
 });
 
+test("公開サイトでも手動フラグ付きナンバリング公演だけに絞り込める", () => {
+  assert.match(html, /id="numbered-live-only"/);
+  assert.match(html, /ナンバリング公演のみ/);
+  assert.match(app, /state\.numberedOnly && !isNumberedLive\(event\)/);
+  assert.match(app, /\$\("#numbered-live-only"\)\.addEventListener\("change"/);
+  assert.match(app, /event\?\.isNumberedLive === true/);
+});
+
 test("GitHub Pagesには公開ページだけを配信する", () => {
   assert.match(pagesWorkflow, /cp index\.html _site\//);
   assert.match(pagesWorkflow, /cp -R css js data _site\//);

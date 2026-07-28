@@ -1,0 +1,2217 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-extra-lovelive-2023-it-s-a-world",
+  "title": "ラブライブ！サンシャイン!! Aqours EXTRA LoveLive! 2023 ～It’s a 無限大☆WORLD～",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/uranohoshi/sp_extra2023.php",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/138",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-extra-lovelive-2023-it-s-a-world-valentine-s-day-concert-tokyo-day-1",
+      "label": "Valentine's Day Concert Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2023-02-11",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "“MY LIST” to you!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "my-list-to-you__original",
+            "displayTitle": "“MY LIST” to you!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6MArP7b6pxqCuEPSHZi9ss",
+            "uri": "spotify:track:6MArP7b6pxqCuEPSHZi9ss",
+            "matchedTitle": "“MY LIST” to you!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pops heartで踊るんだもん！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pops-heart__original",
+            "displayTitle": "Pops heartで踊るんだもん！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1KpwqYIDtCyfXA78jR0KId",
+            "uri": "spotify:track:1KpwqYIDtCyfXA78jR0KId",
+            "matchedTitle": "Pops heartで踊るんだもん！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "in this unstable world",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "in-this-unstable-world__original",
+            "displayTitle": "in this unstable world"
+          },
+          "artistHint": "津島善子 (CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7DB6vXWqHTt8YR3qgmnPH4",
+            "uri": "spotify:track:7DB6vXWqHTt8YR3qgmnPH4",
+            "matchedTitle": "in this unstable world",
+            "matchedArtist": "津島善子 (CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273371e6b98a15b753b3734e939",
+            "albumName": "LoveLive! Sunshine!! Tsushima Yoshiko First Solo Concert Album ～in this unstable world～"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "おやすみなさん！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1cifjdy__original",
+            "displayTitle": "おやすみなさん！"
+          },
+          "artistHint": "国木田花丸 (CV.高槻かなこ)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7f3J3sxJhvC4VOj8ErLiJA",
+            "uri": "spotify:track:7f3J3sxJhvC4VOj8ErLiJA",
+            "matchedTitle": "おやすみなさん！",
+            "matchedArtist": "国木田花丸 (CV.高槻かなこ)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273194de60a1835b5d664cf148f",
+            "albumName": "LoveLive! Sunshine!! Kunikida Hanamaru First Solo Concert Album ～おやすみなさん！～"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "RED GEM WINK",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "red-gem-wink__original",
+            "displayTitle": "RED GEM WINK"
+          },
+          "artistHint": "黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3NZi2ZEAhFIfDYzKTZh5A5",
+            "uri": "spotify:track:3NZi2ZEAhFIfDYzKTZh5A5",
+            "matchedTitle": "RED GEM WINK",
+            "matchedArtist": "黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731579abb7d9bcbd3b2b2573a1",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Ruby First Solo Concert Album ～RED GEM WINK～"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "New winding road",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "new-winding-road__original",
+            "displayTitle": "New winding road"
+          },
+          "artistHint": "小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1GV3VakVvAVZHE49GGKfAh",
+            "uri": "spotify:track:1GV3VakVvAVZHE49GGKfAh",
+            "matchedTitle": "New winding road",
+            "matchedArtist": "小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27389e12bf01697c668bc95d793",
+            "albumName": "LoveLive! Sunshine!! Ohara Mari First Solo Concert Album ～New winding road～"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WHITE FIRST LOVE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "white-first-love__original",
+            "displayTitle": "WHITE FIRST LOVE"
+          },
+          "artistHint": "黒澤ダイヤ (CV.小宮有紗)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Jn0z0tw44AjiHQwu7oet0",
+            "uri": "spotify:track:6Jn0z0tw44AjiHQwu7oet0",
+            "matchedTitle": "WHITE FIRST LOVE",
+            "matchedArtist": "黒澤ダイヤ (CV.小宮有紗)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27330af872910c860a39e0eb40a",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Dia First Solo Concert Album ～WHITE FIRST LOVE～"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "さかなかなんだか？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13vxlqp__original",
+            "displayTitle": "さかなかなんだか？"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VtE0Ol10sd5zOGu0GdRuh",
+            "uri": "spotify:track:3VtE0Ol10sd5zOGu0GdRuh",
+            "matchedTitle": "さかなかなんだか？",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27393d3212b7e9ee6c65f717c51",
+            "albumName": "LoveLive! Sunshine!! Matsuura Kanan First Solo Concert Album ～さかなかなんだか？～"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pianoforte Monologue",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pianoforte-monologue__original",
+            "displayTitle": "Pianoforte Monologue"
+          },
+          "artistHint": "桜内梨子 (CV.逢田梨香子)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2CaeC5bIVRF0ed13B4pdSR",
+            "uri": "spotify:track:2CaeC5bIVRF0ed13B4pdSR",
+            "matchedTitle": "Pianoforte Monologue",
+            "matchedArtist": "桜内梨子 (CV.逢田梨香子)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273230e02e749de5417e26f5cbb",
+            "albumName": "LoveLive! Sunshine!! Sakurauchi Riko First Solo Concert Album ～Pianoforte Monologue～"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Beginner’s Sailing",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "beginner-s-sailing__original",
+            "displayTitle": "Beginner’s Sailing"
+          },
+          "artistHint": "渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "347xQ8PtZRSM0tJ3rV7bAq",
+            "uri": "spotify:track:347xQ8PtZRSM0tJ3rV7bAq",
+            "matchedTitle": "Beginner's Sailing",
+            "matchedArtist": "渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739308a85995d9245095b8d614",
+            "albumName": "LoveLive! Sunshine!! Watanabe You First Solo Concert Album ～Beginner's Sailing～"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "One More Sunshine Story",
+            "versionLabel": "Album Version",
+            "versionCode": "album-version",
+            "recordingId": "one-more-sunshine-story__album-version",
+            "displayTitle": "One More Sunshine Story（Album Version）"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3xwITr7G2gb6l9Zx42cZvH",
+            "uri": "spotify:track:3xwITr7G2gb6l9Zx42cZvH",
+            "matchedTitle": "One More Sunshine Story",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b0a08eb3b7b08c2f8dcf8869",
+            "albumName": "LoveLive! Sunshine!! Takami Chika First Solo Concert Album ～One More Sunshine Story～"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "予測不可能Driving!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "driving__original",
+            "displayTitle": "予測不可能Driving!"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0E68u8kraJPoBdIKA3Jok6",
+            "uri": "spotify:track:0E68u8kraJPoBdIKA3Jok6",
+            "matchedTitle": "予測不可能Driving!",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Waku-Waku-Week!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "waku-waku-week__original",
+            "displayTitle": "Waku-Waku-Week!"
+          },
+          "artistHint": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "581P3L6pPivj45fCwcRzVt",
+            "uri": "spotify:track:581P3L6pPivj45fCwcRzVt",
+            "matchedTitle": "Waku-Waku-Week!",
+            "matchedArtist": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Marine Border Parasol",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "marine-border-parasol__original",
+            "displayTitle": "Marine Border Parasol"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05GuHr7o6FkD36OiGAl99Y",
+            "uri": "spotify:track:05GuHr7o6FkD36OiGAl99Y",
+            "matchedTitle": "Marine Border Parasol",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "banzai-digital-trippers__original",
+            "displayTitle": "BANZAI! digital trippers"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DREAMY COLOR",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dreamy-color__original",
+            "displayTitle": "DREAMY COLOR"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4QLOFsnKZQwvv8Mohn3y4T",
+            "uri": "spotify:track:4QLOFsnKZQwvv8Mohn3y4T",
+            "matchedTitle": "DREAMY COLOR",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27349b829d86e9a503380b705ff",
+            "albumName": "DREAMY COLOR"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ+ミライ＝無限大",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1do6vjs__original",
+            "displayTitle": "ユメ+ミライ＝無限大"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2EvUO0ZhI81tOBXO3uyz54",
+            "uri": "spotify:track:2EvUO0ZhI81tOBXO3uyz54",
+            "matchedTitle": "ユメ+ミライ＝無限大",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KA-GA-YA-KI-RA-RI-RA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "ka-ga-ya-ki-ra-ri-ra__original",
+            "displayTitle": "KA-GA-YA-KI-RA-RI-RA"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6tnafsGl5fTO6eVne3366D",
+            "uri": "spotify:track:6tnafsGl5fTO6eVne3366D",
+            "matchedTitle": "KA-GA-YA-KI-RA-RI-RA",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "banzai-digital-trippers__original",
+            "displayTitle": "BANZAI! digital trippers"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6xdb0g__original",
+            "displayTitle": "ユメ語るよりユメ歌おう"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-extra-lovelive-2023-it-s-a-world-valentine-s-day-concert-tokyo-day-2",
+      "label": "Valentine's Day Concert Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2023-02-12",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "待ってて愛のうた",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6rp6w7__original",
+            "displayTitle": "待ってて愛のうた"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6lEkteeFrvHGcv7BR3wEQS",
+            "uri": "spotify:track:6lEkteeFrvHGcv7BR3wEQS",
+            "matchedTitle": "待ってて愛のうた",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pops heartで踊るんだもん！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pops-heart__original",
+            "displayTitle": "Pops heartで踊るんだもん！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1KpwqYIDtCyfXA78jR0KId",
+            "uri": "spotify:track:1KpwqYIDtCyfXA78jR0KId",
+            "matchedTitle": "Pops heartで踊るんだもん！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "in this unstable world",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "in-this-unstable-world__original",
+            "displayTitle": "in this unstable world"
+          },
+          "artistHint": "津島善子 (CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7DB6vXWqHTt8YR3qgmnPH4",
+            "uri": "spotify:track:7DB6vXWqHTt8YR3qgmnPH4",
+            "matchedTitle": "in this unstable world",
+            "matchedArtist": "津島善子 (CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273371e6b98a15b753b3734e939",
+            "albumName": "LoveLive! Sunshine!! Tsushima Yoshiko First Solo Concert Album ～in this unstable world～"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "おやすみなさん！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1cifjdy__original",
+            "displayTitle": "おやすみなさん！"
+          },
+          "artistHint": "国木田花丸 (CV.高槻かなこ)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7f3J3sxJhvC4VOj8ErLiJA",
+            "uri": "spotify:track:7f3J3sxJhvC4VOj8ErLiJA",
+            "matchedTitle": "おやすみなさん！",
+            "matchedArtist": "国木田花丸 (CV.高槻かなこ)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273194de60a1835b5d664cf148f",
+            "albumName": "LoveLive! Sunshine!! Kunikida Hanamaru First Solo Concert Album ～おやすみなさん！～"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "RED GEM WINK",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "red-gem-wink__original",
+            "displayTitle": "RED GEM WINK"
+          },
+          "artistHint": "黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3NZi2ZEAhFIfDYzKTZh5A5",
+            "uri": "spotify:track:3NZi2ZEAhFIfDYzKTZh5A5",
+            "matchedTitle": "RED GEM WINK",
+            "matchedArtist": "黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731579abb7d9bcbd3b2b2573a1",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Ruby First Solo Concert Album ～RED GEM WINK～"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "New winding road",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "new-winding-road__original",
+            "displayTitle": "New winding road"
+          },
+          "artistHint": "小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1GV3VakVvAVZHE49GGKfAh",
+            "uri": "spotify:track:1GV3VakVvAVZHE49GGKfAh",
+            "matchedTitle": "New winding road",
+            "matchedArtist": "小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27389e12bf01697c668bc95d793",
+            "albumName": "LoveLive! Sunshine!! Ohara Mari First Solo Concert Album ～New winding road～"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WHITE FIRST LOVE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "white-first-love__original",
+            "displayTitle": "WHITE FIRST LOVE"
+          },
+          "artistHint": "黒澤ダイヤ (CV.小宮有紗)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Jn0z0tw44AjiHQwu7oet0",
+            "uri": "spotify:track:6Jn0z0tw44AjiHQwu7oet0",
+            "matchedTitle": "WHITE FIRST LOVE",
+            "matchedArtist": "黒澤ダイヤ (CV.小宮有紗)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27330af872910c860a39e0eb40a",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Dia First Solo Concert Album ～WHITE FIRST LOVE～"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "さかなかなんだか？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13vxlqp__original",
+            "displayTitle": "さかなかなんだか？"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VtE0Ol10sd5zOGu0GdRuh",
+            "uri": "spotify:track:3VtE0Ol10sd5zOGu0GdRuh",
+            "matchedTitle": "さかなかなんだか？",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27393d3212b7e9ee6c65f717c51",
+            "albumName": "LoveLive! Sunshine!! Matsuura Kanan First Solo Concert Album ～さかなかなんだか？～"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pianoforte Monologue",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pianoforte-monologue__original",
+            "displayTitle": "Pianoforte Monologue"
+          },
+          "artistHint": "桜内梨子 (CV.逢田梨香子)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2CaeC5bIVRF0ed13B4pdSR",
+            "uri": "spotify:track:2CaeC5bIVRF0ed13B4pdSR",
+            "matchedTitle": "Pianoforte Monologue",
+            "matchedArtist": "桜内梨子 (CV.逢田梨香子)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273230e02e749de5417e26f5cbb",
+            "albumName": "LoveLive! Sunshine!! Sakurauchi Riko First Solo Concert Album ～Pianoforte Monologue～"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Beginner’s Sailing",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "beginner-s-sailing__original",
+            "displayTitle": "Beginner’s Sailing"
+          },
+          "artistHint": "渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "347xQ8PtZRSM0tJ3rV7bAq",
+            "uri": "spotify:track:347xQ8PtZRSM0tJ3rV7bAq",
+            "matchedTitle": "Beginner's Sailing",
+            "matchedArtist": "渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739308a85995d9245095b8d614",
+            "albumName": "LoveLive! Sunshine!! Watanabe You First Solo Concert Album ～Beginner's Sailing～"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "One More Sunshine Story",
+            "versionLabel": "Album Version",
+            "versionCode": "album-version",
+            "recordingId": "one-more-sunshine-story__album-version",
+            "displayTitle": "One More Sunshine Story（Album Version）"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3xwITr7G2gb6l9Zx42cZvH",
+            "uri": "spotify:track:3xwITr7G2gb6l9Zx42cZvH",
+            "matchedTitle": "One More Sunshine Story",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b0a08eb3b7b08c2f8dcf8869",
+            "albumName": "LoveLive! Sunshine!! Takami Chika First Solo Concert Album ～One More Sunshine Story～"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "予測不可能Driving!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "driving__original",
+            "displayTitle": "予測不可能Driving!"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0E68u8kraJPoBdIKA3Jok6",
+            "uri": "spotify:track:0E68u8kraJPoBdIKA3Jok6",
+            "matchedTitle": "予測不可能Driving!",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Waku-Waku-Week!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "waku-waku-week__original",
+            "displayTitle": "Waku-Waku-Week!"
+          },
+          "artistHint": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "581P3L6pPivj45fCwcRzVt",
+            "uri": "spotify:track:581P3L6pPivj45fCwcRzVt",
+            "matchedTitle": "Waku-Waku-Week!",
+            "matchedArtist": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Marine Border Parasol",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "marine-border-parasol__original",
+            "displayTitle": "Marine Border Parasol"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05GuHr7o6FkD36OiGAl99Y",
+            "uri": "spotify:track:05GuHr7o6FkD36OiGAl99Y",
+            "matchedTitle": "Marine Border Parasol",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "banzai-digital-trippers__original",
+            "displayTitle": "BANZAI! digital trippers"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DREAMY COLOR",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dreamy-color__original",
+            "displayTitle": "DREAMY COLOR"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4QLOFsnKZQwvv8Mohn3y4T",
+            "uri": "spotify:track:4QLOFsnKZQwvv8Mohn3y4T",
+            "matchedTitle": "DREAMY COLOR",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27349b829d86e9a503380b705ff",
+            "albumName": "DREAMY COLOR"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ+ミライ＝無限大",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1do6vjs__original",
+            "displayTitle": "ユメ+ミライ＝無限大"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2EvUO0ZhI81tOBXO3uyz54",
+            "uri": "spotify:track:2EvUO0ZhI81tOBXO3uyz54",
+            "matchedTitle": "ユメ+ミライ＝無限大",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KA-GA-YA-KI-RA-RI-RA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "ka-ga-ya-ki-ra-ri-ra__original",
+            "displayTitle": "KA-GA-YA-KI-RA-RI-RA"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6tnafsGl5fTO6eVne3366D",
+            "uri": "spotify:track:6tnafsGl5fTO6eVne3366D",
+            "matchedTitle": "KA-GA-YA-KI-RA-RI-RA",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "banzai-digital-trippers__original",
+            "displayTitle": "BANZAI! digital trippers"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kav3wd__original",
+            "displayTitle": "勇気はどこに？君の胸に！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-extra-lovelive-2023-it-s-a-world-white-day-concert-day-1",
+      "label": "White Day Concert Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2023-03-11",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "待ってて愛のうた",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6rp6w7__original",
+            "displayTitle": "待ってて愛のうた"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6lEkteeFrvHGcv7BR3wEQS",
+            "uri": "spotify:track:6lEkteeFrvHGcv7BR3wEQS",
+            "matchedTitle": "待ってて愛のうた",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Landing action Yeah!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "landing-action-yeah__original",
+            "displayTitle": "Landing action Yeah!!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4b01pqHPIyNnv5ElCQmJA8",
+            "uri": "spotify:track:4b01pqHPIyNnv5ElCQmJA8",
+            "matchedTitle": "Landing action Yeah!!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kvufm__original",
+            "displayTitle": "未来の僕らは知ってるよ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Paradise Chime",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "paradise-chime__original",
+            "displayTitle": "Paradise Chime"
+          },
+          "artistHint": "渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Do1IIrVVy4v3zFQYOeEg6",
+            "uri": "spotify:track:5Do1IIrVVy4v3zFQYOeEg6",
+            "matchedTitle": "Paradise Chime",
+            "matchedArtist": "渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27328d3da4c0001f3beed5cf993",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Watanabe You"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love Spiral Tower",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love-spiral-tower__original",
+            "displayTitle": "Love Spiral Tower"
+          },
+          "artistHint": "桜内梨子 (CV.逢田梨香子)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4O8MdMyxTBE8hPWkgwo610",
+            "uri": "spotify:track:4O8MdMyxTBE8hPWkgwo610",
+            "matchedTitle": "Love Spiral Tower",
+            "matchedArtist": "桜内梨子 (CV.逢田梨香子)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e0142035475cfda987778007",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Sakurauchi Riko"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Never giving up!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "never-giving-up__original",
+            "displayTitle": "Never giving up!"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1itfB51uW5shA2epDNfsz4",
+            "uri": "spotify:track:1itfB51uW5shA2epDNfsz4",
+            "matchedTitle": "Never giving up!",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b0a08eb3b7b08c2f8dcf8869",
+            "albumName": "LoveLive! Sunshine!! Takami Chika First Solo Concert Album ～One More Sunshine Story～"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "RUN KAKERU RUN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "run-kakeru-run__original",
+            "displayTitle": "RUN KAKERU RUN"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0uZ6mPwmQKpHym41BC2RM7",
+            "uri": "spotify:track:0uZ6mPwmQKpHym41BC2RM7",
+            "matchedTitle": "RUN KAKERU RUN",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732da86c584dc18207d5a65f91",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Matsuura Kanan"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shiny Racers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shiny-racers__original",
+            "displayTitle": "Shiny Racers"
+          },
+          "artistHint": "小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4pqH9UhPa697MDOSIPiBvJ",
+            "uri": "spotify:track:4pqH9UhPa697MDOSIPiBvJ",
+            "matchedTitle": "Shiny Racers",
+            "matchedArtist": "小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27389e12bf01697c668bc95d793",
+            "albumName": "LoveLive! Sunshine!! Ohara Mari First Solo Concert Album ～New winding road～"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MOTTO-ZUTTO be with you",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "motto-zutto-be-with-you__original",
+            "displayTitle": "MOTTO-ZUTTO be with you"
+          },
+          "artistHint": "黒澤ダイヤ (CV.小宮有紗)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0UBIYqGUertAhsnEA3At7p",
+            "uri": "spotify:track:0UBIYqGUertAhsnEA3At7p",
+            "matchedTitle": "MOTTO-ZUTTO be with you",
+            "matchedArtist": "黒澤ダイヤ (CV.小宮有紗)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ed08f55c853c41601d108249",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Kurosawa Dia"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "あこがれランララン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ku7sbx__original",
+            "displayTitle": "あこがれランララン"
+          },
+          "artistHint": "国木田花丸 (CV.高槻かなこ)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1eErJN886QjrutfpCY8jOo",
+            "uri": "spotify:track:1eErJN886QjrutfpCY8jOo",
+            "matchedTitle": "あこがれランララン",
+            "matchedArtist": "国木田花丸 (CV.高槻かなこ)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273194de60a1835b5d664cf148f",
+            "albumName": "LoveLive! Sunshine!! Kunikida Hanamaru First Solo Concert Album ～おやすみなさん！～"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "迷冥探偵ヨハネ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-pn3q4__original",
+            "displayTitle": "迷冥探偵ヨハネ"
+          },
+          "artistHint": "津島善子 (CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GICQQZon8WNmwwk7uwi0P",
+            "uri": "spotify:track:2GICQQZon8WNmwwk7uwi0P",
+            "matchedTitle": "迷冥探偵ヨハネ",
+            "matchedArtist": "津島善子 (CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733120fc2ea8c4d61aa38d6f23",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Tsushima Yoshiko"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コットンキャンディえいえいおー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-7urnma__original",
+            "displayTitle": "コットンキャンディえいえいおー！"
+          },
+          "artistHint": "黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0cM4aOMBOmqoeESU0TiYsr",
+            "uri": "spotify:track:0cM4aOMBOmqoeESU0TiYsr",
+            "matchedTitle": "コットンキャンディえいえいおー！",
+            "matchedArtist": "黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731579abb7d9bcbd3b2b2573a1",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Ruby First Solo Concert Album ～RED GEM WINK～"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "決めたよHand in Hand",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hand-in-hand__original",
+            "displayTitle": "決めたよHand in Hand"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4BQddy15fOBDuK9O0SXD4V",
+            "uri": "spotify:track:4BQddy15fOBDuK9O0SXD4V",
+            "matchedTitle": "決めたよHand in Hand",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735fd0360f9dbe7656cdb6f587",
+            "albumName": "決めたよHand in Hand／ダイスキだったらダイジョウブ！"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "逃走迷走メビウスループ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1v9h10s__original",
+            "displayTitle": "逃走迷走メビウスループ"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6pvRPQAUd1KV6PossiC2lO",
+            "uri": "spotify:track:6pvRPQAUd1KV6PossiC2lO",
+            "matchedTitle": "逃走迷走メビウスループ",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハジマリロード",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ox0bw6__original",
+            "displayTitle": "ハジマリロード"
+          },
+          "artistHint": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1bqdPbhhkquR3CTVu0NB4I",
+            "uri": "spotify:track:1bqdPbhhkquR3CTVu0NB4I",
+            "matchedTitle": "ハジマリロード",
+            "matchedArtist": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "banzai-digital-trippers__original",
+            "displayTitle": "BANZAI! digital trippers"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DREAMY COLOR",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dreamy-color__original",
+            "displayTitle": "DREAMY COLOR"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4QLOFsnKZQwvv8Mohn3y4T",
+            "uri": "spotify:track:4QLOFsnKZQwvv8Mohn3y4T",
+            "matchedTitle": "DREAMY COLOR",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27349b829d86e9a503380b705ff",
+            "albumName": "DREAMY COLOR"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ+ミライ＝無限大",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1do6vjs__original",
+            "displayTitle": "ユメ+ミライ＝無限大"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2EvUO0ZhI81tOBXO3uyz54",
+            "uri": "spotify:track:2EvUO0ZhI81tOBXO3uyz54",
+            "matchedTitle": "ユメ+ミライ＝無限大",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KA-GA-YA-KI-RA-RI-RA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "ka-ga-ya-ki-ra-ri-ra__original",
+            "displayTitle": "KA-GA-YA-KI-RA-RI-RA"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6tnafsGl5fTO6eVne3366D",
+            "uri": "spotify:track:6tnafsGl5fTO6eVne3366D",
+            "matchedTitle": "KA-GA-YA-KI-RA-RI-RA",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "banzai-digital-trippers__original",
+            "displayTitle": "BANZAI! digital trippers"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kav3wd__original",
+            "displayTitle": "勇気はどこに？君の胸に！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-extra-lovelive-2023-it-s-a-world-white-day-concert-day-2",
+      "label": "White Day Concert Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2023-03-12",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "少女以上の恋がしたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-isd6mr__original",
+            "displayTitle": "少女以上の恋がしたい"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1BvEaXy7oGXo8ek0k0e2za",
+            "uri": "spotify:track:1BvEaXy7oGXo8ek0k0e2za",
+            "matchedTitle": "少女以上の恋がしたい",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "“MY LIST” to you!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "my-list-to-you__original",
+            "displayTitle": "“MY LIST” to you!"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6MArP7b6pxqCuEPSHZi9ss",
+            "uri": "spotify:track:6MArP7b6pxqCuEPSHZi9ss",
+            "matchedTitle": "“MY LIST” to you!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ホップ・ステップ・ワーイ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1empi6h__original",
+            "displayTitle": "ホップ・ステップ・ワーイ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7JUiDZLC4F4r90HUgebEKa",
+            "uri": "spotify:track:7JUiDZLC4F4r90HUgebEKa",
+            "matchedTitle": "ホップ・ステップ・ワーイ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kvufm__original",
+            "displayTitle": "未来の僕らは知ってるよ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Paradise Chime",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "paradise-chime__original",
+            "displayTitle": "Paradise Chime"
+          },
+          "artistHint": "渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Do1IIrVVy4v3zFQYOeEg6",
+            "uri": "spotify:track:5Do1IIrVVy4v3zFQYOeEg6",
+            "matchedTitle": "Paradise Chime",
+            "matchedArtist": "渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27328d3da4c0001f3beed5cf993",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Watanabe You"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love Spiral Tower",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love-spiral-tower__original",
+            "displayTitle": "Love Spiral Tower"
+          },
+          "artistHint": "桜内梨子 (CV.逢田梨香子)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4O8MdMyxTBE8hPWkgwo610",
+            "uri": "spotify:track:4O8MdMyxTBE8hPWkgwo610",
+            "matchedTitle": "Love Spiral Tower",
+            "matchedArtist": "桜内梨子 (CV.逢田梨香子)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e0142035475cfda987778007",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Sakurauchi Riko"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Never giving up!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "never-giving-up__original",
+            "displayTitle": "Never giving up!"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1itfB51uW5shA2epDNfsz4",
+            "uri": "spotify:track:1itfB51uW5shA2epDNfsz4",
+            "matchedTitle": "Never giving up!",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b0a08eb3b7b08c2f8dcf8869",
+            "albumName": "LoveLive! Sunshine!! Takami Chika First Solo Concert Album ～One More Sunshine Story～"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "RUN KAKERU RUN",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "run-kakeru-run__original",
+            "displayTitle": "RUN KAKERU RUN"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0uZ6mPwmQKpHym41BC2RM7",
+            "uri": "spotify:track:0uZ6mPwmQKpHym41BC2RM7",
+            "matchedTitle": "RUN KAKERU RUN",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732da86c584dc18207d5a65f91",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Matsuura Kanan"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shiny Racers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shiny-racers__original",
+            "displayTitle": "Shiny Racers"
+          },
+          "artistHint": "小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4pqH9UhPa697MDOSIPiBvJ",
+            "uri": "spotify:track:4pqH9UhPa697MDOSIPiBvJ",
+            "matchedTitle": "Shiny Racers",
+            "matchedArtist": "小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27389e12bf01697c668bc95d793",
+            "albumName": "LoveLive! Sunshine!! Ohara Mari First Solo Concert Album ～New winding road～"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MOTTO-ZUTTO be with you",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "motto-zutto-be-with-you__original",
+            "displayTitle": "MOTTO-ZUTTO be with you"
+          },
+          "artistHint": "黒澤ダイヤ (CV.小宮有紗)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0UBIYqGUertAhsnEA3At7p",
+            "uri": "spotify:track:0UBIYqGUertAhsnEA3At7p",
+            "matchedTitle": "MOTTO-ZUTTO be with you",
+            "matchedArtist": "黒澤ダイヤ (CV.小宮有紗)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ed08f55c853c41601d108249",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Kurosawa Dia"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "あこがれランララン",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ku7sbx__original",
+            "displayTitle": "あこがれランララン"
+          },
+          "artistHint": "国木田花丸 (CV.高槻かなこ)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1eErJN886QjrutfpCY8jOo",
+            "uri": "spotify:track:1eErJN886QjrutfpCY8jOo",
+            "matchedTitle": "あこがれランララン",
+            "matchedArtist": "国木田花丸 (CV.高槻かなこ)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273194de60a1835b5d664cf148f",
+            "albumName": "LoveLive! Sunshine!! Kunikida Hanamaru First Solo Concert Album ～おやすみなさん！～"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "迷冥探偵ヨハネ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-pn3q4__original",
+            "displayTitle": "迷冥探偵ヨハネ"
+          },
+          "artistHint": "津島善子 (CV.小林愛香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GICQQZon8WNmwwk7uwi0P",
+            "uri": "spotify:track:2GICQQZon8WNmwwk7uwi0P",
+            "matchedTitle": "迷冥探偵ヨハネ",
+            "matchedArtist": "津島善子 (CV.小林愛香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733120fc2ea8c4d61aa38d6f23",
+            "albumName": "LoveLive! Sunshine!! Second Solo Concert Album ～THE STORY OF FEATHER～ starring Tsushima Yoshiko"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コットンキャンディえいえいおー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-7urnma__original",
+            "displayTitle": "コットンキャンディえいえいおー！"
+          },
+          "artistHint": "黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0cM4aOMBOmqoeESU0TiYsr",
+            "uri": "spotify:track:0cM4aOMBOmqoeESU0TiYsr",
+            "matchedTitle": "コットンキャンディえいえいおー！",
+            "matchedArtist": "黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731579abb7d9bcbd3b2b2573a1",
+            "albumName": "LoveLive! Sunshine!! Kurosawa Ruby First Solo Concert Album ～RED GEM WINK～"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "決めたよHand in Hand",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hand-in-hand__original",
+            "displayTitle": "決めたよHand in Hand"
+          },
+          "artistHint": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4BQddy15fOBDuK9O0SXD4V",
+            "uri": "spotify:track:4BQddy15fOBDuK9O0SXD4V",
+            "matchedTitle": "決めたよHand in Hand",
+            "matchedArtist": "高海千歌 (CV.伊波杏樹), 桜内梨子 (CV.逢田梨香子), 渡辺 曜 (CV.斉藤朱夏)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735fd0360f9dbe7656cdb6f587",
+            "albumName": "決めたよHand in Hand／ダイスキだったらダイジョウブ！"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "逃走迷走メビウスループ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1v9h10s__original",
+            "displayTitle": "逃走迷走メビウスループ"
+          },
+          "artistHint": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6pvRPQAUd1KV6PossiC2lO",
+            "uri": "spotify:track:6pvRPQAUd1KV6PossiC2lO",
+            "matchedTitle": "逃走迷走メビウスループ",
+            "matchedArtist": "松浦果南 (CV.諏訪ななか), 黒澤ダイヤ (CV.小宮有紗), 小原鞠莉 (CV.鈴木愛奈)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハジマリロード",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ox0bw6__original",
+            "displayTitle": "ハジマリロード"
+          },
+          "artistHint": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1bqdPbhhkquR3CTVu0NB4I",
+            "uri": "spotify:track:1bqdPbhhkquR3CTVu0NB4I",
+            "matchedTitle": "ハジマリロード",
+            "matchedArtist": "津島善子 (CV.小林愛香), 国木田花丸 (CV.高槻かなこ), 黒澤ルビィ (CV.降幡 愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736db0e7c1c4971f8d75f74065",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2018～2020)"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SKY JOURNEY",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sky-journey__original",
+            "displayTitle": "SKY JOURNEY"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vPQPRJBYPjhOXmuyBbVMo",
+            "uri": "spotify:track:6vPQPRJBYPjhOXmuyBbVMo",
+            "matchedTitle": "SKY JOURNEY",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a78b29e3ce0d5da4f73f41e8",
+            "albumName": "HAPPY PARTY TRAIN"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "banzai-digital-trippers__original",
+            "displayTitle": "BANZAI! digital trippers"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DREAMY COLOR",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dreamy-color__original",
+            "displayTitle": "DREAMY COLOR"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4QLOFsnKZQwvv8Mohn3y4T",
+            "uri": "spotify:track:4QLOFsnKZQwvv8Mohn3y4T",
+            "matchedTitle": "DREAMY COLOR",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27349b829d86e9a503380b705ff",
+            "albumName": "DREAMY COLOR"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ+ミライ＝無限大",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1do6vjs__original",
+            "displayTitle": "ユメ+ミライ＝無限大"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2EvUO0ZhI81tOBXO3uyz54",
+            "uri": "spotify:track:2EvUO0ZhI81tOBXO3uyz54",
+            "matchedTitle": "ユメ+ミライ＝無限大",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KA-GA-YA-KI-RA-RI-RA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "ka-ga-ya-ki-ra-ri-ra__original",
+            "displayTitle": "KA-GA-YA-KI-RA-RI-RA"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6tnafsGl5fTO6eVne3366D",
+            "uri": "spotify:track:6tnafsGl5fTO6eVne3366D",
+            "matchedTitle": "KA-GA-YA-KI-RA-RI-RA",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "BANZAI! digital trippers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "banzai-digital-trippers__original",
+            "displayTitle": "BANZAI! digital trippers"
+          },
+          "artistHint": "Aqours, 初音ミク",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5vNYEdfxRipZHIWn40nYwm",
+            "uri": "spotify:track:5vNYEdfxRipZHIWn40nYwm",
+            "matchedTitle": "BANZAI! digital trippers",
+            "matchedArtist": "Aqours, 初音ミク",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6xdb0g__original",
+            "displayTitle": "ユメ語るよりユメ歌おう"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

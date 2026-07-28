@@ -1,0 +1,343 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-lovelive-sunshine-aqours-world-love-live-in-la-beyond-the-pacific",
+  "title": "LOVELIVE! SUNSHINE!! Aqours World Love Live! in LA ~Beyond the Pacific~",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.anime-expo.org/concert/lovelive-sunshine-aqours-world-love-live-la-beyond-pacific/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/19",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-lovelive-sunshine-aqours-world-love-live-in-la-beyond-the-pacific-microsoft-theater-performance-49",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2018-07-04",
+      "venue": {
+        "name": "Microsoft Theater",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kvufm__original",
+            "displayTitle": "未来の僕らは知ってるよ"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君の瞳を巡る冒険",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1e2qjlh__original",
+            "displayTitle": "君の瞳を巡る冒険"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5tqKotcCd6VkFl8g4UZ0SM",
+            "uri": "spotify:track:5tqKotcCd6VkFl8g4UZ0SM",
+            "matchedTitle": "君の瞳を巡る冒険",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MIRAI TICKET",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "mirai-ticket__original",
+            "displayTitle": "MIRAI TICKET"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7LZJv6aligWIb5emT1xENL",
+            "uri": "spotify:track:7LZJv6aligWIb5emT1xENL",
+            "matchedTitle": "MIRAI TICKET",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731d931cf9f4d549a71629ed2c",
+            "albumName": "想いよひとつになれ／MIRAI TICKET"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "元気全開DAY! DAY! DAY!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "day-day-day__original",
+            "displayTitle": "元気全開DAY! DAY! DAY!"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4JMTPNYt9yXcKFRZpKLosa",
+            "uri": "spotify:track:4JMTPNYt9yXcKFRZpKLosa",
+            "matchedTitle": "元気全開DAY! DAY! DAY!",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "海岸通りで待ってるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-bqvjys__original",
+            "displayTitle": "海岸通りで待ってるよ"
+          },
+          "artistHint": "CYaRon!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4nUNspP8lDRKp1txgKxOS0",
+            "uri": "spotify:track:4nUNspP8lDRKp1txgKxOS0",
+            "matchedTitle": "海岸通りで待ってるよ",
+            "matchedArtist": "CYaRon!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27339017d95a0134ab590e2d8c2",
+            "albumName": "ある日…永遠みたいに！"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "トリコリコPLEASE!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "please__original",
+            "displayTitle": "トリコリコPLEASE!!"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7dwf6EsZwcWwEVZwv31P4N",
+            "uri": "spotify:track:7dwf6EsZwcWwEVZwv31P4N",
+            "matchedTitle": "トリコリコPLEASE!!",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LONELY TUNING",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "lonely-tuning__original",
+            "displayTitle": "LONELY TUNING"
+          },
+          "artistHint": "AZALEA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4rt3mhcI5Kz3E7AtwS4ycq",
+            "uri": "spotify:track:4rt3mhcI5Kz3E7AtwS4ycq",
+            "matchedTitle": "LONELY TUNING",
+            "matchedArtist": "AZALEA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733c29aae051b9c44b72e6db1a",
+            "albumName": "We'll get the next dream!!!"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Strawberry Trapper",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "strawberry-trapper__original",
+            "displayTitle": "Strawberry Trapper"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ApmNv5aFTqOmRAvbyBAqe",
+            "uri": "spotify:track:4ApmNv5aFTqOmRAvbyBAqe",
+            "matchedTitle": "Strawberry Trapper",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Guilty Night, Guilty Kiss!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "guilty-night-guilty-kiss__original",
+            "displayTitle": "Guilty Night, Guilty Kiss!"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0k1c9E8unkD2FDnJhKMMT2",
+            "uri": "spotify:track:0k1c9E8unkD2FDnJhKMMT2",
+            "matchedTitle": "Guilty Night, Guilty Kiss!",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "太陽を追いかけろ！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-673ilp__original",
+            "displayTitle": "太陽を追いかけろ！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6Cw4vbFKBuDPsbOXwB2Tm1",
+            "uri": "spotify:track:6Cw4vbFKBuDPsbOXwB2Tm1",
+            "matchedTitle": "太陽を追いかけろ！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "勇気はどこに？君の胸に！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kav3wd__original",
+            "displayTitle": "勇気はどこに？君の胸に！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78dNtkgPTIA0ld9ddWcVNJ",
+            "uri": "spotify:track:78dNtkgPTIA0ld9ddWcVNJ",
+            "matchedTitle": "勇気はどこに？君の胸に！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273657ca4355f681effe41000b9",
+            "albumName": "勇気はどこに？君の胸に！"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サンシャインぴっかぴか音頭",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-r7s2v1__original",
+            "displayTitle": "サンシャインぴっかぴか音頭"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1WMuIYCzSdfHCPL3dIuMp4",
+            "uri": "spotify:track:1WMuIYCzSdfHCPL3dIuMp4",
+            "matchedTitle": "サンシャインぴっかぴか音頭",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

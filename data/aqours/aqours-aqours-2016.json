@@ -1,0 +1,431 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-aqours-2016",
+  "title": "ラブライブ！サンシャイン!! Aqours冬休み課外活動 ～みんなでシャンシャン♪ Aqoursミニライブ2016♪～",
+  "series": [
+    "aqours"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://lantis-e.jp/entry/top/lovelive_sunshine/christmas/top_pc.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/4",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-aqours-2016-pit-1",
+      "label": "第1回目公演",
+      "day": null,
+      "session": null,
+      "date": "2016-12-27",
+      "venue": {
+        "name": "豊洲PIT",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ジングルベルがとまらない",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-17xwjd6__original",
+            "displayTitle": "ジングルベルがとまらない"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ok3DaagiStSftvgGG9P4Q",
+            "uri": "spotify:track:3ok3DaagiStSftvgGG9P4Q",
+            "matchedTitle": "ジングルベルがとまらない",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aqours☆HEROES",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aqours-heroes__original",
+            "displayTitle": "Aqours☆HEROES"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0SIOuEW4uzMrrXgmMWKDzX",
+            "uri": "spotify:track:0SIOuEW4uzMrrXgmMWKDzX",
+            "matchedTitle": "Aqours☆HEROES",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "待ってて愛のうた",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6rp6w7__original",
+            "displayTitle": "待ってて愛のうた"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6lEkteeFrvHGcv7BR3wEQS",
+            "uri": "spotify:track:6lEkteeFrvHGcv7BR3wEQS",
+            "matchedTitle": "待ってて愛のうた",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pops heartで踊るんだもん！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pops-heart__original",
+            "displayTitle": "Pops heartで踊るんだもん！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1KpwqYIDtCyfXA78jR0KId",
+            "uri": "spotify:track:1KpwqYIDtCyfXA78jR0KId",
+            "matchedTitle": "Pops heartで踊るんだもん！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハミングフレンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-178rxqd__original",
+            "displayTitle": "ハミングフレンド"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53Y2srPImkFPXPhk1U25yy",
+            "uri": "spotify:track:53Y2srPImkFPXPhk1U25yy",
+            "matchedTitle": "ハミングフレンド",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "聖なる日の祈り",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-mrpm4n__original",
+            "displayTitle": "聖なる日の祈り"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6jQtGVwIgsilrP1sClAIzs",
+            "uri": "spotify:track:6jQtGVwIgsilrP1sClAIzs",
+            "matchedTitle": "聖なる日の祈り",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "aqours-aqours-2016-pit-2",
+      "label": "第2回目公演",
+      "day": null,
+      "session": null,
+      "date": "2016-12-27",
+      "venue": {
+        "name": "豊洲PIT",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jumping-heart__original",
+            "displayTitle": "青空Jumping Heart"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ジングルベルがとまらない",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-17xwjd6__original",
+            "displayTitle": "ジングルベルがとまらない"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ok3DaagiStSftvgGG9P4Q",
+            "uri": "spotify:track:3ok3DaagiStSftvgGG9P4Q",
+            "matchedTitle": "ジングルベルがとまらない",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aqours☆HEROES",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aqours-heroes__original",
+            "displayTitle": "Aqours☆HEROES"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0SIOuEW4uzMrrXgmMWKDzX",
+            "uri": "spotify:track:0SIOuEW4uzMrrXgmMWKDzX",
+            "matchedTitle": "Aqours☆HEROES",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "待ってて愛のうた",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6rp6w7__original",
+            "displayTitle": "待ってて愛のうた"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6lEkteeFrvHGcv7BR3wEQS",
+            "uri": "spotify:track:6lEkteeFrvHGcv7BR3wEQS",
+            "matchedTitle": "待ってて愛のうた",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pops heartで踊るんだもん！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pops-heart__original",
+            "displayTitle": "Pops heartで踊るんだもん！"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1KpwqYIDtCyfXA78jR0KId",
+            "uri": "spotify:track:1KpwqYIDtCyfXA78jR0KId",
+            "matchedTitle": "Pops heartで踊るんだもん！",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハミングフレンド",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-178rxqd__original",
+            "displayTitle": "ハミングフレンド"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53Y2srPImkFPXPhk1U25yy",
+            "uri": "spotify:track:53Y2srPImkFPXPhk1U25yy",
+            "matchedTitle": "ハミングフレンド",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "聖なる日の祈り",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-mrpm4n__original",
+            "displayTitle": "聖なる日の祈り"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6jQtGVwIgsilrP1sClAIzs",
+            "uri": "spotify:track:6jQtGVwIgsilrP1sClAIzs",
+            "matchedTitle": "聖なる日の祈り",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "君のこころは輝いてるかい？",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-13blnm0__original",
+            "displayTitle": "君のこころは輝いてるかい？"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ufCl6BK16MNR5ee4HpTnw",
+            "uri": "spotify:track:3ufCl6BK16MNR5ee4HpTnw",
+            "matchedTitle": "君のこころは輝いてるかい？",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

@@ -1,0 +1,2431 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-unit-live-and-fan-meeting",
+  "title": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 UNIT LIVE & FAN MEETING",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/nijigasaki/sp_unitlive.php",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/112",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-unit-live-and-fan-meeting-tokyo-day-1",
+      "label": "vol.1 DiverDiva 〜Big Bang〜 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2021-09-11",
+      "venue": {
+        "name": "東京ガーデンシアター",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUPER NOVA",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "super-nova__ver",
+            "displayTitle": "SUPER NOVA（ショートVer.）"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "272YVGFY6V9h6gaEL3481D",
+            "uri": "spotify:track:272YVGFY6V9h6gaEL3481D",
+            "matchedTitle": "SUPER NOVA",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "POWER SPOT!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "power-spot__original",
+            "displayTitle": "POWER SPOT!!"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5neZxmk4betHFvjJ3JDoL3",
+            "uri": "spotify:track:5neZxmk4betHFvjJ3JDoL3",
+            "matchedTitle": "POWER SPOT!!",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "祭花 -saika-",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "saika__original",
+            "displayTitle": "祭花 -saika-"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2kNtKyAcZfcCAaOfVXdRjm",
+            "uri": "spotify:track:2kNtKyAcZfcCAaOfVXdRjm",
+            "matchedTitle": "祭花 -saika-",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "THE SECRET NiGHT",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "the-secret-night__original",
+            "displayTitle": "THE SECRET NiGHT"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "66JWJ7mOd9b44FPM515HrX",
+            "uri": "spotify:track:66JWJ7mOd9b44FPM515HrX",
+            "matchedTitle": "THE SECRET NiGHT",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fly into the sky",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fly-into-the-sky__original",
+            "displayTitle": "Fly into the sky"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2OFkQ94DG9mooI4XRKmwh2",
+            "uri": "spotify:track:2OFkQ94DG9mooI4XRKmwh2",
+            "matchedTitle": "Fly into the sky",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27334a07398f0b3e64c7b702d92",
+            "albumName": "THE SECRET NiGHT"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUPER NOVA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "super-nova__original",
+            "displayTitle": "SUPER NOVA"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "272YVGFY6V9h6gaEL3481D",
+            "uri": "spotify:track:272YVGFY6V9h6gaEL3481D",
+            "matchedTitle": "SUPER NOVA",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fire Bird",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fire-bird__original",
+            "displayTitle": "Fire Bird"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ea2Y0mfeiOyKcI16RQya4",
+            "uri": "spotify:track:1Ea2Y0mfeiOyKcI16RQya4",
+            "matchedTitle": "Fire Bird",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "楽しいの天才",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-j4wvzx__original",
+            "displayTitle": "楽しいの天才"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LRPFtsgOMWKa3CxuragaZ",
+            "uri": "spotify:track:4LRPFtsgOMWKa3CxuragaZ",
+            "matchedTitle": "楽しいの天才",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "めっちゃGoing!!",
+            "versionLabel": "DiverDiva Ver.",
+            "versionCode": "diverdiva-ver",
+            "recordingId": "going__diverdiva-ver",
+            "displayTitle": "めっちゃGoing!!（DiverDiva Ver.）"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1n0NcaSXipbJF9TB9AM0Bb",
+            "uri": "spotify:track:1n0NcaSXipbJF9TB9AM0Bb",
+            "matchedTitle": "めっちゃGoing!!",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love Triangle",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love-triangle__original",
+            "displayTitle": "Love Triangle"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "31PBFRleYjrQNRKdjc0IfE",
+            "uri": "spotify:track:31PBFRleYjrQNRKdjc0IfE",
+            "matchedTitle": "Love Triangle",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "DiverDiva Ver.",
+            "versionCode": "diverdiva-ver",
+            "recordingId": "tokimeki-runners__diverdiva-ver",
+            "displayTitle": "TOKIMEKI Runners（DiverDiva Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-unit-live-and-fan-meeting-tokyo-day-2",
+      "label": "vol.1 DiverDiva 〜Big Bang〜 DAY.2",
+      "day": 2,
+      "session": null,
+      "date": "2021-09-12",
+      "venue": {
+        "name": "東京ガーデンシアター",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUPER NOVA",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "super-nova__ver",
+            "displayTitle": "SUPER NOVA（ショートVer.）"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "272YVGFY6V9h6gaEL3481D",
+            "uri": "spotify:track:272YVGFY6V9h6gaEL3481D",
+            "matchedTitle": "SUPER NOVA",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "POWER SPOT!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "power-spot__original",
+            "displayTitle": "POWER SPOT!!"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5neZxmk4betHFvjJ3JDoL3",
+            "uri": "spotify:track:5neZxmk4betHFvjJ3JDoL3",
+            "matchedTitle": "POWER SPOT!!",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "祭花 -saika-",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "saika__original",
+            "displayTitle": "祭花 -saika-"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2kNtKyAcZfcCAaOfVXdRjm",
+            "uri": "spotify:track:2kNtKyAcZfcCAaOfVXdRjm",
+            "matchedTitle": "祭花 -saika-",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "THE SECRET NiGHT",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "the-secret-night__original",
+            "displayTitle": "THE SECRET NiGHT"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "66JWJ7mOd9b44FPM515HrX",
+            "uri": "spotify:track:66JWJ7mOd9b44FPM515HrX",
+            "matchedTitle": "THE SECRET NiGHT",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fly into the sky",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fly-into-the-sky__original",
+            "displayTitle": "Fly into the sky"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2OFkQ94DG9mooI4XRKmwh2",
+            "uri": "spotify:track:2OFkQ94DG9mooI4XRKmwh2",
+            "matchedTitle": "Fly into the sky",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27334a07398f0b3e64c7b702d92",
+            "albumName": "THE SECRET NiGHT"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUPER NOVA",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "super-nova__original",
+            "displayTitle": "SUPER NOVA"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "272YVGFY6V9h6gaEL3481D",
+            "uri": "spotify:track:272YVGFY6V9h6gaEL3481D",
+            "matchedTitle": "SUPER NOVA",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Fire Bird",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "fire-bird__original",
+            "displayTitle": "Fire Bird"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Ea2Y0mfeiOyKcI16RQya4",
+            "uri": "spotify:track:1Ea2Y0mfeiOyKcI16RQya4",
+            "matchedTitle": "Fire Bird",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "楽しいの天才",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-j4wvzx__original",
+            "displayTitle": "楽しいの天才"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LRPFtsgOMWKa3CxuragaZ",
+            "uri": "spotify:track:4LRPFtsgOMWKa3CxuragaZ",
+            "matchedTitle": "楽しいの天才",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "めっちゃGoing!!",
+            "versionLabel": "DiverDiva Ver.",
+            "versionCode": "diverdiva-ver",
+            "recordingId": "going__diverdiva-ver",
+            "displayTitle": "めっちゃGoing!!（DiverDiva Ver.）"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1n0NcaSXipbJF9TB9AM0Bb",
+            "uri": "spotify:track:1n0NcaSXipbJF9TB9AM0Bb",
+            "matchedTitle": "めっちゃGoing!!",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love Triangle",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love-triangle__original",
+            "displayTitle": "Love Triangle"
+          },
+          "artistHint": "DiverDiva",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "31PBFRleYjrQNRKdjc0IfE",
+            "uri": "spotify:track:31PBFRleYjrQNRKdjc0IfE",
+            "matchedTitle": "Love Triangle",
+            "matchedArtist": "DiverDiva",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "DiverDiva Ver.",
+            "versionCode": "diverdiva-ver",
+            "recordingId": "tokimeki-runners__diverdiva-ver",
+            "displayTitle": "TOKIMEKI Runners（DiverDiva Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-unit-live-and-fan-meeting-vol-2-qu4rtz-sweet-cafe-day-1",
+      "label": "vol.2 QU4RTZ 〜Sweet Cafe〜 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2021-10-09",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sing & Smile!!",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "sing-and-smile__ver",
+            "displayTitle": "Sing & Smile!!（ショートVer.）"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6HMRcEA2MVvfcIbXNaTCGx",
+            "uri": "spotify:track:6HMRcEA2MVvfcIbXNaTCGx",
+            "matchedTitle": "Sing & Smile!!",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Swinging！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "swinging__original",
+            "displayTitle": "Swinging！"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6pwaGcsnT9u4OSfUXADSWL",
+            "uri": "spotify:track:6pwaGcsnT9u4OSfUXADSWL",
+            "matchedTitle": "Swinging！",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Beautiful Moonlight",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "beautiful-moonlight__original",
+            "displayTitle": "Beautiful Moonlight"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0GVDOOYsIKjVDcS8eMjfGJ",
+            "uri": "spotify:track:0GVDOOYsIKjVDcS8eMjfGJ",
+            "matchedTitle": "Beautiful Moonlight",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Twinkle Town",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "twinkle-town__original",
+            "displayTitle": "Twinkle Town"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6UIPjw6YZzPbfrXzK2hu6p",
+            "uri": "spotify:track:6UIPjw6YZzPbfrXzK2hu6p",
+            "matchedTitle": "Twinkle Town",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Make-up session ABC",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "make-up-session-abc__original",
+            "displayTitle": "Make-up session ABC"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7uJc1W41PYzmK3OoY2Hy4G",
+            "uri": "spotify:track:7uJc1W41PYzmK3OoY2Hy4G",
+            "matchedTitle": "Make-up session ABC",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Not Sad",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "not-sad__original",
+            "displayTitle": "Not Sad"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0NOmYhWOxU61bkvxfK8e3m",
+            "uri": "spotify:track:0NOmYhWOxU61bkvxfK8e3m",
+            "matchedTitle": "Not Sad",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733683fdf74e877a071ce440a2",
+            "albumName": "Swinging！"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来ハーモニー",
+            "versionLabel": "QU4RTZ・アコースティックアレンジ Ver.",
+            "versionCode": "qu4rtz-ver",
+            "recordingId": "track-1u7y6w4__qu4rtz-ver",
+            "displayTitle": "未来ハーモニー（QU4RTZ・アコースティックアレンジ Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Q3DUz1H6B74YJC5G2p2WX",
+            "uri": "spotify:track:5Q3DUz1H6B74YJC5G2p2WX",
+            "matchedTitle": "未来ハーモニー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sing & Smile!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sing-and-smile__original",
+            "displayTitle": "Sing & Smile!!"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6HMRcEA2MVvfcIbXNaTCGx",
+            "uri": "spotify:track:6HMRcEA2MVvfcIbXNaTCGx",
+            "matchedTitle": "Sing & Smile!!",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Märchen Star",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "m-rchen-star__original",
+            "displayTitle": "Märchen Star"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "655Hgq4hobGQ9ppvY9O5wx",
+            "uri": "spotify:track:655Hgq4hobGQ9ppvY9O5wx",
+            "matchedTitle": "Märchen Star",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Margaret",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "margaret__original",
+            "displayTitle": "Margaret"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7qPWLnq2ZyUdxC56NhdGC5",
+            "uri": "spotify:track:7qPWLnq2ZyUdxC56NhdGC5",
+            "matchedTitle": "Margaret",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アナログハート",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kb084h__original",
+            "displayTitle": "アナログハート"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3kzSIW9fBxBmtLXmsWten2",
+            "uri": "spotify:track:3kzSIW9fBxBmtLXmsWten2",
+            "matchedTitle": "アナログハート",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "哀温ノ詩",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1f5occ7__original",
+            "displayTitle": "哀温ノ詩"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4IU1aL2ovcHPFUTz8b3jPB",
+            "uri": "spotify:track:4IU1aL2ovcHPFUTz8b3jPB",
+            "matchedTitle": "哀温ノ詩",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "QU4RTZ Ver.",
+            "versionCode": "qu4rtz-ver",
+            "recordingId": "love-u-my-friends__qu4rtz-ver",
+            "displayTitle": "Love U my friends（QU4RTZ Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-unit-live-and-fan-meeting-vol-2-qu4rtz-sweet-cafe-day-2",
+      "label": "vol.2 QU4RTZ 〜Sweet Cafe〜 DAY.2",
+      "day": 2,
+      "session": null,
+      "date": "2021-10-10",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sing & Smile!!",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "sing-and-smile__ver",
+            "displayTitle": "Sing & Smile!!（ショートVer.）"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6HMRcEA2MVvfcIbXNaTCGx",
+            "uri": "spotify:track:6HMRcEA2MVvfcIbXNaTCGx",
+            "matchedTitle": "Sing & Smile!!",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Swinging！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "swinging__original",
+            "displayTitle": "Swinging！"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6pwaGcsnT9u4OSfUXADSWL",
+            "uri": "spotify:track:6pwaGcsnT9u4OSfUXADSWL",
+            "matchedTitle": "Swinging！",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Beautiful Moonlight",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "beautiful-moonlight__original",
+            "displayTitle": "Beautiful Moonlight"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0GVDOOYsIKjVDcS8eMjfGJ",
+            "uri": "spotify:track:0GVDOOYsIKjVDcS8eMjfGJ",
+            "matchedTitle": "Beautiful Moonlight",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Twinkle Town",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "twinkle-town__original",
+            "displayTitle": "Twinkle Town"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6UIPjw6YZzPbfrXzK2hu6p",
+            "uri": "spotify:track:6UIPjw6YZzPbfrXzK2hu6p",
+            "matchedTitle": "Twinkle Town",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Make-up session ABC",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "make-up-session-abc__original",
+            "displayTitle": "Make-up session ABC"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7uJc1W41PYzmK3OoY2Hy4G",
+            "uri": "spotify:track:7uJc1W41PYzmK3OoY2Hy4G",
+            "matchedTitle": "Make-up session ABC",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Not Sad",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "not-sad__original",
+            "displayTitle": "Not Sad"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0NOmYhWOxU61bkvxfK8e3m",
+            "uri": "spotify:track:0NOmYhWOxU61bkvxfK8e3m",
+            "matchedTitle": "Not Sad",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733683fdf74e877a071ce440a2",
+            "albumName": "Swinging！"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来ハーモニー",
+            "versionLabel": "QU4RTZ・アコースティックアレンジ Ver.",
+            "versionCode": "qu4rtz-ver",
+            "recordingId": "track-1u7y6w4__qu4rtz-ver",
+            "displayTitle": "未来ハーモニー（QU4RTZ・アコースティックアレンジ Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Q3DUz1H6B74YJC5G2p2WX",
+            "uri": "spotify:track:5Q3DUz1H6B74YJC5G2p2WX",
+            "matchedTitle": "未来ハーモニー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sing & Smile!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sing-and-smile__original",
+            "displayTitle": "Sing & Smile!!"
+          },
+          "artistHint": "QU4RTZ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6HMRcEA2MVvfcIbXNaTCGx",
+            "uri": "spotify:track:6HMRcEA2MVvfcIbXNaTCGx",
+            "matchedTitle": "Sing & Smile!!",
+            "matchedArtist": "QU4RTZ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Märchen Star",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "m-rchen-star__original",
+            "displayTitle": "Märchen Star"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "655Hgq4hobGQ9ppvY9O5wx",
+            "uri": "spotify:track:655Hgq4hobGQ9ppvY9O5wx",
+            "matchedTitle": "Märchen Star",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Margaret",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "margaret__original",
+            "displayTitle": "Margaret"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7qPWLnq2ZyUdxC56NhdGC5",
+            "uri": "spotify:track:7qPWLnq2ZyUdxC56NhdGC5",
+            "matchedTitle": "Margaret",
+            "matchedArtist": "中須かすみ (CV.相良茉優)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アナログハート",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-kb084h__original",
+            "displayTitle": "アナログハート"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3kzSIW9fBxBmtLXmsWten2",
+            "uri": "spotify:track:3kzSIW9fBxBmtLXmsWten2",
+            "matchedTitle": "アナログハート",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "哀温ノ詩",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1f5occ7__original",
+            "displayTitle": "哀温ノ詩"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4IU1aL2ovcHPFUTz8b3jPB",
+            "uri": "spotify:track:4IU1aL2ovcHPFUTz8b3jPB",
+            "matchedTitle": "哀温ノ詩",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "QU4RTZ Ver.",
+            "versionCode": "qu4rtz-ver",
+            "recordingId": "love-u-my-friends__qu4rtz-ver",
+            "displayTitle": "Love U my friends（QU4RTZ Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-unit-live-and-fan-meeting-vol-3-a-zu-na-the-night-before-day-1",
+      "label": "vol.3 A・ZU・NA 〜The Night Before〜 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2021-10-23",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Land！Dream World！",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "dream-land-dream-world__ver",
+            "displayTitle": "Dream Land！Dream World！（ショート Ver.）"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0bDNCMeyN8SP3yLoMnEOLg",
+            "uri": "spotify:track:0bDNCMeyN8SP3yLoMnEOLg",
+            "matchedTitle": "Dream Land！Dream World！",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Maze Town",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "maze-town__original",
+            "displayTitle": "Maze Town"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "79OpMgpS3VTtjU9h8IsnFE",
+            "uri": "spotify:track:79OpMgpS3VTtjU9h8IsnFE",
+            "matchedTitle": "Maze Town",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Kakushiaji！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "kakushiaji__original",
+            "displayTitle": "Kakushiaji！"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5pLBAYA4HRlo1xeFV47tcU",
+            "uri": "spotify:track:5pLBAYA4HRlo1xeFV47tcU",
+            "matchedTitle": "Kakushiaji！",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Cheer for you!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "cheer-for-you__original",
+            "displayTitle": "Cheer for you!!"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3rzWYXApsSuBtcywEx9Iid",
+            "uri": "spotify:track:3rzWYXApsSuBtcywEx9Iid",
+            "matchedTitle": "Cheer for you!!",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Happy Nyan! Days",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-nyan-days__original",
+            "displayTitle": "Happy Nyan! Days"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7mV91A1KKRhoSRLihYrLvA",
+            "uri": "spotify:track:7mV91A1KKRhoSRLihYrLvA",
+            "matchedTitle": "Happy Nyan! Days",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "やがてひとつの物語",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6jbqpu__original",
+            "displayTitle": "やがてひとつの物語"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4pQHG8jY9Re1cwhIjURlc1",
+            "uri": "spotify:track:4pQHG8jY9Re1cwhIjURlc1",
+            "matchedTitle": "やがてひとつの物語",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LIKE IT！LOVE IT！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "like-it-love-it__original",
+            "displayTitle": "LIKE IT！LOVE IT！"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "51o3HaQuKwmcHEWWKvCTMm",
+            "uri": "spotify:track:51o3HaQuKwmcHEWWKvCTMm",
+            "matchedTitle": "LIKE IT！LOVE IT！",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Say Good-Bye 涙",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "say-good-bye__original",
+            "displayTitle": "Say Good-Bye 涙"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3q1Ynzbx5tOJYzalie4X7Y",
+            "uri": "spotify:track:3q1Ynzbx5tOJYzalie4X7Y",
+            "matchedTitle": "Say Good-Bye 涙",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "あなたの理想のヒロイン",
+            "versionLabel": "しずく＆歩夢 Ver.",
+            "versionCode": "and-ver",
+            "recordingId": "track-1u57nbr__and-ver",
+            "displayTitle": "あなたの理想のヒロイン（しずく＆歩夢 Ver.）"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6plisyJb3ezbbXPbTzyXpK",
+            "uri": "spotify:track:6plisyJb3ezbbXPbTzyXpK",
+            "matchedTitle": "あなたの理想のヒロイン",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "フォルクロア ～歓喜の歌～",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-43ckd1__original",
+            "displayTitle": "フォルクロア ～歓喜の歌～"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "30JzFqfh2umWK6vyzsLlgR",
+            "uri": "spotify:track:30JzFqfh2umWK6vyzsLlgR",
+            "matchedTitle": "フォルクロア ～歓喜の歌～",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733352ba37186d531b7e70ff46",
+            "albumName": "Maze Town"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Land！Dream World！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dream-land-dream-world__original",
+            "displayTitle": "Dream Land！Dream World！"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0bDNCMeyN8SP3yLoMnEOLg",
+            "uri": "spotify:track:0bDNCMeyN8SP3yLoMnEOLg",
+            "matchedTitle": "Dream Land！Dream World！",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全速ドリーマー",
+            "versionLabel": "A・ZU・NA Ver.",
+            "versionCode": "a-zu-na-ver",
+            "recordingId": "track-j05sn__a-zu-na-ver",
+            "displayTitle": "全速ドリーマー（A・ZU・NA Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "36aaUNInVWqjUSCYGMqYnX",
+            "uri": "spotify:track:36aaUNInVWqjUSCYGMqYnX",
+            "matchedTitle": "全速ドリーマー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-unit-live-and-fan-meeting-vol-3-a-zu-na-the-night-before-day-2",
+      "label": "vol.3 A・ZU・NA 〜The Night Before〜 DAY.2",
+      "day": 2,
+      "session": null,
+      "date": "2021-10-24",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Land！Dream World！",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "dream-land-dream-world__ver",
+            "displayTitle": "Dream Land！Dream World！（ショート Ver.）"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0bDNCMeyN8SP3yLoMnEOLg",
+            "uri": "spotify:track:0bDNCMeyN8SP3yLoMnEOLg",
+            "matchedTitle": "Dream Land！Dream World！",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Maze Town",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "maze-town__original",
+            "displayTitle": "Maze Town"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "79OpMgpS3VTtjU9h8IsnFE",
+            "uri": "spotify:track:79OpMgpS3VTtjU9h8IsnFE",
+            "matchedTitle": "Maze Town",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Kakushiaji！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "kakushiaji__original",
+            "displayTitle": "Kakushiaji！"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5pLBAYA4HRlo1xeFV47tcU",
+            "uri": "spotify:track:5pLBAYA4HRlo1xeFV47tcU",
+            "matchedTitle": "Kakushiaji！",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733ab903a88ab5f0a76362e633",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.1"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Cheer for you!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "cheer-for-you__original",
+            "displayTitle": "Cheer for you!!"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3rzWYXApsSuBtcywEx9Iid",
+            "uri": "spotify:track:3rzWYXApsSuBtcywEx9Iid",
+            "matchedTitle": "Cheer for you!!",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Happy Nyan! Days",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "happy-nyan-days__original",
+            "displayTitle": "Happy Nyan! Days"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7mV91A1KKRhoSRLihYrLvA",
+            "uri": "spotify:track:7mV91A1KKRhoSRLihYrLvA",
+            "matchedTitle": "Happy Nyan! Days",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "やがてひとつの物語",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-6jbqpu__original",
+            "displayTitle": "やがてひとつの物語"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4pQHG8jY9Re1cwhIjURlc1",
+            "uri": "spotify:track:4pQHG8jY9Re1cwhIjURlc1",
+            "matchedTitle": "やがてひとつの物語",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LIKE IT！LOVE IT！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "like-it-love-it__original",
+            "displayTitle": "LIKE IT！LOVE IT！"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "51o3HaQuKwmcHEWWKvCTMm",
+            "uri": "spotify:track:51o3HaQuKwmcHEWWKvCTMm",
+            "matchedTitle": "LIKE IT！LOVE IT！",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Say Good-Bye 涙",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "say-good-bye__original",
+            "displayTitle": "Say Good-Bye 涙"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3q1Ynzbx5tOJYzalie4X7Y",
+            "uri": "spotify:track:3q1Ynzbx5tOJYzalie4X7Y",
+            "matchedTitle": "Say Good-Bye 涙",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "あなたの理想のヒロイン",
+            "versionLabel": "しずく＆歩夢 Ver.",
+            "versionCode": "and-ver",
+            "recordingId": "track-1u57nbr__and-ver",
+            "displayTitle": "あなたの理想のヒロイン（しずく＆歩夢 Ver.）"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6plisyJb3ezbbXPbTzyXpK",
+            "uri": "spotify:track:6plisyJb3ezbbXPbTzyXpK",
+            "matchedTitle": "あなたの理想のヒロイン",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "フォルクロア ～歓喜の歌～",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-43ckd1__original",
+            "displayTitle": "フォルクロア ～歓喜の歌～"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "30JzFqfh2umWK6vyzsLlgR",
+            "uri": "spotify:track:30JzFqfh2umWK6vyzsLlgR",
+            "matchedTitle": "フォルクロア ～歓喜の歌～",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733352ba37186d531b7e70ff46",
+            "albumName": "Maze Town"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Land！Dream World！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dream-land-dream-world__original",
+            "displayTitle": "Dream Land！Dream World！"
+          },
+          "artistHint": "A・ZU・NA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0bDNCMeyN8SP3yLoMnEOLg",
+            "uri": "spotify:track:0bDNCMeyN8SP3yLoMnEOLg",
+            "matchedTitle": "Dream Land！Dream World！",
+            "matchedArtist": "A・ZU・NA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全速ドリーマー",
+            "versionLabel": "A・ZU・NA Ver.",
+            "versionCode": "a-zu-na-ver",
+            "recordingId": "track-j05sn__a-zu-na-ver",
+            "displayTitle": "全速ドリーマー（A・ZU・NA Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "36aaUNInVWqjUSCYGMqYnX",
+            "uri": "spotify:track:36aaUNInVWqjUSCYGMqYnX",
+            "matchedTitle": "全速ドリーマー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-unit-live-and-fan-meeting-tokyo-day-1-2",
+      "label": "vol.4 R3BIRTH 〜First DELIGHT〜 DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2022-01-22",
+      "venue": {
+        "name": "東京ガーデンシアター",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MONSTER GIRLS",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "monster-girls__ver",
+            "displayTitle": "MONSTER GIRLS（ショート Ver.）"
+          },
+          "artistHint": "R3BIRTH",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6bhGm5TsggCqNPMR6qEicx",
+            "uri": "spotify:track:6bhGm5TsggCqNPMR6qEicx",
+            "matchedTitle": "MONSTER GIRLS",
+            "matchedArtist": "R3BIRTH",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "決意の光",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-wng5sz__original",
+            "displayTitle": "決意の光"
+          },
+          "artistHint": "三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3JF4yGrfMBrD1aPlFBMAi8",
+            "uri": "spotify:track:3JF4yGrfMBrD1aPlFBMAi8",
+            "matchedTitle": "決意の光",
+            "matchedArtist": "三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "I’m Still...",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "i-m-still__original",
+            "displayTitle": "I’m Still..."
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3AVxQbbiRTubKVEOJIWKn3",
+            "uri": "spotify:track:3AVxQbbiRTubKVEOJIWKn3",
+            "matchedTitle": "I'm Still...",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Toy Doll",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "toy-doll__original",
+            "displayTitle": "Toy Doll"
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "27cSTtZv5GQQHpKDjr3pnV",
+            "uri": "spotify:track:27cSTtZv5GQQHpKDjr3pnV",
+            "matchedTitle": "Toy Doll",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Queendom",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "queendom__original",
+            "displayTitle": "Queendom"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78a4aiFsQ0N649oXfekqIL",
+            "uri": "spotify:track:78a4aiFsQ0N649oXfekqIL",
+            "matchedTitle": "Queendom",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夜明珠（イエミンジュ）",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rf6rpx__original",
+            "displayTitle": "夜明珠（イエミンジュ）"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5B24hLFhi4F8KxhZyYLj2v",
+            "uri": "spotify:track:5B24hLFhi4F8KxhZyYLj2v",
+            "matchedTitle": "夜明珠",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "翠いカナリア",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-i439cw__original",
+            "displayTitle": "翠いカナリア"
+          },
+          "artistHint": "三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6ZBVYtAQQf4VjDm7lLiUag",
+            "uri": "spotify:track:6ZBVYtAQQf4VjDm7lLiUag",
+            "matchedTitle": "翠いカナリア",
+            "matchedArtist": "三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MONSTER GIRLS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "monster-girls__original",
+            "displayTitle": "MONSTER GIRLS"
+          },
+          "artistHint": "R3BIRTH",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6bhGm5TsggCqNPMR6qEicx",
+            "uri": "spotify:track:6bhGm5TsggCqNPMR6qEicx",
+            "matchedTitle": "MONSTER GIRLS",
+            "matchedArtist": "R3BIRTH",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "tokimeki-runners__r3birth-ver",
+            "displayTitle": "TOKIMEKI Runners（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "love-u-my-friends__r3birth-ver",
+            "displayTitle": "Love U my friends（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全速ドリーマー",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "track-j05sn__r3birth-ver",
+            "displayTitle": "全速ドリーマー（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "36aaUNInVWqjUSCYGMqYnX",
+            "uri": "spotify:track:36aaUNInVWqjUSCYGMqYnX",
+            "matchedTitle": "全速ドリーマー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ミラクル STAY TUNE！",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "stay-tune__r3birth-ver",
+            "displayTitle": "ミラクル STAY TUNE！（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6v3RD1S73Zp0xYbnDRbqDR",
+            "uri": "spotify:track:6v3RD1S73Zp0xYbnDRbqDR",
+            "matchedTitle": "ミラクル STAY TUNE！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Just Believe!!!",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "just-believe__r3birth-ver",
+            "displayTitle": "Just Believe!!!（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "797AE5T5YMIbez2bEyVWWe",
+            "uri": "spotify:track:797AE5T5YMIbez2bEyVWWe",
+            "matchedTitle": "Just Believe!!! (12人 Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273515166f4c5e37a5aa011e816",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.2"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-unit-live-and-fan-meeting-tokyo-day-2-2",
+      "label": "vol.4 R3BIRTH 〜First DELIGHT〜 DAY.2",
+      "day": 2,
+      "session": null,
+      "date": "2022-01-23",
+      "venue": {
+        "name": "東京ガーデンシアター",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MONSTER GIRLS",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "monster-girls__ver",
+            "displayTitle": "MONSTER GIRLS（ショート Ver.）"
+          },
+          "artistHint": "R3BIRTH",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6bhGm5TsggCqNPMR6qEicx",
+            "uri": "spotify:track:6bhGm5TsggCqNPMR6qEicx",
+            "matchedTitle": "MONSTER GIRLS",
+            "matchedArtist": "R3BIRTH",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "決意の光",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-wng5sz__original",
+            "displayTitle": "決意の光"
+          },
+          "artistHint": "三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3JF4yGrfMBrD1aPlFBMAi8",
+            "uri": "spotify:track:3JF4yGrfMBrD1aPlFBMAi8",
+            "matchedTitle": "決意の光",
+            "matchedArtist": "三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "I’m Still...",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "i-m-still__original",
+            "displayTitle": "I’m Still..."
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3AVxQbbiRTubKVEOJIWKn3",
+            "uri": "spotify:track:3AVxQbbiRTubKVEOJIWKn3",
+            "matchedTitle": "I'm Still...",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Toy Doll",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "toy-doll__original",
+            "displayTitle": "Toy Doll"
+          },
+          "artistHint": "ミア・テイラー (CV.内田 秀)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "27cSTtZv5GQQHpKDjr3pnV",
+            "uri": "spotify:track:27cSTtZv5GQQHpKDjr3pnV",
+            "matchedTitle": "Toy Doll",
+            "matchedArtist": "ミア・テイラー (CV.内田 秀)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Queendom",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "queendom__original",
+            "displayTitle": "Queendom"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "78a4aiFsQ0N649oXfekqIL",
+            "uri": "spotify:track:78a4aiFsQ0N649oXfekqIL",
+            "matchedTitle": "Queendom",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夜明珠（イエミンジュ）",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rf6rpx__original",
+            "displayTitle": "夜明珠（イエミンジュ）"
+          },
+          "artistHint": "鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5B24hLFhi4F8KxhZyYLj2v",
+            "uri": "spotify:track:5B24hLFhi4F8KxhZyYLj2v",
+            "matchedTitle": "夜明珠",
+            "matchedArtist": "鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "翠いカナリア",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-i439cw__original",
+            "displayTitle": "翠いカナリア"
+          },
+          "artistHint": "三船栞子 (CV.小泉萌香)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6ZBVYtAQQf4VjDm7lLiUag",
+            "uri": "spotify:track:6ZBVYtAQQf4VjDm7lLiUag",
+            "matchedTitle": "翠いカナリア",
+            "matchedArtist": "三船栞子 (CV.小泉萌香)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MONSTER GIRLS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "monster-girls__original",
+            "displayTitle": "MONSTER GIRLS"
+          },
+          "artistHint": "R3BIRTH",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6bhGm5TsggCqNPMR6qEicx",
+            "uri": "spotify:track:6bhGm5TsggCqNPMR6qEicx",
+            "matchedTitle": "MONSTER GIRLS",
+            "matchedArtist": "R3BIRTH",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "tokimeki-runners__r3birth-ver",
+            "displayTitle": "TOKIMEKI Runners（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "love-u-my-friends__r3birth-ver",
+            "displayTitle": "Love U my friends（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全速ドリーマー",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "track-j05sn__r3birth-ver",
+            "displayTitle": "全速ドリーマー（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "36aaUNInVWqjUSCYGMqYnX",
+            "uri": "spotify:track:36aaUNInVWqjUSCYGMqYnX",
+            "matchedTitle": "全速ドリーマー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ミラクル STAY TUNE！",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "stay-tune__r3birth-ver",
+            "displayTitle": "ミラクル STAY TUNE！（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6v3RD1S73Zp0xYbnDRbqDR",
+            "uri": "spotify:track:6v3RD1S73Zp0xYbnDRbqDR",
+            "matchedTitle": "ミラクル STAY TUNE！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Just Believe!!!",
+            "versionLabel": "R3BIRTH Ver.",
+            "versionCode": "r3birth-ver",
+            "recordingId": "just-believe__r3birth-ver",
+            "displayTitle": "Just Believe!!!（R3BIRTH Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "797AE5T5YMIbez2bEyVWWe",
+            "uri": "spotify:track:797AE5T5YMIbez2bEyVWWe",
+            "matchedTitle": "Just Believe!!! (12人 Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273515166f4c5e37a5aa011e816",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.2"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

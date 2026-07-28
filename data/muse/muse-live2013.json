@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-live2013",
+  "title": "ブシロードカードゲームLIVE2013",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://bushiroad.com/sp/bclive2013/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/80",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-live2013-osaka-performance-166",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2013-03-24",
+      "venue": {
+        "name": "大阪国際会議場（グランキューブ大阪） メインホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-dlkwzg__original",
+            "displayTitle": "僕らは今のなかで"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Snow halation",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "snow-halation__original",
+            "displayTitle": "Snow halation"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4K65wBvHQPmnD6bTdN6BHt",
+            "uri": "spotify:track:4K65wBvHQPmnD6bTdN6BHt",
+            "matchedTitle": "Snow halation",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+            "albumName": "Snow halation"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らのLIVE 君とのLIFE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "live-life__original",
+            "displayTitle": "僕らのLIVE 君とのLIFE"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "337ulrHx2OU1GuFtJmo2SJ",
+            "uri": "spotify:track:337ulrHx2OU1GuFtJmo2SJ",
+            "matchedTitle": "僕らのLIVE 君とのLIFE",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

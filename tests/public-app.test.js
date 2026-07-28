@@ -63,3 +63,10 @@ test("公演JSONとイベント配列の両方を読める", () => {
   assert.deepEqual(app.normalizeLoadedEvents(event), [event]);
   assert.deepEqual(app.normalizeLoadedEvents({ events: [event] }), [event]);
 });
+
+test("ナンバリング公演は明示的にtrueのイベントだけを対象にする", () => {
+  assert.equal(app.isNumberedLive({ isNumberedLive: true }), true);
+  assert.equal(app.isNumberedLive({ isNumberedLive: false }), false);
+  assert.equal(app.isNumberedLive({ title: "1st Live" }), false);
+  assert.equal(app.isNumberedLive({ title: "7th Live" }), false);
+});

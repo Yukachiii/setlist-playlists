@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-music-japan",
+  "title": "MUSIC JAPAN",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/100",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-music-japan-nhk-performance-220",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2014-10-20",
+      "venue": {
+        "name": "NHKホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "それは僕たちの奇跡",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-ibnm0y__ver",
+            "displayTitle": "それは僕たちの奇跡（ショートVer.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5U4HYCX60hWkMIGwWciH8L",
+            "uri": "spotify:track:5U4HYCX60hWkMIGwWciH8L",
+            "matchedTitle": "それは僕たちの奇跡",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273efcd5eff7d3b3f1bdc816406",
+            "albumName": "それは僕たちの奇跡"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

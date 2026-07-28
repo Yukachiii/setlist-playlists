@@ -32,6 +32,7 @@
     database: { schemaVersion: "0.3", events: [] },
     selectedEventId: null,
     expandedEventSeries: new Set(),
+    showNumberedOnly: false,
     editingPerformanceIndex: null,
     draftSetlist: [],
     importDraft: null,
@@ -62,6 +63,8 @@
     eventId: $("#event-id"),
     eventTitle: $("#event-title"),
     eventSeries: $("#event-series"),
+    eventNumberedLive: $("#event-numbered-live"),
+    numberedLiveFilter: $("#numbered-live-filter"),
     sourceName: $("#source-name"),
     sourceUrl: $("#source-url"),
     eventErrors: $("#event-errors"),
@@ -288,6 +291,7 @@
       id: `new-event-${suffix}`,
       title: "新しいイベント",
       series: [],
+      isNumberedLive: false,
       sources: [],
       performances: []
     };
@@ -339,6 +343,7 @@
     event.id = String(event.id || `event-${Date.now().toString(36)}`);
     event.title = String(event.title || "名称未設定");
     event.series = Array.isArray(event.series) ? event.series : [];
+    event.isNumberedLive = event.isNumberedLive === true;
     event.sources = Array.isArray(event.sources) ? event.sources : [];
     event.performances = Array.isArray(event.performances) ? event.performances : [];
 
@@ -473,7 +478,10 @@
 
   function groupedEventsBySeries() {
     const groups = new Map();
-    for (const event of state.database.events) {
+    const visibleEvents = state.showNumberedOnly
+      ? state.database.events.filter((event) => event.isNumberedLive === true)
+      : state.database.events;
+    for (const event of visibleEvents) {
       const key = eventSeriesKey(event);
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(event);
@@ -494,7 +502,17 @@
 
   function renderEventList() {
     elements.eventList.replaceChildren();
-    for (const group of groupedEventsBySeries()) {
+    const groups = groupedEventsBySeries();
+    if (!groups.length) {
+      const empty = document.createElement("p");
+      empty.className = "event-list-empty";
+      empty.textContent = state.showNumberedOnly
+        ? "ナンバリング公演のフラグが付いたイベントはありません。"
+        : "イベントがありません。";
+      elements.eventList.append(empty);
+      return;
+    }
+    for (const group of groups) {
       const details = document.createElement("details");
       details.className = "event-series-group";
       details.dataset.series = group.key;
@@ -521,9 +539,10 @@
         button.type = "button";
         button.className = `event-item${event.id === state.selectedEventId ? " active" : ""}`;
         const performanceCount = event.performances.length;
+        const numberedLabel = event.isNumberedLive ? " / ナンバリング" : "";
         button.innerHTML = `
           <span class="event-item-title">${escapeHtml(event.title)}</span>
-          <span class="event-item-meta">${escapeHtml(event.id)} / ${performanceCount}公演</span>
+          <span class="event-item-meta">${escapeHtml(event.id)} / ${performanceCount}公演${numberedLabel}</span>
         `;
         button.addEventListener("click", () => {
           readEventFormIntoState(false);
@@ -555,6 +574,7 @@
     elements.eventId.value = event.id;
     elements.eventTitle.value = event.title;
     elements.eventSeries.value = event.series.join(", ");
+    elements.eventNumberedLive.checked = event.isNumberedLive === true;
     elements.sourceName.value = event.sources[0]?.name || "";
     elements.sourceUrl.value = event.sources[0]?.url || "";
     hideValidation(elements.eventErrors);
@@ -600,6 +620,7 @@
       .split(",")
       .map((value) => value.trim())
       .filter(Boolean);
+    event.isNumberedLive = elements.eventNumberedLive.checked;
     const sourceName = elements.sourceName.value.trim();
     const sourceUrl = elements.sourceUrl.value.trim();
     const referenceSources = (event.sources || []).filter(
@@ -2128,6 +2149,7 @@
         .split(",")
         .map((value) => value.trim())
         .filter(Boolean),
+      isNumberedLive: false,
       sources,
       performances: []
     };
@@ -2964,7 +2986,14 @@
   }
 
   ["input", "change"].forEach((eventName) => {
-    [elements.eventId, elements.eventTitle, elements.eventSeries, elements.sourceName, elements.sourceUrl]
+    [
+      elements.eventId,
+      elements.eventTitle,
+      elements.eventSeries,
+      elements.eventNumberedLive,
+      elements.sourceName,
+      elements.sourceUrl
+    ]
       .forEach((element) => element.addEventListener(eventName, () => {
         readEventFormIntoState(true);
         renderEventList();
@@ -2972,6 +3001,10 @@
   });
 
   $("#new-event-button").addEventListener("click", newEvent);
+  elements.numberedLiveFilter.addEventListener("change", () => {
+    state.showNumberedOnly = elements.numberedLiveFilter.checked;
+    renderEventList();
+  });
   $("#save-event-button").addEventListener("click", saveEvent);
   $("#duplicate-event-button").addEventListener("click", duplicateEvent);
   $("#delete-event-button").addEventListener("click", deleteEvent);

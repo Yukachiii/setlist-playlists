@@ -16,7 +16,7 @@ import urllib.parse
 import urllib.request
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 
 
@@ -477,13 +477,39 @@ def write_json_if_changed(path: Path, value: Any) -> bool:
     return True
 
 
+def event_data_filename(event: dict[str, Any]) -> str:
+    series = event.get("series")
+    primary_series = series[0] if isinstance(series, list) and series else ""
+    directory = ascii_slug(primary_series) or "other"
+    return f"{directory}/{event['id']}.json"
+
+
+def safe_manifest_data_path(data_directory: Path, entry: Any) -> Path | None:
+    relative = PurePosixPath(str(entry or ""))
+    if (
+        relative.is_absolute()
+        or not relative.parts
+        or ".." in relative.parts
+        or relative.suffix.lower() != ".json"
+    ):
+        return None
+    candidate = data_directory.joinpath(*relative.parts).resolve()
+    data_root = data_directory.resolve()
+    if candidate == data_root or data_root not in candidate.parents:
+        return None
+    return candidate
+
+
 def write_event_to_public_data(
     event: Any, project_directory: Path = PROJECT_DIRECTORY
 ) -> dict[str, Any]:
     normalized = validate_publish_event(event)
     data_directory = project_directory / "data"
-    filename = f"{normalized['id']}.json"
-    event_changed = write_json_if_changed(data_directory / filename, normalized)
+    filename = event_data_filename(normalized)
+    event_changed = write_json_if_changed(
+        data_directory.joinpath(*PurePosixPath(filename).parts),
+        normalized,
+    )
 
     manifest_path = data_directory / "index.json"
     if manifest_path.exists():
@@ -496,17 +522,41 @@ def write_event_to_public_data(
     if not isinstance(manifest, dict) or not isinstance(manifest.get("events"), list):
         raise PublishErrorResponse("data/index.jsonの形式が不正です。")
 
-    manifest_changed = filename not in manifest["events"]
-    if manifest_changed:
-        manifest["events"].append(filename)
+    event_basename = f"{normalized['id']}.json"
+    previous_entries = list(manifest["events"])
+    next_entries: list[Any] = []
+    inserted = False
+    stale_entries: list[Any] = []
+    for entry in previous_entries:
+        entry_name = PurePosixPath(str(entry or "")).name
+        if entry_name != event_basename:
+            next_entries.append(entry)
+            continue
+        if str(entry) != filename:
+            stale_entries.append(entry)
+        if not inserted:
+            next_entries.append(filename)
+            inserted = True
+    if not inserted:
+        next_entries.append(filename)
+    manifest["events"] = next_entries
+    manifest_changed = next_entries != previous_entries
     manifest["schemaVersion"] = str(manifest.get("schemaVersion") or "0.3")
     if manifest_changed or not manifest_path.exists():
         write_json_if_changed(manifest_path, manifest)
+
+    removed_legacy_files: list[str] = []
+    for entry in stale_entries:
+        stale_path = safe_manifest_data_path(data_directory, entry)
+        if stale_path and stale_path.exists() and stale_path.is_file():
+            stale_path.unlink()
+            removed_legacy_files.append(str(entry))
 
     return {
         "filename": filename,
         "eventChanged": event_changed,
         "manifestChanged": manifest_changed,
+        "removedLegacyFiles": removed_legacy_files,
     }
 
 

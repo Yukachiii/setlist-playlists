@@ -1,0 +1,693 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-u-next-music-fes",
+  "title": "U-NEXT MUSIC FES",
+  "series": [
+    "muse",
+    "aqours",
+    "nijigasaki",
+    "liella",
+    "hasunosora",
+    "ikizulive"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://lovelive-anime.jp/special/live/live_detail.php?p=lovelive-expo2025",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/252",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-u-next-music-fes-expo-matsuri-day3",
+      "label": "DAY3",
+      "day": 3,
+      "session": null,
+      "date": "2025-08-14",
+      "venue": {
+        "name": "EXPO アリーナ「Matsuri」",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What is my LIFE?",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "what-is-my-life__original",
+            "displayTitle": "What is my LIFE?"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4uWUgAX6o7ssWVyiGmp4Ij",
+            "uri": "spotify:track:4uWUgAX6o7ssWVyiGmp4Ij",
+            "matchedTitle": "What is my LIFE?",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27337b6558ea368df05b02153e7",
+            "albumName": "What is my LIFE?"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ヒミツミチ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1gjt9om__original",
+            "displayTitle": "ヒミツミチ"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TgBdSEwqOBD8vJQQzIlKn",
+            "uri": "spotify:track:2TgBdSEwqOBD8vJQQzIlKn",
+            "matchedTitle": "ヒミツミチ",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27347157aac4e250994922c7709",
+            "albumName": "What is my LIFE?"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夏色えがおで1,2,Jump!",
+            "versionLabel": "穂乃果、ことり、真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "1-2-jump__ver",
+            "displayTitle": "夏色えがおで1,2,Jump!（穂乃果、ことり、真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5dKxIFHbLEF74JCIc30zNP",
+            "uri": "spotify:track:5dKxIFHbLEF74JCIc30zNP",
+            "matchedTitle": "夏色えがおで1,2,Jump!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732662ee7d30ebab93a5fc450a",
+            "albumName": "夏色えがおで1,2,Jump!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "輝夜の城で踊りたい",
+            "versionLabel": "穂乃果、ことり、真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1teugeu__ver",
+            "displayTitle": "輝夜の城で踊りたい（穂乃果、ことり、真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0KilKVzKFON59mQyZYozJ1",
+            "uri": "spotify:track:0KilKVzKFON59mQyZYozJ1",
+            "matchedTitle": "輝夜の城で踊りたい",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d02be078f581934644bf16e5",
+            "albumName": "きっと青春が聞こえる"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "No brand girls",
+            "versionLabel": "穂乃果、ことり、真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "no-brand-girls__ver",
+            "displayTitle": "No brand girls（穂乃果、ことり、真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6OXy306jbVkdbfNOZYxhfD",
+            "uri": "spotify:track:6OXy306jbVkdbfNOZYxhfD",
+            "matchedTitle": "No brand girls",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来の僕らは知ってるよ",
+            "versionLabel": "曜、善子、ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-kvufm__ver",
+            "displayTitle": "未来の僕らは知ってるよ（曜、善子、ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5LkLONpm25pQBXe3nCeHgs",
+            "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs",
+            "matchedTitle": "未来の僕らは知ってるよ",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUKI for you, DREAM for you!",
+            "versionLabel": "曜、善子、ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "suki-for-you-dream-for-you__ver",
+            "displayTitle": "SUKI for you, DREAM for you!（曜、善子、ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0HkaXrjmAI9KYJbZhmdTyI",
+            "uri": "spotify:track:0HkaXrjmAI9KYJbZhmdTyI",
+            "matchedTitle": "SUKI for you, DREAM for you!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KU-RU-KU-RU Cruller!",
+            "versionLabel": "曜、善子、ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "ku-ru-ku-ru-cruller__ver",
+            "displayTitle": "KU-RU-KU-RU Cruller!（曜、善子、ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5O2cVcJPeMUNFERDQQudl5",
+            "uri": "spotify:track:5O2cVcJPeMUNFERDQQudl5",
+            "matchedTitle": "KU-RU-KU-RU Cruller!",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273381bc78a1a06d67bac9fe041",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2021～2024)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Deep Resonance",
+            "versionLabel": "曜、善子、ルビィ Ver.",
+            "versionCode": "ver",
+            "recordingId": "deep-resonance__ver",
+            "displayTitle": "Deep Resonance（曜、善子、ルビィ Ver.）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "44iN6VOiifTkDUdW0Kw85b",
+            "uri": "spotify:track:44iN6VOiifTkDUdW0Kw85b",
+            "matchedTitle": "Deep Resonance",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f089b71ebb75c3a4e68ca14c",
+            "albumName": "未体験HORIZON"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "愛♡スクリ～ム！",
+            "versionLabel": "Expo2025スペシャルVer.",
+            "versionCode": "expo2025-ver",
+            "recordingId": "track-19tpy6m__expo2025-ver",
+            "displayTitle": "愛♡スクリ～ム！（Expo2025スペシャルVer.）"
+          },
+          "artistHint": "AiScReam",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2BBIUV8wIBbqc7HXObzdgH",
+            "uri": "spotify:track:2BBIUV8wIBbqc7HXObzdgH",
+            "matchedTitle": "愛♡スクリ～ム！",
+            "matchedArtist": "AiScReam",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732590b046b72d6ce5d6703ee7",
+            "albumName": "愛♡スクリ～ム！"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "繚乱！ビクトリーロード",
+            "versionLabel": "果林、せつ菜、エマ、璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-15tl9zr__ver",
+            "displayTitle": "繚乱！ビクトリーロード（果林、せつ菜、エマ、璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3XOV9u7TYqfmDWYRqoMfoc",
+            "uri": "spotify:track:3XOV9u7TYqfmDWYRqoMfoc",
+            "matchedTitle": "繚乱！ビクトリーロード",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734adf959d65bd7a60c8ee7c22",
+            "albumName": "夢が僕らの太陽さ"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "CHASE!",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "chase__ver",
+            "displayTitle": "CHASE!（ショート Ver.）"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0G9AVuZ44K6QKsFOX4wgJ9",
+            "uri": "spotify:track:0G9AVuZ44K6QKsFOX4wgJ9",
+            "matchedTitle": "CHASE!",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "VIVID WORLD",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "vivid-world__ver",
+            "displayTitle": "VIVID WORLD（ショート Ver.）"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0iipnZL7KT0xVU8PLXZ8iO",
+            "uri": "spotify:track:0iipnZL7KT0xVU8PLXZ8iO",
+            "matchedTitle": "VIVID WORLD",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "La Bella Patria",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "la-bella-patria__ver",
+            "displayTitle": "La Bella Patria（ショート Ver.）"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4GA2bTFMZQEK94XZ5CsDhL",
+            "uri": "spotify:track:4GA2bTFMZQEK94XZ5CsDhL",
+            "matchedTitle": "La Bella Patria",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ツナガルコネクト",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-ugbxbx__ver",
+            "displayTitle": "ツナガルコネクト（ショート Ver.）"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0rCOOeLaLLJdYLwtQU2cgN",
+            "uri": "spotify:track:0rCOOeLaLLJdYLwtQU2cgN",
+            "matchedTitle": "ツナガルコネクト",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "colorful-dreams-colorful-smiles__ver",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!（ショート Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": "果林、せつ菜、エマ、璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "tokimeki-runners__ver",
+            "displayTitle": "TOKIMEKI Runners（果林、せつ菜、エマ、璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Just Believe!!!",
+            "versionLabel": "果林、せつ菜、エマ、璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "just-believe__ver",
+            "displayTitle": "Just Believe!!!（果林、せつ菜、エマ、璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "797AE5T5YMIbez2bEyVWWe",
+            "uri": "spotify:track:797AE5T5YMIbez2bEyVWWe",
+            "matchedTitle": "Just Believe!!! (12人 Ver.)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273515166f4c5e37a5aa011e816",
+            "albumName": "ニジガク ボーナストラック コレクション Vol.2"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "オルタネイト",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1twjbsi__original",
+            "displayTitle": "オルタネイト"
+          },
+          "artistHint": "CatChu!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7sbgxp1bV0DSYHvVS1Sa9B",
+            "uri": "spotify:track:7sbgxp1bV0DSYHvVS1Sa9B",
+            "matchedTitle": "オルタネイト",
+            "matchedArtist": "CatChu!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Let's be ONE",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "let-s-be-one__ver",
+            "displayTitle": "Let's be ONE（ショート Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "12WAWtCouLV3YY3fIDs86c",
+            "uri": "spotify:track:12WAWtCouLV3YY3fIDs86c",
+            "matchedTitle": "Let's be ONE",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737acae15f26472fe5df2f1577",
+            "albumName": "Aspire"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "M21",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ディストーション",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1sr4yl9__original",
+            "displayTitle": "ディストーション"
+          },
+          "artistHint": "CatChu!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1uKqI8Bm5VGAlQ0bVhXnyC",
+            "uri": "spotify:track:1uKqI8Bm5VGAlQ0bVhXnyC",
+            "matchedTitle": "ディストーション",
+            "matchedArtist": "CatChu!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730ecceaed41a4934f1bfd6810",
+            "albumName": "ディストーション"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "M22",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全力ライオット",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-wqd46q__original",
+            "displayTitle": "全力ライオット"
+          },
+          "artistHint": "CatChu!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "07D6Za2GjFugWs8Vul1npr",
+            "uri": "spotify:track:07D6Za2GjFugWs8Vul1npr",
+            "matchedTitle": "全力ライオット",
+            "matchedArtist": "CatChu!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730ecceaed41a4934f1bfd6810",
+            "albumName": "ディストーション"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "M23",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイドゥーミー！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1rcgw47__original",
+            "displayTitle": "アイドゥーミー！"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3JvbeCWTvPUTWmEbRmV6ZX",
+            "uri": "spotify:track:3JvbeCWTvPUTWmEbRmV6ZX",
+            "matchedTitle": "アイドゥーミー！",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 24,
+          "marker": "M24",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Celebration!",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "celebration__ver",
+            "displayTitle": "Celebration!（メドレー・ショートVer.）"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4gLeQMdhBO0K5odGQJZmYn",
+            "uri": "spotify:track:4gLeQMdhBO0K5odGQJZmYn",
+            "matchedTitle": "Celebration!",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 25,
+          "marker": "M25",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アンペア",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-11v8fni__ver",
+            "displayTitle": "アンペア（メドレー・ショートVer.）"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5i850smQfpHr5leqCC9oRn",
+            "uri": "spotify:track:5i850smQfpHr5leqCC9oRn",
+            "matchedTitle": "アンペア",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 26,
+          "marker": "M26",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WAWO!",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "wawo__ver",
+            "displayTitle": "WAWO!（メドレー・ショートVer.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5lKjXZ9fGHnEdakKk0YOiq",
+            "uri": "spotify:track:5lKjXZ9fGHnEdakKk0YOiq",
+            "matchedTitle": "WAWO!",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 27,
+          "marker": "M27",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Edelied",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "edelied__ver",
+            "displayTitle": "Edelied（メドレー・ショートVer.）"
+          },
+          "artistHint": "Edel Note",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "55ZE15TvYLrNsoE4f3PZW1",
+            "uri": "spotify:track:55ZE15TvYLrNsoE4f3PZW1",
+            "matchedTitle": "Edelied",
+            "matchedArtist": "Edel Note",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 28,
+          "marker": "M28",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": "105期 Ver.",
+            "versionCode": "105ki",
+            "recordingId": "dream-believers__105ki",
+            "displayTitle": "Dream Believers（105期 Ver.）"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4FMW6vHr4d6DiIc1GaUc4P",
+            "uri": "spotify:track:4FMW6vHr4d6DiIc1GaUc4P",
+            "matchedTitle": "Dream Believers (105期Ver.)",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

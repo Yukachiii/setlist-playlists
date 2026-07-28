@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-animax-musix-2026-osaka-supported-by-lemino",
+  "title": "ANIMAX MUSIX 2026 OSAKA supported by Lemino",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.animax.co.jp/animaxmusix/archive/archive_2025/osaka/archive_osaka.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/274",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-animax-musix-2026-osaka-supported-by-lemino-osaka-performance-698",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2026-03-07",
+      "venue": {
+        "name": "Asue アリーナ大阪",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Colorful Dreams! Colorful Smiles!",
+            "versionLabel": "歩夢、かすみ、果林、璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "colorful-dreams-colorful-smiles__ver",
+            "displayTitle": "Colorful Dreams! Colorful Smiles!（歩夢、かすみ、果林、璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6BgQWUJd3BXytOhZZv7OW7",
+            "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7",
+            "matchedTitle": "Colorful Dreams! Colorful Smiles!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c27d615e5d5c5110d2da62cb",
+            "albumName": "Colorful Dreams! Colorful Smiles!"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "約束になれ僕らの歌",
+            "versionLabel": "歩夢、かすみ、果林、璃奈 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1ixomij__ver",
+            "displayTitle": "約束になれ僕らの歌（歩夢、かすみ、果林、璃奈 Ver.）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4OVuacA06ePn7Y8UCnzWV3",
+            "uri": "spotify:track:4OVuacA06ePn7Y8UCnzWV3",
+            "matchedTitle": "約束になれ僕らの歌",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738b4c31ecff0b107d9c7973bc",
+            "albumName": "約束になれ僕らの歌"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "繚乱！ビクトリーロード",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-15tl9zr__original",
+            "displayTitle": "繚乱！ビクトリーロード"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3XOV9u7TYqfmDWYRqoMfoc",
+            "uri": "spotify:track:3XOV9u7TYqfmDWYRqoMfoc",
+            "matchedTitle": "繚乱！ビクトリーロード",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734adf959d65bd7a60c8ee7c22",
+            "albumName": "夢が僕らの太陽さ"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-animelo-summer-live-2015-the-gate",
+  "title": "Animelo Summer Live 2015 -THE GATE-",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://anisama.tv/2015/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/101",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-animelo-summer-live-2015-the-gate-gmo-8-28",
+      "label": "8.28",
+      "day": null,
+      "session": null,
+      "date": "2015-08-28",
+      "venue": {
+        "name": "GMOアリーナさいたま（さいたまスーパーアリーナ）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-dlkwzg__ver",
+            "displayTitle": "僕らは今のなかで（メドレー・ショートVer.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wonderful Rush",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "wonderful-rush__ver",
+            "displayTitle": "Wonderful Rush（メドレー・ショートVer.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5dfZBSOgZBtHbQSt28shvS",
+            "uri": "spotify:track:5dfZBSOgZBtHbQSt28shvS",
+            "matchedTitle": "Wonderful Rush",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732edb0b23f9a57a709c4356d7",
+            "albumName": "Wonderful Rush"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "No brand girls",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "no-brand-girls__ver",
+            "displayTitle": "No brand girls（メドレー・ショートVer.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6OXy306jbVkdbfNOZYxhfD",
+            "uri": "spotify:track:6OXy306jbVkdbfNOZYxhfD",
+            "matchedTitle": "No brand girls",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "それは僕たちの奇跡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ibnm0y__original",
+            "displayTitle": "それは僕たちの奇跡"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5U4HYCX60hWkMIGwWciH8L",
+            "uri": "spotify:track:5U4HYCX60hWkMIGwWciH8L",
+            "matchedTitle": "それは僕たちの奇跡",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273efcd5eff7d3b3f1bdc816406",
+            "albumName": "それは僕たちの奇跡"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメノトビラ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1x63416__original",
+            "displayTitle": "ユメノトビラ"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53TN5LWqa6xUWHOXA7f40h",
+            "uri": "spotify:track:53TN5LWqa6xUWHOXA7f40h",
+            "matchedTitle": "ユメノトビラ",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e261ce677e525198f8e08528",
+            "albumName": "ユメノトビラ"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KiRa-KiRa Sensation!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "kira-kira-sensation__original",
+            "displayTitle": "KiRa-KiRa Sensation!"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05C47rm0N374qRVWD3X26J",
+            "uri": "spotify:track:05C47rm0N374qRVWD3X26J",
+            "matchedTitle": "KiRa-KiRa Sensation!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273801e6da80c3cc6c788202ad3",
+            "albumName": "KiRa-KiRa Sensation!／Happy maker!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

@@ -1,0 +1,251 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-summer-station-live",
+  "title": "SUMMER STATION 音楽LIVE",
+  "series": [
+    "hasunosora"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.tv-asahi.co.jp/summerstation/area/live/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/172",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-summer-station-live-venue-254-performance-429",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-07-29",
+      "venue": {
+        "name": "六本木ヒルズアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "On your mark",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "on-your-mark__original",
+            "displayTitle": "On your mark"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "48Zr8LhsxUdsdeifeMr2Ai",
+            "uri": "spotify:track:48Zr8LhsxUdsdeifeMr2Ai",
+            "matchedTitle": "On your mark",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sparkly Spot",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sparkly-spot__original",
+            "displayTitle": "Sparkly Spot"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6cS5FleIwYk0nMI3uGZ6FE",
+            "uri": "spotify:track:6cS5FleIwYk0nMI3uGZ6FE",
+            "matchedTitle": "Sparkly Spot",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Tragic Drops",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tragic-drops__original",
+            "displayTitle": "Tragic Drops"
+          },
+          "artistHint": "DOLLCHESTRA",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5epvYXhX3vzG3hREACsLRC",
+            "uri": "spotify:track:5epvYXhX3vzG3hREACsLRC",
+            "matchedTitle": "Tragic Drops",
+            "matchedArtist": "DOLLCHESTRA",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハクチューアラモード",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1yiq14v__original",
+            "displayTitle": "ハクチューアラモード"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "42Hc73MCWr6osO8zMWWmL7",
+            "uri": "spotify:track:42Hc73MCWr6osO8zMWWmL7",
+            "matchedTitle": "ハクチューアラモード",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ド！ド！ド！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-87wrur__original",
+            "displayTitle": "ド！ド！ド！"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6urkKeYf9usiYKY1sLV95K",
+            "uri": "spotify:track:6urkKeYf9usiYKY1sLV95K",
+            "matchedTitle": "ド！ド！ド！",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Holiday∞Holiday",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "holiday-holiday__original",
+            "displayTitle": "Holiday∞Holiday"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3hKSrFN4Vwsx8rpc6A0UPH",
+            "uri": "spotify:track:3hKSrFN4Vwsx8rpc6A0UPH",
+            "matchedTitle": "Holiday∞Holiday",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Mix shake!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "mix-shake__original",
+            "displayTitle": "Mix shake!!"
+          },
+          "artistHint": "スリーズブーケ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7ahptM6ggRFr7sHYoALoJP",
+            "uri": "spotify:track:7ahptM6ggRFr7sHYoALoJP",
+            "matchedTitle": "Mix shake!!",
+            "matchedArtist": "スリーズブーケ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream Believers",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dream-believers__original",
+            "displayTitle": "Dream Believers"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4lMlC1ZKMRroB2FEoVFVt8",
+            "uri": "spotify:track:4lMlC1ZKMRroB2FEoVFVt8",
+            "matchedTitle": "Dream Believers",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "永遠のEuphoria",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "euphoria__original",
+            "displayTitle": "永遠のEuphoria"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "03UK4x1ZU2IT5gtKqMu5mp",
+            "uri": "spotify:track:03UK4x1ZU2IT5gtKqMu5mp",
+            "matchedTitle": "永遠のEuphoria",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

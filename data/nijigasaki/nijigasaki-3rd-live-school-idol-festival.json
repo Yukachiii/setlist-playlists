@@ -1,0 +1,1107 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-3rd-live-school-idol-festival",
+  "title": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 3rd Live! School Idol Festival ～夢の始まり～",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/nijigasaki/sp_3rdlive.php",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-3rd-live-school-idol-festival-venue-124-day-1",
+      "label": "DAY.1",
+      "day": 1,
+      "session": null,
+      "date": "2021-05-08",
+      "venue": {
+        "name": "ベルーナドーム（旧：メットライフドーム）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹色Passions！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "passions__original",
+            "displayTitle": "虹色Passions！"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VL49SjKDLXnan18WnUpw8",
+            "uri": "spotify:track:3VL49SjKDLXnan18WnUpw8",
+            "matchedTitle": "虹色Passions！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "CHASE!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "chase__original",
+            "displayTitle": "CHASE!"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0G9AVuZ44K6QKsFOX4wgJ9",
+            "uri": "spotify:track:0G9AVuZ44K6QKsFOX4wgJ9",
+            "matchedTitle": "CHASE!",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream with You",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dream-with-you__original",
+            "displayTitle": "Dream with You"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3sKc5UdHCsKSJTqH2z2VNJ",
+            "uri": "spotify:track:3sKc5UdHCsKSJTqH2z2VNJ",
+            "matchedTitle": "Dream with You",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Poppin' Up!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "poppin-up__original",
+            "displayTitle": "Poppin' Up!"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4b92WqhoyS41Nznr534iXm",
+            "uri": "spotify:track:4b92WqhoyS41Nznr534iXm",
+            "matchedTitle": "Poppin' Up!",
+            "matchedArtist": "中須かすみ (CV.相良茉優)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DIVE！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dive__original",
+            "displayTitle": "DIVE！"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4xWjEYLBpjM5vHjCXHT4gd",
+            "uri": "spotify:track:4xWjEYLBpjM5vHjCXHT4gd",
+            "matchedTitle": "DIVE！",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サイコーハート",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-rrfgw__original",
+            "displayTitle": "サイコーハート"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5aa7uadpXyuz5dJb48o6P0",
+            "uri": "spotify:track:5aa7uadpXyuz5dJb48o6P0",
+            "matchedTitle": "サイコーハート",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "La Bella Patria",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "la-bella-patria__original",
+            "displayTitle": "La Bella Patria"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4GA2bTFMZQEK94XZ5CsDhL",
+            "uri": "spotify:track:4GA2bTFMZQEK94XZ5CsDhL",
+            "matchedTitle": "La Bella Patria",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ツナガルコネクト",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ugbxbx__original",
+            "displayTitle": "ツナガルコネクト"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0rCOOeLaLLJdYLwtQU2cgN",
+            "uri": "spotify:track:0rCOOeLaLLJdYLwtQU2cgN",
+            "matchedTitle": "ツナガルコネクト",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Butterfly",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "butterfly__original",
+            "displayTitle": "Butterfly"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6MGlr9TWeGPBAD5JEn2QU2",
+            "uri": "spotify:track:6MGlr9TWeGPBAD5JEn2QU2",
+            "matchedTitle": "Butterfly",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Solitude Rain",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "solitude-rain__original",
+            "displayTitle": "Solitude Rain"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5uz5RV3pZ6fXeHJVYDPnOS",
+            "uri": "spotify:track:5uz5RV3pZ6fXeHJVYDPnOS",
+            "matchedTitle": "Solitude Rain",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "VIVID WORLD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "vivid-world__original",
+            "displayTitle": "VIVID WORLD"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0iipnZL7KT0xVU8PLXZ8iO",
+            "uri": "spotify:track:0iipnZL7KT0xVU8PLXZ8iO",
+            "matchedTitle": "VIVID WORLD",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Awakening Promise",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "awakening-promise__original",
+            "displayTitle": "Awakening Promise"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4qclRP59fTZ9DnUIuj1hzP",
+            "uri": "spotify:track:4qclRP59fTZ9DnUIuj1hzP",
+            "matchedTitle": "Awakening Promise",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢がここからはじまるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1jolv8f__original",
+            "displayTitle": "夢がここからはじまるよ"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "72AtUn3rBfBLyu1NgeRs2J",
+            "uri": "spotify:track:72AtUn3rBfBLyu1NgeRs2J",
+            "matchedTitle": "夢がここからはじまるよ",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "NEO SKY, NEO MAP!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "neo-sky-neo-map__original",
+            "displayTitle": "NEO SKY, NEO MAP!"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67RkkdJqrW8JbO5ugU3sTJ",
+            "uri": "spotify:track:67RkkdJqrW8JbO5ugU3sTJ",
+            "matchedTitle": "NEO SKY, NEO MAP!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sweet Eyes",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sweet-eyes__original",
+            "displayTitle": "Sweet Eyes"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LuQ7iiPSb1zGvEgWD7A4E",
+            "uri": "spotify:track:4LuQ7iiPSb1zGvEgWD7A4E",
+            "matchedTitle": "Sweet Eyes",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全速ドリーマー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-j05sn__original",
+            "displayTitle": "全速ドリーマー"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "36aaUNInVWqjUSCYGMqYnX",
+            "uri": "spotify:track:36aaUNInVWqjUSCYGMqYnX",
+            "matchedTitle": "全速ドリーマー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来ハーモニー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1u7y6w4__original",
+            "displayTitle": "未来ハーモニー"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Q3DUz1H6B74YJC5G2p2WX",
+            "uri": "spotify:track:5Q3DUz1H6B74YJC5G2p2WX",
+            "matchedTitle": "未来ハーモニー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "無敵級*ビリーバー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-zbr402__original",
+            "displayTitle": "無敵級*ビリーバー"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Wr4m8btedIIMTzmV38nRo",
+            "uri": "spotify:track:1Wr4m8btedIIMTzmV38nRo",
+            "matchedTitle": "無敵級*ビリーバー",
+            "matchedArtist": "中須かすみ (CV.相良茉優)"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tokimeki-runners__original",
+            "displayTitle": "TOKIMEKI Runners"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love-u-my-friends__original",
+            "displayTitle": "Love U my friends"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "M21",
+          "type": "song",
+          "recording": {
+            "baseTitle": "NEO SKY, NEO MAP!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "neo-sky-neo-map__original",
+            "displayTitle": "NEO SKY, NEO MAP!"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67RkkdJqrW8JbO5ugU3sTJ",
+            "uri": "spotify:track:67RkkdJqrW8JbO5ugU3sTJ",
+            "matchedTitle": "NEO SKY, NEO MAP!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-3rd-live-school-idol-festival-venue-124-day-2",
+      "label": "DAY.2",
+      "day": 2,
+      "session": null,
+      "date": "2021-05-09",
+      "venue": {
+        "name": "ベルーナドーム（旧：メットライフドーム）",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹色Passions！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "passions__original",
+            "displayTitle": "虹色Passions！"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VL49SjKDLXnan18WnUpw8",
+            "uri": "spotify:track:3VL49SjKDLXnan18WnUpw8",
+            "matchedTitle": "虹色Passions！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "CHASE!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "chase__original",
+            "displayTitle": "CHASE!"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0G9AVuZ44K6QKsFOX4wgJ9",
+            "uri": "spotify:track:0G9AVuZ44K6QKsFOX4wgJ9",
+            "matchedTitle": "CHASE!",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dream with You",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dream-with-you__original",
+            "displayTitle": "Dream with You"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3sKc5UdHCsKSJTqH2z2VNJ",
+            "uri": "spotify:track:3sKc5UdHCsKSJTqH2z2VNJ",
+            "matchedTitle": "Dream with You",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Poppin' Up!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "poppin-up__original",
+            "displayTitle": "Poppin' Up!"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4b92WqhoyS41Nznr534iXm",
+            "uri": "spotify:track:4b92WqhoyS41Nznr534iXm",
+            "matchedTitle": "Poppin' Up!",
+            "matchedArtist": "中須かすみ (CV.相良茉優)"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DIVE！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dive__original",
+            "displayTitle": "DIVE！"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4xWjEYLBpjM5vHjCXHT4gd",
+            "uri": "spotify:track:4xWjEYLBpjM5vHjCXHT4gd",
+            "matchedTitle": "DIVE！",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "サイコーハート",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-rrfgw__original",
+            "displayTitle": "サイコーハート"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5aa7uadpXyuz5dJb48o6P0",
+            "uri": "spotify:track:5aa7uadpXyuz5dJb48o6P0",
+            "matchedTitle": "サイコーハート",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "La Bella Patria",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "la-bella-patria__original",
+            "displayTitle": "La Bella Patria"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4GA2bTFMZQEK94XZ5CsDhL",
+            "uri": "spotify:track:4GA2bTFMZQEK94XZ5CsDhL",
+            "matchedTitle": "La Bella Patria",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ツナガルコネクト",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ugbxbx__original",
+            "displayTitle": "ツナガルコネクト"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0rCOOeLaLLJdYLwtQU2cgN",
+            "uri": "spotify:track:0rCOOeLaLLJdYLwtQU2cgN",
+            "matchedTitle": "ツナガルコネクト",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Butterfly",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "butterfly__original",
+            "displayTitle": "Butterfly"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6MGlr9TWeGPBAD5JEn2QU2",
+            "uri": "spotify:track:6MGlr9TWeGPBAD5JEn2QU2",
+            "matchedTitle": "Butterfly",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Solitude Rain",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "solitude-rain__original",
+            "displayTitle": "Solitude Rain"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5uz5RV3pZ6fXeHJVYDPnOS",
+            "uri": "spotify:track:5uz5RV3pZ6fXeHJVYDPnOS",
+            "matchedTitle": "Solitude Rain",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "VIVID WORLD",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "vivid-world__original",
+            "displayTitle": "VIVID WORLD"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0iipnZL7KT0xVU8PLXZ8iO",
+            "uri": "spotify:track:0iipnZL7KT0xVU8PLXZ8iO",
+            "matchedTitle": "VIVID WORLD",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Awakening Promise",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "awakening-promise__original",
+            "displayTitle": "Awakening Promise"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4qclRP59fTZ9DnUIuj1hzP",
+            "uri": "spotify:track:4qclRP59fTZ9DnUIuj1hzP",
+            "matchedTitle": "Awakening Promise",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢がここからはじまるよ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1jolv8f__original",
+            "displayTitle": "夢がここからはじまるよ"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "72AtUn3rBfBLyu1NgeRs2J",
+            "uri": "spotify:track:72AtUn3rBfBLyu1NgeRs2J",
+            "matchedTitle": "夢がここからはじまるよ",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "NEO SKY, NEO MAP!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "neo-sky-neo-map__original",
+            "displayTitle": "NEO SKY, NEO MAP!"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67RkkdJqrW8JbO5ugU3sTJ",
+            "uri": "spotify:track:67RkkdJqrW8JbO5ugU3sTJ",
+            "matchedTitle": "NEO SKY, NEO MAP!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Sweet Eyes",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "sweet-eyes__original",
+            "displayTitle": "Sweet Eyes"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4LuQ7iiPSb1zGvEgWD7A4E",
+            "uri": "spotify:track:4LuQ7iiPSb1zGvEgWD7A4E",
+            "matchedTitle": "Sweet Eyes",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全速ドリーマー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-j05sn__original",
+            "displayTitle": "全速ドリーマー"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "36aaUNInVWqjUSCYGMqYnX",
+            "uri": "spotify:track:36aaUNInVWqjUSCYGMqYnX",
+            "matchedTitle": "全速ドリーマー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未来ハーモニー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1u7y6w4__original",
+            "displayTitle": "未来ハーモニー"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5Q3DUz1H6B74YJC5G2p2WX",
+            "uri": "spotify:track:5Q3DUz1H6B74YJC5G2p2WX",
+            "matchedTitle": "未来ハーモニー",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tokimeki-runners__original",
+            "displayTitle": "TOKIMEKI Runners"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "友 & 愛",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "and__ver",
+            "displayTitle": "友 & 愛（メドレー・ショートVer.）"
+          },
+          "artistHint": "宮下 愛 (CV.村上奈津実)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3Kp7Mhw1ziKdocQbHdvWXe",
+            "uri": "spotify:track:3Kp7Mhw1ziKdocQbHdvWXe",
+            "matchedTitle": "友 & 愛",
+            "matchedArtist": "宮下 愛 (CV.村上奈津実)"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "My Own Fairy-Tale",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "my-own-fairy-tale__ver",
+            "displayTitle": "My Own Fairy-Tale（メドレー・ショートVer.）"
+          },
+          "artistHint": "近江彼方 (CV.鬼頭明里)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ssu1ZVe4E10bIviBsNAMs",
+            "uri": "spotify:track:4ssu1ZVe4E10bIviBsNAMs",
+            "matchedTitle": "My Own Fairy-Tale",
+            "matchedArtist": "近江彼方 (CV.鬼頭明里)"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "M21",
+          "type": "song",
+          "recording": {
+            "baseTitle": "オードリー",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-ly2is0__ver",
+            "displayTitle": "オードリー（メドレー・ショートVer.）"
+          },
+          "artistHint": "桜坂しずく (CV.前田佳織里)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7fEt9DY72GTVK4Dtr7sHiW",
+            "uri": "spotify:track:7fEt9DY72GTVK4Dtr7sHiW",
+            "matchedTitle": "オードリー",
+            "matchedArtist": "桜坂しずく (CV.前田佳織里)"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "M22",
+          "type": "song",
+          "recording": {
+            "baseTitle": "開花宣言",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-8iwa1e__ver",
+            "displayTitle": "開花宣言（メドレー・ショートVer.）"
+          },
+          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67pyNjYqamvYNbUuvpqsoO",
+            "uri": "spotify:track:67pyNjYqamvYNbUuvpqsoO",
+            "matchedTitle": "開花宣言",
+            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "M23",
+          "type": "song",
+          "recording": {
+            "baseTitle": "テレテレパシー",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-1y47huf__ver",
+            "displayTitle": "テレテレパシー（メドレー・ショートVer.）"
+          },
+          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6T6v4V426bXgKECGIGnYY8",
+            "uri": "spotify:track:6T6v4V426bXgKECGIGnYY8",
+            "matchedTitle": "テレテレパシー",
+            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)"
+          }
+        },
+        {
+          "order": 24,
+          "marker": "M24",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wish",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "wish__ver",
+            "displayTitle": "Wish（メドレー・ショートVer.）"
+          },
+          "artistHint": "朝香果林 (CV.久保田未夢)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DCtVkAz85SHKZKTsHwrIP",
+            "uri": "spotify:track:5DCtVkAz85SHKZKTsHwrIP",
+            "matchedTitle": "Wish",
+            "matchedArtist": "朝香果林 (CV.久保田未夢)"
+          }
+        },
+        {
+          "order": 25,
+          "marker": "M25",
+          "type": "song",
+          "recording": {
+            "baseTitle": "MELODY",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "melody__ver",
+            "displayTitle": "MELODY（メドレー・ショートVer.）"
+          },
+          "artistHint": "優木せつ菜 (CV.楠木ともり)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Yv36z13Ye9W3dKxzZuIfS",
+            "uri": "spotify:track:4Yv36z13Ye9W3dKxzZuIfS",
+            "matchedTitle": "MELODY",
+            "matchedArtist": "優木せつ菜 (CV.楠木ともり)"
+          }
+        },
+        {
+          "order": 26,
+          "marker": "M26",
+          "type": "song",
+          "recording": {
+            "baseTitle": "☆ワンダーランド☆",
+            "versionLabel": "メドレー・ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-1441ozs__ver",
+            "displayTitle": "☆ワンダーランド☆（メドレー・ショートVer.）"
+          },
+          "artistHint": "中須かすみ (CV.相良茉優)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2qq87xD5qOMW6uQwzdVmrX",
+            "uri": "spotify:track:2qq87xD5qOMW6uQwzdVmrX",
+            "matchedTitle": "☆ワンダーランド☆",
+            "matchedArtist": "中須かすみ (CV.相良茉優)"
+          }
+        },
+        {
+          "order": 27,
+          "marker": "M27",
+          "type": "song",
+          "recording": {
+            "baseTitle": "声繋ごうよ",
+            "versionLabel": "メドレー・ショートVer.　楽曲終盤で虹ヶ咲メンバーがバックダンサーとして参加",
+            "versionCode": "ver",
+            "recordingId": "track-1i6l77q__ver",
+            "displayTitle": "声繋ごうよ（メドレー・ショートVer.　楽曲終盤で虹ヶ咲メンバーがバックダンサーとして参加）"
+          },
+          "artistHint": "エマ・ヴェルデ (CV.指出毬亜)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6DAdeFKYOYE6bBy6WhGpdR",
+            "uri": "spotify:track:6DAdeFKYOYE6bBy6WhGpdR",
+            "matchedTitle": "声繋ごうよ",
+            "matchedArtist": "エマ・ヴェルデ (CV.指出毬亜)"
+          }
+        },
+        {
+          "order": 28,
+          "marker": "M28",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love U my friends",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love-u-my-friends__original",
+            "displayTitle": "Love U my friends"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6hmG4I5ZQj5kXAyWhjMhEe",
+            "uri": "spotify:track:6hmG4I5ZQj5kXAyWhjMhEe",
+            "matchedTitle": "Love U my friends",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        },
+        {
+          "order": 29,
+          "marker": "M29",
+          "type": "song",
+          "recording": {
+            "baseTitle": "NEO SKY, NEO MAP!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "neo-sky-neo-map__original",
+            "displayTitle": "NEO SKY, NEO MAP!"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "67RkkdJqrW8JbO5ugU3sTJ",
+            "uri": "spotify:track:67RkkdJqrW8JbO5ugU3sTJ",
+            "matchedTitle": "NEO SKY, NEO MAP!",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

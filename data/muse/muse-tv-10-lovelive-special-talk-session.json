@@ -1,0 +1,634 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-tv-10-lovelive-special-talk-session",
+  "title": "TVアニメ放送10周年記念 LoveLive! Special Talk Session",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/otonokizaka/event/10thanniversary/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/194",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-tv-10-lovelive-special-talk-session-tokyo-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2024-02-23",
+      "venue": {
+        "name": "東京ガーデンシアター",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": "TVサイズ / 穂乃果・ことり・凛・真姫 Ver.",
+            "versionCode": "tv-ver",
+            "recordingId": "track-dlkwzg__tv-ver",
+            "displayTitle": "僕らは今のなかで（TVサイズ / 穂乃果・ことり・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らのLIVE 君とのLIFE",
+            "versionLabel": "穂乃果・ことり・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "live-life__ver",
+            "displayTitle": "僕らのLIVE 君とのLIFE（穂乃果・ことり・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "337ulrHx2OU1GuFtJmo2SJ",
+            "uri": "spotify:track:337ulrHx2OU1GuFtJmo2SJ",
+            "matchedTitle": "僕らのLIVE 君とのLIFE",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wonder zone",
+            "versionLabel": "メドレー / 穂乃果・ことり・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "wonder-zone__ver",
+            "displayTitle": "Wonder zone（メドレー / 穂乃果・ことり・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2VKWgX6Tpoxb6uXvDtjOYN",
+            "uri": "spotify:track:2VKWgX6Tpoxb6uXvDtjOYN",
+            "matchedTitle": "Wonder zone",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732a2b4fa9c99e8b96d97b78d1",
+            "albumName": "これからのSomeday / Wonder zone"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Love wing bell",
+            "versionLabel": "メドレー / 穂乃果・ことり・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "love-wing-bell__ver",
+            "displayTitle": "Love wing bell（メドレー / 穂乃果・ことり・凛・真姫 Ver.）"
+          },
+          "artistHint": "星空 凛(CV.飯田里穂), 西木野真姫(CV.Pile), 小泉花陽(CV.久保ユリカ), 絢瀬絵里(CV.南條愛乃), 東條 希(CV.楠田亜衣奈), 矢澤にこ(CV.徳井青空), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0zIUQMzYRPruU56Uet4sBs",
+            "uri": "spotify:track:0zIUQMzYRPruU56Uet4sBs",
+            "matchedTitle": "Love wing bell",
+            "matchedArtist": "星空 凛(CV.飯田里穂), 西木野真姫(CV.Pile), 小泉花陽(CV.久保ユリカ), 絢瀬絵里(CV.南條愛乃), 東條 希(CV.楠田亜衣奈), 矢澤にこ(CV.徳井青空), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cc42ad1a3391bc6b889710ec",
+            "albumName": "Love wing bell／Dancing stars on me!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "KiRa-KiRa Sensation!",
+            "versionLabel": "メドレー / 穂乃果・ことり・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "kira-kira-sensation__ver",
+            "displayTitle": "KiRa-KiRa Sensation!（メドレー / 穂乃果・ことり・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "05C47rm0N374qRVWD3X26J",
+            "uri": "spotify:track:05C47rm0N374qRVWD3X26J",
+            "matchedTitle": "KiRa-KiRa Sensation!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273801e6da80c3cc6c788202ad3",
+            "albumName": "KiRa-KiRa Sensation!／Happy maker!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "きっと青春が聞こえる",
+            "versionLabel": "メドレー / 穂乃果・ことり・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1b6q33o__ver",
+            "displayTitle": "きっと青春が聞こえる（メドレー / 穂乃果・ことり・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0orPUXcxQ4xT90IxNqC6fe",
+            "uri": "spotify:track:0orPUXcxQ4xT90IxNqC6fe",
+            "matchedTitle": "きっと青春が聞こえる",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d02be078f581934644bf16e5",
+            "albumName": "きっと青春が聞こえる"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "No brand girls",
+            "versionLabel": "穂乃果・ことり・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "no-brand-girls__ver",
+            "displayTitle": "No brand girls（穂乃果・ことり・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6OXy306jbVkdbfNOZYxhfD",
+            "uri": "spotify:track:6OXy306jbVkdbfNOZYxhfD",
+            "matchedTitle": "No brand girls",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ミはμ'sicのミ",
+            "versionLabel": "穂乃果・ことり・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sic__ver",
+            "displayTitle": "ミはμ'sicのミ（穂乃果・ことり・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0CcILXrjFH4NPpJE92uVvA",
+            "uri": "spotify:track:0CcILXrjFH4NPpJE92uVvA",
+            "matchedTitle": "ミはμ’sicのミ",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735335ffb49281814e683aa9ee",
+            "albumName": "μ's Complete BEST BOX Chapter.06"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "muse-tv-10-lovelive-special-talk-session-tokyo-day-2",
+      "label": "Day.2昼公演",
+      "day": 2,
+      "session": null,
+      "date": "2024-02-24",
+      "venue": {
+        "name": "東京ガーデンシアター",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": "TVサイズ / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "tv-ver",
+            "recordingId": "track-dlkwzg__tv-ver",
+            "displayTitle": "僕らは今のなかで（TVサイズ / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らのLIVE 君とのLIFE",
+            "versionLabel": "穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "live-life__ver",
+            "displayTitle": "僕らのLIVE 君とのLIFE（穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "337ulrHx2OU1GuFtJmo2SJ",
+            "uri": "spotify:track:337ulrHx2OU1GuFtJmo2SJ",
+            "matchedTitle": "僕らのLIVE 君とのLIFE",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ススメ→トゥモロウ",
+            "versionLabel": "メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-16x12ww__ver",
+            "displayTitle": "ススメ→トゥモロウ（メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田 彩), 園田海未(CV.三森すずこ), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4jxXyJ9Y8aYb9g8HKkHIbg",
+            "uri": "spotify:track:4jxXyJ9Y8aYb9g8HKkHIbg",
+            "matchedTitle": "ススメ→トゥモロウ",
+            "matchedArtist": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田 彩), 園田海未(CV.三森すずこ), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732f65c333dc0f5d15d42613a5",
+            "albumName": "ススメ→トゥモロウ／START:DASH!!"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメノトビラ",
+            "versionLabel": "メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1x63416__ver",
+            "displayTitle": "ユメノトビラ（メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "53TN5LWqa6xUWHOXA7f40h",
+            "uri": "spotify:track:53TN5LWqa6xUWHOXA7f40h",
+            "matchedTitle": "ユメノトビラ",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e261ce677e525198f8e08528",
+            "albumName": "ユメノトビラ"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Happy maker!",
+            "versionLabel": "メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "happy-maker__ver",
+            "displayTitle": "Happy maker!（メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0crEm2v7saTMiyHJ1yEfMw",
+            "uri": "spotify:track:0crEm2v7saTMiyHJ1yEfMw",
+            "matchedTitle": "Happy maker!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "きっと青春が聞こえる",
+            "versionLabel": "メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1b6q33o__ver",
+            "displayTitle": "きっと青春が聞こえる（メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0orPUXcxQ4xT90IxNqC6fe",
+            "uri": "spotify:track:0orPUXcxQ4xT90IxNqC6fe",
+            "matchedTitle": "きっと青春が聞こえる",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d02be078f581934644bf16e5",
+            "albumName": "きっと青春が聞こえる"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "No brand girls",
+            "versionLabel": "穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "no-brand-girls__ver",
+            "displayTitle": "No brand girls（穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6OXy306jbVkdbfNOZYxhfD",
+            "uri": "spotify:track:6OXy306jbVkdbfNOZYxhfD",
+            "matchedTitle": "No brand girls",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ミはμ'sicのミ",
+            "versionLabel": "穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sic__ver",
+            "displayTitle": "ミはμ'sicのミ（穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0CcILXrjFH4NPpJE92uVvA",
+            "uri": "spotify:track:0CcILXrjFH4NPpJE92uVvA",
+            "matchedTitle": "ミはμ’sicのミ",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735335ffb49281814e683aa9ee",
+            "albumName": "μ's Complete BEST BOX Chapter.06"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "muse-tv-10-lovelive-special-talk-session-tokyo-day-2-2",
+      "label": "Day.2夜公演",
+      "day": 2,
+      "session": null,
+      "date": "2024-02-24",
+      "venue": {
+        "name": "東京ガーデンシアター",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "それは僕たちの奇跡",
+            "versionLabel": "TVサイズ / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "tv-ver",
+            "recordingId": "track-ibnm0y__tv-ver",
+            "displayTitle": "それは僕たちの奇跡（TVサイズ / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5U4HYCX60hWkMIGwWciH8L",
+            "uri": "spotify:track:5U4HYCX60hWkMIGwWciH8L",
+            "matchedTitle": "それは僕たちの奇跡",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273efcd5eff7d3b3f1bdc816406",
+            "albumName": "それは僕たちの奇跡"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らのLIVE 君とのLIFE",
+            "versionLabel": "穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "live-life__ver",
+            "displayTitle": "僕らのLIVE 君とのLIFE（穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "337ulrHx2OU1GuFtJmo2SJ",
+            "uri": "spotify:track:337ulrHx2OU1GuFtJmo2SJ",
+            "matchedTitle": "僕らのLIVE 君とのLIFE",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "START:DASH!!",
+            "versionLabel": "メドレー / TVアニメ1期3話 Ver. / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "tv-1-3-ver-ver",
+            "recordingId": "start-dash__tv-1-3-ver-ver",
+            "displayTitle": "START:DASH!!（メドレー / TVアニメ1期3話 Ver. / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ZNHpcARAieeBxUS8v6YqO",
+            "uri": "spotify:track:5ZNHpcARAieeBxUS8v6YqO",
+            "matchedTitle": "START:DASH!!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "これからのSomeday",
+            "versionLabel": "メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "someday__ver",
+            "displayTitle": "これからのSomeday（メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田 彩), 園田海未(CV.三森すずこ), 星空 凛(CV.飯田里穂), 西木野真姫(CV.Pile), 小泉花陽(CV.久保ユリカ), 矢澤にこ(CV.徳井青空), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5JStxShSHJYxckVsGEdHiN",
+            "uri": "spotify:track:5JStxShSHJYxckVsGEdHiN",
+            "matchedTitle": "これからのSomeday",
+            "matchedArtist": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田 彩), 園田海未(CV.三森すずこ), 星空 凛(CV.飯田里穂), 西木野真姫(CV.Pile), 小泉花陽(CV.久保ユリカ), 矢澤にこ(CV.徳井青空), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732a2b4fa9c99e8b96d97b78d1",
+            "albumName": "これからのSomeday / Wonder zone"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dancing stars on me!",
+            "versionLabel": "メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "dancing-stars-on-me__ver",
+            "displayTitle": "Dancing stars on me!（メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7tSfJVzlGX03NU5a4jKoVY",
+            "uri": "spotify:track:7tSfJVzlGX03NU5a4jKoVY",
+            "matchedTitle": "Dancing stars on me!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cc42ad1a3391bc6b889710ec",
+            "albumName": "Love wing bell／Dancing stars on me!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "どんなときもずっと",
+            "versionLabel": "メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-slm7ld__ver",
+            "displayTitle": "どんなときもずっと（メドレー / 穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2CtmLaNFyWogiWa067jYVk",
+            "uri": "spotify:track:2CtmLaNFyWogiWa067jYVk",
+            "matchedTitle": "どんなときもずっと",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b199e2ff265f530fa834939e",
+            "albumName": "どんなときもずっと"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "No brand girls",
+            "versionLabel": "穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "no-brand-girls__ver",
+            "displayTitle": "No brand girls（穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6OXy306jbVkdbfNOZYxhfD",
+            "uri": "spotify:track:6OXy306jbVkdbfNOZYxhfD",
+            "matchedTitle": "No brand girls",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ミはμ'sicのミ",
+            "versionLabel": "穂乃果・ことり・海未・凛・真姫 Ver.",
+            "versionCode": "ver",
+            "recordingId": "sic__ver",
+            "displayTitle": "ミはμ'sicのミ（穂乃果・ことり・海未・凛・真姫 Ver.）"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0CcILXrjFH4NPpJE92uVvA",
+            "uri": "spotify:track:0CcILXrjFH4NPpJE92uVvA",
+            "matchedTitle": "ミはμ’sicのミ",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735335ffb49281814e683aa9ee",
+            "albumName": "μ's Complete BEST BOX Chapter.06"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

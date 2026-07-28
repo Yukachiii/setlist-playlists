@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-ascii-media-works-20th-anniversary-dengeki-music-live",
+  "title": "ASCII MEDIA WORKS 20th Anniversary DENGEKI MUSIC LIVE!!",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/77",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-ascii-media-works-20th-anniversary-dengeki-music-live-venue-103-sweet-stage",
+      "label": "SWEET STAGE",
+      "day": null,
+      "session": null,
+      "date": "2012-10-21",
+      "venue": {
+        "name": "幕張メッセ 幕張イベントホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らのLIVE 君とのLIFE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "live-life__original",
+            "displayTitle": "僕らのLIVE 君とのLIFE"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "337ulrHx2OU1GuFtJmo2SJ",
+            "uri": "spotify:track:337ulrHx2OU1GuFtJmo2SJ",
+            "matchedTitle": "僕らのLIVE 君とのLIFE",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夏色えがおで1,2,Jump!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "1-2-jump__original",
+            "displayTitle": "夏色えがおで1,2,Jump!"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5dKxIFHbLEF74JCIc30zNP",
+            "uri": "spotify:track:5dKxIFHbLEF74JCIc30zNP",
+            "matchedTitle": "夏色えがおで1,2,Jump!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732662ee7d30ebab93a5fc450a",
+            "albumName": "夏色えがおで1,2,Jump!"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "もぎゅっと“love”で接近中！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love__original",
+            "displayTitle": "もぎゅっと“love”で接近中！"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "66Mptg7L2Er4fOZTKSCP2e",
+            "uri": "spotify:track:66Mptg7L2Er4fOZTKSCP2e",
+            "matchedTitle": "もぎゅっと\"love\"で接近中！",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Snow halation",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "snow-halation__original",
+            "displayTitle": "Snow halation"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4K65wBvHQPmnD6bTdN6BHt",
+            "uri": "spotify:track:4K65wBvHQPmnD6bTdN6BHt",
+            "matchedTitle": "Snow halation",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+            "albumName": "Snow halation"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

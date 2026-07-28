@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Setlist Playlists Admin</title>
-  <link rel="stylesheet" href="./css/style.css?v=0.18">
+  <link rel="stylesheet" href="./css/style.css?v=0.19">
 </head>
 <body>
   <header class="topbar">
@@ -35,6 +35,10 @@
         </div>
         <button id="new-event-button" class="icon-button" type="button" title="イベントを追加">＋</button>
       </div>
+      <label class="sidebar-numbered-filter">
+        <input id="numbered-live-filter" type="checkbox">
+        <span>ナンバリング公演のみ</span>
+      </label>
       <div id="event-list" class="event-list"></div>
       <div class="sidebar-footer">
         <button id="export-all-button" class="button ghost full" type="button">全データをバックアップ</button>
@@ -79,6 +83,14 @@
           <label>
             正式公演名
             <input id="event-title" autocomplete="off" placeholder="ラブライブ！…">
+          </label>
+
+          <label class="event-flag-field">
+            <input id="event-numbered-live" type="checkbox">
+            <span>
+              ナンバリング公演
+              <small>公演名から自動判定せず、このチェックを付けたイベントだけを対象にします。</small>
+            </span>
           </label>
 
           <div class="form-grid three">
@@ -526,6 +538,6 @@
   <script src="./js/page-text-parser.js?v=0.20"></script>
   <script src="./js/known-song-cache.js?v=0.20"></script>
   <script src="./js/spotify-client.js?v=0.19"></script>
-  <script src="./js/app.js?v=0.26"></script>
+  <script src="./js/app.js?v=0.27"></script>
 </body>
 </html>

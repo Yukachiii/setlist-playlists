@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-next-tokimeki",
+  "title": "ラブライブ！虹ヶ咲学園スクールアイドル同好会 Next TOKIMEKI 大発表会♪ 最新ニュースもりだくさんスペシャル！ スペシャルお披露目ライブ",
+  "series": [
+    "nijigasaki"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/nijigasaki/news.php?id=8365",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/122",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-next-tokimeki-venue-175-performance-281",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2021-10-03",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "L！L！L！ (Love the Life We Live)",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "l-l-l-love-the-life-we-live__original",
+            "displayTitle": "L！L！L！ (Love the Life We Live)"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4KYGJ7PMQ8M2GMPowJNlKi",
+            "uri": "spotify:track:4KYGJ7PMQ8M2GMPowJNlKi",
+            "matchedTitle": "L！L！L！ (Love the Life We Live)",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

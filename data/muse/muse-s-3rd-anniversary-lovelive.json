@@ -1,0 +1,613 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-s-3rd-anniversary-lovelive",
+  "title": "μ's 3rd Anniversary LoveLive!",
+  "series": [
+    "muse"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/otonokizaka/sp_3rdlive.html",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-s-3rd-anniversary-lovelive-yokohama-performance-167",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2013-06-16",
+      "venue": {
+        "name": "パシフィコ横浜 国立大ホール",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-dlkwzg__original",
+            "displayTitle": "僕らは今のなかで"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らのLIVE 君とのLIFE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "live-life__original",
+            "displayTitle": "僕らのLIVE 君とのLIFE"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "337ulrHx2OU1GuFtJmo2SJ",
+            "uri": "spotify:track:337ulrHx2OU1GuFtJmo2SJ",
+            "matchedTitle": "僕らのLIVE 君とのLIFE",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wonderful Rush",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wonderful-rush__original",
+            "displayTitle": "Wonderful Rush"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5dfZBSOgZBtHbQSt28shvS",
+            "uri": "spotify:track:5dfZBSOgZBtHbQSt28shvS",
+            "matchedTitle": "Wonderful Rush",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732edb0b23f9a57a709c4356d7",
+            "albumName": "Wonderful Rush"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夏色えがおで1,2,Jump!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "1-2-jump__original",
+            "displayTitle": "夏色えがおで1,2,Jump!"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5dKxIFHbLEF74JCIc30zNP",
+            "uri": "spotify:track:5dKxIFHbLEF74JCIc30zNP",
+            "matchedTitle": "夏色えがおで1,2,Jump!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732662ee7d30ebab93a5fc450a",
+            "albumName": "夏色えがおで1,2,Jump!"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ススメ→トゥモロウ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-16x12ww__original",
+            "displayTitle": "ススメ→トゥモロウ"
+          },
+          "artistHint": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田 彩), 園田海未(CV.三森すずこ), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4jxXyJ9Y8aYb9g8HKkHIbg",
+            "uri": "spotify:track:4jxXyJ9Y8aYb9g8HKkHIbg",
+            "matchedTitle": "ススメ→トゥモロウ",
+            "matchedArtist": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田 彩), 園田海未(CV.三森すずこ), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732f65c333dc0f5d15d42613a5",
+            "albumName": "ススメ→トゥモロウ／START:DASH!!"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "夢なき夢は夢じゃない",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-l5n6ew__ver",
+            "displayTitle": "夢なき夢は夢じゃない（ショートVer.）"
+          },
+          "artistHint": "高坂穂乃果(CV.新田恵海), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0IddW7k7Bf43GURSM3OxWx",
+            "uri": "spotify:track:0IddW7k7Bf43GURSM3OxWx",
+            "matchedTitle": "夢なき夢は夢じゃない",
+            "matchedArtist": "高坂穂乃果(CV.新田恵海), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cea05ff8f1311a0df0291cfb",
+            "albumName": "μ's Complete BEST BOX Chapter.03"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ぶる～べりぃ♡とれいん",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-19jjnti__ver",
+            "displayTitle": "ぶる～べりぃ♡とれいん（ショートVer.）"
+          },
+          "artistHint": "南ことり(CV.内田 彩), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6vQHxOQp6SXTt9wpKF8N0I",
+            "uri": "spotify:track:6vQHxOQp6SXTt9wpKF8N0I",
+            "matchedTitle": "ぶる〜べりぃ♡とれいん",
+            "matchedArtist": "南ことり(CV.内田 彩), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738a7e5e475b8a5323ad4d98e1",
+            "albumName": "告白日和、です！"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "私たちは未来の花",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-1q9eb61__ver",
+            "displayTitle": "私たちは未来の花（ショートVer.）"
+          },
+          "artistHint": "園田海未(CV.三森すずこ), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "72zLinIOYztZwIDes9jZBa",
+            "uri": "spotify:track:72zLinIOYztZwIDes9jZBa",
+            "matchedTitle": "私たちは未来の花",
+            "matchedArtist": "園田海未(CV.三森すずこ), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ee5efb2163db725f50611712",
+            "albumName": "ラブライブ！ Solo Live! from μ's 園田海未 海色少女に魅せられて"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "なわとび",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-nyl2ln__ver",
+            "displayTitle": "なわとび（ショートVer.）"
+          },
+          "artistHint": "小泉花陽(CV.久保ユリカ), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GAVLSODkiykqy6P7bK5Pp",
+            "uri": "spotify:track:2GAVLSODkiykqy6P7bK5Pp",
+            "matchedTitle": "なわとび",
+            "matchedArtist": "小泉花陽(CV.久保ユリカ), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cea05ff8f1311a0df0291cfb",
+            "albumName": "μ's Complete BEST BOX Chapter.03"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋のシグナルRin rin rin!",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "rin-rin-rin__ver",
+            "displayTitle": "恋のシグナルRin rin rin!（ショートVer.）"
+          },
+          "artistHint": "星空 凛(CV.飯田里穂), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "06YGD1qgCJeDgZ7q39u0z8",
+            "uri": "spotify:track:06YGD1qgCJeDgZ7q39u0z8",
+            "matchedTitle": "恋のシグナルRin rin rin!",
+            "matchedArtist": "星空 凛(CV.飯田里穂), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daring!!",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "daring__ver",
+            "displayTitle": "Daring!!（ショートVer.）"
+          },
+          "artistHint": "西木野真姫(CV.Pile), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1lNTAkiP2dl3Odql9hMARj",
+            "uri": "spotify:track:1lNTAkiP2dl3Odql9hMARj",
+            "matchedTitle": "Daring!!",
+            "matchedArtist": "西木野真姫(CV.Pile), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27332bd0c34b3ed1deb8e90da47",
+            "albumName": "soldier game"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "まほうつかいはじめました！",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-1iujry8__ver",
+            "displayTitle": "まほうつかいはじめました！（ショートVer.）"
+          },
+          "artistHint": "矢澤にこ(CV.徳井青空), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1An5CKAQg6k9KQS0Qoslv7",
+            "uri": "spotify:track:1An5CKAQg6k9KQS0Qoslv7",
+            "matchedTitle": "まほうつかいはじめました！",
+            "matchedArtist": "矢澤にこ(CV.徳井青空), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734c8c2238ab2fbace916a1ca2",
+            "albumName": "乙女式れんあい塾"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ありふれた悲しみの果て",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-1lii6mx__ver",
+            "displayTitle": "ありふれた悲しみの果て（ショートVer.）"
+          },
+          "artistHint": "絢瀬絵里(CV.南條愛乃), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0lkRAOJd368kh7YYp9QUeZ",
+            "uri": "spotify:track:0lkRAOJd368kh7YYp9QUeZ",
+            "matchedTitle": "ありふれた悲しみの果て",
+            "matchedArtist": "絢瀬絵里(CV.南條愛乃), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27332bd0c34b3ed1deb8e90da47",
+            "albumName": "soldier game"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "純愛レンズ",
+            "versionLabel": "ショートVer.",
+            "versionCode": "ver",
+            "recordingId": "track-zdpqqd__ver",
+            "displayTitle": "純愛レンズ（ショートVer.）"
+          },
+          "artistHint": "東條 希(CV.楠田亜衣奈), μ's",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1A4cPjb4DFWs9dLgPfTUbp",
+            "uri": "spotify:track:1A4cPjb4DFWs9dLgPfTUbp",
+            "matchedTitle": "純愛レンズ",
+            "matchedArtist": "東條 希(CV.楠田亜衣奈), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734c8c2238ab2fbace916a1ca2",
+            "albumName": "乙女式れんあい塾"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "START:DASH!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "start-dash__original",
+            "displayTitle": "START:DASH!!"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ZNHpcARAieeBxUS8v6YqO",
+            "uri": "spotify:track:5ZNHpcARAieeBxUS8v6YqO",
+            "matchedTitle": "START:DASH!!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "これからのSomeday",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "someday__original",
+            "displayTitle": "これからのSomeday"
+          },
+          "artistHint": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田 彩), 園田海未(CV.三森すずこ), 星空 凛(CV.飯田里穂), 西木野真姫(CV.Pile), 小泉花陽(CV.久保ユリカ), 矢澤にこ(CV.徳井青空), μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5JStxShSHJYxckVsGEdHiN",
+            "uri": "spotify:track:5JStxShSHJYxckVsGEdHiN",
+            "matchedTitle": "これからのSomeday",
+            "matchedArtist": "高坂穂乃果(CV.新田恵海), 南ことり(CV.内田 彩), 園田海未(CV.三森すずこ), 星空 凛(CV.飯田里穂), 西木野真姫(CV.Pile), 小泉花陽(CV.久保ユリカ), 矢澤にこ(CV.徳井青空), μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732a2b4fa9c99e8b96d97b78d1",
+            "albumName": "これからのSomeday / Wonder zone"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "もぎゅっと“love”で接近中！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love__original",
+            "displayTitle": "もぎゅっと“love”で接近中！"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "66Mptg7L2Er4fOZTKSCP2e",
+            "uri": "spotify:track:66Mptg7L2Er4fOZTKSCP2e",
+            "matchedTitle": "もぎゅっと\"love\"で接近中！",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27301799f07753c1a1e77cc4c74",
+            "albumName": "ラブライブ！ μ's Best Album Best Live! collection"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Wonder zone",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wonder-zone__original",
+            "displayTitle": "Wonder zone"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2VKWgX6Tpoxb6uXvDtjOYN",
+            "uri": "spotify:track:2VKWgX6Tpoxb6uXvDtjOYN",
+            "matchedTitle": "Wonder zone",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732a2b4fa9c99e8b96d97b78d1",
+            "albumName": "これからのSomeday / Wonder zone"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "輝夜の城で踊りたい",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1teugeu__original",
+            "displayTitle": "輝夜の城で踊りたい"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0KilKVzKFON59mQyZYozJ1",
+            "uri": "spotify:track:0KilKVzKFON59mQyZYozJ1",
+            "matchedTitle": "輝夜の城で踊りたい",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d02be078f581934644bf16e5",
+            "albumName": "きっと青春が聞こえる"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "WILD STARS",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "wild-stars__original",
+            "displayTitle": "WILD STARS"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4f7s7R90trcMJXk6ZnaY6W",
+            "uri": "spotify:track:4f7s7R90trcMJXk6ZnaY6W",
+            "matchedTitle": "WILD STARS",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "M21",
+          "type": "song",
+          "recording": {
+            "baseTitle": "No brand girls",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "no-brand-girls__original",
+            "displayTitle": "No brand girls"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6OXy306jbVkdbfNOZYxhfD",
+            "uri": "spotify:track:6OXy306jbVkdbfNOZYxhfD",
+            "matchedTitle": "No brand girls",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "M22",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Snow halation",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "snow-halation__original",
+            "displayTitle": "Snow halation"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4K65wBvHQPmnD6bTdN6BHt",
+            "uri": "spotify:track:4K65wBvHQPmnD6bTdN6BHt",
+            "matchedTitle": "Snow halation",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+            "albumName": "Snow halation"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "M23",
+          "type": "song",
+          "recording": {
+            "baseTitle": "START:DASH!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "start-dash__original",
+            "displayTitle": "START:DASH!!"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5ZNHpcARAieeBxUS8v6YqO",
+            "uri": "spotify:track:5ZNHpcARAieeBxUS8v6YqO",
+            "matchedTitle": "START:DASH!!",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+            "albumName": "μ's Best Album Best Live! Collection Ⅱ"
+          }
+        },
+        {
+          "order": 24,
+          "marker": "M24",
+          "type": "song",
+          "recording": {
+            "baseTitle": "きっと青春が聞こえる",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1b6q33o__original",
+            "displayTitle": "きっと青春が聞こえる"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0orPUXcxQ4xT90IxNqC6fe",
+            "uri": "spotify:track:0orPUXcxQ4xT90IxNqC6fe",
+            "matchedTitle": "きっと青春が聞こえる",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d02be078f581934644bf16e5",
+            "albumName": "きっと青春が聞こえる"
+          }
+        },
+        {
+          "order": 25,
+          "marker": "M25",
+          "type": "song",
+          "recording": {
+            "baseTitle": "僕らは今のなかで",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-dlkwzg__original",
+            "displayTitle": "僕らは今のなかで"
+          },
+          "artistHint": "μ's",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0qAxtxztAqS2P3FHM8c842",
+            "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842",
+            "matchedTitle": "僕らは今のなかで",
+            "matchedArtist": "μ's",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27394ef7debe3e8a28b0a465e32",
+            "albumName": "僕らは今のなかで"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}

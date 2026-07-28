@@ -9,6 +9,7 @@ from server import (
     PublishErrorResponse,
     convert_tour_index,
     convert_tour_payload,
+    event_data_filename,
     normalized_venue_name,
     parse_event_url,
     publish_event_to_github,
@@ -156,13 +157,15 @@ class ServerImportTests(unittest.TestCase):
         with TemporaryDirectory() as directory:
             project = Path(directory)
             result = write_event_to_public_data(event, project)
-            self.assertEqual(result["filename"], "ikizulive-test-live.json")
+            self.assertEqual(result["filename"], "ikizulive/ikizulive-test-live.json")
             self.assertTrue(result["eventChanged"])
             self.assertTrue(result["manifestChanged"])
-            self.assertTrue((project / "data" / "ikizulive-test-live.json").exists())
+            self.assertTrue(
+                (project / "data" / "ikizulive" / "ikizulive-test-live.json").exists()
+            )
 
             manifest = (project / "data" / "index.json").read_text(encoding="utf-8")
-            self.assertIn('"ikizulive-test-live.json"', manifest)
+            self.assertIn('"ikizulive/ikizulive-test-live.json"', manifest)
 
             repeated = write_event_to_public_data(event, project)
             self.assertFalse(repeated["eventChanged"])
@@ -193,15 +196,63 @@ class ServerImportTests(unittest.TestCase):
 
             self.assertEqual(result["eventCount"], 2)
             self.assertEqual(result["changedEventCount"], 2)
-            self.assertTrue((project / "data" / "first-live.json").exists())
-            self.assertTrue((project / "data" / "second-live.json").exists())
+            self.assertTrue((project / "data" / "other" / "first-live.json").exists())
+            self.assertTrue((project / "data" / "other" / "second-live.json").exists())
             manifest = json.loads(
                 (project / "data" / "index.json").read_text(encoding="utf-8")
             )
             self.assertEqual(
                 manifest["events"],
-                ["first-live.json", "second-live.json"],
+                ["other/first-live.json", "other/second-live.json"],
             )
+
+    def test_series_folder_name_is_safe_and_uses_the_primary_series(self):
+        self.assertEqual(
+            event_data_filename({
+                "id": "test-live",
+                "series": ["hasunosora", "aqours"],
+            }),
+            "hasunosora/test-live.json",
+        )
+        self.assertEqual(
+            event_data_filename({"id": "test-live", "series": []}),
+            "other/test-live.json",
+        )
+
+    def test_flat_event_file_is_migrated_when_published(self):
+        event = {
+            "schemaVersion": "0.3",
+            "id": "migration-live",
+            "title": "Migration Live",
+            "series": ["liella"],
+            "sources": [],
+            "performances": [],
+        }
+        with TemporaryDirectory() as directory:
+            project = Path(directory)
+            data_directory = project / "data"
+            data_directory.mkdir()
+            (data_directory / "migration-live.json").write_text(
+                "{}\n",
+                encoding="utf-8",
+            )
+            (data_directory / "index.json").write_text(
+                json.dumps({
+                    "schemaVersion": "0.3",
+                    "events": ["migration-live.json"],
+                }),
+                encoding="utf-8",
+            )
+
+            result = write_event_to_public_data(event, project)
+
+            self.assertFalse((data_directory / "migration-live.json").exists())
+            self.assertTrue((data_directory / "liella" / "migration-live.json").exists())
+            self.assertEqual(result["removedLegacyFiles"], ["migration-live.json"])
+            manifest = json.loads(
+                (data_directory / "index.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(manifest["events"], ["liella/migration-live.json"])
 
     def test_publish_event_id_cannot_escape_data_directory(self):
         with self.assertRaises(PublishErrorResponse):
@@ -253,8 +304,12 @@ class ServerImportTests(unittest.TestCase):
             self.assertEqual(result["eventCount"], 2)
             self.assertEqual(result["branch"], "main")
             self.assertTrue(result["revision"])
-            self.assertTrue((project / "data" / "github-publish-test.json").exists())
-            self.assertTrue((project / "data" / "github-publish-test-2.json").exists())
+            self.assertTrue(
+                (project / "data" / "other" / "github-publish-test.json").exists()
+            )
+            self.assertTrue(
+                (project / "data" / "other" / "github-publish-test-2.json").exists()
+            )
 
             remote_head = git(
                 "--git-dir",
@@ -316,7 +371,9 @@ class ServerImportTests(unittest.TestCase):
             self.assertTrue(result["committed"])
             self.assertTrue(result["pushed"])
             self.assertTrue((project / "remote-note.txt").exists())
-            self.assertTrue((project / "data" / "github-publish-second.json").exists())
+            self.assertTrue(
+                (project / "data" / "other" / "github-publish-second.json").exists()
+            )
 
             remote_head = git(
                 "--git-dir",

@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-nice-to-see-you-in-la",
+  "title": "Nice to See You in LA!!",
+  "series": [
+    "aqours",
+    "nijigasaki",
+    "liella",
+    "yohane"
+  ],
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/news/01_2064.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/170",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-nice-to-see-you-in-la-jw-marriott-platinum-ballroom-performance-425",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2023-07-02",
+      "venue": {
+        "name": "JW Marriott Platinum Ballroom",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青空Jumping Heart",
+            "versionLabel": "津島善子、中須かすみ、澁谷かのん Ver. (TV size)",
+            "versionCode": "tv-size",
+            "recordingId": "jumping-heart__tv-size",
+            "displayTitle": "青空Jumping Heart（津島善子、中須かすみ、澁谷かのん Ver. (TV size)）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3qDPN5KBpu63ieMoommmVm",
+            "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm",
+            "matchedTitle": "青空Jumping Heart",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dc6f7e80659b857be8ff0a95",
+            "albumName": "青空Jumping Heart"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹色Passions！",
+            "versionLabel": "津島善子、中須かすみ、澁谷かのん Ver. (TV size)",
+            "versionCode": "tv-size",
+            "recordingId": "passions__tv-size",
+            "displayTitle": "虹色Passions！（津島善子、中須かすみ、澁谷かのん Ver. (TV size)）"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VL49SjKDLXnan18WnUpw8",
+            "uri": "spotify:track:3VL49SjKDLXnan18WnUpw8",
+            "matchedTitle": "虹色Passions！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": "",
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "START!! True dreams",
+            "versionLabel": "津島善子、中須かすみ、澁谷かのん Ver. (TV size)",
+            "versionCode": "tv-size",
+            "recordingId": "start-true-dreams__tv-size",
+            "displayTitle": "START!! True dreams（津島善子、中須かすみ、澁谷かのん Ver. (TV size)）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2hhexsnHLRpjI0BYQYEGvU",
+            "uri": "spotify:track:2hhexsnHLRpjI0BYQYEGvU",
+            "matchedTitle": "START!! True dreams",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273813907136c80564da67267ba",
+            "albumName": "START!! True dreams"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ユメ語るよりユメ歌おう",
+            "versionLabel": "津島善子、中須かすみ、澁谷かのん Ver. (TV size)",
+            "versionCode": "tv-size",
+            "recordingId": "track-6xdb0g__tv-size",
+            "displayTitle": "ユメ語るよりユメ歌おう（津島善子、中須かすみ、澁谷かのん Ver. (TV size)）"
+          },
+          "artistHint": "Aqours",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4Uk8NfnITNe4Nc33vv38Dv",
+            "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv",
+            "matchedTitle": "ユメ語るよりユメ歌おう",
+            "matchedArtist": "Aqours",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273e1869766b0f37fe62777b762",
+            "albumName": "ラブライブ！サンシャイン!! Aqours CHRONICLE (2015～2017)"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ],
+  "isNumberedLive": false
+}
