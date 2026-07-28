@@ -74,7 +74,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand-copy { display: flex; flex-direction: column; line-height: 1; }
 .brand-copy strong { font-family: "DM Sans", sans-serif; font-size: 20px; letter-spacing: -0.6px; }
 .brand-copy small { margin-top: 4px; color: var(--coral); font-family: "DM Sans", sans-serif; font-size: 8px; font-weight: 800; letter-spacing: 2.6px; }
-.spotify-account { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.request-link {
+  margin-left: auto;
+  min-height: 38px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  color: #59647a;
+  border: 1px solid #d4d8e0;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.request-link:hover { color: var(--blue); border-color: rgba(78, 99, 230, 0.4); background: white; }
+.spotify-account { display: flex; align-items: center; gap: 12px; }
 .spotify-status { max-width: 145px; overflow: hidden; color: #687086; font-size: 11px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 
 .button {
@@ -331,8 +344,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .header-inner { width: calc(100% - 28px); height: 68px; gap: 12px; }
   .brand-mark { width: 35px; height: 35px; }
   .brand-copy strong { font-size: 17px; }
+  .request-link { min-height: 36px; padding: 0 10px; font-size: 10px; }
   .spotify-status { display: none; }
-  .spotify-account { margin-left: auto; }
   .spotify-account .button { min-height: 38px; padding: 0 13px; font-size: 10px; }
   .hero-inner, .hero-stats, .section-shell { width: calc(100% - 28px); }
   .hero-copy { padding-top: 58px; }

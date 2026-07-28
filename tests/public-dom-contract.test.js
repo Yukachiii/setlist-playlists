@@ -36,11 +36,16 @@ test("PCの固定タブとプレイリスト作成欄が重ならない", () => 
 });
 
 test("Spotify楽曲情報の自動検出に関する注意書きを表示する", () => {
+  const header = html.match(/<header[\s\S]*?<\/header>/)?.[0] ?? "";
+  const footer = html.match(/<footer[\s\S]*?<\/footer>/)?.[0] ?? "";
+
   assert.match(html, /Spotify楽曲情報は自動検出を含むため、誤っている場合があります。/);
-  assert.match(html, /href="https:\/\/x\.com\/Cocona_Kona"/);
-  assert.match(html, /修正依頼：X（@Cocona_Kona）/);
-  assert.match(html, /href="https:\/\/marshmallow-qa\.com\/abwyzu4ah3yhb24\?/);
-  assert.match(html, /修正依頼：マシュマロ/);
+  assert.match(header, /href="https:\/\/marshmallow-qa\.com\/abwyzu4ah3yhb24\?/);
+  assert.match(header, /不具合報告/);
+  assert.doesNotMatch(header, /Cocona_Kona/);
+  assert.match(footer, /href="https:\/\/x\.com\/Cocona_Kona"/);
+  assert.match(footer, /X：@Cocona_Kona/);
+  assert.doesNotMatch(footer, /marshmallow-qa/);
   assert.match(html, /©︎ゆいゆい/);
 });
 
