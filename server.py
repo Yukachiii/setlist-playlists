@@ -9,6 +9,7 @@ import re
 import secrets
 import subprocess
 import threading
+import time
 import unicodedata
 import urllib.error
 import urllib.parse
@@ -111,6 +112,30 @@ query AdminTourImport($id: ID!) {
   seriesList { id name }
 }
 """
+
+
+TOUR_INDEX_QUERY = r"""
+query AdminTourIndex($first: Int!, $page: Int!) {
+  tours(first: $first, page: $page) {
+    data {
+      id
+      name
+      startsOn
+      endsOn
+      seriesIds
+    }
+    paginatorInfo {
+      currentPage
+      lastPage
+      total
+    }
+  }
+}
+"""
+
+TOUR_INDEX_LOCK = threading.Lock()
+TOUR_INDEX_CACHE_TTL = 10 * 60
+TOUR_INDEX_CACHE: tuple[float, dict[str, Any]] | None = None
 
 
 class ImportErrorResponse(RuntimeError):
@@ -223,6 +248,105 @@ def fetch_tour(event_id: str) -> dict[str, Any]:
     return payload
 
 
+def fetch_tour_index_page(page: int, first: int = 100) -> dict[str, Any]:
+    body = json.dumps(
+        {
+            "query": TOUR_INDEX_QUERY,
+            "variables": {"first": first, "page": page},
+        },
+        ensure_ascii=False,
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        GRAPHQL_URL,
+        data=body,
+        method="POST",
+        headers={
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "User-Agent": "Setlist-Playlists-Admin/0.3",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=25) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as error:
+        raise ImportErrorResponse(
+            "LL-Fansから公演一覧を取得できませんでした。"
+        ) from error
+
+    if payload.get("errors"):
+        message = payload["errors"][0].get("message") or "GraphQL error"
+        raise ImportErrorResponse(f"LL-Fansの公演一覧取得に失敗しました: {message}")
+    return payload
+
+
+def convert_tour_index(tours: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    events: list[dict[str, Any]] = []
+    for tour in tours:
+        source_id = str(tour.get("id") or "").strip()
+        title = str(tour.get("name") or "").strip()
+        if not source_id or not title:
+            continue
+        series_ids = [str(value) for value in tour.get("seriesIds") or []]
+        series = [SERIES_SLUGS[value] for value in series_ids if value in SERIES_SLUGS]
+        primary_series = series[0] if series else ""
+        events.append(
+            {
+                "sourceId": source_id,
+                "title": title,
+                "startsOn": str(tour.get("startsOn") or ""),
+                "endsOn": str(tour.get("endsOn") or ""),
+                "series": series,
+                "idSuggestion": event_id_suggestion(primary_series, title, source_id),
+                "sourceUrl": f"https://ll-fans.jp/data/event/{source_id}",
+            }
+        )
+
+    def sort_key(item: dict[str, Any]) -> tuple[str, int]:
+        try:
+            numeric_id = int(item["sourceId"])
+        except (TypeError, ValueError):
+            numeric_id = 0
+        return item.get("startsOn") or item.get("endsOn") or "", numeric_id
+
+    return sorted(events, key=sort_key, reverse=True)
+
+
+def fetch_tour_index(force: bool = False) -> dict[str, Any]:
+    global TOUR_INDEX_CACHE
+    with TOUR_INDEX_LOCK:
+        now = time.monotonic()
+        if (
+            not force
+            and TOUR_INDEX_CACHE is not None
+            and now - TOUR_INDEX_CACHE[0] < TOUR_INDEX_CACHE_TTL
+        ):
+            return TOUR_INDEX_CACHE[1]
+
+        page = 1
+        last_page = 1
+        total = 0
+        tours: list[dict[str, Any]] = []
+        while page <= last_page:
+            payload = fetch_tour_index_page(page)
+            page_data = ((payload.get("data") or {}).get("tours") or {})
+            tours.extend(page_data.get("data") or [])
+            paginator = page_data.get("paginatorInfo") or {}
+            last_page = max(1, int(paginator.get("lastPage") or 1))
+            total = int(paginator.get("total") or total)
+            if page < last_page:
+                time.sleep(0.35)
+            page += 1
+
+        result = {
+            "events": convert_tour_index(tours),
+            "total": total or len(tours),
+            "cacheSeconds": TOUR_INDEX_CACHE_TTL,
+        }
+        TOUR_INDEX_CACHE = (time.monotonic(), result)
+        return result
+
+
 def convert_tour_payload(
     payload: dict[str, Any], event_id: str, canonical_url: str
 ) -> dict[str, Any]:
@@ -290,6 +414,12 @@ def convert_tour_payload(
                 "name": "公式ページ" if official_url else "LL-Fans",
                 "url": source_url,
                 "priority": "primary",
+            },
+            "llFansSource": {
+                "type": "web",
+                "name": "LL-Fans",
+                "url": canonical_url,
+                "priority": "reference",
             },
         },
         "performances": performances,
@@ -550,6 +680,22 @@ class AdminHandler(SimpleHTTPRequestHandler):
                 **git_repository_status(PROJECT_DIRECTORY),
                 "publishToken": PUBLISH_TOKEN,
             })
+            return
+
+        if parsed.path == "/api/llfans-events":
+            if not self.is_local_request():
+                self.send_json({"error": "ローカル端末からのみ利用できます。"}, status=403)
+                return
+            query = urllib.parse.parse_qs(parsed.query)
+            try:
+                self.send_json(fetch_tour_index(force=query.get("refresh") == ["1"]))
+            except ImportErrorResponse as error:
+                self.send_json({"error": str(error)}, status=400)
+            except Exception:
+                self.send_json(
+                    {"error": "LL-Fansの公演一覧取得中に予期しないエラーが発生しました。"},
+                    status=500,
+                )
             return
 
         if parsed.path != "/api/llfans-event":

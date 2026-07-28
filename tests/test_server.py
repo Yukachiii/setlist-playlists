@@ -6,6 +6,7 @@ from tempfile import TemporaryDirectory
 from server import (
     ImportErrorResponse,
     PublishErrorResponse,
+    convert_tour_index,
     convert_tour_payload,
     parse_event_url,
     publish_event_to_github,
@@ -90,6 +91,10 @@ class ServerImportTests(unittest.TestCase):
 
         self.assertEqual(result["event"]["series"], ["nijigasaki"])
         self.assertEqual(result["event"]["idSuggestion"], "nijigasaki-8th-live-tokimeki-express")
+        self.assertEqual(
+            result["event"]["llFansSource"]["url"],
+            "https://ll-fans.jp/data/event/288",
+        )
         self.assertEqual(len(result["performances"]), 2)
         self.assertEqual(
             result["performances"][0]["idSuggestion"],
@@ -100,6 +105,33 @@ class ServerImportTests(unittest.TestCase):
             ["M01", "EN01"],
         )
         self.assertEqual(result["performances"][0]["setlist"][1]["version"], "ショート Ver.")
+
+    def test_tour_index_is_normalized_and_sorted_for_sync(self):
+        result = convert_tour_index([
+            {
+                "id": "287",
+                "name": "Older Live",
+                "startsOn": "2026-01-10",
+                "endsOn": "2026-01-10",
+                "seriesIds": ["6"],
+            },
+            {
+                "id": "300",
+                "name": "New Live",
+                "startsOn": "2026-07-20",
+                "endsOn": "2026-07-21",
+                "seriesIds": ["8"],
+            },
+            {"id": None, "name": "Invalid"},
+        ])
+
+        self.assertEqual([item["sourceId"] for item in result], ["300", "287"])
+        self.assertEqual(result[0]["series"], ["ikizulive"])
+        self.assertEqual(result[0]["idSuggestion"], "ikizulive-new-live")
+        self.assertEqual(
+            result[0]["sourceUrl"],
+            "https://ll-fans.jp/data/event/300",
+        )
 
     def test_public_event_is_written_and_added_to_manifest(self):
         event = {

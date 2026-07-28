@@ -529,6 +529,91 @@ dialog::backdrop { background: rgba(13, 20, 35, .66); backdrop-filter: blur(3px)
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.llfans-sync-dialog { width: min(900px, calc(100vw - 28px)); }
+.llfans-sync-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 220px) auto;
+  align-items: end;
+  gap: 12px;
+  margin-top: 18px;
+}
+.llfans-sync-toolbar label { margin: 0; }
+.llfans-sync-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 18px 0 10px;
+}
+.llfans-sync-summary-row p { margin: 0; }
+.llfans-sync-list {
+  max-height: min(52vh, 520px);
+  overflow: auto;
+  display: grid;
+  gap: 8px;
+  padding-right: 4px;
+}
+.llfans-sync-empty {
+  margin: 0;
+  padding: 28px 18px;
+  border: 1px dashed #cbd2df;
+  border-radius: 12px;
+  color: #69758b;
+  background: white;
+  text-align: center;
+}
+.llfans-sync-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #dce2eb;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+}
+.llfans-sync-item:hover { border-color: #8fa0dc; }
+.llfans-sync-item input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+.llfans-sync-copy {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+.llfans-sync-title {
+  overflow: hidden;
+  color: #172033;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.llfans-sync-meta {
+  color: #6d788d;
+  font-size: .74rem;
+  font-weight: 700;
+}
+.llfans-sync-series {
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: #344a9a;
+  background: #e9edff;
+  font-size: .68rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.llfans-sync-progress {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #344a9a;
+  background: #e9edff;
+  font-size: .78rem;
+  font-weight: 900;
+}
 .notice-box {
   margin-top: 17px;
   padding: 12px 14px;
@@ -557,4 +642,8 @@ dialog::backdrop { background: rgba(13, 20, 35, .66); backdrop-filter: blur(3px)
   .url-import-box, .import-performance-switcher { grid-template-columns: 1fr; }
   .import-destination-label { width: 100%; }
   .spotify-manual-search { grid-template-columns: 1fr; }
+  .llfans-sync-toolbar { grid-template-columns: 1fr; }
+  .llfans-sync-summary-row { align-items: stretch; flex-direction: column; }
+  .llfans-sync-item { grid-template-columns: auto minmax(0, 1fr); }
+  .llfans-sync-series { grid-column: 2; justify-self: start; }
 }

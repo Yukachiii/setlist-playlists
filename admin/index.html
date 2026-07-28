@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Setlist Playlists Admin</title>
-  <link rel="stylesheet" href="./css/style.css?v=0.16">
+  <link rel="stylesheet" href="./css/style.css?v=0.17">
 </head>
 <body>
   <header class="topbar">
@@ -13,6 +13,7 @@
       <h1>Setlist Playlists Admin</h1>
     </div>
     <div class="top-actions">
+      <button id="llfans-sync-button" class="button secondary" type="button">未登録公演を同期</button>
       <span id="save-state" class="save-state">読み込み中</span>
       <span id="spotify-account" class="spotify-state">Spotify未接続</span>
       <button id="spotify-connect-button" class="button spotify-button" type="button">Spotifyに接続</button>
@@ -108,6 +109,53 @@
       </div>
     </main>
   </div>
+
+  <dialog id="llfans-sync-dialog" class="llfans-sync-dialog">
+    <div class="dialog-shell">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">LL-FANS SYNC</p>
+          <h2>未登録公演を同期</h2>
+        </div>
+        <button id="close-llfans-sync-button" class="icon-button ghost-icon" type="button" aria-label="閉じる">×</button>
+      </div>
+
+      <div class="dialog-body">
+        <section class="dialog-section">
+          <h3>LL-Fansとの差分を確認</h3>
+          <p class="muted">
+            登録済みの公演を除外して表示します。選んだ公演は一件ずつ取り込み、
+            登録済み曲は自動反映し、判断できない曲だけ手動で確認します。
+          </p>
+          <div class="llfans-sync-toolbar">
+            <label>
+              公演名で絞り込み
+              <input id="llfans-sync-search" type="search" autocomplete="off" placeholder="公演名を入力">
+            </label>
+            <label>
+              シリーズ
+              <select id="llfans-sync-series">
+                <option value="">すべて</option>
+              </select>
+            </label>
+            <button id="refresh-llfans-sync-button" class="button ghost" type="button">一覧を更新</button>
+          </div>
+          <div class="llfans-sync-summary-row">
+            <p id="llfans-sync-summary" class="muted">一覧を取得していません。</p>
+            <button id="toggle-llfans-sync-visible-button" class="button ghost compact" type="button">表示中を全選択</button>
+          </div>
+          <div id="llfans-sync-list" class="llfans-sync-list" aria-live="polite"></div>
+          <p id="llfans-sync-progress" class="llfans-sync-progress hidden"></p>
+          <div id="llfans-sync-errors" class="validation-box hidden"></div>
+        </section>
+      </div>
+
+      <div class="dialog-footer">
+        <button id="cancel-llfans-sync-button" class="button ghost" type="button">キャンセル</button>
+        <button id="start-llfans-sync-button" class="button" type="button" disabled>選択した公演を取り込む</button>
+      </div>
+    </div>
+  </dialog>
 
   <dialog id="page-import-dialog" class="page-import-dialog">
     <form id="page-import-form" class="dialog-shell">
@@ -476,6 +524,6 @@
   <script src="./js/page-text-parser.js?v=0.19"></script>
   <script src="./js/known-song-cache.js?v=0.20"></script>
   <script src="./js/spotify-client.js?v=0.19"></script>
-  <script src="./js/app.js?v=0.23"></script>
+  <script src="./js/app.js?v=0.24"></script>
 </body>
 </html>

@@ -21,6 +21,12 @@
     spotifyReviewQueue: [],
     spotifyReviewPosition: -1,
     spotifySearchRequestId: 0,
+    llfansSyncCatalog: [],
+    llfansSyncSelectedIds: new Set(),
+    llfansSyncQueue: [],
+    llfansSyncPosition: -1,
+    llfansSyncActive: false,
+    llfansSyncResults: [],
     githubPublishStatus: null,
     githubPublishing: false,
     dirty: false
@@ -41,6 +47,16 @@
     performanceSummary: $("#performance-summary"),
     performanceList: $("#performance-list"),
     importFile: $("#import-file"),
+    llfansSyncDialog: $("#llfans-sync-dialog"),
+    llfansSyncSearch: $("#llfans-sync-search"),
+    llfansSyncSeries: $("#llfans-sync-series"),
+    llfansSyncSummary: $("#llfans-sync-summary"),
+    llfansSyncList: $("#llfans-sync-list"),
+    llfansSyncProgress: $("#llfans-sync-progress"),
+    llfansSyncErrors: $("#llfans-sync-errors"),
+    startLlFansSyncButton: $("#start-llfans-sync-button"),
+    refreshLlFansSyncButton: $("#refresh-llfans-sync-button"),
+    toggleLlFansSyncVisibleButton: $("#toggle-llfans-sync-visible-button"),
     pageImportDialog: $("#page-import-dialog"),
     pageImportUrl: $("#page-import-url"),
     pageImportText: $("#page-import-text"),
@@ -492,7 +508,10 @@
       .filter(Boolean);
     const sourceName = elements.sourceName.value.trim();
     const sourceUrl = elements.sourceUrl.value.trim();
-    event.sources = sourceName || sourceUrl
+    const referenceSources = (event.sources || []).filter(
+      (source) => source?.priority === "reference"
+    );
+    const primarySources = sourceName || sourceUrl
       ? [{
           type: sourceUrl.includes("x.com") ? "x" : "web",
           name: sourceName || "Source",
@@ -500,6 +519,12 @@
           priority: "primary"
         }]
       : [];
+    event.sources = [
+      ...primarySources,
+      ...referenceSources.filter(
+        (source) => source.url && source.url !== sourceUrl
+      )
+    ];
     if (markDirty) setDirty();
   }
 
@@ -698,6 +723,315 @@
     }
   }
 
+  function normalizedEventTitle(value) {
+    return String(value || "")
+      .normalize("NFKC")
+      .replace(/\s+/g, "")
+      .toLowerCase();
+  }
+
+  function llFansSourceId(event) {
+    for (const source of event?.sources || []) {
+      const match = String(source?.url || "").match(
+        /^https:\/\/(?:www\.)?ll-fans\.jp\/data\/event\/(\d+)\/?$/
+      );
+      if (match) return match[1];
+    }
+    return "";
+  }
+
+  function matchingRegisteredEvent(item) {
+    const titleKey = normalizedEventTitle(item.title);
+    return state.database.events.find((event) => (
+      llFansSourceId(event) === String(item.sourceId) ||
+      event.id === item.idSuggestion ||
+      normalizedEventTitle(event.title) === titleKey
+    )) || null;
+  }
+
+  function filteredLlFansSyncEvents() {
+    const query = normalizedEventTitle(elements.llfansSyncSearch.value);
+    const series = elements.llfansSyncSeries.value;
+    return state.llfansSyncCatalog.filter((item) => (
+      !matchingRegisteredEvent(item) &&
+      (!query || normalizedEventTitle(item.title).includes(query)) &&
+      (!series || (item.series || []).includes(series))
+    ));
+  }
+
+  function updateLlFansSyncSelectionUi() {
+    const selectedCount = state.llfansSyncSelectedIds.size;
+    elements.startLlFansSyncButton.disabled = selectedCount === 0 || state.llfansSyncActive;
+    elements.startLlFansSyncButton.textContent = selectedCount
+      ? `${selectedCount}公演を取り込む`
+      : "選択した公演を取り込む";
+    const visible = filteredLlFansSyncEvents();
+    const allVisibleSelected = visible.length > 0 && visible.every(
+      (item) => state.llfansSyncSelectedIds.has(String(item.sourceId))
+    );
+    elements.toggleLlFansSyncVisibleButton.textContent = allVisibleSelected
+      ? "表示中の選択を解除"
+      : "表示中を全選択";
+  }
+
+  function renderLlFansSyncCatalog() {
+    const missing = state.llfansSyncCatalog.filter(
+      (item) => !matchingRegisteredEvent(item)
+    );
+    const visible = filteredLlFansSyncEvents();
+    elements.llfansSyncList.replaceChildren();
+    elements.llfansSyncSummary.textContent =
+      `取得 ${state.llfansSyncCatalog.length}件 / 未登録 ${missing.length}件 / 表示 ${visible.length}件`;
+
+    if (!visible.length) {
+      const empty = document.createElement("p");
+      empty.className = "llfans-sync-empty";
+      empty.textContent = missing.length
+        ? "絞り込み条件に一致する未登録公演はありません。"
+        : "未登録の公演はありません。";
+      elements.llfansSyncList.append(empty);
+      updateLlFansSyncSelectionUi();
+      return;
+    }
+
+    for (const item of visible) {
+      const label = document.createElement("label");
+      label.className = "llfans-sync-item";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.value = String(item.sourceId);
+      checkbox.checked = state.llfansSyncSelectedIds.has(checkbox.value);
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+          state.llfansSyncSelectedIds.add(checkbox.value);
+        } else {
+          state.llfansSyncSelectedIds.delete(checkbox.value);
+        }
+        updateLlFansSyncSelectionUi();
+      });
+
+      const copy = document.createElement("span");
+      copy.className = "llfans-sync-copy";
+      const title = document.createElement("span");
+      title.className = "llfans-sync-title";
+      title.textContent = item.title;
+      const meta = document.createElement("span");
+      meta.className = "llfans-sync-meta";
+      const dateRange = [item.startsOn, item.endsOn]
+        .filter(Boolean)
+        .filter((value, index, values) => index === 0 || value !== values[0])
+        .join(" 〜 ");
+      meta.textContent = `${dateRange || "日程未設定"} / LL-Fans ID ${item.sourceId}`;
+      copy.append(title, meta);
+
+      const series = document.createElement("span");
+      series.className = "llfans-sync-series";
+      series.textContent = (item.series || []).join(", ") || "series不明";
+      label.append(checkbox, copy, series);
+      elements.llfansSyncList.append(label);
+    }
+    updateLlFansSyncSelectionUi();
+  }
+
+  function populateLlFansSyncSeries() {
+    const current = elements.llfansSyncSeries.value;
+    const values = [...new Set(
+      state.llfansSyncCatalog.flatMap((item) => item.series || [])
+    )].sort();
+    elements.llfansSyncSeries.replaceChildren(new Option("すべて", ""));
+    for (const value of values) {
+      elements.llfansSyncSeries.append(new Option(value, value));
+    }
+    elements.llfansSyncSeries.value = values.includes(current) ? current : "";
+  }
+
+  async function loadLlFansSyncCatalog(force = false) {
+    hideValidation(elements.llfansSyncErrors);
+    elements.refreshLlFansSyncButton.disabled = true;
+    elements.startLlFansSyncButton.disabled = true;
+    elements.llfansSyncSummary.textContent = "LL-Fansから公演一覧を取得しています…";
+    try {
+      const suffix = force ? "?refresh=1" : "";
+      const response = await fetch(`/api/llfans-events${suffix}`, {
+        headers: { Accept: "application/json" }
+      });
+      const contentType = response.headers.get("Content-Type") || "";
+      if (!contentType.includes("application/json")) {
+        throw new Error("一括同期APIが動いていません。server.pyを再起動してください。");
+      }
+      const body = await response.json();
+      if (!response.ok) {
+        throw new Error(body.error || `公演一覧を取得できませんでした（${response.status}）`);
+      }
+      state.llfansSyncCatalog = Array.isArray(body.events) ? body.events : [];
+      const validIds = new Set(state.llfansSyncCatalog.map((item) => String(item.sourceId)));
+      state.llfansSyncSelectedIds = new Set(
+        [...state.llfansSyncSelectedIds].filter((id) => validIds.has(id))
+      );
+      populateLlFansSyncSeries();
+      renderLlFansSyncCatalog();
+    } catch (error) {
+      state.llfansSyncCatalog = [];
+      elements.llfansSyncList.replaceChildren();
+      elements.llfansSyncSummary.textContent = "公演一覧を取得できませんでした。";
+      showValidation(elements.llfansSyncErrors, [error.message]);
+    } finally {
+      elements.refreshLlFansSyncButton.disabled = false;
+      updateLlFansSyncSelectionUi();
+    }
+  }
+
+  async function openLlFansSync() {
+    if (state.llfansSyncActive) {
+      alert("公演の一括取込が進行中です。現在の公演を完了するか、取込を中止してください。");
+      return;
+    }
+    state.llfansSyncSelectedIds.clear();
+    elements.llfansSyncSearch.value = "";
+    elements.llfansSyncSeries.value = "";
+    elements.llfansSyncProgress.classList.add("hidden");
+    hideValidation(elements.llfansSyncErrors);
+    elements.llfansSyncDialog.showModal();
+    await loadLlFansSyncCatalog(false);
+  }
+
+  function closeLlFansSync() {
+    if (elements.llfansSyncDialog.open) elements.llfansSyncDialog.close();
+  }
+
+  function toggleVisibleLlFansSyncEvents() {
+    const visible = filteredLlFansSyncEvents();
+    const allSelected = visible.length > 0 && visible.every(
+      (item) => state.llfansSyncSelectedIds.has(String(item.sourceId))
+    );
+    for (const item of visible) {
+      const id = String(item.sourceId);
+      if (allSelected) {
+        state.llfansSyncSelectedIds.delete(id);
+      } else {
+        state.llfansSyncSelectedIds.add(id);
+      }
+    }
+    renderLlFansSyncCatalog();
+  }
+
+  function llFansSyncCurrentItem() {
+    return state.llfansSyncQueue[state.llfansSyncPosition] || null;
+  }
+
+  function recordLlFansSyncResult(status, message = "") {
+    const item = llFansSyncCurrentItem();
+    if (!item) return;
+    state.llfansSyncResults.push({
+      status,
+      message,
+      sourceId: item.sourceId,
+      title: item.title
+    });
+  }
+
+  function stopLlFansSync() {
+    state.llfansSyncActive = false;
+    state.llfansSyncQueue = [];
+    state.llfansSyncPosition = -1;
+  }
+
+  function finishLlFansSync() {
+    const added = state.llfansSyncResults.filter((item) => item.status === "added").length;
+    const skipped = state.llfansSyncResults.filter((item) => item.status === "skipped").length;
+    const failed = state.llfansSyncResults.filter((item) => item.status === "failed");
+    stopLlFansSync();
+    const lines = [
+      `一括取込が完了しました。追加 ${added}公演 / スキップ ${skipped}公演 / 失敗 ${failed.length}公演`,
+      "GitHubへの公開は、内容を確認してから手動で行ってください。"
+    ];
+    if (failed.length) {
+      lines.push("", "失敗した公演:");
+      for (const item of failed) lines.push(`・${item.title}: ${item.message}`);
+    }
+    alert(lines.join("\n"));
+  }
+
+  function scheduleNextLlFansSyncItem() {
+    window.setTimeout(() => {
+      advanceLlFansSyncQueue();
+    }, 450);
+  }
+
+  async function advanceLlFansSyncQueue() {
+    if (!state.llfansSyncActive) return;
+    state.llfansSyncPosition += 1;
+    if (state.llfansSyncPosition >= state.llfansSyncQueue.length) {
+      finishLlFansSync();
+      return;
+    }
+
+    const item = llFansSyncCurrentItem();
+    openPageImport();
+    elements.pageImportUrl.value = item.sourceUrl;
+    elements.pageImportText.value = "";
+    elements.pageImportSummary.textContent =
+      `一括取込 ${state.llfansSyncPosition + 1}/${state.llfansSyncQueue.length}: ${item.title}`;
+    elements.parsePageImportUrlButton.disabled = true;
+    elements.parsePageImportUrlButton.textContent = "公演を取得中…";
+    try {
+      const response = await fetch(
+        `/api/llfans-event?url=${encodeURIComponent(item.sourceUrl)}`,
+        { headers: { Accept: "application/json" } }
+      );
+      const contentType = response.headers.get("Content-Type") || "";
+      if (!contentType.includes("application/json")) {
+        throw new Error("公演取込APIが動いていません。server.pyを再起動してください。");
+      }
+      const body = await response.json();
+      if (!response.ok) {
+        throw new Error(body.error || `公演を取得できませんでした（${response.status}）`);
+      }
+      await initializePageImport(body);
+      if (!importSongCount()) {
+        recordLlFansSyncResult("skipped", "セットリストが空です");
+        closePageImport(false);
+        scheduleNextLlFansSyncItem();
+        return;
+      }
+      elements.pageImportSummary.textContent +=
+        ` / 一括取込 ${state.llfansSyncPosition + 1}/${state.llfansSyncQueue.length}`;
+      savePageImportWithOptions({ preventDefault() {} });
+    } catch (error) {
+      recordLlFansSyncResult("failed", error.message);
+      closePageImport(false);
+      scheduleNextLlFansSyncItem();
+    } finally {
+      elements.parsePageImportUrlButton.disabled = false;
+      elements.parsePageImportUrlButton.textContent = "全公演を取得";
+    }
+  }
+
+  function startLlFansSync() {
+    const queue = state.llfansSyncCatalog.filter(
+      (item) => (
+        state.llfansSyncSelectedIds.has(String(item.sourceId)) &&
+        !matchingRegisteredEvent(item)
+      )
+    );
+    if (!queue.length) return;
+    if (!window.SpotifyClient.isConnected()) {
+      alert("曲の自動照合にSpotify接続が必要です。先に「Spotifyに接続」を押してください。");
+      return;
+    }
+    if (!confirm(
+      `${queue.length}公演を順番に取り込みます。\n` +
+      "判断できない曲だけ確認画面を表示します。開始してよろしいですか？"
+    )) return;
+
+    state.llfansSyncQueue = queue;
+    state.llfansSyncPosition = -1;
+    state.llfansSyncResults = [];
+    state.llfansSyncActive = true;
+    closeLlFansSync();
+    advanceLlFansSyncQueue();
+  }
+
   function openPageImport() {
     populatePageImportDestinations();
     elements.pageImportDestination.value = "__new__";
@@ -720,9 +1054,13 @@
     elements.pageImportText.focus();
   }
 
-  function closePageImport() {
+  function closePageImport(cancelSync = true) {
+    if (cancelSync && state.llfansSyncActive) {
+      if (!confirm("進行中の一括取込を中止しますか？")) return;
+      stopLlFansSync();
+    }
     if (elements.spotifyCandidateDialog.open) closeSpotifyCandidateDialog();
-    elements.pageImportDialog.close();
+    if (elements.pageImportDialog.open) elements.pageImportDialog.close();
     state.importDraft = null;
     state.importPerformanceIndex = 0;
   }
@@ -1676,6 +2014,18 @@
   function eventFromPageImport() {
     const sourceName = elements.pageImportSourceName.value.trim();
     const sourceUrl = elements.pageImportSourceUrl.value.trim();
+    const referenceSource = state.importDraft?.event?.llFansSource;
+    const sources = sourceName || sourceUrl
+      ? [{
+          type: sourceUrl.includes("x.com") ? "x" : "web",
+          name: sourceName || "Source",
+          url: sourceUrl,
+          priority: "primary"
+        }]
+      : [];
+    if (referenceSource?.url && referenceSource.url !== sourceUrl) {
+      sources.push(deepClone(referenceSource));
+    }
     return {
       schemaVersion: "0.3",
       id: elements.pageImportEventId.value.trim(),
@@ -1684,14 +2034,7 @@
         .split(",")
         .map((value) => value.trim())
         .filter(Boolean),
-      sources: sourceName || sourceUrl
-        ? [{
-            type: sourceUrl.includes("x.com") ? "x" : "web",
-            name: sourceName || "Source",
-            url: sourceUrl,
-            priority: "primary"
-          }]
-        : [],
+      sources,
       performances: []
     };
   }
@@ -1764,13 +2107,25 @@
       }
     }
 
-    if (isNewEvent) state.database.events.push(targetEvent);
+    if (isNewEvent) {
+      state.database.events.push(targetEvent);
+    } else {
+      const referenceSource = state.importDraft?.event?.llFansSource;
+      const hasReference = targetEvent.sources.some(
+        (source) => source?.url === referenceSource?.url
+      );
+      if (referenceSource?.url && !hasReference) {
+        targetEvent.sources.push(deepClone(referenceSource));
+      }
+    }
     targetEvent.performances.push(...performances);
     state.selectedEventId = targetEvent.id;
     persist();
-    closePageImport();
+    if (state.llfansSyncActive) recordLlFansSyncResult("added");
+    closePageImport(false);
     render();
     const songCount = performances.reduce((sum, performance) => sum + performance.setlist.length, 0);
+    if (state.llfansSyncActive) scheduleNextLlFansSyncItem();
     setSaveState(`${performances.length}公演・${songCount}曲を登録しました`);
   }
 
@@ -2519,6 +2874,14 @@
   $("#save-event-button").addEventListener("click", saveEvent);
   $("#duplicate-event-button").addEventListener("click", duplicateEvent);
   $("#delete-event-button").addEventListener("click", deleteEvent);
+  $("#llfans-sync-button").addEventListener("click", openLlFansSync);
+  $("#close-llfans-sync-button").addEventListener("click", closeLlFansSync);
+  $("#cancel-llfans-sync-button").addEventListener("click", closeLlFansSync);
+  elements.refreshLlFansSyncButton.addEventListener("click", () => loadLlFansSyncCatalog(true));
+  elements.llfansSyncSearch.addEventListener("input", renderLlFansSyncCatalog);
+  elements.llfansSyncSeries.addEventListener("change", renderLlFansSyncCatalog);
+  elements.toggleLlFansSyncVisibleButton.addEventListener("click", toggleVisibleLlFansSyncEvents);
+  elements.startLlFansSyncButton.addEventListener("click", startLlFansSync);
   $("#page-import-button").addEventListener("click", openPageImport);
   $("#close-page-import-button").addEventListener("click", closePageImport);
   $("#cancel-page-import-button").addEventListener("click", closePageImport);
@@ -2544,6 +2907,11 @@
     if (!state.spotifyReviewActive) return;
     event.preventDefault();
     cancelSpotifyReview();
+  });
+  elements.pageImportDialog.addEventListener("cancel", (event) => {
+    if (!state.llfansSyncActive) return;
+    event.preventDefault();
+    closePageImport(true);
   });
   elements.pageImportDestination.addEventListener("change", updatePageImportDestination);
   elements.pageImportPerformanceSelector.addEventListener("change", () => {
