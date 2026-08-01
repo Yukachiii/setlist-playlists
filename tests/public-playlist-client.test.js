@@ -45,7 +45,7 @@ test("公演IDだけをWorkerへ送り共有プレイリストURLを受け取る
           json: async () => ({
             ok: true,
             created: true,
-            playlistUrl: "https://open.spotify.com/playlist/playlist-id",
+            playlistUrl: "https://open.spotify.com/playlist/3gqj2EA3KDnYIcDsJq5F8L",
             trackCount: 29
           })
         };
@@ -74,4 +74,30 @@ test("未公開のデータパスはWorkerへ送らない", async () => {
       /GitHubへ公開/
     );
   });
+});
+
+test("Apple MusicとAmazon Musicの移行先を固定URLで開く", () => {
+  assert.equal(
+    playlistClient.transferUrl("apple"),
+    "https://www.tunemymusic.com/transfer/spotify-to-apple-music"
+  );
+  assert.equal(
+    playlistClient.transferUrl("amazon"),
+    "https://www.tunemymusic.com/transfer/spotify-to-amazon-music"
+  );
+  assert.throws(() => playlistClient.transferUrl("unknown"), /対応していない/);
+});
+
+test("移行画面を開く前にSpotifyプレイリストURLをコピーする", async () => {
+  const copied = [];
+  await withBrowser({ window: browser() }, async () => {
+    assert.equal(
+      await playlistClient.copyPlaylistUrl(
+        "https://open.spotify.com/playlist/3gqj2EA3KDnYIcDsJq5F8L",
+        async (value) => copied.push(value)
+      ),
+      true
+    );
+  });
+  assert.deepEqual(copied, ["https://open.spotify.com/playlist/3gqj2EA3KDnYIcDsJq5F8L"]);
 });

@@ -317,7 +317,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .playlist-note { min-height: 42px; margin: 0 0 18px; color: #bbc3d1; font-size: 11px; line-height: 1.8; }
 .privacy-note { margin: 14px 0 0; color: #78849b; font-size: 9px; line-height: 1.6; text-align: center; }
 .playlist-result { margin-top: 15px; padding: 13px; color: #c6f7d7; background: rgba(30, 215, 96, 0.1); border: 1px solid rgba(30, 215, 96, 0.25); border-radius: 10px; font-size: 11px; line-height: 1.7; }
-.playlist-result a { font-weight: 800; text-decoration: underline; }
+.playlist-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.playlist-action { min-height: 39px; padding: 9px 10px; display: flex; align-items: center; justify-content: center; color: white; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 9px; font-size: 10px; font-weight: 800; line-height: 1.35; text-align: center; text-decoration: none; transition: filter 150ms ease, transform 150ms ease; }
+.playlist-action:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.playlist-action-spotify { grid-column: 1 / -1; color: #07190e; background: var(--green); border-color: var(--green); }
+.playlist-action-apple { color: #17131a; background: #fff; border-color: #fff; }
+.playlist-action-amazon { color: #071723; background: #25a8e0; border-color: #25a8e0; }
+.playlist-transfer-note { margin: 11px 0 0; color: #9aa6ba; font-size: 9px; line-height: 1.7; }
 
 .site-footer { min-height: 190px; padding: 45px max(20px, calc((100% - 1180px) / 2)); display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; color: #b5bdcf; background: #0c1324; }
 .footer-brand { color: white; }

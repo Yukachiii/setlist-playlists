@@ -189,6 +189,30 @@
     return element;
   }
 
+  function externalPlaylistLink(className, label, href) {
+    const link = createElement("a", `playlist-action ${className}`, label);
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    return link;
+  }
+
+  function transferPlaylistLink(destination, label, playlistUrl) {
+    const link = externalPlaylistLink(
+      `playlist-action-${destination}`,
+      `${label}へ移行 ↗`,
+      window.PublicPlaylistClient.transferUrl(destination)
+    );
+    link.addEventListener("click", () => {
+      window.PublicPlaylistClient.copyPlaylistUrl(playlistUrl)
+        .then((copied) => showToast(copied
+          ? "Spotify URLをコピーしました。移行画面の「URL」を選んで貼り付けてください。"
+          : "移行画面でSpotifyのプレイリストURLを入力してください。"))
+        .catch(() => showToast("Spotify URLをコピーできませんでした。Spotifyで開いてURLをコピーしてください。", "error"));
+    });
+    return link;
+  }
+
   function showToast(message, kind = "") {
     const toast = $("#toast");
     toast.textContent = message;
@@ -525,11 +549,18 @@
       const result = $("#playlist-result");
       const action = playlist.created ? "作成しました" : "用意されています";
       result.replaceChildren(document.createTextNode(`${playlist.trackCount || uris.length}曲のプレイリストが${action}。 `));
-      const link = createElement("a", "", "Spotifyで開く ↗");
-      link.href = playlist.playlistUrl;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      result.append(link);
+      const actions = createElement("div", "playlist-actions");
+      actions.append(
+        externalPlaylistLink("playlist-action-spotify", "Spotifyで開く ↗", playlist.playlistUrl),
+        transferPlaylistLink("apple", "Apple Music", playlist.playlistUrl),
+        transferPlaylistLink("amazon", "Amazon Music", playlist.playlistUrl)
+      );
+      result.append(actions);
+      result.append(createElement(
+        "p",
+        "playlist-transfer-note",
+        "Apple Music・Amazon Musicへの移行には外部サービス（TuneMyMusic）を使用します。別バージョンが選ばれる場合は移行先で確認してください。"
+      ));
       result.classList.remove("hidden");
       showToast(playlist.created ? "共有プレイリストを作成しました。" : "作成済みのプレイリストを開けます。");
     } catch (error) {

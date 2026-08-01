@@ -108,6 +108,17 @@ test("訪問者の認証情報を使わずWorkerへ公演IDだけを送る", () 
   assert.doesNotMatch(playlistClient, /spotify:track:/);
 });
 
+test("共有SpotifyプレイリストをApple MusicとAmazon Musicへ移行できる", () => {
+  assert.match(app, /transferPlaylistLink\("apple", "Apple Music"/);
+  assert.match(app, /transferPlaylistLink\("amazon", "Amazon Music"/);
+  assert.match(app, /PublicPlaylistClient\.copyPlaylistUrl\(playlistUrl\)/);
+  assert.match(playlistClient, /spotify-to-apple-music/);
+  assert.match(playlistClient, /spotify-to-amazon-music/);
+  assert.match(css, /\.playlist-action-apple/);
+  assert.match(css, /\.playlist-action-amazon/);
+  assert.match(app, /外部サービス（TuneMyMusic）/);
+});
+
 test("Workerが作成用アカウントで非公開プレイリストを作る", () => {
   assert.match(playlistWorker, /spotifyAccessToken/);
   assert.match(playlistWorker, /"\/me\/playlists"/);

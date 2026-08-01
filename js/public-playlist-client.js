@@ -6,6 +6,10 @@
   "use strict";
 
   const MAX_BUSY_RETRIES = 3;
+  const TRANSFER_URLS = Object.freeze({
+    apple: "https://www.tunemymusic.com/transfer/spotify-to-apple-music",
+    amazon: "https://www.tunemymusic.com/transfer/spotify-to-amazon-music"
+  });
 
   function browserWindow() {
     if (typeof window === "undefined") throw new Error("ブラウザでのみ利用できます。");
@@ -24,6 +28,25 @@
   function isConfigured() {
     const url = apiBaseUrl();
     return /^https:\/\//.test(url) || /^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/.test(url);
+  }
+
+  function isSpotifyPlaylistUrl(value) {
+    return /^https:\/\/open\.spotify\.com\/playlist\/[A-Za-z0-9]+(?:[?#].*)?$/.test(String(value || ""));
+  }
+
+  function transferUrl(destination) {
+    const url = TRANSFER_URLS[String(destination || "").toLowerCase()];
+    if (!url) throw new Error("対応していない移行先です。");
+    return url;
+  }
+
+  async function copyPlaylistUrl(playlistUrl, writer) {
+    if (!isSpotifyPlaylistUrl(playlistUrl)) throw new Error("SpotifyのプレイリストURLが正しくありません。");
+    const appWindow = browserWindow();
+    const writeText = writer || appWindow.navigator?.clipboard?.writeText?.bind(appWindow.navigator.clipboard);
+    if (typeof writeText !== "function") return false;
+    await writeText(playlistUrl);
+    return true;
   }
 
   function wait(milliseconds) {
@@ -51,11 +74,18 @@
       return requestPlaylist({ eventPath, performanceId }, attempt + 1);
     }
     if (!response.ok) throw new Error(body.error || "プレイリストを作成できませんでした。");
-    if (!/^https:\/\/open\.spotify\.com\/playlist\//.test(String(body.playlistUrl || ""))) {
+    if (!isSpotifyPlaylistUrl(body.playlistUrl)) {
       throw new Error("SpotifyのプレイリストURLを取得できませんでした。");
     }
     return body;
   }
 
-  return { apiBaseUrl, isConfigured, requestPlaylist };
+  return {
+    apiBaseUrl,
+    isConfigured,
+    isSpotifyPlaylistUrl,
+    transferUrl,
+    copyPlaylistUrl,
+    requestPlaylist
+  };
 });
