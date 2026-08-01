@@ -1,5 +1,6 @@
 const SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token";
 const SPOTIFY_API_URL = "https://api.spotify.com/v1";
+const SOUNDIIZ_IMPORT_URL = "https://soundiiz.com/go/import-playlist";
 const CLAIM_TIMEOUT_MS = 5 * 60 * 1000;
 const MAX_REQUEST_BYTES = 4096;
 
@@ -17,6 +18,14 @@ class SpotifyError extends Error {
   constructor(status, message) {
     super(message);
     this.name = "SpotifyError";
+    this.status = status;
+  }
+}
+
+class SoundiizError extends Error {
+  constructor(status, message) {
+    super(message);
+    this.name = "SoundiizError";
     this.status = status;
   }
 }
@@ -86,7 +95,8 @@ export function extractPlaylistSpec(documentValue, eventPath, performanceId) {
   const performance = event.performances[performanceIndex];
   const songs = (Array.isArray(performance?.setlist) ? performance.setlist : [])
     .filter((item) => !item?.type || item.type === "song");
-  const uris = songs.filter(validSpotifyUri).map((item) => text(item.spotify.uri));
+  const availableSongs = songs.filter(validSpotifyUri);
+  const uris = availableSongs.map((item) => text(item.spotify.uri));
   if (!uris.length) {
     throw new RequestError(422, "no_available_tracks", "Spotifyへ追加できる曲がありません。");
   }
@@ -99,7 +109,13 @@ export function extractPlaylistSpec(documentValue, eventPath, performanceId) {
     performanceId: text(performance.id),
     name,
     description: "Setlist Playlistsで作成したライブセットリスト（共有用）".slice(0, 300),
-    uris
+    uris,
+    tracks: availableSongs.map((item) => ({
+      title: text(item?.spotify?.matchedTitle) ||
+        text(item?.recording?.displayTitle) ||
+        text(item?.recording?.baseTitle),
+      artists: text(item?.spotify?.matchedArtist) || text(item?.artistHint)
+    }))
   };
 }
 
@@ -272,6 +288,60 @@ async function fetchEventDocument(eventPath, env, fetchImpl) {
   return response.json();
 }
 
+function validSoundiizShareUrl(value) {
+  try {
+    const url = new URL(text(value));
+    return url.protocol === "https:" &&
+      url.hostname === "soundiiz.com" &&
+      /^\/go\/import-playlist\/[A-Za-z0-9_-]+$/.test(url.pathname);
+  } catch {
+    return false;
+  }
+}
+
+export async function createSoundiizImport(spec, fetchImpl) {
+  const tracklist = (Array.isArray(spec?.tracks) ? spec.tracks : [])
+    .map((track) => ({
+      title: text(track?.title),
+      ...(text(track?.artists) ? { artists: text(track.artists) } : {})
+    }))
+    .filter((track) => track.title);
+
+  if (!tracklist.length) {
+    throw new RequestError(422, "no_transferable_tracks", "移行できる曲名がありません。");
+  }
+  if (tracklist.length > 200) {
+    throw new RequestError(422, "soundiiz_track_limit", "Soundiizへ一度に送信できるのは200曲までです。");
+  }
+
+  const response = await fetchImpl(SOUNDIIZ_IMPORT_URL, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      title: spec.name,
+      sourceName: "Setlist Playlists",
+      description: spec.description,
+      tracklist
+    })
+  });
+  const body = await response.json().catch(() => ({}));
+  if (!response.ok || body.status !== "success" || !validSoundiizShareUrl(body.shareUrl)) {
+    throw new SoundiizError(
+      response.status,
+      text(body.message || body.error) || "Soundiizの移行画面を用意できませんでした。"
+    );
+  }
+
+  return {
+    shareUrl: text(body.shareUrl),
+    expiresAt: body.expiresAt ?? null,
+    trackCount: Number(body.nbTracks) || tracklist.length
+  };
+}
+
 async function spotifyAccessToken(env, fetchImpl) {
   if (!text(env.SPOTIFY_CLIENT_ID) || !text(env.SPOTIFY_REFRESH_TOKEN)) {
     throw new RequestError(503, "spotify_not_configured", "Spotify作成用アカウントがまだ設定されていません。");
@@ -409,20 +479,42 @@ async function parseRequest(request) {
 export async function handleRequest(request, env, fetchImpl = fetch) {
   const url = new URL(request.url);
   const origin = corsOrigin(request, env);
+  const apiPaths = new Set(["/v1/playlists", "/v1/transfers/soundiiz"]);
 
   if (request.method === "GET" && url.pathname === "/health") {
     return json({ ok: true, service: "setlist-playlist-api" });
   }
-  if (request.method === "OPTIONS" && url.pathname === "/v1/playlists") {
+  if (request.method === "OPTIONS" && apiPaths.has(url.pathname)) {
     if (!origin) return json({ error: "許可されていないアクセス元です。" }, 403);
     return new Response(null, { status: 204, headers: responseHeaders(origin) });
   }
-  if (request.method !== "POST" || url.pathname !== "/v1/playlists") {
+  if (request.method !== "POST" || !apiPaths.has(url.pathname)) {
     return json({ error: "Not Found" }, 404, origin);
   }
   if (!origin) {
     return json({ error: "許可されていないアクセス元です。", code: "origin_not_allowed" }, 403);
   }
+
+  if (url.pathname === "/v1/transfers/soundiiz") {
+    try {
+      const input = await parseRequest(request);
+      const eventDocument = await fetchEventDocument(input.eventPath, env, fetchImpl);
+      const spec = extractPlaylistSpec(eventDocument, input.eventPath, input.performanceId);
+      const transfer = await createSoundiizImport(spec, fetchImpl);
+      return json({ ok: true, ...transfer }, 201, origin);
+    } catch (error) {
+      if (error instanceof RequestError) {
+        return json({ ok: false, code: error.code, error: error.message, ...error.details }, error.status, origin);
+      }
+      if (error instanceof SoundiizError) {
+        const status = error.status === 429 ? 503 : 502;
+        return json({ ok: false, code: "soundiiz_error", error: error.message }, status, origin);
+      }
+      console.error("Soundiiz transfer request failed", error?.stack || error);
+      return json({ ok: false, code: "internal_error", error: "Soundiizの移行画面を用意できませんでした。" }, 500, origin);
+    }
+  }
+
   if (!env.DB) {
     return json({ error: "プレイリスト保存先が設定されていません。", code: "database_not_configured" }, 503, origin);
   }

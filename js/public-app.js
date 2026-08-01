@@ -27,7 +27,8 @@
     numberedOnly: false,
     selectedEvent: null,
     performanceIndex: 0,
-    creatingPlaylist: false
+    creatingPlaylist: false,
+    creatingTransfer: false
   };
   const spotifyArtworkRequests = new Map();
 
@@ -187,30 +188,6 @@
     if (className) element.className = className;
     if (content !== undefined) element.textContent = text(content);
     return element;
-  }
-
-  function externalPlaylistLink(className, label, href) {
-    const link = createElement("a", `playlist-action ${className}`, label);
-    link.href = href;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    return link;
-  }
-
-  function transferPlaylistLink(destination, label, playlistUrl) {
-    const link = externalPlaylistLink(
-      `playlist-action-${destination}`,
-      `${label}へ移行 ↗`,
-      window.PublicPlaylistClient.transferUrl(destination)
-    );
-    link.addEventListener("click", () => {
-      window.PublicPlaylistClient.copyPlaylistUrl(playlistUrl)
-        .then((copied) => showToast(copied
-          ? "Spotify URLをコピーしました。移行画面の「URL」を選んで貼り付けてください。"
-          : "移行画面でSpotifyのプレイリストURLを入力してください。"))
-        .catch(() => showToast("Spotify URLをコピーできませんでした。Spotifyで開いてURLをコピーしてください。", "error"));
-    });
-    return link;
   }
 
   function showToast(message, kind = "") {
@@ -520,14 +497,19 @@
     }
 
     const button = $("#create-playlist-button");
+    const transferButton = $("#soundiiz-transfer-button");
     const published = Boolean(state.selectedEvent?.__dataPath && performance?.id);
     const apiConfigured = Boolean(window.PublicPlaylistClient?.isConfigured?.());
-    button.disabled = !available.length || !published || !apiConfigured || state.creatingPlaylist;
+    button.disabled = !available.length || !published || !apiConfigured || state.creatingPlaylist || state.creatingTransfer;
     button.textContent = state.creatingPlaylist
       ? "作成しています…"
       : (!published
         ? "GitHub公開後に作成できます"
-        : (!apiConfigured ? "プレイリスト作成機能は準備中" : "プレイリストを作成して開く"));
+        : (!apiConfigured ? "プレイリスト作成機能は準備中" : "Spotifyで作成して開く"));
+    transferButton.disabled = !available.length || !published || !apiConfigured || state.creatingPlaylist || state.creatingTransfer;
+    transferButton.textContent = state.creatingTransfer
+      ? "準備しています…"
+      : "Apple Music / Amazon Musicで作成して開く";
     $("#playlist-result").classList.add("hidden");
   }
 
@@ -536,7 +518,7 @@
     const performance = eventPerformances(event)[state.performanceIndex];
     const setlist = songs(performance);
     const uris = setlist.filter(validSpotifyUri).map((item) => item.spotify.uri);
-    if (!uris.length || state.creatingPlaylist) return;
+    if (!uris.length || state.creatingPlaylist || state.creatingTransfer) return;
 
     state.creatingPlaylist = true;
     renderPlaylistPanel(performance);
@@ -549,18 +531,11 @@
       const result = $("#playlist-result");
       const action = playlist.created ? "作成しました" : "用意されています";
       result.replaceChildren(document.createTextNode(`${playlist.trackCount || uris.length}曲のプレイリストが${action}。 `));
-      const actions = createElement("div", "playlist-actions");
-      actions.append(
-        externalPlaylistLink("playlist-action-spotify", "Spotifyで開く ↗", playlist.playlistUrl),
-        transferPlaylistLink("apple", "Apple Music", playlist.playlistUrl),
-        transferPlaylistLink("amazon", "Amazon Music", playlist.playlistUrl)
-      );
-      result.append(actions);
-      result.append(createElement(
-        "p",
-        "playlist-transfer-note",
-        "Apple Music・Amazon Musicへの移行には外部サービス（TuneMyMusic）を使用します。別バージョンが選ばれる場合は移行先で確認してください。"
-      ));
+      const link = createElement("a", "", "Spotifyで開く ↗");
+      link.href = playlist.playlistUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      result.append(link);
       result.classList.remove("hidden");
       showToast(playlist.created ? "共有プレイリストを作成しました。" : "作成済みのプレイリストを開けます。");
     } catch (error) {
@@ -569,7 +544,35 @@
       state.creatingPlaylist = false;
       const button = $("#create-playlist-button");
       button.disabled = false;
-      button.textContent = "プレイリストを作成して開く";
+      button.textContent = "Spotifyで作成して開く";
+    }
+  }
+
+  async function openSoundiizTransfer() {
+    const event = state.selectedEvent;
+    const performance = eventPerformances(event)[state.performanceIndex];
+    const available = songs(performance).filter(validSpotifyUri);
+    if (!available.length || !event?.__dataPath || !performance?.id ||
+        state.creatingPlaylist || state.creatingTransfer) return;
+
+    const button = $("#soundiiz-transfer-button");
+    state.creatingTransfer = true;
+    button.disabled = true;
+    button.textContent = "準備しています…";
+    try {
+      if (!window.PublicPlaylistClient) throw new Error("移行機能を読み込めませんでした。");
+      const transfer = await window.PublicPlaylistClient.requestSoundiizTransfer({
+        eventPath: event.__dataPath,
+        performanceId: performance.id
+      });
+      showToast(`${transfer.trackCount || available.length}曲のプレイリストを準備しました。`);
+      window.location.assign(transfer.shareUrl);
+    } catch (error) {
+      showToast(error.message, "error");
+    } finally {
+      state.creatingTransfer = false;
+      button.disabled = false;
+      button.textContent = "Apple Music / Amazon Musicで作成して開く";
     }
   }
 
@@ -584,6 +587,9 @@
     });
     $("#create-playlist-button").addEventListener("click", () => {
       createPlaylist().catch((error) => showToast(error.message, "error"));
+    });
+    $("#soundiiz-transfer-button").addEventListener("click", () => {
+      openSoundiizTransfer().catch((error) => showToast(error.message, "error"));
     });
     $("#performance-select").addEventListener("change", (event) => {
       const index = Number.parseInt(event.target.value, 10);

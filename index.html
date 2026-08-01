@@ -126,17 +126,22 @@
             <aside class="playlist-panel">
               <div class="playlist-panel-mark" aria-hidden="true">♪</div>
               <p class="eyebrow light"><span></span> CREATE PLAYLIST</p>
-              <h2>このセットリストを<br />Spotifyで聴く</h2>
+              <h2>このセットリストを<br />音楽サービスで聴く</h2>
               <div class="availability">
                 <span>Spotify登録済み</span>
                 <strong id="playlist-available-count">0 / 0曲</strong>
               </div>
               <p id="playlist-note" class="playlist-note">共有用プレイリストを作成し、Spotifyで開けます。</p>
-              <button id="create-playlist-button" class="button button-spotify button-wide" type="button">
-                プレイリストを作成して開く
-              </button>
+              <div class="playlist-service-actions" aria-label="プレイリストを作成するサービス">
+                <button id="create-playlist-button" class="button button-service button-spotify button-wide" type="button">
+                  Spotifyで作成して開く
+                </button>
+                <button id="soundiiz-transfer-button" class="button button-service button-transfer button-wide" type="button">
+                  Apple Music / Amazon Musicで作成して開く
+                </button>
+              </div>
               <div id="playlist-result" class="playlist-result hidden" aria-live="polite"></div>
-              <p class="privacy-note">検索やプロフィールには表示されませんが、URLを知っている人は閲覧できます。</p>
+              <p class="privacy-note">SpotifyはURLを知っている人が閲覧できます。Apple Music / Amazon MusicはSoundiiz経由で作成し、移行先サービスへのログインが必要です。</p>
             </aside>
           </div>
         </div>
@@ -161,7 +166,7 @@
 
     <script src="./admin/js/spotify-client.js?v=0.14"></script>
     <script src="./js/admin-spotify-callback.js?v=0.1"></script>
-    <script src="./js/public-playlist-client.js?v=0.2"></script>
-    <script src="./js/public-app.js?v=0.9"></script>
+    <script src="./js/public-playlist-client.js?v=0.3"></script>
+    <script src="./js/public-app.js?v=0.10"></script>
   </body>
 </html>

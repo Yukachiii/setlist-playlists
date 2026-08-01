@@ -76,28 +76,42 @@ test("未公開のデータパスはWorkerへ送らない", async () => {
   });
 });
 
-test("Apple MusicとAmazon Musicの移行先を固定URLで開く", () => {
-  assert.equal(
-    playlistClient.transferUrl("apple"),
-    "https://www.tunemymusic.com/transfer/spotify-to-apple-music"
+test("公演IDをWorkerへ送りSoundiizの移行URLを受け取る", async () => {
+  const calls = [];
+  await withBrowser(
+    {
+      window: browser(),
+      fetch: async (url, options) => {
+        calls.push({ url: String(url), options });
+        return {
+          ok: true,
+          status: 201,
+          json: async () => ({
+            ok: true,
+            shareUrl: "https://soundiiz.com/go/import-playlist/0123456789abcdef0123456789abcdef",
+            trackCount: 29,
+            expiresAt: 1782220923
+          })
+        };
+      }
+    },
+    async () => {
+      const result = await playlistClient.requestSoundiizTransfer({
+        eventPath: "ikizulive/example-live.json",
+        performanceId: "example-live-day-1"
+      });
+      assert.equal(result.trackCount, 29);
+      assert.equal(calls[0].url, "https://worker.example/v1/transfers/soundiiz");
+      assert.deepEqual(JSON.parse(calls[0].options.body), {
+        eventPath: "ikizulive/example-live.json",
+        performanceId: "example-live-day-1"
+      });
+      assert.doesNotMatch(calls[0].options.body, /spotify:track:/);
+    }
   );
   assert.equal(
-    playlistClient.transferUrl("amazon"),
-    "https://www.tunemymusic.com/transfer/spotify-to-amazon-music"
+    playlistClient.isSoundiizShareUrl("https://soundiiz.com/go/import-playlist/0123456789abcdef"),
+    true
   );
-  assert.throws(() => playlistClient.transferUrl("unknown"), /対応していない/);
-});
-
-test("移行画面を開く前にSpotifyプレイリストURLをコピーする", async () => {
-  const copied = [];
-  await withBrowser({ window: browser() }, async () => {
-    assert.equal(
-      await playlistClient.copyPlaylistUrl(
-        "https://open.spotify.com/playlist/3gqj2EA3KDnYIcDsJq5F8L",
-        async (value) => copied.push(value)
-      ),
-      true
-    );
-  });
-  assert.deepEqual(copied, ["https://open.spotify.com/playlist/3gqj2EA3KDnYIcDsJq5F8L"]);
+  assert.equal(playlistClient.isSoundiizShareUrl("https://attacker.example/import-playlist/token"), false);
 });

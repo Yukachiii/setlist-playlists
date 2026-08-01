@@ -108,15 +108,17 @@ test("訪問者の認証情報を使わずWorkerへ公演IDだけを送る", () 
   assert.doesNotMatch(playlistClient, /spotify:track:/);
 });
 
-test("共有SpotifyプレイリストをApple MusicとAmazon Musicへ移行できる", () => {
-  assert.match(app, /transferPlaylistLink\("apple", "Apple Music"/);
-  assert.match(app, /transferPlaylistLink\("amazon", "Amazon Music"/);
-  assert.match(app, /PublicPlaylistClient\.copyPlaylistUrl\(playlistUrl\)/);
-  assert.match(playlistClient, /spotify-to-apple-music/);
-  assert.match(playlistClient, /spotify-to-amazon-music/);
-  assert.match(css, /\.playlist-action-apple/);
-  assert.match(css, /\.playlist-action-amazon/);
-  assert.match(app, /外部サービス（TuneMyMusic）/);
+test("各音楽サービスを共通UIから選びSoundiizへ曲目を直接渡せる", () => {
+  assert.match(html, /id="create-playlist-button" class="button button-service/);
+  assert.match(html, /id="soundiiz-transfer-button" class="button button-service/);
+  assert.match(html, /Apple Music \/ Amazon Musicで作成して開く/);
+  assert.match(html, /Soundiiz経由/);
+  assert.match(css, /\.playlist-service-actions/);
+  assert.match(app, /PublicPlaylistClient\.requestSoundiizTransfer/);
+  assert.match(app, /window\.location\.assign\(transfer\.shareUrl\)/);
+  assert.match(playlistClient, /\/v1\/transfers\/soundiiz/);
+  assert.match(playlistWorker, /soundiiz\.com\/go\/import-playlist/);
+  assert.doesNotMatch(`${html}\n${app}\n${css}\n${playlistClient}`, /TuneMyMusic|tunemymusic/i);
 });
 
 test("Workerが作成用アカウントで非公開プレイリストを作る", () => {

@@ -23,14 +23,30 @@ function eventDocument() {
         id: performanceId,
         label: "Day 1",
         setlist: [
-          { type: "song", spotify: { status: "matched", uri: firstUri } },
-          { type: "song", spotify: { status: "matched", uri: firstUri } },
           {
             type: "song",
+            recording: { displayTitle: "First Song" },
+            artistHint: "First Group",
+            spotify: { status: "matched", uri: firstUri, matchedTitle: "First Song", matchedArtist: "First Group" }
+          },
+          {
+            type: "song",
+            recording: { displayTitle: "First Song" },
+            artistHint: "First Group",
+            spotify: { status: "matched", uri: firstUri, matchedTitle: "First Song", matchedArtist: "First Group" }
+          },
+          {
+            type: "song",
+            recording: { displayTitle: "Unavailable Song" },
             spotifyMatchPolicy: "unavailable",
             spotify: { status: "unavailable", uri: secondUri }
           },
-          { type: "song", spotify: { status: "matched", uri: secondUri } }
+          {
+            type: "song",
+            recording: { displayTitle: "Second Song" },
+            artistHint: "Second Solo",
+            spotify: { status: "matched", uri: secondUri, matchedTitle: "Second Song", matchedArtist: "Second Solo" }
+          }
         ]
       }
     ]
@@ -121,6 +137,11 @@ test("公開データ配下のJSONパスだけを許可する", () => {
 test("Spotify曲の曲順と重複を保ち、未配信曲を除外する", () => {
   const spec = extractPlaylistSpec(eventDocument(), eventPath, performanceId);
   assert.deepEqual(spec.uris, [firstUri, firstUri, secondUri]);
+  assert.deepEqual(spec.tracks, [
+    { title: "First Song", artists: "First Group" },
+    { title: "First Song", artists: "First Group" },
+    { title: "Second Song", artists: "Second Solo" }
+  ]);
   assert.equal(spec.key, "example-live:example-live-day-1");
   assert.equal(spec.name, "Example Live — Day 1");
 });
@@ -231,4 +252,50 @@ test("許可していないサイトからの作成要求を拒否する", async
     throw new Error("fetch should not be called");
   });
   assert.equal(response.status, 403);
+});
+
+test("曲順と重複を保った曲目をSoundiizへ渡し、一時URLを返す", async () => {
+  const calls = [];
+  const fetchImpl = async (url, options = {}) => {
+    calls.push({ url: String(url), options });
+    if (String(url).endsWith(`/${eventPath}`)) {
+      return { ok: true, json: async () => eventDocument() };
+    }
+    if (String(url) === "https://soundiiz.com/go/import-playlist") {
+      return {
+        ok: true,
+        status: 200,
+        json: async () => ({
+          status: "success",
+          nbTracks: 3,
+          shareUrl: "https://soundiiz.com/go/import-playlist/0123456789abcdef0123456789abcdef",
+          expiresAt: 1782220923
+        })
+      };
+    }
+    throw new Error(`Unexpected fetch: ${url}`);
+  };
+  const request = new Request("https://worker.example/v1/transfers/soundiiz", {
+    method: "POST",
+    headers: { Origin: "https://example.github.io", "Content-Type": "application/json" },
+    body: JSON.stringify({ eventPath, performanceId })
+  });
+
+  const response = await handleRequest(request, workerEnv(undefined), fetchImpl);
+  const body = await response.json();
+
+  assert.equal(response.status, 201);
+  assert.equal(body.shareUrl, "https://soundiiz.com/go/import-playlist/0123456789abcdef0123456789abcdef");
+  assert.equal(body.trackCount, 3);
+  assert.equal(body.expiresAt, 1782220923);
+  const importCall = calls.find((call) => call.url === "https://soundiiz.com/go/import-playlist");
+  const payload = JSON.parse(importCall.options.body);
+  assert.equal(payload.title, "Example Live — Day 1");
+  assert.equal(payload.sourceName, "Setlist Playlists");
+  assert.deepEqual(payload.tracklist, [
+    { title: "First Song", artists: "First Group" },
+    { title: "First Song", artists: "First Group" },
+    { title: "Second Song", artists: "Second Solo" }
+  ]);
+  assert.doesNotMatch(importCall.options.body, /spotify:track:/);
 });
