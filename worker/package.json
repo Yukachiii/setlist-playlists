@@ -1,0 +1,5 @@
+{
+  "name": "setlist-playlists-worker",
+  "private": true,
+  "type": "module"
+}

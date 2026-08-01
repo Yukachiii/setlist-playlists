@@ -1,6 +1,6 @@
 # Setlist Playlists 0.4
 
-ラブライブ！シリーズのライブ情報とセットリストを公開し、閲覧者が自分のSpotifyアカウントへ非公開プレイリストを作成できるサイトです。
+ラブライブ！シリーズのライブ情報とセットリストを公開し、作成用Spotifyアカウントの共有プレイリストを閲覧者へ提供するサイトです。
 
 - 公開ページ: `/`
 - 管理画面: `/admin/`
@@ -39,9 +39,9 @@ python server.py
 - シリーズによる絞り込み
 - 公演回／Dayの切り替え
 - セットリストとSpotify登録状況の確認
-- 閲覧者本人のSpotifyアカウントへの非公開プレイリスト作成
+- Spotifyログイン不要の共有プレイリスト作成・表示
 
-プレイリストには有効な `spotify.uri` がある曲だけをセットリスト順で追加します。同じ曲が複数回ある場合も曲順どおり残します。Spotify未配信曲と未登録曲は除外し、作成前に対象曲数を表示します。
+プレイリストには有効な `spotify.uri` がある曲だけをセットリスト順で追加します。同じ曲が複数回ある場合も曲順どおり残します。Spotify未配信曲と未登録曲は除外し、作成前に対象曲数を表示します。初回リクエスト時だけCloudflare Workerが作成用アカウントでプレイリストを作成し、同じ公演の2回目以降はD1に保存した既存URLを返します。
 
 訪問ページのSpotify登録済み曲にはアルバムジャケットを表示します。新しく登録する曲はジャケットURLをJSONへ保存し、既存データはSpotify公式oEmbedから画像を補完します。同じTrack IDの画像取得結果はページ内で再利用します。
 
@@ -117,9 +117,21 @@ GitHub Pagesへ公開する場合は、公開ページのルートURLも追加�
 https://ユーザー名.github.io/リポジトリ名/
 ```
 
-認証にはAuthorization Code with PKCEを使用するため、Client Secretは不要です。認証情報はlocalStorageではなく、そのタブのsessionStorageにだけ保持します。
+管理画面の認証にはAuthorization Code with PKCEを使用するため、Client Secretは不要です。認証情報はlocalStorageではなく、そのタブのsessionStorageにだけ保持します。
 
-公開ページは `playlist-modify-private` 権限だけで非公開プレイリストを作成します。管理画面のSpotify検索語には曲名だけを使用します。`104期 Ver.` などのバージョン欄があっても、Spotify側の曲名が完全一致で一意なら自動適用します。同じ曲がシングルとアルバムの両方に収録されていてもISRCが同じなら同一音源としてまとめます。別アーティストや異なるISRCの同名曲は自動決定せず、手動選択に回します。
+公開ページの閲覧者はSpotifyへ接続しません。Cloudflare Workerに保存した作成用アカウントの認証情報を使い、`playlist-modify-private` 権限で共有用プレイリストを作成します。認証情報はWorker Secretだけに保存し、公開JavaScriptやGitHubへ含めません。
+
+管理画面のSpotify検索語には曲名だけを使用します。`104期 Ver.` などのバージョン欄があっても、Spotify側の曲名が完全一致で一意なら自動適用します。同じ曲がシングルとアルバムの両方に収録されていてもISRCが同じなら同一音源としてまとめます。別アーティストや異なるISRCの同名曲は自動決定せず、手動選択に回します。
+
+## Cloudflare Worker
+
+共有プレイリストAPIは `worker/` にあります。公開ページからは公演JSONの相対パスと公演IDだけを送り、Workerが公開済みJSONを再取得して曲リストを検証します。閲覧者が任意の曲名やSpotify URIを指定することはできません。
+
+作成済みプレイリストはD1の `shared_playlists` に保存します。セットリストの曲順が変わった場合は、次のリクエスト時に既存プレイリストを更新します。
+
+```text
+https://setlist-playlists-api.ew-project.workers.dev
+```
 
 ## テスト
 
@@ -128,9 +140,10 @@ node --check admin/js/page-text-parser.js
 node --check admin/js/known-song-cache.js
 node --check admin/js/spotify-client.js
 node --check admin/js/app.js
-node --check js/public-spotify-client.js
+node --check js/public-playlist-client.js
 node --check js/public-app.js
 node --test tests/*.test.js
+node --test worker/tests/*.test.mjs
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
 

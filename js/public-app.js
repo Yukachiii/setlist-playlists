@@ -27,7 +27,6 @@
     numberedOnly: false,
     selectedEvent: null,
     performanceIndex: 0,
-    spotifyReady: false,
     creatingPlaylist: false
   };
   const spotifyArtworkRequests = new Map();
@@ -229,12 +228,20 @@
       entries.map(async (entry) => {
         if (typeof entry === "object") return normalizeLoadedEvents(entry);
         const file = text(entry).replace(/^\.\//, "");
-        return normalizeLoadedEvents(await fetchJson(`./data/${file}`));
+        return normalizeLoadedEvents(await fetchJson(`./data/${file}`)).map((event) => ({
+          ...event,
+          __dataPath: file
+        }));
       })
     );
     const merged = new Map();
-    [...loaded.flat(), ...localAdminEvents()].forEach((event) => {
+    loaded.flat().forEach((event) => {
       if (event?.id && event?.title) merged.set(event.id, event);
+    });
+    localAdminEvents().forEach((event) => {
+      if (!event?.id || !event?.title) return;
+      const published = merged.get(event.id);
+      merged.set(event.id, { ...event, __dataPath: published?.__dataPath || "" });
     });
     state.events = [...merged.values()];
     state.events.sort((a, b) => latestDate(b).localeCompare(latestDate(a), "ja"));
@@ -489,48 +496,15 @@
     }
 
     const button = $("#create-playlist-button");
-    button.disabled = !available.length || state.creatingPlaylist;
+    const published = Boolean(state.selectedEvent?.__dataPath && performance?.id);
+    const apiConfigured = Boolean(window.PublicPlaylistClient?.isConfigured?.());
+    button.disabled = !available.length || !published || !apiConfigured || state.creatingPlaylist;
     button.textContent = state.creatingPlaylist
       ? "作成しています…"
-      : (spotifyConnected() ? "非公開プレイリストを作成" : "Spotifyに接続して追加");
+      : (!published
+        ? "GitHub公開後に作成できます"
+        : (!apiConfigured ? "プレイリスト作成機能は準備中" : "プレイリストを作成して開く"));
     $("#playlist-result").classList.add("hidden");
-  }
-
-  function spotifyConnected() {
-    return Boolean(window.PublicSpotifyClient?.isConnected?.());
-  }
-
-  function updateSpotifyAccount() {
-    const connected = spotifyConnected();
-    const profile = window.PublicSpotifyClient?.profile?.();
-    $("#spotify-status").textContent = connected ? (profile?.display_name || "接続済み") : "未接続";
-    $("#spotify-connect-button").textContent = connected ? "接続解除" : "Spotifyに接続";
-    if (state.selectedEvent) {
-      renderPlaylistPanel(eventPerformances(state.selectedEvent)[state.performanceIndex]);
-    }
-  }
-
-  async function initializeSpotify() {
-    if (!window.PublicSpotifyClient) return;
-    try {
-      await window.PublicSpotifyClient.initialize();
-      state.spotifyReady = true;
-      updateSpotifyAccount();
-    } catch (error) {
-      updateSpotifyAccount();
-      showToast(error.message, "error");
-    }
-  }
-
-  async function toggleSpotifyConnection() {
-    if (!window.PublicSpotifyClient) return;
-    if (spotifyConnected()) {
-      window.PublicSpotifyClient.disconnect();
-      updateSpotifyAccount();
-      showToast("Spotifyとの接続を解除しました。");
-      return;
-    }
-    await window.PublicSpotifyClient.connect(location.hash || "#/");
   }
 
   async function createPlaylist() {
@@ -540,37 +514,31 @@
     const uris = setlist.filter(validSpotifyUri).map((item) => item.spotify.uri);
     if (!uris.length || state.creatingPlaylist) return;
 
-    if (!spotifyConnected()) {
-      await window.PublicSpotifyClient.connect(location.hash || "#/");
-      return;
-    }
-
     state.creatingPlaylist = true;
     renderPlaylistPanel(performance);
     try {
-      const playlist = await window.PublicSpotifyClient.createPrivatePlaylist({
-        name: `${event.title} — ${performanceLabel(performance, state.performanceIndex)}`,
-        description: "Setlist Playlistsで作成したライブセットリスト（非公開）",
-        uris
+      if (!window.PublicPlaylistClient) throw new Error("プレイリスト作成機能を読み込めませんでした。");
+      const playlist = await window.PublicPlaylistClient.requestPlaylist({
+        eventPath: event.__dataPath,
+        performanceId: performance.id
       });
       const result = $("#playlist-result");
-      result.replaceChildren(document.createTextNode(`${uris.length}曲のプレイリストを作成しました。 `));
-      if (playlist?.external_urls?.spotify) {
-        const link = createElement("a", "", "Spotifyで開く ↗");
-        link.href = playlist.external_urls.spotify;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        result.append(link);
-      }
+      const action = playlist.created ? "作成しました" : "用意されています";
+      result.replaceChildren(document.createTextNode(`${playlist.trackCount || uris.length}曲のプレイリストが${action}。 `));
+      const link = createElement("a", "", "Spotifyで開く ↗");
+      link.href = playlist.playlistUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      result.append(link);
       result.classList.remove("hidden");
-      showToast("非公開プレイリストを作成しました。");
+      showToast(playlist.created ? "共有プレイリストを作成しました。" : "作成済みのプレイリストを開けます。");
     } catch (error) {
       showToast(error.message, "error");
     } finally {
       state.creatingPlaylist = false;
       const button = $("#create-playlist-button");
       button.disabled = false;
-      button.textContent = "非公開プレイリストを作成";
+      button.textContent = "プレイリストを作成して開く";
     }
   }
 
@@ -582,9 +550,6 @@
     $("#numbered-live-only").addEventListener("change", (event) => {
       state.numberedOnly = event.target.checked;
       renderCatalog();
-    });
-    $("#spotify-connect-button").addEventListener("click", () => {
-      toggleSpotifyConnection().catch((error) => showToast(error.message, "error"));
     });
     $("#create-playlist-button").addEventListener("click", () => {
       createPlaylist().catch((error) => showToast(error.message, "error"));
@@ -602,7 +567,6 @@
 
   async function start() {
     bindEvents();
-    initializeSpotify();
     try {
       await loadEvents();
     } catch (error) {

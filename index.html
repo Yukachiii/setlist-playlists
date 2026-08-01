@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="ラブライブ！シリーズのライブセットリストを探して、自分のSpotifyへ非公開プレイリストとして追加できます。"
+      content="ラブライブ！シリーズのライブセットリストを探して、Spotifyの共有プレイリストとして開けます。"
     />
+    <meta name="setlist-playlist-api" content="https://setlist-playlists-api.ew-project.workers.dev" />
     <title>Setlist Playlists</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,12 +30,6 @@
           </span>
         </a>
         <a class="request-link" href="https://marshmallow-qa.com/abwyzu4ah3yhb24?t=Gow0aX&amp;utm_medium=url_text&amp;utm_source=promotion" target="_blank" rel="noopener noreferrer">不具合報告 ↗</a>
-        <div class="spotify-account">
-          <span id="spotify-status" class="spotify-status" aria-live="polite">未接続</span>
-          <button id="spotify-connect-button" class="button button-spotify" type="button">
-            Spotifyに接続
-          </button>
-        </div>
       </div>
     </header>
 
@@ -46,7 +41,7 @@
               <p class="eyebrow"><span></span> SETLIST TO SPOTIFY</p>
               <h1 id="hero-title">ライブのセットリストを、<br /><em>そのままSpotifyへ。</em></h1>
               <p class="hero-description">
-                公演を選ぶだけで、曲順どおりの非公開プレイリストを作成できます。
+                公演を選ぶだけで、曲順どおりの共有プレイリストを開けます。
               </p>
               <a class="button button-primary hero-cta" href="#events">公演を選ぶ <span aria-hidden="true">↓</span></a>
             </div>
@@ -136,12 +131,12 @@
                 <span>Spotify登録済み</span>
                 <strong id="playlist-available-count">0 / 0曲</strong>
               </div>
-              <p id="playlist-note" class="playlist-note">Spotifyに接続すると、非公開プレイリストを作成できます。</p>
+              <p id="playlist-note" class="playlist-note">共有用プレイリストを作成し、Spotifyで開けます。</p>
               <button id="create-playlist-button" class="button button-spotify button-wide" type="button">
-                Spotifyに追加
+                プレイリストを作成して開く
               </button>
               <div id="playlist-result" class="playlist-result hidden" aria-live="polite"></div>
-              <p class="privacy-note">作成されるプレイリストは自分だけが見られる非公開設定です。</p>
+              <p class="privacy-note">検索やプロフィールには表示されませんが、URLを知っている人は閲覧できます。</p>
             </aside>
           </div>
         </div>
@@ -166,7 +161,7 @@
 
     <script src="./admin/js/spotify-client.js?v=0.14"></script>
     <script src="./js/admin-spotify-callback.js?v=0.1"></script>
-    <script src="./js/public-spotify-client.js?v=0.2"></script>
-    <script src="./js/public-app.js?v=0.7"></script>
+    <script src="./js/public-playlist-client.js?v=0.1"></script>
+    <script src="./js/public-app.js?v=0.8"></script>
   </body>
 </html>

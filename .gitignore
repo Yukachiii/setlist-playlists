@@ -10,4 +10,8 @@ __pycache__/
 .vscode/
 .idea/
 _site/
+.wrangler/
 setlist-admin-backup*.json
+worker/.dev.vars
+worker/.wrangler/
+worker/.spotify-refresh-token

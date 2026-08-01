@@ -1,0 +1,15 @@
+name = "setlist-playlists-api"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGINS = "https://yukachiii.github.io,http://127.0.0.1:8765,http://localhost:8765"
+PUBLIC_DATA_BASE_URL = "https://yukachiii.github.io/setlist-playlists/data/"
+SPOTIFY_CLIENT_ID = "0a891d6707d34424bae951dfa25a9d95"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "setlist-playlists"
+database_id = "f15d9626-0916-46c9-baff-e3a0d88865f1"
+migrations_dir = "migrations"

@@ -87,8 +87,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-weight: 800;
 }
 .request-link:hover { color: var(--blue); border-color: rgba(78, 99, 230, 0.4); background: white; }
-.spotify-account { display: flex; align-items: center; gap: 12px; }
-.spotify-status { max-width: 145px; overflow: hidden; color: #687086; font-size: 11px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 
 .button {
   min-height: 44px;
@@ -345,8 +343,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .brand-mark { width: 35px; height: 35px; }
   .brand-copy strong { font-size: 17px; }
   .request-link { min-height: 36px; padding: 0 10px; font-size: 10px; }
-  .spotify-status { display: none; }
-  .spotify-account .button { min-height: 38px; padding: 0 13px; font-size: 10px; }
   .hero-inner, .hero-stats, .section-shell { width: calc(100% - 28px); }
   .hero-copy { padding-top: 58px; }
   .hero h1 { font-size: 38px; letter-spacing: -1.7px; }

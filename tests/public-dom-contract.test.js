@@ -7,7 +7,8 @@ const root = path.resolve(__dirname, "..");
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "js", "public-app.js"), "utf8");
 const css = fs.readFileSync(path.join(root, "css", "public.css"), "utf8");
-const spotify = fs.readFileSync(path.join(root, "js", "public-spotify-client.js"), "utf8");
+const playlistClient = fs.readFileSync(path.join(root, "js", "public-playlist-client.js"), "utf8");
+const playlistWorker = fs.readFileSync(path.join(root, "worker", "src", "index.js"), "utf8");
 const pagesWorkflow = fs.readFileSync(
   path.join(root, ".github", "workflows", "pages.yml"),
   "utf8"
@@ -59,16 +60,17 @@ test("公開ページのIDは重複せず、JavaScriptが参照する要素が�
   assert.deepEqual([...new Set(missing)], []);
 });
 
-test("Spotifyクライアントを公開アプリより先に読み込む", () => {
+test("管理画面のSpotifyコールバックと共有プレイリストクライアントを順番どおり読み込む", () => {
   const adminSpotifyIndex = html.indexOf("./admin/js/spotify-client.js");
   const adminCallbackIndex = html.indexOf("./js/admin-spotify-callback.js");
-  const spotifyIndex = html.indexOf("./js/public-spotify-client.js");
+  const playlistClientIndex = html.indexOf("./js/public-playlist-client.js");
   const appIndex = html.indexOf("./js/public-app.js");
   assert.ok(adminSpotifyIndex >= 0);
   assert.ok(adminCallbackIndex > adminSpotifyIndex);
-  assert.ok(spotifyIndex > adminCallbackIndex);
-  assert.ok(spotifyIndex >= 0);
-  assert.ok(appIndex > spotifyIndex);
+  assert.ok(playlistClientIndex > adminCallbackIndex);
+  assert.ok(appIndex > playlistClientIndex);
+  assert.doesNotMatch(html, /public-spotify-client/);
+  assert.doesNotMatch(html, /id="spotify-connect-button"/);
 });
 
 test("公開ページにはローカル管理画面へのリンクを表示しない", () => {
@@ -97,10 +99,19 @@ test("GitHub Pagesには公開ページだけを配信する", () => {
   assert.doesNotMatch(pagesWorkflow, /cp server\.py/);
 });
 
-test("Spotifyの現行プレイリストAPIと非公開スコープを使う", () => {
-  assert.match(spotify, /playlist-modify-private/);
-  assert.match(spotify, /apiFetch\("\/me\/playlists"/);
-  assert.match(spotify, /`\/playlists\/\$\{encodeURIComponent\(playlist\.id\)\}\/items`/);
-  assert.doesNotMatch(spotify, /\/tracks[`"']/);
-  assert.match(spotify, /public: false/);
+test("訪問者の認証情報を使わずWorkerへ公演IDだけを送る", () => {
+  assert.match(app, /window\.PublicPlaylistClient\.requestPlaylist/);
+  assert.match(app, /eventPath: event\.__dataPath/);
+  assert.match(app, /performanceId: performance\.id/);
+  assert.doesNotMatch(app, /PublicSpotifyClient|spotifyConnected\(\)/);
+  assert.match(playlistClient, /\/v1\/playlists/);
+  assert.doesNotMatch(playlistClient, /spotify:track:/);
+});
+
+test("Workerが作成用アカウントで非公開プレイリストを作る", () => {
+  assert.match(playlistWorker, /spotifyAccessToken/);
+  assert.match(playlistWorker, /"\/me\/playlists"/);
+  assert.match(playlistWorker, /`\/playlists\/\$\{encodeURIComponent\(playlistId\)\}\/items`/);
+  assert.doesNotMatch(playlistWorker, /\/tracks[`"']/);
+  assert.match(playlistWorker, /public: false/);
 });
