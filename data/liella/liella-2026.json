@@ -760,7 +760,353 @@
         "city": "",
         "countryCode": "JP"
       },
-      "setlist": [],
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋のチュートリアル",
+            "versionLabel": "ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1mvuva7__ver",
+            "displayTitle": "恋のチュートリアル（ショート Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1A1XcyBIGcCNcOhJhnqdtH",
+            "uri": "spotify:track:1A1XcyBIGcCNcOhJhnqdtH",
+            "matchedTitle": "恋のチュートリアル",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d8a7ecc8567ec1d6eb152e6b",
+            "albumName": "恋のチュートリアル"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋のチュートリアル",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1mvuva7__original",
+            "displayTitle": "恋のチュートリアル"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1A1XcyBIGcCNcOhJhnqdtH",
+            "uri": "spotify:track:1A1XcyBIGcCNcOhJhnqdtH",
+            "matchedTitle": "恋のチュートリアル",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d8a7ecc8567ec1d6eb152e6b",
+            "albumName": "恋のチュートリアル"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dazzling Game",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dazzling-game__original",
+            "displayTitle": "Dazzling Game"
+          },
+          "artistHint": "Liella!, 澁谷かのん (CV.伊達さゆり), ウィーン・マルガレーテ (CV.結那), 鬼塚冬毬 (CV.坂倉 花)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2GET8aWQZSR5wZQj7zT1l5",
+            "uri": "spotify:track:2GET8aWQZSR5wZQj7zT1l5",
+            "matchedTitle": "Dazzling Game",
+            "matchedArtist": "Liella!, 澁谷かのん (CV.伊達さゆり), ウィーン・マルガレーテ (CV.結那), 鬼塚冬毬 (CV.坂倉 花)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273633e8b12c048232189374271",
+            "albumName": "絶対的LOVER / Dazzling Game【第8話盤】"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Chance Day, Chance Way！",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "chance-day-chance-way__1-3-ver",
+            "displayTitle": "Chance Day, Chance Way！（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1QM66r7038zIYxRvvFZUrc",
+            "uri": "spotify:track:1QM66r7038zIYxRvvFZUrc",
+            "matchedTitle": "Chance Day, Chance Way！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ビタミンSUMMER！",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "summer__1-3-ver",
+            "displayTitle": "ビタミンSUMMER！（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ZWv75IO2XgpEQdtD2YjwJ",
+            "uri": "spotify:track:3ZWv75IO2XgpEQdtD2YjwJ",
+            "matchedTitle": "ビタミンSUMMER！",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27371f216b3764fb47c8f74298b",
+            "albumName": "ビタミンSUMMER！ / Chance Day, Chance Way！【第8話盤】"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Jump Into the New World",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "jump-into-the-new-world__original",
+            "displayTitle": "Jump Into the New World"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4URE7AVGX1R4yFSJSV49vb",
+            "uri": "spotify:track:4URE7AVGX1R4yFSJSV49vb",
+            "matchedTitle": "Jump Into the New World",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273200035ca7e4021c915f79126",
+            "albumName": "Jump Into the New World"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Aspire",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "aspire__original",
+            "displayTitle": "Aspire"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6nAcd7KirTRfN1r2BH9h6j",
+            "uri": "spotify:track:6nAcd7KirTRfN1r2BH9h6j",
+            "matchedTitle": "Aspire",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2737acae15f26472fe5df2f1577",
+            "albumName": "Aspire"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "常夏☆サンシャイン",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "track-5xx4pd__1-3-ver",
+            "displayTitle": "常夏☆サンシャイン（1〜3期生 Ver.）"
+          },
+          "artistHint": "澁谷かのん (CV.伊達さゆり), 唐 可可 (CV.Liyuu), 嵐 千砂都 (CV.岬 なこ), 平安名すみれ (CV.ペイトン尚未)",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0Id5w4vyilixQm8zsNoVuo",
+            "uri": "spotify:track:0Id5w4vyilixQm8zsNoVuo",
+            "matchedTitle": "常夏☆サンシャイン",
+            "matchedArtist": "澁谷かのん (CV.伊達さゆり), 唐 可可 (CV.Liyuu), 嵐 千砂都 (CV.岬 なこ), 平安名すみれ (CV.ペイトン尚未)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273cd92b19d3e5784c3f4d15eed",
+            "albumName": "常夏☆サンシャイン / Wish Song【第8話盤】"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "水しぶきのサイン",
+            "versionLabel": "1〜3期生 Ver.",
+            "versionCode": "1-3-ver",
+            "recordingId": "track-1q8cg8t__1-3-ver",
+            "displayTitle": "水しぶきのサイン（1〜3期生 Ver.）"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "58RWDskxgEq7tCqKzidG1X",
+            "uri": "spotify:track:58RWDskxgEq7tCqKzidG1X",
+            "matchedTitle": "水しぶきのサイン",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273fac7326fefe001f4c2e14d38",
+            "albumName": "追いかける夢の先で"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "OPEN THE G☆TE!!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "open-the-g-te__original",
+            "displayTitle": "OPEN THE G☆TE!!!"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3jnoJmbk2AOzr4ASEZX9Yg",
+            "uri": "spotify:track:3jnoJmbk2AOzr4ASEZX9Yg",
+            "matchedTitle": "OPEN THE G☆TE!!!",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731364c2af1cf93f31f06feb36",
+            "albumName": "OPEN THE G☆TE!!!"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "High！モチベーション",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "high__original",
+            "displayTitle": "High！モチベーション"
+          },
+          "artistHint": "桜小路きな子 (CV.鈴原希実), 米女メイ (CV.薮島朱音), 若菜四季 (CV.大熊和奏), 鬼塚夏美 (CV.絵森 彩), ウィーン・マルガレーテ (CV.結那), 鬼塚冬毬 (CV.坂倉 花)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7jliOVjUH0Il0Xd1LDGbJy",
+            "uri": "spotify:track:7jliOVjUH0Il0Xd1LDGbJy",
+            "matchedTitle": "High！モチベーション",
+            "matchedArtist": "桜小路きな子 (CV.鈴原希実), 米女メイ (CV.薮島朱音), 若菜四季 (CV.大熊和奏), 鬼塚夏美 (CV.絵森 彩), ウィーン・マルガレーテ (CV.結那), 鬼塚冬毬 (CV.坂倉 花)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731364c2af1cf93f31f06feb36",
+            "albumName": "OPEN THE G☆TE!!!"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "始まりは君の空",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-tnarcc__original",
+            "displayTitle": "始まりは君の空"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0MncuXVpGP5tkFFaml5YhK",
+            "uri": "spotify:track:0MncuXVpGP5tkFFaml5YhK",
+            "matchedTitle": "始まりは君の空",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27365497835cd8913f4c7fc8f37",
+            "albumName": "始まりは君の空 【みんなで叶える物語盤】"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "探して！Future",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "future__original",
+            "displayTitle": "探して！Future"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6GyLiiqdUZmlaKwQjTwwDg",
+            "uri": "spotify:track:6GyLiiqdUZmlaKwQjTwwDg",
+            "matchedTitle": "探して！Future",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273c6a3e6330a6ef2a1955ba36d",
+            "albumName": "探して！Future"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "DAISUKI FULL POWER",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daisuki-full-power__original",
+            "displayTitle": "DAISUKI FULL POWER"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TyMixo6q2jstl9WxvPm0d",
+            "uri": "spotify:track:2TyMixo6q2jstl9WxvPm0d",
+            "matchedTitle": "DAISUKI FULL POWER",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f0faa95793969065798eaf3d",
+            "albumName": "DAISUKI FULL POWER"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "オレンジのままで",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-vcqlvf__original",
+            "displayTitle": "オレンジのままで"
+          },
+          "artistHint": "Liella!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6dadcX0AZur4CcsU2TPqJC",
+            "uri": "spotify:track:6dadcX0AZur4CcsU2TPqJC",
+            "matchedTitle": "オレンジのままで",
+            "matchedArtist": "Liella!",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e93930e471082c234f1cf8a",
+            "albumName": "オレンジのままで"
+          }
+        }
+      ],
       "spotifyPlaylist": {
         "status": "not_created",
         "playlistId": null,
