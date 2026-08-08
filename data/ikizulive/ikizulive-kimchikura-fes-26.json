@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "0.3",
+  "id": "ikizulive-kimchikura-fes-26",
+  "title": "KIMCHIKURA Fes '26",
+  "series": [
+    "ikizulive"
+  ],
+  "isNumberedLive": false,
+  "sources": [
+    {
+      "type": "x",
+      "name": "公式ページ",
+      "url": "https://x.com/kimchikura/status/2062492056862568636",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/309",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "ikizulive-kimchikura-fes-26-kyung-hee-university-grand-peace-palace-performance-776",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2026-08-08",
+      "venue": {
+        "name": "경희대학교 평화의전당 (Kyung Hee University Grand Peace Palace)",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What is my LIFE?",
+            "versionLabel": "ポルカ、のりこ、輝夜、真緑、翔音 Ver.",
+            "versionCode": "ver",
+            "recordingId": "what-is-my-life__ver",
+            "displayTitle": "What is my LIFE?（ポルカ、のりこ、輝夜、真緑、翔音 Ver.）"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4uWUgAX6o7ssWVyiGmp4Ij",
+            "uri": "spotify:track:4uWUgAX6o7ssWVyiGmp4Ij",
+            "matchedTitle": "What is my LIFE?",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27337b6558ea368df05b02153e7",
+            "albumName": "What is my LIFE?"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "浅草Guilty Girlの歌",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "guilty-girl__original",
+            "displayTitle": "浅草Guilty Girlの歌"
+          },
+          "artistHint": "いきづらい部！, 高橋ポルカ(CV.綾咲穂音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5wyTAKRzU1eKk4rjbaBxST",
+            "uri": "spotify:track:5wyTAKRzU1eKk4rjbaBxST",
+            "matchedTitle": "浅草Guilty Girlの歌",
+            "matchedArtist": "いきづらい部！, 高橋ポルカ(CV.綾咲穂音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733a36c2cf22ac620f4abdedcd",
+            "albumName": "浅草Guilty Girlの歌"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋のワンタイムパスワード",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-h9y4vd__original",
+            "displayTitle": "恋のワンタイムパスワード"
+          },
+          "artistHint": "いきづらい部！, 調布のりこ(CV.瀬古梨愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5331syCrRj2800b0pgMN1J",
+            "uri": "spotify:track:5331syCrRj2800b0pgMN1J",
+            "matchedTitle": "恋のワンタイムパスワード",
+            "matchedArtist": "いきづらい部！, 調布のりこ(CV.瀬古梨愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dbd85628ad33274c647767f9",
+            "albumName": "恋のワンタイムパスワード"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "キミは夜のポラリス",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ww5hbn__original",
+            "displayTitle": "キミは夜のポラリス"
+          },
+          "artistHint": "いきづらい部！, 此花輝夜(CV.天沢朱音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1V4xMKE8BPcMXRnTujX63r",
+            "uri": "spotify:track:1V4xMKE8BPcMXRnTujX63r",
+            "matchedTitle": "キミは夜のポラリス",
+            "matchedArtist": "いきづらい部！, 此花輝夜(CV.天沢朱音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27350d10e0e0b88c45f325c8330",
+            "albumName": "キミは夜のポラリス"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Little Green委員会",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "little-green__original",
+            "displayTitle": "Little Green委員会"
+          },
+          "artistHint": "いきづらい部！, 山田真緑(CV.小戸森穂花)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0gX5teKwL0eXlm8kKKuC7x",
+            "uri": "spotify:track:0gX5teKwL0eXlm8kKKuC7x",
+            "matchedTitle": "Little Green委員会",
+            "matchedArtist": "いきづらい部！, 山田真緑(CV.小戸森穂花)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27356d3243e29ea46ba8b50b740",
+            "albumName": "Little Green委員会"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "イキタクナイevery day",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "every-day__original",
+            "displayTitle": "イキタクナイevery day"
+          },
+          "artistHint": "いきづらい部！, 佐々木翔音(CV.涼ノ瀬葵音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "04g0tYgYJ60HeoXMcM13GZ",
+            "uri": "spotify:track:04g0tYgYJ60HeoXMcM13GZ",
+            "matchedTitle": "イキタクナイevery day",
+            "matchedArtist": "いきづらい部！, 佐々木翔音(CV.涼ノ瀬葵音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2732fc8b5e6a8a971c69b13afd8",
+            "albumName": "イキタクナイevery day"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dou-Da? DOING!",
+            "versionLabel": "ポルカ、のりこ、輝夜、真緑、翔音 Ver.",
+            "versionCode": "ver",
+            "recordingId": "dou-da-doing__ver",
+            "displayTitle": "Dou-Da? DOING!（ポルカ、のりこ、輝夜、真緑、翔音 Ver.）"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1N4CeCZaDj8EH1fh1DPrDt",
+            "uri": "spotify:track:1N4CeCZaDj8EH1fh1DPrDt",
+            "matchedTitle": "Dou-Da? DOING!",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d2a8fbcf42a3afc2851f1488",
+            "albumName": "Dou-Da? DOING!"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "REGAIN AGAIN LLLLOVE",
+            "versionLabel": "ポルカ、のりこ、輝夜、真緑、翔音 Ver.",
+            "versionCode": "ver",
+            "recordingId": "regain-again-llllove__ver",
+            "displayTitle": "REGAIN AGAIN LLLLOVE（ポルカ、のりこ、輝夜、真緑、翔音 Ver.）"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6j2jaU62yunZHqVMKcehQt",
+            "uri": "spotify:track:6j2jaU62yunZHqVMKcehQt",
+            "matchedTitle": "REGAIN AGAIN LLLLOVE",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273532f0e086d2a08dc8ec180a7",
+            "albumName": "REGAIN AGAIN LLLLOVE"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
