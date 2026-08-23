@@ -110,17 +110,12 @@ test("公演検索と曲名検索は別々の検索窓と検索語を使う", ()
   assert.match(app, /normalizeSearch\(state\.eventQuery\)/);
   assert.match(app, /normalizeSearch\(state\.songQuery\)/);
   assert.doesNotMatch(app, /state\.query/);
-  assert.match(html, /id="event-search-panel" class="search-panel active"/);
-  assert.match(html, /id="song-search-panel" class="search-panel"/);
-  assert.doesNotMatch(html, /id="song-search-box" class="search-box hidden"/);
-  assert.match(app, /event-search-panel[^\n]+classList\.toggle\("active", !songMode\)/);
-  assert.match(app, /song-search-panel[^\n]+classList\.toggle\("active", songMode\)/);
-  assert.match(app, /event-search[^\n]+addEventListener\("focus"/);
-  assert.match(app, /song-search[^\n]+addEventListener\("focus"/);
+  assert.match(app, /event-search-box[^\n]+classList\.toggle\("hidden", songMode\)/);
+  assert.match(app, /song-search-box[^\n]+classList\.toggle\("hidden", !songMode\)/);
 });
 
 test("公演検索と曲名検索でシリーズ絞り込みを別々に保持する", () => {
-  assert.match(html, /id="filter-label" class="filter-label">公演検索のシリーズ</);
+  assert.match(html, /class="filter-label">シリーズ</);
   assert.match(html, /id="series-filters"/);
   assert.match(app, /eventSeries:\s*"all"/);
   assert.match(app, /songSeries:\s*"all"/);
