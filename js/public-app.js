@@ -23,9 +23,11 @@
   const state = {
     events: [],
     searchMode: "events",
-    query: "",
+    eventQuery: "",
+    songQuery: "",
     selectedSongKey: "",
-    series: "all",
+    eventSeries: "all",
+    songSeries: "all",
     numberedOnly: false,
     selectedEvent: null,
     performanceIndex: 0,
@@ -364,14 +366,16 @@
   function renderFilters() {
     const container = $("#series-filters");
     container.replaceChildren();
+    const selectedSeries = state.searchMode === "songs" ? state.songSeries : state.eventSeries;
     const filters = [{ id: "all", label: "すべて" }, ...availableSeries().map((id) => ({ id, label: seriesInfo(id).label }))];
     filters.forEach((filter) => {
-      const button = createElement("button", `filter-chip${state.series === filter.id ? " active" : ""}`, filter.label);
+      const button = createElement("button", `filter-chip${selectedSeries === filter.id ? " active" : ""}`, filter.label);
       button.type = "button";
       button.dataset.series = filter.id;
-      button.setAttribute("aria-pressed", String(state.series === filter.id));
+      button.setAttribute("aria-pressed", String(selectedSeries === filter.id));
       button.addEventListener("click", () => {
-        state.series = filter.id;
+        if (state.searchMode === "songs") state.songSeries = filter.id;
+        else state.eventSeries = filter.id;
         renderFilters();
         renderCatalog();
       });
@@ -380,9 +384,9 @@
   }
 
   function filteredEvents() {
-    const query = normalizeSearch(state.query);
+    const query = normalizeSearch(state.eventQuery);
     return state.events.filter((event) => {
-      if (state.series !== "all" && !eventSeries(event).includes(state.series)) return false;
+      if (state.eventSeries !== "all" && !eventSeries(event).includes(state.eventSeries)) return false;
       if (state.numberedOnly && !isNumberedLive(event)) return false;
       if (!query) return true;
       const searchable = normalizeSearch([
@@ -486,8 +490,8 @@
     const empty = $("#event-empty");
 
     if (state.searchMode === "songs") {
-      const query = normalizeSearch(state.query);
-      const candidates = songCandidates(state.events, state.query, state.series, state.numberedOnly);
+      const query = normalizeSearch(state.songQuery);
+      const candidates = songCandidates(state.events, state.songQuery, state.songSeries, state.numberedOnly);
       if (!candidates.some((candidate) => candidate.key === state.selectedSongKey)) {
         const exact = candidates.filter((candidate) => normalizeSearch(candidate.title) === query);
         state.selectedSongKey = exact.length === 1
@@ -641,7 +645,6 @@
 
   function setSearchMode(mode) {
     state.searchMode = mode === "songs" ? "songs" : "events";
-    state.selectedSongKey = "";
     const songMode = state.searchMode === "songs";
     $("#search-mode-events").classList.toggle("active", !songMode);
     $("#search-mode-events").setAttribute("aria-pressed", String(!songMode));
@@ -651,9 +654,11 @@
     $("#events-description").textContent = songMode
       ? "候補曲を1曲選ぶと、その曲が披露された公演を逆引きできます。"
       : "公演名や会場名で検索できます。";
-    $("#event-search").placeholder = songMode ? "曲名で検索" : "公演名・会場名で検索";
+    $("#event-search-box").classList.toggle("hidden", songMode);
+    $("#song-search-box").classList.toggle("hidden", !songMode);
+    renderFilters();
     renderCatalog();
-    $("#event-search").focus();
+    $(songMode ? "#song-search" : "#event-search").focus();
   }
 
   function renderPerformance(performance) {
@@ -794,7 +799,11 @@
     $("#search-mode-events").addEventListener("click", () => setSearchMode("events"));
     $("#search-mode-songs").addEventListener("click", () => setSearchMode("songs"));
     $("#event-search").addEventListener("input", (event) => {
-      state.query = event.target.value;
+      state.eventQuery = event.target.value;
+      renderCatalog();
+    });
+    $("#song-search").addEventListener("input", (event) => {
+      state.songQuery = event.target.value;
       state.selectedSongKey = "";
       renderCatalog();
     });

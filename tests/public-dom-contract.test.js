@@ -102,6 +102,29 @@ test("曲名候補を選んで該当する公演とDayを逆引きできる", ()
   assert.match(css, /\.song-result-card/);
 });
 
+test("公演検索と曲名検索は別々の検索窓と検索語を使う", () => {
+  assert.match(html, /id="event-search"[^>]*placeholder="公演名・会場名で検索"/);
+  assert.match(html, /id="song-search"[^>]*placeholder="曲名で検索"/);
+  assert.match(app, /eventQuery:\s*""/);
+  assert.match(app, /songQuery:\s*""/);
+  assert.match(app, /normalizeSearch\(state\.eventQuery\)/);
+  assert.match(app, /normalizeSearch\(state\.songQuery\)/);
+  assert.doesNotMatch(app, /state\.query/);
+  assert.match(app, /event-search-box[^\n]+classList\.toggle\("hidden", songMode\)/);
+  assert.match(app, /song-search-box[^\n]+classList\.toggle\("hidden", !songMode\)/);
+});
+
+test("公演検索と曲名検索でシリーズ絞り込みを別々に保持する", () => {
+  assert.match(html, /class="filter-label">シリーズ</);
+  assert.match(html, /id="series-filters"/);
+  assert.match(app, /eventSeries:\s*"all"/);
+  assert.match(app, /songSeries:\s*"all"/);
+  assert.match(app, /state\.searchMode === "songs" \? state\.songSeries : state\.eventSeries/);
+  assert.match(app, /songCandidates\(state\.events, state\.songQuery, state\.songSeries/);
+  assert.match(app, /state\.eventSeries !== "all"/);
+  assert.doesNotMatch(app, /state\.series/);
+});
+
 test("GitHub Pagesには公開ページだけを配信する", () => {
   assert.match(pagesWorkflow, /cp index\.html _site\//);
   assert.match(pagesWorkflow, /cp -R css js data _site\//);
