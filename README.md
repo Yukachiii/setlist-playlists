@@ -36,6 +36,7 @@ python server.py
 公演JSONは `data/hasunosora/`、`data/nijigasaki/` のように、イベントの先頭シリーズIDごとのフォルダへ保存します。シリーズ未設定のイベントは `data/other/` に保存します。`data/index.json` に列挙した相対パスを読み込み、次の機能を提供します。
 
 - 公演名・会場名の検索
+- 曲名候補を選び、その曲が披露された公演・Dayを逆引き
 - シリーズによる絞り込み
 - 公演回／Dayの切り替え
 - セットリストとSpotify登録状況の確認

@@ -210,7 +210,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-heading > p:last-child { margin: 14px 0 0; color: var(--ink-soft); font-size: 14px; }
 
 .events-section { padding: 62px 0 96px; }
-.catalog-tools { margin-top: 30px; display: flex; align-items: center; gap: 18px; }
+.search-mode-switch { margin-top: 28px; padding: 4px; display: inline-flex; gap: 4px; background: #e7e5df; border-radius: 12px; }
+.search-mode-button { min-height: 40px; padding: 0 18px; color: #687084; background: transparent; border: 0; border-radius: 9px; font-size: 12px; font-weight: 800; cursor: pointer; }
+.search-mode-button:hover { color: var(--ink); }
+.search-mode-button.active { color: white; background: var(--navy); box-shadow: 0 6px 14px rgba(17, 26, 46, 0.15); }
+.catalog-tools { margin-top: 16px; display: flex; align-items: center; gap: 18px; }
 .search-box {
   width: min(410px, 100%);
   min-height: 52px;
@@ -253,6 +257,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
   background: var(--navy);
   border-color: var(--navy);
 }
+.song-candidates { max-width: 720px; margin-top: 24px; padding: 18px 20px 20px; background: white; border: 1px solid #dcdde0; border-radius: 16px; }
+.song-candidates-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.song-candidates-head h3 { margin: 0; font-size: 14px; }
+.song-candidates-head span { color: #8a92a1; font-size: 11px; font-weight: 700; }
+.song-candidate-select-wrap { position: relative; margin-top: 12px; display: block; }
+.song-candidate-select-wrap::after { content: "⌄"; position: absolute; right: 17px; top: 13px; color: #63708a; font-size: 20px; line-height: 1; pointer-events: none; }
+.song-candidate-select { width: 100%; min-height: 50px; padding: 0 46px 0 15px; appearance: none; overflow: hidden; color: #344056; background: #f7f7f4; border: 1px solid #d7d9df; border-radius: 11px; font: 700 11px "Noto Sans JP", sans-serif; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+.song-candidate-select:focus { outline: 3px solid rgba(78, 99, 230, 0.25); outline-offset: 2px; }
 .results-head { min-height: 52px; display: flex; align-items: flex-end; }
 .results-head p { margin: 0; color: #667085; font-size: 12px; font-weight: 600; }
 .event-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -268,6 +280,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .event-card-bottom { margin-top: 18px; padding-top: 16px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #ecece9; }
 .event-card-bottom strong { font-size: 12px; }
 .event-card-bottom i { color: var(--coral); font-style: normal; font-size: 20px; }
+.song-result-kicker { margin-bottom: 7px; color: #9ca3af; font: 800 8px "DM Sans", sans-serif; letter-spacing: 1.4px; }
+.song-result-song { margin: 11px 0 0; color: var(--card-accent, var(--coral)); font-size: 12px; font-weight: 800; line-height: 1.5; }
+.song-result-song span { display: block; margin-top: 3px; color: #8b93a2; font-size: 9px; font-weight: 600; }
+.song-result-card .event-card-meta { padding-top: 18px; }
 .empty-state { padding: 72px 20px; text-align: center; }
 .empty-state > span { color: var(--coral); font-size: 38px; }
 .empty-state h3 { margin: 12px 0 5px; }
@@ -359,6 +375,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-stats strong { font-size: 22px; }
   .hero-stats p { display: none; }
   .events-section { padding: 52px 0 70px; }
+  .search-mode-switch { width: 100%; }
+  .search-mode-button { flex: 1; padding: 0 10px; }
+  .song-candidates { padding: 16px; }
   .event-grid { grid-template-columns: 1fr; }
   .event-card { min-height: 250px; }
   .detail-shell { padding-top: 24px; }

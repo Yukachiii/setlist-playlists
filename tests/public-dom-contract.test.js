@@ -91,6 +91,17 @@ test("公開サイトでも手動フラグ付きナンバリング公演だけ�
   assert.match(app, /event\?\.isNumberedLive === true/);
 });
 
+test("曲名候補を選んで該当する公演とDayを逆引きできる", () => {
+  assert.match(html, /id="search-mode-songs"/);
+  assert.match(html, /id="song-candidate-select"/);
+  assert.match(app, /function songCandidates\(/);
+  assert.match(app, /候補曲を1曲選ぶと、その曲が披露された公演を逆引きできます。/);
+  assert.match(app, /candidate\.artist/);
+  assert.match(app, /#\/event\/\$\{encodeURIComponent\(event\.id\)\}\/\$\{encodeURIComponent\(performance\.id\)\}/);
+  assert.match(css, /\.song-candidate-select/);
+  assert.match(css, /\.song-result-card/);
+});
+
 test("GitHub Pagesには公開ページだけを配信する", () => {
   assert.match(pagesWorkflow, /cp index\.html _site\//);
   assert.match(pagesWorkflow, /cp -R css js data _site\//);

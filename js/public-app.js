@@ -22,7 +22,9 @@
 
   const state = {
     events: [],
+    searchMode: "events",
     query: "",
+    selectedSongKey: "",
     series: "all",
     numberedOnly: false,
     selectedEvent: null,
@@ -62,6 +64,94 @@
     return (Array.isArray(performance?.setlist) ? performance.setlist : []).filter(
       (item) => !item?.type || item.type === "song"
     );
+  }
+
+  function songTitle(item) {
+    return text(item?.recording?.displayTitle || item?.recording?.baseTitle || item?.title || item?.spotify?.matchedTitle).trim();
+  }
+
+  function songArtist(item) {
+    return text(item?.artistHint || item?.spotify?.matchedArtist).trim();
+  }
+
+  function songOccurrences(events, queryValue, series = "all", numberedOnly = false) {
+    const query = normalizeSearch(queryValue);
+    if (!query) return [];
+    const matches = [];
+
+    (Array.isArray(events) ? events : []).forEach((event) => {
+      if (series !== "all" && !eventSeries(event).includes(series)) return;
+      if (numberedOnly && !isNumberedLive(event)) return;
+      eventPerformances(event).forEach((performance, performanceIndex) => {
+        const seenSongs = new Set();
+        songs(performance).forEach((item) => {
+          const title = songTitle(item);
+          const normalizedTitle = normalizeSearch(title);
+          const identity = songIdentity(title, songArtist(item));
+          const searchableTitles = [
+            title,
+            item?.recording?.displayTitle,
+            item?.recording?.baseTitle,
+            item?.title,
+            item?.spotify?.matchedTitle
+          ].map(normalizeSearch).filter(Boolean);
+          if (!normalizedTitle || seenSongs.has(identity) ||
+              !searchableTitles.some((value) => value.includes(query))) return;
+          seenSongs.add(identity);
+          matches.push({
+            event,
+            performance,
+            performanceIndex,
+            item,
+            title,
+            artist: songArtist(item)
+          });
+        });
+      });
+    });
+
+    return matches.sort((a, b) => {
+      const rank = (value) => {
+        const normalized = normalizeSearch(value);
+        if (normalized === query) return 0;
+        if (normalized.startsWith(query)) return 1;
+        return 2;
+      };
+      return rank(a.title) - rank(b.title);
+    });
+  }
+
+  function songIdentity(title, artist) {
+    const normalizeIdentityPart = (value) => normalizeSearch(value)
+      .replace(/[〜～~]/g, "~")
+      .replace(/\s+/g, "");
+    return `${normalizeIdentityPart(title)}\u0000${normalizeIdentityPart(artist)}`;
+  }
+
+  function songCandidates(events, queryValue, series = "all", numberedOnly = false) {
+    const query = normalizeSearch(queryValue);
+    const grouped = new Map();
+    songOccurrences(events, queryValue, series, numberedOnly).forEach((occurrence) => {
+      const key = songIdentity(occurrence.title, occurrence.artist);
+      if (!grouped.has(key)) {
+        grouped.set(key, {
+          key,
+          title: occurrence.title,
+          artist: occurrence.artist,
+          occurrences: []
+        });
+      }
+      grouped.get(key).occurrences.push(occurrence);
+    });
+    return [...grouped.values()].sort((a, b) => {
+      const rank = (value) => {
+        const normalized = normalizeSearch(value);
+        if (normalized === query) return 0;
+        if (normalized.startsWith(query)) return 1;
+        return 2;
+      };
+      return rank(a.title) - rank(b.title) || a.title.localeCompare(b.title, "ja");
+    });
   }
 
   function isSpotifyUnavailable(item) {
@@ -333,19 +423,120 @@
     return card;
   }
 
+  function songResultCard(match) {
+    const { event, performance, performanceIndex, item, title, artist } = match;
+    const card = createElement("article", "event-card song-result-card");
+    const primarySeries = seriesInfo(eventSeries(event)[0]);
+    card.style.setProperty("--card-accent", primarySeries.color);
+    const link = createElement("a");
+    link.href = `#/event/${encodeURIComponent(event.id)}/${encodeURIComponent(performance.id)}`;
+    link.setAttribute("aria-label", `${title}が披露された${event.title}のセットリストを見る`);
+
+    const series = createElement("p", "event-card-series", eventSeries(event).map((id) => seriesInfo(id).label).join(" / ") || "OTHER");
+    const kicker = createElement("span", "song-result-kicker", "PERFORMANCE");
+    const titleElement = createElement("h3", "", event.title);
+    const song = createElement("p", "song-result-song", title);
+    if (artist) song.append(createElement("span", "", artist));
+    const meta = createElement("div", "event-card-meta");
+    const live = createElement("span");
+    live.append(createElement("b", "", "LIVE"), document.createTextNode(performanceLabel(performance, performanceIndex)));
+    const date = createElement("span");
+    date.append(createElement("b", "", "DATE"), document.createTextNode(formatDate(performance?.date)));
+    const venue = createElement("span");
+    venue.append(createElement("b", "", "VENUE"), document.createTextNode(performance?.venue?.name || "-"));
+    meta.append(live, date, venue);
+
+    const bottom = createElement("div", "event-card-bottom");
+    bottom.append(
+      createElement("strong", "", item?.marker || "SETLIST"),
+      createElement("i", "", "→")
+    );
+    link.append(series, kicker, titleElement, song, meta, bottom);
+    card.append(link);
+    return card;
+  }
+
+  function renderSongCandidates(candidates) {
+    const panel = $("#song-candidates");
+    const select = $("#song-candidate-select");
+    panel.classList.toggle("hidden", !candidates.length);
+    $("#song-candidate-count").textContent = candidates.length ? `${candidates.length}曲` : "";
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = candidates.length > 1 ? "候補曲を選択してください" : "候補曲";
+    placeholder.selected = !state.selectedSongKey;
+    placeholder.disabled = Boolean(candidates.length);
+    const options = candidates.map((candidate, index) => {
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = `${candidate.title} — ${candidate.artist || "アーティスト未登録"}（${candidate.occurrences.length}公演）`;
+      option.selected = candidate.key === state.selectedSongKey;
+      return option;
+    });
+    select.replaceChildren(placeholder, ...options);
+    select.onchange = () => {
+      const candidate = candidates[Number.parseInt(select.value, 10)];
+      state.selectedSongKey = candidate?.key || "";
+      renderCatalog();
+    };
+  }
+
   function renderCatalog() {
-    const events = filteredEvents();
     const grid = $("#event-grid");
+    const empty = $("#event-empty");
+
+    if (state.searchMode === "songs") {
+      const query = normalizeSearch(state.query);
+      const candidates = songCandidates(state.events, state.query, state.series, state.numberedOnly);
+      if (!candidates.some((candidate) => candidate.key === state.selectedSongKey)) {
+        const exact = candidates.filter((candidate) => normalizeSearch(candidate.title) === query);
+        state.selectedSongKey = exact.length === 1
+          ? exact[0].key
+          : (candidates.length === 1 ? candidates[0].key : "");
+      }
+      renderSongCandidates(query ? candidates : []);
+      const selected = candidates.find((candidate) => candidate.key === state.selectedSongKey);
+      const occurrences = selected?.occurrences || [];
+      grid.classList.add("song-results");
+      grid.replaceChildren(...occurrences.map(songResultCard));
+
+      if (!query) {
+        $("#result-summary").textContent = "曲名を入力してください";
+        empty.querySelector("h3").textContent = "曲名から公演を逆引き";
+        empty.querySelector("p").textContent = "曲名の一部でも検索できます。";
+        empty.classList.remove("hidden");
+      } else if (!candidates.length) {
+        $("#result-summary").textContent = "候補曲は0件です";
+        empty.querySelector("h3").textContent = "該当する曲がありません";
+        empty.querySelector("p").textContent = "曲名やシリーズを変えてお試しください。";
+        empty.classList.remove("hidden");
+      } else if (!selected) {
+        $("#result-summary").textContent = `${candidates.length}曲の候補があります`;
+        empty.querySelector("h3").textContent = "候補曲を選択してください";
+        empty.querySelector("p").textContent = "曲名とアーティスト名を確認して1曲選んでください。";
+        empty.classList.remove("hidden");
+      } else {
+        $("#result-summary").textContent = `${selected.title}：${occurrences.length}公演で披露`;
+        empty.classList.add("hidden");
+      }
+      return;
+    }
+
+    renderSongCandidates([]);
+    const events = filteredEvents();
+    grid.classList.remove("song-results");
     grid.replaceChildren(...events.map(eventCard));
     $("#result-summary").textContent = `${events.length}件の公演`;
-    $("#event-empty").classList.toggle("hidden", events.length > 0);
+    empty.querySelector("h3").textContent = "該当する公演がありません";
+    empty.querySelector("p").textContent = "検索語やシリーズを変えてお試しください。";
+    empty.classList.toggle("hidden", events.length > 0);
   }
 
   function routeParts() {
     const hash = location.hash || "#/";
     if (!hash.startsWith("#/")) return { view: "catalog", anchor: hash.slice(1) };
     const parts = hash.slice(2).split("/").filter(Boolean).map((part) => decodeURIComponent(part));
-    if (parts[0] === "event" && parts[1]) return { view: "event", id: parts[1] };
+    if (parts[0] === "event" && parts[1]) return { view: "event", id: parts[1], performanceId: parts[2] || "" };
     return { view: "catalog", anchor: "" };
   }
 
@@ -359,10 +550,15 @@
         return;
       }
       const eventChanged = state.selectedEvent?.id !== event.id;
+      const routedPerformanceIndex = route.performanceId
+        ? eventPerformances(event).findIndex((performance) => performance?.id === route.performanceId)
+        : -1;
       state.selectedEvent = event;
-      state.performanceIndex = eventChanged
-        ? 0
-        : Math.min(state.performanceIndex, Math.max(0, eventPerformances(event).length - 1));
+      state.performanceIndex = routedPerformanceIndex >= 0
+        ? routedPerformanceIndex
+        : (eventChanged
+          ? 0
+          : Math.min(state.performanceIndex, Math.max(0, eventPerformances(event).length - 1)));
       renderDetail();
       showDetail();
       return;
@@ -419,6 +615,7 @@
       tab.setAttribute("aria-selected", String(index === state.performanceIndex));
       tab.addEventListener("click", () => {
         state.performanceIndex = index;
+        history.replaceState(null, "", `#/event/${encodeURIComponent(state.selectedEvent.id)}/${encodeURIComponent(performance.id)}`);
         renderDetail();
       });
       tabs.append(tab);
@@ -440,6 +637,23 @@
       const height = shouldOffsetPlaylist ? Math.ceil(tabs.getBoundingClientRect().height) : 0;
       document.documentElement.style.setProperty("--performance-tabs-height", `${height}px`);
     });
+  }
+
+  function setSearchMode(mode) {
+    state.searchMode = mode === "songs" ? "songs" : "events";
+    state.selectedSongKey = "";
+    const songMode = state.searchMode === "songs";
+    $("#search-mode-events").classList.toggle("active", !songMode);
+    $("#search-mode-events").setAttribute("aria-pressed", String(!songMode));
+    $("#search-mode-songs").classList.toggle("active", songMode);
+    $("#search-mode-songs").setAttribute("aria-pressed", String(songMode));
+    $("#events-title").textContent = songMode ? "曲名から公演を探す" : "公演を探す";
+    $("#events-description").textContent = songMode
+      ? "候補曲を1曲選ぶと、その曲が披露された公演を逆引きできます。"
+      : "公演名や会場名で検索できます。";
+    $("#event-search").placeholder = songMode ? "曲名で検索" : "公演名・会場名で検索";
+    renderCatalog();
+    $("#event-search").focus();
   }
 
   function renderPerformance(performance) {
@@ -577,8 +791,11 @@
   }
 
   function bindEvents() {
+    $("#search-mode-events").addEventListener("click", () => setSearchMode("events"));
+    $("#search-mode-songs").addEventListener("click", () => setSearchMode("songs"));
     $("#event-search").addEventListener("input", (event) => {
       state.query = event.target.value;
+      state.selectedSongKey = "";
       renderCatalog();
     });
     $("#numbered-live-only").addEventListener("change", (event) => {
@@ -596,6 +813,7 @@
       const performances = eventPerformances(state.selectedEvent);
       if (!Number.isInteger(index) || !performances[index] || index === state.performanceIndex) return;
       state.performanceIndex = index;
+      history.replaceState(null, "", `#/event/${encodeURIComponent(state.selectedEvent.id)}/${encodeURIComponent(performances[index].id)}`);
       renderDetail();
     });
     window.addEventListener("resize", syncPerformanceTabsHeight);
@@ -620,6 +838,9 @@
     formatDate,
     eventDateRange,
     normalizeSearch,
+    songTitle,
+    songOccurrences,
+    songCandidates,
     isNumberedLive,
     isSpotifyUnavailable,
     validSpotifyUri,

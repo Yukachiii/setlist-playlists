@@ -70,3 +70,60 @@ test("ナンバリング公演は明示的にtrueのイベントだけを対象�
   assert.equal(app.isNumberedLive({ title: "1st Live" }), false);
   assert.equal(app.isNumberedLive({ title: "7th Live" }), false);
 });
+
+test("曲名候補をバージョンとアーティスト別に分けて披露公演を逆引きする", () => {
+  const repeated = {
+    recording: { displayTitle: "Dream Believers（105期 Ver.）", baseTitle: "Dream Believers" },
+    artistHint: "蓮ノ空女学院スクールアイドルクラブ"
+  };
+  const events = [
+    {
+      id: "numbered-live",
+      title: "Numbered Live",
+      series: ["hasunosora"],
+      isNumberedLive: true,
+      performances: [
+        { id: "day-1", setlist: [repeated, { ...repeated }] },
+        {
+          id: "day-2",
+          setlist: [{
+            recording: { displayTitle: "Dream Believers", baseTitle: "Dream Believers" },
+            artistHint: "蓮ノ空女学院スクールアイドルクラブ"
+          }]
+        },
+        {
+          id: "day-3",
+          setlist: [{
+            recording: { displayTitle: "Dream Believers（105期Ver.）", baseTitle: "Dream Believers" },
+            artistHint: "蓮ノ空女学院スクールアイドルクラブ"
+          }]
+        }
+      ]
+    },
+    {
+      id: "other-live",
+      title: "Other Live",
+      series: ["hasunosora"],
+      isNumberedLive: false,
+      performances: [{
+        id: "cover",
+        setlist: [{ recording: { displayTitle: "Dream Believers" }, artistHint: "別アーティスト" }]
+      }]
+    }
+  ];
+
+  const candidates = app.songCandidates(events, "dream believers");
+  assert.equal(candidates.length, 3);
+  assert.deepEqual(
+    candidates.map((candidate) => [candidate.title, candidate.artist, candidate.occurrences.length]),
+    [
+      ["Dream Believers", "蓮ノ空女学院スクールアイドルクラブ", 1],
+      ["Dream Believers", "別アーティスト", 1],
+      ["Dream Believers（105期 Ver.）", "蓮ノ空女学院スクールアイドルクラブ", 2]
+    ]
+  );
+
+  const numberedOnly = app.songCandidates(events, "Dream Believers", "hasunosora", true);
+  assert.equal(numberedOnly.length, 2);
+  assert.equal(numberedOnly.reduce((total, candidate) => total + candidate.occurrences.length, 0), 3);
+});
