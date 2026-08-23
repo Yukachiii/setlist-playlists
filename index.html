@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/public.css?v=0.8" />
+    <link rel="stylesheet" href="./css/public.css?v=0.9" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -71,21 +71,29 @@
             <p id="events-description">公演名や会場名で検索できます。</p>
           </div>
 
-          <div id="search-mode-switch" class="search-mode-switch" role="group" aria-label="検索方法">
-            <button id="search-mode-events" class="search-mode-button active" type="button" aria-pressed="true">公演から探す</button>
-            <button id="search-mode-songs" class="search-mode-button" type="button" aria-pressed="false">曲名から探す</button>
+          <div class="search-panels" aria-label="検索方法">
+            <section id="event-search-panel" class="search-panel active">
+              <button id="search-mode-events" class="search-mode-button" type="button" aria-pressed="true">
+                <span>公演から探す</span><small>公演名・会場名</small>
+              </button>
+              <label id="event-search-box" class="search-box" for="event-search">
+                <span aria-hidden="true">⌕</span>
+                <input id="event-search" type="search" placeholder="公演名・会場名で検索" autocomplete="off" />
+              </label>
+            </section>
+            <section id="song-search-panel" class="search-panel">
+              <button id="search-mode-songs" class="search-mode-button" type="button" aria-pressed="false">
+                <span>曲名から探す</span><small>曲名・バージョン</small>
+              </button>
+              <label id="song-search-box" class="search-box" for="song-search">
+                <span aria-hidden="true">⌕</span>
+                <input id="song-search" type="search" placeholder="曲名で検索" autocomplete="off" />
+              </label>
+            </section>
           </div>
           <div class="catalog-tools">
-            <label id="event-search-box" class="search-box" for="event-search">
-              <span aria-hidden="true">⌕</span>
-              <input id="event-search" type="search" placeholder="公演名・会場名で検索" autocomplete="off" />
-            </label>
-            <label id="song-search-box" class="search-box hidden" for="song-search">
-              <span aria-hidden="true">⌕</span>
-              <input id="song-search" type="search" placeholder="曲名で検索" autocomplete="off" />
-            </label>
             <div class="series-filter-group">
-              <span class="filter-label">シリーズ</span>
+              <span id="filter-label" class="filter-label">公演検索のシリーズ</span>
               <div id="series-filters" class="series-filters" aria-label="シリーズで絞り込み"></div>
             </div>
             <label class="numbered-live-filter">
@@ -188,6 +196,6 @@
     <script src="./admin/js/spotify-client.js?v=0.14"></script>
     <script src="./js/admin-spotify-callback.js?v=0.1"></script>
     <script src="./js/public-playlist-client.js?v=0.3"></script>
-    <script src="./js/public-app.js?v=0.12"></script>
+    <script src="./js/public-app.js?v=0.13"></script>
   </body>
 </html>

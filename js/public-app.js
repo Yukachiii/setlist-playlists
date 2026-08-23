@@ -643,22 +643,21 @@
     });
   }
 
-  function setSearchMode(mode) {
+  function setSearchMode(mode, focusInput = true) {
     state.searchMode = mode === "songs" ? "songs" : "events";
     const songMode = state.searchMode === "songs";
-    $("#search-mode-events").classList.toggle("active", !songMode);
+    $("#event-search-panel").classList.toggle("active", !songMode);
+    $("#song-search-panel").classList.toggle("active", songMode);
     $("#search-mode-events").setAttribute("aria-pressed", String(!songMode));
-    $("#search-mode-songs").classList.toggle("active", songMode);
     $("#search-mode-songs").setAttribute("aria-pressed", String(songMode));
     $("#events-title").textContent = songMode ? "曲名から公演を探す" : "公演を探す";
     $("#events-description").textContent = songMode
       ? "候補曲を1曲選ぶと、その曲が披露された公演を逆引きできます。"
       : "公演名や会場名で検索できます。";
-    $("#event-search-box").classList.toggle("hidden", songMode);
-    $("#song-search-box").classList.toggle("hidden", !songMode);
+    $("#filter-label").textContent = songMode ? "曲名検索のシリーズ" : "公演検索のシリーズ";
     renderFilters();
     renderCatalog();
-    $(songMode ? "#song-search" : "#event-search").focus();
+    if (focusInput) $(songMode ? "#song-search" : "#event-search").focus();
   }
 
   function renderPerformance(performance) {
@@ -798,6 +797,12 @@
   function bindEvents() {
     $("#search-mode-events").addEventListener("click", () => setSearchMode("events"));
     $("#search-mode-songs").addEventListener("click", () => setSearchMode("songs"));
+    $("#event-search").addEventListener("focus", () => {
+      if (state.searchMode !== "events") setSearchMode("events", false);
+    });
+    $("#song-search").addEventListener("focus", () => {
+      if (state.searchMode !== "songs") setSearchMode("songs", false);
+    });
     $("#event-search").addEventListener("input", (event) => {
       state.eventQuery = event.target.value;
       renderCatalog();
