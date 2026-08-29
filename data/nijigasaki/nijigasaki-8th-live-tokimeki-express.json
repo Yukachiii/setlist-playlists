@@ -930,16 +930,16 @@
             "recordingId": "stay__original",
             "displayTitle": "Stay"
           },
-          "artistHint": "天王寺璃奈 (CV.田中ちえ美)",
+          "artistHint": "Hazky",
           "spotifyMatchPolicy": "exact",
           "spotify": {
             "status": "matched",
-            "trackId": "0bivqhr7pQcUlXEcDJoCYH",
-            "uri": "spotify:track:0bivqhr7pQcUlXEcDJoCYH",
-            "matchedTitle": "Stay",
-            "matchedArtist": "天王寺璃奈 (CV.田中ちえ美)",
-            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738b4c31ecff0b107d9c7973bc",
-            "albumName": "約束になれ僕らの歌"
+            "trackId": "3p2xVkNKAgasvftpjLNxVG",
+            "uri": "spotify:track:3p2xVkNKAgasvftpjLNxVG",
+            "matchedTitle": "Stay...",
+            "matchedArtist": "Hazky",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273ba7b2228dfeec0527834bc1c",
+            "albumName": "Stay..."
           }
         },
         {
@@ -1183,16 +1183,16 @@
             "recordingId": "secret__original",
             "displayTitle": "secret"
           },
-          "artistHint": "上原歩夢 (CV.大西亜玖璃)",
+          "artistHint": "浜崎あゆみ",
           "spotifyMatchPolicy": "exact",
           "spotify": {
             "status": "matched",
-            "trackId": "0XQlND2Iq94rvTvfv8d4PN",
-            "uri": "spotify:track:0XQlND2Iq94rvTvfv8d4PN",
-            "matchedTitle": "secret",
-            "matchedArtist": "上原歩夢 (CV.大西亜玖璃)",
-            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738887d526ca7d8917a6622aad",
-            "albumName": "The Sweetest Time♡"
+            "trackId": "3FKKFi6ywSe7l37jktMhrB",
+            "uri": "spotify:track:3FKKFi6ywSe7l37jktMhrB",
+            "matchedTitle": "Secret",
+            "matchedArtist": "浜崎あゆみ",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730b9b9039b83b31a2aeffc50a",
+            "albumName": "Secret"
           }
         },
         {
@@ -1214,8 +1214,8 @@
             "uri": "spotify:track:6bhGm5TsggCqNPMR6qEicx",
             "matchedTitle": "MONSTER GIRLS",
             "matchedArtist": "R3BIRTH",
-            "artworkUrl": "",
-            "albumName": null
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2731b32ef696075a9f548115552",
+            "albumName": "MONSTER GIRLS"
           }
         },
         {
@@ -1574,16 +1574,16 @@
             "recordingId": "poka-poka__original",
             "displayTitle": "Poka Poka 日和"
           },
-          "artistHint": "",
-          "spotifyMatchPolicy": "unavailable",
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会, 上原歩夢 (CV.大西亜玖璃), 宮下 愛 (CV.村上奈津実), 優木せつ菜 (CV.林 鼓子), 鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
           "spotify": {
-            "status": "unmatched",
-            "trackId": null,
-            "uri": null,
-            "matchedTitle": null,
-            "matchedArtist": null,
-            "artworkUrl": null,
-            "albumName": null
+            "status": "matched",
+            "trackId": "4T1DBY6Ofbfyij92eRMka8",
+            "uri": "spotify:track:4T1DBY6Ofbfyij92eRMka8",
+            "matchedTitle": "Poka Poka 日和",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会, 上原歩夢 (CV.大西亜玖璃), 宮下 愛 (CV.村上奈津実), 優木せつ菜 (CV.林 鼓子), 鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273eb323f817c22b3bc8034e1da",
+            "albumName": "Poka Poka 日和"
           }
         },
         {
@@ -2375,16 +2375,16 @@
             "recordingId": "poka-poka__original",
             "displayTitle": "Poka Poka 日和"
           },
-          "artistHint": "",
-          "spotifyMatchPolicy": "unavailable",
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会, 上原歩夢 (CV.大西亜玖璃), 宮下 愛 (CV.村上奈津実), 優木せつ菜 (CV.林 鼓子), 鐘 嵐珠 (CV.法元明菜)",
+          "spotifyMatchPolicy": "exact",
           "spotify": {
-            "status": "unmatched",
-            "trackId": null,
-            "uri": null,
-            "matchedTitle": null,
-            "matchedArtist": null,
-            "artworkUrl": null,
-            "albumName": null
+            "status": "matched",
+            "trackId": "4T1DBY6Ofbfyij92eRMka8",
+            "uri": "spotify:track:4T1DBY6Ofbfyij92eRMka8",
+            "matchedTitle": "Poka Poka 日和",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会, 上原歩夢 (CV.大西亜玖璃), 宮下 愛 (CV.村上奈津実), 優木せつ菜 (CV.林 鼓子), 鐘 嵐珠 (CV.法元明菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273eb323f817c22b3bc8034e1da",
+            "albumName": "Poka Poka 日和"
           }
         },
         {
