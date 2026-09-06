@@ -4,41 +4,81 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Setlist Playlists Admin</title>
-  <link rel="stylesheet" href="./css/style.css?v=0.19">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css?v=0.20">
 </head>
 <body>
   <header class="topbar">
-    <div>
-      <p class="eyebrow">LOCAL ADMIN / SCHEMA 0.3</p>
-      <h1>Setlist Playlists Admin</h1>
+    <div class="topbar-main">
+      <a class="admin-brand" href="../" aria-label="Setlist Playlists 公開ページへ">
+        <span class="brand-mark" aria-hidden="true"><span>♪</span></span>
+        <span class="brand-copy">
+          <strong>Setlist</strong>
+          <small>PLAYLISTS</small>
+        </span>
+        <span class="admin-badge">ADMIN</span>
+      </a>
+      <div class="top-status" aria-label="保存状態">
+        <span id="save-state" class="save-state">読み込み中</span>
+      </div>
     </div>
-    <div class="top-actions">
-      <button id="llfans-sync-button" class="button secondary" type="button">未登録公演を同期</button>
-      <span id="save-state" class="save-state">読み込み中</span>
-      <span id="spotify-account" class="spotify-state">Spotify未接続</span>
-      <button id="spotify-connect-button" class="button spotify-button" type="button">Spotifyに接続</button>
-      <button id="page-import-button" class="button" type="button">LL-Fansから追加</button>
-      <span id="github-publish-state" class="github-state">GitHub確認中</span>
-      <button id="publish-github-button" class="button github-button" type="button" disabled>全公演をGitHubへ公開</button>
-      <button id="export-event-button" class="button secondary" type="button">選択中をJSON出力</button>
-      <button id="import-button" class="button secondary" type="button">JSON読込</button>
-      <input id="import-file" type="file" accept=".json,application/json" hidden>
-    </div>
+    <nav class="command-bar" aria-label="管理操作">
+      <div class="command-group command-group-primary">
+        <span class="command-label">公演を追加</span>
+        <button id="llfans-sync-button" class="button secondary" type="button">未登録公演をまとめて同期</button>
+        <button id="page-import-button" class="button" type="button">LL-Fans URLから追加</button>
+      </div>
+      <div class="command-group">
+        <span class="command-label">Spotify</span>
+        <span id="spotify-account" class="spotify-state">未接続</span>
+        <button id="spotify-connect-button" class="button spotify-button" type="button">接続する</button>
+      </div>
+      <div class="command-group">
+        <span class="command-label">公開</span>
+        <span id="github-publish-state" class="github-state">GitHub確認中</span>
+        <button id="publish-github-button" class="button github-button" type="button" disabled>全変更を公開</button>
+      </div>
+      <div class="command-group command-group-data">
+        <span class="command-label">データ</span>
+        <button id="export-event-button" class="button ghost" type="button">選択中を出力</button>
+        <button id="import-button" class="button ghost" type="button">JSON読込</button>
+        <input id="import-file" type="file" accept=".json,application/json" hidden>
+      </div>
+    </nav>
   </header>
 
   <div class="app-shell">
     <aside class="sidebar">
-      <div class="sidebar-heading">
-        <div>
-          <p class="eyebrow">EVENTS</p>
-          <h2>イベント</h2>
+      <div class="sidebar-tools">
+        <div class="sidebar-heading">
+          <div>
+            <p class="eyebrow">EVENT CATALOG</p>
+            <h2>公演データを探す</h2>
+          </div>
+          <button id="new-event-button" class="icon-button" type="button" title="イベントを追加" aria-label="新しいイベントを追加">＋</button>
         </div>
-        <button id="new-event-button" class="icon-button" type="button" title="イベントを追加">＋</button>
+        <label class="event-search-box" for="event-search">
+          <span aria-hidden="true">⌕</span>
+          <input id="event-search" type="search" autocomplete="off" placeholder="公演名・会場・IDで検索">
+        </label>
+        <div class="event-list-controls">
+          <label class="event-sort-label" for="event-sort">
+            <span>並び順</span>
+            <select id="event-sort">
+              <option value="newest">開催日が新しい順</option>
+              <option value="oldest">開催日が古い順</option>
+              <option value="title">公演名順</option>
+            </select>
+          </label>
+          <label class="sidebar-numbered-filter">
+            <input id="numbered-live-filter" type="checkbox">
+            <span>ナンバリングのみ</span>
+          </label>
+        </div>
+        <p id="event-list-summary" class="event-list-summary" aria-live="polite">公演データを読み込んでいます…</p>
       </div>
-      <label class="sidebar-numbered-filter">
-        <input id="numbered-live-filter" type="checkbox">
-        <span>ナンバリング公演のみ</span>
-      </label>
       <div id="event-list" class="event-list"></div>
       <div class="sidebar-footer">
         <button id="export-all-button" class="button ghost full" type="button">全データをバックアップ</button>
@@ -492,10 +532,15 @@
 
   <template id="performance-card-template">
     <article class="performance-card">
+      <div class="performance-number" aria-hidden="true"></div>
       <div class="performance-main">
         <div class="performance-label"></div>
-        <div class="performance-meta"></div>
-        <div class="performance-tracks"></div>
+        <div class="performance-facts">
+          <span><small>DATE</small><strong class="performance-date"></strong></span>
+          <span><small>VENUE</small><strong class="performance-venue"></strong></span>
+          <span><small>SONGS</small><strong class="performance-tracks"></strong></span>
+        </div>
+        <div class="performance-id"></div>
       </div>
       <div class="row-actions">
         <button class="duplicate-performance button ghost compact" type="button">複製</button>
@@ -538,6 +583,6 @@
   <script src="./js/page-text-parser.js?v=0.20"></script>
   <script src="./js/known-song-cache.js?v=0.20"></script>
   <script src="./js/spotify-client.js?v=0.19"></script>
-  <script src="./js/app.js?v=0.27"></script>
+  <script src="./js/app.js?v=0.28"></script>
 </body>
 </html>

@@ -33,6 +33,8 @@
     selectedEventId: null,
     expandedEventSeries: new Set(),
     showNumberedOnly: false,
+    eventSearchQuery: "",
+    eventSortMode: "newest",
     editingPerformanceIndex: null,
     draftSetlist: [],
     importDraft: null,
@@ -65,6 +67,9 @@
     eventSeries: $("#event-series"),
     eventNumberedLive: $("#event-numbered-live"),
     numberedLiveFilter: $("#numbered-live-filter"),
+    eventSearch: $("#event-search"),
+    eventSort: $("#event-sort"),
+    eventListSummary: $("#event-list-summary"),
     sourceName: $("#source-name"),
     sourceUrl: $("#source-url"),
     eventErrors: $("#event-errors"),
@@ -476,18 +481,76 @@
     return SERIES_DISPLAY_NAMES[key] || key;
   }
 
+  function normalizeEventSearch(value) {
+    return String(value ?? "").normalize("NFKC").toLocaleLowerCase("ja").trim();
+  }
+
+  function eventDates(event) {
+    return event.performances
+      .map((performance) => String(performance.date || ""))
+      .filter(Boolean)
+      .sort();
+  }
+
+  function latestEventDate(event) {
+    return eventDates(event).at(-1) || "";
+  }
+
+  function eventDateLabel(event) {
+    const dates = eventDates(event);
+    if (!dates.length) return "日付未設定";
+    const format = (date) => date.replaceAll("-", ".");
+    if (dates.length === 1 || dates[0] === dates.at(-1)) return format(dates[0]);
+    return `${format(dates[0])} — ${format(dates.at(-1))}`;
+  }
+
+  function eventMatchesSearch(event, query) {
+    if (!query) return true;
+    const searchable = [
+      event.title,
+      event.id,
+      ...(event.series || []),
+      ...(event.series || []).map((series) => eventSeriesLabel(series)),
+      ...event.performances.flatMap((performance) => [
+        performance.label,
+        performance.id,
+        performance.date,
+        performance.venue?.name,
+        performance.venue?.city
+      ])
+    ];
+    return normalizeEventSearch(searchable.filter(Boolean).join(" ")).includes(query);
+  }
+
+  function sortEventsForCatalog(events) {
+    return [...events].sort((left, right) => {
+      if (state.eventSortMode === "title") {
+        return left.title.localeCompare(right.title, "ja");
+      }
+      const leftDate = latestEventDate(left);
+      const rightDate = latestEventDate(right);
+      if (!leftDate && !rightDate) return left.title.localeCompare(right.title, "ja");
+      if (!leftDate) return 1;
+      if (!rightDate) return -1;
+      const compared = leftDate.localeCompare(rightDate);
+      return state.eventSortMode === "oldest" ? compared : -compared;
+    });
+  }
+
   function groupedEventsBySeries() {
     const groups = new Map();
-    const visibleEvents = state.showNumberedOnly
+    const numberedEvents = state.showNumberedOnly
       ? state.database.events.filter((event) => event.isNumberedLive === true)
       : state.database.events;
+    const query = normalizeEventSearch(state.eventSearchQuery);
+    const visibleEvents = numberedEvents.filter((event) => eventMatchesSearch(event, query));
     for (const event of visibleEvents) {
       const key = eventSeriesKey(event);
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(event);
     }
     return [...groups.entries()]
-      .map(([key, events]) => ({ key, label: eventSeriesLabel(key), events }))
+      .map(([key, events]) => ({ key, label: eventSeriesLabel(key), events: sortEventsForCatalog(events) }))
       .sort((left, right) => {
         const leftOrder = SERIES_DISPLAY_ORDER.indexOf(left.key);
         const rightOrder = SERIES_DISPLAY_ORDER.indexOf(right.key);
@@ -501,14 +564,27 @@
   }
 
   function renderEventList() {
+    const previousScrollTop = elements.eventList.scrollTop;
     elements.eventList.replaceChildren();
     const groups = groupedEventsBySeries();
+    const visibleCount = groups.reduce((sum, group) => sum + group.events.length, 0);
+    const totalCount = state.database.events.length;
+    const totalPerformances = state.database.events.reduce(
+      (sum, event) => sum + event.performances.length,
+      0
+    );
+    const hasFilter = Boolean(normalizeEventSearch(state.eventSearchQuery)) || state.showNumberedOnly;
+    elements.eventListSummary.textContent = hasFilter
+      ? `${visibleCount} / ${totalCount}イベントを表示`
+      : `${totalCount}イベント・${totalPerformances}公演`;
     if (!groups.length) {
       const empty = document.createElement("p");
       empty.className = "event-list-empty";
-      empty.textContent = state.showNumberedOnly
-        ? "ナンバリング公演のフラグが付いたイベントはありません。"
-        : "イベントがありません。";
+      empty.textContent = normalizeEventSearch(state.eventSearchQuery)
+        ? "検索条件に合う公演データがありません。"
+        : state.showNumberedOnly
+          ? "ナンバリング公演のフラグが付いたイベントはありません。"
+          : "イベントがありません。";
       elements.eventList.append(empty);
       return;
     }
@@ -519,7 +595,9 @@
       const containsSelected = group.events.some(
         (event) => event.id === state.selectedEventId
       );
-      details.open = containsSelected || state.expandedEventSeries.has(group.key);
+      details.open = Boolean(normalizeEventSearch(state.eventSearchQuery))
+        || containsSelected
+        || state.expandedEventSeries.has(group.key);
 
       const summary = document.createElement("summary");
       summary.className = "event-series-summary";
@@ -538,11 +616,29 @@
         const button = document.createElement("button");
         button.type = "button";
         button.className = `event-item${event.id === state.selectedEventId ? " active" : ""}`;
+        if (event.id === state.selectedEventId) button.setAttribute("aria-current", "true");
         const performanceCount = event.performances.length;
-        const numberedLabel = event.isNumberedLive ? " / ナンバリング" : "";
+        const trackCount = event.performances.reduce(
+          (sum, performance) => sum + performance.setlist.length,
+          0
+        );
+        const numberedLabel = event.isNumberedLive
+          ? '<span class="event-item-badge">ナンバリング</span>'
+          : "";
         button.innerHTML = `
-          <span class="event-item-title">${escapeHtml(event.title)}</span>
-          <span class="event-item-meta">${escapeHtml(event.id)} / ${performanceCount}公演${numberedLabel}</span>
+          <span class="event-item-heading">
+            <span class="event-item-title">${escapeHtml(event.title)}</span>
+            <span class="event-item-arrow" aria-hidden="true">→</span>
+          </span>
+          <span class="event-item-facts">
+            <span>${escapeHtml(eventDateLabel(event))}</span>
+            <span>${performanceCount}公演</span>
+            <span>${trackCount}曲</span>
+          </span>
+          <span class="event-item-bottom">
+            <span class="event-item-id">${escapeHtml(event.id)}</span>
+            ${numberedLabel}
+          </span>
         `;
         button.addEventListener("click", () => {
           readEventFormIntoState(false);
@@ -563,6 +659,7 @@
       });
       elements.eventList.append(details);
     }
+    elements.eventList.scrollTop = previousScrollTop;
   }
 
   function renderEditor() {
@@ -597,12 +694,14 @@
     const template = $("#performance-card-template");
     event.performances.forEach((performance, index) => {
       const fragment = template.content.cloneNode(true);
+      fragment.querySelector(".performance-number").textContent = String(index + 1).padStart(2, "0");
       fragment.querySelector(".performance-label").textContent = performance.label;
       const date = performance.date || "日付未設定";
       const venue = performance.venue.name || "会場未設定";
-      fragment.querySelector(".performance-meta").textContent = `${date} / ${venue}`;
-      fragment.querySelector(".performance-tracks").textContent =
-        `${performance.setlist.length}曲 / ID: ${performance.id}`;
+      fragment.querySelector(".performance-date").textContent = date.replaceAll("-", ".");
+      fragment.querySelector(".performance-venue").textContent = venue;
+      fragment.querySelector(".performance-tracks").textContent = `${performance.setlist.length}曲`;
+      fragment.querySelector(".performance-id").textContent = `ID: ${performance.id}`;
 
       fragment.querySelector(".edit-performance").addEventListener("click", () => openPerformance(index));
       fragment.querySelector(".duplicate-performance").addEventListener("click", () => duplicatePerformance(index));
@@ -3003,6 +3102,14 @@
   $("#new-event-button").addEventListener("click", newEvent);
   elements.numberedLiveFilter.addEventListener("change", () => {
     state.showNumberedOnly = elements.numberedLiveFilter.checked;
+    renderEventList();
+  });
+  elements.eventSearch.addEventListener("input", () => {
+    state.eventSearchQuery = elements.eventSearch.value;
+    renderEventList();
+  });
+  elements.eventSort.addEventListener("change", () => {
+    state.eventSortMode = elements.eventSort.value;
     renderEventList();
   });
   $("#save-event-button").addEventListener("click", saveEvent);

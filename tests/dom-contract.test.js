@@ -115,8 +115,19 @@ test("管理画面の公演一覧をシリーズごとのプルダウンで表�
   assert.match(app, /function groupedEventsBySeries\(\)/);
   assert.match(app, /document\.createElement\("details"\)/);
   assert.match(app, /className = "event-series-summary"/);
-  assert.match(app, /details\.open = containsSelected \|\| state\.expandedEventSeries\.has\(group\.key\)/);
+  assert.match(app, /details\.open = Boolean\(normalizeEventSearch\(state\.eventSearchQuery\)\)[\s\S]*?\|\| containsSelected[\s\S]*?\|\| state\.expandedEventSeries\.has\(group\.key\)/);
   assert.match(app, /SERIES_DISPLAY_NAMES/);
+});
+
+test("管理画面の公演一覧を検索・並び替えでき、日付・公演数・曲数を表示する", () => {
+  assert.match(html, /id="event-search"[^>]*type="search"/);
+  assert.match(html, /id="event-sort"/);
+  assert.match(html, /id="event-list-summary"/);
+  assert.match(app, /function eventMatchesSearch\(event, query\)/);
+  assert.match(app, /function sortEventsForCatalog\(events\)/);
+  assert.match(app, /event\.performances\.flatMap/);
+  assert.match(app, /<span>\$\{performanceCount\}公演<\/span>/);
+  assert.match(app, /<span>\$\{trackCount\}曲<\/span>/);
 });
 
 test("ナンバリング公演は手動フラグだけで絞り込む", () => {
