@@ -121,11 +121,13 @@ GitHub Pagesへ公開する場合は、公開ページのルートURLも追加�
 https://ユーザー名.github.io/リポジトリ名/
 ```
 
-管理画面の認証にはAuthorization Code with PKCEを使用するため、Client Secretは不要です。認証情報はlocalStorageではなく、そのタブのsessionStorageにだけ保持します。
+管理画面の認証にはAuthorization Code with PKCEを使用するため、Client Secretは不要です。接続情報は同じブラウザで再利用し、認証中だけ必要なPKCE確認情報はそのタブのsessionStorageに保持します。
 
 公開ページの閲覧者はSpotifyへ接続しません。Cloudflare Workerに保存した作成用アカウントの認証情報を使い、`playlist-modify-private` 権限で共有用プレイリストを作成します。認証情報はWorker Secretだけに保存し、公開JavaScriptやGitHubへ含めません。
 
 管理画面のSpotify検索語には曲名だけを使用します。`104期 Ver.` などのバージョン欄があっても、Spotify側の曲名が完全一致で一意なら自動適用します。同じ曲がシングルとアルバムの両方に収録されていてもISRCが同じなら同一音源としてまとめます。別アーティストや異なるISRCの同名曲は自動決定せず、手動選択に回します。
+
+Spotifyの接続情報は管理画面を開いたブラウザへ保存し、アクセストークンの期限が切れた場合も更新トークンで自動再接続します。「接続解除」を押した場合やSpotify側で接続が失効した場合だけ、再認証が必要です。PKCEの一時的な確認情報は認証中のタブにだけ保持します。
 
 ## Cloudflare Worker
 

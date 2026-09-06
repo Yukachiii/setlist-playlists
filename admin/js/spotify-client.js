@@ -26,6 +26,11 @@
     }
   }
 
+  function authStorage() {
+    const appWindow = browserWindow();
+    return appWindow.localStorage || appWindow.sessionStorage;
+  }
+
   function redirectUri() {
     const appWindow = browserWindow();
     const url = new URL(appWindow.location.href);
@@ -57,15 +62,33 @@
   }
 
   function storedAuth() {
-    return readJson(browserWindow().sessionStorage, AUTH_STORAGE_KEY);
+    const appWindow = browserWindow();
+    const storage = authStorage();
+    const saved = readJson(storage, AUTH_STORAGE_KEY);
+    if (saved) return saved;
+
+    // Keep an already connected session when upgrading from the former
+    // tab-only storage to persistent browser storage.
+    if (storage !== appWindow.sessionStorage) {
+      const legacy = readJson(appWindow.sessionStorage, AUTH_STORAGE_KEY);
+      if (legacy) {
+        storage.setItem(AUTH_STORAGE_KEY, JSON.stringify(legacy));
+        appWindow.sessionStorage.removeItem(AUTH_STORAGE_KEY);
+        return legacy;
+      }
+    }
+    return null;
   }
 
   function saveAuth(value) {
-    browserWindow().sessionStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(value));
+    const appWindow = browserWindow();
+    authStorage().setItem(AUTH_STORAGE_KEY, JSON.stringify(value));
+    appWindow.sessionStorage.removeItem(AUTH_STORAGE_KEY);
   }
 
   function clearAuth() {
     const appWindow = browserWindow();
+    if (appWindow.localStorage) appWindow.localStorage.removeItem(AUTH_STORAGE_KEY);
     appWindow.sessionStorage.removeItem(AUTH_STORAGE_KEY);
     appWindow.sessionStorage.removeItem(PKCE_STORAGE_KEY);
   }
@@ -101,7 +124,9 @@
     });
     const body = await response.json().catch(() => ({}));
     if (!response.ok) {
-      throw new Error(body.error_description || body.error || "Spotify認証に失敗しました。");
+      const error = new Error(body.error_description || body.error || "Spotify認証に失敗しました。");
+      error.code = body.error || "";
+      throw error;
     }
     return body;
   }
@@ -131,14 +156,22 @@
 
   async function refreshAccessToken(auth) {
     if (!auth?.refreshToken) throw new Error("Spotifyへ再接続してください。");
-    const token = await tokenRequest({
-      client_id: CLIENT_ID,
-      grant_type: "refresh_token",
-      refresh_token: auth.refreshToken
-    });
-    const refreshed = tokenRecord(token, auth);
-    saveAuth(refreshed);
-    return refreshed;
+    try {
+      const token = await tokenRequest({
+        client_id: CLIENT_ID,
+        grant_type: "refresh_token",
+        refresh_token: auth.refreshToken
+      });
+      const refreshed = tokenRecord(token, auth);
+      saveAuth(refreshed);
+      return refreshed;
+    } catch (error) {
+      if (error?.code === "invalid_grant") {
+        clearAuth();
+        throw new Error("Spotify接続の有効期限が切れました。もう一度接続してください。");
+      }
+      throw error;
+    }
   }
 
   function cleanCallbackUrl() {

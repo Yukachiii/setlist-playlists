@@ -3,6 +3,21 @@ const assert = require("node:assert/strict");
 
 const spotify = require("../admin/js/spotify-client.js");
 
+function memoryStorage() {
+  const values = new Map();
+  return {
+    getItem(key) {
+      return values.has(key) ? values.get(key) : null;
+    },
+    setItem(key, value) {
+      values.set(key, String(value));
+    },
+    removeItem(key) {
+      values.delete(key);
+    }
+  };
+}
+
 test("管理画面のSpotify認証は公開ページのルートURLへ戻す", () => {
   const originalWindow = global.window;
   global.window = { location: { href: "http://127.0.0.1:8765/admin/" } };
@@ -10,6 +25,61 @@ test("管理画面のSpotify認証は公開ページのルートURLへ戻す", (
     assert.equal(spotify.redirectUri(), "http://127.0.0.1:8765/");
     global.window.location.href = "https://example.github.io/setlists/admin/";
     assert.equal(spotify.redirectUri(), "https://example.github.io/setlists/");
+  } finally {
+    if (originalWindow === undefined) delete global.window;
+    else global.window = originalWindow;
+  }
+});
+
+test("Spotify接続情報をブラウザ終了後も残る領域へ保存して再利用する", () => {
+  const originalWindow = global.window;
+  const localStorage = memoryStorage();
+  const sessionStorage = memoryStorage();
+  localStorage.setItem(
+    "setlist_spotify_auth_v01",
+    JSON.stringify({
+      accessToken: "persistent-token",
+      refreshToken: "persistent-refresh-token",
+      expiresAt: Date.now() + 60000,
+      profile: { id: "admin" }
+    })
+  );
+  global.window = {
+    location: { href: "http://127.0.0.1:8765/admin/" },
+    localStorage,
+    sessionStorage
+  };
+
+  try {
+    assert.equal(spotify.isConnected(), true);
+    assert.equal(spotify.profile().id, "admin");
+    spotify.disconnect();
+    assert.equal(localStorage.getItem("setlist_spotify_auth_v01"), null);
+    assert.equal(spotify.isConnected(), false);
+  } finally {
+    if (originalWindow === undefined) delete global.window;
+    else global.window = originalWindow;
+  }
+});
+
+test("旧版のタブ内Spotify接続情報を永続保存へ移行する", () => {
+  const originalWindow = global.window;
+  const localStorage = memoryStorage();
+  const sessionStorage = memoryStorage();
+  sessionStorage.setItem(
+    "setlist_spotify_auth_v01",
+    JSON.stringify({ accessToken: "legacy-token", expiresAt: Date.now() + 60000 })
+  );
+  global.window = {
+    location: { href: "http://127.0.0.1:8765/admin/" },
+    localStorage,
+    sessionStorage
+  };
+
+  try {
+    assert.equal(spotify.isConnected(), true);
+    assert.ok(localStorage.getItem("setlist_spotify_auth_v01"));
+    assert.equal(sessionStorage.getItem("setlist_spotify_auth_v01"), null);
   } finally {
     if (originalWindow === undefined) delete global.window;
     else global.window = originalWindow;
