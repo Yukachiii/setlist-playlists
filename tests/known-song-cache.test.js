@@ -30,7 +30,7 @@ function eventsWith(...songs) {
   return [{ performances: [{ setlist: songs }] }];
 }
 
-test("登録済み曲のアルバム名とジャケットURLを再利用する", () => {
+test("登録済みの同名・同バージョン曲からSpotify情報を再利用する", () => {
   const index = cache.buildKnownSongIndex(eventsWith(
     song({
       title: "AWOKE",
@@ -42,18 +42,10 @@ test("登録済み曲のアルバム名とジャケットURLを再利用する",
   ));
   const known = cache.findKnownSong(index, "AWOKE", "");
 
-  assert.equal(known.track.album.name, "Dream Believers");
-  assert.equal(known.track.album.images[0].url, "https://example.com/awoke.jpg");
-});
-
-test("登録済みの同名・同バージョン曲からSpotify情報を再利用する", () => {
-  const index = cache.buildKnownSongIndex(eventsWith(
-    song({ title: "AWOKE", artist: "DOLLCHESTRA", trackId: "track-a" })
-  ));
-  const known = cache.findKnownSong(index, "AWOKE", "");
-
   assert.equal(known.track.id, "track-a");
   assert.equal(known.artist, "DOLLCHESTRA");
+  assert.equal(known.track.album.name, "Dream Believers");
+  assert.equal(known.track.album.images[0].url, "https://example.com/awoke.jpg");
 });
 
 test("同名曲に異なるTrack IDが保存されていれば自動適用しない", () => {

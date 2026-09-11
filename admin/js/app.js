@@ -417,6 +417,7 @@
     state.selectedEventId = state.database.events.some((event) => event.id === preferred)
       ? preferred
       : state.database.events[0]?.id ?? null;
+    focusEventSeries(selectedEvent());
 
     render();
     setSaveState("saved");
@@ -479,6 +480,11 @@
   function eventSeriesLabel(key) {
     if (key === "__unknown__") return "シリーズ未設定";
     return SERIES_DISPLAY_NAMES[key] || key;
+  }
+
+  function focusEventSeries(event) {
+    state.expandedEventSeries.clear();
+    if (event) state.expandedEventSeries.add(eventSeriesKey(event));
   }
 
   function normalizeEventSearch(value) {
@@ -567,6 +573,7 @@
     const previousScrollTop = elements.eventList.scrollTop;
     elements.eventList.replaceChildren();
     const groups = groupedEventsBySeries();
+    const searchActive = Boolean(normalizeEventSearch(state.eventSearchQuery));
     const visibleCount = groups.reduce((sum, group) => sum + group.events.length, 0);
     const totalCount = state.database.events.length;
     const totalPerformances = state.database.events.reduce(
@@ -592,12 +599,7 @@
       const details = document.createElement("details");
       details.className = "event-series-group";
       details.dataset.series = group.key;
-      const containsSelected = group.events.some(
-        (event) => event.id === state.selectedEventId
-      );
-      details.open = Boolean(normalizeEventSearch(state.eventSearchQuery))
-        || containsSelected
-        || state.expandedEventSeries.has(group.key);
+      details.open = searchActive || state.expandedEventSeries.has(group.key);
 
       const summary = document.createElement("summary");
       summary.className = "event-series-summary";
@@ -632,18 +634,14 @@
           </span>
           <span class="event-item-facts">
             <span>${escapeHtml(eventDateLabel(event))}</span>
-            <span>${performanceCount}公演</span>
-            <span>${trackCount}曲</span>
-          </span>
-          <span class="event-item-bottom">
-            <span class="event-item-id">${escapeHtml(event.id)}</span>
+            <span>${performanceCount}公演・${trackCount}曲</span>
             ${numberedLabel}
           </span>
         `;
         button.addEventListener("click", () => {
           readEventFormIntoState(false);
           state.selectedEventId = event.id;
-          state.expandedEventSeries.add(group.key);
+          focusEventSeries(event);
           localStorage.setItem(SELECTED_KEY, event.id);
           render();
         });
@@ -651,8 +649,15 @@
       }
       details.append(eventItems);
       details.addEventListener("toggle", () => {
+        if (searchActive) return;
         if (details.open) {
+          state.expandedEventSeries.clear();
           state.expandedEventSeries.add(group.key);
+          elements.eventList
+            .querySelectorAll(".event-series-group[open]")
+            .forEach((sibling) => {
+              if (sibling !== details) sibling.open = false;
+            });
         } else {
           state.expandedEventSeries.delete(group.key);
         }
@@ -775,6 +780,7 @@
     const event = blankEvent();
     state.database.events.push(event);
     state.selectedEventId = event.id;
+    focusEventSeries(event);
     setDirty();
     render();
     elements.eventTitle.focus();
@@ -792,6 +798,7 @@
     });
     state.database.events.push(copy);
     state.selectedEventId = copy.id;
+    focusEventSeries(copy);
     setDirty();
     render();
   }
@@ -803,6 +810,7 @@
     const index = state.database.events.indexOf(event);
     state.database.events.splice(index, 1);
     state.selectedEventId = state.database.events[Math.max(0, index - 1)]?.id || null;
+    focusEventSeries(selectedEvent());
     persist();
     render();
   }
@@ -2335,6 +2343,7 @@
     }
     targetEvent.performances.push(...performances);
     state.selectedEventId = targetEvent.id;
+    focusEventSeries(targetEvent);
     persist();
     if (state.llfansSyncActive) recordLlFansSyncResult("added");
     closePageImport(false);
@@ -3052,6 +3061,7 @@
         state.database.events.push(event);
       }
       state.selectedEventId = event.id;
+      focusEventSeries(event);
     }
     persist();
     render();
@@ -3095,6 +3105,7 @@
     ]
       .forEach((element) => element.addEventListener(eventName, () => {
         readEventFormIntoState(true);
+        if (element === elements.eventSeries) focusEventSeries(selectedEvent());
         renderEventList();
       }));
   });

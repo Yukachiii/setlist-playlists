@@ -3,10 +3,25 @@ const assert = require("node:assert/strict");
 
 const app = require("../js/public-app.js");
 
-test("Spotify Track IDをURIから取得できる", () => {
+test("Spotify登録状態をURIと未配信設定から判定する", () => {
   const trackId = "abcdefghijklmnopqrstuv";
   assert.equal(app.spotifyTrackId({ spotify: { uri: `spotify:track:${trackId}` } }), trackId);
   assert.equal(app.spotifyTrackId({ spotify: { uri: "spotify:track:short" } }), "");
+
+  assert.equal(app.validSpotifyUri({ spotify: { uri: `spotify:track:${trackId}` } }), true);
+  assert.equal(app.validSpotifyUri({ spotify: { uri: "spotify:track:a" } }), false);
+  assert.equal(app.validSpotifyUri({ spotify: { uri: null } }), false);
+
+  const unavailable = {
+    spotifyMatchPolicy: "unavailable",
+    spotify: { status: "unmatched", uri: `spotify:track:${trackId}` }
+  };
+  const unregistered = { spotifyMatchPolicy: "exact", spotify: { status: "unmatched" } };
+  assert.equal(app.validSpotifyUri(unavailable), false);
+  assert.equal(app.isSpotifyUnavailable(unavailable), true);
+  assert.equal(app.isSpotifyUnavailable(unregistered), false);
+  assert.equal(app.spotifyAvailabilityLabel(unavailable), "未配信");
+  assert.equal(app.spotifyAvailabilityLabel(unregistered), "未登録");
 });
 
 test("保存済みジャケットURLはHTTPSだけを使用する", () => {
@@ -23,35 +38,23 @@ test("保存済みジャケットURLはHTTPSだけを使用する", () => {
 test("Spotify oEmbedからジャケットURLを取得する", async () => {
   const originalFetch = global.fetch;
   const trackId = "abcdefghijklmnopqrstuv";
-  global.fetch = async () => ({
-    ok: true,
-    json: async () => ({ thumbnail_url: "https://example.com/oembed.jpg" })
-  });
+  let requestedUrl = "";
+  global.fetch = async (url) => {
+    requestedUrl = String(url);
+    return {
+      ok: true,
+      json: async () => ({ thumbnail_url: "https://example.com/oembed.jpg" })
+    };
+  };
 
   try {
     assert.equal(await app.fetchSpotifyArtwork(trackId), "https://example.com/oembed.jpg");
+    const request = new URL(requestedUrl);
+    assert.equal(request.origin + request.pathname, "https://open.spotify.com/oembed");
+    assert.equal(request.searchParams.get("url"), `https://open.spotify.com/track/${trackId}`);
   } finally {
     global.fetch = originalFetch;
   }
-});
-
-test("Spotify Track URIは22文字のtrack URIだけを有効にする", () => {
-  assert.equal(app.validSpotifyUri({ spotify: { uri: "spotify:track:1234567890123456789012" } }), true);
-  assert.equal(app.validSpotifyUri({ spotify: { uri: "spotify:track:a" } }), false);
-  assert.equal(app.validSpotifyUri({ spotify: { uri: null } }), false);
-  assert.equal(app.validSpotifyUri({
-    spotifyMatchPolicy: "unavailable",
-    spotify: { uri: "spotify:track:1234567890123456789012" }
-  }), false);
-});
-
-test("未配信と未登録を区別する", () => {
-  const unavailable = { spotifyMatchPolicy: "unavailable", spotify: { status: "unmatched" } };
-  const unregistered = { spotifyMatchPolicy: "exact", spotify: { status: "unmatched" } };
-  assert.equal(app.isSpotifyUnavailable(unavailable), true);
-  assert.equal(app.isSpotifyUnavailable(unregistered), false);
-  assert.equal(app.spotifyAvailabilityLabel(unavailable), "未配信");
-  assert.equal(app.spotifyAvailabilityLabel(unregistered), "未登録");
 });
 
 test("日付を日本語の曜日付きで表示する", () => {

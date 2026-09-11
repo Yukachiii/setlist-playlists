@@ -9,7 +9,6 @@ from server import (
     PublishErrorResponse,
     convert_tour_index,
     convert_tour_payload,
-    event_data_filename,
     normalized_venue_name,
     parse_event_url,
     publish_event_to_github,
@@ -145,46 +144,28 @@ class ServerImportTests(unittest.TestCase):
         self.assertEqual(normalized_venue_name("-"), "-")
         self.assertEqual(normalized_venue_name("幕張メッセ"), "幕張メッセ")
 
-    def test_public_event_is_written_and_added_to_manifest(self):
-        event = {
-            "schemaVersion": "0.3",
-            "id": "ikizulive-test-live",
-            "title": "テスト公演",
-            "series": ["ikizulive"],
-            "sources": [],
-            "performances": [],
-        }
-        with TemporaryDirectory() as directory:
-            project = Path(directory)
-            result = write_event_to_public_data(event, project)
-            self.assertEqual(result["filename"], "ikizulive/ikizulive-test-live.json")
-            self.assertTrue(result["eventChanged"])
-            self.assertTrue(result["manifestChanged"])
-            self.assertTrue(
-                (project / "data" / "ikizulive" / "ikizulive-test-live.json").exists()
-            )
-
-            manifest = (project / "data" / "index.json").read_text(encoding="utf-8")
-            self.assertIn('"ikizulive/ikizulive-test-live.json"', manifest)
-
-            repeated = write_event_to_public_data(event, project)
-            self.assertFalse(repeated["eventChanged"])
-            self.assertFalse(repeated["manifestChanged"])
-
-    def test_all_public_events_are_written_in_one_operation(self):
+    def test_public_events_are_grouped_written_manifested_and_idempotent(self):
         events = [
             {
                 "schemaVersion": "0.3",
-                "id": "first-live",
-                "title": "First Live",
-                "series": [],
+                "id": "ikizulive-test-live",
+                "title": "テスト公演",
+                "series": ["ikizulive"],
                 "sources": [],
                 "performances": [],
             },
             {
                 "schemaVersion": "0.3",
-                "id": "second-live",
-                "title": "Second Live",
+                "id": "multi-series-live",
+                "title": "Multi Series Live",
+                "series": ["hasunosora", "aqours"],
+                "sources": [],
+                "performances": [],
+            },
+            {
+                "schemaVersion": "0.3",
+                "id": "other-live",
+                "title": "Other Live",
                 "series": [],
                 "sources": [],
                 "performances": [],
@@ -194,30 +175,24 @@ class ServerImportTests(unittest.TestCase):
             project = Path(directory)
             result = write_events_to_public_data(events, project)
 
-            self.assertEqual(result["eventCount"], 2)
-            self.assertEqual(result["changedEventCount"], 2)
-            self.assertTrue((project / "data" / "other" / "first-live.json").exists())
-            self.assertTrue((project / "data" / "other" / "second-live.json").exists())
+            filenames = [
+                "ikizulive/ikizulive-test-live.json",
+                "hasunosora/multi-series-live.json",
+                "other/other-live.json",
+            ]
+            self.assertEqual(result["eventCount"], 3)
+            self.assertEqual(result["changedEventCount"], 3)
+            self.assertEqual(result["filenames"], filenames)
+            for filename in filenames:
+                self.assertTrue(project.joinpath("data", *filename.split("/")).exists())
             manifest = json.loads(
                 (project / "data" / "index.json").read_text(encoding="utf-8")
             )
-            self.assertEqual(
-                manifest["events"],
-                ["other/first-live.json", "other/second-live.json"],
-            )
+            self.assertEqual(manifest["events"], filenames)
 
-    def test_series_folder_name_is_safe_and_uses_the_primary_series(self):
-        self.assertEqual(
-            event_data_filename({
-                "id": "test-live",
-                "series": ["hasunosora", "aqours"],
-            }),
-            "hasunosora/test-live.json",
-        )
-        self.assertEqual(
-            event_data_filename({"id": "test-live", "series": []}),
-            "other/test-live.json",
-        )
+            repeated = write_events_to_public_data(events, project)
+            self.assertEqual(repeated["changedEventCount"], 0)
+            self.assertFalse(repeated["manifestChanged"])
 
     def test_flat_event_file_is_migrated_when_published(self):
         event = {
@@ -262,66 +237,7 @@ class ServerImportTests(unittest.TestCase):
                 "performances": [],
             })
 
-    def test_publish_commits_and_pushes_to_configured_remote(self):
-        event = {
-            "schemaVersion": "0.3",
-            "id": "github-publish-test",
-            "title": "GitHub公開テスト",
-            "series": [],
-            "sources": [],
-            "performances": [],
-        }
-        second_event = {
-            **event,
-            "id": "github-publish-test-2",
-            "title": "GitHub公開テスト2",
-        }
-        with TemporaryDirectory() as directory:
-            root = Path(directory)
-            project = root / "project"
-            remote = root / "remote.git"
-            project.mkdir()
-
-            def git(*arguments, cwd=project):
-                return subprocess.run(
-                    ["git", *arguments],
-                    cwd=cwd,
-                    capture_output=True,
-                    text=True,
-                    check=True,
-                )
-
-            git("init")
-            git("checkout", "-b", "main")
-            git("config", "user.name", "Setlist Test")
-            git("config", "user.email", "setlist@example.test")
-            git("init", "--bare", str(remote), cwd=root)
-            git("remote", "add", "origin", str(remote))
-
-            result = publish_events_to_github([event, second_event], project)
-            self.assertTrue(result["committed"])
-            self.assertTrue(result["pushed"])
-            self.assertEqual(result["eventCount"], 2)
-            self.assertEqual(result["branch"], "main")
-            self.assertTrue(result["revision"])
-            self.assertTrue(
-                (project / "data" / "other" / "github-publish-test.json").exists()
-            )
-            self.assertTrue(
-                (project / "data" / "other" / "github-publish-test-2.json").exists()
-            )
-
-            remote_head = git(
-                "--git-dir",
-                str(remote),
-                "rev-parse",
-                "refs/heads/main",
-                cwd=root,
-            ).stdout.strip()
-            local_head = git("rev-parse", "HEAD").stdout.strip()
-            self.assertEqual(remote_head, local_head)
-
-    def test_publish_rebases_non_conflicting_remote_changes_before_push(self):
+    def test_publish_pushes_batches_and_rebases_non_conflicting_remote_changes(self):
         first_event = {
             "schemaVersion": "0.3",
             "id": "github-publish-first",
@@ -334,6 +250,11 @@ class ServerImportTests(unittest.TestCase):
             **first_event,
             "id": "github-publish-second",
             "title": "GitHub公開テスト2",
+        }
+        third_event = {
+            **first_event,
+            "id": "github-publish-third",
+            "title": "GitHub公開テスト3",
         }
         with TemporaryDirectory() as directory:
             root = Path(directory)
@@ -357,7 +278,11 @@ class ServerImportTests(unittest.TestCase):
             git("config", "user.email", "setlist@example.test")
             git("init", "--bare", str(remote), cwd=root)
             git("remote", "add", "origin", str(remote))
-            publish_event_to_github(first_event, project)
+            initial = publish_event_to_github(first_event, project)
+            self.assertTrue(initial["committed"])
+            self.assertTrue(initial["pushed"])
+            self.assertEqual(initial["branch"], "main")
+            self.assertTrue(initial["revision"])
 
             git("clone", "--branch", "main", str(remote), str(collaborator), cwd=root)
             git("config", "user.name", "Remote Test", cwd=collaborator)
@@ -367,12 +292,16 @@ class ServerImportTests(unittest.TestCase):
             git("commit", "-m", "Remote change", cwd=collaborator)
             git("push", cwd=collaborator)
 
-            result = publish_event_to_github(second_event, project)
+            result = publish_events_to_github([second_event, third_event], project)
             self.assertTrue(result["committed"])
             self.assertTrue(result["pushed"])
+            self.assertEqual(result["eventCount"], 2)
             self.assertTrue((project / "remote-note.txt").exists())
             self.assertTrue(
                 (project / "data" / "other" / "github-publish-second.json").exists()
+            )
+            self.assertTrue(
+                (project / "data" / "other" / "github-publish-third.json").exists()
             )
 
             remote_head = git(

@@ -98,171 +98,131 @@ function track(id, name, artist, options = {}) {
   return value;
 }
 
-test("同名曲が一意ならSpotify曲を自動選択する", () => {
-  const result = spotify.chooseTrackCandidate(
-    [track("1", "What is my LIFE?", "いきづらい部！")],
-    { title: "What is my LIFE?", version: "", artistHint: "" }
-  );
-
-  assert.equal(result.status, "matched");
-  assert.equal(result.track.id, "1");
-});
-
-test("同名曲が複数アーティストにまたがる場合は自動選択しない", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("1", "同じ曲", "Artist A"),
-      track("2", "同じ曲", "Artist B")
-    ],
-    { title: "同じ曲", version: "", artistHint: "" }
-  );
-
-  assert.equal(result.status, "ambiguous");
-  assert.equal(result.track, null);
-});
-
-test("候補名が曲名と一致しなければ未一致にする", () => {
-  const result = spotify.chooseTrackCandidate(
-    [track("1", "別の曲", "Artist")],
-    { title: "探している曲", version: "", artistHint: "" }
-  );
-
-  assert.equal(result.status, "unmatched");
-});
-
-test("バージョン名まで完全一致する音源を優先して自動選択する", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("original", "AWOKE", "DOLLCHESTRA"),
-      track("version", "AWOKE (104期 Ver.)", "DOLLCHESTRA")
-    ],
-    { title: "AWOKE", version: "104期 Ver.", artistHint: "DOLLCHESTRA" }
-  );
-
-  assert.equal(result.status, "matched");
-  assert.equal(result.matchKind, "version");
-  assert.equal(result.track.id, "version");
-});
-
-test("104期 Ver.表記がSpotify曲名になくても曲名完全一致が一意なら自動選択する", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("seishun", "青春の輪郭", "DOLLCHESTRA"),
-      track("other", "青春の輪郭線", "Other Artist")
-    ],
+test("曲名一致候補は音源が一意な場合だけ自動選択する", () => {
+  const cases = [
     {
-      title: "青春の輪郭",
-      version: "104期 Ver.",
-      matchPolicy: "exact"
-    }
-  );
-
-  assert.equal(result.status, "matched");
-  assert.equal(result.matchKind, "title_unlabeled_version");
-  assert.equal(result.track.id, "seishun");
-});
-
-test("原曲フォールバック指定ならバージョン不一致時に一意の原曲を選ぶ", () => {
-  const result = spotify.chooseTrackCandidate(
-    [track("original", "永遠の一瞬", "虹ヶ咲学園スクールアイドル同好会")],
+      name: "同名曲が一意",
+      tracks: [track("1", "What is my LIFE?", "いきづらい部！")],
+      song: { title: "What is my LIFE?", version: "", artistHint: "" },
+      status: "matched",
+      trackId: "1"
+    },
     {
-      title: "永遠の一瞬",
-      version: "ショート Ver.",
-      matchPolicy: "original_fallback"
-    }
-  );
-
-  assert.equal(result.status, "matched");
-  assert.equal(result.matchKind, "original_fallback");
-  assert.equal(result.track.id, "original");
-});
-
-test("原曲フォールバックでも同名の原曲が複数なら自動選択しない", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("solo", "同じ曲", "Solo Artist"),
-      track("group", "同じ曲", "Group Artist")
-    ],
+      name: "候補名が不一致",
+      tracks: [track("1", "別の曲", "Artist")],
+      song: { title: "探している曲", version: "", artistHint: "" },
+      status: "unmatched",
+      trackId: null
+    },
     {
-      title: "同じ曲",
-      version: "ショート Ver.",
-      matchPolicy: "original_fallback"
-    }
-  );
-
-  assert.equal(result.status, "ambiguous");
-  assert.equal(result.track, null);
-});
-
-test("原曲フォールバック指定でもバージョン曲が一意ならそちらを優先する", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("original", "AWOKE", "DOLLCHESTRA"),
-      track("version", "AWOKE 104期 Ver.", "DOLLCHESTRA")
-    ],
+      name: "同名曲が複数アーティスト",
+      tracks: [track("1", "同じ曲", "Artist A"), track("2", "同じ曲", "Artist B")],
+      song: { title: "同じ曲", version: "", artistHint: "" },
+      status: "ambiguous",
+      trackId: null
+    },
     {
-      title: "AWOKE",
-      version: "104期 Ver.",
-      matchPolicy: "original_fallback"
+      name: "同一アーティストでも複数音源",
+      tracks: [track("single", "同じ曲", "Artist"), track("album", "同じ曲", "Artist")],
+      song: { title: "同じ曲", version: "", artistHint: "Artist" },
+      status: "ambiguous",
+      trackId: null
+    },
+    {
+      name: "アーティスト候補では絞り込まない",
+      tracks: [track("solo", "同じ曲", "Solo Artist"), track("group", "同じ曲", "Group Artist")],
+      song: { title: "同じ曲", version: "", artistHint: "Group Artist" },
+      status: "ambiguous",
+      trackId: null
     }
-  );
+  ];
 
-  assert.equal(result.status, "matched");
-  assert.equal(result.matchKind, "version");
-  assert.equal(result.track.id, "version");
+  for (const current of cases) {
+    const result = spotify.chooseTrackCandidate(current.tracks, current.song);
+    assert.equal(result.status, current.status, current.name);
+    assert.equal(result.track?.id ?? null, current.trackId, current.name);
+  }
 });
 
-test("同じ曲名が同じアーティストで複数件あっても自動選択しない", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("single", "同じ曲", "Artist"),
-      track("album", "同じ曲", "Artist")
-    ],
-    { title: "同じ曲", version: "", artistHint: "Artist" }
-  );
+test("バージョン指定とISRCに従ってSpotify音源を判定する", () => {
+  const cases = [
+    {
+      name: "バージョン名まで完全一致",
+      tracks: [
+        track("original", "AWOKE", "DOLLCHESTRA"),
+        track("version", "AWOKE (104期 Ver.)", "DOLLCHESTRA")
+      ],
+      song: { title: "AWOKE", version: "104期 Ver.", artistHint: "DOLLCHESTRA" },
+      status: "matched",
+      matchKind: "version",
+      trackId: "version"
+    },
+    {
+      name: "Spotify側にバージョン表記がない一意な完全一致",
+      tracks: [
+        track("seishun", "青春の輪郭", "DOLLCHESTRA"),
+        track("other", "青春の輪郭線", "Other Artist")
+      ],
+      song: { title: "青春の輪郭", version: "104期 Ver.", matchPolicy: "exact" },
+      status: "matched",
+      matchKind: "title_unlabeled_version",
+      trackId: "seishun"
+    },
+    {
+      name: "原曲フォールバック",
+      tracks: [track("original", "永遠の一瞬", "虹ヶ咲学園スクールアイドル同好会")],
+      song: { title: "永遠の一瞬", version: "ショート Ver.", matchPolicy: "original_fallback" },
+      status: "matched",
+      matchKind: "original_fallback",
+      trackId: "original"
+    },
+    {
+      name: "原曲フォールバック候補が複数",
+      tracks: [track("solo", "同じ曲", "Solo Artist"), track("group", "同じ曲", "Group Artist")],
+      song: { title: "同じ曲", version: "ショート Ver.", matchPolicy: "original_fallback" },
+      status: "ambiguous",
+      trackId: null
+    },
+    {
+      name: "フォールバックよりバージョン一致を優先",
+      tracks: [
+        track("original", "AWOKE", "DOLLCHESTRA"),
+        track("version", "AWOKE 104期 Ver.", "DOLLCHESTRA")
+      ],
+      song: { title: "AWOKE", version: "104期 Ver.", matchPolicy: "original_fallback" },
+      status: "matched",
+      matchKind: "version",
+      trackId: "version"
+    },
+    {
+      name: "同じISRCのシングル版とアルバム版",
+      tracks: [
+        track("single", "ド！ド！ド！", "みらくらぱーく！", { isrc: "JP-LA0-26-00001" }),
+        track("album", "ド！ド！ド！", "みらくらぱーく！", { isrc: "JP-LA0-26-00001" })
+      ],
+      song: { title: "ド！ド！ド！", version: "104期 Ver.", matchPolicy: "exact" },
+      status: "matched",
+      matchKind: "same_recording",
+      trackId: "single"
+    },
+    {
+      name: "異なるISRCの同名音源",
+      tracks: [
+        track("old", "同じ曲", "Artist", { isrc: "JP-AAA-24-00001" }),
+        track("new", "同じ曲", "Artist", { isrc: "JP-AAA-25-00001" })
+      ],
+      song: { title: "同じ曲", version: "104期 Ver.", matchPolicy: "exact" },
+      status: "ambiguous",
+      trackId: null
+    }
+  ];
 
-  assert.equal(result.status, "ambiguous");
-  assert.equal(result.track, null);
-});
-
-test("同じISRCのシングル版とアルバム版は同一音源として自動選択する", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("single", "ド！ド！ド！", "みらくらぱーく！", { isrc: "JP-LA0-26-00001" }),
-      track("album", "ド！ド！ド！", "みらくらぱーく！", { isrc: "JP-LA0-26-00001" })
-    ],
-    { title: "ド！ド！ド！", version: "104期 Ver.", matchPolicy: "exact" }
-  );
-
-  assert.equal(result.status, "matched");
-  assert.equal(result.matchKind, "same_recording");
-  assert.equal(result.track.id, "single");
-});
-
-test("曲名とアーティストが同じでもISRCが異なる音源は自動選択しない", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("old", "同じ曲", "Artist", { isrc: "JP-AAA-24-00001" }),
-      track("new", "同じ曲", "Artist", { isrc: "JP-AAA-25-00001" })
-    ],
-    { title: "同じ曲", version: "104期 Ver.", matchPolicy: "exact" }
-  );
-
-  assert.equal(result.status, "ambiguous");
-  assert.equal(result.track, null);
-});
-
-test("アーティスト候補は自動選択の判定に使用しない", () => {
-  const result = spotify.chooseTrackCandidate(
-    [
-      track("solo", "同じ曲", "Solo Artist"),
-      track("group", "同じ曲", "Group Artist")
-    ],
-    { title: "同じ曲", version: "", artistHint: "Group Artist" }
-  );
-
-  assert.equal(result.status, "ambiguous");
-  assert.equal(result.track, null);
+  for (const current of cases) {
+    const result = spotify.chooseTrackCandidate(current.tracks, current.song);
+    assert.equal(result.status, current.status, current.name);
+    assert.equal(result.track?.id ?? null, current.trackId, current.name);
+    if (current.matchKind) assert.equal(result.matchKind, current.matchKind, current.name);
+  }
 });
 
 test("手動選択用の検索結果はSpotify Track IDで重複を除く", () => {

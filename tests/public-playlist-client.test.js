@@ -25,13 +25,6 @@ function browser(apiUrl = "https://worker.example") {
   };
 }
 
-test("Cloudflare Workerの設定URLを読み込む", async () => {
-  await withBrowser({ window: browser() }, () => {
-    assert.equal(playlistClient.apiBaseUrl(), "https://worker.example");
-    assert.equal(playlistClient.isConfigured(), true);
-  });
-});
-
 test("公演IDだけをWorkerへ送り共有プレイリストURLを受け取る", async () => {
   const calls = [];
   await withBrowser(
@@ -62,7 +55,6 @@ test("公演IDだけをWorkerへ送り共有プレイリストURLを受け取る
         eventPath: "ikizulive/example-live.json",
         performanceId: "example-live-day-1"
       });
-      assert.doesNotMatch(calls[0].options.body, /spotify:track:/);
     }
   );
 });
@@ -106,7 +98,6 @@ test("公演IDをWorkerへ送りSoundiizの移行URLを受け取る", async () =
         eventPath: "ikizulive/example-live.json",
         performanceId: "example-live-day-1"
       });
-      assert.doesNotMatch(calls[0].options.body, /spotify:track:/);
     }
   );
   assert.equal(

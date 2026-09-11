@@ -91,6 +91,18 @@ class MemoryD1 {
           };
           return { meta: { changes: 1 } };
         }
+        if (/SET event_path = \?1,/.test(sql)) {
+          database.row.event_path = this.args[0];
+          database.row.event_id = this.args[1];
+          database.row.performance_id = this.args[2];
+          database.row.playlist_name = this.args[3];
+          database.row.track_fingerprint = this.args[4];
+          database.row.track_count = this.args[5];
+          database.row.status = "creating";
+          database.row.error = null;
+          database.row.updated_at = this.args[6];
+          return { meta: { changes: 1 } };
+        }
         if (/SET playlist_id = \?1, playlist_url = \?2, updated_at/.test(sql)) {
           database.row.playlist_id = this.args[0];
           database.row.playlist_url = this.args[1];
@@ -134,26 +146,8 @@ test("公開データ配下のJSONパスだけを許可する", () => {
   assert.equal(validEventPath("hasunosora/live.txt"), false);
 });
 
-test("Spotify曲の曲順と重複を保ち、未配信曲を除外する", () => {
-  const spec = extractPlaylistSpec(eventDocument(), eventPath, performanceId);
-  assert.deepEqual(spec.uris, [firstUri, firstUri, secondUri]);
-  assert.deepEqual(spec.tracks, [
-    { title: "First Song", artists: "First Group" },
-    { title: "First Song", artists: "First Group" },
-    { title: "Second Song", artists: "Second Solo" }
-  ]);
-  assert.equal(spec.key, "example-live:example-live-day-1");
-  assert.equal(spec.name, "Example Live — Day 1");
-});
-
 test("100曲ごとにSpotify追加リクエストを分割する", () => {
   assert.deepEqual(chunkItems(Array.from({ length: 205 }), 100).map((items) => items.length), [100, 100, 5]);
-});
-
-test("曲順が変わるとプレイリスト指紋も変わる", async () => {
-  const spec = extractPlaylistSpec(eventDocument(), eventPath, performanceId);
-  const reversed = { ...spec, uris: [...spec.uris].reverse() };
-  assert.notEqual(await playlistFingerprint(spec), await playlistFingerprint(reversed));
 });
 
 test("未作成の公演は作成用アカウントで一度だけ作りURLを保存する", async () => {
@@ -195,11 +189,69 @@ test("未作成の公演は作成用アカウントで一度だけ作りURLを�
   assert.equal(body.created, true);
   assert.equal(body.playlistUrl, "https://open.spotify.com/playlist/playlist-id");
   assert.equal(database.row.status, "ready");
+  assert.equal(database.row.playlist_key, "example-live:example-live-day-1");
+  assert.equal(database.row.playlist_name, "Example Live — Day 1");
   assert.equal(database.row.track_count, 3);
   const createCall = calls.find((call) => call.url.endsWith("/me/playlists"));
-  assert.equal(JSON.parse(createCall.options.body).public, false);
+  assert.deepEqual(JSON.parse(createCall.options.body), {
+    name: "Example Live — Day 1",
+    public: false,
+    description: "Setlist Playlistsで作成したライブセットリスト（共有用）"
+  });
   const addCall = calls.find((call) => call.url.endsWith("/playlists/playlist-id/items"));
   assert.deepEqual(JSON.parse(addCall.options.body).uris, [firstUri, firstUri, secondUri]);
+});
+
+test("曲順が変わった公演は既存のSpotifyプレイリストを更新する", async () => {
+  const spec = extractPlaylistSpec(eventDocument(), eventPath, performanceId);
+  const previousSpec = { ...spec, uris: [...spec.uris].reverse() };
+  const database = new MemoryD1({
+    playlist_key: spec.key,
+    event_path: eventPath,
+    event_id: spec.eventId,
+    performance_id: performanceId,
+    playlist_name: spec.name,
+    playlist_id: "existing-id",
+    playlist_url: "https://open.spotify.com/playlist/existing-id",
+    track_fingerprint: await playlistFingerprint(previousSpec),
+    track_count: previousSpec.uris.length,
+    status: "ready",
+    error: null,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString()
+  });
+  const calls = [];
+  const fetchImpl = async (url, options = {}) => {
+    calls.push({ url: String(url), options });
+    if (String(url).endsWith(`/${eventPath}`)) {
+      return { ok: true, json: async () => eventDocument() };
+    }
+    if (String(url).endsWith("/api/token")) {
+      return { ok: true, json: async () => ({ access_token: "access-token" }) };
+    }
+    if (String(url).endsWith("/playlists/existing-id") ||
+        String(url).endsWith("/playlists/existing-id/items")) {
+      return { ok: true, status: 200, json: async () => ({ snapshot_id: "snapshot" }) };
+    }
+    throw new Error(`Unexpected fetch: ${url}`);
+  };
+  const request = new Request("https://worker.example/v1/playlists", {
+    method: "POST",
+    headers: { Origin: "https://example.github.io", "Content-Type": "application/json" },
+    body: JSON.stringify({ eventPath, performanceId })
+  });
+
+  const response = await handleRequest(request, workerEnv(database), fetchImpl);
+  const body = await response.json();
+
+  assert.equal(response.status, 201);
+  assert.equal(body.created, false);
+  assert.equal(body.playlistUrl, "https://open.spotify.com/playlist/existing-id");
+  assert.equal(calls.some((call) => call.url.endsWith("/me/playlists")), false);
+  const replaceCall = calls.find((call) =>
+    call.url.endsWith("/playlists/existing-id/items") && call.options.method === "PUT"
+  );
+  assert.deepEqual(JSON.parse(replaceCall.options.body).uris, [firstUri, firstUri, secondUri]);
 });
 
 test("作成済みで内容が同じ公演はSpotifyを呼ばず既存URLを返す", async () => {

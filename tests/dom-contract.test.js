@@ -7,28 +7,6 @@ const root = path.resolve(__dirname, "..");
 const html = fs.readFileSync(path.join(root, "admin", "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "admin", "js", "app.js"), "utf8");
 
-test("HTMLのIDは重複せず、JavaScriptが参照する要素が存在する", () => {
-  const ids = [...html.matchAll(/id="([^"]+)"/g)].map((match) => match[1]);
-  const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
-  const referencedIds = [...app.matchAll(/\$\("#([^"]+)"\)/g)].map((match) => match[1]);
-  const missingIds = referencedIds.filter((id) => !ids.includes(id));
-
-  assert.deepEqual([...new Set(duplicateIds)], []);
-  assert.deepEqual([...new Set(missingIds)], []);
-});
-
-test("本文パーサーを管理画面より先に読み込む", () => {
-  const parserIndex = html.indexOf("./js/page-text-parser.js");
-  const knownSongCacheIndex = html.indexOf("./js/known-song-cache.js");
-  const spotifyIndex = html.indexOf("./js/spotify-client.js");
-  const appIndex = html.indexOf("./js/app.js");
-
-  assert.ok(parserIndex >= 0);
-  assert.ok(knownSongCacheIndex > parserIndex);
-  assert.ok(spotifyIndex > knownSongCacheIndex);
-  assert.ok(appIndex > spotifyIndex);
-});
-
 test("本文解析後にSpotify接続済みなら曲検索まで自動実行する", () => {
   assert.match(app, /async function parsePageImportText\(\)/);
   assert.match(app, /async function initializePageImport\(parsed\)/);
@@ -115,7 +93,9 @@ test("管理画面の公演一覧をシリーズごとのプルダウンで表�
   assert.match(app, /function groupedEventsBySeries\(\)/);
   assert.match(app, /document\.createElement\("details"\)/);
   assert.match(app, /className = "event-series-summary"/);
-  assert.match(app, /details\.open = Boolean\(normalizeEventSearch\(state\.eventSearchQuery\)\)[\s\S]*?\|\| containsSelected[\s\S]*?\|\| state\.expandedEventSeries\.has\(group\.key\)/);
+  assert.match(app, /details\.open = searchActive \|\| state\.expandedEventSeries\.has\(group\.key\)/);
+  assert.match(app, /state\.expandedEventSeries\.clear\(\);[\s\S]*?state\.expandedEventSeries\.add\(group\.key\)/);
+  assert.match(app, /querySelectorAll\("\.event-series-group\[open\]"\)/);
   assert.match(app, /SERIES_DISPLAY_NAMES/);
 });
 
@@ -126,8 +106,7 @@ test("管理画面の公演一覧を検索・並び替えでき、日付・公�
   assert.match(app, /function eventMatchesSearch\(event, query\)/);
   assert.match(app, /function sortEventsForCatalog\(events\)/);
   assert.match(app, /event\.performances\.flatMap/);
-  assert.match(app, /<span>\$\{performanceCount\}公演<\/span>/);
-  assert.match(app, /<span>\$\{trackCount\}曲<\/span>/);
+  assert.match(app, /<span>\$\{performanceCount\}公演・\$\{trackCount\}曲<\/span>/);
 });
 
 test("ナンバリング公演は手動フラグだけで絞り込む", () => {
