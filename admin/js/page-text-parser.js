@@ -6,6 +6,19 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   "use strict";
 
+  /**
+   * @typedef {object} PageMetadata
+   * @property {number} audienceIndex
+   * @property {string} eventTitle
+   * @property {string} seriesName
+   * @property {string} seriesId
+   * @property {string} sourceUrl
+   * @property {string} venueName
+   * @property {string} performanceDate
+   * @property {number|null} day
+   * @property {string} performanceLabel
+   */
+
   function cleanLines(rawText) {
     return String(rawText ?? "")
       .replace(/\r/g, "")
@@ -146,11 +159,9 @@
     return setlist;
   }
 
-  function parseLlFansPage(rawText) {
-    const lines = cleanLines(rawText);
+  /** @param {string[]} lines @returns {PageMetadata} */
+  function extractPageMetadata(lines) {
     const audienceIndex = findLabel(lines, "有観客");
-    const setlistHeading = findLabel(lines, "セットリスト", Math.max(0, audienceIndex));
-
     const eventHeading = findLabel(lines, "イベント・TV出演");
     const eventTitle = eventHeading >= 0 ? lines[eventHeading + 1] || "" : "";
     const seriesName = valueAfter(lines, "ライブ・ファンミ");
@@ -170,37 +181,72 @@
       : performanceDate
         ? `${performanceDate} 公演`
         : "公演";
-
-    const setlist = parseSetlist(lines, setlistHeading >= 0 ? setlistHeading + 1 : 0);
-    const warnings = [];
-    if (!eventTitle) warnings.push("イベント名を抽出できませんでした。");
-    if (seriesName && !seriesId) warnings.push("シリーズ名をローマ字IDへ変換できませんでした。");
-    if (!performanceDate) warnings.push("公演日を抽出できませんでした。");
-    if (!setlist.length) warnings.push("M01やEN01形式の曲を抽出できませんでした。");
-
     return {
-      event: {
-        idSuggestion: titledId(seriesId, eventTitle, sourceUrl),
-        title: eventTitle,
-        series: seriesId ? [seriesId] : [],
-        source: sourceUrl
-          ? { type: "web", name: "公式ページ", url: sourceUrl, priority: "primary" }
-          : null
-      },
-      performance: {
-        idSuggestion: performanceIdSuggestion(seriesId, eventTitle, sourceUrl, day),
-        label: performanceLabel,
-        day,
-        session: null,
-        date: performanceDate,
-        venue: {
-          name: venueName,
-          city: "",
-          countryCode: "JP"
-        }
-      },
+      audienceIndex,
+      eventTitle,
+      seriesName,
+      seriesId,
+      sourceUrl,
+      venueName,
+      performanceDate,
+      day,
+      performanceLabel
+    };
+  }
+
+  function extractionWarnings(metadata, setlist) {
+    const warnings = [];
+    if (!metadata.eventTitle) warnings.push("イベント名を抽出できませんでした。");
+    if (metadata.seriesName && !metadata.seriesId) {
+      warnings.push("シリーズ名をローマ字IDへ変換できませんでした。");
+    }
+    if (!metadata.performanceDate) warnings.push("公演日を抽出できませんでした。");
+    if (!setlist.length) warnings.push("M01やEN01形式の曲を抽出できませんでした。");
+    return warnings;
+  }
+
+  function parsedEvent(metadata) {
+    return {
+      idSuggestion: titledId(metadata.seriesId, metadata.eventTitle, metadata.sourceUrl),
+      title: metadata.eventTitle,
+      series: metadata.seriesId ? [metadata.seriesId] : [],
+      source: metadata.sourceUrl
+        ? { type: "web", name: "公式ページ", url: metadata.sourceUrl, priority: "primary" }
+        : null
+    };
+  }
+
+  function parsedPerformance(metadata) {
+    return {
+      idSuggestion: performanceIdSuggestion(
+        metadata.seriesId,
+        metadata.eventTitle,
+        metadata.sourceUrl,
+        metadata.day
+      ),
+      label: metadata.performanceLabel,
+      day: metadata.day,
+      session: null,
+      date: metadata.performanceDate,
+      venue: { name: metadata.venueName, city: "", countryCode: "JP" }
+    };
+  }
+
+  /** @param {string} rawText */
+  function parseLlFansPage(rawText) {
+    const lines = cleanLines(rawText);
+    const metadata = extractPageMetadata(lines);
+    const setlistHeading = findLabel(
+      lines,
+      "セットリスト",
+      Math.max(0, metadata.audienceIndex)
+    );
+    const setlist = parseSetlist(lines, setlistHeading >= 0 ? setlistHeading + 1 : 0);
+    return {
+      event: parsedEvent(metadata),
+      performance: parsedPerformance(metadata),
       setlist,
-      warnings
+      warnings: extractionWarnings(metadata, setlist)
     };
   }
 

@@ -17,7 +17,33 @@ import urllib.request
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path, PurePosixPath
-from typing import Any
+from typing import Any, TypedDict
+
+
+JsonObject = dict[str, Any]
+
+
+class GitRepositoryStatus(TypedDict):
+    available: bool
+    remoteConfigured: bool
+    identityConfigured: bool
+    branch: str
+    error: str
+
+
+class EventWriteResult(TypedDict):
+    filename: str
+    eventChanged: bool
+    manifestChanged: bool
+    removedLegacyFiles: list[str]
+
+
+class EventsWriteResult(TypedDict):
+    eventCount: int
+    changedEventCount: int
+    filenames: list[str]
+    changedFilenames: list[str]
+    manifestChanged: bool
 
 
 GRAPHQL_URL = "https://ll-fans.jp/api/graphql"
@@ -354,61 +380,88 @@ def fetch_tour_index(force: bool = False) -> dict[str, Any]:
         return result
 
 
-def convert_tour_payload(
-    payload: dict[str, Any], event_id: str, canonical_url: str
-) -> dict[str, Any]:
-    data = payload.get("data") or {}
-    tour = data.get("tour")
-    if not tour:
-        raise ImportErrorResponse(f"イベントID {event_id} が見つかりません。")
-
+def tour_series(tour: JsonObject) -> list[str]:
     series_ids = [str(value) for value in tour.get("seriesIds") or []]
-    series = [SERIES_SLUGS[value] for value in series_ids if value in SERIES_SLUGS]
-    primary_series = series[0] if series else ""
-    suggested_event_id = event_id_suggestion(primary_series, tour.get("name") or "", event_id)
-    official_url = str(tour.get("url") or "").strip()
+    return [SERIES_SLUGS[value] for value in series_ids if value in SERIES_SLUGS]
 
+
+def unique_performance_id(base_id: str, used_ids: set[str]) -> str:
+    performance_id = base_id
+    duplicate_suffix = 2
+    while performance_id in used_ids:
+        performance_id = f"{base_id}-{duplicate_suffix}"
+        duplicate_suffix += 1
+    used_ids.add(performance_id)
+    return performance_id
+
+
+def convert_tour_performance(
+    concert: JsonObject,
+    raw_performance: JsonObject,
+    suggested_event_id: str,
+    used_ids: set[str],
+    position: int,
+) -> JsonObject:
+    concert_name = str(concert.get("name") or "").strip()
+    performance_name = str(raw_performance.get("name") or "").strip()
+    suffix = ascii_slug(performance_name) or f"performance-{raw_performance.get('id') or position}"
+    base_id = f"{suggested_event_id}-{location_slug(concert)}-{suffix}"
+    label = " ".join(value for value in (concert_name, performance_name) if value)
+    venue = concert.get("venue") or {}
+    return {
+        "idSuggestion": unique_performance_id(base_id, used_ids),
+        "label": label or f"公演 {position}",
+        "day": performance_day(performance_name),
+        "session": None,
+        "date": str(raw_performance.get("date") or ""),
+        "venue": {
+            "name": normalized_venue_name(venue.get("name")),
+            "city": "",
+            "countryCode": "JP",
+        },
+        "setlist": song_setlist(raw_performance.get("setlists") or []),
+    }
+
+
+def convert_tour_performances(tour: JsonObject, suggested_event_id: str) -> list[JsonObject]:
     performances: list[dict[str, Any]] = []
     used_ids: set[str] = set()
     for concert in tour.get("concerts") or []:
-        concert_name = str(concert.get("name") or "").strip()
-        concert_slug = location_slug(concert)
-        venue = concert.get("venue") or {}
         for raw_performance in concert.get("performances") or []:
-            performance_name = str(raw_performance.get("name") or "").strip()
-            suffix = ascii_slug(performance_name) or f"performance-{raw_performance.get('id') or len(performances) + 1}"
-            base_id = f"{suggested_event_id}-{concert_slug}-{suffix}"
-            performance_id = base_id
-            duplicate_suffix = 2
-            while performance_id in used_ids:
-                performance_id = f"{base_id}-{duplicate_suffix}"
-                duplicate_suffix += 1
-            used_ids.add(performance_id)
-
-            setlist = song_setlist(raw_performance.get("setlists") or [])
-            label = " ".join(value for value in (concert_name, performance_name) if value)
             performances.append(
-                {
-                    "idSuggestion": performance_id,
-                    "label": label or f"公演 {len(performances) + 1}",
-                    "day": performance_day(performance_name),
-                    "session": None,
-                    "date": str(raw_performance.get("date") or ""),
-                    "venue": {
-                        "name": normalized_venue_name(venue.get("name")),
-                        "city": "",
-                        "countryCode": "JP",
-                    },
-                    "setlist": setlist,
-                }
+                convert_tour_performance(
+                    concert,
+                    raw_performance,
+                    suggested_event_id,
+                    used_ids,
+                    len(performances) + 1,
+                )
             )
+    return performances
 
+
+def tour_import_warnings(performances: list[JsonObject]) -> list[str]:
     warnings: list[str] = []
     if not performances:
         warnings.append("公演を取得できませんでした。")
     empty_labels = [item["label"] for item in performances if not item["setlist"]]
     if empty_labels:
         warnings.append("セットリストが空の公演: " + "、".join(empty_labels))
+    return warnings
+
+
+def convert_tour_payload(
+    payload: JsonObject, event_id: str, canonical_url: str
+) -> JsonObject:
+    tour = (payload.get("data") or {}).get("tour")
+    if not tour:
+        raise ImportErrorResponse(f"イベントID {event_id} が見つかりません。")
+
+    series = tour_series(tour)
+    primary_series = series[0] if series else ""
+    suggested_event_id = event_id_suggestion(primary_series, tour.get("name") or "", event_id)
+    official_url = str(tour.get("url") or "").strip()
+    performances = convert_tour_performances(tour, suggested_event_id)
 
     source_url = official_url or canonical_url
     return {
@@ -430,7 +483,7 @@ def convert_tour_payload(
             },
         },
         "performances": performances,
-        "warnings": warnings,
+        "warnings": tour_import_warnings(performances),
         "sourcePage": canonical_url,
     }
 
@@ -500,36 +553,26 @@ def safe_manifest_data_path(data_directory: Path, entry: Any) -> Path | None:
     return candidate
 
 
-def write_event_to_public_data(
-    event: Any, project_directory: Path = PROJECT_DIRECTORY
-) -> dict[str, Any]:
-    normalized = validate_publish_event(event)
-    data_directory = project_directory / "data"
-    filename = event_data_filename(normalized)
-    event_changed = write_json_if_changed(
-        data_directory.joinpath(*PurePosixPath(filename).parts),
-        normalized,
-    )
-
-    manifest_path = data_directory / "index.json"
-    if manifest_path.exists():
-        try:
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as error:
-            raise PublishErrorResponse("data/index.jsonを読み込めません。") from error
-    else:
-        manifest = {"schemaVersion": "0.3", "events": []}
+def load_public_manifest(manifest_path: Path) -> JsonObject:
+    if not manifest_path.exists():
+        return {"schemaVersion": "0.3", "events": []}
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as error:
+        raise PublishErrorResponse("data/index.jsonを読み込めません。") from error
     if not isinstance(manifest, dict) or not isinstance(manifest.get("events"), list):
         raise PublishErrorResponse("data/index.jsonの形式が不正です。")
+    return manifest
 
-    event_basename = f"{normalized['id']}.json"
-    previous_entries = list(manifest["events"])
+
+def merged_manifest_entries(
+    previous_entries: list[Any], event_basename: str, filename: str
+) -> tuple[list[Any], list[Any]]:
     next_entries: list[Any] = []
-    inserted = False
     stale_entries: list[Any] = []
+    inserted = False
     for entry in previous_entries:
-        entry_name = PurePosixPath(str(entry or "")).name
-        if entry_name != event_basename:
+        if PurePosixPath(str(entry or "")).name != event_basename:
             next_entries.append(entry)
             continue
         if str(entry) != filename:
@@ -539,24 +582,60 @@ def write_event_to_public_data(
             inserted = True
     if not inserted:
         next_entries.append(filename)
+    return next_entries, stale_entries
+
+
+def update_public_manifest(
+    data_directory: Path, event_id: str, filename: str
+) -> tuple[bool, list[Any]]:
+    manifest_path = data_directory / "index.json"
+    manifest = load_public_manifest(manifest_path)
+    previous_entries = list(manifest["events"])
+    next_entries, stale_entries = merged_manifest_entries(
+        previous_entries,
+        f"{event_id}.json",
+        filename,
+    )
     manifest["events"] = next_entries
-    manifest_changed = next_entries != previous_entries
     manifest["schemaVersion"] = str(manifest.get("schemaVersion") or "0.3")
+    manifest_changed = next_entries != previous_entries
     if manifest_changed or not manifest_path.exists():
         write_json_if_changed(manifest_path, manifest)
+    return manifest_changed, stale_entries
 
-    removed_legacy_files: list[str] = []
-    for entry in stale_entries:
+
+def remove_stale_event_files(data_directory: Path, entries: list[Any]) -> list[str]:
+    removed: list[str] = []
+    for entry in entries:
         stale_path = safe_manifest_data_path(data_directory, entry)
-        if stale_path and stale_path.exists() and stale_path.is_file():
-            stale_path.unlink()
-            removed_legacy_files.append(str(entry))
+        if not stale_path or not stale_path.exists() or not stale_path.is_file():
+            continue
+        stale_path.unlink()
+        removed.append(str(entry))
+    return removed
+
+
+def write_event_to_public_data(
+    event: Any, project_directory: Path = PROJECT_DIRECTORY
+) -> EventWriteResult:
+    normalized = validate_publish_event(event)
+    data_directory = project_directory / "data"
+    filename = event_data_filename(normalized)
+    event_changed = write_json_if_changed(
+        data_directory.joinpath(*PurePosixPath(filename).parts),
+        normalized,
+    )
+    manifest_changed, stale_entries = update_public_manifest(
+        data_directory,
+        normalized["id"],
+        filename,
+    )
 
     return {
         "filename": filename,
         "eventChanged": event_changed,
         "manifestChanged": manifest_changed,
-        "removedLegacyFiles": removed_legacy_files,
+        "removedLegacyFiles": remove_stale_event_files(data_directory, stale_entries),
     }
 
 
@@ -572,7 +651,7 @@ def validate_publish_events(value: Any) -> list[dict[str, Any]]:
 
 def write_events_to_public_data(
     events: Any, project_directory: Path = PROJECT_DIRECTORY
-) -> dict[str, Any]:
+) -> EventsWriteResult:
     normalized = validate_publish_events(events)
     results = [
         write_event_to_public_data(event, project_directory)
@@ -622,7 +701,9 @@ def safe_git_message(result: subprocess.CompletedProcess[str]) -> str:
     return message[-1000:]
 
 
-def git_repository_status(project_directory: Path = PROJECT_DIRECTORY) -> dict[str, Any]:
+def git_repository_status(
+    project_directory: Path = PROJECT_DIRECTORY,
+) -> GitRepositoryStatus:
     try:
         inside = git_process(
             ["rev-parse", "--is-inside-work-tree"], project_directory
@@ -667,7 +748,9 @@ def git_repository_status(project_directory: Path = PROJECT_DIRECTORY) -> dict[s
     }
 
 
-def require_git_publish_ready(project_directory: Path = PROJECT_DIRECTORY) -> dict[str, Any]:
+def require_git_publish_ready(
+    project_directory: Path = PROJECT_DIRECTORY,
+) -> GitRepositoryStatus:
     status = git_repository_status(project_directory)
     if not status["available"]:
         raise PublishErrorResponse(status["error"] or "Gitを利用できません。")
@@ -682,6 +765,90 @@ def require_git_publish_ready(project_directory: Path = PROJECT_DIRECTORY) -> di
     return status
 
 
+def publish_commit_message(events: list[JsonObject]) -> str:
+    if len(events) != 1:
+        return f"Publish all setlist events ({len(events)})"
+    event = events[0]
+    title = re.sub(r"\s+", " ", str(event.get("title") or "")).strip()
+    return f"Publish {title or event.get('id')}"[:120]
+
+
+def commit_publish_changes(
+    events: list[JsonObject], project_directory: Path
+) -> bool:
+    add_result = git_process(["add", "--all"], project_directory)
+    if add_result.returncode != 0:
+        raise PublishErrorResponse(
+            f"Gitへの追加に失敗しました: {safe_git_message(add_result)}"
+        )
+
+    diff_result = git_process(["diff", "--cached", "--quiet"], project_directory)
+    if diff_result.returncode not in {0, 1}:
+        raise PublishErrorResponse(
+            f"変更確認に失敗しました: {safe_git_message(diff_result)}"
+        )
+    if diff_result.returncode == 0:
+        return False
+
+    commit_result = git_process(
+        ["commit", "-m", publish_commit_message(events)],
+        project_directory,
+    )
+    if commit_result.returncode != 0:
+        raise PublishErrorResponse(
+            f"commitに失敗しました: {safe_git_message(commit_result)}"
+        )
+    return True
+
+
+def rebase_from_upstream(project_directory: Path) -> bool:
+    upstream_result = git_process(
+        ["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"],
+        project_directory,
+    )
+    if upstream_result.returncode != 0:
+        return False
+
+    fetch_result = git_process(["fetch", "origin"], project_directory, timeout=180)
+    if fetch_result.returncode != 0:
+        raise PublishErrorResponse(
+            "GitHubの最新状態を取得できませんでした。ローカルのcommitは保持されています: "
+            f"{safe_git_message(fetch_result)}"
+        )
+    rebase_result = git_process(["rebase", "@{u}"], project_directory, timeout=180)
+    if rebase_result.returncode == 0:
+        return True
+
+    git_process(["rebase", "--abort"], project_directory)
+    raise PublishErrorResponse(
+        "GitHub側の変更と自動統合できませんでした。ローカルのcommitは保持されています。"
+        "Codexの変更画面で競合を確認してください: "
+        f"{safe_git_message(rebase_result)}"
+    )
+
+
+def push_publish_branch(
+    project_directory: Path, branch: str, has_upstream: bool
+) -> None:
+    arguments = ["push"] if has_upstream else [
+        "push",
+        "--set-upstream",
+        "origin",
+        branch,
+    ]
+    result = git_process(arguments, project_directory, timeout=180)
+    if result.returncode != 0:
+        raise PublishErrorResponse(
+            "pushに失敗しました。ローカルのcommitは保持されています。"
+            f"もう一度公開するとpushを再試行できます: {safe_git_message(result)}"
+        )
+
+
+def current_git_revision(project_directory: Path) -> str:
+    result = git_process(["rev-parse", "--short", "HEAD"], project_directory)
+    return result.stdout.strip() if result.returncode == 0 else ""
+
+
 def publish_events_to_github(
     events: Any, project_directory: Path = PROJECT_DIRECTORY
 ) -> dict[str, Any]:
@@ -689,71 +856,15 @@ def publish_events_to_github(
     status = require_git_publish_ready(project_directory)
     with PUBLISH_LOCK:
         saved = write_events_to_public_data(normalized_events, project_directory)
-
-        add_result = git_process(["add", "--all"], project_directory)
-        if add_result.returncode != 0:
-            raise PublishErrorResponse(f"Gitへの追加に失敗しました: {safe_git_message(add_result)}")
-
-        diff_result = git_process(["diff", "--cached", "--quiet"], project_directory)
-        if diff_result.returncode not in {0, 1}:
-            raise PublishErrorResponse(f"変更確認に失敗しました: {safe_git_message(diff_result)}")
-
-        committed = diff_result.returncode == 1
-        if committed:
-            if len(normalized_events) == 1:
-                event = normalized_events[0]
-                title = re.sub(r"\s+", " ", str(event.get("title") or "")).strip()
-                message = f"Publish {title or event.get('id')}"[:120]
-            else:
-                message = f"Publish all setlist events ({len(normalized_events)})"
-            commit_result = git_process(["commit", "-m", message], project_directory)
-            if commit_result.returncode != 0:
-                raise PublishErrorResponse(
-                    f"commitに失敗しました: {safe_git_message(commit_result)}"
-                )
-
-        upstream_result = git_process(
-            ["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"],
-            project_directory,
-        )
-        if upstream_result.returncode == 0:
-            fetch_result = git_process(["fetch", "origin"], project_directory, timeout=180)
-            if fetch_result.returncode != 0:
-                raise PublishErrorResponse(
-                    "GitHubの最新状態を取得できませんでした。ローカルのcommitは保持されています: "
-                    f"{safe_git_message(fetch_result)}"
-                )
-
-            rebase_result = git_process(["rebase", "@{u}"], project_directory, timeout=180)
-            if rebase_result.returncode != 0:
-                git_process(["rebase", "--abort"], project_directory)
-                raise PublishErrorResponse(
-                    "GitHub側の変更と自動統合できませんでした。ローカルのcommitは保持されています。"
-                    "Codexの変更画面で競合を確認してください: "
-                    f"{safe_git_message(rebase_result)}"
-                )
-
-        push_arguments = ["push"] if upstream_result.returncode == 0 else [
-            "push",
-            "--set-upstream",
-            "origin",
-            status["branch"],
-        ]
-        push_result = git_process(push_arguments, project_directory, timeout=180)
-        if push_result.returncode != 0:
-            raise PublishErrorResponse(
-                "pushに失敗しました。ローカルのcommitは保持されています。"
-                f"もう一度公開するとpushを再試行できます: {safe_git_message(push_result)}"
-            )
-
-        revision_result = git_process(["rev-parse", "--short", "HEAD"], project_directory)
-        revision = revision_result.stdout.strip() if revision_result.returncode == 0 else ""
+        committed = commit_publish_changes(normalized_events, project_directory)
+        has_upstream = rebase_from_upstream(project_directory)
+        push_publish_branch(project_directory, status["branch"], has_upstream)
         return {
             **saved,
             "committed": committed,
             "pushed": True,
             "branch": status["branch"],
-            "revision": revision,
+            "revision": current_git_revision(project_directory),
         }
 
 

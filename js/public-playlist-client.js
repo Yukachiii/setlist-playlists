@@ -7,6 +7,12 @@
 
   const MAX_BUSY_RETRIES = 3;
 
+  /**
+   * @typedef {object} PlaylistRequest
+   * @property {string} eventPath
+   * @property {string} performanceId
+   */
+
   function browserWindow() {
     if (typeof window === "undefined") throw new Error("ブラウザでのみ利用できます。");
     return window;
@@ -43,20 +49,36 @@
     return new Error(`${body?.error || fallback} [${code}]`);
   }
 
-  async function requestPlaylist({ eventPath, performanceId }, attempt = 0) {
+  function validatedRequest(eventPath, performanceId, unpublishedMessage) {
     const baseUrl = apiBaseUrl();
     if (!isConfigured()) throw new Error("プレイリスト作成機能は現在準備中です。");
     if (!/^[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(String(eventPath || ""))) {
-      throw new Error("この公演はGitHubへ公開してからプレイリストを作成できます。");
+      throw new Error(unpublishedMessage);
     }
     if (!String(performanceId || "").trim()) throw new Error("公演IDがありません。");
+    return { baseUrl, payload: { eventPath, performanceId } };
+  }
 
-    const response = await fetch(`${baseUrl}/v1/playlists`, {
+  async function postJson(url, payload) {
+    const response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ eventPath, performanceId })
+      body: JSON.stringify(payload)
     });
-    const body = await response.json().catch(() => ({}));
+    return { response, body: await response.json().catch(() => ({})) };
+  }
+
+  /** @param {PlaylistRequest} request @param {number} [attempt] */
+  async function requestPlaylist({ eventPath, performanceId }, attempt = 0) {
+    const request = validatedRequest(
+      eventPath,
+      performanceId,
+      "この公演はGitHubへ公開してからプレイリストを作成できます。"
+    );
+    const { response, body } = await postJson(
+      `${request.baseUrl}/v1/playlists`,
+      request.payload
+    );
 
     if (response.status === 409 && body.code === "playlist_busy" && attempt < MAX_BUSY_RETRIES) {
       const retryAfter = Math.max(1, Number(response.headers?.get?.("Retry-After") || 3));
@@ -70,20 +92,17 @@
     return body;
   }
 
+  /** @param {PlaylistRequest} request */
   async function requestSoundiizTransfer({ eventPath, performanceId }) {
-    const baseUrl = apiBaseUrl();
-    if (!isConfigured()) throw new Error("プレイリスト作成機能は現在準備中です。");
-    if (!/^[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(String(eventPath || ""))) {
-      throw new Error("この公演をGitHubへ公開してから移行できます。");
-    }
-    if (!String(performanceId || "").trim()) throw new Error("公演IDがありません。");
-
-    const response = await fetch(`${baseUrl}/v1/transfers/soundiiz`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ eventPath, performanceId })
-    });
-    const body = await response.json().catch(() => ({}));
+    const request = validatedRequest(
+      eventPath,
+      performanceId,
+      "この公演をGitHubへ公開してから移行できます。"
+    );
+    const { response, body } = await postJson(
+      `${request.baseUrl}/v1/transfers/soundiiz`,
+      request.payload
+    );
     if (!response.ok) throw responseError(body, "Soundiizの移行画面を用意できませんでした。", response.status);
     if (!isSoundiizShareUrl(body.shareUrl)) {
       throw new Error("Soundiizの移行URLを取得できませんでした。");

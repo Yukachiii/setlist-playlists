@@ -29,7 +29,9 @@ test("登録済み曲をSpotifyで再検索して差し替えられる", () => {
   assert.match(html, /id="spotify-research-all-button"/);
   assert.match(html, /class="research-song spotify-candidates-button"/);
   assert.match(app, /function openEditorSpotifyCandidateDialog\(row\)/);
-  assert.match(app, /state\.spotifyManualContext === "editor"[\s\S]*?trackId: track\.id/);
+  assert.match(app, /function applyManualSpotifyTrack\(track\)[\s\S]*?state\.spotifyManualContext === "editor"[\s\S]*?applyEditorSpotifyTrack\(row, track\)/);
+  assert.match(app, /function applyEditorSpotifyTrack\(row, track\)[\s\S]*?item\.spotify = spotifyMatchFromTrack\(track, artist\)/);
+  assert.match(app, /function spotifyMatchFromTrack\(track,[\s\S]*?trackId: track\.id/);
   assert.match(app, /status === "matched"[\s\S]*?"Spotifyで再検索"/);
   assert.match(app, /async function researchDraftSetlistFromSpotify\(\)/);
   assert.match(app, /searchBestTrack\(\{[\s\S]*?title,[\s\S]*?version,[\s\S]*?matchPolicy/);
@@ -46,7 +48,8 @@ test("一度手動確定したSpotify曲を次回以降へ自動反映する", (
 });
 
 test("Spotify候補にアルバムジャケットを表示する", () => {
-  assert.match(app, /track\.album\?\.images/);
+  assert.match(app, /function spotifyCandidateArtwork\(track\)[\s\S]*?spotifyTrackArtwork\(track\)/);
+  assert.match(app, /track\?\.album\?\.images/);
   assert.match(app, /className = "spotify-candidate-artwork"/);
   assert.match(app, /image\.loading = "lazy"/);
   assert.match(app, /artworkUrl: spotifyTrackArtwork\(track\)/);
@@ -78,7 +81,7 @@ test("管理画面から全公演の公開JSON保存とGitHub pushを一括実�
   assert.match(app, /fetch\("\/api\/github-publish"/);
   assert.match(app, /function publishAllEventsToGitHub\(\)/);
   assert.match(app, /events: deepClone\(events\)/);
-  assert.match(app, /全\$\{events\.length\}公演をGitHubへ公開/);
+  assert.match(app, /function confirmGitHubPublish\(eventCount\)[\s\S]*?全\$\{eventCount\}公演をGitHubへ公開/);
   assert.match(app, /このプロジェクト内の変更をすべてcommit/);
 });
 

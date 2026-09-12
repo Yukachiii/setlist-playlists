@@ -13,6 +13,14 @@
   const AUTH_STORAGE_KEY = "setlist_spotify_auth_v01";
   const PKCE_STORAGE_KEY = "setlist_spotify_pkce_v01";
 
+  /**
+   * @typedef {object} TrackSearchRequest
+   * @property {string} title
+   * @property {string} [version]
+   * @property {string} [artistHint]
+   * @property {"exact"|"original_fallback"|"unavailable"} [matchPolicy]
+   */
+
   function browserWindow() {
     if (typeof window === "undefined") throw new Error("ブラウザでのみ利用できます。");
     return window;
@@ -296,87 +304,60 @@
     return { track: playable || matches[0], collapsed: true };
   }
 
+  function matchedTrack(track, candidates, matchKind) {
+    return { status: "matched", matchKind, track, candidates };
+  }
+
+  function unresolvedTrack(status, candidates = []) {
+    return { status, matchKind: null, track: null, candidates };
+  }
+
+  function chooseVersionedTrack(uniqueCandidates, exactMatches, versionMatches, request) {
+    const versionRecording = uniqueRecordingMatch(versionMatches);
+    if (versionRecording) {
+      return matchedTrack(versionRecording.track, versionMatches, "version");
+    }
+    if (versionMatches.length > 1) return unresolvedTrack("ambiguous", versionMatches);
+
+    const exactRecording = uniqueRecordingMatch(exactMatches);
+    if (exactRecording) {
+      const matchKind = request.matchPolicy === "original_fallback"
+        ? "original_fallback"
+        : exactRecording.collapsed
+          ? "same_recording"
+          : "title_unlabeled_version";
+      return matchedTrack(exactRecording.track, exactMatches, matchKind);
+    }
+    if (exactMatches.length > 1) return unresolvedTrack("ambiguous", exactMatches);
+    return unresolvedTrack(uniqueCandidates.length ? "manual" : "unmatched", uniqueCandidates);
+  }
+
+  function chooseUnversionedTrack(exactMatches) {
+    if (!exactMatches.length) {
+      return unresolvedTrack("unmatched");
+    }
+    const exactRecording = uniqueRecordingMatch(exactMatches);
+    if (!exactRecording) {
+      return unresolvedTrack("ambiguous", exactMatches);
+    }
+    const matchKind = exactRecording.collapsed ? "same_recording" : "title";
+    return matchedTrack(exactRecording.track, exactMatches, matchKind);
+  }
+
+  /** @param {object[]} candidates @param {TrackSearchRequest} request */
   function chooseTrackCandidate(candidates, request) {
     const uniqueCandidates = uniqueTracks(candidates);
     const desiredTitle = normalizeComparable(request.title);
     const exactMatches = uniqueCandidates.filter(
       (track) => normalizeComparable(track?.name) === desiredTitle
     );
-    const desiredVersionTitle = request.version
-      ? normalizeComparable(`${request.title} ${request.version}`)
-      : "";
-    const versionMatches = desiredVersionTitle
-      ? uniqueCandidates.filter(
-          (track) => normalizeComparable(track?.name) === desiredVersionTitle
-        )
-      : [];
-    const versionRecording = uniqueRecordingMatch(versionMatches);
-    const exactRecording = uniqueRecordingMatch(exactMatches);
+    if (!request.version) return chooseUnversionedTrack(exactMatches);
 
-    if (request.version) {
-      if (versionRecording) {
-        return {
-          status: "matched",
-          matchKind: "version",
-          track: versionRecording.track,
-          candidates: versionMatches
-        };
-      }
-      if (versionMatches.length > 1) {
-        return {
-          status: "ambiguous",
-          matchKind: null,
-          track: null,
-          candidates: versionMatches
-        };
-      }
-
-      if (exactRecording) {
-        return {
-          status: "matched",
-          matchKind: request.matchPolicy === "original_fallback"
-            ? "original_fallback"
-            : exactRecording.collapsed
-              ? "same_recording"
-              : "title_unlabeled_version",
-          track: exactRecording.track,
-          candidates: exactMatches
-        };
-      }
-      if (exactMatches.length > 1) {
-        return {
-          status: "ambiguous",
-          matchKind: null,
-          track: null,
-          candidates: exactMatches
-        };
-      }
-
-      return {
-        status: uniqueCandidates.length ? "manual" : "unmatched",
-        matchKind: null,
-        track: null,
-        candidates: uniqueCandidates
-      };
-    }
-
-    if (!exactMatches.length) {
-      return { status: "unmatched", matchKind: null, track: null, candidates: [] };
-    }
-    if (!exactRecording) {
-      return {
-        status: "ambiguous",
-        matchKind: null,
-        track: null,
-        candidates: exactMatches
-      };
-    }
-    return {
-      status: "matched",
-      matchKind: exactRecording.collapsed ? "same_recording" : "title",
-      track: exactRecording.track,
-      candidates: exactMatches
-    };
+    const desiredVersionTitle = normalizeComparable(`${request.title} ${request.version}`);
+    const versionMatches = uniqueCandidates.filter(
+      (track) => normalizeComparable(track?.name) === desiredVersionTitle
+    );
+    return chooseVersionedTrack(uniqueCandidates, exactMatches, versionMatches, request);
   }
 
   function uniqueTracks(tracks) {

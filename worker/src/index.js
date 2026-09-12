@@ -4,6 +4,27 @@ const SOUNDIIZ_IMPORT_URL = "https://soundiiz.com/go/import-playlist";
 const CLAIM_TIMEOUT_MS = 5 * 60 * 1000;
 const MAX_REQUEST_BYTES = 4096;
 
+/**
+ * @typedef {object} PlaylistSpec
+ * @property {string} key
+ * @property {string} eventPath
+ * @property {string} eventId
+ * @property {string} performanceId
+ * @property {string} name
+ * @property {string} description
+ * @property {string[]} uris
+ * @property {{title: string, artists: string}[]} tracks
+ */
+
+/**
+ * @typedef {object} WorkerEnvironment
+ * @property {*} [DB]
+ * @property {string} [ALLOWED_ORIGINS]
+ * @property {string} [PUBLIC_DATA_BASE_URL]
+ * @property {string} [SPOTIFY_CLIENT_ID]
+ * @property {string} [SPOTIFY_REFRESH_TOKEN]
+ */
+
 class RequestError extends Error {
   constructor(status, code, message, details = {}) {
     super(message);
@@ -75,6 +96,7 @@ function loadedEvents(value) {
   return value?.id ? [value] : [];
 }
 
+/** @returns {PlaylistSpec} */
 export function extractPlaylistSpec(documentValue, eventPath, performanceId) {
   if (!validEventPath(eventPath)) {
     throw new RequestError(400, "invalid_event_path", "公演データの指定が不正です。");
@@ -179,9 +201,8 @@ async function findPlaylist(env, key) {
   ).bind(key).first();
 }
 
-async function claimPlaylist(env, spec, fingerprint, now = new Date()) {
-  const nowIso = now.toISOString();
-  const inserted = await env.DB.prepare(
+async function insertPlaylistClaim(env, spec, fingerprint, nowIso) {
+  return env.DB.prepare(
     `INSERT OR IGNORE INTO shared_playlists (
        playlist_key, event_path, event_id, performance_id, playlist_name,
        track_fingerprint, track_count, status, created_at, updated_at
@@ -196,27 +217,22 @@ async function claimPlaylist(env, spec, fingerprint, now = new Date()) {
     spec.uris.length,
     nowIso
   ).run();
+}
 
-  if (databaseChanges(inserted) > 0) {
-    return { claimed: true, row: await findPlaylist(env, spec.key) };
-  }
+function isReusablePlaylist(existing, fingerprint) {
+  return existing.status === "ready" &&
+    existing.track_fingerprint === fingerprint &&
+    Boolean(text(existing.playlist_url));
+}
 
-  const existing = await findPlaylist(env, spec.key);
-  if (!existing) {
-    throw new RequestError(503, "database_conflict", "作成状態を確認できませんでした。もう一度お試しください。");
-  }
-  if (existing.status === "ready" &&
-      existing.track_fingerprint === fingerprint &&
-      text(existing.playlist_url)) {
-    return { claimed: false, ready: true, row: existing };
-  }
-
+function isFreshPlaylistClaim(existing, now) {
   const updatedAt = Date.parse(existing.updated_at || "");
-  const claimIsFresh = existing.status === "creating" &&
+  return existing.status === "creating" &&
     Number.isFinite(updatedAt) && now.getTime() - updatedAt < CLAIM_TIMEOUT_MS;
-  if (claimIsFresh) return { claimed: false, busy: true, row: existing };
+}
 
-  const updated = await env.DB.prepare(
+async function reclaimPlaylist(env, spec, fingerprint, existing, nowIso) {
+  const result = await env.DB.prepare(
     `UPDATE shared_playlists
         SET event_path = ?1,
             event_id = ?2,
@@ -239,11 +255,31 @@ async function claimPlaylist(env, spec, fingerprint, now = new Date()) {
     spec.key,
     existing.updated_at
   ).run();
-
-  if (databaseChanges(updated) === 0) {
-    return { claimed: false, busy: true, row: await findPlaylist(env, spec.key) };
+  if (databaseChanges(result) > 0) {
+    return { claimed: true, row: await findPlaylist(env, spec.key) };
   }
-  return { claimed: true, row: await findPlaylist(env, spec.key) };
+  return { claimed: false, busy: true, row: await findPlaylist(env, spec.key) };
+}
+
+/** @param {WorkerEnvironment} env @param {PlaylistSpec} spec */
+async function claimPlaylist(env, spec, fingerprint, now = new Date()) {
+  const nowIso = now.toISOString();
+  const inserted = await insertPlaylistClaim(env, spec, fingerprint, nowIso);
+  if (databaseChanges(inserted) > 0) {
+    return { claimed: true, row: await findPlaylist(env, spec.key) };
+  }
+
+  const existing = await findPlaylist(env, spec.key);
+  if (!existing) {
+    throw new RequestError(503, "database_conflict", "作成状態を確認できませんでした。もう一度お試しください。");
+  }
+  if (isReusablePlaylist(existing, fingerprint)) {
+    return { claimed: false, ready: true, row: existing };
+  }
+  if (isFreshPlaylistClaim(existing, now)) {
+    return { claimed: false, busy: true, row: existing };
+  }
+  return reclaimPlaylist(env, spec, fingerprint, existing, nowIso);
 }
 
 async function markAllocated(env, key, playlistId, playlistUrl) {
@@ -476,93 +512,122 @@ async function parseRequest(request) {
   };
 }
 
-export async function handleRequest(request, env, fetchImpl = fetch) {
-  const url = new URL(request.url);
-  const origin = corsOrigin(request, env);
-  const apiPaths = new Set(["/v1/playlists", "/v1/transfers/soundiiz"]);
+async function playlistSpecFromRequest(request, env, fetchImpl) {
+  const input = await parseRequest(request);
+  const eventDocument = await fetchEventDocument(input.eventPath, env, fetchImpl);
+  return extractPlaylistSpec(eventDocument, input.eventPath, input.performanceId);
+}
 
-  if (request.method === "GET" && url.pathname === "/health") {
+function requestFailureResponse(error, origin) {
+  if (!(error instanceof RequestError)) return null;
+  return json(
+    { ok: false, code: error.code, error: error.message, ...error.details },
+    error.status,
+    origin
+  );
+}
+
+async function handleSoundiizRequest(request, env, fetchImpl, origin) {
+  try {
+    const spec = await playlistSpecFromRequest(request, env, fetchImpl);
+    const transfer = await createSoundiizImport(spec, fetchImpl);
+    return json({ ok: true, ...transfer }, 201, origin);
+  } catch (error) {
+    const requestFailure = requestFailureResponse(error, origin);
+    if (requestFailure) return requestFailure;
+    if (error instanceof SoundiizError) {
+      const status = error.status === 429 ? 503 : 502;
+      return json({ ok: false, code: "soundiiz_error", error: error.message }, status, origin);
+    }
+    console.error("Soundiiz transfer request failed", error?.stack || error);
+    return json(
+      { ok: false, code: "internal_error", error: "Soundiizの移行画面を用意できませんでした。" },
+      500,
+      origin
+    );
+  }
+}
+
+async function fulfillPlaylistClaim(spec, claim, env, fetchImpl, origin) {
+  if (claim.ready) {
+    return json({
+      ok: true,
+      created: false,
+      playlistUrl: claim.row.playlist_url,
+      trackCount: Number(claim.row.track_count || spec.uris.length)
+    }, 200, origin);
+  }
+  if (!claim.claimed) {
+    return json({
+      ok: false,
+      code: "playlist_busy",
+      error: "この公演のプレイリストを作成中です。少し待ってからもう一度お試しください。"
+    }, 409, origin, { "Retry-After": "3" });
+  }
+
+  const synced = await syncSpotifyPlaylist(spec, claim.row, env, fetchImpl);
+  await markReady(env, spec.key, synced.playlistId, synced.playlistUrl);
+  return json({
+    ok: true,
+    created: !text(claim.row?.playlist_id),
+    playlistUrl: synced.playlistUrl,
+    trackCount: spec.uris.length
+  }, 201, origin);
+}
+
+function spotifyFailureResponse(error, origin) {
+  const requestFailure = requestFailureResponse(error, origin);
+  if (requestFailure) return requestFailure;
+  if (error instanceof SpotifyError) {
+    const status = error.status === 429 ? 503 : 502;
+    return json({ ok: false, code: "spotify_error", error: error.message }, status, origin);
+  }
+  console.error("playlist request failed", error?.stack || error);
+  return json(
+    { ok: false, code: "internal_error", error: "プレイリストを作成できませんでした。" },
+    500,
+    origin
+  );
+}
+
+async function handlePlaylistRequest(request, env, fetchImpl, origin) {
+  let spec;
+  try {
+    spec = await playlistSpecFromRequest(request, env, fetchImpl);
+    const fingerprint = await playlistFingerprint(spec);
+    const claim = await claimPlaylist(env, spec, fingerprint);
+    return await fulfillPlaylistClaim(spec, claim, env, fetchImpl, origin);
+  } catch (error) {
+    if (spec?.key) await markFailed(env, spec.key, error).catch(() => {});
+    return spotifyFailureResponse(error, origin);
+  }
+}
+
+/** @param {Request} request @param {WorkerEnvironment} env */
+export async function handleRequest(request, env, fetchImpl = fetch) {
+  const pathname = new URL(request.url).pathname;
+  const origin = corsOrigin(request, env);
+  const isApiPath = pathname === "/v1/playlists" || pathname === "/v1/transfers/soundiiz";
+
+  if (request.method === "GET" && pathname === "/health") {
     return json({ ok: true, service: "setlist-playlist-api" });
   }
-  if (request.method === "OPTIONS" && apiPaths.has(url.pathname)) {
+  if (request.method === "OPTIONS" && isApiPath) {
     if (!origin) return json({ error: "許可されていないアクセス元です。" }, 403);
     return new Response(null, { status: 204, headers: responseHeaders(origin) });
   }
-  if (request.method !== "POST" || !apiPaths.has(url.pathname)) {
-    return json({ error: "Not Found" }, 404, origin);
-  }
+  if (request.method !== "POST" || !isApiPath) return json({ error: "Not Found" }, 404, origin);
   if (!origin) {
     return json({ error: "許可されていないアクセス元です。", code: "origin_not_allowed" }, 403);
   }
-
-  if (url.pathname === "/v1/transfers/soundiiz") {
-    try {
-      const input = await parseRequest(request);
-      const eventDocument = await fetchEventDocument(input.eventPath, env, fetchImpl);
-      const spec = extractPlaylistSpec(eventDocument, input.eventPath, input.performanceId);
-      const transfer = await createSoundiizImport(spec, fetchImpl);
-      return json({ ok: true, ...transfer }, 201, origin);
-    } catch (error) {
-      if (error instanceof RequestError) {
-        return json({ ok: false, code: error.code, error: error.message, ...error.details }, error.status, origin);
-      }
-      if (error instanceof SoundiizError) {
-        const status = error.status === 429 ? 503 : 502;
-        return json({ ok: false, code: "soundiiz_error", error: error.message }, status, origin);
-      }
-      console.error("Soundiiz transfer request failed", error?.stack || error);
-      return json({ ok: false, code: "internal_error", error: "Soundiizの移行画面を用意できませんでした。" }, 500, origin);
-    }
+  if (pathname === "/v1/transfers/soundiiz") {
+    return handleSoundiizRequest(request, env, fetchImpl, origin);
   }
 
   if (!env.DB) {
     return json({ error: "プレイリスト保存先が設定されていません。", code: "database_not_configured" }, 503, origin);
   }
-
-  let spec;
-  try {
-    const input = await parseRequest(request);
-    const eventDocument = await fetchEventDocument(input.eventPath, env, fetchImpl);
-    spec = extractPlaylistSpec(eventDocument, input.eventPath, input.performanceId);
-    const fingerprint = await playlistFingerprint(spec);
-    const claim = await claimPlaylist(env, spec, fingerprint);
-
-    if (claim.ready) {
-      return json({
-        ok: true,
-        created: false,
-        playlistUrl: claim.row.playlist_url,
-        trackCount: Number(claim.row.track_count || spec.uris.length)
-      }, 200, origin);
-    }
-    if (!claim.claimed) {
-      return json({
-        ok: false,
-        code: "playlist_busy",
-        error: "この公演のプレイリストを作成中です。少し待ってからもう一度お試しください。"
-      }, 409, origin, { "Retry-After": "3" });
-    }
-
-    const synced = await syncSpotifyPlaylist(spec, claim.row, env, fetchImpl);
-    await markReady(env, spec.key, synced.playlistId, synced.playlistUrl);
-    return json({
-      ok: true,
-      created: !text(claim.row?.playlist_id),
-      playlistUrl: synced.playlistUrl,
-      trackCount: spec.uris.length
-    }, 201, origin);
-  } catch (error) {
-    if (spec?.key) await markFailed(env, spec.key, error).catch(() => {});
-    if (error instanceof RequestError) {
-      return json({ ok: false, code: error.code, error: error.message, ...error.details }, error.status, origin);
-    }
-    if (error instanceof SpotifyError) {
-      const status = error.status === 429 ? 503 : 502;
-      return json({ ok: false, code: "spotify_error", error: error.message }, status, origin);
-    }
-    console.error("playlist request failed", error?.stack || error);
-    return json({ ok: false, code: "internal_error", error: "プレイリストを作成できませんでした。" }, 500, origin);
-  }
+  return handlePlaylistRequest(request, env, fetchImpl, origin);
 }
 
 export default {

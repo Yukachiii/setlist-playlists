@@ -28,6 +28,25 @@
     "ikizulive"
   ];
 
+  /**
+   * @typedef {object} SpotifyTrack
+   * @property {string} [id]
+   * @property {string} [uri]
+   * @property {string} [name]
+   * @property {{name: string}[]} [artists]
+   * @property {{name?: string, images?: {url?: string}[]}|null} [album]
+   */
+
+  /**
+   * @typedef {object} SetlistEvent
+   * @property {string} id
+   * @property {string} title
+   * @property {string[]} series
+   * @property {boolean} isNumberedLive
+   * @property {object[]} sources
+   * @property {object[]} performances
+   */
+
   const state = {
     database: { schemaVersion: "0.3", events: [] },
     selectedEventId: null,
@@ -151,6 +170,7 @@
     performanceErrors: $("#performance-errors")
   };
 
+  /** @template T @param {T} value @returns {T} */
   function deepClone(value) {
     return JSON.parse(JSON.stringify(value));
   }
@@ -302,6 +322,21 @@
     };
   }
 
+  function emptySpotifyMatch(status = "unmatched", includeAlbum = false) {
+    const match = {
+      status,
+      trackId: null,
+      uri: null,
+      matchedTitle: null,
+      matchedArtist: null
+    };
+    return includeAlbum ? { ...match, artworkUrl: null, albumName: null } : match;
+  }
+
+  function emptySpotifyPlaylist() {
+    return { status: "not_created", playlistId: null, url: null };
+  }
+
   function blankSong(index = 0) {
     return {
       order: index + 1,
@@ -310,13 +345,7 @@
       recording: recordingFromFields("", ""),
       artistHint: "",
       spotifyMatchPolicy: "exact",
-      spotify: {
-        status: "unmatched",
-        trackId: null,
-        uri: null,
-        matchedTitle: null,
-        matchedArtist: null
-      }
+      spotify: emptySpotifyMatch()
     };
   }
 
@@ -334,14 +363,46 @@
         countryCode: "JP"
       },
       setlist: [],
-      spotifyPlaylist: {
-        status: "not_created",
-        playlistId: null,
-        url: null
-      }
+      spotifyPlaylist: emptySpotifyPlaylist()
     };
   }
 
+  function normalizeSetlistItem(item, index) {
+    const baseTitle = item.recording?.baseTitle || item.title || "";
+    const versionLabel = item.recording?.versionLabel || item.version || "";
+    return {
+      order: index + 1,
+      marker: item.marker || `M${String(index + 1).padStart(2, "0")}`,
+      type: "song",
+      recording: {
+        ...recordingFromFields(baseTitle, versionLabel),
+        ...(item.recording || {})
+      },
+      artistHint: item.artistHint || "",
+      spotifyMatchPolicy: item.spotifyMatchPolicy || "exact",
+      spotify: item.spotify || emptySpotifyMatch()
+    };
+  }
+
+  function normalizePerformance(performance, index) {
+    const setlist = Array.isArray(performance.setlist) ? performance.setlist : [];
+    return {
+      id: String(performance.id || `performance-${index + 1}`),
+      label: String(performance.label || `公演 ${index + 1}`),
+      day: Number.isInteger(performance.day) ? performance.day : null,
+      session: performance.session || null,
+      date: performance.date || "",
+      venue: {
+        name: performance.venue?.name || "-",
+        city: performance.venue?.city || "",
+        countryCode: performance.venue?.countryCode || "JP"
+      },
+      setlist: setlist.map(normalizeSetlistItem),
+      spotifyPlaylist: performance.spotifyPlaylist || emptySpotifyPlaylist()
+    };
+  }
+
+  /** @param {Partial<SetlistEvent> & Record<string, any>} raw @returns {SetlistEvent} */
   function normalizeEvent(raw) {
     const event = deepClone(raw);
     event.schemaVersion = "0.3";
@@ -350,52 +411,8 @@
     event.series = Array.isArray(event.series) ? event.series : [];
     event.isNumberedLive = event.isNumberedLive === true;
     event.sources = Array.isArray(event.sources) ? event.sources : [];
-    event.performances = Array.isArray(event.performances) ? event.performances : [];
-
-    event.performances = event.performances.map((performance, performanceIndex) => {
-      const normalized = {
-        id: String(performance.id || `performance-${performanceIndex + 1}`),
-        label: String(performance.label || `公演 ${performanceIndex + 1}`),
-        day: Number.isInteger(performance.day) ? performance.day : null,
-        session: performance.session || null,
-        date: performance.date || "",
-        venue: {
-          name: performance.venue?.name || "-",
-          city: performance.venue?.city || "",
-          countryCode: performance.venue?.countryCode || "JP"
-        },
-        setlist: Array.isArray(performance.setlist) ? performance.setlist : [],
-        spotifyPlaylist: performance.spotifyPlaylist || {
-          status: "not_created",
-          playlistId: null,
-          url: null
-        }
-      };
-
-      normalized.setlist = normalized.setlist.map((item, itemIndex) => {
-        const baseTitle = item.recording?.baseTitle || item.title || "";
-        const versionLabel = item.recording?.versionLabel || item.version || "";
-        return {
-          order: itemIndex + 1,
-          marker: item.marker || `M${String(itemIndex + 1).padStart(2, "0")}`,
-          type: "song",
-          recording: {
-            ...recordingFromFields(baseTitle, versionLabel),
-            ...(item.recording || {})
-          },
-          artistHint: item.artistHint || "",
-          spotifyMatchPolicy: item.spotifyMatchPolicy || "exact",
-          spotify: item.spotify || {
-            status: "unmatched",
-            trackId: null,
-            uri: null,
-            matchedTitle: null,
-            matchedArtist: null
-          }
-        };
-      });
-      return normalized;
-    });
+    const performances = Array.isArray(event.performances) ? event.performances : [];
+    event.performances = performances.map(normalizePerformance);
     return event;
   }
 
@@ -569,11 +586,7 @@
       });
   }
 
-  function renderEventList() {
-    const previousScrollTop = elements.eventList.scrollTop;
-    elements.eventList.replaceChildren();
-    const groups = groupedEventsBySeries();
-    const searchActive = Boolean(normalizeEventSearch(state.eventSearchQuery));
+  function updateEventListSummary(groups) {
     const visibleCount = groups.reduce((sum, group) => sum + group.events.length, 0);
     const totalCount = state.database.events.length;
     const totalPerformances = state.database.events.reduce(
@@ -584,50 +597,32 @@
     elements.eventListSummary.textContent = hasFilter
       ? `${visibleCount} / ${totalCount}イベントを表示`
       : `${totalCount}イベント・${totalPerformances}公演`;
-    if (!groups.length) {
-      const empty = document.createElement("p");
-      empty.className = "event-list-empty";
-      empty.textContent = normalizeEventSearch(state.eventSearchQuery)
-        ? "検索条件に合う公演データがありません。"
-        : state.showNumberedOnly
-          ? "ナンバリング公演のフラグが付いたイベントはありません。"
-          : "イベントがありません。";
-      elements.eventList.append(empty);
-      return;
+  }
+
+  function eventListEmptyMessage() {
+    if (normalizeEventSearch(state.eventSearchQuery)) {
+      return "検索条件に合う公演データがありません。";
     }
-    for (const group of groups) {
-      const details = document.createElement("details");
-      details.className = "event-series-group";
-      details.dataset.series = group.key;
-      details.open = searchActive || state.expandedEventSeries.has(group.key);
+    if (state.showNumberedOnly) {
+      return "ナンバリング公演のフラグが付いたイベントはありません。";
+    }
+    return "イベントがありません。";
+  }
 
-      const summary = document.createElement("summary");
-      summary.className = "event-series-summary";
-      const label = document.createElement("span");
-      label.className = "event-series-label";
-      label.textContent = group.label;
-      const count = document.createElement("span");
-      count.className = "event-series-count";
-      count.textContent = `${group.events.length}イベント`;
-      summary.append(label, count);
-      details.append(summary);
-
-      const eventItems = document.createElement("div");
-      eventItems.className = "event-series-items";
-      for (const event of group.events) {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = `event-item${event.id === state.selectedEventId ? " active" : ""}`;
-        if (event.id === state.selectedEventId) button.setAttribute("aria-current", "true");
-        const performanceCount = event.performances.length;
-        const trackCount = event.performances.reduce(
-          (sum, performance) => sum + performance.setlist.length,
-          0
-        );
-        const numberedLabel = event.isNumberedLive
-          ? '<span class="event-item-badge">ナンバリング</span>'
-          : "";
-        button.innerHTML = `
+  function createEventListItem(event) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `event-item${event.id === state.selectedEventId ? " active" : ""}`;
+    if (event.id === state.selectedEventId) button.setAttribute("aria-current", "true");
+    const performanceCount = event.performances.length;
+    const trackCount = event.performances.reduce(
+      (sum, performance) => sum + performance.setlist.length,
+      0
+    );
+    const numberedLabel = event.isNumberedLive
+      ? '<span class="event-item-badge">ナンバリング</span>'
+      : "";
+    button.innerHTML = `
           <span class="event-item-heading">
             <span class="event-item-title">${escapeHtml(event.title)}</span>
             <span class="event-item-arrow" aria-hidden="true">→</span>
@@ -638,32 +633,65 @@
             ${numberedLabel}
           </span>
         `;
-        button.addEventListener("click", () => {
-          readEventFormIntoState(false);
-          state.selectedEventId = event.id;
-          focusEventSeries(event);
-          localStorage.setItem(SELECTED_KEY, event.id);
-          render();
-        });
-        eventItems.append(button);
+    button.addEventListener("click", () => {
+      readEventFormIntoState(false);
+      state.selectedEventId = event.id;
+      focusEventSeries(event);
+      localStorage.setItem(SELECTED_KEY, event.id);
+      render();
+    });
+    return button;
+  }
+
+  function createEventSeriesGroup(group, searchActive) {
+    const details = document.createElement("details");
+    details.className = "event-series-group";
+    details.dataset.series = group.key;
+    details.open = searchActive || state.expandedEventSeries.has(group.key);
+
+    const summary = document.createElement("summary");
+    summary.className = "event-series-summary";
+    const label = document.createElement("span");
+    label.className = "event-series-label";
+    label.textContent = group.label;
+    const count = document.createElement("span");
+    count.className = "event-series-count";
+    count.textContent = `${group.events.length}イベント`;
+    summary.append(label, count);
+
+    const eventItems = document.createElement("div");
+    eventItems.className = "event-series-items";
+    eventItems.append(...group.events.map(createEventListItem));
+    details.append(summary, eventItems);
+    details.addEventListener("toggle", () => {
+      if (searchActive) return;
+      if (!details.open) {
+        state.expandedEventSeries.delete(group.key);
+        return;
       }
-      details.append(eventItems);
-      details.addEventListener("toggle", () => {
-        if (searchActive) return;
-        if (details.open) {
-          state.expandedEventSeries.clear();
-          state.expandedEventSeries.add(group.key);
-          elements.eventList
-            .querySelectorAll(".event-series-group[open]")
-            .forEach((sibling) => {
-              if (sibling !== details) sibling.open = false;
-            });
-        } else {
-          state.expandedEventSeries.delete(group.key);
-        }
+      state.expandedEventSeries.clear();
+      state.expandedEventSeries.add(group.key);
+      elements.eventList.querySelectorAll(".event-series-group[open]").forEach((sibling) => {
+        if (sibling !== details) sibling.open = false;
       });
-      elements.eventList.append(details);
+    });
+    return details;
+  }
+
+  function renderEventList() {
+    const previousScrollTop = elements.eventList.scrollTop;
+    elements.eventList.replaceChildren();
+    const groups = groupedEventsBySeries();
+    updateEventListSummary(groups);
+    if (!groups.length) {
+      const empty = document.createElement("p");
+      empty.className = "event-list-empty";
+      empty.textContent = eventListEmptyMessage();
+      elements.eventList.append(empty);
+      return;
     }
+    const searchActive = Boolean(normalizeEventSearch(state.eventSearchQuery));
+    elements.eventList.append(...groups.map((group) => createEventSeriesGroup(group, searchActive)));
     elements.eventList.scrollTop = previousScrollTop;
   }
 
@@ -996,61 +1024,58 @@
       : "表示中を全選択";
   }
 
+  function toggleLlFansSyncSelection(checkbox) {
+    const method = checkbox.checked ? "add" : "delete";
+    state.llfansSyncSelectedIds[method](checkbox.value);
+    updateLlFansSyncSelectionUi();
+  }
+
+  function llFansSyncCatalogItem(item) {
+    const label = document.createElement("label");
+    label.className = "llfans-sync-item";
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = String(item.sourceId);
+    checkbox.checked = state.llfansSyncSelectedIds.has(checkbox.value);
+    checkbox.addEventListener("change", () => toggleLlFansSyncSelection(checkbox));
+
+    const copy = document.createElement("span");
+    copy.className = "llfans-sync-copy";
+    const title = document.createElement("span");
+    title.className = "llfans-sync-title";
+    title.textContent = item.title;
+    const meta = document.createElement("span");
+    meta.className = "llfans-sync-meta";
+    const dateRange = [item.startsOn, item.endsOn]
+      .filter(Boolean)
+      .filter((value, index, values) => index === 0 || value !== values[0])
+      .join(" 〜 ");
+    meta.textContent = `${dateRange || "日程未設定"} / LL-Fans ID ${item.sourceId}`;
+    copy.append(title, meta);
+
+    const series = document.createElement("span");
+    series.className = "llfans-sync-series";
+    series.textContent = (item.series || []).join(", ") || "series不明";
+    label.append(checkbox, copy, series);
+    return label;
+  }
+
   function renderLlFansSyncCatalog() {
-    const missing = state.llfansSyncCatalog.filter(
-      (item) => !matchingRegisteredEvent(item)
-    );
+    const missing = state.llfansSyncCatalog.filter((item) => !matchingRegisteredEvent(item));
     const visible = filteredLlFansSyncEvents();
     elements.llfansSyncList.replaceChildren();
     elements.llfansSyncSummary.textContent =
       `取得 ${state.llfansSyncCatalog.length}件 / 未登録 ${missing.length}件 / 表示 ${visible.length}件`;
 
-    if (!visible.length) {
+    if (visible.length) {
+      elements.llfansSyncList.append(...visible.map(llFansSyncCatalogItem));
+    } else {
       const empty = document.createElement("p");
       empty.className = "llfans-sync-empty";
       empty.textContent = missing.length
         ? "絞り込み条件に一致する未登録公演はありません。"
         : "未登録の公演はありません。";
       elements.llfansSyncList.append(empty);
-      updateLlFansSyncSelectionUi();
-      return;
-    }
-
-    for (const item of visible) {
-      const label = document.createElement("label");
-      label.className = "llfans-sync-item";
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.value = String(item.sourceId);
-      checkbox.checked = state.llfansSyncSelectedIds.has(checkbox.value);
-      checkbox.addEventListener("change", () => {
-        if (checkbox.checked) {
-          state.llfansSyncSelectedIds.add(checkbox.value);
-        } else {
-          state.llfansSyncSelectedIds.delete(checkbox.value);
-        }
-        updateLlFansSyncSelectionUi();
-      });
-
-      const copy = document.createElement("span");
-      copy.className = "llfans-sync-copy";
-      const title = document.createElement("span");
-      title.className = "llfans-sync-title";
-      title.textContent = item.title;
-      const meta = document.createElement("span");
-      meta.className = "llfans-sync-meta";
-      const dateRange = [item.startsOn, item.endsOn]
-        .filter(Boolean)
-        .filter((value, index, values) => index === 0 || value !== values[0])
-        .join(" 〜 ");
-      meta.textContent = `${dateRange || "日程未設定"} / LL-Fans ID ${item.sourceId}`;
-      copy.append(title, meta);
-
-      const series = document.createElement("span");
-      series.className = "llfans-sync-series";
-      series.textContent = (item.series || []).join(", ") || "series不明";
-      label.append(checkbox, copy, series);
-      elements.llfansSyncList.append(label);
     }
     updateLlFansSyncSelectionUi();
   }
@@ -1308,91 +1333,96 @@
     renderActiveImportPerformance({ applyKnownSongs: false });
   }
 
-  function renderPageImportSetlist() {
-    elements.pageImportSetlistRows.replaceChildren();
-    const setlist = activeImportPerformance()?.setlist || [];
+  function importSongField(className, value, placeholder) {
+    const cell = document.createElement("td");
+    const input = document.createElement("input");
+    input.className = `${className} table-input`;
+    input.value = value || "";
+    input.placeholder = placeholder;
+    input.autocomplete = "off";
+    cell.append(input);
+    return cell;
+  }
 
-    setlist.forEach((item, index) => {
-      const row = document.createElement("tr");
-      row.dataset.spotifyStatus = "unmatched";
-      row.dataset.spotifyUiStatus = "idle";
-      row.dataset.spotifySource = "";
-      row.dataset.artistAutoFilled = "";
-      row._spotifyResults = [];
-      const orderCell = document.createElement("td");
-      orderCell.className = "song-order";
-      orderCell.textContent = String(index + 1);
-      row.append(orderCell);
-
-      const fields = [
-        ["import-song-marker", item.marker, "M01"],
-        ["import-song-title", item.title, "曲名"],
-        ["import-song-version", item.version, "104期 Ver."],
-        ["import-song-artist", item.artistHint, "アーティスト"]
-      ];
-      for (const [className, value, placeholder] of fields) {
-        const cell = document.createElement("td");
-        const input = document.createElement("input");
-        input.className = `${className} table-input`;
-        input.value = value || "";
-        input.placeholder = placeholder;
-        input.autocomplete = "off";
-        cell.append(input);
-        row.append(cell);
-      }
-
-      row.querySelectorAll(".import-song-title, .import-song-version").forEach((input) => {
-        input.addEventListener("input", () => {
-          clearAutoFilledArtist(row, true);
-          clearSpotifyRowMatch(row);
-        });
-      });
-      row.querySelector(".import-song-artist").addEventListener("input", () => {
-        clearAutoFilledArtist(row, false);
+  function bindImportSongInputs(row) {
+    row.querySelectorAll(".import-song-title, .import-song-version").forEach((input) => {
+      input.addEventListener("input", () => {
+        clearAutoFilledArtist(row, true);
         clearSpotifyRowMatch(row);
       });
-
-      const spotifyCell = document.createElement("td");
-      const spotifyStatus = document.createElement("div");
-      spotifyStatus.className = "spotify-row-status";
-      const spotifyBadge = document.createElement("span");
-      spotifyBadge.className = "spotify-match-badge idle";
-      spotifyBadge.textContent = "未検索";
-      const candidatesButton = document.createElement("button");
-      candidatesButton.className = "spotify-candidates-button hidden";
-      candidatesButton.type = "button";
-      candidatesButton.textContent = "候補を見る";
-      candidatesButton.addEventListener("click", () => openSpotifyCandidateDialog(row));
-      spotifyStatus.append(spotifyBadge, candidatesButton);
-      spotifyCell.append(spotifyStatus);
-      row.append(spotifyCell);
-      elements.pageImportSetlistRows.append(row);
-
-      const savedStatus = item.spotifyUiStatus === "skipped"
-        ? "unavailable"
-        : item.spotifyUiStatus || "idle";
-      setSpotifyRowStatus(
-        row,
-        savedStatus,
-        item.spotifyStatusLabel || (
-          savedStatus === "idle"
-            ? "未検索"
-            : savedStatus === "unavailable"
-              ? "未配信"
-              : "要確認"
-        ),
-        item.spotifyTrack || null,
-        item.spotifyResults || []
-      );
-      row.dataset.spotifySource = item.spotifySource || "";
-      row.dataset.artistAutoFilled = item.artistAutoFilled || "";
-      if (item.artistAutoFilled === "database" && !item.spotifyTrack && item.artistHint) {
-        const note = document.createElement("span");
-        note.className = "known-song-note";
-        note.textContent = "登録済み曲から補完";
-        row.querySelector(".import-song-artist").parentElement.append(note);
-      }
     });
+    row.querySelector(".import-song-artist").addEventListener("input", () => {
+      clearAutoFilledArtist(row, false);
+      clearSpotifyRowMatch(row);
+    });
+  }
+
+  function importSpotifyStatusCell(row) {
+    const cell = document.createElement("td");
+    const status = document.createElement("div");
+    status.className = "spotify-row-status";
+    const badge = document.createElement("span");
+    badge.className = "spotify-match-badge idle";
+    badge.textContent = "未検索";
+    const button = document.createElement("button");
+    button.className = "spotify-candidates-button hidden";
+    button.type = "button";
+    button.textContent = "候補を見る";
+    button.addEventListener("click", () => openSpotifyCandidateDialog(row));
+    status.append(badge, button);
+    cell.append(status);
+    return cell;
+  }
+
+  function restoreImportSongState(row, item) {
+    const savedStatus = item.spotifyUiStatus === "skipped"
+      ? "unavailable"
+      : item.spotifyUiStatus || "idle";
+    const label = item.spotifyStatusLabel || (
+      savedStatus === "idle" ? "未検索" : savedStatus === "unavailable" ? "未配信" : "要確認"
+    );
+    setSpotifyRowStatus(
+      row,
+      savedStatus,
+      label,
+      item.spotifyTrack || null,
+      item.spotifyResults || []
+    );
+    row.dataset.spotifySource = item.spotifySource || "";
+    row.dataset.artistAutoFilled = item.artistAutoFilled || "";
+    if (item.artistAutoFilled !== "database" || item.spotifyTrack || !item.artistHint) return;
+    const note = document.createElement("span");
+    note.className = "known-song-note";
+    note.textContent = "登録済み曲から補完";
+    row.querySelector(".import-song-artist").parentElement.append(note);
+  }
+
+  function pageImportSongRow(item, index) {
+    const row = document.createElement("tr");
+    row.dataset.spotifyStatus = "unmatched";
+    row.dataset.spotifyUiStatus = "idle";
+    row.dataset.spotifySource = "";
+    row.dataset.artistAutoFilled = "";
+    row._spotifyResults = [];
+    const orderCell = document.createElement("td");
+    orderCell.className = "song-order";
+    orderCell.textContent = String(index + 1);
+    row.append(
+      orderCell,
+      importSongField("import-song-marker", item.marker, "M01"),
+      importSongField("import-song-title", item.title, "曲名"),
+      importSongField("import-song-version", item.version, "104期 Ver."),
+      importSongField("import-song-artist", item.artistHint, "アーティスト"),
+      importSpotifyStatusCell(row)
+    );
+    bindImportSongInputs(row);
+    restoreImportSongState(row, item);
+    return row;
+  }
+
+  function renderPageImportSetlist() {
+    const setlist = activeImportPerformance()?.setlist || [];
+    elements.pageImportSetlistRows.replaceChildren(...setlist.map(pageImportSongRow));
   }
 
   function setSpotifyRowStatus(row, status, label, track = null, results = []) {
@@ -1447,73 +1477,69 @@
     row.querySelector(".import-song-artist").parentElement.append(note);
   }
 
+  function resolveKnownSong(index, title, version) {
+    let known = window.KnownSongCache.findKnownSong(index, title, version);
+    if (!known.track && matchPolicyForVersion(version) === "original_fallback") {
+      const original = window.KnownSongCache.findKnownSong(index, title, "");
+      if (original.track && !original.trackConflict) {
+        return { known: original, label: "登録済み原曲で補完" };
+      }
+    }
+    if (!known.track) {
+      const sameTitle = window.KnownSongCache.findKnownSongByTitle(index, title);
+      if (sameTitle.track && !sameTitle.trackConflict) {
+        return { known: sameTitle, label: "登録済み同名曲から補完" };
+      }
+    }
+    return { known, label: "登録済みから補完" };
+  }
+
+  function applyConfirmedSong(row, confirmed, counts) {
+    if (!confirmed?.track) return false;
+    setAutoFilledArtist(row, spotifyTrackArtist(confirmed.track), "confirmed");
+    setSpotifyRowStatus(
+      row,
+      "matched",
+      confirmed.exact ? "手動設定を自動反映" : "同名曲の手動設定を反映",
+      confirmed.track
+    );
+    row.dataset.spotifySource = "confirmed";
+    counts.tracks += 1;
+    return true;
+  }
+
+  function applyDatabaseSong(row, resolved, counts) {
+    const { known, label } = resolved;
+    if (!known.found) return;
+    if (known.track) {
+      setAutoFilledArtist(row, known.artist, "database");
+      setSpotifyRowStatus(row, "matched", label, known.track);
+      row.dataset.spotifySource = "database";
+      counts.tracks += 1;
+    } else if (known.artist && !row.querySelector(".import-song-artist").value.trim()) {
+      setAutoFilledArtist(row, known.artist, "database", true);
+      counts.artists += 1;
+    }
+    if (known.trackConflict || known.artistConflict) counts.conflicts += 1;
+  }
+
   function applyKnownSongsFromDatabase() {
     const index = window.KnownSongCache.buildKnownSongIndex(state.database.events);
     const counts = { tracks: 0, artists: 0, conflicts: 0 };
     const rows = [...elements.pageImportSetlistRows.querySelectorAll("tr")];
-
     for (const row of rows) {
       if (row.dataset.spotifyStatus === "matched") continue;
       const title = row.querySelector(".import-song-title").value.trim();
       const version = row.querySelector(".import-song-version").value.trim();
       if (!title) continue;
       const confirmed = findConfirmedSpotifyMapping(title, version);
-      if (confirmed?.track) {
-        const artist = spotifyTrackArtist(confirmed.track);
-        setAutoFilledArtist(row, artist, "confirmed");
-        setSpotifyRowStatus(
-          row,
-          "matched",
-          confirmed.exact ? "手動設定を自動反映" : "同名曲の手動設定を反映",
-          confirmed.track
-        );
-        row.dataset.spotifySource = "confirmed";
-        counts.tracks += 1;
-        continue;
-      }
-
-      let known = window.KnownSongCache.findKnownSong(index, title, version);
-      let usedOriginalFallback = false;
-      let usedTitleFallback = false;
-      if (!known.track && matchPolicyForVersion(version) === "original_fallback") {
-        const original = window.KnownSongCache.findKnownSong(index, title, "");
-        if (original.track && !original.trackConflict) {
-          known = original;
-          usedOriginalFallback = true;
-        }
-      }
-      if (!known.track) {
-        const sameTitle = window.KnownSongCache.findKnownSongByTitle(index, title);
-        if (sameTitle.track && !sameTitle.trackConflict) {
-          known = sameTitle;
-          usedTitleFallback = true;
-        }
-      }
-      if (!known.found) continue;
-
-      if (known.track) {
-        setAutoFilledArtist(row, known.artist, "database");
-        setSpotifyRowStatus(
-          row,
-          "matched",
-          usedOriginalFallback
-            ? "登録済み原曲で補完"
-            : usedTitleFallback
-              ? "登録済み同名曲から補完"
-              : "登録済みから補完",
-          known.track
-        );
-        row.dataset.spotifySource = "database";
-        counts.tracks += 1;
-      } else if (known.artist && !row.querySelector(".import-song-artist").value.trim()) {
-        setAutoFilledArtist(row, known.artist, "database", true);
-        counts.artists += 1;
-      }
-      if (known.trackConflict || known.artistConflict) counts.conflicts += 1;
+      if (applyConfirmedSong(row, confirmed, counts)) continue;
+      applyDatabaseSong(row, resolveKnownSong(index, title, version), counts);
     }
     return counts;
   }
 
+  /** @param {SpotifyTrack} track */
   function spotifyTrackArtist(track) {
     return (track?.artists || [])
       .map((artist) => artist.name)
@@ -1521,66 +1547,83 @@
       .join(", ");
   }
 
+  /** @param {SpotifyTrack} track */
   function spotifyTrackArtwork(track) {
     return (track?.album?.images || []).find((image) => image?.url)?.url || "";
   }
 
-  function renderSpotifyCandidateResults(results) {
-    elements.spotifyCandidateList.replaceChildren();
-    elements.spotifyCandidateSummary.textContent = results.length
+  /** @param {SpotifyTrack} track @param {string} [artist] */
+  function spotifyMatchFromTrack(track, artist = spotifyTrackArtist(track)) {
+    return {
+      status: "matched",
+      trackId: track.id || null,
+      uri: track.uri || null,
+      matchedTitle: track.name || null,
+      matchedArtist: artist || null,
+      artworkUrl: spotifyTrackArtwork(track) || null,
+      albumName: track.album?.name || null
+    };
+  }
+
+  function spotifyCandidateSummary(results) {
+    return results.length
       ? state.spotifyReviewActive
         ? `${results.length}件の検索結果があります。使用する曲を選ぶと次へ進みます。`
         : `${results.length}件の検索結果から使用する曲を選んでください。`
       : state.spotifyReviewActive
         ? "検索結果がありません。再検索するか、この曲を未配信として登録してください。"
         : "検索結果がありません。検索語を変更して再検索してください。";
+  }
 
-    if (!results.length) {
-      const empty = document.createElement("p");
-      empty.className = "spotify-candidate-empty";
-      empty.textContent = "候補がありません。曲名やアーティスト名を変えて検索できます。";
-      elements.spotifyCandidateList.append(empty);
+  function spotifyCandidateArtwork(track) {
+    const artwork = document.createElement("span");
+    artwork.className = "spotify-candidate-artwork";
+    const imageUrl = spotifyTrackArtwork(track);
+    if (!imageUrl) {
+      artwork.textContent = "♪";
+      artwork.setAttribute("aria-hidden", "true");
+      return artwork;
+    }
+    const image = document.createElement("img");
+    image.src = imageUrl;
+    image.alt = track.album?.name ? `${track.album.name}のジャケット` : "アルバムジャケット";
+    image.loading = "lazy";
+    artwork.append(image);
+    return artwork;
+  }
+
+  function spotifyCandidateButton(track) {
+    const button = document.createElement("button");
+    button.className = "spotify-candidate-item";
+    button.type = "button";
+    const copy = document.createElement("span");
+    copy.className = "spotify-candidate-copy";
+    const title = document.createElement("span");
+    title.className = "spotify-candidate-title";
+    title.textContent = track.name || "曲名不明";
+    const artist = document.createElement("span");
+    artist.className = "spotify-candidate-artist";
+    artist.textContent = spotifyTrackArtist(track) || "アーティスト不明";
+    const album = document.createElement("span");
+    album.className = "spotify-candidate-album";
+    album.textContent = track.album?.name ? `収録: ${track.album.name}` : "";
+    copy.append(title, artist, album);
+    button.append(spotifyCandidateArtwork(track), copy);
+    button.addEventListener("click", () => applyManualSpotifyTrack(track));
+    return button;
+  }
+
+  function renderSpotifyCandidateResults(results) {
+    elements.spotifyCandidateList.replaceChildren();
+    elements.spotifyCandidateSummary.textContent = spotifyCandidateSummary(results);
+    if (results.length) {
+      elements.spotifyCandidateList.append(...results.map(spotifyCandidateButton));
       return;
     }
-
-    results.forEach((track) => {
-      const button = document.createElement("button");
-      button.className = "spotify-candidate-item";
-      button.type = "button";
-
-      const artwork = document.createElement("span");
-      artwork.className = "spotify-candidate-artwork";
-      const imageUrl = (track.album?.images || []).find((image) => image?.url)?.url;
-      if (imageUrl) {
-        const image = document.createElement("img");
-        image.src = imageUrl;
-        image.alt = track.album?.name
-          ? `${track.album.name}のジャケット`
-          : "アルバムジャケット";
-        image.loading = "lazy";
-        artwork.append(image);
-      } else {
-        artwork.textContent = "♪";
-        artwork.setAttribute("aria-hidden", "true");
-      }
-
-      const copy = document.createElement("span");
-      copy.className = "spotify-candidate-copy";
-      const title = document.createElement("span");
-      title.className = "spotify-candidate-title";
-      title.textContent = track.name || "曲名不明";
-      const artist = document.createElement("span");
-      artist.className = "spotify-candidate-artist";
-      artist.textContent = spotifyTrackArtist(track) || "アーティスト不明";
-      const album = document.createElement("span");
-      album.className = "spotify-candidate-album";
-      album.textContent = track.album?.name ? `収録: ${track.album.name}` : "";
-
-      copy.append(title, artist, album);
-      button.append(artwork, copy);
-      button.addEventListener("click", () => applyManualSpotifyTrack(track));
-      elements.spotifyCandidateList.append(button);
-    });
+    const empty = document.createElement("p");
+    empty.className = "spotify-candidate-empty";
+    empty.textContent = "候補がありません。曲名やアーティスト名を変えて検索できます。";
+    elements.spotifyCandidateList.append(empty);
   }
 
   function openSpotifyCandidateDialog(row) {
@@ -1660,9 +1703,7 @@
     advanceSpotifyReview();
   }
 
-  function advanceSpotifyReview() {
-    state.spotifySearchRequestId += 1;
-    state.spotifyReviewPosition += 1;
+  function nextSpotifyReviewContext() {
     while (state.spotifyReviewPosition < state.spotifyReviewQueue.length) {
       const current = state.spotifyReviewQueue[state.spotifyReviewPosition];
       const item = state.importDraft?.performances?.[current.performanceIndex]?.setlist?.[current.songIndex];
@@ -1685,31 +1726,43 @@
         state.spotifyReviewPosition += 1;
         continue;
       }
+      return { current, row };
+    }
+    return null;
+  }
 
-      state.spotifyManualRow = row;
-      state.spotifyManualContext = "import";
-      const marker = row.querySelector(".import-song-marker").value.trim();
-      const title = row.querySelector(".import-song-title").value.trim();
-      const performance = state.importDraft.performances[current.performanceIndex];
-      elements.spotifyReviewProgress.textContent =
-        `${state.spotifyReviewPosition + 1}/${state.spotifyReviewQueue.length}曲目 ・ ${performance.label || `公演 ${current.performanceIndex + 1}`}`;
-      elements.spotifyCandidateSong.textContent = `${marker || "曲"}: ${title || "曲名未入力"}`;
-      elements.spotifyManualQuery.value = title;
-      elements.spotifyManualSearchButton.textContent = "Spotifyを再検索";
-      const results = row._spotifyResults || [];
-      renderSpotifyCandidateResults(results);
-      if (!window.SpotifyClient.isConnected() && !results.length) {
-        elements.spotifyCandidateSummary.textContent =
-          "Spotify未接続のため検索できません。この曲を未配信として登録するか、確認を中止してSpotifyへ接続してください。";
-        elements.spotifyManualSearchButton.disabled = true;
-      } else {
-        elements.spotifyManualSearchButton.disabled = false;
-      }
-      if (!elements.spotifyCandidateDialog.open) elements.spotifyCandidateDialog.showModal();
-      if (!results.length && window.SpotifyClient.isConnected()) searchSpotifyManually();
+  function showSpotifyReviewContext({ current, row }) {
+    state.spotifyManualRow = row;
+    state.spotifyManualContext = "import";
+    const marker = row.querySelector(".import-song-marker").value.trim();
+    const title = row.querySelector(".import-song-title").value.trim();
+    const performance = state.importDraft.performances[current.performanceIndex];
+    elements.spotifyReviewProgress.textContent =
+      `${state.spotifyReviewPosition + 1}/${state.spotifyReviewQueue.length}曲目 ・ ${performance.label || `公演 ${current.performanceIndex + 1}`}`;
+    elements.spotifyCandidateSong.textContent = `${marker || "曲"}: ${title || "曲名未入力"}`;
+    elements.spotifyManualQuery.value = title;
+    elements.spotifyManualSearchButton.textContent = "Spotifyを再検索";
+    const results = row._spotifyResults || [];
+    renderSpotifyCandidateResults(results);
+    const connected = window.SpotifyClient.isConnected();
+    if (!connected && !results.length) {
+      elements.spotifyCandidateSummary.textContent =
+        "Spotify未接続のため検索できません。この曲を未配信として登録するか、確認を中止してSpotifyへ接続してください。";
+    }
+    elements.spotifyManualSearchButton.disabled = !connected && !results.length;
+    if (!elements.spotifyCandidateDialog.open) elements.spotifyCandidateDialog.showModal();
+    if (!results.length && connected) searchSpotifyManually();
+  }
+
+  function advanceSpotifyReview() {
+    state.spotifySearchRequestId += 1;
+    state.spotifyReviewPosition += 1;
+    const context = nextSpotifyReviewContext();
+    if (!context) {
+      finishSpotifyReview();
       return;
     }
-    finishSpotifyReview();
+    showSpotifyReviewContext(context);
   }
 
   function markCurrentSpotifyReviewSongUnavailable() {
@@ -1779,44 +1832,23 @@
       `Spotify選択済み ${matched}/${items.length}曲 / 要確認 ${needsReview}曲 / 未配信 ${unavailable}曲`;
   }
 
-  function applyManualSpotifyTrack(track) {
-    const row = state.spotifyManualRow;
-    if (!row) return;
-    if (state.spotifyManualContext === "editor") {
-      const index = Number(row.dataset.index);
-      const title = row.querySelector(".song-title").value.trim();
-      const version = row.querySelector(".song-version").value.trim();
-      const artist = spotifyTrackArtist(track);
-      rememberConfirmedSpotifyMapping(title, version, track);
-      syncSetlistFromRows();
-      const item = state.draftSetlist[index];
-      if (!item) return;
-      item.artistHint = artist;
-      item.spotifyMatchPolicy = "exact";
-      item.spotify = {
-        status: "matched",
-        trackId: track.id || null,
-        uri: track.uri || null,
-        matchedTitle: track.name || null,
-        matchedArtist: artist || null,
-        artworkUrl: spotifyTrackArtwork(track) || null,
-        albumName: track.album?.name || null
-      };
-      closeSpotifyCandidateDialog();
-      renderSetlistRows();
-      return;
-    }
-    const title = row.querySelector(".import-song-title").value.trim();
-    const version = row.querySelector(".import-song-version").value.trim();
+  function applyEditorSpotifyTrack(row, track) {
+    const index = Number(row.dataset.index);
+    const title = row.querySelector(".song-title").value.trim();
+    const version = row.querySelector(".song-version").value.trim();
     const artist = spotifyTrackArtist(track);
     rememberConfirmedSpotifyMapping(title, version, track);
-    setAutoFilledArtist(row, artist, "manual");
-    setSpotifyRowStatus(row, "matched", "手動選択", track);
-    row.dataset.spotifySource = "manual";
-    const continueReview = state.spotifyReviewActive;
-    if (!continueReview) closeSpotifyCandidateDialog();
-    syncActiveImportPerformance();
+    syncSetlistFromRows();
+    const item = state.draftSetlist[index];
+    if (!item) return;
+    item.artistHint = artist;
+    item.spotifyMatchPolicy = "exact";
+    item.spotify = spotifyMatchFromTrack(track, artist);
+    closeSpotifyCandidateDialog();
+    renderSetlistRows();
+  }
 
+  function applyConfirmedTrackToMatchingImports(title) {
     const normalizedTitle = window.KnownSongCache.normalizeComparable(title);
     for (const performance of state.importDraft?.performances || []) {
       for (const item of performance.setlist) {
@@ -1832,9 +1864,66 @@
         item.artistAutoFilled = confirmed.exact ? "manual" : "confirmed";
       }
     }
+  }
+
+  function applyImportSpotifyTrack(row, track) {
+    const title = row.querySelector(".import-song-title").value.trim();
+    const version = row.querySelector(".import-song-version").value.trim();
+    const artist = spotifyTrackArtist(track);
+    rememberConfirmedSpotifyMapping(title, version, track);
+    setAutoFilledArtist(row, artist, "manual");
+    setSpotifyRowStatus(row, "matched", "手動選択", track);
+    row.dataset.spotifySource = "manual";
+    const continueReview = state.spotifyReviewActive;
+    if (!continueReview) closeSpotifyCandidateDialog();
+    syncActiveImportPerformance();
+    applyConfirmedTrackToMatchingImports(title);
     renderActiveImportPerformance({ applyKnownSongs: false });
     updateManualSelectionSummary();
     if (continueReview) advanceSpotifyReview();
+  }
+
+  function applyManualSpotifyTrack(track) {
+    const row = state.spotifyManualRow;
+    if (!row) return;
+    if (state.spotifyManualContext === "editor") {
+      applyEditorSpotifyTrack(row, track);
+      return;
+    }
+    applyImportSpotifyTrack(row, track);
+  }
+
+  function spotifyTrackFromImportRow(row) {
+    if ((row.dataset.spotifyUiStatus || "unmatched") !== "matched") return null;
+    return {
+      id: row.dataset.spotifyTrackId || null,
+      uri: row.dataset.spotifyUri || null,
+      name: row.dataset.spotifyMatchedTitle || null,
+      artists: row.dataset.spotifyMatchedArtist
+        ? [{ name: row.dataset.spotifyMatchedArtist }]
+        : [],
+      album: row.dataset.spotifyArtworkUrl || row.dataset.spotifyAlbumName
+        ? {
+            name: row.dataset.spotifyAlbumName || "",
+            images: row.dataset.spotifyArtworkUrl ? [{ url: row.dataset.spotifyArtworkUrl }] : []
+          }
+        : null
+    };
+  }
+
+  function showManualSpotifyResults(row, results) {
+    if (state.spotifyManualContext === "editor") {
+      row._spotifyResults = results;
+      row.dataset.spotifySearched = "true";
+      renderSpotifyCandidateResults(results);
+      return;
+    }
+    const currentStatus = row.dataset.spotifyUiStatus || "unmatched";
+    const currentLabel = row.querySelector(".spotify-match-badge").textContent;
+    const currentSource = row.dataset.spotifySource || "";
+    setSpotifyRowStatus(row, currentStatus, currentLabel, spotifyTrackFromImportRow(row), results);
+    row.dataset.spotifySource = currentSource;
+    renderSpotifyCandidateResults(results);
   }
 
   async function searchSpotifyManually() {
@@ -1853,36 +1942,7 @@
     try {
       const results = await window.SpotifyClient.searchTracks(query);
       if (requestId !== state.spotifySearchRequestId) return;
-      if (state.spotifyManualContext === "editor") {
-        row._spotifyResults = results;
-        row.dataset.spotifySearched = "true";
-        renderSpotifyCandidateResults(results);
-        return;
-      }
-      const currentStatus = row.dataset.spotifyUiStatus || "unmatched";
-      const currentLabel = row.querySelector(".spotify-match-badge").textContent;
-      const currentSource = row.dataset.spotifySource || "";
-      const currentTrack = currentStatus === "matched"
-        ? {
-            id: row.dataset.spotifyTrackId || null,
-            uri: row.dataset.spotifyUri || null,
-            name: row.dataset.spotifyMatchedTitle || null,
-            artists: row.dataset.spotifyMatchedArtist
-              ? [{ name: row.dataset.spotifyMatchedArtist }]
-              : [],
-            album: row.dataset.spotifyArtworkUrl || row.dataset.spotifyAlbumName
-              ? {
-                  name: row.dataset.spotifyAlbumName || "",
-                  images: row.dataset.spotifyArtworkUrl
-                    ? [{ url: row.dataset.spotifyArtworkUrl }]
-                    : []
-                }
-              : null
-          }
-        : null;
-      setSpotifyRowStatus(row, currentStatus, currentLabel, currentTrack, results);
-      row.dataset.spotifySource = currentSource;
-      renderSpotifyCandidateResults(results);
+      showManualSpotifyResults(row, results);
     } catch (error) {
       if (requestId !== state.spotifySearchRequestId) return;
       elements.spotifyCandidateSummary.textContent = `検索に失敗しました: ${error.message}`;
@@ -1930,104 +1990,109 @@
     }
   }
 
+  async function cachedSpotifyMatch(cache, title, version, matchPolicy) {
+    const cacheKey = `${window.KnownSongCache.songKey(title, version)}::${matchPolicy}`;
+    if (cache.has(cacheKey)) return cache.get(cacheKey);
+    const result = await window.SpotifyClient.searchBestTrack({
+      title,
+      version,
+      matchPolicy
+    });
+    cache.set(cacheKey, result);
+    return result;
+  }
+
+  function applyEnrichmentResult(row, result, counts) {
+    if (result.status === "matched") {
+      const artist = spotifyTrackArtist(result.track);
+      const statusLabel = result.matchKind === "original_fallback"
+        ? "原曲で補完"
+        : result.matchKind === "version" ? "バージョン一致" : "曲名一致";
+      setAutoFilledArtist(row, artist, "spotify");
+      setSpotifyRowStatus(row, "matched", statusLabel, result.track);
+      row.dataset.spotifySource = "spotify";
+      if (result.matchKind === "original_fallback") counts.fallback += 1;
+      else counts.matched += 1;
+      return;
+    }
+    if (result.status === "ambiguous" || result.status === "manual") {
+      const statusLabel = result.status === "ambiguous" ? "候補複数" : "要確認";
+      const candidates = result.candidates?.length ? result.candidates : result.results || [];
+      setSpotifyRowStatus(row, result.status, statusLabel, null, candidates);
+      counts.ambiguous += 1;
+      return;
+    }
+    setSpotifyRowStatus(row, "unmatched", "見つからず", null, result.results || []);
+    counts.unmatched += 1;
+  }
+
+  async function enrichSpotifyRow(row, context) {
+    const title = row.querySelector(".import-song-title").value.trim();
+    const version = row.querySelector(".import-song-version").value.trim();
+    const matchPolicy = matchPolicyForVersion(version);
+    context.progress.value += 1;
+    elements.spotifyMatchSummary.textContent =
+      `${context.progress.value}/${context.totalSongs}曲を検索中…（${context.performanceIndex + 1}/${context.performanceCount}公演）`;
+
+    if (row.dataset.spotifyStatus === "matched" &&
+        ["database", "confirmed", "manual"].includes(row.dataset.spotifySource)) {
+      context.counts.reused += 1;
+      return;
+    }
+    if (!title) {
+      setSpotifyRowStatus(row, "unmatched", "曲名なし");
+      context.counts.unmatched += 1;
+      return;
+    }
+    setSpotifyRowStatus(row, "searching", "検索中");
+    const result = await cachedSpotifyMatch(context.cache, title, version, matchPolicy);
+    applyEnrichmentResult(row, result, context.counts);
+  }
+
+  async function enrichImportPerformances(performances, totalSongs, cache, counts) {
+    const progress = { value: 0 };
+    for (let performanceIndex = 0; performanceIndex < performances.length; performanceIndex += 1) {
+      selectImportPerformance(performanceIndex, { syncCurrent: false, applyKnownSongs: true });
+      const rows = [...elements.pageImportSetlistRows.querySelectorAll("tr")];
+      for (const row of rows) {
+        await enrichSpotifyRow(row, {
+          cache,
+          counts,
+          progress,
+          totalSongs,
+          performanceIndex,
+          performanceCount: performances.length
+        });
+      }
+      syncActiveImportPerformance();
+    }
+  }
+
+  function restoreImportPerformance(index) {
+    selectImportPerformance(index, { syncCurrent: false, applyKnownSongs: false });
+  }
+
   async function enrichArtistsFromSpotify() {
     if (!window.SpotifyClient.isConnected()) {
       alert("先に画面上部の「Spotifyに接続」を押してください。");
       return;
     }
-
     syncActiveImportPerformance();
     const performances = state.importDraft?.performances || [];
     const totalSongs = importSongCount();
     if (!totalSongs) return;
     const originalIndex = state.importPerformanceIndex;
+    const counts = { reused: 0, matched: 0, fallback: 0, ambiguous: 0, unmatched: 0 };
     elements.spotifyEnrichButton.disabled = true;
     elements.spotifyEnrichButton.textContent = "Spotifyを検索中…";
-
-    const cache = new Map();
-    const counts = { reused: 0, matched: 0, fallback: 0, ambiguous: 0, unmatched: 0 };
-    let processed = 0;
     try {
-      for (let performanceIndex = 0; performanceIndex < performances.length; performanceIndex += 1) {
-        selectImportPerformance(performanceIndex, {
-          syncCurrent: false,
-          applyKnownSongs: true
-        });
-        const rows = [...elements.pageImportSetlistRows.querySelectorAll("tr")];
-
-        for (const row of rows) {
-          const title = row.querySelector(".import-song-title").value.trim();
-          const version = row.querySelector(".import-song-version").value.trim();
-          const matchPolicy = matchPolicyForVersion(version);
-          processed += 1;
-          elements.spotifyMatchSummary.textContent =
-            `${processed}/${totalSongs}曲を検索中…（${performanceIndex + 1}/${performances.length}公演）`;
-
-          if (
-            row.dataset.spotifyStatus === "matched" &&
-            ["database", "confirmed", "manual"].includes(row.dataset.spotifySource)
-          ) {
-            counts.reused += 1;
-            continue;
-          }
-
-          if (!title) {
-            setSpotifyRowStatus(row, "unmatched", "曲名なし");
-            counts.unmatched += 1;
-            continue;
-          }
-
-          setSpotifyRowStatus(row, "searching", "検索中");
-          const cacheKey = `${window.KnownSongCache.songKey(title, version)}::${matchPolicy}`;
-          let result = cache.get(cacheKey);
-          if (!result) {
-            result = await window.SpotifyClient.searchBestTrack({
-              title,
-              version,
-              matchPolicy
-            });
-            cache.set(cacheKey, result);
-          }
-
-          if (result.status === "matched") {
-            const artist = spotifyTrackArtist(result.track);
-            const statusLabel = result.matchKind === "original_fallback"
-              ? "原曲で補完"
-              : result.matchKind === "version"
-                ? "バージョン一致"
-                : "曲名一致";
-            setAutoFilledArtist(row, artist, "spotify");
-            setSpotifyRowStatus(row, "matched", statusLabel, result.track);
-            row.dataset.spotifySource = "spotify";
-            if (result.matchKind === "original_fallback") counts.fallback += 1;
-            else counts.matched += 1;
-          } else if (result.status === "ambiguous" || result.status === "manual") {
-            const statusLabel = result.status === "ambiguous" ? "候補複数" : "要確認";
-            const candidates = result.candidates?.length
-              ? result.candidates
-              : result.results || [];
-            setSpotifyRowStatus(row, result.status, statusLabel, null, candidates);
-            counts.ambiguous += 1;
-          } else {
-            setSpotifyRowStatus(row, "unmatched", "見つからず", null, result.results || []);
-            counts.unmatched += 1;
-          }
-        }
-        syncActiveImportPerformance();
-      }
-
-      selectImportPerformance(originalIndex, {
-        syncCurrent: false,
-        applyKnownSongs: false
-      });
+      await enrichImportPerformances(performances, totalSongs, new Map(), counts);
+      restoreImportPerformance(originalIndex);
       elements.spotifyMatchSummary.textContent =
         `Spotify検索: 登録済みから補完 ${counts.reused}曲 / 一致 ${counts.matched}曲 / 原曲で補完 ${counts.fallback}曲 / 要手動選択 ${counts.ambiguous}曲 / 見つからず ${counts.unmatched}曲`;
     } catch (error) {
       syncActiveImportPerformance();
-      selectImportPerformance(originalIndex, {
-        syncCurrent: false,
-        applyKnownSongs: false
-      });
+      restoreImportPerformance(originalIndex);
       elements.spotifyMatchSummary.textContent = `Spotify検索を中断しました: ${error.message}`;
       alert(`Spotify検索に失敗しました。\n${error.message}`);
     } finally {
@@ -2038,17 +2103,14 @@
     }
   }
 
-  async function initializePageImport(parsed) {
-    state.importDraft = normalizeImportDraft(parsed);
-    state.importPerformanceIndex = 0;
-    const draft = state.importDraft;
-    if (!draft.performances.length) throw new Error("公演を取得できませんでした。");
-
-    const matchingEvent = state.database.events.find(
+  function matchingImportEvent(draft) {
+    return state.database.events.find(
       (event) => event.title.normalize("NFKC") === draft.event.title.normalize("NFKC")
     );
-    elements.pageImportDestination.value = matchingEvent?.id || "__new__";
+  }
 
+  function populateImportEventFields(draft, matchingEvent) {
+    elements.pageImportDestination.value = matchingEvent?.id || "__new__";
     const usedEventIds = new Set(state.database.events.map((event) => event.id));
     const suggestedEventId = draft.event.idSuggestion || stableSlug(draft.event.title, "event");
     elements.pageImportEventId.value = matchingEvent
@@ -2058,7 +2120,10 @@
     elements.pageImportSeries.value = (draft.event.series || []).join(", ");
     elements.pageImportSourceName.value = draft.event.source?.name || "";
     elements.pageImportSourceUrl.value = draft.event.source?.url || "";
+    return suggestedEventId;
+  }
 
+  function assignImportPerformanceIds(draft, matchingEvent, suggestedEventId) {
     const target = matchingEvent || { performances: [] };
     const usedPerformanceIds = new Set(
       target.performances.map((performance) => performance.id)
@@ -2069,7 +2134,9 @@
       performance.id = uniqueId(suggestion, usedPerformanceIds);
       usedPerformanceIds.add(performance.id);
     }
+  }
 
+  function showImportSummary(draft) {
     const performanceCount = draft.performances.length;
     const songCount = importSongCount();
     elements.pageImportSummary.textContent =
@@ -2078,7 +2145,10 @@
       ? `${performanceCount}公演をJSON化して登録`
       : "JSON化して登録";
     elements.pageImportPreview.classList.remove("hidden");
+    return { performanceCount, songCount };
+  }
 
+  function applyKnownSongsToImport(performanceCount) {
     const knownCounts = { tracks: 0, artists: 0, conflicts: 0 };
     for (let index = 0; index < performanceCount; index += 1) {
       const currentCounts = selectImportPerformance(index, {
@@ -2090,20 +2160,34 @@
       knownCounts.conflicts += currentCounts.conflicts;
     }
     selectImportPerformance(0, { syncCurrent: false, applyKnownSongs: false });
+    return knownCounts;
+  }
 
+  function showImportWarnings(warnings) {
+    if (warnings.length) {
+      showValidation(elements.pageImportWarnings, warnings);
+      return;
+    }
+    hideValidation(elements.pageImportWarnings);
+  }
+
+  async function initializePageImport(parsed) {
+    state.importDraft = normalizeImportDraft(parsed);
+    state.importPerformanceIndex = 0;
+    const draft = state.importDraft;
+    if (!draft.performances.length) throw new Error("公演を取得できませんでした。");
+    const matchingEvent = matchingImportEvent(draft);
+    const suggestedEventId = populateImportEventFields(draft, matchingEvent);
+    assignImportPerformanceIds(draft, matchingEvent, suggestedEventId);
+    const { performanceCount, songCount } = showImportSummary(draft);
+    const knownCounts = applyKnownSongsToImport(performanceCount);
     elements.spotifyMatchSummary.textContent = knownCounts.tracks || knownCounts.artists
       ? `登録済みデータからSpotify曲 ${knownCounts.tracks}曲、アーティスト ${knownCounts.artists}曲を補完しました。`
       : "曲名だけでSpotifyを検索します。一意の完全一致だけ自動適用します。";
     elements.savePageImportButton.disabled = songCount === 0;
     updatePageImportDestination();
     updateSpotifyUi();
-
-    if (draft.warnings.length) {
-      showValidation(elements.pageImportWarnings, draft.warnings);
-    } else {
-      hideValidation(elements.pageImportWarnings);
-    }
-
+    showImportWarnings(draft.warnings);
     if (window.SpotifyClient.isConnected()) {
       await enrichArtistsFromSpotify();
     } else {
@@ -2220,15 +2304,9 @@
         recording: recordingFromFields(item.title, item.version),
         artistHint: item.artistHint,
         spotifyMatchPolicy: spotifyUnavailable ? "unavailable" : matchPolicyForVersion(item.version),
-        spotify: {
-          status: spotifyMatched ? "matched" : "unmatched",
-          trackId: spotifyMatched ? item.spotifyTrack.id : null,
-          uri: spotifyMatched ? item.spotifyTrack.uri : null,
-          matchedTitle: spotifyMatched ? item.spotifyTrack.name : null,
-          matchedArtist: spotifyMatched ? spotifyTrackArtist(item.spotifyTrack) : null,
-          artworkUrl: spotifyMatched ? spotifyTrackArtwork(item.spotifyTrack) : null,
-          albumName: spotifyMatched ? item.spotifyTrack.album?.name || null : null
-        }
+        spotify: spotifyMatched
+          ? spotifyMatchFromTrack(item.spotifyTrack)
+          : emptySpotifyMatch("unmatched", true)
       };
     });
   }
@@ -2275,11 +2353,7 @@
         countryCode: performance.venue.countryCode || "JP"
       },
       setlist: schemaSetlistFromDraft(performance.setlist),
-      spotifyPlaylist: {
-        status: "not_created",
-        playlistId: null,
-        url: null
-      }
+      spotifyPlaylist: emptySpotifyPlaylist()
     };
   }
 
@@ -2292,54 +2366,37 @@
     return savePageImportWithOptions(event);
   }
 
-  function savePageImportWithOptions(event, { skipSpotifyReview = false } = {}) {
-    event.preventDefault();
-    if (!state.importDraft) return;
-
+  function pageImportTarget() {
     const isNewEvent = elements.pageImportDestination.value === "__new__";
     const targetEvent = isNewEvent
       ? eventFromPageImport()
       : state.database.events.find(
           (candidate) => candidate.id === elements.pageImportDestination.value
         );
-    if (!targetEvent) {
-      showValidation(elements.pageImportErrors, ["登録先のイベントが見つかりません。"]);
-      return;
-    }
+    return { isNewEvent, targetEvent };
+  }
 
-    const performances = performancesFromPageImport();
+  function pageImportValidationErrors(targetEvent, isNewEvent, performances) {
     const errors = [...(isNewEvent ? validateEvent(targetEvent) : [])];
-    const validationOwner = {
-      performances: [...targetEvent.performances]
-    };
+    const validationOwner = { performances: [...targetEvent.performances] };
     for (const performance of performances) {
       errors.push(...validatePerformance(performance, validationOwner, null));
       validationOwner.performances.push(performance);
     }
-    if (errors.length) {
-      showValidation(elements.pageImportErrors, [...new Set(errors)]);
-      return;
-    }
+    return [...new Set(errors)];
+  }
 
-    if (!skipSpotifyReview) {
-      const unresolved = collectUnresolvedSpotifySongs();
-      if (unresolved.length) {
-        hideValidation(elements.pageImportErrors);
-        startSpotifyReview(unresolved);
-        return;
-      }
-    }
+  function addImportReferenceSource(targetEvent) {
+    const referenceSource = state.importDraft?.event?.llFansSource;
+    const hasReference = targetEvent.sources.some((source) => source?.url === referenceSource?.url);
+    if (referenceSource?.url && !hasReference) targetEvent.sources.push(deepClone(referenceSource));
+  }
 
+  function commitPageImport(targetEvent, isNewEvent, performances) {
     if (isNewEvent) {
       state.database.events.push(targetEvent);
     } else {
-      const referenceSource = state.importDraft?.event?.llFansSource;
-      const hasReference = targetEvent.sources.some(
-        (source) => source?.url === referenceSource?.url
-      );
-      if (referenceSource?.url && !hasReference) {
-        targetEvent.sources.push(deepClone(referenceSource));
-      }
+      addImportReferenceSource(targetEvent);
     }
     targetEvent.performances.push(...performances);
     state.selectedEventId = targetEvent.id;
@@ -2351,6 +2408,29 @@
     const songCount = performances.reduce((sum, performance) => sum + performance.setlist.length, 0);
     if (state.llfansSyncActive) scheduleNextLlFansSyncItem();
     setSaveState(`${performances.length}公演・${songCount}曲を登録しました`);
+  }
+
+  function savePageImportWithOptions(event, { skipSpotifyReview = false } = {}) {
+    event.preventDefault();
+    if (!state.importDraft) return;
+    const { isNewEvent, targetEvent } = pageImportTarget();
+    if (!targetEvent) {
+      showValidation(elements.pageImportErrors, ["登録先のイベントが見つかりません。"]);
+      return;
+    }
+    const performances = performancesFromPageImport();
+    const errors = pageImportValidationErrors(targetEvent, isNewEvent, performances);
+    if (errors.length) {
+      showValidation(elements.pageImportErrors, errors);
+      return;
+    }
+    const unresolved = skipSpotifyReview ? [] : collectUnresolvedSpotifySongs();
+    if (unresolved.length) {
+      hideValidation(elements.pageImportErrors);
+      startSpotifyReview(unresolved);
+      return;
+    }
+    commitPageImport(targetEvent, isNewEvent, performances);
   }
 
   function openPerformance(index = null) {
@@ -2482,72 +2562,82 @@
     render();
   }
 
+  function resetEditorSpotifyRow(row, badge, researchButton, status, label) {
+    row.dataset.spotifyDirty = "true";
+    badge.className = `editor-spotify-badge spotify-match-badge ${status}`;
+    badge.textContent = label;
+    badge.title = "";
+    researchButton.textContent = "Spotify検索";
+    row.dataset.spotifySearched = "false";
+    row._spotifyResults = [];
+  }
+
+  function bindEditorSpotifyInputs(fragment, row, badge, researchButton, policySelect) {
+    fragment.querySelectorAll(".song-title, .song-version").forEach((input) => {
+      input.addEventListener("input", () => {
+        resetEditorSpotifyRow(row, badge, researchButton, "idle", "要再検索");
+      });
+    });
+    policySelect.addEventListener("change", () => {
+      const unavailable = policySelect.value === "unavailable";
+      resetEditorSpotifyRow(
+        row,
+        badge,
+        researchButton,
+        unavailable ? "unavailable" : "idle",
+        unavailable ? "未配信" : "要再検索"
+      );
+    });
+  }
+
+  function initializeEditorSpotifyState(fragment, row, item) {
+    const unavailable = item.spotifyMatchPolicy === "unavailable" ||
+      item.spotify?.status === "unavailable" || item.spotify?.status === "skipped";
+    const matched = !unavailable && item.spotify?.status === "matched" && item.spotify?.trackId;
+    const badge = fragment.querySelector(".editor-spotify-badge");
+    badge.className = `editor-spotify-badge spotify-match-badge ${
+      matched ? "matched" : unavailable ? "unavailable" : "idle"
+    }`;
+    badge.textContent = matched ? "登録済み" : unavailable ? "未配信" : "未登録";
+    badge.title = matched
+      ? [item.spotify.matchedTitle, item.spotify.matchedArtist].filter(Boolean).join(" / ")
+      : "";
+    const researchButton = fragment.querySelector(".research-song");
+    researchButton.textContent = matched ? "Spotifyで再検索" : "Spotify検索";
+    researchButton.addEventListener("click", () => openEditorSpotifyCandidateDialog(row));
+    return { badge, researchButton };
+  }
+
+  function setlistEditorRow(item, index, template) {
+    const fragment = template.content.cloneNode(true);
+    const row = fragment.querySelector("tr");
+    row.dataset.index = String(index);
+    row.dataset.spotifyDirty = "false";
+    row.dataset.spotifySearched = "false";
+    row._spotifyResults = [];
+    fragment.querySelector(".song-order").textContent = String(index + 1);
+    fragment.querySelector(".song-marker").value = item.marker || "";
+    fragment.querySelector(".song-title").value = item.recording?.baseTitle || "";
+    fragment.querySelector(".song-version").value = item.recording?.versionLabel || "";
+    fragment.querySelector(".song-artist").value = item.artistHint || "";
+    const policySelect = fragment.querySelector(".song-policy");
+    policySelect.value = item.spotifyMatchPolicy || "exact";
+    const { badge, researchButton } = initializeEditorSpotifyState(fragment, row, item);
+    bindEditorSpotifyInputs(fragment, row, badge, researchButton, policySelect);
+    fragment.querySelector(".move-up").disabled = index === 0;
+    fragment.querySelector(".move-down").disabled = index === state.draftSetlist.length - 1;
+    fragment.querySelector(".move-up").addEventListener("click", () => moveSong(index, -1));
+    fragment.querySelector(".move-down").addEventListener("click", () => moveSong(index, 1));
+    fragment.querySelector(".remove-song").addEventListener("click", () => removeSong(index));
+    return fragment;
+  }
+
   function renderSetlistRows() {
     elements.setlistRows.replaceChildren();
     elements.setlistEmpty.classList.toggle("hidden", state.draftSetlist.length > 0);
     const template = $("#song-row-template");
-
     state.draftSetlist.forEach((item, index) => {
-      const fragment = template.content.cloneNode(true);
-      const row = fragment.querySelector("tr");
-      row.dataset.index = String(index);
-      row.dataset.spotifyDirty = "false";
-      row.dataset.spotifySearched = "false";
-      row._spotifyResults = [];
-      fragment.querySelector(".song-order").textContent = String(index + 1);
-      fragment.querySelector(".song-marker").value = item.marker || "";
-      fragment.querySelector(".song-title").value = item.recording?.baseTitle || "";
-      fragment.querySelector(".song-version").value = item.recording?.versionLabel || "";
-      fragment.querySelector(".song-artist").value = item.artistHint || "";
-      const policySelect = fragment.querySelector(".song-policy");
-      policySelect.value = item.spotifyMatchPolicy || "exact";
-      const spotifyUnavailable =
-        item.spotifyMatchPolicy === "unavailable" ||
-        item.spotify?.status === "unavailable" ||
-        item.spotify?.status === "skipped";
-      const spotifyMatched =
-        !spotifyUnavailable && item.spotify?.status === "matched" && item.spotify?.trackId;
-      const spotifyBadge = fragment.querySelector(".editor-spotify-badge");
-      spotifyBadge.className =
-        `editor-spotify-badge spotify-match-badge ${
-          spotifyMatched ? "matched" : spotifyUnavailable ? "unavailable" : "idle"
-        }`;
-      spotifyBadge.textContent = spotifyMatched ? "登録済み" : spotifyUnavailable ? "未配信" : "未登録";
-      spotifyBadge.title = spotifyMatched
-        ? [item.spotify.matchedTitle, item.spotify.matchedArtist].filter(Boolean).join(" / ")
-        : "";
-      const researchButton = fragment.querySelector(".research-song");
-      researchButton.textContent = spotifyMatched ? "Spotifyで再検索" : "Spotify検索";
-      researchButton.addEventListener("click", () => openEditorSpotifyCandidateDialog(row));
-      fragment.querySelectorAll(".song-title, .song-version").forEach((input) => {
-        input.addEventListener("input", () => {
-          row.dataset.spotifyDirty = "true";
-          spotifyBadge.className = "editor-spotify-badge spotify-match-badge idle";
-          spotifyBadge.textContent = "要再検索";
-          spotifyBadge.title = "";
-          researchButton.textContent = "Spotify検索";
-          row.dataset.spotifySearched = "false";
-          row._spotifyResults = [];
-        });
-      });
-      policySelect.addEventListener("change", () => {
-        row.dataset.spotifyDirty = "true";
-        const unavailable = policySelect.value === "unavailable";
-        spotifyBadge.className =
-          `editor-spotify-badge spotify-match-badge ${unavailable ? "unavailable" : "idle"}`;
-        spotifyBadge.textContent = unavailable ? "未配信" : "要再検索";
-        spotifyBadge.title = "";
-        researchButton.textContent = "Spotify検索";
-        row.dataset.spotifySearched = "false";
-        row._spotifyResults = [];
-      });
-
-      fragment.querySelector(".move-up").disabled = index === 0;
-      fragment.querySelector(".move-down").disabled = index === state.draftSetlist.length - 1;
-      fragment.querySelector(".move-up").addEventListener("click", () => moveSong(index, -1));
-      fragment.querySelector(".move-down").addEventListener("click", () => moveSong(index, 1));
-      fragment.querySelector(".remove-song").addEventListener("click", () => removeSong(index));
-      elements.setlistRows.append(fragment);
+      elements.setlistRows.append(setlistEditorRow(item, index, template));
     });
     elements.spotifyResearchAllButton.disabled =
       !window.SpotifyClient?.isConnected() || !state.draftSetlist.length;
@@ -2570,20 +2660,8 @@
         artistHint: row.querySelector(".song-artist").value.trim(),
         spotifyMatchPolicy,
         spotify: spotifyUnavailable || row.dataset.spotifyDirty === "true"
-          ? {
-              status: "unmatched",
-              trackId: null,
-              uri: null,
-              matchedTitle: null,
-              matchedArtist: null
-            }
-          : previous.spotify || {
-              status: "unmatched",
-              trackId: null,
-              uri: null,
-              matchedTitle: null,
-              matchedArtist: null
-            }
+          ? emptySpotifyMatch()
+          : previous.spotify || emptySpotifyMatch()
       };
     });
   }
@@ -2608,115 +2686,102 @@
     else elements.spotifyManualQuery.focus();
   }
 
+  function editorSpotifyRowContext(row) {
+    return {
+      row,
+      title: row.querySelector(".song-title").value.trim(),
+      version: row.querySelector(".song-version").value.trim(),
+      matchPolicy: row.querySelector(".song-policy").value || "exact",
+      badge: row.querySelector(".editor-spotify-badge"),
+      researchButton: row.querySelector(".research-song")
+    };
+  }
+
+  function startEditorSpotifyRowSearch(context, index, total) {
+    elements.spotifyResearchAllButton.textContent = `${index + 1}/${total}曲を検索中…`;
+    elements.editorSpotifySummary.textContent = `${index + 1}/${total}曲をSpotifyで再検索しています…`;
+    context.badge.className = "editor-spotify-badge spotify-match-badge searching";
+    context.badge.textContent = "検索中";
+    context.researchButton.disabled = true;
+  }
+
+  function applyEditorMatchedResult(context, index, result, counts) {
+    const track = result.track;
+    const artist = spotifyTrackArtist(track);
+    const item = state.draftSetlist[index];
+    item.artistHint = artist;
+    item.spotify = spotifyMatchFromTrack(track, artist);
+    context.row.querySelector(".song-artist").value = artist;
+    context.row.dataset.spotifyDirty = "false";
+    context.row.dataset.spotifySearched = "false";
+    context.row._spotifyResults = [];
+    context.badge.className = "editor-spotify-badge spotify-match-badge matched";
+    context.badge.textContent = result.matchKind === "original_fallback"
+      ? "原曲で補完"
+      : result.matchKind === "version" ? "バージョン一致" : "曲名一致";
+    context.badge.title = [track.name, artist].filter(Boolean).join(" / ");
+    context.researchButton.textContent = "Spotifyで再検索";
+    if (result.matchKind === "original_fallback") counts.fallback += 1;
+    else counts.matched += 1;
+  }
+
+  function applyEditorUnresolvedResult(context, result, counts) {
+    const results = result.candidates?.length ? result.candidates : result.results || [];
+    const needsReview = result.status === "ambiguous" || result.status === "manual";
+    context.row._spotifyResults = results;
+    context.row.dataset.spotifySearched = "true";
+    context.badge.className =
+      `editor-spotify-badge spotify-match-badge ${needsReview ? "ambiguous" : "unmatched"}`;
+    context.badge.textContent = needsReview ? "候補複数" : "見つからず";
+    context.badge.title = "現在登録されているSpotify情報は保持されています。";
+    context.researchButton.textContent = results.length ? `候補を見る（${results.length}件）` : "手動検索";
+    if (needsReview) counts.review += 1;
+    else counts.unmatched += 1;
+  }
+
+  async function researchEditorSpotifyRow(row, index, total, cache, counts) {
+    const context = editorSpotifyRowContext(row);
+    startEditorSpotifyRowSearch(context, index, total);
+    if (!context.title) {
+      context.badge.className = "editor-spotify-badge spotify-match-badge unmatched";
+      context.badge.textContent = "曲名なし";
+      context.researchButton.textContent = "手動検索";
+      context.row.dataset.spotifySearched = "true";
+      counts.unmatched += 1;
+      context.researchButton.disabled = false;
+      return;
+    }
+    if (context.matchPolicy === "unavailable") {
+      context.badge.className = "editor-spotify-badge spotify-match-badge unavailable";
+      context.badge.textContent = "未配信";
+      context.researchButton.textContent = "Spotify検索";
+      context.row.dataset.spotifySearched = "false";
+      counts.unavailable += 1;
+      context.researchButton.disabled = false;
+      return;
+    }
+    const result = await cachedSpotifyMatch(cache, context.title, context.version, context.matchPolicy);
+    if (result.status === "matched") applyEditorMatchedResult(context, index, result, counts);
+    else applyEditorUnresolvedResult(context, result, counts);
+    context.researchButton.disabled = false;
+  }
+
   async function researchDraftSetlistFromSpotify() {
     if (!window.SpotifyClient.isConnected()) {
       alert("先に画面上部の「Spotifyに接続」を押してください。");
       return;
     }
-
     syncSetlistFromRows();
     const rows = [...elements.setlistRows.querySelectorAll("tr")];
     if (!rows.length) return;
-
     const originalLabel = "Spotifyで全曲再検索";
-    const cache = new Map();
     const counts = { matched: 0, fallback: 0, review: 0, unmatched: 0, unavailable: 0 };
     elements.spotifyResearchAllButton.disabled = true;
-
     try {
+      const cache = new Map();
       for (let index = 0; index < rows.length; index += 1) {
-        const row = rows[index];
-        const title = row.querySelector(".song-title").value.trim();
-        const version = row.querySelector(".song-version").value.trim();
-        const matchPolicy = row.querySelector(".song-policy").value || "exact";
-        const badge = row.querySelector(".editor-spotify-badge");
-        const researchButton = row.querySelector(".research-song");
-        elements.spotifyResearchAllButton.textContent = `${index + 1}/${rows.length}曲を検索中…`;
-        elements.editorSpotifySummary.textContent =
-          `${index + 1}/${rows.length}曲をSpotifyで再検索しています…`;
-        badge.className = "editor-spotify-badge spotify-match-badge searching";
-        badge.textContent = "検索中";
-        researchButton.disabled = true;
-
-        if (!title) {
-          badge.className = "editor-spotify-badge spotify-match-badge unmatched";
-          badge.textContent = "曲名なし";
-          researchButton.textContent = "手動検索";
-          row.dataset.spotifySearched = "true";
-          counts.unmatched += 1;
-          researchButton.disabled = false;
-          continue;
-        }
-
-        if (matchPolicy === "unavailable") {
-          badge.className = "editor-spotify-badge spotify-match-badge unavailable";
-          badge.textContent = "未配信";
-          researchButton.textContent = "Spotify検索";
-          row.dataset.spotifySearched = "false";
-          counts.unavailable += 1;
-          researchButton.disabled = false;
-          continue;
-        }
-
-        const cacheKey = `${window.KnownSongCache.songKey(title, version)}::${matchPolicy}`;
-        let result = cache.get(cacheKey);
-        if (!result) {
-          result = await window.SpotifyClient.searchBestTrack({
-            title,
-            version,
-            matchPolicy
-          });
-          cache.set(cacheKey, result);
-        }
-
-        if (result.status === "matched") {
-          const track = result.track;
-          const artist = spotifyTrackArtist(track);
-          const item = state.draftSetlist[index];
-          item.artistHint = artist;
-          item.spotify = {
-            status: "matched",
-            trackId: track.id || null,
-            uri: track.uri || null,
-            matchedTitle: track.name || null,
-            matchedArtist: artist || null,
-            artworkUrl: spotifyTrackArtwork(track) || null,
-            albumName: track.album?.name || null
-          };
-          row.querySelector(".song-artist").value = artist;
-          row.dataset.spotifyDirty = "false";
-          row.dataset.spotifySearched = "false";
-          row._spotifyResults = [];
-          badge.className = "editor-spotify-badge spotify-match-badge matched";
-          badge.textContent = result.matchKind === "original_fallback"
-            ? "原曲で補完"
-            : result.matchKind === "version"
-              ? "バージョン一致"
-              : "曲名一致";
-          badge.title = [track.name, artist].filter(Boolean).join(" / ");
-          researchButton.textContent = "Spotifyで再検索";
-          if (result.matchKind === "original_fallback") counts.fallback += 1;
-          else counts.matched += 1;
-        } else {
-          const results = result.candidates?.length
-            ? result.candidates
-            : result.results || [];
-          const needsReview = result.status === "ambiguous" || result.status === "manual";
-          row._spotifyResults = results;
-          row.dataset.spotifySearched = "true";
-          badge.className =
-            `editor-spotify-badge spotify-match-badge ${needsReview ? "ambiguous" : "unmatched"}`;
-          badge.textContent = needsReview ? "候補複数" : "見つからず";
-          badge.title = "現在登録されているSpotify情報は保持されています。";
-          researchButton.textContent = results.length
-            ? `候補を見る（${results.length}件）`
-            : "手動検索";
-          if (needsReview) counts.review += 1;
-          else counts.unmatched += 1;
-        }
-        researchButton.disabled = false;
+        await researchEditorSpotifyRow(rows[index], index, rows.length, cache, counts);
       }
-
       elements.editorSpotifySummary.textContent =
         `一括再検索: 一致 ${counts.matched}曲 / 原曲で補完 ${counts.fallback}曲 / 要確認 ${counts.review}曲 / 見つからず ${counts.unmatched}曲 / 未配信 ${counts.unavailable}曲。` +
         " 要確認・見つからずの曲は現在の登録を保持しています。最後に「公演を保存」を押してください。";
@@ -2828,59 +2893,70 @@
     elements.performanceId.value = stableSlug(parts || `performance-${Date.now()}`, "performance");
   }
 
+  function setGitHubPublishControls(text, options = {}) {
+    const stateElement = elements.githubPublishState;
+    const button = elements.publishGithubButton;
+    stateElement.textContent = text;
+    if (options.stateClass) stateElement.classList.add(options.stateClass);
+    button.textContent = options.buttonText || "全公演をGitHubへ公開";
+    button.title = options.buttonTitle || "";
+    button.disabled = options.disabled ?? true;
+  }
+
+  function showUnavailableGitHubState(status, eventCount) {
+    if (!status) {
+      setGitHubPublishControls("GitHub確認中");
+      return true;
+    }
+    if (!status.available) {
+      setGitHubPublishControls("公開サーバー未接続", { buttonTitle: status.error || "server.pyを再起動してください。" });
+      return true;
+    }
+    if (!status.remoteConfigured) {
+      setGitHubPublishControls("GitHub未設定", {
+        stateClass: "ready",
+        buttonTitle: "originリモートを追加すると公開できます。",
+        disabled: eventCount === 0
+      });
+      return true;
+    }
+    if (!status.identityConfigured) {
+      setGitHubPublishControls("Gitユーザー未設定", {
+        stateClass: "ready",
+        buttonTitle: "Gitのuser.nameとuser.emailを設定してください。",
+        disabled: eventCount === 0
+      });
+      return true;
+    }
+    return false;
+  }
+
   function updateGitHubPublishUi() {
     const status = state.githubPublishStatus;
     const eventCount = state.database.events.length;
-    const stateElement = elements.githubPublishState;
-    const button = elements.publishGithubButton;
-    stateElement.classList.remove("ready", "published");
-
+    elements.githubPublishState.classList.remove("ready", "published");
     if (state.githubPublishing) {
-      stateElement.textContent = "全公演をGitHubへ公開中";
-      button.textContent = "commit・push中…";
-      button.disabled = true;
+      setGitHubPublishControls("全公演をGitHubへ公開中", { buttonText: "commit・push中…" });
       return;
     }
-
-    button.textContent = "全公演をGitHubへ公開";
-    if (!status) {
-      stateElement.textContent = "GitHub確認中";
-      button.disabled = true;
-      return;
-    }
-    if (!status.available) {
-      stateElement.textContent = "公開サーバー未接続";
-      button.title = status.error || "server.pyを再起動してください。";
-      button.disabled = true;
-      return;
-    }
-    if (!status.remoteConfigured) {
-      stateElement.textContent = "GitHub未設定";
-      stateElement.classList.add("ready");
-      button.title = "originリモートを追加すると公開できます。";
-      button.disabled = eventCount === 0;
-      return;
-    }
-    if (!status.identityConfigured) {
-      stateElement.textContent = "Gitユーザー未設定";
-      stateElement.classList.add("ready");
-      button.title = "Gitのuser.nameとuser.emailを設定してください。";
-      button.disabled = eventCount === 0;
-      return;
-    }
+    if (showUnavailableGitHubState(status, eventCount)) return;
     if (
       status.publishedDatabaseSignature === databasePublishSignature() &&
       status.publishedRevision &&
       eventCount > 0
     ) {
-      stateElement.textContent = `全${eventCount}公演を公開済み ${status.publishedRevision}`;
-      stateElement.classList.add("published");
-    } else {
-      stateElement.textContent = `GitHub: ${status.branch || "準備完了"}`;
-      stateElement.classList.add("ready");
+      setGitHubPublishControls(`全${eventCount}公演を公開済み ${status.publishedRevision}`, {
+        stateClass: "published",
+        buttonTitle: "全公演の公開JSONを保存し、プロジェクトの変更をcommit・pushします。",
+        disabled: false
+      });
+      return;
     }
-    button.title = "全公演の公開JSONを保存し、プロジェクトの変更をcommit・pushします。";
-    button.disabled = eventCount === 0;
+    setGitHubPublishControls(`GitHub: ${status.branch || "準備完了"}`, {
+      stateClass: "ready",
+      buttonTitle: "全公演の公開JSONを保存し、プロジェクトの変更をcommit・pushします。",
+      disabled: eventCount === 0
+    });
   }
 
   async function refreshGitHubPublishStatus() {
@@ -2909,81 +2985,99 @@
     updateGitHubPublishUi();
   }
 
-  async function publishAllEventsToGitHub() {
-    readEventFormIntoState(false);
-    const events = state.database.events;
-    if (!events.length) return;
-    const invalidEvent = events
+  function firstInvalidPublishEvent(events) {
+    return events
       .map((event) => ({ event, errors: validateEvent(event) }))
       .find((item) => item.errors.length);
-    if (invalidEvent) {
-      state.selectedEventId = invalidEvent.event.id;
-      render();
-      showValidation(elements.eventErrors, invalidEvent.errors);
-      alert(
-        `「${invalidEvent.event.title}」に入力エラーがあります。` +
-        "\n修正してから全体を公開してください。"
-      );
-      return;
-    }
+  }
 
-    const status = state.githubPublishStatus;
+  function showInvalidPublishEvent(invalidEvent) {
+    if (!invalidEvent) return false;
+    state.selectedEventId = invalidEvent.event.id;
+    render();
+    showValidation(elements.eventErrors, invalidEvent.errors);
+    alert(
+      `「${invalidEvent.event.title}」に入力エラーがあります。` +
+      "\n修正してから全体を公開してください。"
+    );
+    return true;
+  }
+
+  function githubPublishBlocker(status) {
     if (!status?.available || !status.publishToken) {
-      alert(status?.error || "server.pyを再起動してください。");
-      return;
+      return status?.error || "server.pyを再起動してください。";
     }
     if (!status.remoteConfigured) {
-      alert("GitHubリポジトリが未設定です。\n先にoriginリモートを追加し、管理画面を再読み込みしてください。");
-      return;
+      return "GitHubリポジトリが未設定です。\n先にoriginリモートを追加し、管理画面を再読み込みしてください。";
     }
     if (!status.identityConfigured) {
-      alert("Gitのuser.nameとuser.emailを設定し、管理画面を再読み込みしてください。");
-      return;
+      return "Gitのuser.nameとuser.emailを設定し、管理画面を再読み込みしてください。";
     }
+    return "";
+  }
 
-    const confirmed = confirm(
-      `管理画面の全${events.length}公演をGitHubへ公開します。\n\n` +
+  function confirmGitHubPublish(eventCount) {
+    return confirm(
+      `管理画面の全${eventCount}公演をGitHubへ公開します。\n\n` +
       "・全公演をdata/へ保存\n" +
       "・data/index.jsonへ全公演を追加\n" +
       "・このプロジェクト内の変更をすべてcommit\n" +
       "・GitHubへpush\n\n続けますか？"
     );
-    if (!confirmed) return;
+  }
+
+  async function requestGitHubPublish(events, publishToken) {
+    const response = await fetch("/api/github-publish", {
+      method: "POST",
+      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      body: JSON.stringify({ publishToken, events: deepClone(events) })
+    });
+    const contentType = response.headers.get("Content-Type") || "";
+    if (!contentType.includes("application/json")) {
+      throw new Error("公開用サーバーから正しい応答がありません。");
+    }
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || "GitHubへ公開できませんでした。");
+    return result;
+  }
+
+  function recordGitHubPublishSuccess(status, result) {
+    state.githubPublishStatus = {
+      ...status,
+      available: true,
+      publishedDatabaseSignature: databasePublishSignature(),
+      publishedRevision: result.revision || ""
+    };
+    alert(
+      `全${result.eventCount}公演をGitHubへpushしました。` +
+      `\n更新されたJSON: ${result.changedEventCount}件` +
+      (result.revision ? `\ncommit: ${result.revision}` : "") +
+      "\nGitHub Actionsの完了後に公開ページへ反映されます。"
+    );
+  }
+
+  async function publishAllEventsToGitHub() {
+    readEventFormIntoState(false);
+    const events = state.database.events;
+    if (!events.length) return;
+    const invalidEvent = firstInvalidPublishEvent(events);
+    if (showInvalidPublishEvent(invalidEvent)) return;
+
+    const status = state.githubPublishStatus;
+    const blocker = githubPublishBlocker(status);
+    if (blocker) {
+      alert(blocker);
+      return;
+    }
+    if (!confirmGitHubPublish(events.length)) return;
 
     hideValidation(elements.eventErrors);
     persist();
     state.githubPublishing = true;
     updateGitHubPublishUi();
     try {
-      const response = await fetch("/api/github-publish", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          publishToken: status.publishToken,
-          events: deepClone(events)
-        })
-      });
-      const contentType = response.headers.get("Content-Type") || "";
-      if (!contentType.includes("application/json")) {
-        throw new Error("公開用サーバーから正しい応答がありません。");
-      }
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error || "GitHubへ公開できませんでした。");
-      state.githubPublishStatus = {
-        ...status,
-        available: true,
-        publishedDatabaseSignature: databasePublishSignature(),
-        publishedRevision: result.revision || ""
-      };
-      alert(
-        `全${result.eventCount}公演をGitHubへpushしました。` +
-        `\n更新されたJSON: ${result.changedEventCount}件` +
-        (result.revision ? `\ncommit: ${result.revision}` : "") +
-        "\nGitHub Actionsの完了後に公開ページへ反映されます。"
-      );
+      const result = await requestGitHubPublish(events, status.publishToken);
+      recordGitHubPublishSuccess(status, result);
     } catch (error) {
       alert(`GitHubへ公開できませんでした。\n${error.message}`);
     } finally {

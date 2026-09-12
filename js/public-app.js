@@ -36,6 +36,14 @@
   };
   const spotifyArtworkRequests = new Map();
 
+  /**
+   * @typedef {object} SetlistEvent
+   * @property {string} id
+   * @property {string} title
+   * @property {string[]} [series]
+   * @property {object[]} [performances]
+   */
+
   const $ = (selector) => document.querySelector(selector);
 
   function text(value) {
@@ -50,6 +58,7 @@
     return SERIES[id] || { label: id || "その他", color: "#596579" };
   }
 
+  /** @param {SetlistEvent} event */
   function eventSeries(event) {
     return Array.isArray(event?.series) ? event.series.filter(Boolean) : [];
   }
@@ -485,47 +494,57 @@
     };
   }
 
-  function renderCatalog() {
+  function showCatalogEmpty(summary, title, description) {
+    const empty = $("#event-empty");
+    $("#result-summary").textContent = summary;
+    empty.querySelector("h3").textContent = title;
+    empty.querySelector("p").textContent = description;
+    empty.classList.remove("hidden");
+  }
+
+  function selectDefaultSongCandidate(candidates, query) {
+    if (candidates.some((candidate) => candidate.key === state.selectedSongKey)) return;
+    const exact = candidates.filter((candidate) => normalizeSearch(candidate.title) === query);
+    state.selectedSongKey = exact.length === 1
+      ? exact[0].key
+      : (candidates.length === 1 ? candidates[0].key : "");
+  }
+
+  function renderSongCatalog() {
     const grid = $("#event-grid");
     const empty = $("#event-empty");
+    const query = normalizeSearch(state.songQuery);
+    const candidates = songCandidates(state.events, state.songQuery, state.songSeries, state.numberedOnly);
+    selectDefaultSongCandidate(candidates, query);
+    renderSongCandidates(query ? candidates : []);
+    const selected = candidates.find((candidate) => candidate.key === state.selectedSongKey);
+    const occurrences = selected?.occurrences || [];
+    grid.classList.add("song-results");
+    grid.replaceChildren(...occurrences.map(songResultCard));
 
-    if (state.searchMode === "songs") {
-      const query = normalizeSearch(state.songQuery);
-      const candidates = songCandidates(state.events, state.songQuery, state.songSeries, state.numberedOnly);
-      if (!candidates.some((candidate) => candidate.key === state.selectedSongKey)) {
-        const exact = candidates.filter((candidate) => normalizeSearch(candidate.title) === query);
-        state.selectedSongKey = exact.length === 1
-          ? exact[0].key
-          : (candidates.length === 1 ? candidates[0].key : "");
-      }
-      renderSongCandidates(query ? candidates : []);
-      const selected = candidates.find((candidate) => candidate.key === state.selectedSongKey);
-      const occurrences = selected?.occurrences || [];
-      grid.classList.add("song-results");
-      grid.replaceChildren(...occurrences.map(songResultCard));
-
-      if (!query) {
-        $("#result-summary").textContent = "曲名を入力してください";
-        empty.querySelector("h3").textContent = "曲名から公演を逆引き";
-        empty.querySelector("p").textContent = "曲名の一部でも検索できます。";
-        empty.classList.remove("hidden");
-      } else if (!candidates.length) {
-        $("#result-summary").textContent = "候補曲は0件です";
-        empty.querySelector("h3").textContent = "該当する曲がありません";
-        empty.querySelector("p").textContent = "曲名やシリーズを変えてお試しください。";
-        empty.classList.remove("hidden");
-      } else if (!selected) {
-        $("#result-summary").textContent = `${candidates.length}曲の候補があります`;
-        empty.querySelector("h3").textContent = "候補曲を選択してください";
-        empty.querySelector("p").textContent = "曲名とアーティスト名を確認して1曲選んでください。";
-        empty.classList.remove("hidden");
-      } else {
-        $("#result-summary").textContent = `${selected.title}：${occurrences.length}公演で披露`;
-        empty.classList.add("hidden");
-      }
+    if (!query) {
+      showCatalogEmpty("曲名を入力してください", "曲名から公演を逆引き", "曲名の一部でも検索できます。");
       return;
     }
+    if (!candidates.length) {
+      showCatalogEmpty("候補曲は0件です", "該当する曲がありません", "曲名やシリーズを変えてお試しください。");
+      return;
+    }
+    if (!selected) {
+      showCatalogEmpty(
+        `${candidates.length}曲の候補があります`,
+        "候補曲を選択してください",
+        "曲名とアーティスト名を確認して1曲選んでください。"
+      );
+      return;
+    }
+    $("#result-summary").textContent = `${selected.title}：${occurrences.length}公演で披露`;
+    empty.classList.add("hidden");
+  }
 
+  function renderEventCatalog() {
+    const grid = $("#event-grid");
+    const empty = $("#event-empty");
     renderSongCandidates([]);
     const events = filteredEvents();
     grid.classList.remove("song-results");
@@ -534,6 +553,14 @@
     empty.querySelector("h3").textContent = "該当する公演がありません";
     empty.querySelector("p").textContent = "検索語やシリーズを変えてお試しください。";
     empty.classList.toggle("hidden", events.length > 0);
+  }
+
+  function renderCatalog() {
+    if (state.searchMode === "songs") {
+      renderSongCatalog();
+      return;
+    }
+    renderEventCatalog();
   }
 
   function routeParts() {
