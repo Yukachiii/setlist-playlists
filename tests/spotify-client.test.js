@@ -280,6 +280,39 @@ test("自動一致しないSpotify検索結果も手動選択候補として返�
   }
 });
 
+test("廃止されたSpotifyの複数曲一括取得を使わず1曲ずつ取得する", async () => {
+  const originalWindow = global.window;
+  const originalFetch = global.fetch;
+  const storage = memoryStorage();
+  const requestedUrls = [];
+  storage.setItem(
+    "setlist_spotify_auth_v01",
+    JSON.stringify({ accessToken: "test-token", expiresAt: Date.now() + 60000 })
+  );
+  global.window = { localStorage: storage, sessionStorage: memoryStorage() };
+  global.fetch = async (url) => {
+    requestedUrls.push(String(url));
+    const id = new URL(String(url)).pathname.split("/").at(-1);
+    return {
+      ok: true,
+      status: 200,
+      json: async () => track(id, `曲${id}`, "Artist")
+    };
+  };
+
+  try {
+    const tracks = await spotify.getTracks(["track-a", "track-b", "track-a"]);
+    assert.deepEqual(tracks.map((item) => item.id), ["track-a", "track-b"]);
+    assert.equal(requestedUrls.length, 2);
+    assert.ok(requestedUrls.every((url) => /\/tracks\/track-[ab]\?market=JP$/.test(url)));
+    assert.ok(requestedUrls.every((url) => !url.includes("/tracks?ids=")));
+  } finally {
+    if (originalWindow === undefined) delete global.window;
+    else global.window = originalWindow;
+    global.fetch = originalFetch;
+  }
+});
+
 test("同じ音源は最初の配信日を採用してアルバム再収録を新曲扱いしない", () => {
   const details = [
     track("single", "New Song", "Artist", { isrc: "JP-AAA-26-00001" }),

@@ -6,6 +6,7 @@ const path = require("node:path");
 const root = path.resolve(__dirname, "..");
 const html = fs.readFileSync(path.join(root, "admin", "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "admin", "js", "app.js"), "utf8");
+const css = fs.readFileSync(path.join(root, "admin", "css", "style.css"), "utf8");
 
 test("本文解析後にSpotify接続済みなら曲検索まで自動実行する", () => {
   assert.match(app, /async function parsePageImportText\(\)/);
@@ -108,7 +109,10 @@ test("管理画面の公演一覧をシリーズごとのプルダウンで表�
   assert.match(app, /details\.open = searchActive \|\| state\.expandedEventSeries\.has\(group\.key\)/);
   assert.match(app, /state\.expandedEventSeries\.clear\(\);[\s\S]*?state\.expandedEventSeries\.add\(group\.key\)/);
   assert.match(app, /querySelectorAll\("\.event-series-group\[open\]"\)/);
+  assert.match(app, /summary\.scrollIntoView\(\{ block: "start", inline: "nearest" \}\)/);
   assert.match(app, /SERIES_DISPLAY_NAMES/);
+  assert.match(css, /\.event-list\s*\{[\s\S]*?flex:\s*1 1 0;[\s\S]*?grid-auto-rows:\s*max-content;/);
+  assert.match(css, /\.event-series-items\s*\{[\s\S]*?max-height:[\s\S]*?overflow-y:\s*auto;/);
 });
 
 test("管理画面の公演一覧を検索・並び替えでき、日付・公演数・曲数を表示する", () => {

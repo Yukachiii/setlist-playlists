@@ -12,6 +12,7 @@
   const SCOPES = "user-read-private";
   const AUTH_STORAGE_KEY = "setlist_spotify_auth_v01";
   const PKCE_STORAGE_KEY = "setlist_spotify_pkce_v01";
+  const trackCache = new Map();
 
   /**
    * @typedef {object} TrackSearchRequest
@@ -376,15 +377,39 @@
     return `${match[1]}-${match[2] || "01"}-${match[3] || "01"}`;
   }
 
-  async function getTracks(trackIds) {
-    const uniqueIds = [...new Set((trackIds || []).map(String).filter(Boolean))];
-    const tracks = [];
-    for (let index = 0; index < uniqueIds.length; index += 50) {
-      const ids = uniqueIds.slice(index, index + 50);
-      const params = new URLSearchParams({ ids: ids.join(","), market: "JP" });
-      const body = await apiFetch("/tracks?" + params.toString());
-      tracks.push(...(body.tracks || []).filter(Boolean));
+  async function mapWithConcurrency(items, concurrency, mapper) {
+    const results = new Array(items.length);
+    let nextIndex = 0;
+
+    async function worker() {
+      while (nextIndex < items.length) {
+        const index = nextIndex;
+        nextIndex += 1;
+        results[index] = await mapper(items[index], index);
+      }
     }
+
+    const workerCount = Math.min(Math.max(1, concurrency), items.length);
+    await Promise.all(Array.from({ length: workerCount }, worker));
+    return results;
+  }
+
+  async function getTrack(trackId) {
+    if (trackCache.has(trackId)) return trackCache.get(trackId);
+    const track = await apiFetch(`/tracks/${encodeURIComponent(trackId)}?market=JP`);
+    trackCache.set(trackId, track);
+    return track;
+  }
+
+  async function getTracks(trackIds, onProgress) {
+    const uniqueIds = [...new Set((trackIds || []).map(String).filter(Boolean))];
+    let completed = 0;
+    const tracks = await mapWithConcurrency(uniqueIds, 5, async (trackId) => {
+      const track = await getTrack(trackId);
+      completed += 1;
+      onProgress?.(completed, uniqueIds.length);
+      return track;
+    });
     return uniqueTracks(tracks);
   }
 
@@ -480,7 +505,9 @@
 
     const entries = await collectCatalogEntries(ids, onProgress);
     onProgress?.(`Spotify曲 ${new Set(entries.map((entry) => entry.trackId)).size}件を照合中…`);
-    const details = await getTracks(entries.map((entry) => entry.trackId));
+    const details = await getTracks(entries.map((entry) => entry.trackId), (completed, total) => {
+      onProgress?.(`Spotify曲 ${completed}/${total}件を照合中…`);
+    });
     const today = new Date().toISOString().slice(0, 10);
     return earliestReleaseEntries(entries, details)
       .filter((entry) => entry.releaseDate > cutoff && entry.releaseDate <= today)

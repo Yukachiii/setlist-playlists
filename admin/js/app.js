@@ -686,6 +686,9 @@
       elements.eventList.querySelectorAll(".event-series-group[open]").forEach((sibling) => {
         if (sibling !== details) sibling.open = false;
       });
+      requestAnimationFrame(() => {
+        summary.scrollIntoView({ block: "start", inline: "nearest" });
+      });
     });
     return details;
   }
@@ -1755,7 +1758,10 @@
     elements.scanStudyArtistsButton.disabled = true;
     elements.studyPlaylistSummary.textContent = `${trackIds.length}曲からアーティスト候補を確認しています…`;
     try {
-      const tracks = await window.SpotifyClient.getTracks(trackIds);
+      const tracks = await window.SpotifyClient.getTracks(trackIds, (completed, total) => {
+        elements.studyPlaylistSummary.textContent =
+          `${trackIds.length}曲からアーティスト候補を確認しています… ${completed}/${total}`;
+      });
       state.studyArtistCandidates = artistCandidatesFromTracks(
         tracks,
         studyPlaylistConfig(series)?.artists
