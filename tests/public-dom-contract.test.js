@@ -104,3 +104,12 @@ test("各音楽サービスを共通UIから選びSoundiizへ曲目を直接渡�
   assert.match(css, /\.playlist-service-actions/);
   assert.doesNotMatch(`${html}\n${app}\n${css}\n${playlistClient}`, /TuneMyMusic|tunemymusic/i);
 });
+
+test("公開ページでシリーズ別の予習プレイリストを作成できる", () => {
+  assert.match(html, /id="study-playlist-section"/);
+  assert.match(html, /id="study-series-select"/);
+  assert.match(html, /id="create-study-playlist-button"/);
+  assert.match(html, /id="study-soundiiz-transfer-button"/);
+  assert.match(app, /requestStudyPlaylist\(\{ series: playlist\.series \}\)/);
+  assert.match(app, /requestStudySoundiizTransfer/);
+});

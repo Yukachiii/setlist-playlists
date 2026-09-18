@@ -59,6 +59,16 @@
     return { baseUrl, payload: { eventPath, performanceId } };
   }
 
+  function validatedStudyRequest(series) {
+    const baseUrl = apiBaseUrl();
+    if (!isConfigured()) throw new Error("プレイリスト作成機能は現在準備中です。");
+    const normalized = String(series || "").trim();
+    if (!/^[a-z0-9][a-z0-9_-]*$/.test(normalized)) {
+      throw new Error("シリーズの指定が不正です。");
+    }
+    return { baseUrl, payload: { series: normalized } };
+  }
+
   async function postJson(url, payload) {
     const response = await fetch(url, {
       method: "POST",
@@ -110,12 +120,45 @@
     return body;
   }
 
+  async function requestStudyPlaylist({ series }, attempt = 0) {
+    const request = validatedStudyRequest(series);
+    const { response, body } = await postJson(
+      `${request.baseUrl}/v1/study-playlists`,
+      request.payload
+    );
+    if (response.status === 409 && body.code === "playlist_busy" && attempt < MAX_BUSY_RETRIES) {
+      const retryAfter = Math.max(1, Number(response.headers?.get?.("Retry-After") || 3));
+      await wait(retryAfter * 1000);
+      return requestStudyPlaylist({ series }, attempt + 1);
+    }
+    if (!response.ok) throw responseError(body, "予習プレイリストを作成できませんでした。", response.status);
+    if (!isSpotifyPlaylistUrl(body.playlistUrl)) {
+      throw new Error("SpotifyのプレイリストURLを取得できませんでした。");
+    }
+    return body;
+  }
+
+  async function requestStudySoundiizTransfer({ series }) {
+    const request = validatedStudyRequest(series);
+    const { response, body } = await postJson(
+      `${request.baseUrl}/v1/study-transfers/soundiiz`,
+      request.payload
+    );
+    if (!response.ok) throw responseError(body, "移行画面を用意できませんでした。", response.status);
+    if (!isSoundiizShareUrl(body.shareUrl)) {
+      throw new Error("Soundiizの移行URLを取得できませんでした。");
+    }
+    return body;
+  }
+
   return {
     apiBaseUrl,
     isConfigured,
     isSpotifyPlaylistUrl,
     isSoundiizShareUrl,
     requestPlaylist,
-    requestSoundiizTransfer
+    requestSoundiizTransfer,
+    requestStudyPlaylist,
+    requestStudySoundiizTransfer
   };
 });

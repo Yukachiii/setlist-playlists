@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import {
   chunkItems,
   extractPlaylistSpec,
+  extractStudyPlaylistSpec,
   handleRequest,
   playlistFingerprint,
   validEventPath
@@ -50,6 +51,22 @@ function eventDocument() {
         ]
       }
     ]
+  };
+}
+
+function studyDocument() {
+  return {
+    schemaVersion: "0.1",
+    playlists: [{
+      series: "hasunosora",
+      seriesLabel: "蓮ノ空",
+      cutoffDate: "2026-05-17",
+      cutoffEventTitle: "6th Live",
+      tracks: [
+        { uri: firstUri, title: "New First", artists: "First Group", releaseDate: "2026-06-01" },
+        { uri: secondUri, title: "New Second", artists: "Second Group", releaseDate: "2026-07-01" }
+      ]
+    }]
   };
 }
 
@@ -148,6 +165,95 @@ test("公開データ配下のJSONパスだけを許可する", () => {
 
 test("100曲ごとにSpotify追加リクエストを分割する", () => {
   assert.deepEqual(chunkItems(Array.from({ length: 205 }), 100).map((items) => items.length), [100, 100, 5]);
+});
+
+test("予習プレイリストは公開済みシリーズ設定からだけ曲を取得する", () => {
+  const spec = extractStudyPlaylistSpec(studyDocument(), "hasunosora");
+  assert.equal(spec.key, "study:hasunosora");
+  assert.equal(spec.name, "蓮ノ空 — 最新ライブ以降の新曲");
+  assert.deepEqual(spec.uris, [firstUri, secondUri]);
+  assert.throws(
+    () => extractStudyPlaylistSpec(studyDocument(), "../secret"),
+    /シリーズの指定が不正/
+  );
+});
+
+test("シリーズの新曲から共有予習プレイリストを作成する", async () => {
+  const database = new MemoryD1();
+  const calls = [];
+  const fetchImpl = async (url, options = {}) => {
+    calls.push({ url: String(url), options });
+    if (String(url).endsWith("/study-playlists.json")) {
+      return { ok: true, json: async () => studyDocument() };
+    }
+    if (String(url).endsWith("/api/token")) {
+      return { ok: true, json: async () => ({ access_token: "access-token" }) };
+    }
+    if (String(url).endsWith("/me/playlists")) {
+      return {
+        ok: true,
+        status: 201,
+        json: async () => ({
+          id: "study-playlist-id",
+          external_urls: { spotify: "https://open.spotify.com/playlist/studyplaylistid" }
+        })
+      };
+    }
+    if (String(url).endsWith("/playlists/study-playlist-id/items")) {
+      return { ok: true, status: 201, json: async () => ({ snapshot_id: "snapshot" }) };
+    }
+    throw new Error(`Unexpected fetch: ${url}`);
+  };
+  const request = new Request("https://worker.example/v1/study-playlists", {
+    method: "POST",
+    headers: { Origin: "https://example.github.io", "Content-Type": "application/json" },
+    body: JSON.stringify({ series: "hasunosora" })
+  });
+
+  const response = await handleRequest(request, workerEnv(database), fetchImpl);
+  const body = await response.json();
+  assert.equal(response.status, 201);
+  assert.equal(body.trackCount, 2);
+  assert.equal(database.row.playlist_key, "study:hasunosora");
+  assert.equal(database.row.event_path, "study-playlists.json");
+});
+
+test("予習プレイリストの曲名をSoundiizへ渡す", async () => {
+  const calls = [];
+  const fetchImpl = async (url, options = {}) => {
+    calls.push({ url: String(url), options });
+    if (String(url).endsWith("/study-playlists.json")) {
+      return { ok: true, json: async () => studyDocument() };
+    }
+    if (String(url) === "https://soundiiz.com/go/import-playlist") {
+      return {
+        ok: true,
+        status: 200,
+        json: async () => ({
+          status: "success",
+          nbTracks: 2,
+          shareUrl: "https://soundiiz.com/go/import-playlist/study_token",
+          expiresAt: 1782220923
+        })
+      };
+    }
+    throw new Error(`Unexpected fetch: ${url}`);
+  };
+  const request = new Request("https://worker.example/v1/study-transfers/soundiiz", {
+    method: "POST",
+    headers: { Origin: "https://example.github.io", "Content-Type": "application/json" },
+    body: JSON.stringify({ series: "hasunosora" })
+  });
+
+  const response = await handleRequest(request, workerEnv(undefined), fetchImpl);
+  const body = await response.json();
+  assert.equal(response.status, 201);
+  assert.equal(body.trackCount, 2);
+  const soundiizCall = calls.find((call) => call.url === "https://soundiiz.com/go/import-playlist");
+  assert.deepEqual(JSON.parse(soundiizCall.options.body).tracklist, [
+    { title: "New First", artists: "First Group" },
+    { title: "New Second", artists: "Second Group" }
+  ]);
 });
 
 test("未作成の公演は作成用アカウントで一度だけ作りURLを保存する", async () => {

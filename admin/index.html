@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css?v=0.21">
+  <link rel="stylesheet" href="./css/style.css?v=0.22">
 </head>
 <body>
   <header class="topbar">
@@ -34,6 +34,7 @@
         <span class="command-label">Spotify</span>
         <span id="spotify-account" class="spotify-state">未接続</span>
         <button id="spotify-connect-button" class="button spotify-button" type="button">接続する</button>
+        <button id="study-playlist-button" class="button ghost" type="button">予習プレイリスト</button>
       </div>
       <div class="command-group">
         <span class="command-label">公開</span>
@@ -205,6 +206,45 @@
       <div class="dialog-footer">
         <button id="cancel-llfans-sync-button" class="button ghost" type="button">キャンセル</button>
         <button id="start-llfans-sync-button" class="button" type="button" disabled>選択した公演を取り込む</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="study-playlist-dialog" class="study-playlist-dialog">
+    <div class="dialog-shell">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">NEW RELEASES</p>
+          <h2>予習プレイリスト設定</h2>
+        </div>
+        <button id="close-study-playlist-button" class="icon-button ghost-icon" type="button" aria-label="閉じる">×</button>
+      </div>
+      <div class="dialog-body">
+        <section class="dialog-section">
+          <h3>シリーズとSpotifyアーティストを確認</h3>
+          <p class="muted">
+            終了済みの最新ナンバリング公演を基準に、それ以降に配信された曲をSpotifyから取得します。
+            既存曲から候補を抽出するため、別シリーズのカバー元などが含まれていないか確認してください。
+          </p>
+          <div class="study-playlist-toolbar">
+            <label>
+              シリーズ
+              <select id="study-playlist-series"></select>
+            </label>
+            <button id="scan-study-artists-button" class="button ghost" type="button">候補をSpotifyから取得</button>
+          </div>
+          <div class="study-cutoff-card">
+            <span>基準公演</span>
+            <strong id="study-playlist-cutoff">シリーズを選択してください</strong>
+          </div>
+          <div id="study-playlist-summary" class="muted" aria-live="polite"></div>
+          <div id="study-artist-list" class="study-artist-list"></div>
+          <div id="study-playlist-errors" class="validation-box hidden"></div>
+        </section>
+      </div>
+      <div class="dialog-footer">
+        <button id="cancel-study-playlist-button" class="button ghost" type="button">閉じる</button>
+        <button id="refresh-study-playlist-button" class="button" type="button" disabled>選択したアーティストから新曲を更新</button>
       </div>
     </div>
   </dialog>
@@ -582,7 +622,7 @@
 
   <script src="./js/page-text-parser.js?v=0.20"></script>
   <script src="./js/known-song-cache.js?v=0.20"></script>
-  <script src="./js/spotify-client.js?v=0.20"></script>
-  <script src="./js/app.js?v=0.29"></script>
+  <script src="./js/spotify-client.js?v=0.21"></script>
+  <script src="./js/app.js?v=0.30"></script>
 </body>
 </html>

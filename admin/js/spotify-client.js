@@ -370,6 +370,125 @@
     });
   }
 
+  function releaseDateValue(value) {
+    const match = String(value || "").match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?/);
+    if (!match) return "";
+    return `${match[1]}-${match[2] || "01"}-${match[3] || "01"}`;
+  }
+
+  async function getTracks(trackIds) {
+    const uniqueIds = [...new Set((trackIds || []).map(String).filter(Boolean))];
+    const tracks = [];
+    for (let index = 0; index < uniqueIds.length; index += 50) {
+      const ids = uniqueIds.slice(index, index + 50);
+      const params = new URLSearchParams({ ids: ids.join(","), market: "JP" });
+      const body = await apiFetch("/tracks?" + params.toString());
+      tracks.push(...(body.tracks || []).filter(Boolean));
+    }
+    return uniqueTracks(tracks);
+  }
+
+  async function pagedSpotifyItems(path, pageSize = 50) {
+    const items = [];
+    for (let offset = 0; ; offset += pageSize) {
+      const separator = path.includes("?") ? "&" : "?";
+      const body = await apiFetch(`${path}${separator}limit=${pageSize}&offset=${offset}`);
+      const page = Array.isArray(body.items) ? body.items : [];
+      items.push(...page);
+      if (!body.next || page.length < pageSize) return items;
+    }
+  }
+
+  function getArtistAlbums(artistId) {
+    const params = new URLSearchParams({
+      include_groups: "album,single,appears_on",
+      market: "JP"
+    });
+    return pagedSpotifyItems(`/artists/${encodeURIComponent(artistId)}/albums?${params}`);
+  }
+
+  function getAlbumTracks(albumId) {
+    return pagedSpotifyItems(`/albums/${encodeURIComponent(albumId)}/tracks?market=JP`);
+  }
+
+  function artistAppearsOnTrack(track, artistIds) {
+    return (track?.artists || []).some((artist) => artistIds.has(String(artist?.id || "")));
+  }
+
+  async function collectCatalogEntries(artistIds, onProgress) {
+    const selectedIds = new Set(artistIds);
+    const albums = new Map();
+    for (let index = 0; index < artistIds.length; index += 1) {
+      onProgress?.(`アーティスト ${index + 1}/${artistIds.length}組の作品を確認中…`);
+      const artistAlbums = await getArtistAlbums(artistIds[index]);
+      artistAlbums.forEach((album) => {
+        if (album?.id && !albums.has(album.id)) albums.set(album.id, album);
+      });
+    }
+
+    const entries = [];
+    const albumValues = [...albums.values()];
+    for (let index = 0; index < albumValues.length; index += 1) {
+      const album = albumValues[index];
+      onProgress?.(`作品 ${index + 1}/${albumValues.length}件の収録曲を確認中…`);
+      const tracks = await getAlbumTracks(album.id);
+      tracks.filter((track) => artistAppearsOnTrack(track, selectedIds)).forEach((track) => {
+        entries.push({
+          trackId: track.id,
+          releaseDate: releaseDateValue(album.release_date),
+          albumName: album.name || "",
+          artworkUrl: album.images?.find((image) => image?.url)?.url || ""
+        });
+      });
+    }
+    return entries;
+  }
+
+  function earliestReleaseEntries(entries, details) {
+    const detailById = new Map(details.map((track) => [track.id, track]));
+    const earliest = new Map();
+    entries.forEach((entry) => {
+      const track = detailById.get(entry.trackId);
+      if (!track || !entry.releaseDate) return;
+      const identity = recordingIdentity(track) || `track:${track.id}`;
+      const current = earliest.get(identity);
+      if (!current || entry.releaseDate < current.releaseDate) {
+        earliest.set(identity, { ...entry, track });
+      }
+    });
+    return [...earliest.values()];
+  }
+
+  function publicReleaseTrack(entry) {
+    const track = entry.track;
+    return {
+      trackId: track.id,
+      uri: track.uri,
+      title: track.name || "",
+      artists: (track.artists || []).map((artist) => artist.name).filter(Boolean).join(", "),
+      releaseDate: entry.releaseDate,
+      artworkUrl: entry.artworkUrl || track.album?.images?.find((image) => image?.url)?.url || "",
+      albumName: entry.albumName || track.album?.name || ""
+    };
+  }
+
+  async function discoverNewReleases(artistIds, cutoffDate, onProgress) {
+    const ids = [...new Set((artistIds || []).map(String).filter(Boolean))];
+    if (!ids.length) throw new Error("対象のSpotifyアーティストを選択してください。");
+    const cutoff = releaseDateValue(cutoffDate);
+    if (!cutoff) throw new Error("基準となるナンバリング公演日がありません。");
+
+    const entries = await collectCatalogEntries(ids, onProgress);
+    onProgress?.(`Spotify曲 ${new Set(entries.map((entry) => entry.trackId)).size}件を照合中…`);
+    const details = await getTracks(entries.map((entry) => entry.trackId));
+    const today = new Date().toISOString().slice(0, 10);
+    return earliestReleaseEntries(entries, details)
+      .filter((entry) => entry.releaseDate > cutoff && entry.releaseDate <= today)
+      .sort((a, b) => a.releaseDate.localeCompare(b.releaseDate) ||
+        String(a.track?.name || "").localeCompare(String(b.track?.name || ""), "ja"))
+      .map(publicReleaseTrack);
+  }
+
   async function searchTracks(query) {
     const normalizedQuery = String(query || "").trim();
     if (!normalizedQuery) return [];
@@ -399,9 +518,15 @@
     profile,
     searchTracks,
     searchBestTrack,
+    getTracks,
+    getArtistAlbums,
+    getAlbumTracks,
+    discoverNewReleases,
     chooseTrackCandidate,
     uniqueTracks,
     normalizeComparable,
-    recordingIdentity
+    recordingIdentity,
+    releaseDateValue,
+    earliestReleaseEntries
   };
 });

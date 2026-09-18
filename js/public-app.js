@@ -22,6 +22,8 @@
 
   const state = {
     events: [],
+    studyPlaylists: [],
+    studySeries: "",
     searchMode: "events",
     eventQuery: "",
     songQuery: "",
@@ -32,7 +34,10 @@
     selectedEvent: null,
     performanceIndex: 0,
     creatingPlaylist: false,
-    creatingTransfer: false
+    creatingTransfer: false,
+    creatingStudyPlaylist: false,
+    creatingStudyTransfer: false,
+    studyResult: null
   };
   const spotifyArtworkRequests = new Map();
 
@@ -323,8 +328,28 @@
     }
   }
 
+  function normalizeStudyPlaylists(value) {
+    return (Array.isArray(value?.playlists) ? value.playlists : [])
+      .filter((playlist) => playlist?.series && Array.isArray(playlist?.tracks));
+  }
+
+  function localAdminStudyPlaylists() {
+    if (!/^(127\.0\.0\.1|localhost)$/.test(location.hostname)) return [];
+    try {
+      const database = JSON.parse(localStorage.getItem("setlist_admin_database_v03") || "null");
+      return database?.studyPlaylists && typeof database.studyPlaylists === "object"
+        ? Object.values(database.studyPlaylists)
+        : [];
+    } catch (_error) {
+      return [];
+    }
+  }
+
   async function loadEvents() {
-    const manifest = await fetchJson("./data/index.json");
+    const [manifest, studyDocument] = await Promise.all([
+      fetchJson("./data/index.json"),
+      fetchJson("./data/study-playlists.json").catch(() => ({ playlists: [] }))
+    ]);
     const entries = Array.isArray(manifest?.events) ? manifest.events : [];
     const loaded = await Promise.all(
       entries.map(async (entry) => {
@@ -347,10 +372,108 @@
     });
     state.events = [...merged.values()];
     state.events.sort((a, b) => latestDate(b).localeCompare(latestDate(a), "ja"));
+    const studyBySeries = new Map(
+      normalizeStudyPlaylists(studyDocument).map((playlist) => [playlist.series, playlist])
+    );
+    localAdminStudyPlaylists().forEach((playlist) => {
+      if (playlist?.series) studyBySeries.set(playlist.series, playlist);
+    });
+    state.studyPlaylists = [...studyBySeries.values()];
     renderStats();
+    renderStudyPlaylist();
     renderFilters();
     renderCatalog();
     renderRoute();
+  }
+
+  function currentStudyPlaylist() {
+    return state.studyPlaylists.find((playlist) => playlist.series === state.studySeries) || null;
+  }
+
+  function studyTracks(playlist) {
+    return (Array.isArray(playlist?.tracks) ? playlist.tracks : []).filter((track) =>
+      /^spotify:track:[A-Za-z0-9]{22}$/.test(text(track?.uri))
+    );
+  }
+
+  function studyTrackRow(track) {
+    const row = createElement("li", "study-track-item");
+    const artwork = createElement("span", "study-track-artwork", "♪");
+    if (/^https:\/\//.test(text(track?.artworkUrl))) {
+      const image = document.createElement("img");
+      image.src = track.artworkUrl;
+      image.alt = "";
+      image.loading = "lazy";
+      artwork.replaceChildren(image);
+    }
+    const copy = createElement("a", "study-track-copy");
+    copy.href = `https://open.spotify.com/track/${encodeURIComponent(track.trackId || "")}`;
+    copy.target = "_blank";
+    copy.rel = "noopener noreferrer";
+    copy.setAttribute("aria-label", `${track.title || "曲"}をSpotifyで開く`);
+    copy.append(
+      createElement("strong", "", track.title || "曲名未登録"),
+      createElement("span", "", track.artists || track.albumName || "アーティスト未登録")
+    );
+    row.append(artwork, copy, createElement("time", "study-track-date", track.releaseDate || ""));
+    return row;
+  }
+
+  function studyReleasePeriod(tracks) {
+    const dates = tracks.map((track) => text(track.releaseDate)).filter(Boolean).sort();
+    if (!dates.length) return "対象曲なし";
+    if (dates[0] === dates.at(-1)) return formatDate(dates[0]);
+    return `${formatDate(dates[0])} 〜 ${formatDate(dates.at(-1))}`;
+  }
+
+  function renderStudyPlaylist() {
+    const section = $("#study-playlist-section");
+    section.classList.toggle("hidden", !state.studyPlaylists.length);
+    if (!state.studyPlaylists.length) return;
+    if (!state.studyPlaylists.some((playlist) => playlist.series === state.studySeries)) {
+      state.studySeries = state.studyPlaylists[0].series;
+    }
+    const select = $("#study-series-select");
+    select.replaceChildren(...state.studyPlaylists.map((playlist) => (
+      new Option(playlist.seriesLabel || seriesInfo(playlist.series).label, playlist.series)
+    )));
+    select.value = state.studySeries;
+
+    const playlist = currentStudyPlaylist();
+    const tracks = studyTracks(playlist);
+    $("#study-cutoff-event").textContent = playlist?.cutoffEventTitle
+      ? `${playlist.cutoffEventTitle}（${formatDate(playlist.cutoffDate)}）`
+      : formatDate(playlist?.cutoffDate);
+    $("#study-release-period").textContent = studyReleasePeriod(tracks);
+    $("#study-track-count").textContent = `${tracks.length}曲`;
+    $("#study-track-list").replaceChildren(...tracks.map(studyTrackRow));
+    $("#study-playlist-note").textContent = tracks.length
+      ? `${formatDate(playlist.cutoffDate)}より後に配信された${tracks.length}曲を追加します。`
+      : "基準公演以降に配信された新曲はまだありません。";
+
+    const configured = Boolean(window.PublicPlaylistClient?.isConfigured?.());
+    const busy = state.creatingStudyPlaylist || state.creatingStudyTransfer;
+    const spotifyButton = $("#create-study-playlist-button");
+    const transferButton = $("#study-soundiiz-transfer-button");
+    spotifyButton.disabled = !tracks.length || !configured || busy;
+    transferButton.disabled = !tracks.length || !configured || busy;
+    spotifyButton.textContent = state.creatingStudyPlaylist ? "作成しています…" : "Spotifyで作成して開く";
+    transferButton.textContent = state.creatingStudyTransfer
+      ? "準備しています…"
+      : "Apple Music / Amazon Musicで作成して開く";
+    const result = $("#study-playlist-result");
+    result.replaceChildren();
+    if (state.studyResult?.series === state.studySeries) {
+      result.append(document.createTextNode(`${state.studyResult.trackCount}曲のプレイリストを用意しました。 `));
+      const link = createElement("a", "", "Spotifyで開く ↗");
+      link.href = state.studyResult.playlistUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      result.append(link);
+      result.classList.remove("hidden");
+    } else {
+      result.classList.add("hidden");
+    }
   }
 
   function renderStats() {
@@ -822,6 +945,47 @@
     }
   }
 
+  async function createStudyPlaylist() {
+    const playlist = currentStudyPlaylist();
+    if (!playlist || !studyTracks(playlist).length || state.creatingStudyPlaylist) return;
+    state.creatingStudyPlaylist = true;
+    state.studyResult = null;
+    renderStudyPlaylist();
+    try {
+      const result = await window.PublicPlaylistClient.requestStudyPlaylist({ series: playlist.series });
+      state.studyResult = {
+        series: playlist.series,
+        playlistUrl: result.playlistUrl,
+        trackCount: result.trackCount || studyTracks(playlist).length
+      };
+      showToast(result.created ? "予習プレイリストを作成しました。" : "作成済みの予習プレイリストを開けます。");
+    } catch (error) {
+      showToast(error.message, "error");
+    } finally {
+      state.creatingStudyPlaylist = false;
+      renderStudyPlaylist();
+    }
+  }
+
+  async function openStudySoundiizTransfer() {
+    const playlist = currentStudyPlaylist();
+    if (!playlist || !studyTracks(playlist).length || state.creatingStudyTransfer) return;
+    state.creatingStudyTransfer = true;
+    renderStudyPlaylist();
+    try {
+      const transfer = await window.PublicPlaylistClient.requestStudySoundiizTransfer({
+        series: playlist.series
+      });
+      showToast(`${transfer.trackCount || studyTracks(playlist).length}曲のプレイリストを準備しました。`);
+      window.location.assign(transfer.shareUrl);
+    } catch (error) {
+      showToast(error.message, "error");
+    } finally {
+      state.creatingStudyTransfer = false;
+      renderStudyPlaylist();
+    }
+  }
+
   function bindEvents() {
     $("#search-mode-events").addEventListener("click", () => setSearchMode("events"));
     $("#search-mode-songs").addEventListener("click", () => setSearchMode("songs"));
@@ -843,6 +1007,17 @@
     });
     $("#soundiiz-transfer-button").addEventListener("click", () => {
       openSoundiizTransfer().catch((error) => showToast(error.message, "error"));
+    });
+    $("#study-series-select").addEventListener("change", (event) => {
+      state.studySeries = event.target.value;
+      state.studyResult = null;
+      renderStudyPlaylist();
+    });
+    $("#create-study-playlist-button").addEventListener("click", () => {
+      createStudyPlaylist().catch((error) => showToast(error.message, "error"));
+    });
+    $("#study-soundiiz-transfer-button").addEventListener("click", () => {
+      openStudySoundiizTransfer().catch((error) => showToast(error.message, "error"));
     });
     $("#performance-select").addEventListener("change", (event) => {
       const index = Number.parseInt(event.target.value, 10);
@@ -884,6 +1059,8 @@
     spotifyTrackId,
     spotifyArtworkUrl,
     fetchSpotifyArtwork,
-    normalizeLoadedEvents
+    normalizeLoadedEvents,
+    normalizeStudyPlaylists,
+    studyReleasePeriod
   };
 });

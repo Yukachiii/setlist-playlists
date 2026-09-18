@@ -106,3 +106,57 @@ test("公演IDをWorkerへ送りSoundiizの移行URLを受け取る", async () =
   );
   assert.equal(playlistClient.isSoundiizShareUrl("https://attacker.example/import-playlist/token"), false);
 });
+
+test("シリーズIDだけをWorkerへ送り予習プレイリストを作成する", async () => {
+  const calls = [];
+  await withBrowser(
+    {
+      window: browser(),
+      fetch: async (url, options) => {
+        calls.push({ url: String(url), options });
+        return {
+          ok: true,
+          status: 201,
+          json: async () => ({
+            ok: true,
+            created: true,
+            playlistUrl: "https://open.spotify.com/playlist/study123",
+            trackCount: 8
+          })
+        };
+      }
+    },
+    async () => {
+      const result = await playlistClient.requestStudyPlaylist({ series: "hasunosora" });
+      assert.equal(result.trackCount, 8);
+      assert.equal(calls[0].url, "https://worker.example/v1/study-playlists");
+      assert.deepEqual(JSON.parse(calls[0].options.body), { series: "hasunosora" });
+    }
+  );
+});
+
+test("予習プレイリストをSoundiizへシリーズIDだけで依頼する", async () => {
+  const calls = [];
+  await withBrowser(
+    {
+      window: browser(),
+      fetch: async (url, options) => {
+        calls.push({ url: String(url), options });
+        return {
+          ok: true,
+          status: 201,
+          json: async () => ({
+            ok: true,
+            shareUrl: "https://soundiiz.com/go/import-playlist/study_token",
+            trackCount: 8
+          })
+        };
+      }
+    },
+    async () => {
+      await playlistClient.requestStudySoundiizTransfer({ series: "hasunosora" });
+      assert.equal(calls[0].url, "https://worker.example/v1/study-transfers/soundiiz");
+      assert.deepEqual(JSON.parse(calls[0].options.body), { series: "hasunosora" });
+    }
+  );
+});

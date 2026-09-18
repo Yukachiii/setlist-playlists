@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/public.css?v=0.8" />
+    <link rel="stylesheet" href="./css/public.css?v=0.9" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -61,6 +61,38 @@
             <div><strong id="event-count">—</strong><span>EVENTS</span></div>
             <div><strong id="performance-count">—</strong><span>PERFORMANCES</span></div>
             <p>公演データは随時追加しています</p>
+          </div>
+        </section>
+
+        <section id="study-playlist-section" class="study-section section-shell hidden" aria-labelledby="study-playlist-title">
+          <div class="section-heading study-heading">
+            <p class="eyebrow"><span></span> PREPARE FOR THE NEXT LIVE</p>
+            <h2 id="study-playlist-title">次のライブを予習する</h2>
+            <p>最新のナンバリング公演より後にSpotifyで配信された新曲をまとめます。</p>
+          </div>
+          <div class="study-card">
+            <div class="study-card-main">
+              <label class="study-series-select" for="study-series-select">
+                <span>シリーズ</span>
+                <select id="study-series-select"></select>
+              </label>
+              <dl class="study-meta">
+                <div><dt>基準公演</dt><dd id="study-cutoff-event">—</dd></div>
+                <div><dt>配信期間</dt><dd id="study-release-period">—</dd></div>
+                <div><dt>新曲</dt><dd id="study-track-count">0曲</dd></div>
+              </dl>
+              <ol id="study-track-list" class="study-track-list"></ol>
+            </div>
+            <aside class="study-actions">
+              <p id="study-playlist-note">シリーズを選択してください。</p>
+              <button id="create-study-playlist-button" class="button button-service button-spotify button-wide" type="button">
+                Spotifyで作成して開く
+              </button>
+              <button id="study-soundiiz-transfer-button" class="button button-service button-transfer button-wide" type="button">
+                Apple Music / Amazon Musicで作成して開く
+              </button>
+              <div id="study-playlist-result" class="playlist-result hidden" aria-live="polite"></div>
+            </aside>
           </div>
         </section>
 
@@ -187,7 +219,7 @@
 
     <script src="./admin/js/spotify-client.js?v=0.20"></script>
     <script src="./js/admin-spotify-callback.js?v=0.1"></script>
-    <script src="./js/public-playlist-client.js?v=0.3"></script>
-    <script src="./js/public-app.js?v=0.12"></script>
+    <script src="./js/public-playlist-client.js?v=0.4"></script>
+    <script src="./js/public-app.js?v=0.13"></script>
   </body>
 </html>

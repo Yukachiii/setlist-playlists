@@ -44,11 +44,14 @@ class EventsWriteResult(TypedDict):
     filenames: list[str]
     changedFilenames: list[str]
     manifestChanged: bool
+    studyPlaylistsChanged: bool
 
 
 GRAPHQL_URL = "https://ll-fans.jp/api/graphql"
 EVENT_PATH = re.compile(r"^/data/event/(?P<id>\d+)/?$")
 PUBLISH_EVENT_ID = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
+SPOTIFY_ID = re.compile(r"^[A-Za-z0-9]{22}$")
+ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PROJECT_DIRECTORY = Path(__file__).resolve().parent
 PUBLISH_TOKEN = secrets.token_urlsafe(32)
 PUBLISH_LOCK = threading.Lock()
@@ -649,8 +652,95 @@ def validate_publish_events(value: Any) -> list[dict[str, Any]]:
     return normalized
 
 
+def validate_study_artist(value: Any) -> JsonObject:
+    if not isinstance(value, dict):
+        raise PublishErrorResponse("予習プレイリストのアーティスト情報が不正です。")
+    artist_id = str(value.get("id") or "").strip()
+    name = str(value.get("name") or "").strip()
+    if not SPOTIFY_ID.fullmatch(artist_id) or not name:
+        raise PublishErrorResponse("予習プレイリストのSpotifyアーティストが不正です。")
+    return {"id": artist_id, "name": name[:200]}
+
+
+def validate_study_track(value: Any) -> JsonObject:
+    if not isinstance(value, dict):
+        raise PublishErrorResponse("予習プレイリストの曲情報が不正です。")
+    track_id = str(value.get("trackId") or "").strip()
+    uri = str(value.get("uri") or "").strip()
+    title = str(value.get("title") or "").strip()
+    release_date = str(value.get("releaseDate") or "").strip()
+    if (
+        not SPOTIFY_ID.fullmatch(track_id)
+        or uri != f"spotify:track:{track_id}"
+        or not title
+        or not ISO_DATE.fullmatch(release_date)
+    ):
+        raise PublishErrorResponse("予習プレイリストのSpotify曲が不正です。")
+    return {
+        "trackId": track_id,
+        "uri": uri,
+        "title": title[:500],
+        "artists": str(value.get("artists") or "").strip()[:500],
+        "releaseDate": release_date,
+        "artworkUrl": str(value.get("artworkUrl") or "").strip()[:2000],
+        "albumName": str(value.get("albumName") or "").strip()[:500],
+    }
+
+
+def validate_study_playlist(series: str, value: Any) -> JsonObject:
+    if not PUBLISH_EVENT_ID.fullmatch(series) or not isinstance(value, dict):
+        raise PublishErrorResponse("予習プレイリストのシリーズ情報が不正です。")
+    cutoff_date = str(value.get("cutoffDate") or "").strip()
+    if not ISO_DATE.fullmatch(cutoff_date):
+        raise PublishErrorResponse("予習プレイリストの基準日が不正です。")
+    artists = value.get("artists")
+    tracks = value.get("tracks")
+    if not isinstance(artists, list) or not artists:
+        raise PublishErrorResponse("予習プレイリストのアーティストが未設定です。")
+    if not isinstance(tracks, list) or len(tracks) > 2000:
+        raise PublishErrorResponse("予習プレイリストの曲数が不正です。")
+    return {
+        "series": series,
+        "seriesLabel": str(value.get("seriesLabel") or series).strip()[:200],
+        "cutoffDate": cutoff_date,
+        "cutoffEventId": str(value.get("cutoffEventId") or "").strip()[:200],
+        "cutoffEventTitle": str(value.get("cutoffEventTitle") or "").strip()[:500],
+        "cutoffPerformanceId": str(value.get("cutoffPerformanceId") or "").strip()[:200],
+        "artists": [validate_study_artist(artist) for artist in artists],
+        "tracks": [validate_study_track(track) for track in tracks],
+        "updatedAt": str(value.get("updatedAt") or "").strip()[:50],
+    }
+
+
+def validate_study_playlists(value: Any) -> dict[str, JsonObject]:
+    if value is None:
+        return {}
+    if not isinstance(value, dict):
+        raise PublishErrorResponse("予習プレイリスト設定が不正です。")
+    return {
+        str(series): validate_study_playlist(str(series), playlist)
+        for series, playlist in value.items()
+    }
+
+
+def write_study_playlists_to_public_data(
+    study_playlists: Any, project_directory: Path = PROJECT_DIRECTORY
+) -> bool:
+    normalized = validate_study_playlists(study_playlists)
+    document = {
+        "schemaVersion": "0.1",
+        "playlists": sorted(normalized.values(), key=lambda item: item["series"]),
+    }
+    return write_json_if_changed(
+        project_directory / "data" / "study-playlists.json",
+        document,
+    )
+
+
 def write_events_to_public_data(
-    events: Any, project_directory: Path = PROJECT_DIRECTORY
+    events: Any,
+    project_directory: Path = PROJECT_DIRECTORY,
+    study_playlists: Any = None,
 ) -> EventsWriteResult:
     normalized = validate_publish_events(events)
     results = [
@@ -667,6 +757,11 @@ def write_events_to_public_data(
         "filenames": filenames,
         "changedFilenames": changed_filenames,
         "manifestChanged": any(result["manifestChanged"] for result in results),
+        "studyPlaylistsChanged": (
+            write_study_playlists_to_public_data(study_playlists, project_directory)
+            if study_playlists is not None
+            else False
+        ),
     }
 
 
@@ -850,12 +945,18 @@ def current_git_revision(project_directory: Path) -> str:
 
 
 def publish_events_to_github(
-    events: Any, project_directory: Path = PROJECT_DIRECTORY
+    events: Any,
+    project_directory: Path = PROJECT_DIRECTORY,
+    study_playlists: Any = None,
 ) -> dict[str, Any]:
     normalized_events = validate_publish_events(events)
     status = require_git_publish_ready(project_directory)
     with PUBLISH_LOCK:
-        saved = write_events_to_public_data(normalized_events, project_directory)
+        saved = write_events_to_public_data(
+            normalized_events,
+            project_directory,
+            study_playlists,
+        )
         committed = commit_publish_changes(normalized_events, project_directory)
         has_upstream = rebase_from_upstream(project_directory)
         push_publish_branch(project_directory, status["branch"], has_upstream)
@@ -951,7 +1052,11 @@ class AdminHandler(SimpleHTTPRequestHandler):
             events = body.get("events")
             if events is None and body.get("event") is not None:
                 events = [body.get("event")]
-            result = publish_events_to_github(events, PROJECT_DIRECTORY)
+            result = publish_events_to_github(
+                events,
+                PROJECT_DIRECTORY,
+                body.get("studyPlaylists"),
+            )
             self.send_json(result)
         except (UnicodeDecodeError, json.JSONDecodeError):
             self.send_json({"error": "送信されたJSONを読み込めません。"}, status=400)

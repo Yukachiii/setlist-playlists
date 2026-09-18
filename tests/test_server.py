@@ -14,6 +14,7 @@ from server import (
     publish_event_to_github,
     publish_events_to_github,
     validate_publish_event,
+    validate_study_playlists,
     write_event_to_public_data,
     write_events_to_public_data,
 )
@@ -193,6 +194,46 @@ class ServerImportTests(unittest.TestCase):
             repeated = write_events_to_public_data(events, project)
             self.assertEqual(repeated["changedEventCount"], 0)
             self.assertFalse(repeated["manifestChanged"])
+
+    def test_study_playlists_are_validated_and_written_for_public_site(self):
+        events = [{
+            "schemaVersion": "0.3",
+            "id": "hasunosora-live",
+            "title": "Hasunosora Live",
+            "series": ["hasunosora"],
+            "performances": [],
+        }]
+        study_playlists = {
+            "hasunosora": {
+                "series": "hasunosora",
+                "seriesLabel": "蓮ノ空",
+                "cutoffDate": "2026-05-17",
+                "cutoffEventId": "hasunosora-6th-live",
+                "cutoffEventTitle": "6th Live",
+                "cutoffPerformanceId": "day-2",
+                "artists": [{"id": "1234567890123456789012", "name": "蓮ノ空"}],
+                "tracks": [{
+                    "trackId": "abcdefghijklmnopqrstuv",
+                    "uri": "spotify:track:abcdefghijklmnopqrstuv",
+                    "title": "New Song",
+                    "artists": "蓮ノ空",
+                    "releaseDate": "2026-06-01",
+                    "artworkUrl": "https://i.scdn.co/image/example",
+                    "albumName": "New Single",
+                }],
+                "updatedAt": "2026-09-18T00:00:00.000Z",
+            }
+        }
+        self.assertIn("hasunosora", validate_study_playlists(study_playlists))
+        with TemporaryDirectory() as directory:
+            project = Path(directory)
+            result = write_events_to_public_data(events, project, study_playlists)
+            self.assertTrue(result["studyPlaylistsChanged"])
+            document = json.loads(
+                (project / "data" / "study-playlists.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(document["playlists"][0]["series"], "hasunosora")
+            self.assertEqual(document["playlists"][0]["tracks"][0]["title"], "New Song")
 
     def test_flat_event_file_is_migrated_when_published(self):
         event = {

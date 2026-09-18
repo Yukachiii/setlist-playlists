@@ -74,6 +74,26 @@ test("ナンバリング公演は明示的にtrueのイベントだけを対象�
   assert.equal(app.isNumberedLive({ title: "7th Live" }), false);
 });
 
+test("公開済みの予習プレイリストだけを読み込み配信期間を表示する", () => {
+  const playlists = app.normalizeStudyPlaylists({
+    playlists: [
+      {
+        series: "hasunosora",
+        tracks: [
+          { title: "First", releaseDate: "2026-05-01" },
+          { title: "Second", releaseDate: "2026-06-15" }
+        ]
+      },
+      { series: "broken" }
+    ]
+  });
+  assert.equal(playlists.length, 1);
+  assert.equal(
+    app.studyReleasePeriod(playlists[0].tracks),
+    "2026.5.1 (金) 〜 2026.6.15 (月)"
+  );
+});
+
 test("曲名候補をバージョンとアーティスト別に分けて披露公演を逆引きする", () => {
   const repeated = {
     recording: { displayTitle: "Dream Believers（105期 Ver.）", baseTitle: "Dream Believers" },

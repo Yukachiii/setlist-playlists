@@ -279,3 +279,23 @@ test("自動一致しないSpotify検索結果も手動選択候補として返�
     global.fetch = originalFetch;
   }
 });
+
+test("同じ音源は最初の配信日を採用してアルバム再収録を新曲扱いしない", () => {
+  const details = [
+    track("single", "New Song", "Artist", { isrc: "JP-AAA-26-00001" }),
+    track("album", "New Song", "Artist", { isrc: "JP-AAA-26-00001" }),
+    track("other", "Other Song", "Artist", { isrc: "JP-AAA-26-00002" })
+  ];
+  const entries = [
+    { trackId: "album", releaseDate: "2026-08-01", albumName: "Album" },
+    { trackId: "single", releaseDate: "2026-03-01", albumName: "Single" },
+    { trackId: "other", releaseDate: "2026-06-01", albumName: "Other" }
+  ];
+
+  const earliest = spotify.earliestReleaseEntries(entries, details);
+  assert.deepEqual(
+    earliest.map((entry) => [entry.track.id, entry.releaseDate]),
+    [["single", "2026-03-01"], ["other", "2026-06-01"]]
+  );
+  assert.equal(spotify.releaseDateValue("2026-09"), "2026-09-01");
+});

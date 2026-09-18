@@ -68,6 +68,10 @@ export function validEventPath(value) {
   return /^[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(text(value));
 }
 
+function validSeries(value) {
+  return /^[a-z0-9][a-z0-9_-]*$/.test(text(value));
+}
+
 function validPerformanceId(value) {
   return /^[A-Za-z0-9][A-Za-z0-9._-]{0,199}$/.test(text(value));
 }
@@ -137,6 +141,39 @@ export function extractPlaylistSpec(documentValue, eventPath, performanceId) {
         text(item?.recording?.displayTitle) ||
         text(item?.recording?.baseTitle),
       artists: text(item?.spotify?.matchedArtist) || text(item?.artistHint)
+    }))
+  };
+}
+
+/** @returns {PlaylistSpec} */
+export function extractStudyPlaylistSpec(documentValue, series) {
+  if (!validSeries(series)) {
+    throw new RequestError(400, "invalid_series", "シリーズの指定が不正です。");
+  }
+  const playlists = Array.isArray(documentValue?.playlists) ? documentValue.playlists : [];
+  const playlist = playlists.find((item) => text(item?.series) === series);
+  if (!playlist) {
+    throw new RequestError(404, "study_playlist_not_found", "このシリーズの予習プレイリストは未設定です。");
+  }
+  const tracks = (Array.isArray(playlist.tracks) ? playlist.tracks : []).filter((track) =>
+    /^spotify:track:[A-Za-z0-9]{22}$/.test(text(track?.uri))
+  );
+  if (!tracks.length) {
+    throw new RequestError(422, "no_new_releases", "最新のナンバリング公演以降に配信された新曲はありません。");
+  }
+  const label = text(playlist.seriesLabel) || series;
+  const cutoffDate = text(playlist.cutoffDate);
+  return {
+    key: `study:${series}`,
+    eventPath: "study-playlists.json",
+    eventId: `study-${series}`,
+    performanceId: "latest-numbered-live",
+    name: `${label} — 最新ライブ以降の新曲`.slice(0, 100),
+    description: `${cutoffDate || "最新"}のナンバリング公演以降に配信された新曲（Setlist Playlists）`.slice(0, 300),
+    uris: tracks.map((track) => text(track.uri)),
+    tracks: tracks.map((track) => ({
+      title: text(track.title),
+      artists: text(track.artists)
     }))
   };
 }
@@ -320,6 +357,20 @@ async function fetchEventDocument(eventPath, env, fetchImpl) {
   });
   if (!response.ok) {
     throw new RequestError(404, "event_data_unavailable", "公演データを取得できませんでした。");
+  }
+  return response.json();
+}
+
+async function fetchStudyPlaylistDocument(env, fetchImpl) {
+  const base = text(env.PUBLIC_DATA_BASE_URL);
+  if (!base) throw new RequestError(503, "worker_not_configured", "公演データの取得先が設定されていません。");
+  const url = new URL("study-playlists.json", base.endsWith("/") ? base : `${base}/`);
+  const response = await fetchImpl(url.toString(), {
+    headers: { Accept: "application/json" },
+    cf: { cacheEverything: true, cacheTtl: 300 }
+  });
+  if (!response.ok) {
+    throw new RequestError(404, "study_data_unavailable", "予習プレイリストのデータを取得できませんでした。");
   }
   return response.json();
 }
@@ -512,10 +563,29 @@ async function parseRequest(request) {
   };
 }
 
+async function parseStudyRequest(request) {
+  const length = Number(request.headers.get("Content-Length") || 0);
+  if (length > MAX_REQUEST_BYTES) {
+    throw new RequestError(413, "request_too_large", "リクエストが大きすぎます。");
+  }
+  const body = await request.json().catch(() => null);
+  const series = text(body?.series);
+  if (!body || typeof body !== "object" || !validSeries(series)) {
+    throw new RequestError(400, "invalid_series", "シリーズの指定が不正です。");
+  }
+  return { series };
+}
+
 async function playlistSpecFromRequest(request, env, fetchImpl) {
   const input = await parseRequest(request);
   const eventDocument = await fetchEventDocument(input.eventPath, env, fetchImpl);
   return extractPlaylistSpec(eventDocument, input.eventPath, input.performanceId);
+}
+
+async function studyPlaylistSpecFromRequest(request, env, fetchImpl) {
+  const input = await parseStudyRequest(request);
+  const documentValue = await fetchStudyPlaylistDocument(env, fetchImpl);
+  return extractStudyPlaylistSpec(documentValue, input.series);
 }
 
 function requestFailureResponse(error, origin) {
@@ -527,9 +597,9 @@ function requestFailureResponse(error, origin) {
   );
 }
 
-async function handleSoundiizRequest(request, env, fetchImpl, origin) {
+async function handleSoundiizSpecRequest(loadSpec, fetchImpl, origin) {
   try {
-    const spec = await playlistSpecFromRequest(request, env, fetchImpl);
+    const spec = await loadSpec();
     const transfer = await createSoundiizImport(spec, fetchImpl);
     return json({ ok: true, ...transfer }, 201, origin);
   } catch (error) {
@@ -546,6 +616,22 @@ async function handleSoundiizRequest(request, env, fetchImpl, origin) {
       origin
     );
   }
+}
+
+function handleSoundiizRequest(request, env, fetchImpl, origin) {
+  return handleSoundiizSpecRequest(
+    () => playlistSpecFromRequest(request, env, fetchImpl),
+    fetchImpl,
+    origin
+  );
+}
+
+function handleStudySoundiizRequest(request, env, fetchImpl, origin) {
+  return handleSoundiizSpecRequest(
+    () => studyPlaylistSpecFromRequest(request, env, fetchImpl),
+    fetchImpl,
+    origin
+  );
 }
 
 async function fulfillPlaylistClaim(spec, claim, env, fetchImpl, origin) {
@@ -590,10 +676,10 @@ function spotifyFailureResponse(error, origin) {
   );
 }
 
-async function handlePlaylistRequest(request, env, fetchImpl, origin) {
+async function handlePlaylistSpecRequest(loadSpec, env, fetchImpl, origin) {
   let spec;
   try {
-    spec = await playlistSpecFromRequest(request, env, fetchImpl);
+    spec = await loadSpec();
     const fingerprint = await playlistFingerprint(spec);
     const claim = await claimPlaylist(env, spec, fingerprint);
     return await fulfillPlaylistClaim(spec, claim, env, fetchImpl, origin);
@@ -603,11 +689,34 @@ async function handlePlaylistRequest(request, env, fetchImpl, origin) {
   }
 }
 
+function handlePlaylistRequest(request, env, fetchImpl, origin) {
+  return handlePlaylistSpecRequest(
+    () => playlistSpecFromRequest(request, env, fetchImpl),
+    env,
+    fetchImpl,
+    origin
+  );
+}
+
+function handleStudyPlaylistRequest(request, env, fetchImpl, origin) {
+  return handlePlaylistSpecRequest(
+    () => studyPlaylistSpecFromRequest(request, env, fetchImpl),
+    env,
+    fetchImpl,
+    origin
+  );
+}
+
 /** @param {Request} request @param {WorkerEnvironment} env */
 export async function handleRequest(request, env, fetchImpl = fetch) {
   const pathname = new URL(request.url).pathname;
   const origin = corsOrigin(request, env);
-  const isApiPath = pathname === "/v1/playlists" || pathname === "/v1/transfers/soundiiz";
+  const isApiPath = [
+    "/v1/playlists",
+    "/v1/transfers/soundiiz",
+    "/v1/study-playlists",
+    "/v1/study-transfers/soundiiz"
+  ].includes(pathname);
 
   if (request.method === "GET" && pathname === "/health") {
     return json({ ok: true, service: "setlist-playlist-api" });
@@ -623,9 +732,15 @@ export async function handleRequest(request, env, fetchImpl = fetch) {
   if (pathname === "/v1/transfers/soundiiz") {
     return handleSoundiizRequest(request, env, fetchImpl, origin);
   }
+  if (pathname === "/v1/study-transfers/soundiiz") {
+    return handleStudySoundiizRequest(request, env, fetchImpl, origin);
+  }
 
   if (!env.DB) {
     return json({ error: "プレイリスト保存先が設定されていません。", code: "database_not_configured" }, 503, origin);
+  }
+  if (pathname === "/v1/study-playlists") {
+    return handleStudyPlaylistRequest(request, env, fetchImpl, origin);
   }
   return handlePlaylistRequest(request, env, fetchImpl, origin);
 }

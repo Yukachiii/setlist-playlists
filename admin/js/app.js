@@ -48,7 +48,7 @@
    */
 
   const state = {
-    database: { schemaVersion: "0.3", events: [] },
+    database: { schemaVersion: "0.3", events: [], studyPlaylists: {} },
     selectedEventId: null,
     expandedEventSeries: new Set(),
     showNumberedOnly: false,
@@ -64,6 +64,7 @@
     spotifyReviewQueue: [],
     spotifyReviewPosition: -1,
     spotifySearchRequestId: 0,
+    studyArtistCandidates: [],
     llfansSyncCatalog: [],
     llfansSyncSelectedIds: new Set(),
     llfansSyncQueue: [],
@@ -137,6 +138,14 @@
     parsePageImportButton: $("#parse-page-import-button"),
     spotifyAccount: $("#spotify-account"),
     spotifyConnectButton: $("#spotify-connect-button"),
+    studyPlaylistDialog: $("#study-playlist-dialog"),
+    studyPlaylistSeries: $("#study-playlist-series"),
+    studyPlaylistCutoff: $("#study-playlist-cutoff"),
+    studyPlaylistSummary: $("#study-playlist-summary"),
+    studyArtistList: $("#study-artist-list"),
+    studyPlaylistErrors: $("#study-playlist-errors"),
+    scanStudyArtistsButton: $("#scan-study-artists-button"),
+    refreshStudyPlaylistButton: $("#refresh-study-playlist-button"),
     spotifyEnrichButton: $("#spotify-enrich-button"),
     spotifyMatchSummary: $("#spotify-match-summary"),
     spotifyCandidateDialog: $("#spotify-candidate-dialog"),
@@ -423,7 +432,10 @@
         const parsed = JSON.parse(saved);
         state.database = {
           schemaVersion: "0.3",
-          events: (parsed.events || []).map(normalizeEvent)
+          events: (parsed.events || []).map(normalizeEvent),
+          studyPlaylists: parsed.studyPlaylists && typeof parsed.studyPlaylists === "object"
+            ? parsed.studyPlaylists
+            : {}
         };
       } catch (error) {
         console.error("Saved data is invalid", error);
@@ -1565,6 +1577,247 @@
     };
   }
 
+  function studySeriesIds() {
+    const values = new Set();
+    state.database.events.forEach((event) => {
+      (event.series || []).filter(Boolean).forEach((series) => values.add(series));
+    });
+    return [...values].sort((a, b) => {
+      const aIndex = SERIES_DISPLAY_ORDER.indexOf(a);
+      const bIndex = SERIES_DISPLAY_ORDER.indexOf(b);
+      if (aIndex < 0 && bIndex < 0) return a.localeCompare(b, "ja");
+      if (aIndex < 0) return 1;
+      if (bIndex < 0) return -1;
+      return aIndex - bIndex;
+    });
+  }
+
+  function todayInJapan() {
+    return new Intl.DateTimeFormat("sv-SE", {
+      timeZone: "Asia/Tokyo",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    }).format(new Date());
+  }
+
+  function latestNumberedPerformance(series, today = todayInJapan()) {
+    const candidates = [];
+    state.database.events.forEach((event) => {
+      if (event.isNumberedLive !== true || !(event.series || []).includes(series)) return;
+      (event.performances || []).forEach((performance, performanceIndex) => {
+        const date = String(performance?.date || "");
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || date > today) return;
+        candidates.push({ event, performance, performanceIndex, date });
+      });
+    });
+    return candidates.sort((a, b) => b.date.localeCompare(a.date))[0] || null;
+  }
+
+  function seriesSpotifyTrackIds(series) {
+    const ids = new Set();
+    state.database.events.forEach((event) => {
+      if (!(event.series || []).includes(series)) return;
+      (event.performances || []).forEach((performance) => {
+        (performance.setlist || []).forEach((item) => {
+          const trackId = String(item?.spotify?.trackId || "").trim();
+          if (trackId) ids.add(trackId);
+        });
+      });
+    });
+    return [...ids];
+  }
+
+  function studyPlaylistConfig(series = elements.studyPlaylistSeries.value) {
+    return state.database.studyPlaylists?.[series] || null;
+  }
+
+  function cutoffLabel(cutoff) {
+    if (!cutoff) return "終了済みのナンバリング公演がありません";
+    const performanceLabel = String(cutoff.performance?.label || "").trim();
+    return `${cutoff.date} / ${cutoff.event.title}${performanceLabel ? ` — ${performanceLabel}` : ""}`;
+  }
+
+  function renderStudyArtistCandidates() {
+    const container = elements.studyArtistList;
+    container.replaceChildren();
+    if (!state.studyArtistCandidates.length) {
+      const empty = document.createElement("div");
+      empty.className = "study-artist-empty";
+      empty.textContent = "Spotifyから候補を取得すると、ここにアーティストが表示されます。";
+      container.append(empty);
+      elements.refreshStudyPlaylistButton.disabled = true;
+      return;
+    }
+    state.studyArtistCandidates.forEach((candidate) => {
+      const label = document.createElement("label");
+      label.className = "study-artist-item";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.value = candidate.id;
+      checkbox.checked = candidate.selected !== false;
+      checkbox.addEventListener("change", () => {
+        candidate.selected = checkbox.checked;
+        elements.refreshStudyPlaylistButton.disabled =
+          !selectedStudyArtists().length || !window.SpotifyClient.isConnected();
+      });
+      const name = document.createElement("span");
+      name.className = "study-artist-name";
+      name.textContent = candidate.name;
+      const count = document.createElement("span");
+      count.className = "study-artist-count";
+      count.textContent = candidate.trackCount ? `${candidate.trackCount}曲で検出` : "保存済み";
+      label.append(checkbox, name, count);
+      container.append(label);
+    });
+    elements.refreshStudyPlaylistButton.disabled =
+      !selectedStudyArtists().length || !window.SpotifyClient.isConnected();
+  }
+
+  function selectedStudyArtists() {
+    return state.studyArtistCandidates
+      .filter((candidate) => candidate.selected !== false)
+      .map(({ id, name }) => ({ id, name }));
+  }
+
+  function showStudyPlaylistSeries() {
+    hideValidation(elements.studyPlaylistErrors);
+    const series = elements.studyPlaylistSeries.value;
+    const cutoff = latestNumberedPerformance(series);
+    const saved = studyPlaylistConfig(series);
+    elements.studyPlaylistCutoff.textContent = cutoffLabel(cutoff);
+    state.studyArtistCandidates = (saved?.artists || []).map((artist) => ({
+      id: artist.id,
+      name: artist.name,
+      trackCount: 0,
+      selected: true
+    }));
+    elements.studyPlaylistSummary.textContent = saved
+      ? `保存済み: ${saved.artists.length}組 / 新曲 ${saved.tracks.length}曲 / ${saved.updatedAt?.slice(0, 10) || "更新日不明"}`
+      : "このシリーズの予習プレイリストはまだ設定されていません。";
+    renderStudyArtistCandidates();
+    elements.scanStudyArtistsButton.disabled = !series || !window.SpotifyClient.isConnected();
+    elements.refreshStudyPlaylistButton.disabled =
+      !cutoff || !selectedStudyArtists().length || !window.SpotifyClient.isConnected();
+  }
+
+  function populateStudyPlaylistSeries() {
+    const current = elements.studyPlaylistSeries.value;
+    const seriesIds = studySeriesIds();
+    elements.studyPlaylistSeries.replaceChildren(...seriesIds.map((series) => (
+      new Option(SERIES_DISPLAY_NAMES[series] || series, series)
+    )));
+    elements.studyPlaylistSeries.value = seriesIds.includes(current) ? current : seriesIds[0] || "";
+  }
+
+  function openStudyPlaylistDialog() {
+    populateStudyPlaylistSeries();
+    showStudyPlaylistSeries();
+    elements.studyPlaylistDialog.showModal();
+  }
+
+  function closeStudyPlaylistDialog() {
+    if (elements.studyPlaylistDialog.open) elements.studyPlaylistDialog.close();
+  }
+
+  function artistCandidatesFromTracks(tracks, savedArtists) {
+    const counts = new Map();
+    tracks.forEach((track) => {
+      (track.artists || []).forEach((artist) => {
+        if (!artist?.id || !artist?.name) return;
+        const current = counts.get(artist.id) || { id: artist.id, name: artist.name, trackCount: 0 };
+        current.trackCount += 1;
+        counts.set(artist.id, current);
+      });
+    });
+    const savedIds = new Set((savedArtists || []).map((artist) => artist.id));
+    const hasSavedSelection = savedIds.size > 0;
+    return [...counts.values()]
+      .map((candidate) => ({
+        ...candidate,
+        selected: hasSavedSelection ? savedIds.has(candidate.id) : true
+      }))
+      .sort((a, b) => b.trackCount - a.trackCount || a.name.localeCompare(b.name, "ja"));
+  }
+
+  async function scanStudyArtists() {
+    hideValidation(elements.studyPlaylistErrors);
+    const series = elements.studyPlaylistSeries.value;
+    const trackIds = seriesSpotifyTrackIds(series);
+    if (!window.SpotifyClient.isConnected()) {
+      showValidation(elements.studyPlaylistErrors, ["先にSpotifyへ接続してください。"]);
+      return;
+    }
+    if (!trackIds.length) {
+      showValidation(elements.studyPlaylistErrors, ["このシリーズにはSpotify登録済み曲がありません。"]);
+      return;
+    }
+    elements.scanStudyArtistsButton.disabled = true;
+    elements.studyPlaylistSummary.textContent = `${trackIds.length}曲からアーティスト候補を確認しています…`;
+    try {
+      const tracks = await window.SpotifyClient.getTracks(trackIds);
+      state.studyArtistCandidates = artistCandidatesFromTracks(
+        tracks,
+        studyPlaylistConfig(series)?.artists
+      );
+      elements.studyPlaylistSummary.textContent =
+        `${state.studyArtistCandidates.length}組を検出しました。対象外のアーティストはチェックを外してください。`;
+      renderStudyArtistCandidates();
+    } catch (error) {
+      showValidation(elements.studyPlaylistErrors, [error.message]);
+    } finally {
+      elements.scanStudyArtistsButton.disabled = false;
+    }
+  }
+
+  function studyPlaylistRecord(series, cutoff, artists, tracks) {
+    return {
+      series,
+      seriesLabel: SERIES_DISPLAY_NAMES[series] || series,
+      cutoffDate: cutoff.date,
+      cutoffEventId: cutoff.event.id,
+      cutoffEventTitle: cutoff.event.title,
+      cutoffPerformanceId: cutoff.performance.id,
+      artists,
+      tracks,
+      updatedAt: new Date().toISOString()
+    };
+  }
+
+  async function refreshStudyPlaylist() {
+    hideValidation(elements.studyPlaylistErrors);
+    const series = elements.studyPlaylistSeries.value;
+    const cutoff = latestNumberedPerformance(series);
+    const artists = selectedStudyArtists();
+    if (!window.SpotifyClient.isConnected()) {
+      showValidation(elements.studyPlaylistErrors, ["先にSpotifyへ接続してください。"]);
+      return;
+    }
+    if (!cutoff || !artists.length) return;
+    elements.refreshStudyPlaylistButton.disabled = true;
+    elements.scanStudyArtistsButton.disabled = true;
+    try {
+      const tracks = await window.SpotifyClient.discoverNewReleases(
+        artists.map((artist) => artist.id),
+        cutoff.date,
+        (message) => { elements.studyPlaylistSummary.textContent = message; }
+      );
+      state.database.studyPlaylists ||= {};
+      state.database.studyPlaylists[series] = studyPlaylistRecord(series, cutoff, artists, tracks);
+      setDirty();
+      persist();
+      elements.studyPlaylistSummary.textContent =
+        `${cutoff.date}より後の新曲を${tracks.length}曲保存しました。公開すると訪問ページへ反映されます。`;
+      alert(`「${SERIES_DISPLAY_NAMES[series] || series}」の予習用新曲を${tracks.length}曲更新しました。`);
+    } catch (error) {
+      showValidation(elements.studyPlaylistErrors, [error.message]);
+    } finally {
+      elements.scanStudyArtistsButton.disabled = false;
+      elements.refreshStudyPlaylistButton.disabled =
+        !selectedStudyArtists().length || !window.SpotifyClient.isConnected();
+    }
+  }
+
   function spotifyCandidateSummary(results) {
     return results.length
       ? state.spotifyReviewActive
@@ -1965,6 +2218,12 @@
     elements.spotifyConnectButton.textContent = connected ? "接続解除" : "Spotifyに接続";
     elements.spotifyEnrichButton.disabled = !connected || !importSongCount();
     elements.spotifyResearchAllButton.disabled = !connected || !state.draftSetlist.length;
+    if (elements.studyPlaylistDialog.open) {
+      elements.scanStudyArtistsButton.disabled = !connected || !elements.studyPlaylistSeries.value;
+      elements.refreshStudyPlaylistButton.disabled =
+        !connected || !latestNumberedPerformance(elements.studyPlaylistSeries.value) ||
+        !selectedStudyArtists().length;
+    }
     if (!elements.spotifyEnrichButton.textContent.includes("検索中")) {
       elements.spotifyEnrichButton.textContent = (state.importDraft?.performances?.length || 0) > 1
         ? "Spotifyで全公演を補完"
@@ -3030,7 +3289,11 @@
     const response = await fetch("/api/github-publish", {
       method: "POST",
       headers: { Accept: "application/json", "Content-Type": "application/json" },
-      body: JSON.stringify({ publishToken, events: deepClone(events) })
+      body: JSON.stringify({
+        publishToken,
+        events: deepClone(events),
+        studyPlaylists: deepClone(state.database.studyPlaylists || {})
+      })
     });
     const contentType = response.headers.get("Content-Type") || "";
     if (!contentType.includes("application/json")) {
@@ -3120,6 +3383,12 @@
 
   async function importJson(file) {
     const raw = JSON.parse(await file.text());
+    if (raw.studyPlaylists && typeof raw.studyPlaylists === "object" && !Array.isArray(raw.studyPlaylists)) {
+      state.database.studyPlaylists = {
+        ...(state.database.studyPlaylists || {}),
+        ...raw.studyPlaylists
+      };
+    }
     if (
       raw.confirmedSpotifyMappings &&
       typeof raw.confirmedSpotifyMappings === "object" &&
@@ -3268,6 +3537,12 @@
   $("#cancel-performance-button").addEventListener("click", closePerformance);
   $("#performance-form").addEventListener("submit", savePerformance);
   elements.spotifyResearchAllButton.addEventListener("click", researchDraftSetlistFromSpotify);
+  $("#study-playlist-button").addEventListener("click", openStudyPlaylistDialog);
+  $("#close-study-playlist-button").addEventListener("click", closeStudyPlaylistDialog);
+  $("#cancel-study-playlist-button").addEventListener("click", closeStudyPlaylistDialog);
+  elements.studyPlaylistSeries.addEventListener("change", showStudyPlaylistSeries);
+  elements.scanStudyArtistsButton.addEventListener("click", scanStudyArtists);
+  elements.refreshStudyPlaylistButton.addEventListener("click", refreshStudyPlaylist);
   $("#add-song-button").addEventListener("click", addSong);
   $("#parse-setlist-button").addEventListener("click", parsePastedSetlist);
   $("#generate-performance-id").addEventListener("click", generatePerformanceId);

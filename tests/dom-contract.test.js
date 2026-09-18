@@ -85,6 +85,15 @@ test("管理画面から全公演の公開JSON保存とGitHub pushを一括実�
   assert.match(app, /このプロジェクト内の変更をすべてcommit/);
 });
 
+test("ナンバリング公演以降の新曲をSpotifyから取得して公開できる", () => {
+  assert.match(html, /id="study-playlist-button"/);
+  assert.match(html, /id="study-playlist-dialog"/);
+  assert.match(app, /function latestNumberedPerformance\(series/);
+  assert.match(app, /event\.isNumberedLive !== true/);
+  assert.match(app, /SpotifyClient\.discoverNewReleases/);
+  assert.match(app, /studyPlaylists: deepClone\(state\.database\.studyPlaylists/);
+});
+
 test("会場は任意入力で、空欄ならハイフンを保存する", () => {
   assert.doesNotMatch(app, /会場は必須です/);
   assert.match(app, /name: elements\.venueName\.value\.trim\(\) \|\| "-"/);

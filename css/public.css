@@ -24,7 +24,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-button, input { font: inherit; }
+button, input, select { font: inherit; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 .hidden { display: none !important; }
@@ -103,7 +103,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 .button:hover:not(:disabled) { transform: translateY(-2px); }
-.button:focus-visible, a:focus-visible, input:focus-visible {
+.button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
   outline: 3px solid rgba(78, 99, 230, 0.35);
   outline-offset: 3px;
 }
@@ -210,6 +210,47 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-heading > p:last-child { margin: 14px 0 0; color: var(--ink-soft); font-size: 14px; }
 
 .events-section { padding: 62px 0 96px; }
+.study-section { padding-top: 62px; }
+.study-heading { max-width: 720px; }
+.study-card {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #dedfe3;
+  border-radius: 22px;
+  box-shadow: 0 16px 44px rgba(24, 32, 51, 0.07);
+}
+.study-card-main { padding: 28px 30px; }
+.study-series-select { display: grid; gap: 8px; }
+.study-series-select > span { color: #8b93a2; font-size: 11px; font-weight: 800; }
+.study-series-select select {
+  width: min(430px, 100%);
+  min-height: 50px;
+  padding: 0 44px 0 15px;
+  color: #344056;
+  background: #f7f7f4;
+  border: 1px solid #d7d9df;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.study-meta { margin: 24px 0 0; display: grid; grid-template-columns: 1.25fr .9fr .45fr; gap: 18px; }
+.study-meta div { min-width: 0; }
+.study-meta dt { margin-bottom: 6px; color: #98a0af; font: 800 9px "DM Sans", sans-serif; letter-spacing: 1.3px; }
+.study-meta dd { margin: 0; color: #354057; font-size: 12px; font-weight: 750; line-height: 1.6; }
+.study-track-list { max-height: 285px; margin: 24px 0 0; padding: 0; overflow: auto; list-style: none; border-top: 1px solid #ecece9; }
+.study-track-item { min-height: 60px; padding: 9px 0; display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; align-items: center; gap: 12px; border-bottom: 1px solid #ecece9; }
+.study-track-artwork { width: 42px; height: 42px; display: grid; place-items: center; overflow: hidden; color: #a8aeba; background: #eef0f3; border-radius: 8px; }
+.study-track-artwork img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.study-track-copy { min-width: 0; }
+.study-track-copy strong, .study-track-copy span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.study-track-copy strong { font-size: 13px; }
+.study-track-copy span { margin-top: 3px; color: #81899a; font-size: 10px; }
+.study-track-date { color: #7b8496; font: 700 10px "DM Sans", sans-serif; }
+.study-actions { padding: 30px; display: flex; flex-direction: column; justify-content: center; gap: 10px; color: white; background: var(--navy); }
+.study-actions > p { margin: 0 0 8px; color: #bbc3d1; font-size: 11px; line-height: 1.8; }
 .search-mode-switch { margin-top: 28px; padding: 4px; display: inline-flex; gap: 4px; background: #e7e5df; border-radius: 12px; }
 .search-mode-button { min-height: 40px; padding: 0 18px; color: #687084; background: transparent; border: 0; border-radius: 9px; font-size: 12px; font-weight: 800; cursor: pointer; }
 .search-mode-button:hover { color: var(--ink); }
@@ -358,6 +399,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .series-filter-group { align-items: flex-start; flex-direction: column; }
   .event-grid { grid-template-columns: repeat(2, 1fr); }
   .detail-layout { grid-template-columns: 1fr; }
+  .study-card { grid-template-columns: 1fr; }
   .playlist-panel { position: static; }
 }
 
@@ -378,6 +420,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-stats strong { font-size: 22px; }
   .hero-stats p { display: none; }
   .events-section { padding: 52px 0 70px; }
+  .study-section { padding-top: 52px; }
+  .study-card-main, .study-actions { padding: 23px 20px; }
+  .study-meta { grid-template-columns: 1fr 1fr; }
+  .study-meta div:first-child { grid-column: 1 / -1; }
   .search-mode-switch { width: 100%; }
   .search-mode-button { flex: 1; padding: 0 10px; }
   .song-candidates { padding: 16px; }
