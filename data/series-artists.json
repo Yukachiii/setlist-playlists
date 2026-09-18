@@ -1,0 +1,697 @@
+{
+  "schemaVersion": "0.1",
+  "seriesArtists": {
+    "aqours": [
+      {
+        "id": "1JBkCsDnxOuf9JoSvQzdFr",
+        "name": "5yncri5e!"
+      },
+      {
+        "id": "18QWe6vnAE1n1FnO0wAfPN",
+        "name": "AZALEA"
+      },
+      {
+        "id": "5cW1SVDUXXzsj3eFT7Gmta",
+        "name": "AiScReam"
+      },
+      {
+        "id": "6zxQda06WxXX8GmCeYstwV",
+        "name": "Aqours"
+      },
+      {
+        "id": "6J6RrsIzXnWKqcFu7ri9Pd",
+        "name": "A・ZU・NA"
+      },
+      {
+        "id": "45hvLVhSaKsJ4YifJ69A3Z",
+        "name": "CYaRon!"
+      },
+      {
+        "id": "4Zag9sKG5VwFWdaFaId6RH",
+        "name": "CatChu!"
+      },
+      {
+        "id": "6M4HRvHCFBOWlPW3Tn2Oqh",
+        "name": "DOLLCHESTRA"
+      },
+      {
+        "id": "0PyKHNnxTNPQDA4Ow7jRnd",
+        "name": "DiverDiva"
+      },
+      {
+        "id": "1OmA8j6y4aXQt03qMw5bU1",
+        "name": "Edel Note"
+      },
+      {
+        "id": "4gey6ooN4MzWmKGtlyYaFB",
+        "name": "GKSS"
+      },
+      {
+        "id": "7gKNDpetmXrzHZuLdo9tv8",
+        "name": "Guilty Kiss"
+      },
+      {
+        "id": "0NLFvASWkbSlxcCy5c4Gef",
+        "name": "KALEIDOSCORE"
+      },
+      {
+        "id": "2U3Vgx19saFDI9ZH4KzEIn",
+        "name": "Liella!"
+      },
+      {
+        "id": "2glYsWdZ2iBS2IhjopVcBK",
+        "name": "QU4RTZ"
+      },
+      {
+        "id": "2xg4mnz8QOKejta6NzNCeG",
+        "name": "R3BIRTH"
+      },
+      {
+        "id": "6Nq96md0RCaaBFlK4OJ3jQ",
+        "name": "Saint Aqours Snow"
+      },
+      {
+        "id": "5bAFl5UIKoCUr4A6090lR7",
+        "name": "Saint Snow"
+      },
+      {
+        "id": "6gzqTpINFSvlPC1C5VYW8a",
+        "name": "Sunny Passion"
+      },
+      {
+        "id": "2hYjPkmTry3LYVVSymws5i",
+        "name": "μ's"
+      },
+      {
+        "id": "1zJfgB2BeMgTB3pXkgrg3P",
+        "name": "いきづらい部！"
+      },
+      {
+        "id": "3he8Hc0WxcVbpLzFpRsnO4",
+        "name": "みらくらぱーく!"
+      },
+      {
+        "id": "0Xg4AR4jmE3OHO6MZ2jl8A",
+        "name": "わいわいわい"
+      },
+      {
+        "id": "23JZudIPdcNEhcV5DfDq5M",
+        "name": "エマ・ヴェルデ (CV.指出毬亜)"
+      },
+      {
+        "id": "6imsymLKQPmMWeEwrw3i55",
+        "name": "スクールアイドルミュージカル"
+      },
+      {
+        "id": "6L7wKf6aQv6A3OpiuMITqM",
+        "name": "スリーズブーケ"
+      },
+      {
+        "id": "54hnRUYsDChS7pkIRHiz5P",
+        "name": "ミア・テイラー (CV.内田 秀)"
+      },
+      {
+        "id": "2wFPTxM1Xl1f5vUk1jPY3d",
+        "name": "三船栞子 (CV.小泉萌香)"
+      },
+      {
+        "id": "7it8CXxJEe5Rn1fSl34ugQ",
+        "name": "上原歩夢 (CV.大西亜玖璃)"
+      },
+      {
+        "id": "690QfHJEGFsAryHLPVvzqA",
+        "name": "中須かすみ (CV.相良茉優)"
+      },
+      {
+        "id": "4CS5ASqHbFf9YKjlkkd2cN",
+        "name": "優木せつ菜 (CV.楠木ともり)"
+      },
+      {
+        "id": "6pNgnvzBa6Bthsv8SrZJYl",
+        "name": "初音ミク"
+      },
+      {
+        "id": "5ox19lYzPV4s1N3mTkNLRI",
+        "name": "唐 可可 (CV.Liyuu)"
+      },
+      {
+        "id": "13zuD1JY2mY2kwG3dOS8an",
+        "name": "国木田花丸 (CV.高槻かなこ)"
+      },
+      {
+        "id": "1bNt2NaGReLx58RaBpKuk3",
+        "name": "天王寺璃奈 (CV.田中ちえ美)"
+      },
+      {
+        "id": "19W707ZUq5jEr0NBWCaS01",
+        "name": "宮下 愛 (CV.村上奈津実)"
+      },
+      {
+        "id": "5AeHYcYFgZ8VHULQk0vHM2",
+        "name": "小原鞠莉 (CV.鈴木愛奈)"
+      },
+      {
+        "id": "6RQ5VjHW97K397QfPd0aXt",
+        "name": "島村卯月 (CV: 大橋彩香)"
+      },
+      {
+        "id": "44iPyW0GCQm1Qk5e5UPT8H",
+        "name": "嵐 千砂都 (CV.岬 なこ)"
+      },
+      {
+        "id": "4Du7haj4stBA22g5jfb9Mp",
+        "name": "平安名すみれ (CV.ペイトン尚未)"
+      },
+      {
+        "id": "3K0kUxY4moTB2FF7nYLgzs",
+        "name": "日野下花帆 (CV.楡井希実)"
+      },
+      {
+        "id": "66UKyfIWbPvoH82zGZlkdH",
+        "name": "最上静香 (CV.田所あずさ)"
+      },
+      {
+        "id": "2Nascsj90mN48cZBUS4CPA",
+        "name": "月岡恋鐘 (CV.礒部花凜)"
+      },
+      {
+        "id": "6mGi9UIrYgzUrcrgBGQFku",
+        "name": "朝香果林 (CV.久保田未夢)"
+      },
+      {
+        "id": "2eVnZH9Ie92OBHLwDMoWN6",
+        "name": "松浦果南 (CV.諏訪ななか)"
+      },
+      {
+        "id": "0yF5feBSqKd4frxmdkft3O",
+        "name": "桜内梨子 (CV.逢田梨香子)"
+      },
+      {
+        "id": "6csqZOVRUvmw9RnBjb0daq",
+        "name": "桜坂しずく (CV.前田佳織里)"
+      },
+      {
+        "id": "4e6MC71bwNfP6rnStiWyVY",
+        "name": "津島善子 (CV.小林愛香)"
+      },
+      {
+        "id": "0tfFouX7e1G86zdxkzBlRB",
+        "name": "渡辺 曜 (CV.斉藤朱夏)"
+      },
+      {
+        "id": "2KO3nQQqN4LJAKQebedEHF",
+        "name": "澁谷かのん (CV.伊達さゆり)"
+      },
+      {
+        "id": "7kcbAeii9YxDGxRqBFIyrU",
+        "name": "米女メイ (CV.薮島朱音)"
+      },
+      {
+        "id": "5dQJ5gnjrA2MQEmPRzvt4O",
+        "name": "若菜四季 (CV.大熊和奏)"
+      },
+      {
+        "id": "1bY7QMGccPmba1f1frZ8Xb",
+        "name": "蓮ノ空女学院スクールアイドルクラブ"
+      },
+      {
+        "id": "6xWuh7ypIYMh9BhqfHtQN1",
+        "name": "虹ヶ咲学園スクールアイドル同好会"
+      },
+      {
+        "id": "2SX8w3DHQPTBtQPMnFw0QI",
+        "name": "近江彼方 (CV.鬼頭明里)"
+      },
+      {
+        "id": "1btXM114txUV2HtiylRvoK",
+        "name": "鐘 嵐珠 (CV.法元明菜)"
+      },
+      {
+        "id": "4BZs8fDixaE49bgj2xMjPr",
+        "name": "高坂穂乃果(CV.新田恵海)"
+      },
+      {
+        "id": "6plej5RLgqzBFny1o6uODr",
+        "name": "高海千歌 (CV.伊波杏樹)"
+      },
+      {
+        "id": "3fgvaQU1JQeuu63QOo62Tb",
+        "name": "黒澤ダイヤ (CV.小宮有紗)"
+      },
+      {
+        "id": "3eMNL0H3RQlfNX3dadmmAO",
+        "name": "黒澤ルビィ (CV.降幡 愛)"
+      }
+    ],
+    "hasunosora": [
+      {
+        "id": "6M4HRvHCFBOWlPW3Tn2Oqh",
+        "name": "DOLLCHESTRA"
+      },
+      {
+        "id": "1OmA8j6y4aXQt03qMw5bU1",
+        "name": "Edel Note"
+      },
+      {
+        "id": "3he8Hc0WxcVbpLzFpRsnO4",
+        "name": "みらくらぱーく!"
+      },
+      {
+        "id": "6L7wKf6aQv6A3OpiuMITqM",
+        "name": "スリーズブーケ"
+      },
+      {
+        "id": "3K0kUxY4moTB2FF7nYLgzs",
+        "name": "日野下花帆 (CV.楡井希実)"
+      },
+      {
+        "id": "1bY7QMGccPmba1f1frZ8Xb",
+        "name": "蓮ノ空女学院スクールアイドルクラブ"
+      }
+    ],
+    "ikizulive": [
+      {
+        "id": "0g2001aGU44TSxDP5KSQBk",
+        "name": "CHAKI!"
+      },
+      {
+        "id": "2WpIrXxPqUBwLglDlzk10F",
+        "name": "Mi×Nori=Tea"
+      },
+      {
+        "id": "1kojgIS1ml3Fk0ehu3PTF0",
+        "name": "Plumina"
+      },
+      {
+        "id": "2apYbGvkcmbNpEMH6KCJNJ",
+        "name": "SH1ON"
+      },
+      {
+        "id": "1zJfgB2BeMgTB3pXkgrg3P",
+        "name": "いきづらい部！"
+      },
+      {
+        "id": "5ZNO72m9XnWSSYJhs39UqH",
+        "name": "五桐 玲(CV.宮野 芹)"
+      },
+      {
+        "id": "38Or34ir6Y9cEurB8cgslf",
+        "name": "佐々木翔音(CV.涼ノ瀬葵音)"
+      },
+      {
+        "id": "45tKZM0ph5gBRepattc5Py",
+        "name": "山田真緑(CV.小戸森穂花)"
+      },
+      {
+        "id": "0NsyBDykK4KSjRDSqP0lmm",
+        "name": "春宮ゆくり(CV.奥村優季)"
+      },
+      {
+        "id": "64ZTXBvT5q2zSQmngm8f7H",
+        "name": "此花輝夜(CV.天沢朱音)"
+      },
+      {
+        "id": "3gOUPyfEbd1UbrCs2S9ABJ",
+        "name": "調布のりこ(CV.瀬古梨愛)"
+      },
+      {
+        "id": "79K96JwieXysnBQVvArl9j",
+        "name": "金澤奇跡(CV.坂野愛羽)"
+      },
+      {
+        "id": "6hUH7KF2GYhDXmOGQluTyu",
+        "name": "駒形花火(CV.藤野こころ)"
+      },
+      {
+        "id": "08PCKhhl0iReX8TxcW8YSF",
+        "name": "高橋ポルカ(CV.綾咲穂音)"
+      },
+      {
+        "id": "47SrrOkRakk7ldTmMcgs6A",
+        "name": "麻布麻衣(CV.遠藤璃菜)"
+      }
+    ],
+    "liella": [
+      {
+        "id": "1JBkCsDnxOuf9JoSvQzdFr",
+        "name": "5yncri5e!"
+      },
+      {
+        "id": "4Zag9sKG5VwFWdaFaId6RH",
+        "name": "CatChu!"
+      },
+      {
+        "id": "0NLFvASWkbSlxcCy5c4Gef",
+        "name": "KALEIDOSCORE"
+      },
+      {
+        "id": "2U3Vgx19saFDI9ZH4KzEIn",
+        "name": "Liella!"
+      },
+      {
+        "id": "6gzqTpINFSvlPC1C5VYW8a",
+        "name": "Sunny Passion"
+      },
+      {
+        "id": "5ox19lYzPV4s1N3mTkNLRI",
+        "name": "唐 可可 (CV.Liyuu)"
+      },
+      {
+        "id": "44iPyW0GCQm1Qk5e5UPT8H",
+        "name": "嵐 千砂都 (CV.岬 なこ)"
+      },
+      {
+        "id": "4Du7haj4stBA22g5jfb9Mp",
+        "name": "平安名すみれ (CV.ペイトン尚未)"
+      },
+      {
+        "id": "2KO3nQQqN4LJAKQebedEHF",
+        "name": "澁谷かのん (CV.伊達さゆり)"
+      },
+      {
+        "id": "7kcbAeii9YxDGxRqBFIyrU",
+        "name": "米女メイ (CV.薮島朱音)"
+      },
+      {
+        "id": "5dQJ5gnjrA2MQEmPRzvt4O",
+        "name": "若菜四季 (CV.大熊和奏)"
+      }
+    ],
+    "muse": [
+      {
+        "id": "1JBkCsDnxOuf9JoSvQzdFr",
+        "name": "5yncri5e!"
+      },
+      {
+        "id": "18QWe6vnAE1n1FnO0wAfPN",
+        "name": "AZALEA"
+      },
+      {
+        "id": "5cW1SVDUXXzsj3eFT7Gmta",
+        "name": "AiScReam"
+      },
+      {
+        "id": "6zxQda06WxXX8GmCeYstwV",
+        "name": "Aqours"
+      },
+      {
+        "id": "2Y3ofvZHDfYYsmOHdpPy2D",
+        "name": "BiBi"
+      },
+      {
+        "id": "45hvLVhSaKsJ4YifJ69A3Z",
+        "name": "CYaRon!"
+      },
+      {
+        "id": "4Zag9sKG5VwFWdaFaId6RH",
+        "name": "CatChu!"
+      },
+      {
+        "id": "6M4HRvHCFBOWlPW3Tn2Oqh",
+        "name": "DOLLCHESTRA"
+      },
+      {
+        "id": "1OmA8j6y4aXQt03qMw5bU1",
+        "name": "Edel Note"
+      },
+      {
+        "id": "7gKNDpetmXrzHZuLdo9tv8",
+        "name": "Guilty Kiss"
+      },
+      {
+        "id": "0NLFvASWkbSlxcCy5c4Gef",
+        "name": "KALEIDOSCORE"
+      },
+      {
+        "id": "2U3Vgx19saFDI9ZH4KzEIn",
+        "name": "Liella!"
+      },
+      {
+        "id": "5UDdlpW0SOJwKm8ZkSbO30",
+        "name": "Printemps"
+      },
+      {
+        "id": "5bAFl5UIKoCUr4A6090lR7",
+        "name": "Saint Snow"
+      },
+      {
+        "id": "0AVxxoSuVTDb0JamZGKmmA",
+        "name": "lily white"
+      },
+      {
+        "id": "2hYjPkmTry3LYVVSymws5i",
+        "name": "μ's"
+      },
+      {
+        "id": "1zJfgB2BeMgTB3pXkgrg3P",
+        "name": "いきづらい部！"
+      },
+      {
+        "id": "1eULohfro8zQxcXYD1P0dn",
+        "name": "にこりんぱな"
+      },
+      {
+        "id": "3he8Hc0WxcVbpLzFpRsnO4",
+        "name": "みらくらぱーく!"
+      },
+      {
+        "id": "0Xg4AR4jmE3OHO6MZ2jl8A",
+        "name": "わいわいわい"
+      },
+      {
+        "id": "23JZudIPdcNEhcV5DfDq5M",
+        "name": "エマ・ヴェルデ (CV.指出毬亜)"
+      },
+      {
+        "id": "6L7wKf6aQv6A3OpiuMITqM",
+        "name": "スリーズブーケ"
+      },
+      {
+        "id": "54hnRUYsDChS7pkIRHiz5P",
+        "name": "ミア・テイラー (CV.内田 秀)"
+      },
+      {
+        "id": "2wFPTxM1Xl1f5vUk1jPY3d",
+        "name": "三船栞子 (CV.小泉萌香)"
+      },
+      {
+        "id": "7it8CXxJEe5Rn1fSl34ugQ",
+        "name": "上原歩夢 (CV.大西亜玖璃)"
+      },
+      {
+        "id": "690QfHJEGFsAryHLPVvzqA",
+        "name": "中須かすみ (CV.相良茉優)"
+      },
+      {
+        "id": "4CS5ASqHbFf9YKjlkkd2cN",
+        "name": "優木せつ菜 (CV.楠木ともり)"
+      },
+      {
+        "id": "5U1wsAeKs4ejx9bODf03bP",
+        "name": "南ことり(CV.内田 彩)"
+      },
+      {
+        "id": "5ox19lYzPV4s1N3mTkNLRI",
+        "name": "唐 可可 (CV.Liyuu)"
+      },
+      {
+        "id": "13zuD1JY2mY2kwG3dOS8an",
+        "name": "国木田花丸 (CV.高槻かなこ)"
+      },
+      {
+        "id": "6U3OZAgzVyqqqz87z6mse7",
+        "name": "園田海未(CV.三森すずこ)"
+      },
+      {
+        "id": "1bNt2NaGReLx58RaBpKuk3",
+        "name": "天王寺璃奈 (CV.田中ちえ美)"
+      },
+      {
+        "id": "19W707ZUq5jEr0NBWCaS01",
+        "name": "宮下 愛 (CV.村上奈津実)"
+      },
+      {
+        "id": "6We4PVyGfi2oIlHcgflq37",
+        "name": "小泉花陽(CV.久保ユリカ)"
+      },
+      {
+        "id": "3K0kUxY4moTB2FF7nYLgzs",
+        "name": "日野下花帆 (CV.楡井希実)"
+      },
+      {
+        "id": "44ZushLyBzgM6VYvKCtImT",
+        "name": "早乙女リリエル (CV.矢澤にこ (徳井青空))"
+      },
+      {
+        "id": "4b6jkWw5kLuJxprojaCVZ2",
+        "name": "星空 凛(CV.飯田里穂)"
+      },
+      {
+        "id": "6mGi9UIrYgzUrcrgBGQFku",
+        "name": "朝香果林 (CV.久保田未夢)"
+      },
+      {
+        "id": "1kDI9Vw9HNqN3FJrmaPATi",
+        "name": "東條 希(CV.楠田亜衣奈)"
+      },
+      {
+        "id": "4uulFCT9od8tb8aqahRFqB",
+        "name": "東條ネルエル (CV.小泉花陽 (久保ユリカ))"
+      },
+      {
+        "id": "0yF5feBSqKd4frxmdkft3O",
+        "name": "桜内梨子 (CV.逢田梨香子)"
+      },
+      {
+        "id": "6csqZOVRUvmw9RnBjb0daq",
+        "name": "桜坂しずく (CV.前田佳織里)"
+      },
+      {
+        "id": "4e6MC71bwNfP6rnStiWyVY",
+        "name": "津島善子 (CV.小林愛香)"
+      },
+      {
+        "id": "0tfFouX7e1G86zdxkzBlRB",
+        "name": "渡辺 曜 (CV.斉藤朱夏)"
+      },
+      {
+        "id": "2KO3nQQqN4LJAKQebedEHF",
+        "name": "澁谷かのん (CV.伊達さゆり)"
+      },
+      {
+        "id": "2mzyWxVSHdO4FFZn1M65FZ",
+        "name": "白鳥ラナエル (CV.絢瀬絵里 (南條愛乃))"
+      },
+      {
+        "id": "5e2X4ZRuYcn8kKv8elrRgb",
+        "name": "矢澤にこ(CV.徳井青空)"
+      },
+      {
+        "id": "2gOiq4GsmhSOyDfLRSgLqO",
+        "name": "竜崎クロウエル (CV.高坂穂乃果 (新田恵海))"
+      },
+      {
+        "id": "1hH0U0CBUFUvzCw8xTJu1R",
+        "name": "絢瀬絵里(CV.南條愛乃)"
+      },
+      {
+        "id": "6d666l7WrxUdJ9yYu7JPz2",
+        "name": "綾小路シェリエル (CV.東條 希 (楠田亜衣奈))"
+      },
+      {
+        "id": "1bY7QMGccPmba1f1frZ8Xb",
+        "name": "蓮ノ空女学院スクールアイドルクラブ"
+      },
+      {
+        "id": "6xWuh7ypIYMh9BhqfHtQN1",
+        "name": "虹ヶ咲学園スクールアイドル同好会"
+      },
+      {
+        "id": "2OU9W3Nbb1UaIr9SmZuLdK",
+        "name": "西木野真姫(CV.Pile)"
+      },
+      {
+        "id": "2SX8w3DHQPTBtQPMnFw0QI",
+        "name": "近江彼方 (CV.鬼頭明里)"
+      },
+      {
+        "id": "1btXM114txUV2HtiylRvoK",
+        "name": "鐘 嵐珠 (CV.法元明菜)"
+      },
+      {
+        "id": "4BZs8fDixaE49bgj2xMjPr",
+        "name": "高坂穂乃果(CV.新田恵海)"
+      },
+      {
+        "id": "6plej5RLgqzBFny1o6uODr",
+        "name": "高海千歌 (CV.伊波杏樹)"
+      },
+      {
+        "id": "3eMNL0H3RQlfNX3dadmmAO",
+        "name": "黒澤ルビィ (CV.降幡 愛)"
+      }
+    ],
+    "nijigasaki": [
+      {
+        "id": "6J6RrsIzXnWKqcFu7ri9Pd",
+        "name": "A・ZU・NA"
+      },
+      {
+        "id": "0PyKHNnxTNPQDA4Ow7jRnd",
+        "name": "DiverDiva"
+      },
+      {
+        "id": "2glYsWdZ2iBS2IhjopVcBK",
+        "name": "QU4RTZ"
+      },
+      {
+        "id": "2xg4mnz8QOKejta6NzNCeG",
+        "name": "R3BIRTH"
+      },
+      {
+        "id": "23JZudIPdcNEhcV5DfDq5M",
+        "name": "エマ・ヴェルデ (CV.指出毬亜)"
+      },
+      {
+        "id": "54hnRUYsDChS7pkIRHiz5P",
+        "name": "ミア・テイラー (CV.内田 秀)"
+      },
+      {
+        "id": "2wFPTxM1Xl1f5vUk1jPY3d",
+        "name": "三船栞子 (CV.小泉萌香)"
+      },
+      {
+        "id": "7it8CXxJEe5Rn1fSl34ugQ",
+        "name": "上原歩夢 (CV.大西亜玖璃)"
+      },
+      {
+        "id": "690QfHJEGFsAryHLPVvzqA",
+        "name": "中須かすみ (CV.相良茉優)"
+      },
+      {
+        "id": "4CS5ASqHbFf9YKjlkkd2cN",
+        "name": "優木せつ菜 (CV.楠木ともり)"
+      },
+      {
+        "id": "1bNt2NaGReLx58RaBpKuk3",
+        "name": "天王寺璃奈 (CV.田中ちえ美)"
+      },
+      {
+        "id": "19W707ZUq5jEr0NBWCaS01",
+        "name": "宮下 愛 (CV.村上奈津実)"
+      },
+      {
+        "id": "6mGi9UIrYgzUrcrgBGQFku",
+        "name": "朝香果林 (CV.久保田未夢)"
+      },
+      {
+        "id": "6csqZOVRUvmw9RnBjb0daq",
+        "name": "桜坂しずく (CV.前田佳織里)"
+      },
+      {
+        "id": "6xWuh7ypIYMh9BhqfHtQN1",
+        "name": "虹ヶ咲学園スクールアイドル同好会"
+      },
+      {
+        "id": "2SX8w3DHQPTBtQPMnFw0QI",
+        "name": "近江彼方 (CV.鬼頭明里)"
+      },
+      {
+        "id": "1btXM114txUV2HtiylRvoK",
+        "name": "鐘 嵐珠 (CV.法元明菜)"
+      }
+    ],
+    "school-idol-musical": [
+      {
+        "id": "6imsymLKQPmMWeEwrw3i55",
+        "name": "スクールアイドルミュージカル"
+      }
+    ],
+    "yohane": [
+      {
+        "id": "6zxQda06WxXX8GmCeYstwV",
+        "name": "Aqours"
+      }
+    ]
+  }
+}

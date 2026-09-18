@@ -48,7 +48,7 @@
    */
 
   const state = {
-    database: { schemaVersion: "0.3", events: [], studyPlaylists: {} },
+    database: { schemaVersion: "0.3", events: [], studyPlaylists: {}, seriesArtists: {} },
     selectedEventId: null,
     expandedEventSeries: new Set(),
     showNumberedOnly: false,
@@ -75,6 +75,8 @@
     githubPublishing: false,
     dirty: false
   };
+
+  let seriesArtistsWriteTimer = null;
 
   const $ = (selector) => document.querySelector(selector);
   const elements = {
@@ -425,21 +427,93 @@
     return event;
   }
 
+  function normalizeSeriesArtists(value) {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+    return Object.fromEntries(Object.entries(value).flatMap(([series, artists]) => {
+      if (!series || !Array.isArray(artists)) return [];
+      const seen = new Set();
+      const normalized = artists.flatMap((artist) => {
+        const id = String(artist?.id || "").trim();
+        const name = String(artist?.name || "").trim();
+        if (!id || !name || seen.has(id)) return [];
+        seen.add(id);
+        return [{ id, name }];
+      });
+      return [[series, normalized]];
+    }));
+  }
+
+  function seriesArtistsFromStudyPlaylists(studyPlaylists) {
+    return normalizeSeriesArtists(Object.fromEntries(
+      Object.entries(studyPlaylists || {}).map(([series, playlist]) => [
+        series,
+        playlist?.artists || []
+      ])
+    ));
+  }
+
+  async function loadPublishedSeriesArtists() {
+    try {
+      const response = await fetch("/data/series-artists.json", { cache: "no-store" });
+      if (!response.ok) return {};
+      const document = await response.json();
+      return normalizeSeriesArtists(document?.seriesArtists);
+    } catch (_error) {
+      return {};
+    }
+  }
+
+  async function writeSeriesArtistsToLocalFile() {
+    try {
+      const response = await fetch("/api/series-artists", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          seriesArtists: state.database.seriesArtists || {}
+        })
+      });
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body.error || "アーティスト許可リストをJSONへ保存できませんでした。");
+      }
+    } catch (error) {
+      console.warn(error.message);
+    }
+  }
+
+  function scheduleSeriesArtistsWrite() {
+    if (seriesArtistsWriteTimer) clearTimeout(seriesArtistsWriteTimer);
+    seriesArtistsWriteTimer = setTimeout(() => {
+      seriesArtistsWriteTimer = null;
+      writeSeriesArtistsToLocalFile();
+    }, 250);
+  }
+
   async function load() {
+    const publishedSeriesArtists = await loadPublishedSeriesArtists();
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
+        const studyPlaylists = parsed.studyPlaylists && typeof parsed.studyPlaylists === "object"
+          ? parsed.studyPlaylists
+          : {};
         state.database = {
           schemaVersion: "0.3",
           events: (parsed.events || []).map(normalizeEvent),
-          studyPlaylists: parsed.studyPlaylists && typeof parsed.studyPlaylists === "object"
-            ? parsed.studyPlaylists
-            : {}
+          studyPlaylists,
+          seriesArtists: {
+            ...seriesArtistsFromStudyPlaylists(studyPlaylists),
+            ...publishedSeriesArtists,
+            ...normalizeSeriesArtists(parsed.seriesArtists)
+          }
         };
       } catch (error) {
         console.error("Saved data is invalid", error);
+        state.database.seriesArtists = publishedSeriesArtists;
       }
+    } else {
+      state.database.seriesArtists = publishedSeriesArtists;
     }
 
     const preferred = localStorage.getItem(SELECTED_KEY);
@@ -450,6 +524,7 @@
 
     render();
     setSaveState("saved");
+    scheduleSeriesArtistsWrite();
   }
 
   function persist() {
@@ -1635,6 +1710,13 @@
     return state.database.studyPlaylists?.[series] || null;
   }
 
+  function seriesArtistSelection(series = elements.studyPlaylistSeries.value) {
+    const selections = state.database.seriesArtists || {};
+    return Object.prototype.hasOwnProperty.call(selections, series)
+      ? selections[series]
+      : null;
+  }
+
   function cutoffLabel(cutoff) {
     if (!cutoff) return "終了済みのナンバリング公演がありません";
     const performanceLabel = String(cutoff.performance?.label || "").trim();
@@ -1661,6 +1743,7 @@
       checkbox.checked = candidate.selected !== false;
       checkbox.addEventListener("change", () => {
         candidate.selected = checkbox.checked;
+        saveSeriesArtistSelection();
         elements.refreshStudyPlaylistButton.disabled =
           !selectedStudyArtists().length || !window.SpotifyClient.isConnected();
       });
@@ -1683,21 +1766,34 @@
       .map(({ id, name }) => ({ id, name }));
   }
 
+  function saveSeriesArtistSelection(series = elements.studyPlaylistSeries.value) {
+    if (!series) return;
+    state.database.seriesArtists ||= {};
+    state.database.seriesArtists[series] = selectedStudyArtists();
+    setDirty();
+    persist();
+    scheduleSeriesArtistsWrite();
+    updateGitHubPublishUi();
+  }
+
   function showStudyPlaylistSeries() {
     hideValidation(elements.studyPlaylistErrors);
     const series = elements.studyPlaylistSeries.value;
     const cutoff = latestNumberedPerformance(series);
     const saved = studyPlaylistConfig(series);
+    const selectedArtists = seriesArtistSelection(series) || saved?.artists || [];
     elements.studyPlaylistCutoff.textContent = cutoffLabel(cutoff);
-    state.studyArtistCandidates = (saved?.artists || []).map((artist) => ({
+    state.studyArtistCandidates = selectedArtists.map((artist) => ({
       id: artist.id,
       name: artist.name,
       trackCount: 0,
       selected: true
     }));
     elements.studyPlaylistSummary.textContent = saved
-      ? `保存済み: ${saved.artists.length}組 / 新曲 ${saved.tracks.length}曲 / ${saved.updatedAt?.slice(0, 10) || "更新日不明"}`
-      : "このシリーズの予習プレイリストはまだ設定されていません。";
+      ? `許可リスト ${selectedArtists.length}組 / 新曲 ${saved.tracks.length}曲 / ${saved.updatedAt?.slice(0, 10) || "更新日不明"}`
+      : selectedArtists.length
+        ? `許可リストに${selectedArtists.length}組を保存しています。候補を再取得して確認できます。`
+        : "このシリーズのアーティスト許可リストはまだ設定されていません。";
     renderStudyArtistCandidates();
     elements.scanStudyArtistsButton.disabled = !series || !window.SpotifyClient.isConnected();
     elements.refreshStudyPlaylistButton.disabled =
@@ -1734,7 +1830,7 @@
       });
     });
     const savedIds = new Set((savedArtists || []).map((artist) => artist.id));
-    const hasSavedSelection = savedIds.size > 0;
+    const hasSavedSelection = Array.isArray(savedArtists);
     return [...counts.values()]
       .map((candidate) => ({
         ...candidate,
@@ -1762,12 +1858,11 @@
         elements.studyPlaylistSummary.textContent =
           `${trackIds.length}曲からアーティスト候補を確認しています… ${completed}/${total}`;
       });
-      state.studyArtistCandidates = artistCandidatesFromTracks(
-        tracks,
-        studyPlaylistConfig(series)?.artists
-      );
+      const savedArtists = seriesArtistSelection(series) ?? studyPlaylistConfig(series)?.artists;
+      state.studyArtistCandidates = artistCandidatesFromTracks(tracks, savedArtists);
+      saveSeriesArtistSelection(series);
       elements.studyPlaylistSummary.textContent =
-        `${state.studyArtistCandidates.length}組を検出しました。対象外のアーティストはチェックを外してください。`;
+        `${state.studyArtistCandidates.length}組を検出しました。チェック済みのアーティストだけを新曲取得に使用します。`;
       renderStudyArtistCandidates();
     } catch (error) {
       showValidation(elements.studyPlaylistErrors, [error.message]);
@@ -3298,7 +3393,8 @@
       body: JSON.stringify({
         publishToken,
         events: deepClone(events),
-        studyPlaylists: deepClone(state.database.studyPlaylists || {})
+        studyPlaylists: deepClone(state.database.studyPlaylists || {}),
+        seriesArtists: deepClone(state.database.seriesArtists || {})
       })
     });
     const contentType = response.headers.get("Content-Type") || "";
@@ -3393,6 +3489,12 @@
       state.database.studyPlaylists = {
         ...(state.database.studyPlaylists || {}),
         ...raw.studyPlaylists
+      };
+    }
+    if (raw.seriesArtists && typeof raw.seriesArtists === "object" && !Array.isArray(raw.seriesArtists)) {
+      state.database.seriesArtists = {
+        ...(state.database.seriesArtists || {}),
+        ...normalizeSeriesArtists(raw.seriesArtists)
       };
     }
     if (

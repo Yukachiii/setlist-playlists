@@ -45,6 +45,7 @@ class EventsWriteResult(TypedDict):
     changedFilenames: list[str]
     manifestChanged: bool
     studyPlaylistsChanged: bool
+    seriesArtistsChanged: bool
 
 
 GRAPHQL_URL = "https://ll-fans.jp/api/graphql"
@@ -723,6 +724,27 @@ def validate_study_playlists(value: Any) -> dict[str, JsonObject]:
     }
 
 
+def validate_series_artists(value: Any) -> dict[str, list[JsonObject]]:
+    if value is None:
+        return {}
+    if not isinstance(value, dict):
+        raise PublishErrorResponse("シリーズ別アーティスト設定が不正です。")
+    normalized: dict[str, list[JsonObject]] = {}
+    for series, artists in value.items():
+        series_id = str(series)
+        if not PUBLISH_EVENT_ID.fullmatch(series_id) or not isinstance(artists, list):
+            raise PublishErrorResponse("シリーズ別アーティスト設定が不正です。")
+        unique_artists: dict[str, JsonObject] = {}
+        for artist in artists:
+            validated = validate_study_artist(artist)
+            unique_artists[validated["id"]] = validated
+        normalized[series_id] = sorted(
+            unique_artists.values(),
+            key=lambda artist: str(artist["name"]),
+        )
+    return normalized
+
+
 def write_study_playlists_to_public_data(
     study_playlists: Any, project_directory: Path = PROJECT_DIRECTORY
 ) -> bool:
@@ -737,10 +759,25 @@ def write_study_playlists_to_public_data(
     )
 
 
+def write_series_artists_to_public_data(
+    series_artists: Any, project_directory: Path = PROJECT_DIRECTORY
+) -> bool:
+    normalized = validate_series_artists(series_artists)
+    document = {
+        "schemaVersion": "0.1",
+        "seriesArtists": dict(sorted(normalized.items())),
+    }
+    return write_json_if_changed(
+        project_directory / "data" / "series-artists.json",
+        document,
+    )
+
+
 def write_events_to_public_data(
     events: Any,
     project_directory: Path = PROJECT_DIRECTORY,
     study_playlists: Any = None,
+    series_artists: Any = None,
 ) -> EventsWriteResult:
     normalized = validate_publish_events(events)
     results = [
@@ -760,6 +797,11 @@ def write_events_to_public_data(
         "studyPlaylistsChanged": (
             write_study_playlists_to_public_data(study_playlists, project_directory)
             if study_playlists is not None
+            else False
+        ),
+        "seriesArtistsChanged": (
+            write_series_artists_to_public_data(series_artists, project_directory)
+            if series_artists is not None
             else False
         ),
     }
@@ -948,6 +990,7 @@ def publish_events_to_github(
     events: Any,
     project_directory: Path = PROJECT_DIRECTORY,
     study_playlists: Any = None,
+    series_artists: Any = None,
 ) -> dict[str, Any]:
     normalized_events = validate_publish_events(events)
     status = require_git_publish_ready(project_directory)
@@ -956,6 +999,7 @@ def publish_events_to_github(
             normalized_events,
             project_directory,
             study_playlists,
+            series_artists,
         )
         committed = commit_publish_changes(normalized_events, project_directory)
         has_upstream = rebase_from_upstream(project_directory)
@@ -1025,7 +1069,7 @@ class AdminHandler(SimpleHTTPRequestHandler):
 
     def do_POST(self) -> None:
         parsed = urllib.parse.urlparse(self.path)
-        if parsed.path != "/api/github-publish":
+        if parsed.path not in {"/api/github-publish", "/api/series-artists"}:
             self.send_json({"error": "APIが見つかりません。"}, status=404)
             return
         if not self.is_local_request():
@@ -1045,6 +1089,16 @@ class AdminHandler(SimpleHTTPRequestHandler):
 
         try:
             body = json.loads(self.rfile.read(content_length).decode("utf-8"))
+            if parsed.path == "/api/series-artists":
+                if not isinstance(body, dict):
+                    raise PublishErrorResponse("アーティスト許可リストが不正です。")
+                with PUBLISH_LOCK:
+                    changed = write_series_artists_to_public_data(
+                        body.get("seriesArtists"), PROJECT_DIRECTORY
+                    )
+                self.send_json({"changed": changed})
+                return
+
             token = str(body.get("publishToken") or "") if isinstance(body, dict) else ""
             if not hmac.compare_digest(token, PUBLISH_TOKEN):
                 self.send_json({"error": "公開操作の認証に失敗しました。画面を再読み込みしてください。"}, status=403)
@@ -1056,6 +1110,7 @@ class AdminHandler(SimpleHTTPRequestHandler):
                 events,
                 PROJECT_DIRECTORY,
                 body.get("studyPlaylists"),
+                body.get("seriesArtists"),
             )
             self.send_json(result)
         except (UnicodeDecodeError, json.JSONDecodeError):

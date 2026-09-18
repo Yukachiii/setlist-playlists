@@ -313,6 +313,37 @@ test("廃止されたSpotifyの複数曲一括取得を使わず1曲ずつ取得
   }
 });
 
+test("Spotify作品一覧は各APIの現在のlimit上限で取得する", async () => {
+  const originalWindow = global.window;
+  const originalFetch = global.fetch;
+  const storage = memoryStorage();
+  const requestedUrls = [];
+  storage.setItem(
+    "setlist_spotify_auth_v01",
+    JSON.stringify({ accessToken: "test-token", expiresAt: Date.now() + 60000 })
+  );
+  global.window = { localStorage: storage, sessionStorage: memoryStorage() };
+  global.fetch = async (url) => {
+    requestedUrls.push(String(url));
+    return {
+      ok: true,
+      status: 200,
+      json: async () => ({ items: [], next: null })
+    };
+  };
+
+  try {
+    await spotify.getArtistAlbums("artist-id");
+    await spotify.getAlbumTracks("album-id");
+    assert.equal(new URL(requestedUrls[0]).searchParams.get("limit"), "10");
+    assert.equal(new URL(requestedUrls[1]).searchParams.get("limit"), "50");
+  } finally {
+    if (originalWindow === undefined) delete global.window;
+    else global.window = originalWindow;
+    global.fetch = originalFetch;
+  }
+});
+
 test("同じ音源は最初の配信日を採用してアルバム再収録を新曲扱いしない", () => {
   const details = [
     track("single", "New Song", "Artist", { isrc: "JP-AAA-26-00001" }),

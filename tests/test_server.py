@@ -14,6 +14,7 @@ from server import (
     publish_event_to_github,
     publish_events_to_github,
     validate_publish_event,
+    validate_series_artists,
     validate_study_playlists,
     write_event_to_public_data,
     write_events_to_public_data,
@@ -234,6 +235,34 @@ class ServerImportTests(unittest.TestCase):
             )
             self.assertEqual(document["playlists"][0]["series"], "hasunosora")
             self.assertEqual(document["playlists"][0]["tracks"][0]["title"], "New Song")
+
+    def test_series_artists_are_validated_and_written_as_allowlist(self):
+        events = [{
+            "schemaVersion": "0.3",
+            "id": "ikizulive-live",
+            "title": "Ikizulive Live",
+            "series": ["ikizulive"],
+            "performances": [],
+        }]
+        series_artists = {
+            "ikizulive": [
+                {"id": "1234567890123456789012", "name": "いきづらい部！"},
+                {"id": "1234567890123456789012", "name": "重複"},
+            ]
+        }
+        normalized = validate_series_artists(series_artists)
+        self.assertEqual(len(normalized["ikizulive"]), 1)
+        with TemporaryDirectory() as directory:
+            project = Path(directory)
+            result = write_events_to_public_data(events, project, None, series_artists)
+            self.assertTrue(result["seriesArtistsChanged"])
+            document = json.loads(
+                (project / "data" / "series-artists.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(
+                document["seriesArtists"]["ikizulive"][0]["id"],
+                "1234567890123456789012",
+            )
 
     def test_flat_event_file_is_migrated_when_published(self):
         event = {

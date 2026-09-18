@@ -93,6 +93,11 @@ test("ナンバリング公演以降の新曲をSpotifyから取得して公開�
   assert.match(app, /event\.isNumberedLive !== true/);
   assert.match(app, /SpotifyClient\.discoverNewReleases/);
   assert.match(app, /studyPlaylists: deepClone\(state\.database\.studyPlaylists/);
+  assert.match(app, /seriesArtists: deepClone\(state\.database\.seriesArtists/);
+  assert.match(app, /fetch\("\/data\/series-artists\.json"/);
+  assert.match(app, /fetch\("\/api\/series-artists"/);
+  assert.match(app, /function saveSeriesArtistSelection\(series/);
+  assert.match(app, /saveSeriesArtistSelection\(\);/);
 });
 
 test("会場は任意入力で、空欄ならハイフンを保存する", () => {

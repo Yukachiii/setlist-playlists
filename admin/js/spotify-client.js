@@ -429,11 +429,11 @@
       include_groups: "album,single,appears_on",
       market: "JP"
     });
-    return pagedSpotifyItems(`/artists/${encodeURIComponent(artistId)}/albums?${params}`);
+    return pagedSpotifyItems(`/artists/${encodeURIComponent(artistId)}/albums?${params}`, 10);
   }
 
   function getAlbumTracks(albumId) {
-    return pagedSpotifyItems(`/albums/${encodeURIComponent(albumId)}/tracks?market=JP`);
+    return pagedSpotifyItems(`/albums/${encodeURIComponent(albumId)}/tracks?market=JP`, 50);
   }
 
   function artistAppearsOnTrack(track, artistIds) {
