@@ -313,6 +313,76 @@ test("廃止されたSpotifyの複数曲一括取得を使わず1曲ずつ取得
   }
 });
 
+test("取得途中のSpotify曲を保存し、再読み込み後は未取得分だけ再開する", async () => {
+  const originalWindow = global.window;
+  const originalFetch = global.fetch;
+  const modulePath = require.resolve("../admin/js/spotify-client.js");
+  const storage = memoryStorage();
+  storage.setItem(
+    "setlist_spotify_auth_v01",
+    JSON.stringify({ accessToken: "test-token", expiresAt: Date.now() + 60000 })
+  );
+  global.window = { localStorage: storage, sessionStorage: memoryStorage() };
+  const firstRequests = [];
+  global.fetch = async (url) => {
+    const id = new URL(String(url)).pathname.split("/").at(-1);
+    firstRequests.push(id);
+    if (id === "resume-c") {
+      return {
+        ok: false,
+        status: 429,
+        headers: { get: () => "30" },
+        json: async () => ({})
+      };
+    }
+    return {
+      ok: true,
+      status: 200,
+      headers: { get: () => null },
+      json: async () => track(id, `曲${id}`, "Artist")
+    };
+  };
+
+  try {
+    delete require.cache[modulePath];
+    const firstClient = require(modulePath);
+    await assert.rejects(
+      firstClient.getTracks(["resume-a", "resume-b", "resume-c"]),
+      /検索回数制限/
+    );
+    assert.deepEqual(firstRequests.sort(), ["resume-a", "resume-b", "resume-c"]);
+    assert.ok(storage.getItem("setlist_spotify_track_cache_v01"));
+
+    const resumedRequests = [];
+    global.fetch = async (url) => {
+      const id = new URL(String(url)).pathname.split("/").at(-1);
+      resumedRequests.push(id);
+      return {
+        ok: true,
+        status: 200,
+        headers: { get: () => null },
+        json: async () => track(id, `曲${id}`, "Artist")
+      };
+    };
+    delete require.cache[modulePath];
+    const resumedClient = require(modulePath);
+    const progress = [];
+    const tracks = await resumedClient.getTracks(
+      ["resume-a", "resume-b", "resume-c"],
+      (_completed, _total, detail) => progress.push(detail)
+    );
+
+    assert.deepEqual(resumedRequests, ["resume-c"]);
+    assert.deepEqual(tracks.map((item) => item.id), ["resume-a", "resume-b", "resume-c"]);
+    assert.deepEqual(progress[0], { cached: 2, fetched: 0, fetchTotal: 1 });
+  } finally {
+    delete require.cache[modulePath];
+    if (originalWindow === undefined) delete global.window;
+    else global.window = originalWindow;
+    global.fetch = originalFetch;
+  }
+});
+
 test("Spotify作品一覧は各APIの現在のlimit上限で取得する", async () => {
   const originalWindow = global.window;
   const originalFetch = global.fetch;

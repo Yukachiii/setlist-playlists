@@ -12,7 +12,10 @@
   const SCOPES = "user-read-private";
   const AUTH_STORAGE_KEY = "setlist_spotify_auth_v01";
   const PKCE_STORAGE_KEY = "setlist_spotify_pkce_v01";
+  const TRACK_CACHE_STORAGE_KEY = "setlist_spotify_track_cache_v01";
+  const TRACK_CACHE_LIMIT = 3000;
   const trackCache = new Map();
+  let trackCacheLoaded = false;
 
   /**
    * @typedef {object} TrackSearchRequest
@@ -38,6 +41,64 @@
   function authStorage() {
     const appWindow = browserWindow();
     return appWindow.localStorage || appWindow.sessionStorage;
+  }
+
+  function compactTrack(track) {
+    if (!track?.id) return null;
+    const artworkUrl = track.album?.images?.find((image) => image?.url)?.url || "";
+    return {
+      id: String(track.id),
+      uri: String(track.uri || `spotify:track:${track.id}`),
+      name: String(track.name || ""),
+      artists: (track.artists || []).flatMap((artist) => (
+        artist?.name
+          ? [{ id: String(artist.id || ""), name: String(artist.name) }]
+          : []
+      )),
+      album: {
+        name: String(track.album?.name || ""),
+        images: artworkUrl ? [{ url: artworkUrl }] : []
+      },
+      external_ids: track.external_ids?.isrc
+        ? { isrc: String(track.external_ids.isrc) }
+        : {},
+      linked_from: track.linked_from?.id
+        ? { id: String(track.linked_from.id) }
+        : undefined,
+      is_playable: track.is_playable
+    };
+  }
+
+  function trimTrackCache() {
+    while (trackCache.size > TRACK_CACHE_LIMIT) {
+      trackCache.delete(trackCache.keys().next().value);
+    }
+  }
+
+  function loadTrackCache() {
+    if (trackCacheLoaded) return;
+    trackCacheLoaded = true;
+    if (typeof window === "undefined" || !window.localStorage) return;
+    const saved = readJson(window.localStorage, TRACK_CACHE_STORAGE_KEY);
+    if (!Array.isArray(saved?.tracks)) return;
+    saved.tracks.forEach((track) => {
+      const compact = compactTrack(track);
+      if (compact) trackCache.set(compact.id, compact);
+    });
+    trimTrackCache();
+  }
+
+  function persistTrackCache() {
+    if (typeof window === "undefined" || !window.localStorage) return;
+    trimTrackCache();
+    try {
+      window.localStorage.setItem(TRACK_CACHE_STORAGE_KEY, JSON.stringify({
+        version: 1,
+        tracks: [...trackCache.values()]
+      }));
+    } catch (error) {
+      console.warn("Spotify曲キャッシュを保存できませんでした。", error);
+    }
   }
 
   function redirectUri() {
@@ -377,40 +438,45 @@
     return `${match[1]}-${match[2] || "01"}-${match[3] || "01"}`;
   }
 
-  async function mapWithConcurrency(items, concurrency, mapper) {
-    const results = new Array(items.length);
-    let nextIndex = 0;
-
-    async function worker() {
-      while (nextIndex < items.length) {
-        const index = nextIndex;
-        nextIndex += 1;
-        results[index] = await mapper(items[index], index);
-      }
-    }
-
-    const workerCount = Math.min(Math.max(1, concurrency), items.length);
-    await Promise.all(Array.from({ length: workerCount }, worker));
-    return results;
-  }
-
   async function getTrack(trackId) {
+    loadTrackCache();
     if (trackCache.has(trackId)) return trackCache.get(trackId);
     const track = await apiFetch(`/tracks/${encodeURIComponent(trackId)}?market=JP`);
-    trackCache.set(trackId, track);
-    return track;
+    const compact = compactTrack(track);
+    if (compact) trackCache.set(trackId, compact);
+    return compact || track;
+  }
+
+  async function fetchTrackBatch(trackIds, onTrack) {
+    const settled = await Promise.allSettled(trackIds.map((trackId) => getTrack(trackId)));
+    settled.forEach((result) => {
+      if (result.status === "fulfilled") onTrack(result.value);
+    });
+    persistTrackCache();
+    const failure = settled.find((result) => result.status === "rejected");
+    if (failure) throw failure.reason;
   }
 
   async function getTracks(trackIds, onProgress) {
+    loadTrackCache();
     const uniqueIds = [...new Set((trackIds || []).map(String).filter(Boolean))];
-    let completed = 0;
-    const tracks = await mapWithConcurrency(uniqueIds, 5, async (trackId) => {
-      const track = await getTrack(trackId);
-      completed += 1;
-      onProgress?.(completed, uniqueIds.length);
-      return track;
+    const missingIds = uniqueIds.filter((trackId) => !trackCache.has(trackId));
+    const cached = uniqueIds.length - missingIds.length;
+    let fetched = 0;
+    const reportProgress = () => onProgress?.(cached + fetched, uniqueIds.length, {
+      cached,
+      fetched,
+      fetchTotal: missingIds.length
     });
-    return uniqueTracks(tracks);
+    reportProgress();
+    for (let index = 0; index < missingIds.length; index += 5) {
+      const batch = missingIds.slice(index, index + 5);
+      await fetchTrackBatch(batch, () => {
+        fetched += 1;
+        reportProgress();
+      });
+    }
+    return uniqueTracks(uniqueIds.map((trackId) => trackCache.get(trackId)).filter(Boolean));
   }
 
   async function pagedSpotifyItems(path, pageSize = 50) {
@@ -505,8 +571,10 @@
 
     const entries = await collectCatalogEntries(ids, onProgress);
     onProgress?.(`Spotify曲 ${new Set(entries.map((entry) => entry.trackId)).size}件を照合中…`);
-    const details = await getTracks(entries.map((entry) => entry.trackId), (completed, total) => {
-      onProgress?.(`Spotify曲 ${completed}/${total}件を照合中…`);
+    const details = await getTracks(entries.map((entry) => entry.trackId), (completed, total, progress) => {
+      onProgress?.(progress
+        ? `Spotify曲を照合中… 保存済み ${progress.cached}件 / 新規取得 ${progress.fetched}/${progress.fetchTotal}件`
+        : `Spotify曲 ${completed}/${total}件を照合中…`);
     });
     const today = new Date().toISOString().slice(0, 10);
     return earliestReleaseEntries(entries, details)

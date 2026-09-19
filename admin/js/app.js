@@ -1839,6 +1839,12 @@
       .sort((a, b) => b.trackCount - a.trackCount || a.name.localeCompare(b.name, "ja"));
   }
 
+  function studyArtistScanProgress(total, completed, progress) {
+    if (!progress) return `${total}曲からアーティスト候補を確認しています… ${completed}/${total}`;
+    return `${total}曲からアーティスト候補を確認しています… ` +
+      `保存済み ${progress.cached}曲 / 新規取得 ${progress.fetched}/${progress.fetchTotal}曲`;
+  }
+
   async function scanStudyArtists() {
     hideValidation(elements.studyPlaylistErrors);
     const series = elements.studyPlaylistSeries.value;
@@ -1854,9 +1860,8 @@
     elements.scanStudyArtistsButton.disabled = true;
     elements.studyPlaylistSummary.textContent = `${trackIds.length}曲からアーティスト候補を確認しています…`;
     try {
-      const tracks = await window.SpotifyClient.getTracks(trackIds, (completed, total) => {
-        elements.studyPlaylistSummary.textContent =
-          `${trackIds.length}曲からアーティスト候補を確認しています… ${completed}/${total}`;
+      const tracks = await window.SpotifyClient.getTracks(trackIds, (completed, total, progress) => {
+        elements.studyPlaylistSummary.textContent = studyArtistScanProgress(total, completed, progress);
       });
       const savedArtists = seriesArtistSelection(series) ?? studyPlaylistConfig(series)?.artists;
       state.studyArtistCandidates = artistCandidatesFromTracks(tracks, savedArtists);
