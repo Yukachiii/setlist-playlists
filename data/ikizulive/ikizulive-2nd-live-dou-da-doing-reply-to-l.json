@@ -700,6 +700,24 @@
         "playlistId": null,
         "url": null
       }
+    },
+    {
+      "id": "ikizulive-2nd-live-dou-da-doing-reply-to-l-tokyo-day-2",
+      "label": "Day.2",
+      "day": 2,
+      "session": null,
+      "date": "2026-09-20",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
     }
   ]
 }
