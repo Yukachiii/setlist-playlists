@@ -1,0 +1,705 @@
+{
+  "schemaVersion": "0.3",
+  "id": "ikizulive-2nd-live-dou-da-doing-reply-to-l",
+  "title": "いきづらい部！ 2nd LIVE Dou-Da? DOING! ～Reply to L～",
+  "series": [
+    "ikizulive"
+  ],
+  "isNumberedLive": true,
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/lovehigh/live/live_detail.php?_id=2ndLIVE",
+      "priority": "primary"
+    }
+  ],
+  "performances": [
+    {
+      "id": "ikizulive-2nd-live-dou-da-doing-reply-to-l-tokyo-day-1",
+      "label": "Day.1",
+      "day": 1,
+      "session": null,
+      "date": "2026-09-19",
+      "venue": {
+        "name": "京王アリーナTOKYO（旧：武蔵野の森総合スポーツプラザ）・メインアリーナ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dou-Da? DOING!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dou-da-doing__original",
+            "displayTitle": "Dou-Da? DOING!"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1N4CeCZaDj8EH1fh1DPrDt",
+            "uri": "spotify:track:1N4CeCZaDj8EH1fh1DPrDt",
+            "matchedTitle": "Dou-Da? DOING!",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d2a8fbcf42a3afc2851f1488",
+            "albumName": "Dou-Da? DOING!"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ジェットスターター",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1gacmbi__original",
+            "displayTitle": "ジェットスターター"
+          },
+          "artistHint": "いきづらい部！, 五桐 玲(CV.宮野 芹)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2W67dhlHgOXqhxWflSyIrc",
+            "uri": "spotify:track:2W67dhlHgOXqhxWflSyIrc",
+            "matchedTitle": "ジェットスターター",
+            "matchedArtist": "いきづらい部！, 五桐 玲(CV.宮野 芹)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738d1a5b02012a3a9976de8769",
+            "albumName": "いつか碧"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "LOVE♡YOU♡Save the EARTH!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "love-you-save-the-earth__original",
+            "displayTitle": "LOVE♡YOU♡Save the EARTH!!"
+          },
+          "artistHint": "いきづらい部！, 山田真緑(CV.小戸森穂花)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1FwzaKwLBZCfCamPM5GV4K",
+            "uri": "spotify:track:1FwzaKwLBZCfCamPM5GV4K",
+            "matchedTitle": "LOVE♡YOU♡Save the EARTH!!",
+            "matchedArtist": "いきづらい部！, 山田真緑(CV.小戸森穂花)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736ee3d59c63790af3473b45e9",
+            "albumName": "Little Green委員会"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "チュリ♡CHUちゅきらり♪",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "chu__original",
+            "displayTitle": "チュリ♡CHUちゅきらり♪"
+          },
+          "artistHint": "いきづらい部！, 駒形花火(CV.藤野こころ), 山田真緑(CV.小戸森穂花)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0QvWjjgZXGIYEoQ6Hnmtq7",
+            "uri": "spotify:track:0QvWjjgZXGIYEoQ6Hnmtq7",
+            "matchedTitle": "チュリ♡CHUちゅきらり♪",
+            "matchedArtist": "いきづらい部！, 駒形花火(CV.藤野こころ), 山田真緑(CV.小戸森穂花)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b9b02de181582839da52ff6c",
+            "albumName": "チュリ♡CHUちゅきらり♪"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "POP LOVE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pop-love__original",
+            "displayTitle": "POP LOVE"
+          },
+          "artistHint": "いきづらい部！, 金澤奇跡(CV.坂野愛羽), 此花輝夜(CV.天沢朱音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3mJvmPr3BPiFepXMsi9MPz",
+            "uri": "spotify:track:3mJvmPr3BPiFepXMsi9MPz",
+            "matchedTitle": "POP LOVE",
+            "matchedArtist": "いきづらい部！, 金澤奇跡(CV.坂野愛羽), 此花輝夜(CV.天沢朱音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730ad9c257f3cda309ae7afa5a",
+            "albumName": "POP LOVE"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "クラリトブライト",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1v712a2__original",
+            "displayTitle": "クラリトブライト"
+          },
+          "artistHint": "いきづらい部！, 此花輝夜(CV.天沢朱音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6M06XlbpID0OMGBig6DsWN",
+            "uri": "spotify:track:6M06XlbpID0OMGBig6DsWN",
+            "matchedTitle": "クラリトブライト",
+            "matchedArtist": "いきづらい部！, 此花輝夜(CV.天沢朱音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273597c841ec4c5c48a6594aaa6",
+            "albumName": "キミは夜のポラリス"
+          }
+        },
+        {
+          "order": 7,
+          "marker": "M07",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Trick or Toxic",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "trick-or-toxic__original",
+            "displayTitle": "Trick or Toxic"
+          },
+          "artistHint": "いきづらい部！, 佐々木翔音(CV.涼ノ瀬葵音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1Cvs7ppIr61gY3N5ltMQpo",
+            "uri": "spotify:track:1Cvs7ppIr61gY3N5ltMQpo",
+            "matchedTitle": "Trick or Toxic",
+            "matchedArtist": "いきづらい部！, 佐々木翔音(CV.涼ノ瀬葵音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27310b08c4d2fda2f57c3177a8e",
+            "albumName": "イキタクナイevery day"
+          }
+        },
+        {
+          "order": 8,
+          "marker": "M08",
+          "type": "song",
+          "recording": {
+            "baseTitle": "青春ソーダ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ozbqv7__original",
+            "displayTitle": "青春ソーダ"
+          },
+          "artistHint": "いきづらい部！, 五桐 玲(CV.宮野 芹), 佐々木翔音(CV.涼ノ瀬葵音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "662TIHr3CjYgA6wAdiALM1",
+            "uri": "spotify:track:662TIHr3CjYgA6wAdiALM1",
+            "matchedTitle": "青春ソーダ",
+            "matchedArtist": "いきづらい部！, 五桐 玲(CV.宮野 芹), 佐々木翔音(CV.涼ノ瀬葵音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f450629aeee5b339a15cfbe2",
+            "albumName": "青春ソーダ"
+          }
+        },
+        {
+          "order": 9,
+          "marker": "M09",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Darling Wanted!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "darling-wanted__original",
+            "displayTitle": "Darling Wanted!"
+          },
+          "artistHint": "いきづらい部！, 麻布麻衣(CV.遠藤璃菜), 調布のりこ(CV.瀬古梨愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7df9dX9LmxRVogHDAAa1hr",
+            "uri": "spotify:track:7df9dX9LmxRVogHDAAa1hr",
+            "matchedTitle": "Darling Wanted!",
+            "matchedArtist": "いきづらい部！, 麻布麻衣(CV.遠藤璃菜), 調布のりこ(CV.瀬古梨愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273196193251e4c0fb95b908289",
+            "albumName": "Darling Wanted!"
+          }
+        },
+        {
+          "order": 10,
+          "marker": "M10",
+          "type": "song",
+          "recording": {
+            "baseTitle": "オドルポルカ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1ekgmti__original",
+            "displayTitle": "オドルポルカ"
+          },
+          "artistHint": "いきづらい部！, 高橋ポルカ(CV.綾咲穂音)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3WUkLrQWLJJKiBqMNiRMys",
+            "uri": "spotify:track:3WUkLrQWLJJKiBqMNiRMys",
+            "matchedTitle": "オドルポルカ",
+            "matchedArtist": "いきづらい部！, 高橋ポルカ(CV.綾咲穂音)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27366baaef9534b72b477bf20d6",
+            "albumName": "浅草Guilty Girlの歌"
+          }
+        },
+        {
+          "order": 11,
+          "marker": "M11",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Spinning Parade",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "spinning-parade__original",
+            "displayTitle": "Spinning Parade"
+          },
+          "artistHint": "いきづらい部！, 高橋ポルカ(CV.綾咲穂音), 春宮ゆくり(CV.奥村優季)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1uyqX2wmgbYccgfJtPmZR9",
+            "uri": "spotify:track:1uyqX2wmgbYccgfJtPmZR9",
+            "matchedTitle": "Spinning Parade",
+            "matchedArtist": "いきづらい部！, 高橋ポルカ(CV.綾咲穂音), 春宮ゆくり(CV.奥村優季)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b273edae0aca64c665767623",
+            "albumName": "Spinning Parade"
+          }
+        },
+        {
+          "order": 12,
+          "marker": "M12",
+          "type": "song",
+          "recording": {
+            "baseTitle": "REGAIN AGAIN LLLLOVE",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "regain-again-llllove__original",
+            "displayTitle": "REGAIN AGAIN LLLLOVE"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6j2jaU62yunZHqVMKcehQt",
+            "uri": "spotify:track:6j2jaU62yunZHqVMKcehQt",
+            "matchedTitle": "REGAIN AGAIN LLLLOVE",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273532f0e086d2a08dc8ec180a7",
+            "albumName": "REGAIN AGAIN LLLLOVE"
+          }
+        },
+        {
+          "order": 13,
+          "marker": "M13",
+          "type": "song",
+          "recording": {
+            "baseTitle": "SUPER SUMMER SENSATION!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "super-summer-sensation__original",
+            "displayTitle": "SUPER SUMMER SENSATION!!"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4KYdGsRXBJ0g1niWI6968Y",
+            "uri": "spotify:track:4KYdGsRXBJ0g1niWI6968Y",
+            "matchedTitle": "SUPER SUMMER SENSATION!!",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273254dea32c51d53099da3b203",
+            "albumName": "Dou-Da? DOING! / REGAIN AGAIN LLLLOVE"
+          }
+        },
+        {
+          "order": 14,
+          "marker": "M14",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全力Calling!! I LOVE YOU!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "calling-i-love-you__original",
+            "displayTitle": "全力Calling!! I LOVE YOU!!"
+          },
+          "artistHint": "こーるみー!!!, いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1JiF6eGlCI5zdlsWCYpkrl",
+            "uri": "spotify:track:1JiF6eGlCI5zdlsWCYpkrl",
+            "matchedTitle": "全力Calling!! I LOVE YOU!!",
+            "matchedArtist": "こーるみー!!!, いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273285931a6a1eedbca124e2319",
+            "albumName": "全力Calling!! I LOVE YOU!!"
+          }
+        },
+        {
+          "order": 15,
+          "marker": "M15",
+          "type": "song",
+          "recording": {
+            "baseTitle": "tap tap tappin'!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tap-tap-tappin__original",
+            "displayTitle": "tap tap tappin'!!"
+          },
+          "artistHint": "既読待ちLovers, いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6gxYOP9XSglL3MkLzI5sat",
+            "uri": "spotify:track:6gxYOP9XSglL3MkLzI5sat",
+            "matchedTitle": "tap tap tappin'!!",
+            "matchedArtist": "既読待ちLovers, いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d20c1f16e5c8eca3e837adef",
+            "albumName": "tap tap tappin'!!"
+          }
+        },
+        {
+          "order": 16,
+          "marker": "M16",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未完成なラブレター",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-zit3tl__original",
+            "displayTitle": "未完成なラブレター"
+          },
+          "artistHint": "恋文乙女純情派, いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5nQEmsdhUODtHc5kAGd9aG",
+            "uri": "spotify:track:5nQEmsdhUODtHc5kAGd9aG",
+            "matchedTitle": "未完成なラブレター",
+            "matchedArtist": "恋文乙女純情派, いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27366cf75c1224933266ea95dac",
+            "albumName": "未完成なラブレター"
+          }
+        },
+        {
+          "order": 17,
+          "marker": "M17",
+          "type": "song",
+          "recording": {
+            "baseTitle": "シンメトリー",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1h012ag__original",
+            "displayTitle": "シンメトリー"
+          },
+          "artistHint": "Mi×Nori=Tea, いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1iBSOVtzVc0a4mGmYvsJex",
+            "uri": "spotify:track:1iBSOVtzVc0a4mGmYvsJex",
+            "matchedTitle": "シンメトリー",
+            "matchedArtist": "Mi×Nori=Tea, いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273a88778868b31b6ec40ec99ac",
+            "albumName": "シンメトリー"
+          }
+        },
+        {
+          "order": 18,
+          "marker": "M18",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Silent Stella",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "silent-stella__original",
+            "displayTitle": "Silent Stella"
+          },
+          "artistHint": "SH1ON, いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1ZQuauoF2RaHlCPfPDdvjI",
+            "uri": "spotify:track:1ZQuauoF2RaHlCPfPDdvjI",
+            "matchedTitle": "Silent Stella",
+            "matchedArtist": "SH1ON, いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2734ea56bbcb6f1ed8ad18b348e",
+            "albumName": "Silent Stella"
+          }
+        },
+        {
+          "order": 19,
+          "marker": "M19",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Pray for love",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "pray-for-love__original",
+            "displayTitle": "Pray for love"
+          },
+          "artistHint": "いきづらい部！, 春宮ゆくり(CV.奥村優季)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4EQLJGlQta8kzU7MDNz9C5",
+            "uri": "spotify:track:4EQLJGlQta8kzU7MDNz9C5",
+            "matchedTitle": "Pray for love",
+            "matchedArtist": "いきづらい部！, 春宮ゆくり(CV.奥村優季)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273756037b0292a932770642643",
+            "albumName": "Pray for love"
+          }
+        },
+        {
+          "order": 20,
+          "marker": "M20",
+          "type": "song",
+          "recording": {
+            "baseTitle": "凸凹Quartet",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "quartet__original",
+            "displayTitle": "凸凹Quartet"
+          },
+          "artistHint": "CHAKI!, いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6691TRAivmrRvljYozj0SX",
+            "uri": "spotify:track:6691TRAivmrRvljYozj0SX",
+            "matchedTitle": "凸凹Quartet",
+            "matchedArtist": "CHAKI!, いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2733d9781fcdb729a456d07e270",
+            "albumName": "凸凹Quartet"
+          }
+        },
+        {
+          "order": 21,
+          "marker": "M21",
+          "type": "song",
+          "recording": {
+            "baseTitle": "恋のワンタイムパスワード",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-h9y4vd__original",
+            "displayTitle": "恋のワンタイムパスワード"
+          },
+          "artistHint": "いきづらい部！, 調布のりこ(CV.瀬古梨愛)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5331syCrRj2800b0pgMN1J",
+            "uri": "spotify:track:5331syCrRj2800b0pgMN1J",
+            "matchedTitle": "恋のワンタイムパスワード",
+            "matchedArtist": "いきづらい部！, 調布のりこ(CV.瀬古梨愛)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273dbd85628ad33274c647767f9",
+            "albumName": "恋のワンタイムパスワード"
+          }
+        },
+        {
+          "order": 22,
+          "marker": "M22",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Public Style",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "public-style__original",
+            "displayTitle": "Public Style"
+          },
+          "artistHint": "いきづらい部！, 麻布麻衣(CV.遠藤璃菜)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1S2jJVC6jnRKuhAwqJf7jT",
+            "uri": "spotify:track:1S2jJVC6jnRKuhAwqJf7jT",
+            "matchedTitle": "Public Style",
+            "matchedArtist": "いきづらい部！, 麻布麻衣(CV.遠藤璃菜)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2736b363d9f692befb23de6be1b",
+            "albumName": "Public Style"
+          }
+        },
+        {
+          "order": 23,
+          "marker": "M23",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Daitan Party Time",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "daitan-party-time__original",
+            "displayTitle": "Daitan Party Time"
+          },
+          "artistHint": "Plumina, いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "04qGqqKspKYdRucY2SrXYt",
+            "uri": "spotify:track:04qGqqKspKYdRucY2SrXYt",
+            "matchedTitle": "Daitan Party Time",
+            "matchedArtist": "Plumina, いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273b7a9a8a4ec4e7add276c3f64",
+            "albumName": "Daitan Party Time"
+          }
+        },
+        {
+          "order": 24,
+          "marker": "M24",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HomeRun Queen!!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "homerun-queen__original",
+            "displayTitle": "HomeRun Queen!!"
+          },
+          "artistHint": "いきづらい部！, 金澤奇跡(CV.坂野愛羽)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3ALcxxTv5qVLOgg6NxRKki",
+            "uri": "spotify:track:3ALcxxTv5qVLOgg6NxRKki",
+            "matchedTitle": "HomeRun Queen!!",
+            "matchedArtist": "いきづらい部！, 金澤奇跡(CV.坂野愛羽)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f8add969be2e6ebcd9ffd08b",
+            "albumName": "HomeRun Queen!!"
+          }
+        },
+        {
+          "order": 25,
+          "marker": "M25",
+          "type": "song",
+          "recording": {
+            "baseTitle": "HIBANA―火花―",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hibana__original",
+            "displayTitle": "HIBANA―火花―"
+          },
+          "artistHint": "いきづらい部！, 駒形花火(CV.藤野こころ)",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "0LimjB4B9s5nh81W2HQmS2",
+            "uri": "spotify:track:0LimjB4B9s5nh81W2HQmS2",
+            "matchedTitle": "HIBANA―火花―",
+            "matchedArtist": "いきづらい部！, 駒形花火(CV.藤野こころ)",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2730a1991e6b2d046f2af3da4c0",
+            "albumName": "HIBANA―火花―"
+          }
+        },
+        {
+          "order": 26,
+          "marker": "M26",
+          "type": "song",
+          "recording": {
+            "baseTitle": "What is my LIFE?",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "what-is-my-life__original",
+            "displayTitle": "What is my LIFE?"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4uWUgAX6o7ssWVyiGmp4Ij",
+            "uri": "spotify:track:4uWUgAX6o7ssWVyiGmp4Ij",
+            "matchedTitle": "What is my LIFE?",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27337b6558ea368df05b02153e7",
+            "albumName": "What is my LIFE?"
+          }
+        },
+        {
+          "order": 27,
+          "marker": "EN01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Tale of Primavera",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tale-of-primavera__original",
+            "displayTitle": "Tale of Primavera"
+          },
+          "artistHint": "",
+          "spotifyMatchPolicy": "unavailable",
+          "spotify": {
+            "status": "unmatched",
+            "trackId": null,
+            "uri": null,
+            "matchedTitle": null,
+            "matchedArtist": null,
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 28,
+          "marker": "EN02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ヒミツミチ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-1gjt9om__original",
+            "displayTitle": "ヒミツミチ"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2TgBdSEwqOBD8vJQQzIlKn",
+            "uri": "spotify:track:2TgBdSEwqOBD8vJQQzIlKn",
+            "matchedTitle": "ヒミツミチ",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b27347157aac4e250994922c7709",
+            "albumName": "What is my LIFE?"
+          }
+        },
+        {
+          "order": 29,
+          "marker": "EN03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Dou-Da? DOING!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "dou-da-doing__original",
+            "displayTitle": "Dou-Da? DOING!"
+          },
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1N4CeCZaDj8EH1fh1DPrDt",
+            "uri": "spotify:track:1N4CeCZaDj8EH1fh1DPrDt",
+            "matchedTitle": "Dou-Da? DOING!",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273d2a8fbcf42a3afc2851f1488",
+            "albumName": "Dou-Da? DOING!"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

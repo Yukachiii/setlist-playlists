@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "0.3",
+  "id": "aqours-sanrio-virtual-festival-2026-summer-edition",
+  "title": "Sanrio Virtual Festival 2026 Summer Edition",
+  "series": [
+    "aqours"
+  ],
+  "isNumberedLive": false,
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://v-fes.sanrio.co.jp/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/317",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "aqours-sanrio-virtual-festival-2026-summer-edition-venue-461-performance-789",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2026-08-29",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "New Romantic Sailors",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "new-romantic-sailors__original",
+            "displayTitle": "New Romantic Sailors"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "32gSqAQuaZg7sEXPGrlYUN",
+            "uri": "spotify:track:32gSqAQuaZg7sEXPGrlYUN",
+            "matchedTitle": "New Romantic Sailors",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コワレヤスキ",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-iyrub1__original",
+            "displayTitle": "コワレヤスキ"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4zTE78pRVHUpqNX00D8Z8C",
+            "uri": "spotify:track:4zTE78pRVHUpqNX00D8Z8C",
+            "matchedTitle": "コワレヤスキ",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738c9364a8e8a3a866891332b9",
+            "albumName": "コワレヤスキ"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Shooting Star Warrior",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "shooting-star-warrior__original",
+            "displayTitle": "Shooting Star Warrior"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3jqJhflG9uRu61j2SqLpds",
+            "uri": "spotify:track:3jqJhflG9uRu61j2SqLpds",
+            "matchedTitle": "Shooting Star Warrior",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Strawberry Trapper",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "strawberry-trapper__original",
+            "displayTitle": "Strawberry Trapper"
+          },
+          "artistHint": "Guilty Kiss",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4ApmNv5aFTqOmRAvbyBAqe",
+            "uri": "spotify:track:4ApmNv5aFTqOmRAvbyBAqe",
+            "matchedTitle": "Strawberry Trapper",
+            "matchedArtist": "Guilty Kiss",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273f56213983269734551ed6fb8",
+            "albumName": "Shooting Star Warrior"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

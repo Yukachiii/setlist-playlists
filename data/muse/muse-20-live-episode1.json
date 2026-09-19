@@ -1,0 +1,339 @@
+{
+  "schemaVersion": "0.3",
+  "id": "muse-20-live-episode1",
+  "title": "日本一ソフトウェア20周年記念ライブイベント 「魔界ウォーズLive episode1 アサギの逆襲」",
+  "series": [
+    "muse"
+  ],
+  "isNumberedLive": false,
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://nippon1.jp/20th/event/makai_wars_ep1/index.html",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/321",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "muse-20-live-episode1-yokohama-1",
+      "label": "1回目",
+      "day": null,
+      "session": null,
+      "date": "2013-07-13",
+      "venue": {
+        "name": "横浜BLITZ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "革命ですね？神様！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-uarsys__original",
+            "displayTitle": "革命ですね？神様！"
+          },
+          "artistHint": "早乙女リリエル (CV.矢澤にこ (徳井青空)), 竜崎クロウエル (CV.高坂穂乃果 (新田恵海)), 白鳥ラナエル (CV.絢瀬絵里 (南條愛乃)), 綾小路シェリエル (CV.東條 希 (楠田亜衣奈)), 東條ネルエル (CV.小泉花陽 (久保ユリカ))",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "56Jl96vN7ziITdLeuL5Lja",
+            "uri": "spotify:track:56Jl96vN7ziITdLeuL5Lja",
+            "matchedTitle": "革命ですね？神様！",
+            "matchedArtist": "早乙女リリエル (CV.矢澤にこ (徳井青空)), 竜崎クロウエル (CV.高坂穂乃果 (新田恵海)), 白鳥ラナエル (CV.絢瀬絵里 (南條愛乃)), 綾小路シェリエル (CV.東條 希 (楠田亜衣奈)), 東條ネルエル (CV.小泉花陽 (久保ユリカ))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "羽は知ってしまったの？",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1ooycld__ver",
+            "displayTitle": "羽は知ってしまったの？（メドレー・ショート Ver.）"
+          },
+          "artistHint": "早乙女リリエル (CV.矢澤にこ (徳井青空))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3p96qUch20xJLSoerptgKj",
+            "uri": "spotify:track:3p96qUch20xJLSoerptgKj",
+            "matchedTitle": "羽は知ってしまったの?",
+            "matchedArtist": "早乙女リリエル (CV.矢澤にこ (徳井青空))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "斯くも憂美な日となりて",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1iviwa0__ver",
+            "displayTitle": "斯くも憂美な日となりて（メドレー・ショート Ver.）"
+          },
+          "artistHint": "白鳥ラナエル (CV.絢瀬絵里 (南條愛乃))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6b5v6VMhrduXjEZ1HatAhs",
+            "uri": "spotify:track:6b5v6VMhrduXjEZ1HatAhs",
+            "matchedTitle": "斯くも憂美な日となりて",
+            "matchedArtist": "白鳥ラナエル (CV.絢瀬絵里 (南條愛乃))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "I'll smile for yours",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "i-ll-smile-for-yours__ver",
+            "displayTitle": "I'll smile for yours（メドレー・ショート Ver.）"
+          },
+          "artistHint": "綾小路シェリエル (CV.東條 希 (楠田亜衣奈))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "03oL4Q3El9eEXp2Lq8yUES",
+            "uri": "spotify:track:03oL4Q3El9eEXp2Lq8yUES",
+            "matchedTitle": "I'll smile for yours",
+            "matchedArtist": "綾小路シェリエル (CV.東條 希 (楠田亜衣奈))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コドクの回廊",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-11fzlw__ver",
+            "displayTitle": "コドクの回廊（メドレー・ショート Ver.）"
+          },
+          "artistHint": "東條ネルエル (CV.小泉花陽 (久保ユリカ))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "70cpydyMzpRKsqU64a8OIs",
+            "uri": "spotify:track:70cpydyMzpRKsqU64a8OIs",
+            "matchedTitle": "コドクの回廊",
+            "matchedArtist": "東條ネルエル (CV.小泉花陽 (久保ユリカ))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "閃光Resolution",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "resolution__ver",
+            "displayTitle": "閃光Resolution（メドレー・ショート Ver.）"
+          },
+          "artistHint": "竜崎クロウエル (CV.高坂穂乃果 (新田恵海))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3XA4K2rZglglu0jwr78OMj",
+            "uri": "spotify:track:3XA4K2rZglglu0jwr78OMj",
+            "matchedTitle": "閃光Resolution",
+            "matchedArtist": "竜崎クロウエル (CV.高坂穂乃果 (新田恵海))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "muse-20-live-episode1-yokohama-2",
+      "label": "2回目",
+      "day": null,
+      "session": null,
+      "date": "2013-07-13",
+      "venue": {
+        "name": "横浜BLITZ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "革命ですね？神様！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-uarsys__original",
+            "displayTitle": "革命ですね？神様！"
+          },
+          "artistHint": "早乙女リリエル (CV.矢澤にこ (徳井青空)), 竜崎クロウエル (CV.高坂穂乃果 (新田恵海)), 白鳥ラナエル (CV.絢瀬絵里 (南條愛乃)), 綾小路シェリエル (CV.東條 希 (楠田亜衣奈)), 東條ネルエル (CV.小泉花陽 (久保ユリカ))",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "56Jl96vN7ziITdLeuL5Lja",
+            "uri": "spotify:track:56Jl96vN7ziITdLeuL5Lja",
+            "matchedTitle": "革命ですね？神様！",
+            "matchedArtist": "早乙女リリエル (CV.矢澤にこ (徳井青空)), 竜崎クロウエル (CV.高坂穂乃果 (新田恵海)), 白鳥ラナエル (CV.絢瀬絵里 (南條愛乃)), 綾小路シェリエル (CV.東條 希 (楠田亜衣奈)), 東條ネルエル (CV.小泉花陽 (久保ユリカ))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "羽は知ってしまったの？",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1ooycld__ver",
+            "displayTitle": "羽は知ってしまったの？（メドレー・ショート Ver.）"
+          },
+          "artistHint": "早乙女リリエル (CV.矢澤にこ (徳井青空))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3p96qUch20xJLSoerptgKj",
+            "uri": "spotify:track:3p96qUch20xJLSoerptgKj",
+            "matchedTitle": "羽は知ってしまったの?",
+            "matchedArtist": "早乙女リリエル (CV.矢澤にこ (徳井青空))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "斯くも憂美な日となりて",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-1iviwa0__ver",
+            "displayTitle": "斯くも憂美な日となりて（メドレー・ショート Ver.）"
+          },
+          "artistHint": "白鳥ラナエル (CV.絢瀬絵里 (南條愛乃))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6b5v6VMhrduXjEZ1HatAhs",
+            "uri": "spotify:track:6b5v6VMhrduXjEZ1HatAhs",
+            "matchedTitle": "斯くも憂美な日となりて",
+            "matchedArtist": "白鳥ラナエル (CV.絢瀬絵里 (南條愛乃))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "I'll smile for yours",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "i-ll-smile-for-yours__ver",
+            "displayTitle": "I'll smile for yours（メドレー・ショート Ver.）"
+          },
+          "artistHint": "綾小路シェリエル (CV.東條 希 (楠田亜衣奈))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "03oL4Q3El9eEXp2Lq8yUES",
+            "uri": "spotify:track:03oL4Q3El9eEXp2Lq8yUES",
+            "matchedTitle": "I'll smile for yours",
+            "matchedArtist": "綾小路シェリエル (CV.東條 希 (楠田亜衣奈))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "コドクの回廊",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-11fzlw__ver",
+            "displayTitle": "コドクの回廊（メドレー・ショート Ver.）"
+          },
+          "artistHint": "東條ネルエル (CV.小泉花陽 (久保ユリカ))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "70cpydyMzpRKsqU64a8OIs",
+            "uri": "spotify:track:70cpydyMzpRKsqU64a8OIs",
+            "matchedTitle": "コドクの回廊",
+            "matchedArtist": "東條ネルエル (CV.小泉花陽 (久保ユリカ))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "閃光Resolution",
+            "versionLabel": "メドレー・ショート Ver.",
+            "versionCode": "ver",
+            "recordingId": "resolution__ver",
+            "displayTitle": "閃光Resolution（メドレー・ショート Ver.）"
+          },
+          "artistHint": "竜崎クロウエル (CV.高坂穂乃果 (新田恵海))",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3XA4K2rZglglu0jwr78OMj",
+            "uri": "spotify:track:3XA4K2rZglglu0jwr78OMj",
+            "matchedTitle": "閃光Resolution",
+            "matchedArtist": "竜崎クロウエル (CV.高坂穂乃果 (新田恵海))",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2735ae912f0e625d337117d561b",
+            "albumName": "天使たちの福音 ～feat.μ's <ラブライブ！>"
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
