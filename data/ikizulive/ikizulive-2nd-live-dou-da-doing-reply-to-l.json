@@ -636,16 +636,16 @@
             "recordingId": "tale-of-primavera__original",
             "displayTitle": "Tale of Primavera"
           },
-          "artistHint": "",
-          "spotifyMatchPolicy": "unavailable",
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
           "spotify": {
-            "status": "unmatched",
-            "trackId": null,
-            "uri": null,
-            "matchedTitle": null,
-            "matchedArtist": null,
-            "artworkUrl": null,
-            "albumName": null
+            "status": "matched",
+            "trackId": "5vwdTzuXMkJiDmrrSOJ7Di",
+            "uri": "spotify:track:5vwdTzuXMkJiDmrrSOJ7Di",
+            "matchedTitle": "Tale of Primavera",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e4f1625b32f3dba5fec101e",
+            "albumName": "Tale of Primavera"
           }
         },
         {
@@ -1322,14 +1322,16 @@
             "recordingId": "tale-of-primavera__original",
             "displayTitle": "Tale of Primavera"
           },
-          "artistHint": "",
-          "spotifyMatchPolicy": "unavailable",
+          "artistHint": "いきづらい部！",
+          "spotifyMatchPolicy": "exact",
           "spotify": {
-            "status": "unmatched",
-            "trackId": null,
-            "uri": null,
-            "matchedTitle": null,
-            "matchedArtist": null
+            "status": "matched",
+            "trackId": "5vwdTzuXMkJiDmrrSOJ7Di",
+            "uri": "spotify:track:5vwdTzuXMkJiDmrrSOJ7Di",
+            "matchedTitle": "Tale of Primavera",
+            "matchedArtist": "いきづらい部！",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2739e4f1625b32f3dba5fec101e",
+            "albumName": "Tale of Primavera"
           }
         },
         {
