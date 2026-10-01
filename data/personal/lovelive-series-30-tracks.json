@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.3",
+  "id": "personal-lovelive-series-30-tracks-20261001",
+  "title": "ラブライブ！シリーズ 30曲",
+  "series": [
+    "personal"
+  ],
+  "isNumberedLive": false,
+  "sources": [],
+  "performances": [
+    {
+      "id": "personal-lovelive-series-30-tracks-20261001",
+      "label": "プレイリスト",
+      "day": null,
+      "session": null,
+      "date": "2026-10-01",
+      "venue": {
+        "name": "-",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        { "order": 1, "marker": "M01", "type": "song", "recording": { "baseTitle": "僕らは今のなかで", "displayTitle": "僕らは今のなかで" }, "artistHint": "μ's", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "0qAxtxztAqS2P3FHM8c842", "uri": "spotify:track:0qAxtxztAqS2P3FHM8c842", "matchedTitle": "僕らは今のなかで", "matchedArtist": "μ's" } },
+        { "order": 2, "marker": "M02", "type": "song", "recording": { "baseTitle": "Snow halation", "displayTitle": "Snow halation" }, "artistHint": "μ's", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "4K65wBvHQPmnD6bTdN6BHt", "uri": "spotify:track:4K65wBvHQPmnD6bTdN6BHt", "matchedTitle": "Snow halation", "matchedArtist": "μ's" } },
+        { "order": 3, "marker": "M03", "type": "song", "recording": { "baseTitle": "No brand girls", "displayTitle": "No brand girls" }, "artistHint": "μ's", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "6OXy306jbVkdbfNOZYxhfD", "uri": "spotify:track:6OXy306jbVkdbfNOZYxhfD", "matchedTitle": "No brand girls", "matchedArtist": "μ's" } },
+        { "order": 4, "marker": "M04", "type": "song", "recording": { "baseTitle": "僕らのLIVE 君とのLIFE", "displayTitle": "僕らのLIVE 君とのLIFE" }, "artistHint": "μ's", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "337ulrHx2OU1GuFtJmo2SJ", "uri": "spotify:track:337ulrHx2OU1GuFtJmo2SJ", "matchedTitle": "僕らのLIVE 君とのLIFE", "matchedArtist": "μ's" } },
+        { "order": 5, "marker": "M05", "type": "song", "recording": { "baseTitle": "青空Jumping Heart", "displayTitle": "青空Jumping Heart" }, "artistHint": "Aqours", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "3qDPN5KBpu63ieMoommmVm", "uri": "spotify:track:3qDPN5KBpu63ieMoommmVm", "matchedTitle": "青空Jumping Heart", "matchedArtist": "Aqours" } },
+        { "order": 6, "marker": "M06", "type": "song", "recording": { "baseTitle": "恋になりたいAQUARIUM", "displayTitle": "恋になりたいAQUARIUM" }, "artistHint": "Aqours", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "48DmPo9ib35VIwv29vhLsN", "uri": "spotify:track:48DmPo9ib35VIwv29vhLsN", "matchedTitle": "恋になりたいAQUARIUM", "matchedArtist": "Aqours" } },
+        { "order": 7, "marker": "M07", "type": "song", "recording": { "baseTitle": "未来の僕らは知ってるよ", "displayTitle": "未来の僕らは知ってるよ" }, "artistHint": "Aqours", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "5LkLONpm25pQBXe3nCeHgs", "uri": "spotify:track:5LkLONpm25pQBXe3nCeHgs", "matchedTitle": "未来の僕らは知ってるよ", "matchedArtist": "Aqours" } },
+        { "order": 8, "marker": "M08", "type": "song", "recording": { "baseTitle": "ユメ語るよりユメ歌おう", "displayTitle": "ユメ語るよりユメ歌おう" }, "artistHint": "Aqours", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "4Uk8NfnITNe4Nc33vv38Dv", "uri": "spotify:track:4Uk8NfnITNe4Nc33vv38Dv", "matchedTitle": "ユメ語るよりユメ歌おう", "matchedArtist": "Aqours" } },
+        { "order": 9, "marker": "M09", "type": "song", "recording": { "baseTitle": "TOKIMEKI Runners", "displayTitle": "TOKIMEKI Runners" }, "artistHint": "虹ヶ咲学園スクールアイドル同好会", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "1xb8vw15MAUF8UhkqA8qjo", "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo", "matchedTitle": "TOKIMEKI Runners", "matchedArtist": "虹ヶ咲学園スクールアイドル同好会" } },
+        { "order": 10, "marker": "M10", "type": "song", "recording": { "baseTitle": "Just Believe!!!", "displayTitle": "Just Believe!!!" }, "artistHint": "虹ヶ咲学園スクールアイドル同好会", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "3kmVudGJZLEpEmUv8YgeDK", "uri": "spotify:track:3kmVudGJZLEpEmUv8YgeDK", "matchedTitle": "Just Believe!!!", "matchedArtist": "虹ヶ咲学園スクールアイドル同好会" } },
+        { "order": 11, "marker": "M11", "type": "song", "recording": { "baseTitle": "虹色Passions！", "displayTitle": "虹色Passions！" }, "artistHint": "虹ヶ咲学園スクールアイドル同好会", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "3VL49SjKDLXnan18WnUpw8", "uri": "spotify:track:3VL49SjKDLXnan18WnUpw8", "matchedTitle": "虹色Passions！", "matchedArtist": "虹ヶ咲学園スクールアイドル同好会" } },
+        { "order": 12, "marker": "M12", "type": "song", "recording": { "baseTitle": "Colorful Dreams! Colorful Smiles!", "displayTitle": "Colorful Dreams! Colorful Smiles!" }, "artistHint": "虹ヶ咲学園スクールアイドル同好会", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "6BgQWUJd3BXytOhZZv7OW7", "uri": "spotify:track:6BgQWUJd3BXytOhZZv7OW7", "matchedTitle": "Colorful Dreams! Colorful Smiles!", "matchedArtist": "虹ヶ咲学園スクールアイドル同好会" } },
+        { "order": 13, "marker": "M13", "type": "song", "recording": { "baseTitle": "繚乱！ビクトリーロード", "displayTitle": "繚乱！ビクトリーロード" }, "artistHint": "虹ヶ咲学園スクールアイドル同好会", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "3XOV9u7TYqfmDWYRqoMfoc", "uri": "spotify:track:3XOV9u7TYqfmDWYRqoMfoc", "matchedTitle": "繚乱！ビクトリーロード", "matchedArtist": "虹ヶ咲学園スクールアイドル同好会" } },
+        { "order": 14, "marker": "M14", "type": "song", "recording": { "baseTitle": "START!! True dreams", "displayTitle": "START!! True dreams" }, "artistHint": "Liella!", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "2hhexsnHLRpjI0BYQYEGvU", "uri": "spotify:track:2hhexsnHLRpjI0BYQYEGvU", "matchedTitle": "START!! True dreams", "matchedArtist": "Liella!" } },
+        { "order": 15, "marker": "M15", "type": "song", "recording": { "baseTitle": "Let's be ONE", "displayTitle": "Let's be ONE" }, "artistHint": "Liella!", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "12WAWtCouLV3YY3fIDs86c", "uri": "spotify:track:12WAWtCouLV3YY3fIDs86c", "matchedTitle": "Let's be ONE", "matchedArtist": "Liella!" } },
+        { "order": 16, "marker": "M16", "type": "song", "recording": { "baseTitle": "ノンフィクション!!", "displayTitle": "ノンフィクション!!" }, "artistHint": "Liella!", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "21IBJ4rC6Io0ruaSuEMRWf", "uri": "spotify:track:21IBJ4rC6Io0ruaSuEMRWf", "matchedTitle": "ノンフィクション!!", "matchedArtist": "Liella!" } },
+        { "order": 17, "marker": "M17", "type": "song", "recording": { "baseTitle": "始まりは君の空 ～11 Ver.～", "displayTitle": "始まりは君の空 ～11 Ver.～" }, "artistHint": "Liella!", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "54tnQylYoVgaGWjtZ5txxg", "uri": "spotify:track:54tnQylYoVgaGWjtZ5txxg", "matchedTitle": "始まりは君の空 ～11 Ver.～", "matchedArtist": "Liella!" } },
+        { "order": 18, "marker": "M18", "type": "song", "recording": { "baseTitle": "Dream Believers", "displayTitle": "Dream Believers" }, "artistHint": "蓮ノ空女学院スクールアイドルクラブ", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "4lMlC1ZKMRroB2FEoVFVt8", "uri": "spotify:track:4lMlC1ZKMRroB2FEoVFVt8", "matchedTitle": "Dream Believers", "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ" } },
+        { "order": 19, "marker": "M19", "type": "song", "recording": { "baseTitle": "永遠のEuphoria", "displayTitle": "永遠のEuphoria" }, "artistHint": "蓮ノ空女学院スクールアイドルクラブ", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "03UK4x1ZU2IT5gtKqMu5mp", "uri": "spotify:track:03UK4x1ZU2IT5gtKqMu5mp", "matchedTitle": "永遠のEuphoria", "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ" } },
+        { "order": 20, "marker": "M20", "type": "song", "recording": { "baseTitle": "JOKER.", "displayTitle": "JOKER." }, "artistHint": "蓮ノ空女学院スクールアイドルクラブ", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "4gHobSva2t83DVQ6N4C2Sn", "uri": "spotify:track:4gHobSva2t83DVQ6N4C2Sn", "matchedTitle": "JOKER.", "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ" } },
+        { "order": 21, "marker": "M21", "type": "song", "recording": { "baseTitle": "水彩世界", "displayTitle": "水彩世界" }, "artistHint": "スリーズブーケ", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "4aGtQ24hnb19caIQltg06x", "uri": "spotify:track:4aGtQ24hnb19caIQltg06x", "matchedTitle": "水彩世界", "matchedArtist": "スリーズブーケ" } },
+        { "order": 22, "marker": "M22", "type": "song", "recording": { "baseTitle": "AWOKE", "displayTitle": "AWOKE" }, "artistHint": "DOLLCHESTRA", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "6xjvptRULAGbNy6VXUEct6", "uri": "spotify:track:6xjvptRULAGbNy6VXUEct6", "matchedTitle": "AWOKE", "matchedArtist": "DOLLCHESTRA" } },
+        { "order": 23, "marker": "M23", "type": "song", "recording": { "baseTitle": "ド！ド！ド！", "displayTitle": "ド！ド！ド！" }, "artistHint": "みらくらぱーく！", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "6urkKeYf9usiYKY1sLV95K", "uri": "spotify:track:6urkKeYf9usiYKY1sLV95K", "matchedTitle": "ド！ド！ド！", "matchedArtist": "みらくらぱーく!" } },
+        { "order": 24, "marker": "M24", "type": "song", "recording": { "baseTitle": "Edelied", "displayTitle": "Edelied" }, "artistHint": "Edel Note", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "55ZE15TvYLrNsoE4f3PZW1", "uri": "spotify:track:55ZE15TvYLrNsoE4f3PZW1", "matchedTitle": "Edelied", "matchedArtist": "Edel Note" } },
+        { "order": 25, "marker": "M25", "type": "song", "recording": { "baseTitle": "What is my LIFE?", "displayTitle": "What is my LIFE?" }, "artistHint": "いきづらい部！", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "4uWUgAX6o7ssWVyiGmp4Ij", "uri": "spotify:track:4uWUgAX6o7ssWVyiGmp4Ij", "matchedTitle": "What is my LIFE?", "matchedArtist": "いきづらい部！" } },
+        { "order": 26, "marker": "M26", "type": "song", "recording": { "baseTitle": "Dou-Da? DOING!", "displayTitle": "Dou-Da? DOING!" }, "artistHint": "いきづらい部！", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "1N4CeCZaDj8EH1fh1DPrDt", "uri": "spotify:track:1N4CeCZaDj8EH1fh1DPrDt", "matchedTitle": "Dou-Da? DOING!", "matchedArtist": "いきづらい部！" } },
+        { "order": 27, "marker": "M27", "type": "song", "recording": { "baseTitle": "REGAIN AGAIN LLLLOVE", "displayTitle": "REGAIN AGAIN LLLLOVE" }, "artistHint": "いきづらい部！", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "6j2jaU62yunZHqVMKcehQt", "uri": "spotify:track:6j2jaU62yunZHqVMKcehQt", "matchedTitle": "REGAIN AGAIN LLLLOVE", "matchedArtist": "いきづらい部！" } },
+        { "order": 28, "marker": "M28", "type": "song", "recording": { "baseTitle": "Tale of Primavera", "displayTitle": "Tale of Primavera" }, "artistHint": "いきづらい部！", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "5vwdTzuXMkJiDmrrSOJ7Di", "uri": "spotify:track:5vwdTzuXMkJiDmrrSOJ7Di", "matchedTitle": "Tale of Primavera", "matchedArtist": "いきづらい部！" } },
+        { "order": 29, "marker": "M29", "type": "song", "recording": { "baseTitle": "未完成ドリーム！", "displayTitle": "未完成ドリーム！" }, "artistHint": "スクールアイドルミュージカル", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "2IsZWVCP0LGPtDEsRKDouu", "uri": "spotify:track:2IsZWVCP0LGPtDEsRKDouu", "matchedTitle": "未完成ドリーム！", "matchedArtist": "スクールアイドルミュージカル" } },
+        { "order": 30, "marker": "M30", "type": "song", "recording": { "baseTitle": "Bring the LOVE！", "displayTitle": "Bring the LOVE！" }, "artistHint": "シリーズ合同", "spotifyMatchPolicy": "exact", "spotify": { "status": "matched", "trackId": "08jHICuBUw39Mct5JfZ3C5", "uri": "spotify:track:08jHICuBUw39Mct5JfZ3C5", "matchedTitle": "Bring the LOVE！", "matchedArtist": "渡辺 曜 (CV.斉藤朱夏), 上原歩夢 (CV.大西亜玖璃), 澁谷かのん (CV.伊達さゆり), 日野下花帆 (CV.楡井希実), 高坂穂乃果(CV.新田恵海)" } }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
