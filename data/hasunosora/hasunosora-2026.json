@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "0.3",
+  "id": "hasunosora-2026",
+  "title": "かがやきフェス2026",
+  "series": [
+    "hasunosora"
+  ],
+  "isNumberedLive": false,
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://kagayaki-fes.jp/",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/318",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "hasunosora-2026-venue-462-performance-790",
+      "label": "公演 1",
+      "day": null,
+      "session": null,
+      "date": "2026-10-03",
+      "venue": {
+        "name": "金沢歌劇座",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "全方位キュン♡",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-v25wuf__original",
+            "displayTitle": "全方位キュン♡"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5VbujGTvm7PVhofgReaFgt",
+            "uri": "spotify:track:5VbujGTvm7PVhofgReaFgt",
+            "matchedTitle": "全方位キュン♡",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ノンフィクションヒーローショー",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "track-ou323d__104ki",
+            "displayTitle": "ノンフィクションヒーローショー（104期 Ver.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "7K1bQmXmjUCTKC1UQf8LOz",
+            "uri": "spotify:track:7K1bQmXmjUCTKC1UQf8LOz",
+            "matchedTitle": "ノンフィクションヒーローショー",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ファンファーレ！！！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-ufiwyb__original",
+            "displayTitle": "ファンファーレ！！！"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "09IoeMbEmvqMV2HkFrv4aX",
+            "uri": "spotify:track:09IoeMbEmvqMV2HkFrv4aX",
+            "matchedTitle": "ファンファーレ！！！",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "アイデンティティ",
+            "versionLabel": "104期NEW Ver.",
+            "versionCode": "104ki-new",
+            "recordingId": "track-1iq75uh__104ki-new",
+            "displayTitle": "アイデンティティ（104期NEW Ver.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3il4aafYRIN4igOKZhW3fC",
+            "uri": "spotify:track:3il4aafYRIN4igOKZhW3fC",
+            "matchedTitle": "アイデンティティ (104期NEW Ver.)",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 5,
+          "marker": "M05",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ハクチューアラモード",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "track-1yiq14v__104ki",
+            "displayTitle": "ハクチューアラモード（104期 Ver.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "5DT4p8F3ictNiYBsWOBDfK",
+            "uri": "spotify:track:5DT4p8F3ictNiYBsWOBDfK",
+            "matchedTitle": "ハクチューアラモード (104期Ver.)",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 6,
+          "marker": "M06",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ド！ド！ド！",
+            "versionLabel": "104期 Ver.",
+            "versionCode": "104ki",
+            "recordingId": "track-87wrur__104ki",
+            "displayTitle": "ド！ド！ド！（104期 Ver.）"
+          },
+          "artistHint": "みらくらぱーく!",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "6urkKeYf9usiYKY1sLV95K",
+            "uri": "spotify:track:6urkKeYf9usiYKY1sLV95K",
+            "matchedTitle": "ド！ド！ド！",
+            "matchedArtist": "みらくらぱーく!",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}

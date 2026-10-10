@@ -1,0 +1,287 @@
+{
+  "schemaVersion": "0.3",
+  "id": "nijigasaki-lovelive-series-15th-anniversary-film-live",
+  "title": "LoveLive! Series 15th Anniversary ラブライブ！フェス 前夜祭 FILM LIVE ～未来へ届けるタイムカプセル～",
+  "series": [
+    "nijigasaki",
+    "liella",
+    "school-idol-musical",
+    "hasunosora",
+    "ikizulive"
+  ],
+  "isNumberedLive": false,
+  "sources": [
+    {
+      "type": "web",
+      "name": "公式ページ",
+      "url": "https://www.lovelive-anime.jp/special/live/live_detail.php?p=15thzenyasai",
+      "priority": "primary"
+    },
+    {
+      "type": "web",
+      "name": "LL-Fans",
+      "url": "https://ll-fans.jp/data/event/326",
+      "priority": "reference"
+    }
+  ],
+  "performances": [
+    {
+      "id": "nijigasaki-lovelive-series-15th-anniversary-film-live-shibuya-lovez-10",
+      "label": "10日 (土) 昼公演",
+      "day": null,
+      "session": null,
+      "date": "2026-10-10",
+      "venue": {
+        "name": "Shibuya LOVEZ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未完成ドリーム！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-107xvc9__original",
+            "displayTitle": "未完成ドリーム！"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2IsZWVCP0LGPtDEsRKDouu",
+            "uri": "spotify:track:2IsZWVCP0LGPtDEsRKDouu",
+            "matchedTitle": "未完成ドリーム！",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738ed0aaab0ac4d2252aecaafe",
+            "albumName": "未完成ドリーム！"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ゆめの羅針盤",
+            "versionLabel": "文化祭 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-glseno__ver",
+            "displayTitle": "ゆめの羅針盤（文化祭 Ver.）"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4NEF3hv91WJhTVNuH7dn25",
+            "uri": "spotify:track:4NEF3hv91WJhTVNuH7dn25",
+            "matchedTitle": "ゆめの羅針盤 (コンパス)",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273be872d2166222a81741bc15e",
+            "albumName": "スクールアイドルミュージカル"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "虹色Passions！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "passions__original",
+            "displayTitle": "虹色Passions！"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "3VL49SjKDLXnan18WnUpw8",
+            "uri": "spotify:track:3VL49SjKDLXnan18WnUpw8",
+            "matchedTitle": "虹色Passions！",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "Hello, new dream!",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "hello-new-dream__original",
+            "displayTitle": "Hello, new dream!"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2yvbdK6QdPsNu572SDuz1G",
+            "uri": "spotify:track:2yvbdK6QdPsNu572SDuz1G",
+            "matchedTitle": "Hello, new dream!",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-lovelive-series-15th-anniversary-film-live-shibuya-lovez-10-2",
+      "label": "10日 (土) 夜公演",
+      "day": null,
+      "session": null,
+      "date": "2026-10-10",
+      "venue": {
+        "name": "Shibuya LOVEZ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [
+        {
+          "order": 1,
+          "marker": "M01",
+          "type": "song",
+          "recording": {
+            "baseTitle": "未完成ドリーム！",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "track-107xvc9__original",
+            "displayTitle": "未完成ドリーム！"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "2IsZWVCP0LGPtDEsRKDouu",
+            "uri": "spotify:track:2IsZWVCP0LGPtDEsRKDouu",
+            "matchedTitle": "未完成ドリーム！",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b2738ed0aaab0ac4d2252aecaafe",
+            "albumName": "未完成ドリーム！"
+          }
+        },
+        {
+          "order": 2,
+          "marker": "M02",
+          "type": "song",
+          "recording": {
+            "baseTitle": "ゆめの羅針盤",
+            "versionLabel": "文化祭 Ver.",
+            "versionCode": "ver",
+            "recordingId": "track-glseno__ver",
+            "displayTitle": "ゆめの羅針盤（文化祭 Ver.）"
+          },
+          "artistHint": "スクールアイドルミュージカル",
+          "spotifyMatchPolicy": "original_fallback",
+          "spotify": {
+            "status": "matched",
+            "trackId": "4NEF3hv91WJhTVNuH7dn25",
+            "uri": "spotify:track:4NEF3hv91WJhTVNuH7dn25",
+            "matchedTitle": "ゆめの羅針盤 (コンパス)",
+            "matchedArtist": "スクールアイドルミュージカル",
+            "artworkUrl": "https://i.scdn.co/image/ab67616d0000b273be872d2166222a81741bc15e",
+            "albumName": "スクールアイドルミュージカル"
+          }
+        },
+        {
+          "order": 3,
+          "marker": "M03",
+          "type": "song",
+          "recording": {
+            "baseTitle": "永遠のEuphoria",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "euphoria__original",
+            "displayTitle": "永遠のEuphoria"
+          },
+          "artistHint": "蓮ノ空女学院スクールアイドルクラブ",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "03UK4x1ZU2IT5gtKqMu5mp",
+            "uri": "spotify:track:03UK4x1ZU2IT5gtKqMu5mp",
+            "matchedTitle": "永遠のEuphoria",
+            "matchedArtist": "蓮ノ空女学院スクールアイドルクラブ",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        },
+        {
+          "order": 4,
+          "marker": "M04",
+          "type": "song",
+          "recording": {
+            "baseTitle": "TOKIMEKI Runners",
+            "versionLabel": null,
+            "versionCode": "original",
+            "recordingId": "tokimeki-runners__original",
+            "displayTitle": "TOKIMEKI Runners"
+          },
+          "artistHint": "虹ヶ咲学園スクールアイドル同好会",
+          "spotifyMatchPolicy": "exact",
+          "spotify": {
+            "status": "matched",
+            "trackId": "1xb8vw15MAUF8UhkqA8qjo",
+            "uri": "spotify:track:1xb8vw15MAUF8UhkqA8qjo",
+            "matchedTitle": "TOKIMEKI Runners",
+            "matchedArtist": "虹ヶ咲学園スクールアイドル同好会",
+            "artworkUrl": null,
+            "albumName": null
+          }
+        }
+      ],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-lovelive-series-15th-anniversary-film-live-shibuya-lovez-11",
+      "label": "11日 (日) 昼公演",
+      "day": null,
+      "session": null,
+      "date": "2026-10-11",
+      "venue": {
+        "name": "Shibuya LOVEZ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    },
+    {
+      "id": "nijigasaki-lovelive-series-15th-anniversary-film-live-shibuya-lovez-11-2",
+      "label": "11日 (日) 夜公演",
+      "day": null,
+      "session": null,
+      "date": "2026-10-11",
+      "venue": {
+        "name": "Shibuya LOVEZ",
+        "city": "",
+        "countryCode": "JP"
+      },
+      "setlist": [],
+      "spotifyPlaylist": {
+        "status": "not_created",
+        "playlistId": null,
+        "url": null
+      }
+    }
+  ]
+}
