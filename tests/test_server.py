@@ -13,6 +13,7 @@ from server import (
     parse_event_url,
     publish_event_to_github,
     publish_events_to_github,
+    song_setlist,
     validate_publish_event,
     validate_series_artists,
     validate_study_playlists,
@@ -22,6 +23,54 @@ from server import (
 
 
 class ServerImportTests(unittest.TestCase):
+    def test_film_live_entries_are_imported_as_songs(self):
+        entries = [
+            {
+                "order": 0,
+                "contentTypeOther": None,
+                "note": None,
+                "content": {"__typename": "Song", "name": "Opening Act"},
+            },
+            {
+                "order": 1,
+                "contentTypeOther": "フィルムライブ01",
+                "note": "僕らのLIVE 君とのLIFE (シングルCDアニメーションMV)",
+                "content": None,
+            },
+            {
+                "order": 2,
+                "contentTypeOther": "フィルムライブ02",
+                "note": "Snow halation（TVアニメ 2期 第9話 アニメ映像）",
+                "content": None,
+            },
+            {
+                "order": 3,
+                "contentTypeOther": None,
+                "note": None,
+                "content": {"__typename": "Song", "name": "Closing Song"},
+            },
+        ]
+
+        self.assertEqual(
+            song_setlist(entries),
+            [
+                {"marker": "OA01", "title": "Opening Act", "version": "", "artistHint": ""},
+                {
+                    "marker": "FILM01",
+                    "title": "僕らのLIVE 君とのLIFE",
+                    "version": "",
+                    "artistHint": "",
+                },
+                {
+                    "marker": "FILM02",
+                    "title": "Snow halation",
+                    "version": "",
+                    "artistHint": "",
+                },
+                {"marker": "M01", "title": "Closing Song", "version": "", "artistHint": ""},
+            ],
+        )
+
     def test_ll_fans_event_url_is_limited_to_event_pages(self):
         self.assertEqual(
             parse_event_url("https://ll-fans.jp/data/event/288"),

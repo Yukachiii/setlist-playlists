@@ -1407,7 +1407,7 @@
     elements.pageImportEventFields.disabled = !isNewEvent;
     elements.pageImportDestinationHelp.textContent = isNewEvent
       ? "抽出したイベント情報と公演を、新しいイベントとして登録します。"
-      : "選択した既存イベントには公演だけを追加し、イベント情報は変更しません。";
+      : "選択した既存イベントには公演だけを反映します。同じ公演IDは上書きし、それ以外は追加します。";
 
     if (!state.importDraft || isNewEvent) return;
     const target = state.database.events.find(
@@ -2496,7 +2496,9 @@
     for (const performance of draft.performances) {
       const suggestion = performance.idSuggestion ||
         stableSlug(`${suggestedEventId}-${performance.label}`, "performance");
-      performance.id = uniqueId(suggestion, usedPerformanceIds);
+      performance.id = matchingEvent && usedPerformanceIds.has(suggestion)
+        ? suggestion
+        : uniqueId(suggestion, usedPerformanceIds);
       usedPerformanceIds.add(performance.id);
     }
   }
@@ -2743,7 +2745,12 @@
 
   function pageImportValidationErrors(targetEvent, isNewEvent, performances) {
     const errors = [...(isNewEvent ? validateEvent(targetEvent) : [])];
-    const validationOwner = { performances: [...targetEvent.performances] };
+    const replacementIds = new Set(performances.map((performance) => performance.id));
+    const validationOwner = {
+      performances: targetEvent.performances.filter(
+        (performance) => isNewEvent || !replacementIds.has(performance.id)
+      )
+    };
     for (const performance of performances) {
       errors.push(...validatePerformance(performance, validationOwner, null));
       validationOwner.performances.push(performance);
@@ -2757,13 +2764,35 @@
     if (referenceSource?.url && !hasReference) targetEvent.sources.push(deepClone(referenceSource));
   }
 
+  function importedPerformanceMatchIndex(performances, imported) {
+    const sameIdentity = performances.findIndex((candidate) => candidate.id === imported.id);
+    if (sameIdentity >= 0) return sameIdentity;
+    return performances.findIndex((candidate) => (
+      candidate.label === imported.label &&
+      candidate.date === imported.date &&
+      candidate.venue?.name === imported.venue?.name
+    ));
+  }
+
   function commitPageImport(targetEvent, isNewEvent, performances) {
     if (isNewEvent) {
       state.database.events.push(targetEvent);
     } else {
       addImportReferenceSource(targetEvent);
     }
-    targetEvent.performances.push(...performances);
+    let updatedCount = 0;
+    let addedCount = 0;
+    for (const performance of performances) {
+      const existingIndex = importedPerformanceMatchIndex(targetEvent.performances, performance);
+      if (existingIndex >= 0) {
+        performance.id = targetEvent.performances[existingIndex].id;
+        targetEvent.performances.splice(existingIndex, 1, performance);
+        updatedCount += 1;
+      } else {
+        targetEvent.performances.push(performance);
+        addedCount += 1;
+      }
+    }
     state.selectedEventId = targetEvent.id;
     focusEventSeries(targetEvent);
     persist();
@@ -2772,7 +2801,10 @@
     render();
     const songCount = performances.reduce((sum, performance) => sum + performance.setlist.length, 0);
     if (state.llfansSyncActive) scheduleNextLlFansSyncItem();
-    setSaveState(`${performances.length}公演・${songCount}曲を登録しました`);
+    const resultParts = [];
+    if (updatedCount) resultParts.push(`${updatedCount}公演を更新`);
+    if (addedCount) resultParts.push(`${addedCount}公演を追加`);
+    setSaveState(`${resultParts.join("・")}（${songCount}曲）`);
   }
 
   function savePageImportWithOptions(event, { skipSpotifyReview = false } = {}) {

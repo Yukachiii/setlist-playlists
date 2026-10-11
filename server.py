@@ -218,13 +218,48 @@ def version_from_note(note: Any) -> str:
     return ""
 
 
+def film_live_marker(value: Any) -> str:
+    match = re.fullmatch(r"フィルム\s*ライブ\s*0*(\d+)", str(value or "").strip())
+    if not match:
+        return ""
+    return f"FILM{int(match.group(1)):02d}"
+
+
+def film_live_title(note: Any) -> str:
+    title = str(note or "").strip()
+    return re.sub(
+        r"\s*[（(][^（）()]*(?:映像|MV)[^（）()]*[）)]\s*$",
+        "",
+        title,
+        flags=re.IGNORECASE,
+    ).strip()
+
+
 def song_setlist(entries: list[dict[str, Any]]) -> list[dict[str, str]]:
-    prefix = "M"
-    counters = {"M": 0, "EN": 0, "WEN": 0}
+    sorted_entries = sorted(entries or [], key=lambda item: int(item.get("order") or 0))
+    has_film_live = any(film_live_marker(entry.get("contentTypeOther")) for entry in sorted_entries)
+    film_live_started = False
+    prefix = "OA" if has_film_live else "M"
+    counters = {"OA": 0, "M": 0, "EN": 0, "WEN": 0}
     songs: list[dict[str, str]] = []
 
-    for entry in sorted(entries or [], key=lambda item: int(item.get("order") or 0)):
+    for entry in sorted_entries:
         other = str(entry.get("contentTypeOther") or "").strip()
+        film_marker = film_live_marker(other)
+        if film_marker:
+            film_live_started = True
+            title = film_live_title(entry.get("note"))
+            if title:
+                songs.append(
+                    {
+                        "marker": film_marker,
+                        "title": title,
+                        "version": "",
+                        "artistHint": "",
+                    }
+                )
+            continue
+
         if re.search(r"w(?:double)?\s*encore|ダブルアンコール", other, re.IGNORECASE):
             prefix = "WEN"
         elif re.search(r"encore|アンコール", other, re.IGNORECASE):
@@ -234,6 +269,8 @@ def song_setlist(entries: list[dict[str, Any]]) -> list[dict[str, str]]:
         if content.get("__typename") != "Song" or not content.get("name"):
             continue
 
+        if has_film_live and film_live_started and prefix == "OA":
+            prefix = "M"
         counters[prefix] += 1
         songs.append(
             {

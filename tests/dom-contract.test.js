@@ -15,10 +15,13 @@ test("本文解析後にSpotify接続済みなら曲検索まで自動実行す�
   assert.match(app, /const parsed = window\.SetlistPageParser\.parseLlFansPage\(rawText\);[\s\S]*?await initializePageImport\(parsed\);/);
 });
 
-test("LL-Fans URLから複数公演を取得して一括登録する", () => {
+test("LL-Fans URLから複数公演を取得し、同じ公演IDは上書きする", () => {
   assert.match(app, /fetch\(`\/api\/llfans-event\?url=/);
   assert.match(app, /state\.importDraft = normalizeImportDraft\(parsed\)/);
-  assert.match(app, /targetEvent\.performances\.push\(\.\.\.performances\)/);
+  assert.match(app, /function importedPerformanceMatchIndex\(performances, imported\)/);
+  assert.match(app, /candidate\.label === imported\.label/);
+  assert.match(app, /targetEvent\.performances\.splice\(existingIndex, 1, performance\)/);
+  assert.match(app, /targetEvent\.performances\.push\(performance\)/);
 });
 
 test("原曲フォールバック設定をSpotify検索へ渡して結果を明記する", () => {
